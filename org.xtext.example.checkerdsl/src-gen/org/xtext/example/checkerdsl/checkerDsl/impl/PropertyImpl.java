@@ -10,16 +10,16 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EDataTypeEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage;
-import org.xtext.example.checkerdsl.checkerDsl.Limit;
 import org.xtext.example.checkerdsl.checkerDsl.Property;
 
 /**
@@ -30,75 +30,43 @@ import org.xtext.example.checkerdsl.checkerDsl.Property;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.PropertyImpl#getType <em>Type</em>}</li>
- *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.PropertyImpl#getSz <em>Sz</em>}</li>
- *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.PropertyImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.PropertyImpl#getLimit <em>Limit</em>}</li>
+ *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.PropertyImpl#getProp <em>Prop</em>}</li>
+ *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.PropertyImpl#getProperties <em>Properties</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class PropertyImpl extends FeatureImpl implements Property
+public class PropertyImpl extends MinimalEObjectImpl.Container implements Property
 {
   /**
-   * The default value of the '{@link #getType() <em>Type</em>}' attribute.
+   * The default value of the '{@link #getProp() <em>Prop</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getType()
+   * @see #getProp()
    * @generated
    * @ordered
    */
-  protected static final String TYPE_EDEFAULT = null;
+  protected static final String PROP_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
+   * The cached value of the '{@link #getProp() <em>Prop</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getType()
+   * @see #getProp()
    * @generated
    * @ordered
    */
-  protected String type = TYPE_EDEFAULT;
+  protected String prop = PROP_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getSz() <em>Sz</em>}' attribute list.
+   * The cached value of the '{@link #getProperties() <em>Properties</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getSz()
+   * @see #getProperties()
    * @generated
    * @ordered
    */
-  protected EList<String> sz;
-
-  /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected static final String NAME_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected String name = NAME_EDEFAULT;
-
-  /**
-   * The cached value of the '{@link #getLimit() <em>Limit</em>}' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getLimit()
-   * @generated
-   * @ordered
-   */
-  protected EList<Limit> limit;
+  protected EList<EObject> properties;
 
   /**
    * <!-- begin-user-doc -->
@@ -126,9 +94,9 @@ public class PropertyImpl extends FeatureImpl implements Property
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getType()
+  public String getProp()
   {
-    return type;
+    return prop;
   }
 
   /**
@@ -136,12 +104,12 @@ public class PropertyImpl extends FeatureImpl implements Property
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setType(String newType)
+  public void setProp(String newProp)
   {
-    String oldType = type;
-    type = newType;
+    String oldProp = prop;
+    prop = newProp;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, CheckerDslPackage.PROPERTY__TYPE, oldType, type));
+      eNotify(new ENotificationImpl(this, Notification.SET, CheckerDslPackage.PROPERTY__PROP, oldProp, prop));
   }
 
   /**
@@ -149,50 +117,13 @@ public class PropertyImpl extends FeatureImpl implements Property
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<String> getSz()
+  public EList<EObject> getProperties()
   {
-    if (sz == null)
+    if (properties == null)
     {
-      sz = new EDataTypeEList<String>(String.class, this, CheckerDslPackage.PROPERTY__SZ);
+      properties = new EObjectContainmentEList<EObject>(EObject.class, this, CheckerDslPackage.PROPERTY__PROPERTIES);
     }
-    return sz;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String getName()
-  {
-    return name;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setName(String newName)
-  {
-    String oldName = name;
-    name = newName;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, CheckerDslPackage.PROPERTY__NAME, oldName, name));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EList<Limit> getLimit()
-  {
-    if (limit == null)
-    {
-      limit = new EObjectContainmentEList<Limit>(Limit.class, this, CheckerDslPackage.PROPERTY__LIMIT);
-    }
-    return limit;
+    return properties;
   }
 
   /**
@@ -205,8 +136,8 @@ public class PropertyImpl extends FeatureImpl implements Property
   {
     switch (featureID)
     {
-      case CheckerDslPackage.PROPERTY__LIMIT:
-        return ((InternalEList<?>)getLimit()).basicRemove(otherEnd, msgs);
+      case CheckerDslPackage.PROPERTY__PROPERTIES:
+        return ((InternalEList<?>)getProperties()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -221,14 +152,10 @@ public class PropertyImpl extends FeatureImpl implements Property
   {
     switch (featureID)
     {
-      case CheckerDslPackage.PROPERTY__TYPE:
-        return getType();
-      case CheckerDslPackage.PROPERTY__SZ:
-        return getSz();
-      case CheckerDslPackage.PROPERTY__NAME:
-        return getName();
-      case CheckerDslPackage.PROPERTY__LIMIT:
-        return getLimit();
+      case CheckerDslPackage.PROPERTY__PROP:
+        return getProp();
+      case CheckerDslPackage.PROPERTY__PROPERTIES:
+        return getProperties();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -244,19 +171,12 @@ public class PropertyImpl extends FeatureImpl implements Property
   {
     switch (featureID)
     {
-      case CheckerDslPackage.PROPERTY__TYPE:
-        setType((String)newValue);
+      case CheckerDslPackage.PROPERTY__PROP:
+        setProp((String)newValue);
         return;
-      case CheckerDslPackage.PROPERTY__SZ:
-        getSz().clear();
-        getSz().addAll((Collection<? extends String>)newValue);
-        return;
-      case CheckerDslPackage.PROPERTY__NAME:
-        setName((String)newValue);
-        return;
-      case CheckerDslPackage.PROPERTY__LIMIT:
-        getLimit().clear();
-        getLimit().addAll((Collection<? extends Limit>)newValue);
+      case CheckerDslPackage.PROPERTY__PROPERTIES:
+        getProperties().clear();
+        getProperties().addAll((Collection<? extends EObject>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -272,17 +192,11 @@ public class PropertyImpl extends FeatureImpl implements Property
   {
     switch (featureID)
     {
-      case CheckerDslPackage.PROPERTY__TYPE:
-        setType(TYPE_EDEFAULT);
+      case CheckerDslPackage.PROPERTY__PROP:
+        setProp(PROP_EDEFAULT);
         return;
-      case CheckerDslPackage.PROPERTY__SZ:
-        getSz().clear();
-        return;
-      case CheckerDslPackage.PROPERTY__NAME:
-        setName(NAME_EDEFAULT);
-        return;
-      case CheckerDslPackage.PROPERTY__LIMIT:
-        getLimit().clear();
+      case CheckerDslPackage.PROPERTY__PROPERTIES:
+        getProperties().clear();
         return;
     }
     super.eUnset(featureID);
@@ -298,14 +212,10 @@ public class PropertyImpl extends FeatureImpl implements Property
   {
     switch (featureID)
     {
-      case CheckerDslPackage.PROPERTY__TYPE:
-        return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
-      case CheckerDslPackage.PROPERTY__SZ:
-        return sz != null && !sz.isEmpty();
-      case CheckerDslPackage.PROPERTY__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case CheckerDslPackage.PROPERTY__LIMIT:
-        return limit != null && !limit.isEmpty();
+      case CheckerDslPackage.PROPERTY__PROP:
+        return PROP_EDEFAULT == null ? prop != null : !PROP_EDEFAULT.equals(prop);
+      case CheckerDslPackage.PROPERTY__PROPERTIES:
+        return properties != null && !properties.isEmpty();
     }
     return super.eIsSet(featureID);
   }
@@ -321,12 +231,8 @@ public class PropertyImpl extends FeatureImpl implements Property
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (type: ");
-    result.append(type);
-    result.append(", sz: ");
-    result.append(sz);
-    result.append(", name: ");
-    result.append(name);
+    result.append(" (prop: ");
+    result.append(prop);
     result.append(')');
     return result.toString();
   }

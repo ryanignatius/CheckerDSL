@@ -27,6 +27,18 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getVars <em>Vars</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getAdd <em>Add</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getVar3 <em>Var3</em>}</li>
+ *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getRemove <em>Remove</em>}</li>
+ *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getG <em>G</em>}</li>
+ *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getRandom <em>Random</em>}</li>
+ *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getVar4 <em>Var4</em>}</li>
+ *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getSize <em>Size</em>}</li>
+ *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getPermute <em>Permute</em>}</li>
+ *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getPlus <em>Plus</em>}</li>
+ *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getMultiply <em>Multiply</em>}</li>
+ *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getInvert <em>Invert</em>}</li>
+ *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getInclude <em>Include</em>}</li>
+ *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getExclude <em>Exclude</em>}</li>
+ *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getCompositional <em>Compositional</em>}</li>
  * </ul>
  *
  * @see org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage#getHelper()
@@ -336,5 +348,317 @@ public interface Helper extends ChkRelationalExpressions
    * @generated
    */
   void setVar3(ChkVariables value);
+
+  /**
+   * Returns the value of the '<em><b>Remove</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Remove</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Remove</em>' attribute.
+   * @see #setRemove(String)
+   * @see org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage#getHelper_Remove()
+   * @model
+   * @generated
+   */
+  String getRemove();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getRemove <em>Remove</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Remove</em>' attribute.
+   * @see #getRemove()
+   * @generated
+   */
+  void setRemove(String value);
+
+  /**
+   * Returns the value of the '<em><b>G</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>G</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>G</em>' containment reference.
+   * @see #setG(ChkItemGroup)
+   * @see org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage#getHelper_G()
+   * @model containment="true"
+   * @generated
+   */
+  ChkItemGroup getG();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getG <em>G</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>G</em>' containment reference.
+   * @see #getG()
+   * @generated
+   */
+  void setG(ChkItemGroup value);
+
+  /**
+   * Returns the value of the '<em><b>Random</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Random</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Random</em>' attribute.
+   * @see #setRandom(String)
+   * @see org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage#getHelper_Random()
+   * @model
+   * @generated
+   */
+  String getRandom();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getRandom <em>Random</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Random</em>' attribute.
+   * @see #getRandom()
+   * @generated
+   */
+  void setRandom(String value);
+
+  /**
+   * Returns the value of the '<em><b>Var4</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Var4</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Var4</em>' containment reference.
+   * @see #setVar4(ChkVariables)
+   * @see org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage#getHelper_Var4()
+   * @model containment="true"
+   * @generated
+   */
+  ChkVariables getVar4();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getVar4 <em>Var4</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Var4</em>' containment reference.
+   * @see #getVar4()
+   * @generated
+   */
+  void setVar4(ChkVariables value);
+
+  /**
+   * Returns the value of the '<em><b>Size</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Size</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Size</em>' attribute.
+   * @see #setSize(String)
+   * @see org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage#getHelper_Size()
+   * @model
+   * @generated
+   */
+  String getSize();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getSize <em>Size</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Size</em>' attribute.
+   * @see #getSize()
+   * @generated
+   */
+  void setSize(String value);
+
+  /**
+   * Returns the value of the '<em><b>Permute</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Permute</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Permute</em>' attribute.
+   * @see #setPermute(String)
+   * @see org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage#getHelper_Permute()
+   * @model
+   * @generated
+   */
+  String getPermute();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getPermute <em>Permute</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Permute</em>' attribute.
+   * @see #getPermute()
+   * @generated
+   */
+  void setPermute(String value);
+
+  /**
+   * Returns the value of the '<em><b>Plus</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Plus</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Plus</em>' attribute.
+   * @see #setPlus(String)
+   * @see org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage#getHelper_Plus()
+   * @model
+   * @generated
+   */
+  String getPlus();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getPlus <em>Plus</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Plus</em>' attribute.
+   * @see #getPlus()
+   * @generated
+   */
+  void setPlus(String value);
+
+  /**
+   * Returns the value of the '<em><b>Multiply</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Multiply</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Multiply</em>' attribute.
+   * @see #setMultiply(String)
+   * @see org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage#getHelper_Multiply()
+   * @model
+   * @generated
+   */
+  String getMultiply();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getMultiply <em>Multiply</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Multiply</em>' attribute.
+   * @see #getMultiply()
+   * @generated
+   */
+  void setMultiply(String value);
+
+  /**
+   * Returns the value of the '<em><b>Invert</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Invert</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Invert</em>' attribute.
+   * @see #setInvert(String)
+   * @see org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage#getHelper_Invert()
+   * @model
+   * @generated
+   */
+  String getInvert();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getInvert <em>Invert</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Invert</em>' attribute.
+   * @see #getInvert()
+   * @generated
+   */
+  void setInvert(String value);
+
+  /**
+   * Returns the value of the '<em><b>Include</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Include</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Include</em>' attribute.
+   * @see #setInclude(String)
+   * @see org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage#getHelper_Include()
+   * @model
+   * @generated
+   */
+  String getInclude();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getInclude <em>Include</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Include</em>' attribute.
+   * @see #getInclude()
+   * @generated
+   */
+  void setInclude(String value);
+
+  /**
+   * Returns the value of the '<em><b>Exclude</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Exclude</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Exclude</em>' attribute.
+   * @see #setExclude(String)
+   * @see org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage#getHelper_Exclude()
+   * @model
+   * @generated
+   */
+  String getExclude();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getExclude <em>Exclude</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Exclude</em>' attribute.
+   * @see #getExclude()
+   * @generated
+   */
+  void setExclude(String value);
+
+  /**
+   * Returns the value of the '<em><b>Compositional</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Compositional</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Compositional</em>' attribute.
+   * @see #setCompositional(String)
+   * @see org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage#getHelper_Compositional()
+   * @model
+   * @generated
+   */
+  String getCompositional();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getCompositional <em>Compositional</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Compositional</em>' attribute.
+   * @see #getCompositional()
+   * @generated
+   */
+  void setCompositional(String value);
 
 } // Helper

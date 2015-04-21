@@ -279,6 +279,145 @@ public interface CheckerDslPackage extends EPackage
   int METHOD_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 4;
 
   /**
+   * The meta object id for the '{@link org.xtext.example.checkerdsl.checkerDsl.impl.ChkScoreExpressionImpl <em>Chk Score Expression</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.checkerdsl.checkerDsl.impl.ChkScoreExpressionImpl
+   * @see org.xtext.example.checkerdsl.checkerDsl.impl.CheckerDslPackageImpl#getChkScoreExpression()
+   * @generated
+   */
+  int CHK_SCORE_EXPRESSION = 6;
+
+  /**
+   * The feature id for the '<em><b>Subtask</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CHK_SCORE_EXPRESSION__SUBTASK = 0;
+
+  /**
+   * The feature id for the '<em><b>Score</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CHK_SCORE_EXPRESSION__SCORE = 1;
+
+  /**
+   * The number of structural features of the '<em>Chk Score Expression</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CHK_SCORE_EXPRESSION_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.checkerdsl.checkerDsl.impl.ScoreImpl <em>Score</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.checkerdsl.checkerDsl.impl.ScoreImpl
+   * @see org.xtext.example.checkerdsl.checkerDsl.impl.CheckerDslPackageImpl#getScore()
+   * @generated
+   */
+  int SCORE = 7;
+
+  /**
+   * The feature id for the '<em><b>Scores</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SCORE__SCORES = FEATURE_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Score</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SCORE_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.checkerdsl.checkerDsl.impl.FollowUpImpl <em>Follow Up</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.checkerdsl.checkerDsl.impl.FollowUpImpl
+   * @see org.xtext.example.checkerdsl.checkerDsl.impl.CheckerDslPackageImpl#getFollowUp()
+   * @generated
+   */
+  int FOLLOW_UP = 8;
+
+  /**
+   * The feature id for the '<em><b>Fol</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FOLLOW_UP__FOL = 0;
+
+  /**
+   * The feature id for the '<em><b>Followups</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FOLLOW_UP__FOLLOWUPS = 1;
+
+  /**
+   * The number of structural features of the '<em>Follow Up</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FOLLOW_UP_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.checkerdsl.checkerDsl.impl.PropertyImpl <em>Property</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.checkerdsl.checkerDsl.impl.PropertyImpl
+   * @see org.xtext.example.checkerdsl.checkerDsl.impl.CheckerDslPackageImpl#getProperty()
+   * @generated
+   */
+  int PROPERTY = 9;
+
+  /**
+   * The feature id for the '<em><b>Prop</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROPERTY__PROP = 0;
+
+  /**
+   * The feature id for the '<em><b>Properties</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROPERTY__PROPERTIES = 1;
+
+  /**
+   * The number of structural features of the '<em>Property</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROPERTY_FEATURE_COUNT = 2;
+
+  /**
    * The meta object id for the '{@link org.xtext.example.checkerdsl.checkerDsl.impl.MRImpl <em>MR</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -286,7 +425,7 @@ public interface CheckerDslPackage extends EPackage
    * @see org.xtext.example.checkerdsl.checkerDsl.impl.CheckerDslPackageImpl#getMR()
    * @generated
    */
-  int MR = 6;
+  int MR = 10;
 
   /**
    * The feature id for the '<em><b>Mr</b></em>' attribute.
@@ -307,13 +446,31 @@ public interface CheckerDslPackage extends EPackage
   int MR__NUM = FEATURE_FEATURE_COUNT + 1;
 
   /**
-   * The feature id for the '<em><b>Mr Expression</b></em>' containment reference list.
+   * The feature id for the '<em><b>Mr Exp</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MR__MR_EXPRESSION = FEATURE_FEATURE_COUNT + 2;
+  int MR__MR_EXP = FEATURE_FEATURE_COUNT + 2;
+
+  /**
+   * The feature id for the '<em><b>Followup</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MR__FOLLOWUP = FEATURE_FEATURE_COUNT + 3;
+
+  /**
+   * The feature id for the '<em><b>Property</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MR__PROPERTY = FEATURE_FEATURE_COUNT + 4;
 
   /**
    * The number of structural features of the '<em>MR</em>' class.
@@ -322,17 +479,17 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MR_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 3;
+  int MR_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 5;
 
   /**
-   * The meta object id for the '{@link org.xtext.example.checkerdsl.checkerDsl.impl.PropertyImpl <em>Property</em>}' class.
+   * The meta object id for the '{@link org.xtext.example.checkerdsl.checkerDsl.impl.ChkVariableDeclarationImpl <em>Chk Variable Declaration</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.xtext.example.checkerdsl.checkerDsl.impl.PropertyImpl
-   * @see org.xtext.example.checkerdsl.checkerDsl.impl.CheckerDslPackageImpl#getProperty()
+   * @see org.xtext.example.checkerdsl.checkerDsl.impl.ChkVariableDeclarationImpl
+   * @see org.xtext.example.checkerdsl.checkerDsl.impl.CheckerDslPackageImpl#getChkVariableDeclaration()
    * @generated
    */
-  int PROPERTY = 7;
+  int CHK_VARIABLE_DECLARATION = 11;
 
   /**
    * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -341,7 +498,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PROPERTY__TYPE = FEATURE_FEATURE_COUNT + 0;
+  int CHK_VARIABLE_DECLARATION__TYPE = FEATURE_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Sz</b></em>' attribute list.
@@ -350,7 +507,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PROPERTY__SZ = FEATURE_FEATURE_COUNT + 1;
+  int CHK_VARIABLE_DECLARATION__SZ = FEATURE_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -359,7 +516,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PROPERTY__NAME = FEATURE_FEATURE_COUNT + 2;
+  int CHK_VARIABLE_DECLARATION__NAME = FEATURE_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Limit</b></em>' containment reference list.
@@ -368,16 +525,25 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int PROPERTY__LIMIT = FEATURE_FEATURE_COUNT + 3;
+  int CHK_VARIABLE_DECLARATION__LIMIT = FEATURE_FEATURE_COUNT + 3;
 
   /**
-   * The number of structural features of the '<em>Property</em>' class.
+   * The feature id for the '<em><b>Sp Value</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PROPERTY_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 4;
+  int CHK_VARIABLE_DECLARATION__SP_VALUE = FEATURE_FEATURE_COUNT + 4;
+
+  /**
+   * The number of structural features of the '<em>Chk Variable Declaration</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CHK_VARIABLE_DECLARATION_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 5;
 
   /**
    * The meta object id for the '{@link org.xtext.example.checkerdsl.checkerDsl.impl.ChkRelationalExpressionsImpl <em>Chk Relational Expressions</em>}' class.
@@ -387,7 +553,7 @@ public interface CheckerDslPackage extends EPackage
    * @see org.xtext.example.checkerdsl.checkerDsl.impl.CheckerDslPackageImpl#getChkRelationalExpressions()
    * @generated
    */
-  int CHK_RELATIONAL_EXPRESSIONS = 15;
+  int CHK_RELATIONAL_EXPRESSIONS = 20;
 
   /**
    * The number of structural features of the '<em>Chk Relational Expressions</em>' class.
@@ -406,7 +572,7 @@ public interface CheckerDslPackage extends EPackage
    * @see org.xtext.example.checkerdsl.checkerDsl.impl.CheckerDslPackageImpl#getMethodCall()
    * @generated
    */
-  int METHOD_CALL = 8;
+  int METHOD_CALL = 12;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -443,7 +609,7 @@ public interface CheckerDslPackage extends EPackage
    * @see org.xtext.example.checkerdsl.checkerDsl.impl.CheckerDslPackageImpl#getChkPrefix()
    * @generated
    */
-  int CHK_PREFIX = 9;
+  int CHK_PREFIX = 13;
 
   /**
    * The feature id for the '<em><b>Type</b></em>' attribute.
@@ -455,22 +621,13 @@ public interface CheckerDslPackage extends EPackage
   int CHK_PREFIX__TYPE = 0;
 
   /**
-   * The feature id for the '<em><b>Newtest</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CHK_PREFIX__NEWTEST = 1;
-
-  /**
    * The number of structural features of the '<em>Chk Prefix</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CHK_PREFIX_FEATURE_COUNT = 2;
+  int CHK_PREFIX_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link org.xtext.example.checkerdsl.checkerDsl.impl.ChkVariableImpl <em>Chk Variable</em>}' class.
@@ -480,7 +637,7 @@ public interface CheckerDslPackage extends EPackage
    * @see org.xtext.example.checkerdsl.checkerDsl.impl.CheckerDslPackageImpl#getChkVariable()
    * @generated
    */
-  int CHK_VARIABLE = 10;
+  int CHK_VARIABLE = 14;
 
   /**
    * The feature id for the '<em><b>Pref</b></em>' containment reference.
@@ -501,13 +658,22 @@ public interface CheckerDslPackage extends EPackage
   int CHK_VARIABLE__VAR = 1;
 
   /**
+   * The feature id for the '<em><b>Newtest</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CHK_VARIABLE__NEWTEST = 2;
+
+  /**
    * The feature id for the '<em><b>V</b></em>' attribute list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CHK_VARIABLE__V = 2;
+  int CHK_VARIABLE__V = 3;
 
   /**
    * The number of structural features of the '<em>Chk Variable</em>' class.
@@ -516,7 +682,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CHK_VARIABLE_FEATURE_COUNT = 3;
+  int CHK_VARIABLE_FEATURE_COUNT = 4;
 
   /**
    * The meta object id for the '{@link org.xtext.example.checkerdsl.checkerDsl.impl.ChkVariablesImpl <em>Chk Variables</em>}' class.
@@ -526,7 +692,7 @@ public interface CheckerDslPackage extends EPackage
    * @see org.xtext.example.checkerdsl.checkerDsl.impl.CheckerDslPackageImpl#getChkVariables()
    * @generated
    */
-  int CHK_VARIABLES = 11;
+  int CHK_VARIABLES = 15;
 
   /**
    * The feature id for the '<em><b>Va</b></em>' containment reference.
@@ -547,13 +713,50 @@ public interface CheckerDslPackage extends EPackage
   int CHK_VARIABLES__NU = 1;
 
   /**
+   * The feature id for the '<em><b>Gr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CHK_VARIABLES__GR = 2;
+
+  /**
    * The number of structural features of the '<em>Chk Variables</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CHK_VARIABLES_FEATURE_COUNT = 2;
+  int CHK_VARIABLES_FEATURE_COUNT = 3;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.checkerdsl.checkerDsl.impl.ChkItemGroupImpl <em>Chk Item Group</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.checkerdsl.checkerDsl.impl.ChkItemGroupImpl
+   * @see org.xtext.example.checkerdsl.checkerDsl.impl.CheckerDslPackageImpl#getChkItemGroup()
+   * @generated
+   */
+  int CHK_ITEM_GROUP = 16;
+
+  /**
+   * The feature id for the '<em><b>Vars</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CHK_ITEM_GROUP__VARS = 0;
+
+  /**
+   * The number of structural features of the '<em>Chk Item Group</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CHK_ITEM_GROUP_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link org.xtext.example.checkerdsl.checkerDsl.impl.HelperImpl <em>Helper</em>}' class.
@@ -563,7 +766,7 @@ public interface CheckerDslPackage extends EPackage
    * @see org.xtext.example.checkerdsl.checkerDsl.impl.CheckerDslPackageImpl#getHelper()
    * @generated
    */
-  int HELPER = 12;
+  int HELPER = 17;
 
   /**
    * The feature id for the '<em><b>Sum</b></em>' attribute.
@@ -674,13 +877,121 @@ public interface CheckerDslPackage extends EPackage
   int HELPER__VAR3 = CHK_RELATIONAL_EXPRESSIONS_FEATURE_COUNT + 11;
 
   /**
+   * The feature id for the '<em><b>Remove</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HELPER__REMOVE = CHK_RELATIONAL_EXPRESSIONS_FEATURE_COUNT + 12;
+
+  /**
+   * The feature id for the '<em><b>G</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HELPER__G = CHK_RELATIONAL_EXPRESSIONS_FEATURE_COUNT + 13;
+
+  /**
+   * The feature id for the '<em><b>Random</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HELPER__RANDOM = CHK_RELATIONAL_EXPRESSIONS_FEATURE_COUNT + 14;
+
+  /**
+   * The feature id for the '<em><b>Var4</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HELPER__VAR4 = CHK_RELATIONAL_EXPRESSIONS_FEATURE_COUNT + 15;
+
+  /**
+   * The feature id for the '<em><b>Size</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HELPER__SIZE = CHK_RELATIONAL_EXPRESSIONS_FEATURE_COUNT + 16;
+
+  /**
+   * The feature id for the '<em><b>Permute</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HELPER__PERMUTE = CHK_RELATIONAL_EXPRESSIONS_FEATURE_COUNT + 17;
+
+  /**
+   * The feature id for the '<em><b>Plus</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HELPER__PLUS = CHK_RELATIONAL_EXPRESSIONS_FEATURE_COUNT + 18;
+
+  /**
+   * The feature id for the '<em><b>Multiply</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HELPER__MULTIPLY = CHK_RELATIONAL_EXPRESSIONS_FEATURE_COUNT + 19;
+
+  /**
+   * The feature id for the '<em><b>Invert</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HELPER__INVERT = CHK_RELATIONAL_EXPRESSIONS_FEATURE_COUNT + 20;
+
+  /**
+   * The feature id for the '<em><b>Include</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HELPER__INCLUDE = CHK_RELATIONAL_EXPRESSIONS_FEATURE_COUNT + 21;
+
+  /**
+   * The feature id for the '<em><b>Exclude</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HELPER__EXCLUDE = CHK_RELATIONAL_EXPRESSIONS_FEATURE_COUNT + 22;
+
+  /**
+   * The feature id for the '<em><b>Compositional</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HELPER__COMPOSITIONAL = CHK_RELATIONAL_EXPRESSIONS_FEATURE_COUNT + 23;
+
+  /**
    * The number of structural features of the '<em>Helper</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int HELPER_FEATURE_COUNT = CHK_RELATIONAL_EXPRESSIONS_FEATURE_COUNT + 12;
+  int HELPER_FEATURE_COUNT = CHK_RELATIONAL_EXPRESSIONS_FEATURE_COUNT + 24;
 
   /**
    * The meta object id for the '{@link org.xtext.example.checkerdsl.checkerDsl.impl.ChkRelationalExpressionImpl <em>Chk Relational Expression</em>}' class.
@@ -690,7 +1001,7 @@ public interface CheckerDslPackage extends EPackage
    * @see org.xtext.example.checkerdsl.checkerDsl.impl.CheckerDslPackageImpl#getChkRelationalExpression()
    * @generated
    */
-  int CHK_RELATIONAL_EXPRESSION = 13;
+  int CHK_RELATIONAL_EXPRESSION = 18;
 
   /**
    * The feature id for the '<em><b>V1</b></em>' containment reference.
@@ -736,7 +1047,7 @@ public interface CheckerDslPackage extends EPackage
    * @see org.xtext.example.checkerdsl.checkerDsl.impl.CheckerDslPackageImpl#getChkAssignment()
    * @generated
    */
-  int CHK_ASSIGNMENT = 14;
+  int CHK_ASSIGNMENT = 19;
 
   /**
    * The feature id for the '<em><b>V1</b></em>' containment reference.
@@ -745,7 +1056,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CHK_ASSIGNMENT__V1 = 0;
+  int CHK_ASSIGNMENT__V1 = CHK_RELATIONAL_EXPRESSIONS_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Opr</b></em>' attribute.
@@ -754,7 +1065,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CHK_ASSIGNMENT__OPR = 1;
+  int CHK_ASSIGNMENT__OPR = CHK_RELATIONAL_EXPRESSIONS_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>V2</b></em>' containment reference.
@@ -763,7 +1074,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CHK_ASSIGNMENT__V2 = 2;
+  int CHK_ASSIGNMENT__V2 = CHK_RELATIONAL_EXPRESSIONS_FEATURE_COUNT + 2;
 
   /**
    * The number of structural features of the '<em>Chk Assignment</em>' class.
@@ -772,7 +1083,90 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CHK_ASSIGNMENT_FEATURE_COUNT = 3;
+  int CHK_ASSIGNMENT_FEATURE_COUNT = CHK_RELATIONAL_EXPRESSIONS_FEATURE_COUNT + 3;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.checkerdsl.checkerDsl.impl.ChkOperationImpl <em>Chk Operation</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.checkerdsl.checkerDsl.impl.ChkOperationImpl
+   * @see org.xtext.example.checkerdsl.checkerDsl.impl.CheckerDslPackageImpl#getChkOperation()
+   * @generated
+   */
+  int CHK_OPERATION = 21;
+
+  /**
+   * The feature id for the '<em><b>Operand</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CHK_OPERATION__OPERAND = 0;
+
+  /**
+   * The feature id for the '<em><b>Operator</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CHK_OPERATION__OPERATOR = 1;
+
+  /**
+   * The number of structural features of the '<em>Chk Operation</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CHK_OPERATION_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.checkerdsl.checkerDsl.impl.ChkLoopExpressionImpl <em>Chk Loop Expression</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.checkerdsl.checkerDsl.impl.ChkLoopExpressionImpl
+   * @see org.xtext.example.checkerdsl.checkerDsl.impl.CheckerDslPackageImpl#getChkLoopExpression()
+   * @generated
+   */
+  int CHK_LOOP_EXPRESSION = 22;
+
+  /**
+   * The feature id for the '<em><b>Index</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CHK_LOOP_EXPRESSION__INDEX = 0;
+
+  /**
+   * The feature id for the '<em><b>Max Index</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CHK_LOOP_EXPRESSION__MAX_INDEX = 1;
+
+  /**
+   * The feature id for the '<em><b>Ex</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CHK_LOOP_EXPRESSION__EX = 2;
+
+  /**
+   * The number of structural features of the '<em>Chk Loop Expression</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CHK_LOOP_EXPRESSION_FEATURE_COUNT = 3;
 
   /**
    * The meta object id for the '{@link org.xtext.example.checkerdsl.checkerDsl.impl.ChkExpressionImpl <em>Chk Expression</em>}' class.
@@ -782,7 +1176,7 @@ public interface CheckerDslPackage extends EPackage
    * @see org.xtext.example.checkerdsl.checkerDsl.impl.CheckerDslPackageImpl#getChkExpression()
    * @generated
    */
-  int CHK_EXPRESSION = 16;
+  int CHK_EXPRESSION = 23;
 
   /**
    * The feature id for the '<em><b>Asg</b></em>' attribute.
@@ -857,88 +1251,6 @@ public interface CheckerDslPackage extends EPackage
   int CHK_EXPRESSION_FEATURE_COUNT = 7;
 
   /**
-   * The meta object id for the '{@link org.xtext.example.checkerdsl.checkerDsl.impl.MrExpressionImpl <em>Mr Expression</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.checkerdsl.checkerDsl.impl.MrExpressionImpl
-   * @see org.xtext.example.checkerdsl.checkerDsl.impl.CheckerDslPackageImpl#getMrExpression()
-   * @generated
-   */
-  int MR_EXPRESSION = 17;
-
-  /**
-   * The feature id for the '<em><b>Asg</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MR_EXPRESSION__ASG = 0;
-
-  /**
-   * The feature id for the '<em><b>Exp</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MR_EXPRESSION__EXP = 1;
-
-  /**
-   * The feature id for the '<em><b>Where</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MR_EXPRESSION__WHERE = 2;
-
-  /**
-   * The feature id for the '<em><b>Cond</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MR_EXPRESSION__COND = 3;
-
-  /**
-   * The feature id for the '<em><b>Type</b></em>' attribute list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MR_EXPRESSION__TYPE = 4;
-
-  /**
-   * The feature id for the '<em><b>Op</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MR_EXPRESSION__OP = 5;
-
-  /**
-   * The feature id for the '<em><b>V</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MR_EXPRESSION__V = 6;
-
-  /**
-   * The number of structural features of the '<em>Mr Expression</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int MR_EXPRESSION_FEATURE_COUNT = 7;
-
-  /**
    * The meta object id for the '{@link org.xtext.example.checkerdsl.checkerDsl.impl.CheckImpl <em>Check</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -946,7 +1258,7 @@ public interface CheckerDslPackage extends EPackage
    * @see org.xtext.example.checkerdsl.checkerDsl.impl.CheckerDslPackageImpl#getCheck()
    * @generated
    */
-  int CHECK = 18;
+  int CHECK = 24;
 
   /**
    * The feature id for the '<em><b>Check</b></em>' attribute.
@@ -976,6 +1288,34 @@ public interface CheckerDslPackage extends EPackage
   int CHECK_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 2;
 
   /**
+   * The meta object id for the '{@link org.xtext.example.checkerdsl.checkerDsl.impl.SpValueImpl <em>Sp Value</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.checkerdsl.checkerDsl.impl.SpValueImpl
+   * @see org.xtext.example.checkerdsl.checkerDsl.impl.CheckerDslPackageImpl#getSpValue()
+   * @generated
+   */
+  int SP_VALUE = 25;
+
+  /**
+   * The feature id for the '<em><b>Val</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SP_VALUE__VAL = 0;
+
+  /**
+   * The number of structural features of the '<em>Sp Value</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SP_VALUE_FEATURE_COUNT = 1;
+
+  /**
    * The meta object id for the '{@link org.xtext.example.checkerdsl.checkerDsl.impl.LimitImpl <em>Limit</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -983,7 +1323,7 @@ public interface CheckerDslPackage extends EPackage
    * @see org.xtext.example.checkerdsl.checkerDsl.impl.CheckerDslPackageImpl#getLimit()
    * @generated
    */
-  int LIMIT = 19;
+  int LIMIT = 26;
 
   /**
    * The feature id for the '<em><b>Sub</b></em>' containment reference.
@@ -1029,7 +1369,7 @@ public interface CheckerDslPackage extends EPackage
    * @see org.xtext.example.checkerdsl.checkerDsl.impl.CheckerDslPackageImpl#getSubtask()
    * @generated
    */
-  int SUBTASK = 20;
+  int SUBTASK = 27;
 
   /**
    * The feature id for the '<em><b>Num</b></em>' attribute.
@@ -1057,7 +1397,7 @@ public interface CheckerDslPackage extends EPackage
    * @see org.xtext.example.checkerdsl.checkerDsl.impl.CheckerDslPackageImpl#getFormat()
    * @generated
    */
-  int FORMAT = 21;
+  int FORMAT = 28;
 
   /**
    * The feature id for the '<em><b>Exp</b></em>' containment reference list.
@@ -1085,7 +1425,7 @@ public interface CheckerDslPackage extends EPackage
    * @see org.xtext.example.checkerdsl.checkerDsl.impl.CheckerDslPackageImpl#getInputFormat()
    * @generated
    */
-  int INPUT_FORMAT = 22;
+  int INPUT_FORMAT = 29;
 
   /**
    * The feature id for the '<em><b>Exp</b></em>' containment reference list.
@@ -1122,7 +1462,7 @@ public interface CheckerDslPackage extends EPackage
    * @see org.xtext.example.checkerdsl.checkerDsl.impl.CheckerDslPackageImpl#getOutputFormat()
    * @generated
    */
-  int OUTPUT_FORMAT = 23;
+  int OUTPUT_FORMAT = 30;
 
   /**
    * The feature id for the '<em><b>Exp</b></em>' containment reference list.
@@ -1159,7 +1499,7 @@ public interface CheckerDslPackage extends EPackage
    * @see org.xtext.example.checkerdsl.checkerDsl.impl.CheckerDslPackageImpl#getFormatExpression()
    * @generated
    */
-  int FORMAT_EXPRESSION = 24;
+  int FORMAT_EXPRESSION = 31;
 
   /**
    * The feature id for the '<em><b>Num</b></em>' attribute.
@@ -1369,6 +1709,123 @@ public interface CheckerDslPackage extends EPackage
   EReference getMethod_Body();
 
   /**
+   * Returns the meta object for class '{@link org.xtext.example.checkerdsl.checkerDsl.ChkScoreExpression <em>Chk Score Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Chk Score Expression</em>'.
+   * @see org.xtext.example.checkerdsl.checkerDsl.ChkScoreExpression
+   * @generated
+   */
+  EClass getChkScoreExpression();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.checkerdsl.checkerDsl.ChkScoreExpression#getSubtask <em>Subtask</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Subtask</em>'.
+   * @see org.xtext.example.checkerdsl.checkerDsl.ChkScoreExpression#getSubtask()
+   * @see #getChkScoreExpression()
+   * @generated
+   */
+  EAttribute getChkScoreExpression_Subtask();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.checkerdsl.checkerDsl.ChkScoreExpression#getScore <em>Score</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Score</em>'.
+   * @see org.xtext.example.checkerdsl.checkerDsl.ChkScoreExpression#getScore()
+   * @see #getChkScoreExpression()
+   * @generated
+   */
+  EAttribute getChkScoreExpression_Score();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.checkerdsl.checkerDsl.Score <em>Score</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Score</em>'.
+   * @see org.xtext.example.checkerdsl.checkerDsl.Score
+   * @generated
+   */
+  EClass getScore();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.checkerdsl.checkerDsl.Score#getScores <em>Scores</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Scores</em>'.
+   * @see org.xtext.example.checkerdsl.checkerDsl.Score#getScores()
+   * @see #getScore()
+   * @generated
+   */
+  EReference getScore_Scores();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.checkerdsl.checkerDsl.FollowUp <em>Follow Up</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Follow Up</em>'.
+   * @see org.xtext.example.checkerdsl.checkerDsl.FollowUp
+   * @generated
+   */
+  EClass getFollowUp();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.checkerdsl.checkerDsl.FollowUp#getFol <em>Fol</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Fol</em>'.
+   * @see org.xtext.example.checkerdsl.checkerDsl.FollowUp#getFol()
+   * @see #getFollowUp()
+   * @generated
+   */
+  EAttribute getFollowUp_Fol();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.checkerdsl.checkerDsl.FollowUp#getFollowups <em>Followups</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Followups</em>'.
+   * @see org.xtext.example.checkerdsl.checkerDsl.FollowUp#getFollowups()
+   * @see #getFollowUp()
+   * @generated
+   */
+  EReference getFollowUp_Followups();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.checkerdsl.checkerDsl.Property <em>Property</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Property</em>'.
+   * @see org.xtext.example.checkerdsl.checkerDsl.Property
+   * @generated
+   */
+  EClass getProperty();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.checkerdsl.checkerDsl.Property#getProp <em>Prop</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Prop</em>'.
+   * @see org.xtext.example.checkerdsl.checkerDsl.Property#getProp()
+   * @see #getProperty()
+   * @generated
+   */
+  EAttribute getProperty_Prop();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.checkerdsl.checkerDsl.Property#getProperties <em>Properties</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Properties</em>'.
+   * @see org.xtext.example.checkerdsl.checkerDsl.Property#getProperties()
+   * @see #getProperty()
+   * @generated
+   */
+  EReference getProperty_Properties();
+
+  /**
    * Returns the meta object for class '{@link org.xtext.example.checkerdsl.checkerDsl.MR <em>MR</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1401,69 +1858,102 @@ public interface CheckerDslPackage extends EPackage
   EAttribute getMR_Num();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.example.checkerdsl.checkerDsl.MR#getMrExpression <em>Mr Expression</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.checkerdsl.checkerDsl.MR#getMrExp <em>Mr Exp</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Mr Expression</em>'.
-   * @see org.xtext.example.checkerdsl.checkerDsl.MR#getMrExpression()
+   * @return the meta object for the containment reference list '<em>Mr Exp</em>'.
+   * @see org.xtext.example.checkerdsl.checkerDsl.MR#getMrExp()
    * @see #getMR()
    * @generated
    */
-  EReference getMR_MrExpression();
+  EReference getMR_MrExp();
 
   /**
-   * Returns the meta object for class '{@link org.xtext.example.checkerdsl.checkerDsl.Property <em>Property</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.example.checkerdsl.checkerDsl.MR#getFollowup <em>Followup</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Property</em>'.
-   * @see org.xtext.example.checkerdsl.checkerDsl.Property
+   * @return the meta object for the containment reference '<em>Followup</em>'.
+   * @see org.xtext.example.checkerdsl.checkerDsl.MR#getFollowup()
+   * @see #getMR()
    * @generated
    */
-  EClass getProperty();
+  EReference getMR_Followup();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.checkerdsl.checkerDsl.Property#getType <em>Type</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.example.checkerdsl.checkerDsl.MR#getProperty <em>Property</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Property</em>'.
+   * @see org.xtext.example.checkerdsl.checkerDsl.MR#getProperty()
+   * @see #getMR()
+   * @generated
+   */
+  EReference getMR_Property();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.checkerdsl.checkerDsl.ChkVariableDeclaration <em>Chk Variable Declaration</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Chk Variable Declaration</em>'.
+   * @see org.xtext.example.checkerdsl.checkerDsl.ChkVariableDeclaration
+   * @generated
+   */
+  EClass getChkVariableDeclaration();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.checkerdsl.checkerDsl.ChkVariableDeclaration#getType <em>Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Type</em>'.
-   * @see org.xtext.example.checkerdsl.checkerDsl.Property#getType()
-   * @see #getProperty()
+   * @see org.xtext.example.checkerdsl.checkerDsl.ChkVariableDeclaration#getType()
+   * @see #getChkVariableDeclaration()
    * @generated
    */
-  EAttribute getProperty_Type();
+  EAttribute getChkVariableDeclaration_Type();
 
   /**
-   * Returns the meta object for the attribute list '{@link org.xtext.example.checkerdsl.checkerDsl.Property#getSz <em>Sz</em>}'.
+   * Returns the meta object for the attribute list '{@link org.xtext.example.checkerdsl.checkerDsl.ChkVariableDeclaration#getSz <em>Sz</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute list '<em>Sz</em>'.
-   * @see org.xtext.example.checkerdsl.checkerDsl.Property#getSz()
-   * @see #getProperty()
+   * @see org.xtext.example.checkerdsl.checkerDsl.ChkVariableDeclaration#getSz()
+   * @see #getChkVariableDeclaration()
    * @generated
    */
-  EAttribute getProperty_Sz();
+  EAttribute getChkVariableDeclaration_Sz();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.checkerdsl.checkerDsl.Property#getName <em>Name</em>}'.
+   * Returns the meta object for the attribute '{@link org.xtext.example.checkerdsl.checkerDsl.ChkVariableDeclaration#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Name</em>'.
-   * @see org.xtext.example.checkerdsl.checkerDsl.Property#getName()
-   * @see #getProperty()
+   * @see org.xtext.example.checkerdsl.checkerDsl.ChkVariableDeclaration#getName()
+   * @see #getChkVariableDeclaration()
    * @generated
    */
-  EAttribute getProperty_Name();
+  EAttribute getChkVariableDeclaration_Name();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.example.checkerdsl.checkerDsl.Property#getLimit <em>Limit</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.checkerdsl.checkerDsl.ChkVariableDeclaration#getLimit <em>Limit</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Limit</em>'.
-   * @see org.xtext.example.checkerdsl.checkerDsl.Property#getLimit()
-   * @see #getProperty()
+   * @see org.xtext.example.checkerdsl.checkerDsl.ChkVariableDeclaration#getLimit()
+   * @see #getChkVariableDeclaration()
    * @generated
    */
-  EReference getProperty_Limit();
+  EReference getChkVariableDeclaration_Limit();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.checkerdsl.checkerDsl.ChkVariableDeclaration#getSpValue <em>Sp Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Sp Value</em>'.
+   * @see org.xtext.example.checkerdsl.checkerDsl.ChkVariableDeclaration#getSpValue()
+   * @see #getChkVariableDeclaration()
+   * @generated
+   */
+  EReference getChkVariableDeclaration_SpValue();
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.checkerdsl.checkerDsl.MethodCall <em>Method Call</em>}'.
@@ -1519,17 +2009,6 @@ public interface CheckerDslPackage extends EPackage
   EAttribute getChkPrefix_Type();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.checkerdsl.checkerDsl.ChkPrefix#getNewtest <em>Newtest</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Newtest</em>'.
-   * @see org.xtext.example.checkerdsl.checkerDsl.ChkPrefix#getNewtest()
-   * @see #getChkPrefix()
-   * @generated
-   */
-  EAttribute getChkPrefix_Newtest();
-
-  /**
    * Returns the meta object for class '{@link org.xtext.example.checkerdsl.checkerDsl.ChkVariable <em>Chk Variable</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1560,6 +2039,17 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    */
   EAttribute getChkVariable_Var();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.checkerdsl.checkerDsl.ChkVariable#getNewtest <em>Newtest</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Newtest</em>'.
+   * @see org.xtext.example.checkerdsl.checkerDsl.ChkVariable#getNewtest()
+   * @see #getChkVariable()
+   * @generated
+   */
+  EAttribute getChkVariable_Newtest();
 
   /**
    * Returns the meta object for the attribute list '{@link org.xtext.example.checkerdsl.checkerDsl.ChkVariable#getV <em>V</em>}'.
@@ -1603,6 +2093,38 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    */
   EAttribute getChkVariables_Nu();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.checkerdsl.checkerDsl.ChkVariables#getGr <em>Gr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Gr</em>'.
+   * @see org.xtext.example.checkerdsl.checkerDsl.ChkVariables#getGr()
+   * @see #getChkVariables()
+   * @generated
+   */
+  EReference getChkVariables_Gr();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.checkerdsl.checkerDsl.ChkItemGroup <em>Chk Item Group</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Chk Item Group</em>'.
+   * @see org.xtext.example.checkerdsl.checkerDsl.ChkItemGroup
+   * @generated
+   */
+  EClass getChkItemGroup();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.checkerdsl.checkerDsl.ChkItemGroup#getVars <em>Vars</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Vars</em>'.
+   * @see org.xtext.example.checkerdsl.checkerDsl.ChkItemGroup#getVars()
+   * @see #getChkItemGroup()
+   * @generated
+   */
+  EReference getChkItemGroup_Vars();
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.checkerdsl.checkerDsl.Helper <em>Helper</em>}'.
@@ -1747,6 +2269,138 @@ public interface CheckerDslPackage extends EPackage
   EReference getHelper_Var3();
 
   /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getRemove <em>Remove</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Remove</em>'.
+   * @see org.xtext.example.checkerdsl.checkerDsl.Helper#getRemove()
+   * @see #getHelper()
+   * @generated
+   */
+  EAttribute getHelper_Remove();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getG <em>G</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>G</em>'.
+   * @see org.xtext.example.checkerdsl.checkerDsl.Helper#getG()
+   * @see #getHelper()
+   * @generated
+   */
+  EReference getHelper_G();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getRandom <em>Random</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Random</em>'.
+   * @see org.xtext.example.checkerdsl.checkerDsl.Helper#getRandom()
+   * @see #getHelper()
+   * @generated
+   */
+  EAttribute getHelper_Random();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getVar4 <em>Var4</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Var4</em>'.
+   * @see org.xtext.example.checkerdsl.checkerDsl.Helper#getVar4()
+   * @see #getHelper()
+   * @generated
+   */
+  EReference getHelper_Var4();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getSize <em>Size</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Size</em>'.
+   * @see org.xtext.example.checkerdsl.checkerDsl.Helper#getSize()
+   * @see #getHelper()
+   * @generated
+   */
+  EAttribute getHelper_Size();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getPermute <em>Permute</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Permute</em>'.
+   * @see org.xtext.example.checkerdsl.checkerDsl.Helper#getPermute()
+   * @see #getHelper()
+   * @generated
+   */
+  EAttribute getHelper_Permute();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getPlus <em>Plus</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Plus</em>'.
+   * @see org.xtext.example.checkerdsl.checkerDsl.Helper#getPlus()
+   * @see #getHelper()
+   * @generated
+   */
+  EAttribute getHelper_Plus();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getMultiply <em>Multiply</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Multiply</em>'.
+   * @see org.xtext.example.checkerdsl.checkerDsl.Helper#getMultiply()
+   * @see #getHelper()
+   * @generated
+   */
+  EAttribute getHelper_Multiply();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getInvert <em>Invert</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Invert</em>'.
+   * @see org.xtext.example.checkerdsl.checkerDsl.Helper#getInvert()
+   * @see #getHelper()
+   * @generated
+   */
+  EAttribute getHelper_Invert();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getInclude <em>Include</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Include</em>'.
+   * @see org.xtext.example.checkerdsl.checkerDsl.Helper#getInclude()
+   * @see #getHelper()
+   * @generated
+   */
+  EAttribute getHelper_Include();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getExclude <em>Exclude</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Exclude</em>'.
+   * @see org.xtext.example.checkerdsl.checkerDsl.Helper#getExclude()
+   * @see #getHelper()
+   * @generated
+   */
+  EAttribute getHelper_Exclude();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getCompositional <em>Compositional</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Compositional</em>'.
+   * @see org.xtext.example.checkerdsl.checkerDsl.Helper#getCompositional()
+   * @see #getHelper()
+   * @generated
+   */
+  EAttribute getHelper_Compositional();
+
+  /**
    * Returns the meta object for class '{@link org.xtext.example.checkerdsl.checkerDsl.ChkRelationalExpression <em>Chk Relational Expression</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1843,6 +2497,81 @@ public interface CheckerDslPackage extends EPackage
   EClass getChkRelationalExpressions();
 
   /**
+   * Returns the meta object for class '{@link org.xtext.example.checkerdsl.checkerDsl.ChkOperation <em>Chk Operation</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Chk Operation</em>'.
+   * @see org.xtext.example.checkerdsl.checkerDsl.ChkOperation
+   * @generated
+   */
+  EClass getChkOperation();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.checkerdsl.checkerDsl.ChkOperation#getOperand <em>Operand</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Operand</em>'.
+   * @see org.xtext.example.checkerdsl.checkerDsl.ChkOperation#getOperand()
+   * @see #getChkOperation()
+   * @generated
+   */
+  EReference getChkOperation_Operand();
+
+  /**
+   * Returns the meta object for the attribute list '{@link org.xtext.example.checkerdsl.checkerDsl.ChkOperation#getOperator <em>Operator</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute list '<em>Operator</em>'.
+   * @see org.xtext.example.checkerdsl.checkerDsl.ChkOperation#getOperator()
+   * @see #getChkOperation()
+   * @generated
+   */
+  EAttribute getChkOperation_Operator();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.checkerdsl.checkerDsl.ChkLoopExpression <em>Chk Loop Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Chk Loop Expression</em>'.
+   * @see org.xtext.example.checkerdsl.checkerDsl.ChkLoopExpression
+   * @generated
+   */
+  EClass getChkLoopExpression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.checkerdsl.checkerDsl.ChkLoopExpression#getIndex <em>Index</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Index</em>'.
+   * @see org.xtext.example.checkerdsl.checkerDsl.ChkLoopExpression#getIndex()
+   * @see #getChkLoopExpression()
+   * @generated
+   */
+  EReference getChkLoopExpression_Index();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.checkerdsl.checkerDsl.ChkLoopExpression#getMaxIndex <em>Max Index</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Max Index</em>'.
+   * @see org.xtext.example.checkerdsl.checkerDsl.ChkLoopExpression#getMaxIndex()
+   * @see #getChkLoopExpression()
+   * @generated
+   */
+  EReference getChkLoopExpression_MaxIndex();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.checkerdsl.checkerDsl.ChkLoopExpression#getEx <em>Ex</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Ex</em>'.
+   * @see org.xtext.example.checkerdsl.checkerDsl.ChkLoopExpression#getEx()
+   * @see #getChkLoopExpression()
+   * @generated
+   */
+  EReference getChkLoopExpression_Ex();
+
+  /**
    * Returns the meta object for class '{@link org.xtext.example.checkerdsl.checkerDsl.ChkExpression <em>Chk Expression</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1930,93 +2659,6 @@ public interface CheckerDslPackage extends EPackage
   EReference getChkExpression_V();
 
   /**
-   * Returns the meta object for class '{@link org.xtext.example.checkerdsl.checkerDsl.MrExpression <em>Mr Expression</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Mr Expression</em>'.
-   * @see org.xtext.example.checkerdsl.checkerDsl.MrExpression
-   * @generated
-   */
-  EClass getMrExpression();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.checkerdsl.checkerDsl.MrExpression#getAsg <em>Asg</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Asg</em>'.
-   * @see org.xtext.example.checkerdsl.checkerDsl.MrExpression#getAsg()
-   * @see #getMrExpression()
-   * @generated
-   */
-  EAttribute getMrExpression_Asg();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.checkerdsl.checkerDsl.MrExpression#getExp <em>Exp</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Exp</em>'.
-   * @see org.xtext.example.checkerdsl.checkerDsl.MrExpression#getExp()
-   * @see #getMrExpression()
-   * @generated
-   */
-  EReference getMrExpression_Exp();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.checkerdsl.checkerDsl.MrExpression#getWhere <em>Where</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Where</em>'.
-   * @see org.xtext.example.checkerdsl.checkerDsl.MrExpression#getWhere()
-   * @see #getMrExpression()
-   * @generated
-   */
-  EAttribute getMrExpression_Where();
-
-  /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.example.checkerdsl.checkerDsl.MrExpression#getCond <em>Cond</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Cond</em>'.
-   * @see org.xtext.example.checkerdsl.checkerDsl.MrExpression#getCond()
-   * @see #getMrExpression()
-   * @generated
-   */
-  EReference getMrExpression_Cond();
-
-  /**
-   * Returns the meta object for the attribute list '{@link org.xtext.example.checkerdsl.checkerDsl.MrExpression#getType <em>Type</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Type</em>'.
-   * @see org.xtext.example.checkerdsl.checkerDsl.MrExpression#getType()
-   * @see #getMrExpression()
-   * @generated
-   */
-  EAttribute getMrExpression_Type();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.checkerdsl.checkerDsl.MrExpression#getOp <em>Op</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Op</em>'.
-   * @see org.xtext.example.checkerdsl.checkerDsl.MrExpression#getOp()
-   * @see #getMrExpression()
-   * @generated
-   */
-  EAttribute getMrExpression_Op();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.checkerdsl.checkerDsl.MrExpression#getV <em>V</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>V</em>'.
-   * @see org.xtext.example.checkerdsl.checkerDsl.MrExpression#getV()
-   * @see #getMrExpression()
-   * @generated
-   */
-  EReference getMrExpression_V();
-
-  /**
    * Returns the meta object for class '{@link org.xtext.example.checkerdsl.checkerDsl.Check <em>Check</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2047,6 +2689,27 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    */
   EReference getCheck_Chk();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.checkerdsl.checkerDsl.SpValue <em>Sp Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Sp Value</em>'.
+   * @see org.xtext.example.checkerdsl.checkerDsl.SpValue
+   * @generated
+   */
+  EClass getSpValue();
+
+  /**
+   * Returns the meta object for the attribute list '{@link org.xtext.example.checkerdsl.checkerDsl.SpValue#getVal <em>Val</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute list '<em>Val</em>'.
+   * @see org.xtext.example.checkerdsl.checkerDsl.SpValue#getVal()
+   * @see #getSpValue()
+   * @generated
+   */
+  EAttribute getSpValue_Val();
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.checkerdsl.checkerDsl.Limit <em>Limit</em>}'.
@@ -2382,6 +3045,102 @@ public interface CheckerDslPackage extends EPackage
     EReference METHOD__BODY = eINSTANCE.getMethod_Body();
 
     /**
+     * The meta object literal for the '{@link org.xtext.example.checkerdsl.checkerDsl.impl.ChkScoreExpressionImpl <em>Chk Score Expression</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.checkerdsl.checkerDsl.impl.ChkScoreExpressionImpl
+     * @see org.xtext.example.checkerdsl.checkerDsl.impl.CheckerDslPackageImpl#getChkScoreExpression()
+     * @generated
+     */
+    EClass CHK_SCORE_EXPRESSION = eINSTANCE.getChkScoreExpression();
+
+    /**
+     * The meta object literal for the '<em><b>Subtask</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CHK_SCORE_EXPRESSION__SUBTASK = eINSTANCE.getChkScoreExpression_Subtask();
+
+    /**
+     * The meta object literal for the '<em><b>Score</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CHK_SCORE_EXPRESSION__SCORE = eINSTANCE.getChkScoreExpression_Score();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.checkerdsl.checkerDsl.impl.ScoreImpl <em>Score</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.checkerdsl.checkerDsl.impl.ScoreImpl
+     * @see org.xtext.example.checkerdsl.checkerDsl.impl.CheckerDslPackageImpl#getScore()
+     * @generated
+     */
+    EClass SCORE = eINSTANCE.getScore();
+
+    /**
+     * The meta object literal for the '<em><b>Scores</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference SCORE__SCORES = eINSTANCE.getScore_Scores();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.checkerdsl.checkerDsl.impl.FollowUpImpl <em>Follow Up</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.checkerdsl.checkerDsl.impl.FollowUpImpl
+     * @see org.xtext.example.checkerdsl.checkerDsl.impl.CheckerDslPackageImpl#getFollowUp()
+     * @generated
+     */
+    EClass FOLLOW_UP = eINSTANCE.getFollowUp();
+
+    /**
+     * The meta object literal for the '<em><b>Fol</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute FOLLOW_UP__FOL = eINSTANCE.getFollowUp_Fol();
+
+    /**
+     * The meta object literal for the '<em><b>Followups</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference FOLLOW_UP__FOLLOWUPS = eINSTANCE.getFollowUp_Followups();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.checkerdsl.checkerDsl.impl.PropertyImpl <em>Property</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.checkerdsl.checkerDsl.impl.PropertyImpl
+     * @see org.xtext.example.checkerdsl.checkerDsl.impl.CheckerDslPackageImpl#getProperty()
+     * @generated
+     */
+    EClass PROPERTY = eINSTANCE.getProperty();
+
+    /**
+     * The meta object literal for the '<em><b>Prop</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PROPERTY__PROP = eINSTANCE.getProperty_Prop();
+
+    /**
+     * The meta object literal for the '<em><b>Properties</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference PROPERTY__PROPERTIES = eINSTANCE.getProperty_Properties();
+
+    /**
      * The meta object literal for the '{@link org.xtext.example.checkerdsl.checkerDsl.impl.MRImpl <em>MR</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2408,22 +3167,38 @@ public interface CheckerDslPackage extends EPackage
     EAttribute MR__NUM = eINSTANCE.getMR_Num();
 
     /**
-     * The meta object literal for the '<em><b>Mr Expression</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Mr Exp</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference MR__MR_EXPRESSION = eINSTANCE.getMR_MrExpression();
+    EReference MR__MR_EXP = eINSTANCE.getMR_MrExp();
 
     /**
-     * The meta object literal for the '{@link org.xtext.example.checkerdsl.checkerDsl.impl.PropertyImpl <em>Property</em>}' class.
+     * The meta object literal for the '<em><b>Followup</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.xtext.example.checkerdsl.checkerDsl.impl.PropertyImpl
-     * @see org.xtext.example.checkerdsl.checkerDsl.impl.CheckerDslPackageImpl#getProperty()
      * @generated
      */
-    EClass PROPERTY = eINSTANCE.getProperty();
+    EReference MR__FOLLOWUP = eINSTANCE.getMR_Followup();
+
+    /**
+     * The meta object literal for the '<em><b>Property</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MR__PROPERTY = eINSTANCE.getMR_Property();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.checkerdsl.checkerDsl.impl.ChkVariableDeclarationImpl <em>Chk Variable Declaration</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.checkerdsl.checkerDsl.impl.ChkVariableDeclarationImpl
+     * @see org.xtext.example.checkerdsl.checkerDsl.impl.CheckerDslPackageImpl#getChkVariableDeclaration()
+     * @generated
+     */
+    EClass CHK_VARIABLE_DECLARATION = eINSTANCE.getChkVariableDeclaration();
 
     /**
      * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
@@ -2431,7 +3206,7 @@ public interface CheckerDslPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute PROPERTY__TYPE = eINSTANCE.getProperty_Type();
+    EAttribute CHK_VARIABLE_DECLARATION__TYPE = eINSTANCE.getChkVariableDeclaration_Type();
 
     /**
      * The meta object literal for the '<em><b>Sz</b></em>' attribute list feature.
@@ -2439,7 +3214,7 @@ public interface CheckerDslPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute PROPERTY__SZ = eINSTANCE.getProperty_Sz();
+    EAttribute CHK_VARIABLE_DECLARATION__SZ = eINSTANCE.getChkVariableDeclaration_Sz();
 
     /**
      * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -2447,7 +3222,7 @@ public interface CheckerDslPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute PROPERTY__NAME = eINSTANCE.getProperty_Name();
+    EAttribute CHK_VARIABLE_DECLARATION__NAME = eINSTANCE.getChkVariableDeclaration_Name();
 
     /**
      * The meta object literal for the '<em><b>Limit</b></em>' containment reference list feature.
@@ -2455,7 +3230,15 @@ public interface CheckerDslPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference PROPERTY__LIMIT = eINSTANCE.getProperty_Limit();
+    EReference CHK_VARIABLE_DECLARATION__LIMIT = eINSTANCE.getChkVariableDeclaration_Limit();
+
+    /**
+     * The meta object literal for the '<em><b>Sp Value</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CHK_VARIABLE_DECLARATION__SP_VALUE = eINSTANCE.getChkVariableDeclaration_SpValue();
 
     /**
      * The meta object literal for the '{@link org.xtext.example.checkerdsl.checkerDsl.impl.MethodCallImpl <em>Method Call</em>}' class.
@@ -2502,14 +3285,6 @@ public interface CheckerDslPackage extends EPackage
     EAttribute CHK_PREFIX__TYPE = eINSTANCE.getChkPrefix_Type();
 
     /**
-     * The meta object literal for the '<em><b>Newtest</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute CHK_PREFIX__NEWTEST = eINSTANCE.getChkPrefix_Newtest();
-
-    /**
      * The meta object literal for the '{@link org.xtext.example.checkerdsl.checkerDsl.impl.ChkVariableImpl <em>Chk Variable</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2534,6 +3309,14 @@ public interface CheckerDslPackage extends EPackage
      * @generated
      */
     EAttribute CHK_VARIABLE__VAR = eINSTANCE.getChkVariable_Var();
+
+    /**
+     * The meta object literal for the '<em><b>Newtest</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CHK_VARIABLE__NEWTEST = eINSTANCE.getChkVariable_Newtest();
 
     /**
      * The meta object literal for the '<em><b>V</b></em>' attribute list feature.
@@ -2568,6 +3351,32 @@ public interface CheckerDslPackage extends EPackage
      * @generated
      */
     EAttribute CHK_VARIABLES__NU = eINSTANCE.getChkVariables_Nu();
+
+    /**
+     * The meta object literal for the '<em><b>Gr</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CHK_VARIABLES__GR = eINSTANCE.getChkVariables_Gr();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.checkerdsl.checkerDsl.impl.ChkItemGroupImpl <em>Chk Item Group</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.checkerdsl.checkerDsl.impl.ChkItemGroupImpl
+     * @see org.xtext.example.checkerdsl.checkerDsl.impl.CheckerDslPackageImpl#getChkItemGroup()
+     * @generated
+     */
+    EClass CHK_ITEM_GROUP = eINSTANCE.getChkItemGroup();
+
+    /**
+     * The meta object literal for the '<em><b>Vars</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CHK_ITEM_GROUP__VARS = eINSTANCE.getChkItemGroup_Vars();
 
     /**
      * The meta object literal for the '{@link org.xtext.example.checkerdsl.checkerDsl.impl.HelperImpl <em>Helper</em>}' class.
@@ -2676,6 +3485,102 @@ public interface CheckerDslPackage extends EPackage
     EReference HELPER__VAR3 = eINSTANCE.getHelper_Var3();
 
     /**
+     * The meta object literal for the '<em><b>Remove</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute HELPER__REMOVE = eINSTANCE.getHelper_Remove();
+
+    /**
+     * The meta object literal for the '<em><b>G</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference HELPER__G = eINSTANCE.getHelper_G();
+
+    /**
+     * The meta object literal for the '<em><b>Random</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute HELPER__RANDOM = eINSTANCE.getHelper_Random();
+
+    /**
+     * The meta object literal for the '<em><b>Var4</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference HELPER__VAR4 = eINSTANCE.getHelper_Var4();
+
+    /**
+     * The meta object literal for the '<em><b>Size</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute HELPER__SIZE = eINSTANCE.getHelper_Size();
+
+    /**
+     * The meta object literal for the '<em><b>Permute</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute HELPER__PERMUTE = eINSTANCE.getHelper_Permute();
+
+    /**
+     * The meta object literal for the '<em><b>Plus</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute HELPER__PLUS = eINSTANCE.getHelper_Plus();
+
+    /**
+     * The meta object literal for the '<em><b>Multiply</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute HELPER__MULTIPLY = eINSTANCE.getHelper_Multiply();
+
+    /**
+     * The meta object literal for the '<em><b>Invert</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute HELPER__INVERT = eINSTANCE.getHelper_Invert();
+
+    /**
+     * The meta object literal for the '<em><b>Include</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute HELPER__INCLUDE = eINSTANCE.getHelper_Include();
+
+    /**
+     * The meta object literal for the '<em><b>Exclude</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute HELPER__EXCLUDE = eINSTANCE.getHelper_Exclude();
+
+    /**
+     * The meta object literal for the '<em><b>Compositional</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute HELPER__COMPOSITIONAL = eINSTANCE.getHelper_Compositional();
+
+    /**
      * The meta object literal for the '{@link org.xtext.example.checkerdsl.checkerDsl.impl.ChkRelationalExpressionImpl <em>Chk Relational Expression</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2754,6 +3659,66 @@ public interface CheckerDslPackage extends EPackage
     EClass CHK_RELATIONAL_EXPRESSIONS = eINSTANCE.getChkRelationalExpressions();
 
     /**
+     * The meta object literal for the '{@link org.xtext.example.checkerdsl.checkerDsl.impl.ChkOperationImpl <em>Chk Operation</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.checkerdsl.checkerDsl.impl.ChkOperationImpl
+     * @see org.xtext.example.checkerdsl.checkerDsl.impl.CheckerDslPackageImpl#getChkOperation()
+     * @generated
+     */
+    EClass CHK_OPERATION = eINSTANCE.getChkOperation();
+
+    /**
+     * The meta object literal for the '<em><b>Operand</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CHK_OPERATION__OPERAND = eINSTANCE.getChkOperation_Operand();
+
+    /**
+     * The meta object literal for the '<em><b>Operator</b></em>' attribute list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CHK_OPERATION__OPERATOR = eINSTANCE.getChkOperation_Operator();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.checkerdsl.checkerDsl.impl.ChkLoopExpressionImpl <em>Chk Loop Expression</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.checkerdsl.checkerDsl.impl.ChkLoopExpressionImpl
+     * @see org.xtext.example.checkerdsl.checkerDsl.impl.CheckerDslPackageImpl#getChkLoopExpression()
+     * @generated
+     */
+    EClass CHK_LOOP_EXPRESSION = eINSTANCE.getChkLoopExpression();
+
+    /**
+     * The meta object literal for the '<em><b>Index</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CHK_LOOP_EXPRESSION__INDEX = eINSTANCE.getChkLoopExpression_Index();
+
+    /**
+     * The meta object literal for the '<em><b>Max Index</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CHK_LOOP_EXPRESSION__MAX_INDEX = eINSTANCE.getChkLoopExpression_MaxIndex();
+
+    /**
+     * The meta object literal for the '<em><b>Ex</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CHK_LOOP_EXPRESSION__EX = eINSTANCE.getChkLoopExpression_Ex();
+
+    /**
      * The meta object literal for the '{@link org.xtext.example.checkerdsl.checkerDsl.impl.ChkExpressionImpl <em>Chk Expression</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2820,72 +3785,6 @@ public interface CheckerDslPackage extends EPackage
     EReference CHK_EXPRESSION__V = eINSTANCE.getChkExpression_V();
 
     /**
-     * The meta object literal for the '{@link org.xtext.example.checkerdsl.checkerDsl.impl.MrExpressionImpl <em>Mr Expression</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.example.checkerdsl.checkerDsl.impl.MrExpressionImpl
-     * @see org.xtext.example.checkerdsl.checkerDsl.impl.CheckerDslPackageImpl#getMrExpression()
-     * @generated
-     */
-    EClass MR_EXPRESSION = eINSTANCE.getMrExpression();
-
-    /**
-     * The meta object literal for the '<em><b>Asg</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MR_EXPRESSION__ASG = eINSTANCE.getMrExpression_Asg();
-
-    /**
-     * The meta object literal for the '<em><b>Exp</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference MR_EXPRESSION__EXP = eINSTANCE.getMrExpression_Exp();
-
-    /**
-     * The meta object literal for the '<em><b>Where</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MR_EXPRESSION__WHERE = eINSTANCE.getMrExpression_Where();
-
-    /**
-     * The meta object literal for the '<em><b>Cond</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference MR_EXPRESSION__COND = eINSTANCE.getMrExpression_Cond();
-
-    /**
-     * The meta object literal for the '<em><b>Type</b></em>' attribute list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MR_EXPRESSION__TYPE = eINSTANCE.getMrExpression_Type();
-
-    /**
-     * The meta object literal for the '<em><b>Op</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute MR_EXPRESSION__OP = eINSTANCE.getMrExpression_Op();
-
-    /**
-     * The meta object literal for the '<em><b>V</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference MR_EXPRESSION__V = eINSTANCE.getMrExpression_V();
-
-    /**
      * The meta object literal for the '{@link org.xtext.example.checkerdsl.checkerDsl.impl.CheckImpl <em>Check</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2910,6 +3809,24 @@ public interface CheckerDslPackage extends EPackage
      * @generated
      */
     EReference CHECK__CHK = eINSTANCE.getCheck_Chk();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.checkerdsl.checkerDsl.impl.SpValueImpl <em>Sp Value</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.checkerdsl.checkerDsl.impl.SpValueImpl
+     * @see org.xtext.example.checkerdsl.checkerDsl.impl.CheckerDslPackageImpl#getSpValue()
+     * @generated
+     */
+    EClass SP_VALUE = eINSTANCE.getSpValue();
+
+    /**
+     * The meta object literal for the '<em><b>Val</b></em>' attribute list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SP_VALUE__VAL = eINSTANCE.getSpValue_Val();
 
     /**
      * The meta object literal for the '{@link org.xtext.example.checkerdsl.checkerDsl.impl.LimitImpl <em>Limit</em>}' class.

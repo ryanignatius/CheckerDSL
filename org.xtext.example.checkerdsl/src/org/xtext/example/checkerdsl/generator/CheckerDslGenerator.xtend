@@ -7,7 +7,7 @@ import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.IFileSystemAccess
 import org.eclipse.xtext.generator.IGenerator
 import org.xtext.example.checkerdsl.checkerDsl.Class
-import org.xtext.example.checkerdsl.checkerDsl.Property
+import org.xtext.example.checkerdsl.checkerDsl.ChkVariableDeclaration
 
 /**
  * Generates code from your model files on save.
@@ -17,12 +17,13 @@ import org.xtext.example.checkerdsl.checkerDsl.Property
 class CheckerDslGenerator implements IGenerator {
 	
 	override void doGenerate(Resource resource, IFileSystemAccess fsa) {
-		
+		/*
 		fsa.generateFile('IOClass.java',
 			'import java.io.*;\n'+
 			'import java.util.*;\n'+
 			resource.allContents
-				.filter(Property).map[type]
+				.filter(ChkVariableDeclaration).map[type]
 		)
+		*/
 	}
 }

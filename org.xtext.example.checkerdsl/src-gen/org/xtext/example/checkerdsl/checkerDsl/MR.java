@@ -4,6 +4,8 @@ package org.xtext.example.checkerdsl.checkerDsl;
 
 import org.eclipse.emf.common.util.EList;
 
+import org.eclipse.emf.ecore.EObject;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>MR</b></em>'.
@@ -15,7 +17,9 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.MR#getMr <em>Mr</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.MR#getNum <em>Num</em>}</li>
- *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.MR#getMrExpression <em>Mr Expression</em>}</li>
+ *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.MR#getMrExp <em>Mr Exp</em>}</li>
+ *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.MR#getFollowup <em>Followup</em>}</li>
+ *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.MR#getProperty <em>Property</em>}</li>
  * </ul>
  *
  * @see org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage#getMR()
@@ -77,19 +81,71 @@ public interface MR extends Feature
   void setNum(int value);
 
   /**
-   * Returns the value of the '<em><b>Mr Expression</b></em>' containment reference list.
-   * The list contents are of type {@link org.xtext.example.checkerdsl.checkerDsl.MrExpression}.
+   * Returns the value of the '<em><b>Mr Exp</b></em>' containment reference list.
+   * The list contents are of type {@link org.eclipse.emf.ecore.EObject}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Mr Expression</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Mr Exp</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Mr Expression</em>' containment reference list.
-   * @see org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage#getMR_MrExpression()
+   * @return the value of the '<em>Mr Exp</em>' containment reference list.
+   * @see org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage#getMR_MrExp()
    * @model containment="true"
    * @generated
    */
-  EList<MrExpression> getMrExpression();
+  EList<EObject> getMrExp();
+
+  /**
+   * Returns the value of the '<em><b>Followup</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Followup</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Followup</em>' containment reference.
+   * @see #setFollowup(FollowUp)
+   * @see org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage#getMR_Followup()
+   * @model containment="true"
+   * @generated
+   */
+  FollowUp getFollowup();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.checkerdsl.checkerDsl.MR#getFollowup <em>Followup</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Followup</em>' containment reference.
+   * @see #getFollowup()
+   * @generated
+   */
+  void setFollowup(FollowUp value);
+
+  /**
+   * Returns the value of the '<em><b>Property</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Property</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Property</em>' containment reference.
+   * @see #setProperty(Property)
+   * @see org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage#getMR_Property()
+   * @model containment="true"
+   * @generated
+   */
+  Property getProperty();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.checkerdsl.checkerDsl.MR#getProperty <em>Property</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Property</em>' containment reference.
+   * @see #getProperty()
+   * @generated
+   */
+  void setProperty(Property value);
 
 } // MR

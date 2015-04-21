@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.ChkVariable#getPref <em>Pref</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.ChkVariable#getVar <em>Var</em>}</li>
+ *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.ChkVariable#getNewtest <em>Newtest</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.ChkVariable#getV <em>V</em>}</li>
  * </ul>
  *
@@ -77,6 +78,32 @@ public interface ChkVariable extends EObject
    * @generated
    */
   void setVar(String value);
+
+  /**
+   * Returns the value of the '<em><b>Newtest</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Newtest</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Newtest</em>' attribute.
+   * @see #setNewtest(String)
+   * @see org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage#getChkVariable_Newtest()
+   * @model
+   * @generated
+   */
+  String getNewtest();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.checkerdsl.checkerDsl.ChkVariable#getNewtest <em>Newtest</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Newtest</em>' attribute.
+   * @see #getNewtest()
+   * @generated
+   */
+  void setNewtest(String value);
 
   /**
    * Returns the value of the '<em><b>V</b></em>' attribute list.

@@ -21,7 +21,6 @@ import org.xtext.example.checkerdsl.checkerDsl.ChkPrefix;
  * </p>
  * <ul>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.ChkPrefixImpl#getType <em>Type</em>}</li>
- *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.ChkPrefixImpl#getNewtest <em>Newtest</em>}</li>
  * </ul>
  *
  * @generated
@@ -47,26 +46,6 @@ public class ChkPrefixImpl extends MinimalEObjectImpl.Container implements ChkPr
    * @ordered
    */
   protected String type = TYPE_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #getNewtest() <em>Newtest</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getNewtest()
-   * @generated
-   * @ordered
-   */
-  protected static final String NEWTEST_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getNewtest() <em>Newtest</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getNewtest()
-   * @generated
-   * @ordered
-   */
-  protected String newtest = NEWTEST_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -117,29 +96,6 @@ public class ChkPrefixImpl extends MinimalEObjectImpl.Container implements ChkPr
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getNewtest()
-  {
-    return newtest;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setNewtest(String newNewtest)
-  {
-    String oldNewtest = newtest;
-    newtest = newNewtest;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, CheckerDslPackage.CHK_PREFIX__NEWTEST, oldNewtest, newtest));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
@@ -147,8 +103,6 @@ public class ChkPrefixImpl extends MinimalEObjectImpl.Container implements ChkPr
     {
       case CheckerDslPackage.CHK_PREFIX__TYPE:
         return getType();
-      case CheckerDslPackage.CHK_PREFIX__NEWTEST:
-        return getNewtest();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -165,9 +119,6 @@ public class ChkPrefixImpl extends MinimalEObjectImpl.Container implements ChkPr
     {
       case CheckerDslPackage.CHK_PREFIX__TYPE:
         setType((String)newValue);
-        return;
-      case CheckerDslPackage.CHK_PREFIX__NEWTEST:
-        setNewtest((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -186,9 +137,6 @@ public class ChkPrefixImpl extends MinimalEObjectImpl.Container implements ChkPr
       case CheckerDslPackage.CHK_PREFIX__TYPE:
         setType(TYPE_EDEFAULT);
         return;
-      case CheckerDslPackage.CHK_PREFIX__NEWTEST:
-        setNewtest(NEWTEST_EDEFAULT);
-        return;
     }
     super.eUnset(featureID);
   }
@@ -205,8 +153,6 @@ public class ChkPrefixImpl extends MinimalEObjectImpl.Container implements ChkPr
     {
       case CheckerDslPackage.CHK_PREFIX__TYPE:
         return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
-      case CheckerDslPackage.CHK_PREFIX__NEWTEST:
-        return NEWTEST_EDEFAULT == null ? newtest != null : !NEWTEST_EDEFAULT.equals(newtest);
     }
     return super.eIsSet(featureID);
   }
@@ -224,8 +170,6 @@ public class ChkPrefixImpl extends MinimalEObjectImpl.Container implements ChkPr
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (type: ");
     result.append(type);
-    result.append(", newtest: ");
-    result.append(newtest);
     result.append(')');
     return result.toString();
   }

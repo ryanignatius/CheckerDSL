@@ -10,6 +10,7 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -19,7 +20,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.xtext.example.checkerdsl.checkerDsl.Check;
 import org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage;
-import org.xtext.example.checkerdsl.checkerDsl.ChkExpression;
 
 /**
  * <!-- begin-user-doc -->
@@ -65,7 +65,7 @@ public class CheckImpl extends FeatureImpl implements Check
    * @generated
    * @ordered
    */
-  protected EList<ChkExpression> chk;
+  protected EList<EObject> chk;
 
   /**
    * <!-- begin-user-doc -->
@@ -116,11 +116,11 @@ public class CheckImpl extends FeatureImpl implements Check
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<ChkExpression> getChk()
+  public EList<EObject> getChk()
   {
     if (chk == null)
     {
-      chk = new EObjectContainmentEList<ChkExpression>(ChkExpression.class, this, CheckerDslPackage.CHECK__CHK);
+      chk = new EObjectContainmentEList<EObject>(EObject.class, this, CheckerDslPackage.CHECK__CHK);
     }
     return chk;
   }
@@ -175,7 +175,7 @@ public class CheckImpl extends FeatureImpl implements Check
         return;
       case CheckerDslPackage.CHECK__CHK:
         getChk().clear();
-        getChk().addAll((Collection<? extends ChkExpression>)newValue);
+        getChk().addAll((Collection<? extends EObject>)newValue);
         return;
     }
     super.eSet(featureID, newValue);

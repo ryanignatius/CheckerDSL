@@ -1,0 +1,161 @@
+
+
+
+// Specification untuk soal knapsack
+class Knapsack{
+	/*
+	 * variable declaration
+	 * akan digunakan untuk men-generate atribut private,
+	 * fungsi untuk membaca, menulis, dan validator variable tersebut
+	 */
+	
+	// variable untuk input
+	int n (subtask 1 : 1..100, 1..1000; subtask 2 : 1..1) sp { -100 , 0 , 100 } // n adalah variabel jumlah item
+	int m (subtask 1 : 1..100) // m adalah jumlah knapsack
+	int[n] p (subtask 1 : 0..100) // p adalah profit dari n buah item
+	int[n] w (subtask 1 : 0..100) // w adalah weight dari n buah item
+	int[m] c (subtask 1 : 0..100) // c adalah capacity dari m buah knapsack
+	
+	// variable untuk output
+	int[n] y (0..m) // y adalah nomor tempat knapsack item i atau 0 jika tidak dipilih
+	int tp // tp adalah variable total profit
+	
+	
+	score {
+		(1 : 30)
+		(2 : 70)
+	}
+	
+	/*
+	 * input format
+	 */
+	input {
+		1 (n,m) // 1 baris pertama berisi 2 buah integer n dan m
+		1 (p<n>) // 1 baris berikutnya berisi n buah integer p
+		1 (w<n>) // 1 baris berikutnya berisi n buah integer w
+		1 (c<m>) // 1 baris berikutnya berisi m buah integer c
+	}
+	
+	/*
+	 * output format
+	 */
+	output {
+		1 (y<n>) // 1 baris berikutnya berisi n buah integer y
+		1 (tp) // 1 baris berikutnya berisi 1 buah integer tp
+	}
+	
+	/*
+	 * checker logic
+	 */
+	check {
+		// ans contains problem setter answer
+		// out contains contestant output
+		// in contains input test case
+		(ans.tp == out.tp)
+		(sum(in.p) where out.y[i]>0 == out.tp)
+		for (j,m) {
+			(sum(in.w) where out.y[i]==j <= in.c[j])
+		}
+	}
+	
+	MR 1 {
+		(select(k,l) where 1<=k and k<l and l<=n and p[k]!=p[l] or w[k]!=w[l])
+		followup {
+			(p` = swap(p,k,l))
+			(w` = swap(w,k,l))
+		}
+		property {
+			(y` = swap(y,k,l))
+		}
+		
+	}
+	
+	MR 2 {
+		(select(k) where y[k]==1)
+		def cc = (random(0..100))
+		followup {
+			(p[k] = p[k]+cc)
+		}
+		property {
+			(tp = tp+cc)
+		}
+	}
+	
+	MR 3 {
+		(select(k) where y[k]==0)
+		def cc = (random(0..100))
+		followup {
+			(w[k] = w[k]+cc)
+		}
+		property {
+			
+		}
+	}
+	
+	MR 4 {
+		(select(k) where y[k]==0)
+		def cc = (random(0..100))
+		followup {
+			(p[k] = p[k]-cc)
+		}
+		property {
+			
+		}
+	}
+	
+	MR 5 {
+		def c1 = (sum(w) where y==1)
+		followup {
+			(c[1] = c1)
+		}
+		property {
+			
+		}
+	}
+	
+	MR 6 {
+		def pnew = (min(p) where y[j] != 0)
+		def wnew = (max(w) where y[j] != 0)
+		(n = n+1)
+		(add(p,pnew))
+		(add(w,wnew))
+		(add(y,0))
+	}
+	
+	MR 7 {
+		(select(k) where y[k]==0)
+		(n = n-1)
+		(remove(p,k))
+		(remove(w,k))
+		(remove(y,k))
+	}
+	
+	MR 8 {
+		(select(k) where y[k]==1)
+		(c[1] = c[1]-w[k])
+		(tp = tp-p[k])
+		(n = n-1)
+		(remove(p,k))
+		(remove(w,k))
+		(remove(y,k))
+	}
+	
+	MR 9 {
+		(select(k,l) where 1<=k and k<l and l<=n and y[k]==1 and y[l]==1)
+		(p[k] = p[k]+p[l])
+		(w[k] = w[k]+w[l])
+		(n = n-1)
+		(remove(p,l))
+		(remove(w,l))
+		(remove(y,l))
+	}
+	
+	MR 10 {
+		def v = (sum(p) where y==1)
+		(remove(<p,w,y>) where y==1)
+		//(n = size(p))
+		(remove(c,0))
+		(m = m-1)
+		(tp = tp-v)
+	}	
+}

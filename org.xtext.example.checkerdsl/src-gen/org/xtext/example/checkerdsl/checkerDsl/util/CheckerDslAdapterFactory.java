@@ -14,13 +14,19 @@ import org.xtext.example.checkerdsl.checkerDsl.Check;
 import org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage;
 import org.xtext.example.checkerdsl.checkerDsl.ChkAssignment;
 import org.xtext.example.checkerdsl.checkerDsl.ChkExpression;
+import org.xtext.example.checkerdsl.checkerDsl.ChkItemGroup;
+import org.xtext.example.checkerdsl.checkerDsl.ChkLoopExpression;
+import org.xtext.example.checkerdsl.checkerDsl.ChkOperation;
 import org.xtext.example.checkerdsl.checkerDsl.ChkPrefix;
 import org.xtext.example.checkerdsl.checkerDsl.ChkRelationalExpression;
 import org.xtext.example.checkerdsl.checkerDsl.ChkRelationalExpressions;
+import org.xtext.example.checkerdsl.checkerDsl.ChkScoreExpression;
 import org.xtext.example.checkerdsl.checkerDsl.ChkVariable;
+import org.xtext.example.checkerdsl.checkerDsl.ChkVariableDeclaration;
 import org.xtext.example.checkerdsl.checkerDsl.ChkVariables;
 import org.xtext.example.checkerdsl.checkerDsl.Dsl;
 import org.xtext.example.checkerdsl.checkerDsl.Feature;
+import org.xtext.example.checkerdsl.checkerDsl.FollowUp;
 import org.xtext.example.checkerdsl.checkerDsl.Format;
 import org.xtext.example.checkerdsl.checkerDsl.FormatExpression;
 import org.xtext.example.checkerdsl.checkerDsl.Helper;
@@ -29,10 +35,11 @@ import org.xtext.example.checkerdsl.checkerDsl.Limit;
 import org.xtext.example.checkerdsl.checkerDsl.MR;
 import org.xtext.example.checkerdsl.checkerDsl.Method;
 import org.xtext.example.checkerdsl.checkerDsl.MethodCall;
-import org.xtext.example.checkerdsl.checkerDsl.MrExpression;
 import org.xtext.example.checkerdsl.checkerDsl.OutputFormat;
 import org.xtext.example.checkerdsl.checkerDsl.PackageDeclaration;
 import org.xtext.example.checkerdsl.checkerDsl.Property;
+import org.xtext.example.checkerdsl.checkerDsl.Score;
+import org.xtext.example.checkerdsl.checkerDsl.SpValue;
 import org.xtext.example.checkerdsl.checkerDsl.Subtask;
 
 /**
@@ -129,14 +136,34 @@ public class CheckerDslAdapterFactory extends AdapterFactoryImpl
         return createMethodAdapter();
       }
       @Override
-      public Adapter caseMR(MR object)
+      public Adapter caseChkScoreExpression(ChkScoreExpression object)
       {
-        return createMRAdapter();
+        return createChkScoreExpressionAdapter();
+      }
+      @Override
+      public Adapter caseScore(Score object)
+      {
+        return createScoreAdapter();
+      }
+      @Override
+      public Adapter caseFollowUp(FollowUp object)
+      {
+        return createFollowUpAdapter();
       }
       @Override
       public Adapter caseProperty(Property object)
       {
         return createPropertyAdapter();
+      }
+      @Override
+      public Adapter caseMR(MR object)
+      {
+        return createMRAdapter();
+      }
+      @Override
+      public Adapter caseChkVariableDeclaration(ChkVariableDeclaration object)
+      {
+        return createChkVariableDeclarationAdapter();
       }
       @Override
       public Adapter caseMethodCall(MethodCall object)
@@ -159,6 +186,11 @@ public class CheckerDslAdapterFactory extends AdapterFactoryImpl
         return createChkVariablesAdapter();
       }
       @Override
+      public Adapter caseChkItemGroup(ChkItemGroup object)
+      {
+        return createChkItemGroupAdapter();
+      }
+      @Override
       public Adapter caseHelper(Helper object)
       {
         return createHelperAdapter();
@@ -179,19 +211,29 @@ public class CheckerDslAdapterFactory extends AdapterFactoryImpl
         return createChkRelationalExpressionsAdapter();
       }
       @Override
+      public Adapter caseChkOperation(ChkOperation object)
+      {
+        return createChkOperationAdapter();
+      }
+      @Override
+      public Adapter caseChkLoopExpression(ChkLoopExpression object)
+      {
+        return createChkLoopExpressionAdapter();
+      }
+      @Override
       public Adapter caseChkExpression(ChkExpression object)
       {
         return createChkExpressionAdapter();
       }
       @Override
-      public Adapter caseMrExpression(MrExpression object)
-      {
-        return createMrExpressionAdapter();
-      }
-      @Override
       public Adapter caseCheck(Check object)
       {
         return createCheckAdapter();
+      }
+      @Override
+      public Adapter caseSpValue(SpValue object)
+      {
+        return createSpValueAdapter();
       }
       @Override
       public Adapter caseLimit(Limit object)
@@ -336,16 +378,46 @@ public class CheckerDslAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.checkerdsl.checkerDsl.MR <em>MR</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.example.checkerdsl.checkerDsl.ChkScoreExpression <em>Chk Score Expression</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.example.checkerdsl.checkerDsl.MR
+   * @see org.xtext.example.checkerdsl.checkerDsl.ChkScoreExpression
    * @generated
    */
-  public Adapter createMRAdapter()
+  public Adapter createChkScoreExpressionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.checkerdsl.checkerDsl.Score <em>Score</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.checkerdsl.checkerDsl.Score
+   * @generated
+   */
+  public Adapter createScoreAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.checkerdsl.checkerDsl.FollowUp <em>Follow Up</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.checkerdsl.checkerDsl.FollowUp
+   * @generated
+   */
+  public Adapter createFollowUpAdapter()
   {
     return null;
   }
@@ -361,6 +433,36 @@ public class CheckerDslAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createPropertyAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.checkerdsl.checkerDsl.MR <em>MR</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.checkerdsl.checkerDsl.MR
+   * @generated
+   */
+  public Adapter createMRAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.checkerdsl.checkerDsl.ChkVariableDeclaration <em>Chk Variable Declaration</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.checkerdsl.checkerDsl.ChkVariableDeclaration
+   * @generated
+   */
+  public Adapter createChkVariableDeclarationAdapter()
   {
     return null;
   }
@@ -426,6 +528,21 @@ public class CheckerDslAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.checkerdsl.checkerDsl.ChkItemGroup <em>Chk Item Group</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.checkerdsl.checkerDsl.ChkItemGroup
+   * @generated
+   */
+  public Adapter createChkItemGroupAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.xtext.example.checkerdsl.checkerDsl.Helper <em>Helper</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -486,6 +603,36 @@ public class CheckerDslAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.checkerdsl.checkerDsl.ChkOperation <em>Chk Operation</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.checkerdsl.checkerDsl.ChkOperation
+   * @generated
+   */
+  public Adapter createChkOperationAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.checkerdsl.checkerDsl.ChkLoopExpression <em>Chk Loop Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.checkerdsl.checkerDsl.ChkLoopExpression
+   * @generated
+   */
+  public Adapter createChkLoopExpressionAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.xtext.example.checkerdsl.checkerDsl.ChkExpression <em>Chk Expression</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -501,21 +648,6 @@ public class CheckerDslAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.checkerdsl.checkerDsl.MrExpression <em>Mr Expression</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.example.checkerdsl.checkerDsl.MrExpression
-   * @generated
-   */
-  public Adapter createMrExpressionAdapter()
-  {
-    return null;
-  }
-
-  /**
    * Creates a new adapter for an object of class '{@link org.xtext.example.checkerdsl.checkerDsl.Check <em>Check</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -526,6 +658,21 @@ public class CheckerDslAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createCheckAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.checkerdsl.checkerDsl.SpValue <em>Sp Value</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.checkerdsl.checkerDsl.SpValue
+   * @generated
+   */
+  public Adapter createSpValueAdapter()
   {
     return null;
   }

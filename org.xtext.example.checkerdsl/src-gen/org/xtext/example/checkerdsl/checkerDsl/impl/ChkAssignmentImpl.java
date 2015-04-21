@@ -6,14 +6,14 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage;
 import org.xtext.example.checkerdsl.checkerDsl.ChkAssignment;
-import org.xtext.example.checkerdsl.checkerDsl.ChkVariables;
+import org.xtext.example.checkerdsl.checkerDsl.ChkOperation;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,7 +30,7 @@ import org.xtext.example.checkerdsl.checkerDsl.ChkVariables;
  *
  * @generated
  */
-public class ChkAssignmentImpl extends MinimalEObjectImpl.Container implements ChkAssignment
+public class ChkAssignmentImpl extends ChkRelationalExpressionsImpl implements ChkAssignment
 {
   /**
    * The cached value of the '{@link #getV1() <em>V1</em>}' containment reference.
@@ -40,7 +40,7 @@ public class ChkAssignmentImpl extends MinimalEObjectImpl.Container implements C
    * @generated
    * @ordered
    */
-  protected ChkVariables v1;
+  protected ChkOperation v1;
 
   /**
    * The default value of the '{@link #getOpr() <em>Opr</em>}' attribute.
@@ -70,7 +70,7 @@ public class ChkAssignmentImpl extends MinimalEObjectImpl.Container implements C
    * @generated
    * @ordered
    */
-  protected ChkVariables v2;
+  protected EObject v2;
 
   /**
    * <!-- begin-user-doc -->
@@ -98,7 +98,7 @@ public class ChkAssignmentImpl extends MinimalEObjectImpl.Container implements C
    * <!-- end-user-doc -->
    * @generated
    */
-  public ChkVariables getV1()
+  public ChkOperation getV1()
   {
     return v1;
   }
@@ -108,9 +108,9 @@ public class ChkAssignmentImpl extends MinimalEObjectImpl.Container implements C
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetV1(ChkVariables newV1, NotificationChain msgs)
+  public NotificationChain basicSetV1(ChkOperation newV1, NotificationChain msgs)
   {
-    ChkVariables oldV1 = v1;
+    ChkOperation oldV1 = v1;
     v1 = newV1;
     if (eNotificationRequired())
     {
@@ -125,7 +125,7 @@ public class ChkAssignmentImpl extends MinimalEObjectImpl.Container implements C
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setV1(ChkVariables newV1)
+  public void setV1(ChkOperation newV1)
   {
     if (newV1 != v1)
     {
@@ -169,7 +169,7 @@ public class ChkAssignmentImpl extends MinimalEObjectImpl.Container implements C
    * <!-- end-user-doc -->
    * @generated
    */
-  public ChkVariables getV2()
+  public EObject getV2()
   {
     return v2;
   }
@@ -179,9 +179,9 @@ public class ChkAssignmentImpl extends MinimalEObjectImpl.Container implements C
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetV2(ChkVariables newV2, NotificationChain msgs)
+  public NotificationChain basicSetV2(EObject newV2, NotificationChain msgs)
   {
-    ChkVariables oldV2 = v2;
+    EObject oldV2 = v2;
     v2 = newV2;
     if (eNotificationRequired())
     {
@@ -196,7 +196,7 @@ public class ChkAssignmentImpl extends MinimalEObjectImpl.Container implements C
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setV2(ChkVariables newV2)
+  public void setV2(EObject newV2)
   {
     if (newV2 != v2)
     {
@@ -261,13 +261,13 @@ public class ChkAssignmentImpl extends MinimalEObjectImpl.Container implements C
     switch (featureID)
     {
       case CheckerDslPackage.CHK_ASSIGNMENT__V1:
-        setV1((ChkVariables)newValue);
+        setV1((ChkOperation)newValue);
         return;
       case CheckerDslPackage.CHK_ASSIGNMENT__OPR:
         setOpr((String)newValue);
         return;
       case CheckerDslPackage.CHK_ASSIGNMENT__V2:
-        setV2((ChkVariables)newValue);
+        setV2((EObject)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -284,13 +284,13 @@ public class ChkAssignmentImpl extends MinimalEObjectImpl.Container implements C
     switch (featureID)
     {
       case CheckerDslPackage.CHK_ASSIGNMENT__V1:
-        setV1((ChkVariables)null);
+        setV1((ChkOperation)null);
         return;
       case CheckerDslPackage.CHK_ASSIGNMENT__OPR:
         setOpr(OPR_EDEFAULT);
         return;
       case CheckerDslPackage.CHK_ASSIGNMENT__V2:
-        setV2((ChkVariables)null);
+        setV2((EObject)null);
         return;
     }
     super.eUnset(featureID);

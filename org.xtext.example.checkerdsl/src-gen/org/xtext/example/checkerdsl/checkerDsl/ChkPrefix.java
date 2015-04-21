@@ -14,7 +14,6 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.ChkPrefix#getType <em>Type</em>}</li>
- *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.ChkPrefix#getNewtest <em>Newtest</em>}</li>
  * </ul>
  *
  * @see org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage#getChkPrefix()
@@ -48,31 +47,5 @@ public interface ChkPrefix extends EObject
    * @generated
    */
   void setType(String value);
-
-  /**
-   * Returns the value of the '<em><b>Newtest</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Newtest</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Newtest</em>' attribute.
-   * @see #setNewtest(String)
-   * @see org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage#getChkPrefix_Newtest()
-   * @model
-   * @generated
-   */
-  String getNewtest();
-
-  /**
-   * Sets the value of the '{@link org.xtext.example.checkerdsl.checkerDsl.ChkPrefix#getNewtest <em>Newtest</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Newtest</em>' attribute.
-   * @see #getNewtest()
-   * @generated
-   */
-  void setNewtest(String value);
 
 } // ChkPrefix

@@ -1,0 +1,8 @@
+import java.util.ArrayList;
+
+
+public class LibraryFunction {
+	public int sum(ArrayList arr){
+		
+	}
+}

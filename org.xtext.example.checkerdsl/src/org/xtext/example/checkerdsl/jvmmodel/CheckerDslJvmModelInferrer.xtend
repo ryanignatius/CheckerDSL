@@ -3,7 +3,7 @@ package org.xtext.example.checkerdsl.jvmmodel
 import com.google.inject.Inject
 import org.xtext.example.checkerdsl.checkerDsl.Class
 import org.xtext.example.checkerdsl.checkerDsl.Method
-import org.xtext.example.checkerdsl.checkerDsl.Property
+import org.xtext.example.checkerdsl.checkerDsl.ChkVariableDeclaration
 import org.xtext.example.checkerdsl.checkerDsl.Limit
 import org.xtext.example.checkerdsl.checkerDsl.Format
 import org.xtext.example.checkerdsl.checkerDsl.InputFormat
@@ -150,7 +150,7 @@ class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
       for (feature : element.features) {
         switch feature {
       
-          Property : {
+          ChkVariableDeclaration : {
           	
           	var t = typeRef(void);
           	var t2 = typeRef(void);

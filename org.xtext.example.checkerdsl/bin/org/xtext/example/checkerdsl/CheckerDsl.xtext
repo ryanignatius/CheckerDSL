@@ -21,7 +21,7 @@ Class:
   '}';
 
 Feature:
-  Property | Method | Format | Check | MR;
+  ChkVariableDeclaration | Method | Format | Check | MR | Score;
 
 Method:
   'op' type=JvmTypeReference name=ValidID 
@@ -29,14 +29,33 @@ Method:
   	(',' params+=FullJvmFormalParameter)*)?')'
   	body=XBlockExpression; 
 
-MR:
-  mr='MR' num=INT '{'
-  	( mrExpression+=MrExpression )*
-  	'}';
+ChkScoreExpression:
+	'(' subtask=CHK_INT ':' score=CHK_INT ')';
+
+Score:
+	'score' '{' (scores+=ChkScoreExpression)+ '}';
+
+FollowUp:
+	fol='followup' '{'
+		(followups+=(ChkExpression | ChkLoopExpression))*
+	'}';
 
 Property:
+	prop='property' '{'
+		(properties+=(ChkExpression | ChkLoopExpression))*
+	'}';
+
+MR:
+  mr='MR' num=INT '{'
+  	(mrExp+=(ChkExpression | ChkLoopExpression))*
+  	followup=FollowUp
+  	property=Property
+  	'}';
+
+ChkVariableDeclaration:
   type=ChkTypeReference ('[' sz+=MY_NUMBER ']')* name=ValidID
-  ('(' limit+=Limit (';' limit+=Limit)* ')')?;
+  ('(' limit+=Limit (';' limit+=Limit)* ')')?
+  ('sp' '{' spValue=SpValue '}')?;
 
 ChkTypeReference:
 	('int' | 'long' | 'float' | 'double' | 'boolean' | 'char' | 'string' | 'tree' | 'adjMat' | 'adjList');
@@ -47,13 +66,16 @@ MethodCall:
   	(',' params+=ValidID)*)?')';
 
 ChkPrefix:
-	type = ('in' | 'out' | 'ans') (newtest = '\'')? '.';
+	(type = ('in' | 'out' | 'ans')) ('.');
 
 ChkVariable:
-	(pref=ChkPrefix)? var=ValidID ('[' v+=ValidID ']')*;
+	(pref=ChkPrefix)? (var=ValidID) ((newtest='`')?) ('[' v+=MY_NUMBER ']')*;
 
 ChkVariables:
-	va=ChkVariable | nu=INT;
+	va=ChkVariable | nu=CHK_INT | gr = ChkItemGroup;
+
+ChkItemGroup:
+	('<' vars+=ChkVariable (',' vars+=ChkVariable)* '>');
 
 Helper:
 	(sum='sum' '(' var=ChkVariable ')' |
@@ -62,20 +84,37 @@ Helper:
 		prime='prime'  '(' var=ChkVariables ')' |
 		swap='swap'  '(' var=ChkVariable ',' var1=ValidID ',' var2=ValidID ')' |
 		select='select' '(' vars+=ValidID (',' vars+=ValidID)* ')' |
-		add='add' '(' var=ChkVariable ',' var3=ChkVariables ')'
+		add='add' '(' var=ChkVariable ',' var3=ChkVariables ')' |
+		remove='remove' '(' (g=ChkItemGroup | var=ChkVariable) ',' var3=ChkVariables ')' |
+		random='random' '(' ((var3=ChkVariables) '..' (var4=ChkVariables))? ')' |
+		size='size' '(' (var=ChkVariable) ')' |
+		
+		permute='permute' '(' var=ChkVariable ')' |
+		plus='plus' '(' var=ChkVariable ',' var3=ChkVariables ')' |
+		multiply='multiply' '(' var=ChkVariable ',' var3=ChkVariables ')' |
+		invert='invert' '(' var=ChkVariable ')' |
+		include='include' '(' var=ChkVariable ',' var3=ChkVariables ')' |
+		exclude='exclude' '(' var=ChkVariable ',' var3=ChkVariables ')' |
+		compositional='compositional' '(' var=ChkVariable ')'
 	);
 
 ChkRelationalExpression:
 	v1=ChkVariables opr=ChkOpRelational v2=ChkVariables;
 
 ChkAssignment:
-	v1=ChkVariables opr=ChkOpAssignment v2=ChkVariables;
+	v1=ChkOperation opr=ChkOpAssignment v2=(ChkOperation | Helper);
 
 ChkRelationalExpressions:
-	(Helper | ChkRelationalExpression | MethodCall);
+	(Helper | ChkRelationalExpression | MethodCall | ChkAssignment);
 
 ChkOpAssignment:
 	'=';
+	
+ChkOperator:
+	('+' | '-' | '*' | '/');
+
+ChkOperation:
+	operand+=ChkVariables (operator+=ChkOperator operand+=ChkVariables)*;
 
 ChkOpRelational:
 	'==' | '!=' | '>=' | '<=' | '>' | '<' ;
@@ -83,13 +122,12 @@ ChkOpRelational:
 ChkAndOr:
 	'and' | 'or';
 
-ChkExpression:
-	('def' asg=ValidID '=')? '(' exp=ChkRelationalExpressions (where='where' cond+=ChkRelationalExpression
-		(type+=ChkAndOr cond+=ChkRelationalExpression)*
-	)?
-	(op=ChkOpRelational v=ChkVariable)? ')';
+ChkLoopExpression:
+	('for' '(' (index=ChkVariables) ',' (maxIndex=ChkVariables) ')'
+		'{' (ex+=ChkExpression)* '}'
+	);
 
-MrExpression:
+ChkExpression:
 	('def' asg=ValidID '=')? '(' exp=ChkRelationalExpressions (where='where' cond+=ChkRelationalExpression
 		(type+=ChkAndOr cond+=ChkRelationalExpression)*
 	)?
@@ -97,11 +135,14 @@ MrExpression:
 
 Check:
   check='check' '{'
-  	( chk+=ChkExpression )*
+  	( chk+=(ChkExpression | ChkLoopExpression) )*
   	'}'; 
 
+SpValue:
+	val+=MY_NUMBER (',' val+=MY_NUMBER)*;
+
 Limit:
-	sub=Subtask
+	(sub=Subtask)?
 	(a+=MY_ELEMENT) '..' (b+=MY_ELEMENT)
 	(',' (a+=MY_ELEMENT) '..' (b+=MY_ELEMENT))*;
 
@@ -121,8 +162,11 @@ FormatExpression:
 	num = MY_NUMBER '(' (var+=ValidID ('<' (count+=MY_NUMBER) '>')?
 		(',' var+=ValidID ('<' (count+=MY_NUMBER) '>')?)*)? ')';
 
+CHK_INT:
+	'-'? INT;
+
 MY_ELEMENT:
 	MY_NUMBER | STRING;
 
 MY_NUMBER:
-	INT | ID;
+	CHK_INT | ValidID;

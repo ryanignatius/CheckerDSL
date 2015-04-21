@@ -12,13 +12,19 @@ import org.xtext.example.checkerdsl.checkerDsl.Check;
 import org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage;
 import org.xtext.example.checkerdsl.checkerDsl.ChkAssignment;
 import org.xtext.example.checkerdsl.checkerDsl.ChkExpression;
+import org.xtext.example.checkerdsl.checkerDsl.ChkItemGroup;
+import org.xtext.example.checkerdsl.checkerDsl.ChkLoopExpression;
+import org.xtext.example.checkerdsl.checkerDsl.ChkOperation;
 import org.xtext.example.checkerdsl.checkerDsl.ChkPrefix;
 import org.xtext.example.checkerdsl.checkerDsl.ChkRelationalExpression;
 import org.xtext.example.checkerdsl.checkerDsl.ChkRelationalExpressions;
+import org.xtext.example.checkerdsl.checkerDsl.ChkScoreExpression;
 import org.xtext.example.checkerdsl.checkerDsl.ChkVariable;
+import org.xtext.example.checkerdsl.checkerDsl.ChkVariableDeclaration;
 import org.xtext.example.checkerdsl.checkerDsl.ChkVariables;
 import org.xtext.example.checkerdsl.checkerDsl.Dsl;
 import org.xtext.example.checkerdsl.checkerDsl.Feature;
+import org.xtext.example.checkerdsl.checkerDsl.FollowUp;
 import org.xtext.example.checkerdsl.checkerDsl.Format;
 import org.xtext.example.checkerdsl.checkerDsl.FormatExpression;
 import org.xtext.example.checkerdsl.checkerDsl.Helper;
@@ -27,10 +33,11 @@ import org.xtext.example.checkerdsl.checkerDsl.Limit;
 import org.xtext.example.checkerdsl.checkerDsl.MR;
 import org.xtext.example.checkerdsl.checkerDsl.Method;
 import org.xtext.example.checkerdsl.checkerDsl.MethodCall;
-import org.xtext.example.checkerdsl.checkerDsl.MrExpression;
 import org.xtext.example.checkerdsl.checkerDsl.OutputFormat;
 import org.xtext.example.checkerdsl.checkerDsl.PackageDeclaration;
 import org.xtext.example.checkerdsl.checkerDsl.Property;
+import org.xtext.example.checkerdsl.checkerDsl.Score;
+import org.xtext.example.checkerdsl.checkerDsl.SpValue;
 import org.xtext.example.checkerdsl.checkerDsl.Subtask;
 
 /**
@@ -141,6 +148,35 @@ public class CheckerDslSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case CheckerDslPackage.CHK_SCORE_EXPRESSION:
+      {
+        ChkScoreExpression chkScoreExpression = (ChkScoreExpression)theEObject;
+        T result = caseChkScoreExpression(chkScoreExpression);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case CheckerDslPackage.SCORE:
+      {
+        Score score = (Score)theEObject;
+        T result = caseScore(score);
+        if (result == null) result = caseFeature(score);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case CheckerDslPackage.FOLLOW_UP:
+      {
+        FollowUp followUp = (FollowUp)theEObject;
+        T result = caseFollowUp(followUp);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case CheckerDslPackage.PROPERTY:
+      {
+        Property property = (Property)theEObject;
+        T result = caseProperty(property);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case CheckerDslPackage.MR:
       {
         MR mr = (MR)theEObject;
@@ -149,11 +185,11 @@ public class CheckerDslSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case CheckerDslPackage.PROPERTY:
+      case CheckerDslPackage.CHK_VARIABLE_DECLARATION:
       {
-        Property property = (Property)theEObject;
-        T result = caseProperty(property);
-        if (result == null) result = caseFeature(property);
+        ChkVariableDeclaration chkVariableDeclaration = (ChkVariableDeclaration)theEObject;
+        T result = caseChkVariableDeclaration(chkVariableDeclaration);
+        if (result == null) result = caseFeature(chkVariableDeclaration);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -186,6 +222,13 @@ public class CheckerDslSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case CheckerDslPackage.CHK_ITEM_GROUP:
+      {
+        ChkItemGroup chkItemGroup = (ChkItemGroup)theEObject;
+        T result = caseChkItemGroup(chkItemGroup);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case CheckerDslPackage.HELPER:
       {
         Helper helper = (Helper)theEObject;
@@ -206,6 +249,7 @@ public class CheckerDslSwitch<T> extends Switch<T>
       {
         ChkAssignment chkAssignment = (ChkAssignment)theEObject;
         T result = caseChkAssignment(chkAssignment);
+        if (result == null) result = caseChkRelationalExpressions(chkAssignment);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -216,17 +260,24 @@ public class CheckerDslSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case CheckerDslPackage.CHK_OPERATION:
+      {
+        ChkOperation chkOperation = (ChkOperation)theEObject;
+        T result = caseChkOperation(chkOperation);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case CheckerDslPackage.CHK_LOOP_EXPRESSION:
+      {
+        ChkLoopExpression chkLoopExpression = (ChkLoopExpression)theEObject;
+        T result = caseChkLoopExpression(chkLoopExpression);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case CheckerDslPackage.CHK_EXPRESSION:
       {
         ChkExpression chkExpression = (ChkExpression)theEObject;
         T result = caseChkExpression(chkExpression);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case CheckerDslPackage.MR_EXPRESSION:
-      {
-        MrExpression mrExpression = (MrExpression)theEObject;
-        T result = caseMrExpression(mrExpression);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -235,6 +286,13 @@ public class CheckerDslSwitch<T> extends Switch<T>
         Check check = (Check)theEObject;
         T result = caseCheck(check);
         if (result == null) result = caseFeature(check);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case CheckerDslPackage.SP_VALUE:
+      {
+        SpValue spValue = (SpValue)theEObject;
+        T result = caseSpValue(spValue);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -386,17 +444,49 @@ public class CheckerDslSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>MR</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Chk Score Expression</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>MR</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Chk Score Expression</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseMR(MR object)
+  public T caseChkScoreExpression(ChkScoreExpression object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Score</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Score</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseScore(Score object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Follow Up</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Follow Up</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseFollowUp(FollowUp object)
   {
     return null;
   }
@@ -413,6 +503,38 @@ public class CheckerDslSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseProperty(Property object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>MR</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>MR</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseMR(MR object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Chk Variable Declaration</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Chk Variable Declaration</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseChkVariableDeclaration(ChkVariableDeclaration object)
   {
     return null;
   }
@@ -482,6 +604,22 @@ public class CheckerDslSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Chk Item Group</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Chk Item Group</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseChkItemGroup(ChkItemGroup object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Helper</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -546,6 +684,38 @@ public class CheckerDslSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Chk Operation</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Chk Operation</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseChkOperation(ChkOperation object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Chk Loop Expression</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Chk Loop Expression</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseChkLoopExpression(ChkLoopExpression object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Chk Expression</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -562,22 +732,6 @@ public class CheckerDslSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Mr Expression</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Mr Expression</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseMrExpression(MrExpression object)
-  {
-    return null;
-  }
-
-  /**
    * Returns the result of interpreting the object as an instance of '<em>Check</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -589,6 +743,22 @@ public class CheckerDslSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseCheck(Check object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Sp Value</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Sp Value</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSpValue(SpValue object)
   {
     return null;
   }

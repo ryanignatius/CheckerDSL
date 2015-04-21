@@ -12,6 +12,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage;
+import org.xtext.example.checkerdsl.checkerDsl.ChkItemGroup;
 import org.xtext.example.checkerdsl.checkerDsl.ChkVariable;
 import org.xtext.example.checkerdsl.checkerDsl.ChkVariables;
 
@@ -25,6 +26,7 @@ import org.xtext.example.checkerdsl.checkerDsl.ChkVariables;
  * <ul>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.ChkVariablesImpl#getVa <em>Va</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.ChkVariablesImpl#getNu <em>Nu</em>}</li>
+ *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.ChkVariablesImpl#getGr <em>Gr</em>}</li>
  * </ul>
  *
  * @generated
@@ -49,7 +51,7 @@ public class ChkVariablesImpl extends MinimalEObjectImpl.Container implements Ch
    * @generated
    * @ordered
    */
-  protected static final int NU_EDEFAULT = 0;
+  protected static final String NU_EDEFAULT = null;
 
   /**
    * The cached value of the '{@link #getNu() <em>Nu</em>}' attribute.
@@ -59,7 +61,17 @@ public class ChkVariablesImpl extends MinimalEObjectImpl.Container implements Ch
    * @generated
    * @ordered
    */
-  protected int nu = NU_EDEFAULT;
+  protected String nu = NU_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getGr() <em>Gr</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getGr()
+   * @generated
+   * @ordered
+   */
+  protected ChkItemGroup gr;
 
   /**
    * <!-- begin-user-doc -->
@@ -135,7 +147,7 @@ public class ChkVariablesImpl extends MinimalEObjectImpl.Container implements Ch
    * <!-- end-user-doc -->
    * @generated
    */
-  public int getNu()
+  public String getNu()
   {
     return nu;
   }
@@ -145,12 +157,60 @@ public class ChkVariablesImpl extends MinimalEObjectImpl.Container implements Ch
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setNu(int newNu)
+  public void setNu(String newNu)
   {
-    int oldNu = nu;
+    String oldNu = nu;
     nu = newNu;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, CheckerDslPackage.CHK_VARIABLES__NU, oldNu, nu));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ChkItemGroup getGr()
+  {
+    return gr;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetGr(ChkItemGroup newGr, NotificationChain msgs)
+  {
+    ChkItemGroup oldGr = gr;
+    gr = newGr;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CheckerDslPackage.CHK_VARIABLES__GR, oldGr, newGr);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setGr(ChkItemGroup newGr)
+  {
+    if (newGr != gr)
+    {
+      NotificationChain msgs = null;
+      if (gr != null)
+        msgs = ((InternalEObject)gr).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CheckerDslPackage.CHK_VARIABLES__GR, null, msgs);
+      if (newGr != null)
+        msgs = ((InternalEObject)newGr).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CheckerDslPackage.CHK_VARIABLES__GR, null, msgs);
+      msgs = basicSetGr(newGr, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, CheckerDslPackage.CHK_VARIABLES__GR, newGr, newGr));
   }
 
   /**
@@ -165,6 +225,8 @@ public class ChkVariablesImpl extends MinimalEObjectImpl.Container implements Ch
     {
       case CheckerDslPackage.CHK_VARIABLES__VA:
         return basicSetVa(null, msgs);
+      case CheckerDslPackage.CHK_VARIABLES__GR:
+        return basicSetGr(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -183,6 +245,8 @@ public class ChkVariablesImpl extends MinimalEObjectImpl.Container implements Ch
         return getVa();
       case CheckerDslPackage.CHK_VARIABLES__NU:
         return getNu();
+      case CheckerDslPackage.CHK_VARIABLES__GR:
+        return getGr();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -201,7 +265,10 @@ public class ChkVariablesImpl extends MinimalEObjectImpl.Container implements Ch
         setVa((ChkVariable)newValue);
         return;
       case CheckerDslPackage.CHK_VARIABLES__NU:
-        setNu((Integer)newValue);
+        setNu((String)newValue);
+        return;
+      case CheckerDslPackage.CHK_VARIABLES__GR:
+        setGr((ChkItemGroup)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -223,6 +290,9 @@ public class ChkVariablesImpl extends MinimalEObjectImpl.Container implements Ch
       case CheckerDslPackage.CHK_VARIABLES__NU:
         setNu(NU_EDEFAULT);
         return;
+      case CheckerDslPackage.CHK_VARIABLES__GR:
+        setGr((ChkItemGroup)null);
+        return;
     }
     super.eUnset(featureID);
   }
@@ -240,7 +310,9 @@ public class ChkVariablesImpl extends MinimalEObjectImpl.Container implements Ch
       case CheckerDslPackage.CHK_VARIABLES__VA:
         return va != null;
       case CheckerDslPackage.CHK_VARIABLES__NU:
-        return nu != NU_EDEFAULT;
+        return NU_EDEFAULT == null ? nu != null : !NU_EDEFAULT.equals(nu);
+      case CheckerDslPackage.CHK_VARIABLES__GR:
+        return gr != null;
     }
     return super.eIsSet(featureID);
   }

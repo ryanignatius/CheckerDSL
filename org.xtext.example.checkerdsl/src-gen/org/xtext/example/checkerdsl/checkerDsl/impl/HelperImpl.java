@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EDataTypeEList;
 
 import org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage;
+import org.xtext.example.checkerdsl.checkerDsl.ChkItemGroup;
 import org.xtext.example.checkerdsl.checkerDsl.ChkVariables;
 import org.xtext.example.checkerdsl.checkerDsl.Helper;
 
@@ -41,6 +42,18 @@ import org.xtext.example.checkerdsl.checkerDsl.Helper;
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.HelperImpl#getVars <em>Vars</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.HelperImpl#getAdd <em>Add</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.HelperImpl#getVar3 <em>Var3</em>}</li>
+ *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.HelperImpl#getRemove <em>Remove</em>}</li>
+ *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.HelperImpl#getG <em>G</em>}</li>
+ *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.HelperImpl#getRandom <em>Random</em>}</li>
+ *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.HelperImpl#getVar4 <em>Var4</em>}</li>
+ *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.HelperImpl#getSize <em>Size</em>}</li>
+ *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.HelperImpl#getPermute <em>Permute</em>}</li>
+ *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.HelperImpl#getPlus <em>Plus</em>}</li>
+ *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.HelperImpl#getMultiply <em>Multiply</em>}</li>
+ *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.HelperImpl#getInvert <em>Invert</em>}</li>
+ *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.HelperImpl#getInclude <em>Include</em>}</li>
+ *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.HelperImpl#getExclude <em>Exclude</em>}</li>
+ *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.HelperImpl#getCompositional <em>Compositional</em>}</li>
  * </ul>
  *
  * @generated
@@ -256,6 +269,226 @@ public class HelperImpl extends ChkRelationalExpressionsImpl implements Helper
    * @ordered
    */
   protected ChkVariables var3;
+
+  /**
+   * The default value of the '{@link #getRemove() <em>Remove</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getRemove()
+   * @generated
+   * @ordered
+   */
+  protected static final String REMOVE_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getRemove() <em>Remove</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getRemove()
+   * @generated
+   * @ordered
+   */
+  protected String remove = REMOVE_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getG() <em>G</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getG()
+   * @generated
+   * @ordered
+   */
+  protected ChkItemGroup g;
+
+  /**
+   * The default value of the '{@link #getRandom() <em>Random</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getRandom()
+   * @generated
+   * @ordered
+   */
+  protected static final String RANDOM_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getRandom() <em>Random</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getRandom()
+   * @generated
+   * @ordered
+   */
+  protected String random = RANDOM_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getVar4() <em>Var4</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getVar4()
+   * @generated
+   * @ordered
+   */
+  protected ChkVariables var4;
+
+  /**
+   * The default value of the '{@link #getSize() <em>Size</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getSize()
+   * @generated
+   * @ordered
+   */
+  protected static final String SIZE_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getSize() <em>Size</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getSize()
+   * @generated
+   * @ordered
+   */
+  protected String size = SIZE_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getPermute() <em>Permute</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getPermute()
+   * @generated
+   * @ordered
+   */
+  protected static final String PERMUTE_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getPermute() <em>Permute</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getPermute()
+   * @generated
+   * @ordered
+   */
+  protected String permute = PERMUTE_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getPlus() <em>Plus</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getPlus()
+   * @generated
+   * @ordered
+   */
+  protected static final String PLUS_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getPlus() <em>Plus</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getPlus()
+   * @generated
+   * @ordered
+   */
+  protected String plus = PLUS_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getMultiply() <em>Multiply</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getMultiply()
+   * @generated
+   * @ordered
+   */
+  protected static final String MULTIPLY_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getMultiply() <em>Multiply</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getMultiply()
+   * @generated
+   * @ordered
+   */
+  protected String multiply = MULTIPLY_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getInvert() <em>Invert</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getInvert()
+   * @generated
+   * @ordered
+   */
+  protected static final String INVERT_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getInvert() <em>Invert</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getInvert()
+   * @generated
+   * @ordered
+   */
+  protected String invert = INVERT_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getInclude() <em>Include</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getInclude()
+   * @generated
+   * @ordered
+   */
+  protected static final String INCLUDE_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getInclude() <em>Include</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getInclude()
+   * @generated
+   * @ordered
+   */
+  protected String include = INCLUDE_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getExclude() <em>Exclude</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getExclude()
+   * @generated
+   * @ordered
+   */
+  protected static final String EXCLUDE_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getExclude() <em>Exclude</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getExclude()
+   * @generated
+   * @ordered
+   */
+  protected String exclude = EXCLUDE_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getCompositional() <em>Compositional</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getCompositional()
+   * @generated
+   * @ordered
+   */
+  protected static final String COMPOSITIONAL_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getCompositional() <em>Compositional</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getCompositional()
+   * @generated
+   * @ordered
+   */
+  protected String compositional = COMPOSITIONAL_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -600,6 +833,332 @@ public class HelperImpl extends ChkRelationalExpressionsImpl implements Helper
    * <!-- end-user-doc -->
    * @generated
    */
+  public String getRemove()
+  {
+    return remove;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setRemove(String newRemove)
+  {
+    String oldRemove = remove;
+    remove = newRemove;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, CheckerDslPackage.HELPER__REMOVE, oldRemove, remove));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ChkItemGroup getG()
+  {
+    return g;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetG(ChkItemGroup newG, NotificationChain msgs)
+  {
+    ChkItemGroup oldG = g;
+    g = newG;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CheckerDslPackage.HELPER__G, oldG, newG);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setG(ChkItemGroup newG)
+  {
+    if (newG != g)
+    {
+      NotificationChain msgs = null;
+      if (g != null)
+        msgs = ((InternalEObject)g).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CheckerDslPackage.HELPER__G, null, msgs);
+      if (newG != null)
+        msgs = ((InternalEObject)newG).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CheckerDslPackage.HELPER__G, null, msgs);
+      msgs = basicSetG(newG, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, CheckerDslPackage.HELPER__G, newG, newG));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getRandom()
+  {
+    return random;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setRandom(String newRandom)
+  {
+    String oldRandom = random;
+    random = newRandom;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, CheckerDslPackage.HELPER__RANDOM, oldRandom, random));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ChkVariables getVar4()
+  {
+    return var4;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetVar4(ChkVariables newVar4, NotificationChain msgs)
+  {
+    ChkVariables oldVar4 = var4;
+    var4 = newVar4;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CheckerDslPackage.HELPER__VAR4, oldVar4, newVar4);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setVar4(ChkVariables newVar4)
+  {
+    if (newVar4 != var4)
+    {
+      NotificationChain msgs = null;
+      if (var4 != null)
+        msgs = ((InternalEObject)var4).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CheckerDslPackage.HELPER__VAR4, null, msgs);
+      if (newVar4 != null)
+        msgs = ((InternalEObject)newVar4).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CheckerDslPackage.HELPER__VAR4, null, msgs);
+      msgs = basicSetVar4(newVar4, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, CheckerDslPackage.HELPER__VAR4, newVar4, newVar4));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getSize()
+  {
+    return size;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setSize(String newSize)
+  {
+    String oldSize = size;
+    size = newSize;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, CheckerDslPackage.HELPER__SIZE, oldSize, size));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getPermute()
+  {
+    return permute;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setPermute(String newPermute)
+  {
+    String oldPermute = permute;
+    permute = newPermute;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, CheckerDslPackage.HELPER__PERMUTE, oldPermute, permute));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getPlus()
+  {
+    return plus;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setPlus(String newPlus)
+  {
+    String oldPlus = plus;
+    plus = newPlus;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, CheckerDslPackage.HELPER__PLUS, oldPlus, plus));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getMultiply()
+  {
+    return multiply;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setMultiply(String newMultiply)
+  {
+    String oldMultiply = multiply;
+    multiply = newMultiply;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, CheckerDslPackage.HELPER__MULTIPLY, oldMultiply, multiply));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getInvert()
+  {
+    return invert;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setInvert(String newInvert)
+  {
+    String oldInvert = invert;
+    invert = newInvert;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, CheckerDslPackage.HELPER__INVERT, oldInvert, invert));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getInclude()
+  {
+    return include;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setInclude(String newInclude)
+  {
+    String oldInclude = include;
+    include = newInclude;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, CheckerDslPackage.HELPER__INCLUDE, oldInclude, include));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getExclude()
+  {
+    return exclude;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setExclude(String newExclude)
+  {
+    String oldExclude = exclude;
+    exclude = newExclude;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, CheckerDslPackage.HELPER__EXCLUDE, oldExclude, exclude));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getCompositional()
+  {
+    return compositional;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setCompositional(String newCompositional)
+  {
+    String oldCompositional = compositional;
+    compositional = newCompositional;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, CheckerDslPackage.HELPER__COMPOSITIONAL, oldCompositional, compositional));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -609,6 +1168,10 @@ public class HelperImpl extends ChkRelationalExpressionsImpl implements Helper
         return basicSetVar(null, msgs);
       case CheckerDslPackage.HELPER__VAR3:
         return basicSetVar3(null, msgs);
+      case CheckerDslPackage.HELPER__G:
+        return basicSetG(null, msgs);
+      case CheckerDslPackage.HELPER__VAR4:
+        return basicSetVar4(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -647,6 +1210,30 @@ public class HelperImpl extends ChkRelationalExpressionsImpl implements Helper
         return getAdd();
       case CheckerDslPackage.HELPER__VAR3:
         return getVar3();
+      case CheckerDslPackage.HELPER__REMOVE:
+        return getRemove();
+      case CheckerDslPackage.HELPER__G:
+        return getG();
+      case CheckerDslPackage.HELPER__RANDOM:
+        return getRandom();
+      case CheckerDslPackage.HELPER__VAR4:
+        return getVar4();
+      case CheckerDslPackage.HELPER__SIZE:
+        return getSize();
+      case CheckerDslPackage.HELPER__PERMUTE:
+        return getPermute();
+      case CheckerDslPackage.HELPER__PLUS:
+        return getPlus();
+      case CheckerDslPackage.HELPER__MULTIPLY:
+        return getMultiply();
+      case CheckerDslPackage.HELPER__INVERT:
+        return getInvert();
+      case CheckerDslPackage.HELPER__INCLUDE:
+        return getInclude();
+      case CheckerDslPackage.HELPER__EXCLUDE:
+        return getExclude();
+      case CheckerDslPackage.HELPER__COMPOSITIONAL:
+        return getCompositional();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -699,6 +1286,42 @@ public class HelperImpl extends ChkRelationalExpressionsImpl implements Helper
       case CheckerDslPackage.HELPER__VAR3:
         setVar3((ChkVariables)newValue);
         return;
+      case CheckerDslPackage.HELPER__REMOVE:
+        setRemove((String)newValue);
+        return;
+      case CheckerDslPackage.HELPER__G:
+        setG((ChkItemGroup)newValue);
+        return;
+      case CheckerDslPackage.HELPER__RANDOM:
+        setRandom((String)newValue);
+        return;
+      case CheckerDslPackage.HELPER__VAR4:
+        setVar4((ChkVariables)newValue);
+        return;
+      case CheckerDslPackage.HELPER__SIZE:
+        setSize((String)newValue);
+        return;
+      case CheckerDslPackage.HELPER__PERMUTE:
+        setPermute((String)newValue);
+        return;
+      case CheckerDslPackage.HELPER__PLUS:
+        setPlus((String)newValue);
+        return;
+      case CheckerDslPackage.HELPER__MULTIPLY:
+        setMultiply((String)newValue);
+        return;
+      case CheckerDslPackage.HELPER__INVERT:
+        setInvert((String)newValue);
+        return;
+      case CheckerDslPackage.HELPER__INCLUDE:
+        setInclude((String)newValue);
+        return;
+      case CheckerDslPackage.HELPER__EXCLUDE:
+        setExclude((String)newValue);
+        return;
+      case CheckerDslPackage.HELPER__COMPOSITIONAL:
+        setCompositional((String)newValue);
+        return;
     }
     super.eSet(featureID, newValue);
   }
@@ -749,6 +1372,42 @@ public class HelperImpl extends ChkRelationalExpressionsImpl implements Helper
       case CheckerDslPackage.HELPER__VAR3:
         setVar3((ChkVariables)null);
         return;
+      case CheckerDslPackage.HELPER__REMOVE:
+        setRemove(REMOVE_EDEFAULT);
+        return;
+      case CheckerDslPackage.HELPER__G:
+        setG((ChkItemGroup)null);
+        return;
+      case CheckerDslPackage.HELPER__RANDOM:
+        setRandom(RANDOM_EDEFAULT);
+        return;
+      case CheckerDslPackage.HELPER__VAR4:
+        setVar4((ChkVariables)null);
+        return;
+      case CheckerDslPackage.HELPER__SIZE:
+        setSize(SIZE_EDEFAULT);
+        return;
+      case CheckerDslPackage.HELPER__PERMUTE:
+        setPermute(PERMUTE_EDEFAULT);
+        return;
+      case CheckerDslPackage.HELPER__PLUS:
+        setPlus(PLUS_EDEFAULT);
+        return;
+      case CheckerDslPackage.HELPER__MULTIPLY:
+        setMultiply(MULTIPLY_EDEFAULT);
+        return;
+      case CheckerDslPackage.HELPER__INVERT:
+        setInvert(INVERT_EDEFAULT);
+        return;
+      case CheckerDslPackage.HELPER__INCLUDE:
+        setInclude(INCLUDE_EDEFAULT);
+        return;
+      case CheckerDslPackage.HELPER__EXCLUDE:
+        setExclude(EXCLUDE_EDEFAULT);
+        return;
+      case CheckerDslPackage.HELPER__COMPOSITIONAL:
+        setCompositional(COMPOSITIONAL_EDEFAULT);
+        return;
     }
     super.eUnset(featureID);
   }
@@ -787,6 +1446,30 @@ public class HelperImpl extends ChkRelationalExpressionsImpl implements Helper
         return ADD_EDEFAULT == null ? add != null : !ADD_EDEFAULT.equals(add);
       case CheckerDslPackage.HELPER__VAR3:
         return var3 != null;
+      case CheckerDslPackage.HELPER__REMOVE:
+        return REMOVE_EDEFAULT == null ? remove != null : !REMOVE_EDEFAULT.equals(remove);
+      case CheckerDslPackage.HELPER__G:
+        return g != null;
+      case CheckerDslPackage.HELPER__RANDOM:
+        return RANDOM_EDEFAULT == null ? random != null : !RANDOM_EDEFAULT.equals(random);
+      case CheckerDslPackage.HELPER__VAR4:
+        return var4 != null;
+      case CheckerDslPackage.HELPER__SIZE:
+        return SIZE_EDEFAULT == null ? size != null : !SIZE_EDEFAULT.equals(size);
+      case CheckerDslPackage.HELPER__PERMUTE:
+        return PERMUTE_EDEFAULT == null ? permute != null : !PERMUTE_EDEFAULT.equals(permute);
+      case CheckerDslPackage.HELPER__PLUS:
+        return PLUS_EDEFAULT == null ? plus != null : !PLUS_EDEFAULT.equals(plus);
+      case CheckerDslPackage.HELPER__MULTIPLY:
+        return MULTIPLY_EDEFAULT == null ? multiply != null : !MULTIPLY_EDEFAULT.equals(multiply);
+      case CheckerDslPackage.HELPER__INVERT:
+        return INVERT_EDEFAULT == null ? invert != null : !INVERT_EDEFAULT.equals(invert);
+      case CheckerDslPackage.HELPER__INCLUDE:
+        return INCLUDE_EDEFAULT == null ? include != null : !INCLUDE_EDEFAULT.equals(include);
+      case CheckerDslPackage.HELPER__EXCLUDE:
+        return EXCLUDE_EDEFAULT == null ? exclude != null : !EXCLUDE_EDEFAULT.equals(exclude);
+      case CheckerDslPackage.HELPER__COMPOSITIONAL:
+        return COMPOSITIONAL_EDEFAULT == null ? compositional != null : !COMPOSITIONAL_EDEFAULT.equals(compositional);
     }
     return super.eIsSet(featureID);
   }
@@ -822,6 +1505,26 @@ public class HelperImpl extends ChkRelationalExpressionsImpl implements Helper
     result.append(vars);
     result.append(", add: ");
     result.append(add);
+    result.append(", remove: ");
+    result.append(remove);
+    result.append(", random: ");
+    result.append(random);
+    result.append(", size: ");
+    result.append(size);
+    result.append(", permute: ");
+    result.append(permute);
+    result.append(", plus: ");
+    result.append(plus);
+    result.append(", multiply: ");
+    result.append(multiply);
+    result.append(", invert: ");
+    result.append(invert);
+    result.append(", include: ");
+    result.append(include);
+    result.append(", exclude: ");
+    result.append(exclude);
+    result.append(", compositional: ");
+    result.append(compositional);
     result.append(')');
     return result.toString();
   }

@@ -16,13 +16,19 @@ import org.xtext.example.checkerdsl.checkerDsl.CheckerDslFactory;
 import org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage;
 import org.xtext.example.checkerdsl.checkerDsl.ChkAssignment;
 import org.xtext.example.checkerdsl.checkerDsl.ChkExpression;
+import org.xtext.example.checkerdsl.checkerDsl.ChkItemGroup;
+import org.xtext.example.checkerdsl.checkerDsl.ChkLoopExpression;
+import org.xtext.example.checkerdsl.checkerDsl.ChkOperation;
 import org.xtext.example.checkerdsl.checkerDsl.ChkPrefix;
 import org.xtext.example.checkerdsl.checkerDsl.ChkRelationalExpression;
 import org.xtext.example.checkerdsl.checkerDsl.ChkRelationalExpressions;
+import org.xtext.example.checkerdsl.checkerDsl.ChkScoreExpression;
 import org.xtext.example.checkerdsl.checkerDsl.ChkVariable;
+import org.xtext.example.checkerdsl.checkerDsl.ChkVariableDeclaration;
 import org.xtext.example.checkerdsl.checkerDsl.ChkVariables;
 import org.xtext.example.checkerdsl.checkerDsl.Dsl;
 import org.xtext.example.checkerdsl.checkerDsl.Feature;
+import org.xtext.example.checkerdsl.checkerDsl.FollowUp;
 import org.xtext.example.checkerdsl.checkerDsl.Format;
 import org.xtext.example.checkerdsl.checkerDsl.FormatExpression;
 import org.xtext.example.checkerdsl.checkerDsl.Helper;
@@ -31,10 +37,11 @@ import org.xtext.example.checkerdsl.checkerDsl.Limit;
 import org.xtext.example.checkerdsl.checkerDsl.MR;
 import org.xtext.example.checkerdsl.checkerDsl.Method;
 import org.xtext.example.checkerdsl.checkerDsl.MethodCall;
-import org.xtext.example.checkerdsl.checkerDsl.MrExpression;
 import org.xtext.example.checkerdsl.checkerDsl.OutputFormat;
 import org.xtext.example.checkerdsl.checkerDsl.PackageDeclaration;
 import org.xtext.example.checkerdsl.checkerDsl.Property;
+import org.xtext.example.checkerdsl.checkerDsl.Score;
+import org.xtext.example.checkerdsl.checkerDsl.SpValue;
 import org.xtext.example.checkerdsl.checkerDsl.Subtask;
 
 /**
@@ -95,19 +102,26 @@ public class CheckerDslFactoryImpl extends EFactoryImpl implements CheckerDslFac
       case CheckerDslPackage.CLASS: return createClass();
       case CheckerDslPackage.FEATURE: return createFeature();
       case CheckerDslPackage.METHOD: return createMethod();
-      case CheckerDslPackage.MR: return createMR();
+      case CheckerDslPackage.CHK_SCORE_EXPRESSION: return createChkScoreExpression();
+      case CheckerDslPackage.SCORE: return createScore();
+      case CheckerDslPackage.FOLLOW_UP: return createFollowUp();
       case CheckerDslPackage.PROPERTY: return createProperty();
+      case CheckerDslPackage.MR: return createMR();
+      case CheckerDslPackage.CHK_VARIABLE_DECLARATION: return createChkVariableDeclaration();
       case CheckerDslPackage.METHOD_CALL: return createMethodCall();
       case CheckerDslPackage.CHK_PREFIX: return createChkPrefix();
       case CheckerDslPackage.CHK_VARIABLE: return createChkVariable();
       case CheckerDslPackage.CHK_VARIABLES: return createChkVariables();
+      case CheckerDslPackage.CHK_ITEM_GROUP: return createChkItemGroup();
       case CheckerDslPackage.HELPER: return createHelper();
       case CheckerDslPackage.CHK_RELATIONAL_EXPRESSION: return createChkRelationalExpression();
       case CheckerDslPackage.CHK_ASSIGNMENT: return createChkAssignment();
       case CheckerDslPackage.CHK_RELATIONAL_EXPRESSIONS: return createChkRelationalExpressions();
+      case CheckerDslPackage.CHK_OPERATION: return createChkOperation();
+      case CheckerDslPackage.CHK_LOOP_EXPRESSION: return createChkLoopExpression();
       case CheckerDslPackage.CHK_EXPRESSION: return createChkExpression();
-      case CheckerDslPackage.MR_EXPRESSION: return createMrExpression();
       case CheckerDslPackage.CHECK: return createCheck();
+      case CheckerDslPackage.SP_VALUE: return createSpValue();
       case CheckerDslPackage.LIMIT: return createLimit();
       case CheckerDslPackage.SUBTASK: return createSubtask();
       case CheckerDslPackage.FORMAT: return createFormat();
@@ -190,10 +204,32 @@ public class CheckerDslFactoryImpl extends EFactoryImpl implements CheckerDslFac
    * <!-- end-user-doc -->
    * @generated
    */
-  public MR createMR()
+  public ChkScoreExpression createChkScoreExpression()
   {
-    MRImpl mr = new MRImpl();
-    return mr;
+    ChkScoreExpressionImpl chkScoreExpression = new ChkScoreExpressionImpl();
+    return chkScoreExpression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Score createScore()
+  {
+    ScoreImpl score = new ScoreImpl();
+    return score;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public FollowUp createFollowUp()
+  {
+    FollowUpImpl followUp = new FollowUpImpl();
+    return followUp;
   }
 
   /**
@@ -205,6 +241,28 @@ public class CheckerDslFactoryImpl extends EFactoryImpl implements CheckerDslFac
   {
     PropertyImpl property = new PropertyImpl();
     return property;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public MR createMR()
+  {
+    MRImpl mr = new MRImpl();
+    return mr;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ChkVariableDeclaration createChkVariableDeclaration()
+  {
+    ChkVariableDeclarationImpl chkVariableDeclaration = new ChkVariableDeclarationImpl();
+    return chkVariableDeclaration;
   }
 
   /**
@@ -256,6 +314,17 @@ public class CheckerDslFactoryImpl extends EFactoryImpl implements CheckerDslFac
    * <!-- end-user-doc -->
    * @generated
    */
+  public ChkItemGroup createChkItemGroup()
+  {
+    ChkItemGroupImpl chkItemGroup = new ChkItemGroupImpl();
+    return chkItemGroup;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public Helper createHelper()
   {
     HelperImpl helper = new HelperImpl();
@@ -300,6 +369,28 @@ public class CheckerDslFactoryImpl extends EFactoryImpl implements CheckerDslFac
    * <!-- end-user-doc -->
    * @generated
    */
+  public ChkOperation createChkOperation()
+  {
+    ChkOperationImpl chkOperation = new ChkOperationImpl();
+    return chkOperation;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ChkLoopExpression createChkLoopExpression()
+  {
+    ChkLoopExpressionImpl chkLoopExpression = new ChkLoopExpressionImpl();
+    return chkLoopExpression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public ChkExpression createChkExpression()
   {
     ChkExpressionImpl chkExpression = new ChkExpressionImpl();
@@ -311,10 +402,10 @@ public class CheckerDslFactoryImpl extends EFactoryImpl implements CheckerDslFac
    * <!-- end-user-doc -->
    * @generated
    */
-  public MrExpression createMrExpression()
+  public Check createCheck()
   {
-    MrExpressionImpl mrExpression = new MrExpressionImpl();
-    return mrExpression;
+    CheckImpl check = new CheckImpl();
+    return check;
   }
 
   /**
@@ -322,10 +413,10 @@ public class CheckerDslFactoryImpl extends EFactoryImpl implements CheckerDslFac
    * <!-- end-user-doc -->
    * @generated
    */
-  public Check createCheck()
+  public SpValue createSpValue()
   {
-    CheckImpl check = new CheckImpl();
-    return check;
+    SpValueImpl spValue = new SpValueImpl();
+    return spValue;
   }
 
   /**

@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.ChkVariables#getVa <em>Va</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.ChkVariables#getNu <em>Nu</em>}</li>
+ *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.ChkVariables#getGr <em>Gr</em>}</li>
  * </ul>
  *
  * @see org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage#getChkVariables()
@@ -58,12 +59,12 @@ public interface ChkVariables extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Nu</em>' attribute.
-   * @see #setNu(int)
+   * @see #setNu(String)
    * @see org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage#getChkVariables_Nu()
    * @model
    * @generated
    */
-  int getNu();
+  String getNu();
 
   /**
    * Sets the value of the '{@link org.xtext.example.checkerdsl.checkerDsl.ChkVariables#getNu <em>Nu</em>}' attribute.
@@ -73,6 +74,32 @@ public interface ChkVariables extends EObject
    * @see #getNu()
    * @generated
    */
-  void setNu(int value);
+  void setNu(String value);
+
+  /**
+   * Returns the value of the '<em><b>Gr</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Gr</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Gr</em>' containment reference.
+   * @see #setGr(ChkItemGroup)
+   * @see org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage#getChkVariables_Gr()
+   * @model containment="true"
+   * @generated
+   */
+  ChkItemGroup getGr();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.checkerdsl.checkerDsl.ChkVariables#getGr <em>Gr</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Gr</em>' containment reference.
+   * @see #getGr()
+   * @generated
+   */
+  void setGr(ChkItemGroup value);
 
 } // ChkVariables

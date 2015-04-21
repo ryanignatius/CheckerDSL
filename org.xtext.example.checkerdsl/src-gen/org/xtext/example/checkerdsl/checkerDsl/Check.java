@@ -4,6 +4,8 @@ package org.xtext.example.checkerdsl.checkerDsl;
 
 import org.eclipse.emf.common.util.EList;
 
+import org.eclipse.emf.ecore.EObject;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Check</b></em>'.
@@ -51,7 +53,7 @@ public interface Check extends Feature
 
   /**
    * Returns the value of the '<em><b>Chk</b></em>' containment reference list.
-   * The list contents are of type {@link org.xtext.example.checkerdsl.checkerDsl.ChkExpression}.
+   * The list contents are of type {@link org.eclipse.emf.ecore.EObject}.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Chk</em>' containment reference list isn't clear,
@@ -63,6 +65,6 @@ public interface Check extends Feature
    * @model containment="true"
    * @generated
    */
-  EList<ChkExpression> getChk();
+  EList<EObject> getChk();
 
 } // Check

@@ -62,11 +62,17 @@ import org.xtext.example.checkerdsl.checkerDsl.Check;
 import org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage;
 import org.xtext.example.checkerdsl.checkerDsl.ChkAssignment;
 import org.xtext.example.checkerdsl.checkerDsl.ChkExpression;
+import org.xtext.example.checkerdsl.checkerDsl.ChkItemGroup;
+import org.xtext.example.checkerdsl.checkerDsl.ChkLoopExpression;
+import org.xtext.example.checkerdsl.checkerDsl.ChkOperation;
 import org.xtext.example.checkerdsl.checkerDsl.ChkPrefix;
 import org.xtext.example.checkerdsl.checkerDsl.ChkRelationalExpression;
+import org.xtext.example.checkerdsl.checkerDsl.ChkScoreExpression;
 import org.xtext.example.checkerdsl.checkerDsl.ChkVariable;
+import org.xtext.example.checkerdsl.checkerDsl.ChkVariableDeclaration;
 import org.xtext.example.checkerdsl.checkerDsl.ChkVariables;
 import org.xtext.example.checkerdsl.checkerDsl.Dsl;
+import org.xtext.example.checkerdsl.checkerDsl.FollowUp;
 import org.xtext.example.checkerdsl.checkerDsl.FormatExpression;
 import org.xtext.example.checkerdsl.checkerDsl.Helper;
 import org.xtext.example.checkerdsl.checkerDsl.InputFormat;
@@ -74,10 +80,11 @@ import org.xtext.example.checkerdsl.checkerDsl.Limit;
 import org.xtext.example.checkerdsl.checkerDsl.MR;
 import org.xtext.example.checkerdsl.checkerDsl.Method;
 import org.xtext.example.checkerdsl.checkerDsl.MethodCall;
-import org.xtext.example.checkerdsl.checkerDsl.MrExpression;
 import org.xtext.example.checkerdsl.checkerDsl.OutputFormat;
 import org.xtext.example.checkerdsl.checkerDsl.PackageDeclaration;
 import org.xtext.example.checkerdsl.checkerDsl.Property;
+import org.xtext.example.checkerdsl.checkerDsl.Score;
+import org.xtext.example.checkerdsl.checkerDsl.SpValue;
 import org.xtext.example.checkerdsl.checkerDsl.Subtask;
 import org.xtext.example.checkerdsl.services.CheckerDslGrammarAccess;
 
@@ -97,7 +104,8 @@ public class CheckerDslSemanticSequencer extends XbaseSemanticSequencer {
 				}
 				else break;
 			case CheckerDslPackage.CHK_ASSIGNMENT:
-				if(context == grammarAccess.getChkAssignmentRule()) {
+				if(context == grammarAccess.getChkAssignmentRule() ||
+				   context == grammarAccess.getChkRelationalExpressionsRule()) {
 					sequence_ChkAssignment(context, (ChkAssignment) semanticObject); 
 					return; 
 				}
@@ -105,6 +113,24 @@ public class CheckerDslSemanticSequencer extends XbaseSemanticSequencer {
 			case CheckerDslPackage.CHK_EXPRESSION:
 				if(context == grammarAccess.getChkExpressionRule()) {
 					sequence_ChkExpression(context, (ChkExpression) semanticObject); 
+					return; 
+				}
+				else break;
+			case CheckerDslPackage.CHK_ITEM_GROUP:
+				if(context == grammarAccess.getChkItemGroupRule()) {
+					sequence_ChkItemGroup(context, (ChkItemGroup) semanticObject); 
+					return; 
+				}
+				else break;
+			case CheckerDslPackage.CHK_LOOP_EXPRESSION:
+				if(context == grammarAccess.getChkLoopExpressionRule()) {
+					sequence_ChkLoopExpression(context, (ChkLoopExpression) semanticObject); 
+					return; 
+				}
+				else break;
+			case CheckerDslPackage.CHK_OPERATION:
+				if(context == grammarAccess.getChkOperationRule()) {
+					sequence_ChkOperation(context, (ChkOperation) semanticObject); 
 					return; 
 				}
 				else break;
@@ -121,9 +147,22 @@ public class CheckerDslSemanticSequencer extends XbaseSemanticSequencer {
 					return; 
 				}
 				else break;
+			case CheckerDslPackage.CHK_SCORE_EXPRESSION:
+				if(context == grammarAccess.getChkScoreExpressionRule()) {
+					sequence_ChkScoreExpression(context, (ChkScoreExpression) semanticObject); 
+					return; 
+				}
+				else break;
 			case CheckerDslPackage.CHK_VARIABLE:
 				if(context == grammarAccess.getChkVariableRule()) {
 					sequence_ChkVariable(context, (ChkVariable) semanticObject); 
+					return; 
+				}
+				else break;
+			case CheckerDslPackage.CHK_VARIABLE_DECLARATION:
+				if(context == grammarAccess.getChkVariableDeclarationRule() ||
+				   context == grammarAccess.getFeatureRule()) {
+					sequence_ChkVariableDeclaration(context, (ChkVariableDeclaration) semanticObject); 
 					return; 
 				}
 				else break;
@@ -143,6 +182,12 @@ public class CheckerDslSemanticSequencer extends XbaseSemanticSequencer {
 			case CheckerDslPackage.DSL:
 				if(context == grammarAccess.getDslRule()) {
 					sequence_Dsl(context, (Dsl) semanticObject); 
+					return; 
+				}
+				else break;
+			case CheckerDslPackage.FOLLOW_UP:
+				if(context == grammarAccess.getFollowUpRule()) {
+					sequence_FollowUp(context, (FollowUp) semanticObject); 
 					return; 
 				}
 				else break;
@@ -194,12 +239,6 @@ public class CheckerDslSemanticSequencer extends XbaseSemanticSequencer {
 					return; 
 				}
 				else break;
-			case CheckerDslPackage.MR_EXPRESSION:
-				if(context == grammarAccess.getMrExpressionRule()) {
-					sequence_MrExpression(context, (MrExpression) semanticObject); 
-					return; 
-				}
-				else break;
 			case CheckerDslPackage.OUTPUT_FORMAT:
 				if(context == grammarAccess.getFeatureRule() ||
 				   context == grammarAccess.getFormatRule() ||
@@ -216,9 +255,21 @@ public class CheckerDslSemanticSequencer extends XbaseSemanticSequencer {
 				}
 				else break;
 			case CheckerDslPackage.PROPERTY:
-				if(context == grammarAccess.getFeatureRule() ||
-				   context == grammarAccess.getPropertyRule()) {
+				if(context == grammarAccess.getPropertyRule()) {
 					sequence_Property(context, (Property) semanticObject); 
+					return; 
+				}
+				else break;
+			case CheckerDslPackage.SCORE:
+				if(context == grammarAccess.getFeatureRule() ||
+				   context == grammarAccess.getScoreRule()) {
+					sequence_Score(context, (Score) semanticObject); 
+					return; 
+				}
+				else break;
+			case CheckerDslPackage.SP_VALUE:
+				if(context == grammarAccess.getSpValueRule()) {
+					sequence_SpValue(context, (SpValue) semanticObject); 
 					return; 
 				}
 				else break;
@@ -1341,7 +1392,7 @@ public class CheckerDslSemanticSequencer extends XbaseSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (check='check' chk+=ChkExpression*)
+	 *     (check='check' (chk+=ChkExpression | chk+=ChkLoopExpression)*)
 	 */
 	protected void sequence_Check(EObject context, Check semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1350,23 +1401,10 @@ public class CheckerDslSemanticSequencer extends XbaseSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (v1=ChkVariables opr=ChkOpAssignment v2=ChkVariables)
+	 *     (v1=ChkOperation opr=ChkOpAssignment (v2=ChkOperation | v2=Helper))
 	 */
 	protected void sequence_ChkAssignment(EObject context, ChkAssignment semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, CheckerDslPackage.Literals.CHK_ASSIGNMENT__V1) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CheckerDslPackage.Literals.CHK_ASSIGNMENT__V1));
-			if(transientValues.isValueTransient(semanticObject, CheckerDslPackage.Literals.CHK_ASSIGNMENT__OPR) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CheckerDslPackage.Literals.CHK_ASSIGNMENT__OPR));
-			if(transientValues.isValueTransient(semanticObject, CheckerDslPackage.Literals.CHK_ASSIGNMENT__V2) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CheckerDslPackage.Literals.CHK_ASSIGNMENT__V2));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getChkAssignmentAccess().getV1ChkVariablesParserRuleCall_0_0(), semanticObject.getV1());
-		feeder.accept(grammarAccess.getChkAssignmentAccess().getOprChkOpAssignmentParserRuleCall_1_0(), semanticObject.getOpr());
-		feeder.accept(grammarAccess.getChkAssignmentAccess().getV2ChkVariablesParserRuleCall_2_0(), semanticObject.getV2());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -1386,7 +1424,34 @@ public class CheckerDslSemanticSequencer extends XbaseSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     ((type='in' | type='out' | type='ans') newtest='''?)
+	 *     (vars+=ChkVariable vars+=ChkVariable*)
+	 */
+	protected void sequence_ChkItemGroup(EObject context, ChkItemGroup semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (index=ChkVariables maxIndex=ChkVariables ex+=ChkExpression*)
+	 */
+	protected void sequence_ChkLoopExpression(EObject context, ChkLoopExpression semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (operand+=ChkVariables (operator+=ChkOperator operand+=ChkVariables)*)
+	 */
+	protected void sequence_ChkOperation(EObject context, ChkOperation semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (type='in' | type='out' | type='ans')
 	 */
 	protected void sequence_ChkPrefix(EObject context, ChkPrefix semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1417,7 +1482,35 @@ public class CheckerDslSemanticSequencer extends XbaseSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (pref=ChkPrefix? var=ValidID v+=ValidID*)
+	 *     (subtask=CHK_INT score=CHK_INT)
+	 */
+	protected void sequence_ChkScoreExpression(EObject context, ChkScoreExpression semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, CheckerDslPackage.Literals.CHK_SCORE_EXPRESSION__SUBTASK) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CheckerDslPackage.Literals.CHK_SCORE_EXPRESSION__SUBTASK));
+			if(transientValues.isValueTransient(semanticObject, CheckerDslPackage.Literals.CHK_SCORE_EXPRESSION__SCORE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, CheckerDslPackage.Literals.CHK_SCORE_EXPRESSION__SCORE));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getChkScoreExpressionAccess().getSubtaskCHK_INTParserRuleCall_1_0(), semanticObject.getSubtask());
+		feeder.accept(grammarAccess.getChkScoreExpressionAccess().getScoreCHK_INTParserRuleCall_3_0(), semanticObject.getScore());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (type=ChkTypeReference sz+=MY_NUMBER* name=ValidID (limit+=Limit limit+=Limit*)? spValue=SpValue?)
+	 */
+	protected void sequence_ChkVariableDeclaration(EObject context, ChkVariableDeclaration semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (pref=ChkPrefix? var=ValidID newtest='`'? v+=MY_NUMBER*)
 	 */
 	protected void sequence_ChkVariable(EObject context, ChkVariable semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1426,7 +1519,7 @@ public class CheckerDslSemanticSequencer extends XbaseSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (va=ChkVariable | nu=INT)
+	 *     (va=ChkVariable | nu=CHK_INT | gr=ChkItemGroup)
 	 */
 	protected void sequence_ChkVariables(EObject context, ChkVariables semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1453,6 +1546,15 @@ public class CheckerDslSemanticSequencer extends XbaseSemanticSequencer {
 	
 	/**
 	 * Constraint:
+	 *     (fol='followup' (followups+=ChkExpression | followups+=ChkLoopExpression)*)
+	 */
+	protected void sequence_FollowUp(EObject context, FollowUp semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
 	 *     (num=MY_NUMBER (var+=ValidID count+=MY_NUMBER? (var+=ValidID count+=MY_NUMBER?)*)?)
 	 */
 	protected void sequence_FormatExpression(EObject context, FormatExpression semanticObject) {
@@ -1469,7 +1571,17 @@ public class CheckerDslSemanticSequencer extends XbaseSemanticSequencer {
 	 *         (prime='prime' var=ChkVariables) | 
 	 *         (swap='swap' var=ChkVariable var1=ValidID var2=ValidID) | 
 	 *         (select='select' vars+=ValidID vars+=ValidID*) | 
-	 *         (add='add' var=ChkVariable var3=ChkVariables)
+	 *         (add='add' var=ChkVariable var3=ChkVariables) | 
+	 *         (remove='remove' (g=ChkItemGroup | var=ChkVariable) var3=ChkVariables) | 
+	 *         (random='random' (var3=ChkVariables var4=ChkVariables)?) | 
+	 *         (size='size' var=ChkVariable) | 
+	 *         (permute='permute' var=ChkVariable) | 
+	 *         (plus='plus' var=ChkVariable var3=ChkVariables) | 
+	 *         (multiply='multiply' var=ChkVariable var3=ChkVariables) | 
+	 *         (invert='invert' var=ChkVariable) | 
+	 *         (include='include' var=ChkVariable var3=ChkVariables) | 
+	 *         (exclude='exclude' var=ChkVariable var3=ChkVariables) | 
+	 *         (compositional='compositional' var=ChkVariable)
 	 *     )
 	 */
 	protected void sequence_Helper(EObject context, Helper semanticObject) {
@@ -1488,7 +1600,7 @@ public class CheckerDslSemanticSequencer extends XbaseSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (sub=Subtask a+=MY_ELEMENT b+=MY_ELEMENT (a+=MY_ELEMENT b+=MY_ELEMENT)*)
+	 *     (sub=Subtask? a+=MY_ELEMENT b+=MY_ELEMENT (a+=MY_ELEMENT b+=MY_ELEMENT)*)
 	 */
 	protected void sequence_Limit(EObject context, Limit semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1497,7 +1609,7 @@ public class CheckerDslSemanticSequencer extends XbaseSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (mr='MR' num=INT mrExpression+=MrExpression*)
+	 *     (mr='MR' num=INT (mrExp+=ChkExpression | mrExp+=ChkLoopExpression)* followup=FollowUp property=Property)
 	 */
 	protected void sequence_MR(EObject context, MR semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1524,20 +1636,6 @@ public class CheckerDslSemanticSequencer extends XbaseSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (
-	 *         asg=ValidID? 
-	 *         exp=ChkRelationalExpressions 
-	 *         (where='where' cond+=ChkRelationalExpression (type+=ChkAndOr cond+=ChkRelationalExpression)*)? 
-	 *         (op=ChkOpRelational v=ChkVariable)?
-	 *     )
-	 */
-	protected void sequence_MrExpression(EObject context, MrExpression semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
 	 *     (output='output' exp+=FormatExpression*)
 	 */
 	protected void sequence_OutputFormat(EObject context, OutputFormat semanticObject) {
@@ -1556,9 +1654,27 @@ public class CheckerDslSemanticSequencer extends XbaseSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (type=ChkTypeReference sz+=MY_NUMBER* name=ValidID (limit+=Limit limit+=Limit*)?)
+	 *     (prop='property' (properties+=ChkExpression | properties+=ChkLoopExpression)*)
 	 */
 	protected void sequence_Property(EObject context, Property semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     scores+=ChkScoreExpression+
+	 */
+	protected void sequence_Score(EObject context, Score semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (val+=MY_NUMBER val+=MY_NUMBER*)
+	 */
+	protected void sequence_SpValue(EObject context, SpValue semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

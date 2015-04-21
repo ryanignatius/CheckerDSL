@@ -77,13 +77,31 @@ public interface CheckerDslFactory extends EFactory
   Method createMethod();
 
   /**
-   * Returns a new object of class '<em>MR</em>'.
+   * Returns a new object of class '<em>Chk Score Expression</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>MR</em>'.
+   * @return a new object of class '<em>Chk Score Expression</em>'.
    * @generated
    */
-  MR createMR();
+  ChkScoreExpression createChkScoreExpression();
+
+  /**
+   * Returns a new object of class '<em>Score</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Score</em>'.
+   * @generated
+   */
+  Score createScore();
+
+  /**
+   * Returns a new object of class '<em>Follow Up</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Follow Up</em>'.
+   * @generated
+   */
+  FollowUp createFollowUp();
 
   /**
    * Returns a new object of class '<em>Property</em>'.
@@ -93,6 +111,24 @@ public interface CheckerDslFactory extends EFactory
    * @generated
    */
   Property createProperty();
+
+  /**
+   * Returns a new object of class '<em>MR</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>MR</em>'.
+   * @generated
+   */
+  MR createMR();
+
+  /**
+   * Returns a new object of class '<em>Chk Variable Declaration</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Chk Variable Declaration</em>'.
+   * @generated
+   */
+  ChkVariableDeclaration createChkVariableDeclaration();
 
   /**
    * Returns a new object of class '<em>Method Call</em>'.
@@ -131,6 +167,15 @@ public interface CheckerDslFactory extends EFactory
   ChkVariables createChkVariables();
 
   /**
+   * Returns a new object of class '<em>Chk Item Group</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Chk Item Group</em>'.
+   * @generated
+   */
+  ChkItemGroup createChkItemGroup();
+
+  /**
    * Returns a new object of class '<em>Helper</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -167,6 +212,24 @@ public interface CheckerDslFactory extends EFactory
   ChkRelationalExpressions createChkRelationalExpressions();
 
   /**
+   * Returns a new object of class '<em>Chk Operation</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Chk Operation</em>'.
+   * @generated
+   */
+  ChkOperation createChkOperation();
+
+  /**
+   * Returns a new object of class '<em>Chk Loop Expression</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Chk Loop Expression</em>'.
+   * @generated
+   */
+  ChkLoopExpression createChkLoopExpression();
+
+  /**
    * Returns a new object of class '<em>Chk Expression</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -176,15 +239,6 @@ public interface CheckerDslFactory extends EFactory
   ChkExpression createChkExpression();
 
   /**
-   * Returns a new object of class '<em>Mr Expression</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Mr Expression</em>'.
-   * @generated
-   */
-  MrExpression createMrExpression();
-
-  /**
    * Returns a new object of class '<em>Check</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -192,6 +246,15 @@ public interface CheckerDslFactory extends EFactory
    * @generated
    */
   Check createCheck();
+
+  /**
+   * Returns a new object of class '<em>Sp Value</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Sp Value</em>'.
+   * @generated
+   */
+  SpValue createSpValue();
 
   /**
    * Returns a new object of class '<em>Limit</em>'.

@@ -28,16 +28,34 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//Method/params"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//Method/body"/>
     </genClasses>
+    <genClasses ecoreClass="CheckerDsl.ecore#//ChkScoreExpression">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//ChkScoreExpression/subtask"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//ChkScoreExpression/score"/>
+    </genClasses>
+    <genClasses ecoreClass="CheckerDsl.ecore#//Score">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//Score/scores"/>
+    </genClasses>
+    <genClasses ecoreClass="CheckerDsl.ecore#//FollowUp">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//FollowUp/fol"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//FollowUp/followups"/>
+    </genClasses>
+    <genClasses ecoreClass="CheckerDsl.ecore#//Property">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//Property/prop"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//Property/properties"/>
+    </genClasses>
     <genClasses ecoreClass="CheckerDsl.ecore#//MR">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//MR/mr"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//MR/num"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//MR/mrExpression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//MR/mrExp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//MR/followup"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//MR/property"/>
     </genClasses>
-    <genClasses ecoreClass="CheckerDsl.ecore#//Property">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//Property/type"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//Property/sz"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//Property/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//Property/limit"/>
+    <genClasses ecoreClass="CheckerDsl.ecore#//ChkVariableDeclaration">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//ChkVariableDeclaration/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//ChkVariableDeclaration/sz"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//ChkVariableDeclaration/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//ChkVariableDeclaration/limit"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//ChkVariableDeclaration/spValue"/>
     </genClasses>
     <genClasses ecoreClass="CheckerDsl.ecore#//MethodCall">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//MethodCall/name"/>
@@ -45,16 +63,20 @@
     </genClasses>
     <genClasses ecoreClass="CheckerDsl.ecore#//ChkPrefix">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//ChkPrefix/type"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//ChkPrefix/newtest"/>
     </genClasses>
     <genClasses ecoreClass="CheckerDsl.ecore#//ChkVariable">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//ChkVariable/pref"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//ChkVariable/var"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//ChkVariable/newtest"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//ChkVariable/v"/>
     </genClasses>
     <genClasses ecoreClass="CheckerDsl.ecore#//ChkVariables">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//ChkVariables/va"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//ChkVariables/nu"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//ChkVariables/gr"/>
+    </genClasses>
+    <genClasses ecoreClass="CheckerDsl.ecore#//ChkItemGroup">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//ChkItemGroup/vars"/>
     </genClasses>
     <genClasses ecoreClass="CheckerDsl.ecore#//Helper">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//Helper/sum"/>
@@ -69,6 +91,18 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//Helper/vars"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//Helper/add"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//Helper/var3"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//Helper/remove"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//Helper/g"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//Helper/random"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//Helper/var4"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//Helper/size"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//Helper/permute"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//Helper/plus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//Helper/multiply"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//Helper/invert"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//Helper/include"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//Helper/exclude"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//Helper/compositional"/>
     </genClasses>
     <genClasses ecoreClass="CheckerDsl.ecore#//ChkRelationalExpression">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//ChkRelationalExpression/v1"/>
@@ -81,6 +115,15 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//ChkAssignment/v2"/>
     </genClasses>
     <genClasses ecoreClass="CheckerDsl.ecore#//ChkRelationalExpressions"/>
+    <genClasses ecoreClass="CheckerDsl.ecore#//ChkOperation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//ChkOperation/operand"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//ChkOperation/operator"/>
+    </genClasses>
+    <genClasses ecoreClass="CheckerDsl.ecore#//ChkLoopExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//ChkLoopExpression/index"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//ChkLoopExpression/maxIndex"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//ChkLoopExpression/ex"/>
+    </genClasses>
     <genClasses ecoreClass="CheckerDsl.ecore#//ChkExpression">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//ChkExpression/asg"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//ChkExpression/exp"/>
@@ -90,18 +133,12 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//ChkExpression/op"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//ChkExpression/v"/>
     </genClasses>
-    <genClasses ecoreClass="CheckerDsl.ecore#//MrExpression">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//MrExpression/asg"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//MrExpression/exp"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//MrExpression/where"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//MrExpression/cond"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//MrExpression/type"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//MrExpression/op"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//MrExpression/v"/>
-    </genClasses>
     <genClasses ecoreClass="CheckerDsl.ecore#//Check">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//Check/check"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//Check/chk"/>
+    </genClasses>
+    <genClasses ecoreClass="CheckerDsl.ecore#//SpValue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//SpValue/val"/>
     </genClasses>
     <genClasses ecoreClass="CheckerDsl.ecore#//Limit">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//Limit/sub"/>

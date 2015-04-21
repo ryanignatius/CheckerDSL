@@ -10,6 +10,7 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -18,8 +19,9 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage;
+import org.xtext.example.checkerdsl.checkerDsl.FollowUp;
 import org.xtext.example.checkerdsl.checkerDsl.MR;
-import org.xtext.example.checkerdsl.checkerDsl.MrExpression;
+import org.xtext.example.checkerdsl.checkerDsl.Property;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,7 +33,9 @@ import org.xtext.example.checkerdsl.checkerDsl.MrExpression;
  * <ul>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.MRImpl#getMr <em>Mr</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.MRImpl#getNum <em>Num</em>}</li>
- *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.MRImpl#getMrExpression <em>Mr Expression</em>}</li>
+ *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.MRImpl#getMrExp <em>Mr Exp</em>}</li>
+ *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.MRImpl#getFollowup <em>Followup</em>}</li>
+ *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.MRImpl#getProperty <em>Property</em>}</li>
  * </ul>
  *
  * @generated
@@ -79,14 +83,34 @@ public class MRImpl extends FeatureImpl implements MR
   protected int num = NUM_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getMrExpression() <em>Mr Expression</em>}' containment reference list.
+   * The cached value of the '{@link #getMrExp() <em>Mr Exp</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getMrExpression()
+   * @see #getMrExp()
    * @generated
    * @ordered
    */
-  protected EList<MrExpression> mrExpression;
+  protected EList<EObject> mrExp;
+
+  /**
+   * The cached value of the '{@link #getFollowup() <em>Followup</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getFollowup()
+   * @generated
+   * @ordered
+   */
+  protected FollowUp followup;
+
+  /**
+   * The cached value of the '{@link #getProperty() <em>Property</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getProperty()
+   * @generated
+   * @ordered
+   */
+  protected Property property;
 
   /**
    * <!-- begin-user-doc -->
@@ -160,13 +184,109 @@ public class MRImpl extends FeatureImpl implements MR
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<MrExpression> getMrExpression()
+  public EList<EObject> getMrExp()
   {
-    if (mrExpression == null)
+    if (mrExp == null)
     {
-      mrExpression = new EObjectContainmentEList<MrExpression>(MrExpression.class, this, CheckerDslPackage.MR__MR_EXPRESSION);
+      mrExp = new EObjectContainmentEList<EObject>(EObject.class, this, CheckerDslPackage.MR__MR_EXP);
     }
-    return mrExpression;
+    return mrExp;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public FollowUp getFollowup()
+  {
+    return followup;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetFollowup(FollowUp newFollowup, NotificationChain msgs)
+  {
+    FollowUp oldFollowup = followup;
+    followup = newFollowup;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CheckerDslPackage.MR__FOLLOWUP, oldFollowup, newFollowup);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setFollowup(FollowUp newFollowup)
+  {
+    if (newFollowup != followup)
+    {
+      NotificationChain msgs = null;
+      if (followup != null)
+        msgs = ((InternalEObject)followup).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CheckerDslPackage.MR__FOLLOWUP, null, msgs);
+      if (newFollowup != null)
+        msgs = ((InternalEObject)newFollowup).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CheckerDslPackage.MR__FOLLOWUP, null, msgs);
+      msgs = basicSetFollowup(newFollowup, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, CheckerDslPackage.MR__FOLLOWUP, newFollowup, newFollowup));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Property getProperty()
+  {
+    return property;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetProperty(Property newProperty, NotificationChain msgs)
+  {
+    Property oldProperty = property;
+    property = newProperty;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CheckerDslPackage.MR__PROPERTY, oldProperty, newProperty);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setProperty(Property newProperty)
+  {
+    if (newProperty != property)
+    {
+      NotificationChain msgs = null;
+      if (property != null)
+        msgs = ((InternalEObject)property).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CheckerDslPackage.MR__PROPERTY, null, msgs);
+      if (newProperty != null)
+        msgs = ((InternalEObject)newProperty).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CheckerDslPackage.MR__PROPERTY, null, msgs);
+      msgs = basicSetProperty(newProperty, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, CheckerDslPackage.MR__PROPERTY, newProperty, newProperty));
   }
 
   /**
@@ -179,8 +299,12 @@ public class MRImpl extends FeatureImpl implements MR
   {
     switch (featureID)
     {
-      case CheckerDslPackage.MR__MR_EXPRESSION:
-        return ((InternalEList<?>)getMrExpression()).basicRemove(otherEnd, msgs);
+      case CheckerDslPackage.MR__MR_EXP:
+        return ((InternalEList<?>)getMrExp()).basicRemove(otherEnd, msgs);
+      case CheckerDslPackage.MR__FOLLOWUP:
+        return basicSetFollowup(null, msgs);
+      case CheckerDslPackage.MR__PROPERTY:
+        return basicSetProperty(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -199,8 +323,12 @@ public class MRImpl extends FeatureImpl implements MR
         return getMr();
       case CheckerDslPackage.MR__NUM:
         return getNum();
-      case CheckerDslPackage.MR__MR_EXPRESSION:
-        return getMrExpression();
+      case CheckerDslPackage.MR__MR_EXP:
+        return getMrExp();
+      case CheckerDslPackage.MR__FOLLOWUP:
+        return getFollowup();
+      case CheckerDslPackage.MR__PROPERTY:
+        return getProperty();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -222,9 +350,15 @@ public class MRImpl extends FeatureImpl implements MR
       case CheckerDslPackage.MR__NUM:
         setNum((Integer)newValue);
         return;
-      case CheckerDslPackage.MR__MR_EXPRESSION:
-        getMrExpression().clear();
-        getMrExpression().addAll((Collection<? extends MrExpression>)newValue);
+      case CheckerDslPackage.MR__MR_EXP:
+        getMrExp().clear();
+        getMrExp().addAll((Collection<? extends EObject>)newValue);
+        return;
+      case CheckerDslPackage.MR__FOLLOWUP:
+        setFollowup((FollowUp)newValue);
+        return;
+      case CheckerDslPackage.MR__PROPERTY:
+        setProperty((Property)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -246,8 +380,14 @@ public class MRImpl extends FeatureImpl implements MR
       case CheckerDslPackage.MR__NUM:
         setNum(NUM_EDEFAULT);
         return;
-      case CheckerDslPackage.MR__MR_EXPRESSION:
-        getMrExpression().clear();
+      case CheckerDslPackage.MR__MR_EXP:
+        getMrExp().clear();
+        return;
+      case CheckerDslPackage.MR__FOLLOWUP:
+        setFollowup((FollowUp)null);
+        return;
+      case CheckerDslPackage.MR__PROPERTY:
+        setProperty((Property)null);
         return;
     }
     super.eUnset(featureID);
@@ -267,8 +407,12 @@ public class MRImpl extends FeatureImpl implements MR
         return MR_EDEFAULT == null ? mr != null : !MR_EDEFAULT.equals(mr);
       case CheckerDslPackage.MR__NUM:
         return num != NUM_EDEFAULT;
-      case CheckerDslPackage.MR__MR_EXPRESSION:
-        return mrExpression != null && !mrExpression.isEmpty();
+      case CheckerDslPackage.MR__MR_EXP:
+        return mrExp != null && !mrExp.isEmpty();
+      case CheckerDslPackage.MR__FOLLOWUP:
+        return followup != null;
+      case CheckerDslPackage.MR__PROPERTY:
+        return property != null;
     }
     return super.eIsSet(featureID);
   }

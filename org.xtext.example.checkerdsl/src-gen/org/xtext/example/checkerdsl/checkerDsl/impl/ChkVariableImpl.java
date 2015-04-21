@@ -31,6 +31,7 @@ import org.xtext.example.checkerdsl.checkerDsl.ChkVariable;
  * <ul>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.ChkVariableImpl#getPref <em>Pref</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.ChkVariableImpl#getVar <em>Var</em>}</li>
+ *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.ChkVariableImpl#getNewtest <em>Newtest</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.ChkVariableImpl#getV <em>V</em>}</li>
  * </ul>
  *
@@ -67,6 +68,26 @@ public class ChkVariableImpl extends MinimalEObjectImpl.Container implements Chk
    * @ordered
    */
   protected String var = VAR_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getNewtest() <em>Newtest</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getNewtest()
+   * @generated
+   * @ordered
+   */
+  protected static final String NEWTEST_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getNewtest() <em>Newtest</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getNewtest()
+   * @generated
+   * @ordered
+   */
+  protected String newtest = NEWTEST_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getV() <em>V</em>}' attribute list.
@@ -175,6 +196,29 @@ public class ChkVariableImpl extends MinimalEObjectImpl.Container implements Chk
    * <!-- end-user-doc -->
    * @generated
    */
+  public String getNewtest()
+  {
+    return newtest;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setNewtest(String newNewtest)
+  {
+    String oldNewtest = newtest;
+    newtest = newNewtest;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, CheckerDslPackage.CHK_VARIABLE__NEWTEST, oldNewtest, newtest));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EList<String> getV()
   {
     if (v == null)
@@ -214,6 +258,8 @@ public class ChkVariableImpl extends MinimalEObjectImpl.Container implements Chk
         return getPref();
       case CheckerDslPackage.CHK_VARIABLE__VAR:
         return getVar();
+      case CheckerDslPackage.CHK_VARIABLE__NEWTEST:
+        return getNewtest();
       case CheckerDslPackage.CHK_VARIABLE__V:
         return getV();
     }
@@ -236,6 +282,9 @@ public class ChkVariableImpl extends MinimalEObjectImpl.Container implements Chk
         return;
       case CheckerDslPackage.CHK_VARIABLE__VAR:
         setVar((String)newValue);
+        return;
+      case CheckerDslPackage.CHK_VARIABLE__NEWTEST:
+        setNewtest((String)newValue);
         return;
       case CheckerDslPackage.CHK_VARIABLE__V:
         getV().clear();
@@ -261,6 +310,9 @@ public class ChkVariableImpl extends MinimalEObjectImpl.Container implements Chk
       case CheckerDslPackage.CHK_VARIABLE__VAR:
         setVar(VAR_EDEFAULT);
         return;
+      case CheckerDslPackage.CHK_VARIABLE__NEWTEST:
+        setNewtest(NEWTEST_EDEFAULT);
+        return;
       case CheckerDslPackage.CHK_VARIABLE__V:
         getV().clear();
         return;
@@ -282,6 +334,8 @@ public class ChkVariableImpl extends MinimalEObjectImpl.Container implements Chk
         return pref != null;
       case CheckerDslPackage.CHK_VARIABLE__VAR:
         return VAR_EDEFAULT == null ? var != null : !VAR_EDEFAULT.equals(var);
+      case CheckerDslPackage.CHK_VARIABLE__NEWTEST:
+        return NEWTEST_EDEFAULT == null ? newtest != null : !NEWTEST_EDEFAULT.equals(newtest);
       case CheckerDslPackage.CHK_VARIABLE__V:
         return v != null && !v.isEmpty();
     }
@@ -301,6 +355,8 @@ public class ChkVariableImpl extends MinimalEObjectImpl.Container implements Chk
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (var: ");
     result.append(var);
+    result.append(", newtest: ");
+    result.append(newtest);
     result.append(", v: ");
     result.append(v);
     result.append(')');
