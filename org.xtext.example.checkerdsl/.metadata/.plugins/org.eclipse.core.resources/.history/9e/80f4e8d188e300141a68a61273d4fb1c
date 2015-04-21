@@ -1,0 +1,157 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+@SuppressWarnings("all")
+public class Knapsack {
+  private Scanner sc;
+  
+  public int intReader() {
+    return sc.nextInt();
+  }
+  
+  public long longReader() {
+    return sc.nextLong();
+  }
+  
+  public float floatReader() {
+    return sc.nextFloat();
+  }
+  
+  public double doubleReader() {
+    return sc.nextDouble();
+  }
+  
+  public boolean booleanReader() {
+    return sc.nextBoolean();
+  }
+  
+  public char charReader() {
+    return sc.next().charAt(0);
+  }
+  
+  public String stringReader() {
+    return sc.next();
+  }
+  
+  private int n;
+  
+  public int getN() {
+    return this.n;
+  }
+  
+  public void setN(final int n) {
+    this.n = n;
+  }
+  
+  public void readN() {
+    n = intReader();
+  }
+  
+  private int m;
+  
+  public int getM() {
+    return this.m;
+  }
+  
+  public void setM(final int m) {
+    this.m = m;
+  }
+  
+  public void readM() {
+    m = intReader();
+  }
+  
+  private ArrayList p;
+  
+  public ArrayList getP() {
+    return this.p;
+  }
+  
+  public void setP(final ArrayList p) {
+    this.p = p;
+  }
+  
+  public void readP() {
+    p = new ArrayList();
+    for (int i=0; i<n; i++){
+    	p.add(intReader());
+    }
+  }
+  
+  private ArrayList w;
+  
+  public ArrayList getW() {
+    return this.w;
+  }
+  
+  public void setW(final ArrayList w) {
+    this.w = w;
+  }
+  
+  public void readW() {
+    w = new ArrayList();
+    for (int i=0; i<n; i++){
+    	w.add(intReader());
+    }
+  }
+  
+  private ArrayList c;
+  
+  public ArrayList getC() {
+    return this.c;
+  }
+  
+  public void setC(final ArrayList c) {
+    this.c = c;
+  }
+  
+  public void readC() {
+    c = new ArrayList();
+    for (int i=0; i<m; i++){
+    	c.add(intReader());
+    }
+  }
+  
+  private ArrayList y;
+  
+  public ArrayList getY() {
+    return this.y;
+  }
+  
+  public void setY(final ArrayList y) {
+    this.y = y;
+  }
+  
+  public void readY() {
+    y = new ArrayList();
+    for (int i=0; i<n; i++){
+    	y.add(intReader());
+    }
+  }
+  
+  private int tp;
+  
+  public int getTp() {
+    return this.tp;
+  }
+  
+  public void setTp(final int tp) {
+    this.tp = tp;
+  }
+  
+  public void readTp() {
+    tp = intReader();
+  }
+  
+  public void readInput() {
+    
+  }
+  
+  public void samca() {
+  }
+  
+  public void init() {
+    sc = new Scanner(System.in);
+    readInput();
+  }
+}

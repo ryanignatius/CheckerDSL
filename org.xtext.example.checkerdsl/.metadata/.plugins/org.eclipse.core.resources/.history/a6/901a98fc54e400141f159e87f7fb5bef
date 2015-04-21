@@ -1,0 +1,242 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+@SuppressWarnings("all")
+public class GeneratedClass {
+  private Scanner sc;
+  
+  public static void die(final String message) {
+    System.out.println("message");
+    System.exit(0);
+  }
+  
+  public int intReader(final String token) {
+    int ret = 0;
+    try {
+    	ret = Integer.parseInt(token);
+    } catch (Exception e){
+    	GeneratedClass.die("not int");
+    }
+    return ret;
+  }
+  
+  public long longReader(final String token) {
+    long ret = 0;
+    try {
+    	ret = Long.parseLong(token);
+    } catch (Exception e){
+    	GeneratedClass.die("not long");
+    }
+    return ret;
+  }
+  
+  public float floatReader(final String token) {
+    float ret = 0;
+    try {
+    	ret = Float.parseFloat(token);
+    } catch (Exception e){
+    	GeneratedClass.die("not float");
+    }
+    return ret;
+  }
+  
+  public double doubleReader(final String token) {
+    double ret = 0;
+    try {
+    	ret = Double.parseDouble(token);
+    } catch (Exception e){
+    	GeneratedClass.die("not double");
+    }
+    return ret;
+  }
+  
+  public boolean booleanReader(final String token) {
+    boolean ret = false;
+    try {
+    	ret = Boolean.parseBoolean(token);
+    } catch (Exception e){
+    	GeneratedClass.die("not boolean");
+    }
+    return ret;
+  }
+  
+  public char charReader(final String token) {
+    char ret = ' ';
+    if (token.length() == 1){
+    	ret = token.charAt(0);
+    } else {
+    	GeneratedClass.die("not char");
+    }
+    return ret;
+  }
+  
+  public String stringReader(final String token) {
+    return token;
+  }
+  
+  private int n;
+  
+  public int getN() {
+    return this.n;
+  }
+  
+  public void setN(final int n) {
+    this.n = n;
+  }
+  
+  public void readN() {
+    n = intReader();
+  }
+  
+  private int m;
+  
+  public int getM() {
+    return this.m;
+  }
+  
+  public void setM(final int m) {
+    this.m = m;
+  }
+  
+  public void readM() {
+    m = intReader();
+  }
+  
+  private ArrayList p;
+  
+  public ArrayList getP() {
+    return this.p;
+  }
+  
+  public void setP(final ArrayList p) {
+    this.p = p;
+  }
+  
+  public void readP() {
+    p = new ArrayList();
+    for (int i=0; i<n; i++){
+    	p.add(intReader());
+    }
+  }
+  
+  public void readP(final int idx) {
+    p.set(idx,intReader());
+  }
+  
+  private ArrayList w;
+  
+  public ArrayList getW() {
+    return this.w;
+  }
+  
+  public void setW(final ArrayList w) {
+    this.w = w;
+  }
+  
+  public void readW() {
+    w = new ArrayList();
+    for (int i=0; i<n; i++){
+    	w.add(intReader());
+    }
+  }
+  
+  public void readW(final int idx) {
+    w.set(idx,intReader());
+  }
+  
+  private ArrayList c;
+  
+  public ArrayList getC() {
+    return this.c;
+  }
+  
+  public void setC(final ArrayList c) {
+    this.c = c;
+  }
+  
+  public void readC() {
+    c = new ArrayList();
+    for (int i=0; i<m; i++){
+    	c.add(intReader());
+    }
+  }
+  
+  public void readC(final int idx) {
+    c.set(idx,intReader());
+  }
+  
+  private ArrayList y;
+  
+  public ArrayList getY() {
+    return this.y;
+  }
+  
+  public void setY(final ArrayList y) {
+    this.y = y;
+  }
+  
+  public void readY() {
+    y = new ArrayList();
+    for (int i=0; i<n; i++){
+    	y.add(intReader());
+    }
+  }
+  
+  public void readY(final int idx) {
+    y.set(idx,intReader());
+  }
+  
+  private int tp;
+  
+  public int getTp() {
+    return this.tp;
+  }
+  
+  public void setTp(final int tp) {
+    this.tp = tp;
+  }
+  
+  public void readTp() {
+    tp = intReader();
+  }
+  
+  private ArrayList test;
+  
+  public ArrayList getTest() {
+    return this.test;
+  }
+  
+  public void setTest(final ArrayList test) {
+    this.test = test;
+  }
+  
+  public void readTest() {
+    test = new ArrayList();
+    for (int i=0; i<n; i++){
+    	ArrayList temp = new ArrayList();
+    	for (int j=0; j<n; j++){
+    		temp.add(intReader());
+    	}
+    	test.add(temp);
+    }
+  }
+  
+  public void readTest(final int idx1, final int idx2) {
+    ArrayList atemp = test.get(idx1);
+    atemp.set(idx2,intReader());
+    test.set(idx1,atemp);
+  }
+  
+  public void readInput() {
+    readN();
+    readM();
+    readP();
+    readW();
+    readC();
+  }
+  
+  public void init() {
+    sc = new Scanner(System.in);
+    readInput();
+  }
+}

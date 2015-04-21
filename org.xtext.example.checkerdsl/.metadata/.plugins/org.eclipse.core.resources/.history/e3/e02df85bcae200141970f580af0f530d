@@ -1,0 +1,165 @@
+import java.util.Scanner;
+
+@SuppressWarnings("all")
+public class Knapsack {
+  private Scanner sc;
+  
+  public int intReader() {
+    return sc.nextInt();
+  }
+  
+  public long longReader() {
+    return sc.nextLong();
+  }
+  
+  public float floatReader() {
+    return sc.nextFloat();
+  }
+  
+  public double doubleReader() {
+    return sc.nextDouble();
+  }
+  
+  public boolean booleanReader() {
+    return sc.nextBoolean();
+  }
+  
+  public char charReader() {
+    return sc.next().charAt(0);
+  }
+  
+  public String StringReader() {
+    return sc.next();
+  }
+  
+  private int n;
+  
+  public int getN() {
+    return this.n;
+  }
+  
+  public void setN(final int n) {
+    this.n = n;
+  }
+  
+  /**
+   * Method for read n
+   */
+  public void readN() {
+    default int
+  }
+  
+  private int m;
+  
+  public int getM() {
+    return this.m;
+  }
+  
+  public void setM(final int m) {
+    this.m = m;
+  }
+  
+  /**
+   * Method for read m
+   */
+  public void readM() {
+    default int
+  }
+  
+  private int p;
+  
+  public int getP() {
+    return this.p;
+  }
+  
+  public void setP(final int p) {
+    this.p = p;
+  }
+  
+  /**
+   * Method for read p
+   */
+  public void readP() {
+    default int
+  }
+  
+  private int w;
+  
+  public int getW() {
+    return this.w;
+  }
+  
+  public void setW(final int w) {
+    this.w = w;
+  }
+  
+  /**
+   * Method for read w
+   */
+  public void readW() {
+    default int
+  }
+  
+  private int c;
+  
+  public int getC() {
+    return this.c;
+  }
+  
+  public void setC(final int c) {
+    this.c = c;
+  }
+  
+  /**
+   * Method for read c
+   */
+  public void readC() {
+    default int
+  }
+  
+  private int y;
+  
+  public int getY() {
+    return this.y;
+  }
+  
+  public void setY(final int y) {
+    this.y = y;
+  }
+  
+  /**
+   * Method for read y
+   */
+  public void readY() {
+    default int
+  }
+  
+  private int tp;
+  
+  public int getTp() {
+    return this.tp;
+  }
+  
+  public void setTp(final int tp) {
+    this.tp = tp;
+  }
+  
+  /**
+   * Method for read tp
+   */
+  public void readTp() {
+    default int
+  }
+  
+  public void readInput() {
+    test();
+  }
+  
+  public void samca() {
+  }
+  
+  public void init() {
+    sc = new Scanner(System.in);
+    //readInput();
+  }
+}

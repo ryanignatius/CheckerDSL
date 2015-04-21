@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.xtext.example.checkerdsl/src-gen" editDirectory="/org.xtext.example.checkerdsl.edit/src"
+    editorDirectory="/org.xtext.example.checkerdsl.editor/src" modelPluginID="org.xtext.example.checkerdsl"
+    forceOverwrite="true" modelName="CheckerDsl" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="5.0" copyrightFields="false" editPluginID="org.xtext.example.checkerdsl.edit"
+    editorPluginID="org.xtext.example.checkerdsl.editor" runtimeVersion="2.10" usedGenPackages="platform:/resource/org.eclipse.xtext.common.types/model/JavaVMTypes.genmodel#//types platform:/resource/org.eclipse.xtext.xbase/model/Xbase.genmodel#//xbase platform:/resource/org.eclipse.xtext.xbase/model/Xbase.genmodel#//xtype">
+  <genPackages prefix="CheckerDsl" basePackage="org.xtext.example.checkerdsl" disposableProviderFactory="true"
+      fileExtensions="check" ecorePackage="CheckerDsl.ecore#/">
+    <genClasses ecoreClass="CheckerDsl.ecore#//Dsl">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//Dsl/importSection"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//Dsl/elements"/>
+    </genClasses>
+    <genClasses ecoreClass="CheckerDsl.ecore#//AbstractElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//AbstractElement/name"/>
+    </genClasses>
+    <genClasses ecoreClass="CheckerDsl.ecore#//PackageDeclaration">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//PackageDeclaration/elements"/>
+    </genClasses>
+    <genClasses ecoreClass="CheckerDsl.ecore#//Class">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//Class/superType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//Class/features"/>
+    </genClasses>
+    <genClasses ecoreClass="CheckerDsl.ecore#//Feature"/>
+    <genClasses ecoreClass="CheckerDsl.ecore#//Method">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//Method/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//Method/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//Method/params"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//Method/body"/>
+    </genClasses>
+    <genClasses ecoreClass="CheckerDsl.ecore#//MR">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//MR/mr"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//MR/num"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//MR/mrExpression"/>
+    </genClasses>
+    <genClasses ecoreClass="CheckerDsl.ecore#//Property">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//Property/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//Property/sz"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//Property/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//Property/limit"/>
+    </genClasses>
+    <genClasses ecoreClass="CheckerDsl.ecore#//MethodCall">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//MethodCall/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//MethodCall/params"/>
+    </genClasses>
+    <genClasses ecoreClass="CheckerDsl.ecore#//ChkPrefix">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//ChkPrefix/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//ChkPrefix/newtest"/>
+    </genClasses>
+    <genClasses ecoreClass="CheckerDsl.ecore#//ChkVariable">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//ChkVariable/pref"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//ChkVariable/var"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//ChkVariable/v"/>
+    </genClasses>
+    <genClasses ecoreClass="CheckerDsl.ecore#//ChkVariables">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//ChkVariables/va"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//ChkVariables/nu"/>
+    </genClasses>
+    <genClasses ecoreClass="CheckerDsl.ecore#//Helper">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//Helper/sum"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//Helper/var"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//Helper/max"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//Helper/min"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//Helper/prime"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//Helper/swap"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//Helper/var1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//Helper/var2"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//Helper/select"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//Helper/vars"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//Helper/add"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//Helper/var3"/>
+    </genClasses>
+    <genClasses ecoreClass="CheckerDsl.ecore#//ChkRelationalExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//ChkRelationalExpression/v1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//ChkRelationalExpression/opr"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//ChkRelationalExpression/v2"/>
+    </genClasses>
+    <genClasses ecoreClass="CheckerDsl.ecore#//ChkAssignment">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//ChkAssignment/v1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//ChkAssignment/opr"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//ChkAssignment/v2"/>
+    </genClasses>
+    <genClasses ecoreClass="CheckerDsl.ecore#//ChkRelationalExpressions"/>
+    <genClasses ecoreClass="CheckerDsl.ecore#//ChkExpression">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//ChkExpression/asg"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//ChkExpression/exp"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//ChkExpression/where"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//ChkExpression/cond"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//ChkExpression/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//ChkExpression/op"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//ChkExpression/v"/>
+    </genClasses>
+    <genClasses ecoreClass="CheckerDsl.ecore#//MrExpression">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//MrExpression/asg"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//MrExpression/exp"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//MrExpression/where"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//MrExpression/cond"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//MrExpression/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//MrExpression/op"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//MrExpression/v"/>
+    </genClasses>
+    <genClasses ecoreClass="CheckerDsl.ecore#//Check">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//Check/check"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//Check/chk"/>
+    </genClasses>
+    <genClasses ecoreClass="CheckerDsl.ecore#//Limit">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//Limit/sub"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//Limit/a"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//Limit/b"/>
+    </genClasses>
+    <genClasses ecoreClass="CheckerDsl.ecore#//Subtask">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//Subtask/num"/>
+    </genClasses>
+    <genClasses ecoreClass="CheckerDsl.ecore#//Format">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//Format/exp"/>
+    </genClasses>
+    <genClasses ecoreClass="CheckerDsl.ecore#//InputFormat">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//InputFormat/input"/>
+    </genClasses>
+    <genClasses ecoreClass="CheckerDsl.ecore#//OutputFormat">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//OutputFormat/output"/>
+    </genClasses>
+    <genClasses ecoreClass="CheckerDsl.ecore#//FormatExpression">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//FormatExpression/num"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//FormatExpression/var"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//FormatExpression/count"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
