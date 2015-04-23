@@ -27353,16 +27353,16 @@ rule__Property__PropAssignment_0
     }
 :
 (
-{ before(grammarAccess.getPropertyAccess().getPropPropertyKeyword_0_0()); }
+{ before(grammarAccess.getPropertyAccess().getPropCheckKeyword_0_0()); }
 (
-{ before(grammarAccess.getPropertyAccess().getPropPropertyKeyword_0_0()); }
+{ before(grammarAccess.getPropertyAccess().getPropCheckKeyword_0_0()); }
 
-	'property' 
+	'check' 
 
-{ after(grammarAccess.getPropertyAccess().getPropPropertyKeyword_0_0()); }
+{ after(grammarAccess.getPropertyAccess().getPropCheckKeyword_0_0()); }
 )
 
-{ after(grammarAccess.getPropertyAccess().getPropPropertyKeyword_0_0()); }
+{ after(grammarAccess.getPropertyAccess().getPropCheckKeyword_0_0()); }
 )
 
 ;

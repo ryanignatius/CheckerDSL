@@ -397,7 +397,7 @@ public class CheckerDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Property");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cPropAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final Keyword cPropPropertyKeyword_0_0 = (Keyword)cPropAssignment_0.eContents().get(0);
+		private final Keyword cPropCheckKeyword_0_0 = (Keyword)cPropAssignment_0.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cPropertiesAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final Alternatives cPropertiesAlternatives_2_0 = (Alternatives)cPropertiesAssignment_2.eContents().get(0);
@@ -406,17 +406,17 @@ public class CheckerDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//Property:
-		//	prop="property" "{" properties+=(ChkExpression | ChkLoopExpression)* "}";
+		//	prop="check" "{" properties+=(ChkExpression | ChkLoopExpression)* "}";
 		public ParserRule getRule() { return rule; }
 
-		//prop="property" "{" properties+=(ChkExpression | ChkLoopExpression)* "}"
+		//prop="check" "{" properties+=(ChkExpression | ChkLoopExpression)* "}"
 		public Group getGroup() { return cGroup; }
 
-		//prop="property"
+		//prop="check"
 		public Assignment getPropAssignment_0() { return cPropAssignment_0; }
 
-		//"property"
-		public Keyword getPropPropertyKeyword_0_0() { return cPropPropertyKeyword_0_0; }
+		//"check"
+		public Keyword getPropCheckKeyword_0_0() { return cPropCheckKeyword_0_0; }
 
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
@@ -2593,7 +2593,7 @@ public class CheckerDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Property:
-	//	prop="property" "{" properties+=(ChkExpression | ChkLoopExpression)* "}";
+	//	prop="check" "{" properties+=(ChkExpression | ChkLoopExpression)* "}";
 	public PropertyElements getPropertyAccess() {
 		return pProperty;
 	}

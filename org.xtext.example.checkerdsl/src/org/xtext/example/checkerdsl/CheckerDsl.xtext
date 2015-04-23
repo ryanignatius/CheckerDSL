@@ -41,7 +41,7 @@ FollowUp:
 	'}';
 
 Property:
-	prop='property' '{'
+	prop='check' '{'
 		(properties+=(ChkExpression | ChkLoopExpression))*
 	'}';
 

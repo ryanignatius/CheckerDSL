@@ -743,16 +743,16 @@ ruleProperty returns [EObject current=null]
     @after { leaveRule(); }:
 ((
 (
-		lv_prop_0_0=	'property' 
+		lv_prop_0_0=	'check' 
     {
-        newLeafNode(lv_prop_0_0, grammarAccess.getPropertyAccess().getPropPropertyKeyword_0_0());
+        newLeafNode(lv_prop_0_0, grammarAccess.getPropertyAccess().getPropCheckKeyword_0_0());
     }
  
 	    {
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getPropertyRule());
 	        }
-       		setWithLastConsumed($current, "prop", lv_prop_0_0, "property");
+       		setWithLastConsumed($current, "prop", lv_prop_0_0, "check");
 	    }
 
 )

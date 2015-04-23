@@ -1,7 +1,7 @@
 
 
 
-// Specification untuk soal knapsack
+// Specification untuk soal knapsack pada paper
 class Knapsack{
 	/*
 	 * variable declaration
@@ -10,20 +10,21 @@ class Knapsack{
 	 */
 	
 	// variable untuk input
-	int n (subtask 1 : 1..100, 1..1000; subtask 2 : 1..1) sp { -100 , 0 , 100 } // n adalah variabel jumlah item
+	int n (subtask 1 : 1..100) // n adalah variabel jumlah item
 	int m (subtask 1 : 1..100) // m adalah jumlah knapsack
-	int[n] p (subtask 1 : 0..100) // p adalah profit dari n buah item
-	int[n] w (subtask 1 : 0..100) // w adalah weight dari n buah item
-	int[m] c (subtask 1 : 0..100) // c adalah capacity dari m buah knapsack
+	int[n] p (subtask 1 : 1..100) // p adalah profit dari n buah item
+	int[n] w (subtask 1 : 1..100) // w adalah weight dari n buah item
+	int[m] c (subtask 1 : 1..100) // c adalah capacity dari m buah knapsack
 	
 	// variable untuk output
 	int[n] y (0..m) // y adalah nomor tempat knapsack item i atau 0 jika tidak dipilih
 	int tp // tp adalah variable total profit
 	
-	
+	/*
+	 * score for each subtasks
+	 */
 	score {
-		(1 : 30)
-		(2 : 70)
+		(1 : 100)
 	}
 	
 	/*
@@ -64,7 +65,7 @@ class Knapsack{
 			(p` = swap(p,k,l))
 			(w` = swap(w,k,l))
 		}
-		property {
+		check {
 			(y` = swap(y,k,l))
 		}
 		
@@ -74,10 +75,10 @@ class Knapsack{
 		(select(k) where y[k]==1)
 		def cc = (random(0..100))
 		followup {
-			(p[k] = p[k]+cc)
+			(p`[k] = p[k]+cc)
 		}
-		property {
-			(tp = tp+cc)
+		check {
+			(tp` = tp+cc)
 		}
 	}
 	
@@ -85,9 +86,9 @@ class Knapsack{
 		(select(k) where y[k]==0)
 		def cc = (random(0..100))
 		followup {
-			(w[k] = w[k]+cc)
+			(w`[k] = w[k]+cc)
 		}
-		property {
+		check {
 			
 		}
 	}
@@ -96,9 +97,9 @@ class Knapsack{
 		(select(k) where y[k]==0)
 		def cc = (random(0..100))
 		followup {
-			(p[k] = p[k]-cc)
+			(p`[k] = p[k]-cc)
 		}
-		property {
+		check {
 			
 		}
 	}
@@ -106,9 +107,9 @@ class Knapsack{
 	MR 5 {
 		def c1 = (sum(w) where y==1)
 		followup {
-			(c[1] = c1)
+			(c`[1] = c1)
 		}
-		property {
+		check {
 			
 		}
 	}
@@ -117,67 +118,67 @@ class Knapsack{
 		def pnew = (min(p) where y[j] != 0)
 		def wnew = (max(w) where y[j] != 0)
 		followup {
-			(n = n+1)
-			(add(p,pnew))
-			(add(w,wnew))
+			(n` = n+1)
+			(p` = add(p,pnew))
+			(w` = add(w,wnew))
 		}
-		property {
-			(add(y,0))
+		check {
+			(y` = add(y,0))
 		}
 	}
 	
 	MR 7 {
 		(select(k) where y[k]==0)
 		followup {
-			(n = n-1)
-			(remove(p,k))
-			(remove(w,k))
+			(n` = n-1)
+			(p` = remove(p,k))
+			(w` = remove(w,k))
 		}
-		property {
-			(remove(y,k))
+		check {
+			(y` = remove(y,k))
 		}
 	}
 	
 	MR 8 {
 		(select(k) where y[k]==1)
 		followup {
-			(n = n-1)
-			(c[1] = c[1]-w[k])
-			(remove(p,k))
-			(remove(w,k))
+			(n` = n-1)
+			(c`[1] = c[1]-w[k])
+			(p` = remove(p,k))
+			(w` = remove(w,k))
 		}
-		property {
-			(tp = tp-p[k])
-			(remove(y,k))
+		check {
+			(tp` = tp-p[k])
+			(y` = remove(y,k))
 		}
 	}
 	
 	MR 9 {
 		(select(k,l) where 1<=k and k<l and l<=n and y[k]==1 and y[l]==1)
 		followup {
-			(p[k] = p[k]+p[l])
-			(w[k] = w[k]+w[l])
-			(n = n-1)
-			(remove(p,l))
-			(remove(w,l))
+			(p`[k] = p[k]+p[l])
+			(w`[k] = w[k]+w[l])
+			(n` = n-1)
+			(p` = remove(p,l))
+			(w` = remove(w,l))
 		}
-		property {
-			(remove(y,l))
+		check {
+			(y` = remove(y,l))
 		}
 	}
 	
 	MR 10 {
 		def v = (sum(p) where y==1)
 		followup {
-			(remove(p) where y[i]==1)
-			(remove(w) where y[i]==1)
-			(n = size(p))
-			(remove(c,0))
-			(m = m-1)
+			(p` = remove(p) where y[i]==1)
+			(w` = remove(w) where y[i]==1)
+			(n` = size(p))
+			(c` = remove(c,0))
+			(m` = m-1)
 		}
-		property {
-			(remove(y) where y[i]==1)
-			(tp = tp-v)
+		check {
+			(y` = remove(y) where y[i]==1)
+			(tp` = tp-v)
 		}
 	}	
 }

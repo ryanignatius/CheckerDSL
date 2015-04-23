@@ -1654,7 +1654,7 @@ public class CheckerDslSemanticSequencer extends XbaseSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (prop='property' (properties+=ChkExpression | properties+=ChkLoopExpression)*)
+	 *     (prop='check' (properties+=ChkExpression | properties+=ChkLoopExpression)*)
 	 */
 	protected void sequence_Property(EObject context, Property semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
