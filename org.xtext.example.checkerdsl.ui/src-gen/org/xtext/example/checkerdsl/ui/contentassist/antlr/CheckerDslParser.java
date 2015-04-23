@@ -129,6 +129,7 @@ public class CheckerDslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getHelperAccess().getGroup_5_3(), "rule__Helper__Group_5_3__0");
 					put(grammarAccess.getHelperAccess().getGroup_6(), "rule__Helper__Group_6__0");
 					put(grammarAccess.getHelperAccess().getGroup_7(), "rule__Helper__Group_7__0");
+					put(grammarAccess.getHelperAccess().getGroup_7_3(), "rule__Helper__Group_7_3__0");
 					put(grammarAccess.getHelperAccess().getGroup_8(), "rule__Helper__Group_8__0");
 					put(grammarAccess.getHelperAccess().getGroup_8_2(), "rule__Helper__Group_8_2__0");
 					put(grammarAccess.getHelperAccess().getGroup_9(), "rule__Helper__Group_9__0");
@@ -406,7 +407,7 @@ public class CheckerDslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getHelperAccess().getRemoveAssignment_7_0(), "rule__Helper__RemoveAssignment_7_0");
 					put(grammarAccess.getHelperAccess().getGAssignment_7_2_0(), "rule__Helper__GAssignment_7_2_0");
 					put(grammarAccess.getHelperAccess().getVarAssignment_7_2_1(), "rule__Helper__VarAssignment_7_2_1");
-					put(grammarAccess.getHelperAccess().getVar3Assignment_7_4(), "rule__Helper__Var3Assignment_7_4");
+					put(grammarAccess.getHelperAccess().getVar3Assignment_7_3_1(), "rule__Helper__Var3Assignment_7_3_1");
 					put(grammarAccess.getHelperAccess().getRandomAssignment_8_0(), "rule__Helper__RandomAssignment_8_0");
 					put(grammarAccess.getHelperAccess().getVar3Assignment_8_2_0(), "rule__Helper__Var3Assignment_8_2_0");
 					put(grammarAccess.getHelperAccess().getVar4Assignment_8_2_2(), "rule__Helper__Var4Assignment_8_2_2");

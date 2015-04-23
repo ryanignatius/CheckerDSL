@@ -2042,14 +2042,14 @@ ruleHelper returns [EObject current=null]
 	    }
 
 )
-))	otherlv_40=',' 
+))(	otherlv_40=',' 
     {
-    	newLeafNode(otherlv_40, grammarAccess.getHelperAccess().getCommaKeyword_7_3());
+    	newLeafNode(otherlv_40, grammarAccess.getHelperAccess().getCommaKeyword_7_3_0());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getHelperAccess().getVar3ChkVariablesParserRuleCall_7_4_0()); 
+	        newCompositeNode(grammarAccess.getHelperAccess().getVar3ChkVariablesParserRuleCall_7_3_1_0()); 
 	    }
 		lv_var3_41_0=ruleChkVariables		{
 	        if ($current==null) {
@@ -2064,9 +2064,9 @@ ruleHelper returns [EObject current=null]
 	    }
 
 )
-)	otherlv_42=')' 
+))?	otherlv_42=')' 
     {
-    	newLeafNode(otherlv_42, grammarAccess.getHelperAccess().getRightParenthesisKeyword_7_5());
+    	newLeafNode(otherlv_42, grammarAccess.getHelperAccess().getRightParenthesisKeyword_7_4());
     }
 )
     |((

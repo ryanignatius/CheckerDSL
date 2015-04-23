@@ -969,10 +969,11 @@ public class CheckerDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cGChkItemGroupParserRuleCall_7_2_0_0 = (RuleCall)cGAssignment_7_2_0.eContents().get(0);
 		private final Assignment cVarAssignment_7_2_1 = (Assignment)cAlternatives_7_2.eContents().get(1);
 		private final RuleCall cVarChkVariableParserRuleCall_7_2_1_0 = (RuleCall)cVarAssignment_7_2_1.eContents().get(0);
-		private final Keyword cCommaKeyword_7_3 = (Keyword)cGroup_7.eContents().get(3);
-		private final Assignment cVar3Assignment_7_4 = (Assignment)cGroup_7.eContents().get(4);
-		private final RuleCall cVar3ChkVariablesParserRuleCall_7_4_0 = (RuleCall)cVar3Assignment_7_4.eContents().get(0);
-		private final Keyword cRightParenthesisKeyword_7_5 = (Keyword)cGroup_7.eContents().get(5);
+		private final Group cGroup_7_3 = (Group)cGroup_7.eContents().get(3);
+		private final Keyword cCommaKeyword_7_3_0 = (Keyword)cGroup_7_3.eContents().get(0);
+		private final Assignment cVar3Assignment_7_3_1 = (Assignment)cGroup_7_3.eContents().get(1);
+		private final RuleCall cVar3ChkVariablesParserRuleCall_7_3_1_0 = (RuleCall)cVar3Assignment_7_3_1.eContents().get(0);
+		private final Keyword cRightParenthesisKeyword_7_4 = (Keyword)cGroup_7.eContents().get(4);
 		private final Group cGroup_8 = (Group)cAlternatives.eContents().get(8);
 		private final Assignment cRandomAssignment_8_0 = (Assignment)cGroup_8.eContents().get(0);
 		private final Keyword cRandomRandomKeyword_8_0_0 = (Keyword)cRandomAssignment_8_0.eContents().get(0);
@@ -1057,7 +1058,7 @@ public class CheckerDslGrammarAccess extends AbstractGrammarElementFinder {
 		//	sum="sum" "(" var=ChkVariable ")" | max="max" "(" var=ChkVariable ")" | min="min" "(" var=ChkVariable ")" |
 		//	prime="prime" "(" var=ChkVariables ")" | swap="swap" "(" var=ChkVariable "," var1=ValidID "," var2=ValidID ")" |
 		//	select="select" "(" vars+=ValidID ("," vars+=ValidID)* ")" | add="add" "(" var=ChkVariable "," var3=ChkVariables ")"
-		//	| remove="remove" "(" (g=ChkItemGroup | var=ChkVariable) "," var3=ChkVariables ")" | random="random" "("
+		//	| remove="remove" "(" (g=ChkItemGroup | var=ChkVariable) ("," var3=ChkVariables)? ")" | random="random" "("
 		//	(var3=ChkVariables ".." var4=ChkVariables)? ")" | size="size" "(" var=ChkVariable ")" | permute="permute" "("
 		//	var=ChkVariable ")" | plus="plus" "(" var=ChkVariable "," var3=ChkVariables ")" | multiply="multiply" "("
 		//	var=ChkVariable "," var3=ChkVariables ")" | invert="invert" "(" var=ChkVariable ")" | include="include" "("
@@ -1068,7 +1069,7 @@ public class CheckerDslGrammarAccess extends AbstractGrammarElementFinder {
 		//sum="sum" "(" var=ChkVariable ")" | max="max" "(" var=ChkVariable ")" | min="min" "(" var=ChkVariable ")" |
 		//prime="prime" "(" var=ChkVariables ")" | swap="swap" "(" var=ChkVariable "," var1=ValidID "," var2=ValidID ")" |
 		//select="select" "(" vars+=ValidID ("," vars+=ValidID)* ")" | add="add" "(" var=ChkVariable "," var3=ChkVariables ")" |
-		//remove="remove" "(" (g=ChkItemGroup | var=ChkVariable) "," var3=ChkVariables ")" | random="random" "("
+		//remove="remove" "(" (g=ChkItemGroup | var=ChkVariable) ("," var3=ChkVariables)? ")" | random="random" "("
 		//(var3=ChkVariables ".." var4=ChkVariables)? ")" | size="size" "(" var=ChkVariable ")" | permute="permute" "("
 		//var=ChkVariable ")" | plus="plus" "(" var=ChkVariable "," var3=ChkVariables ")" | multiply="multiply" "("
 		//var=ChkVariable "," var3=ChkVariables ")" | invert="invert" "(" var=ChkVariable ")" | include="include" "("
@@ -1262,7 +1263,7 @@ public class CheckerDslGrammarAccess extends AbstractGrammarElementFinder {
 		//")"
 		public Keyword getRightParenthesisKeyword_6_5() { return cRightParenthesisKeyword_6_5; }
 
-		//remove="remove" "(" (g=ChkItemGroup | var=ChkVariable) "," var3=ChkVariables ")"
+		//remove="remove" "(" (g=ChkItemGroup | var=ChkVariable) ("," var3=ChkVariables)? ")"
 		public Group getGroup_7() { return cGroup_7; }
 
 		//remove="remove"
@@ -1289,17 +1290,20 @@ public class CheckerDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ChkVariable
 		public RuleCall getVarChkVariableParserRuleCall_7_2_1_0() { return cVarChkVariableParserRuleCall_7_2_1_0; }
 
+		//("," var3=ChkVariables)?
+		public Group getGroup_7_3() { return cGroup_7_3; }
+
 		//","
-		public Keyword getCommaKeyword_7_3() { return cCommaKeyword_7_3; }
+		public Keyword getCommaKeyword_7_3_0() { return cCommaKeyword_7_3_0; }
 
 		//var3=ChkVariables
-		public Assignment getVar3Assignment_7_4() { return cVar3Assignment_7_4; }
+		public Assignment getVar3Assignment_7_3_1() { return cVar3Assignment_7_3_1; }
 
 		//ChkVariables
-		public RuleCall getVar3ChkVariablesParserRuleCall_7_4_0() { return cVar3ChkVariablesParserRuleCall_7_4_0; }
+		public RuleCall getVar3ChkVariablesParserRuleCall_7_3_1_0() { return cVar3ChkVariablesParserRuleCall_7_3_1_0; }
 
 		//")"
-		public Keyword getRightParenthesisKeyword_7_5() { return cRightParenthesisKeyword_7_5; }
+		public Keyword getRightParenthesisKeyword_7_4() { return cRightParenthesisKeyword_7_4; }
 
 		//random="random" "(" (var3=ChkVariables ".." var4=ChkVariables)? ")"
 		public Group getGroup_8() { return cGroup_8; }
@@ -2683,7 +2687,7 @@ public class CheckerDslGrammarAccess extends AbstractGrammarElementFinder {
 	//	sum="sum" "(" var=ChkVariable ")" | max="max" "(" var=ChkVariable ")" | min="min" "(" var=ChkVariable ")" |
 	//	prime="prime" "(" var=ChkVariables ")" | swap="swap" "(" var=ChkVariable "," var1=ValidID "," var2=ValidID ")" |
 	//	select="select" "(" vars+=ValidID ("," vars+=ValidID)* ")" | add="add" "(" var=ChkVariable "," var3=ChkVariables ")"
-	//	| remove="remove" "(" (g=ChkItemGroup | var=ChkVariable) "," var3=ChkVariables ")" | random="random" "("
+	//	| remove="remove" "(" (g=ChkItemGroup | var=ChkVariable) ("," var3=ChkVariables)? ")" | random="random" "("
 	//	(var3=ChkVariables ".." var4=ChkVariables)? ")" | size="size" "(" var=ChkVariable ")" | permute="permute" "("
 	//	var=ChkVariable ")" | plus="plus" "(" var=ChkVariable "," var3=ChkVariables ")" | multiply="multiply" "("
 	//	var=ChkVariable "," var3=ChkVariables ")" | invert="invert" "(" var=ChkVariable ")" | include="include" "("

@@ -1,0 +1,13 @@
+
+public class MainGenerator {
+
+	public static void main(String[] args) {
+		GeneratedClass g = new GeneratedClass();
+		g.init();
+		int idx = 0;
+		while (idx < args.length){
+			if (args[idx].equals(arg0))
+		}
+	}
+
+}

@@ -1,0 +1,8 @@
+The KNAPSACK program accepts three sets of integers.
+(for this example, program also accepts two integers n (number of items) and m (number of knapsack))
+Two n-tuple sets P = {p1, p2, …, pn} and W = {w1, w2, …, wn} represent the profits and the weights of n items, respectively; while another m-tuple set C = {c1, c2, …, cm} contains the capacities of m knapsacks.
+The outputs of KNAPSACK are one n-tuple set Y = {y1, y2, …, yn} and one positive integer TP.
+yi = j (where i = 1, 2, …, n and j = 0, 1, …, m) represents that the ith item should be put into the jth knapsack.
+If yi = 0, it means that the ith item will not be selected into any knapsack.
+TP represents the total profit of the picked items.
+The KNAPSACK program attempts to calculate the optimal solution and thus to maximize the total profit.

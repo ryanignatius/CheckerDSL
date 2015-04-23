@@ -1,0 +1,10 @@
+
+public class Pair<T,U> {
+	private T first;
+	private U second;
+	
+	Pair(T t, U u){
+		first = t;
+		second = u;
+	}
+}
