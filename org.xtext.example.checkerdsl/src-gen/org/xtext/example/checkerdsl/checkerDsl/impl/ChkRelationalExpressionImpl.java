@@ -29,7 +29,7 @@ import org.xtext.example.checkerdsl.checkerDsl.ChkVariables;
  *
  * @generated
  */
-public class ChkRelationalExpressionImpl extends ChkRelationalExpressionsImpl implements ChkRelationalExpression
+public class ChkRelationalExpressionImpl extends ChkGeneralExpressionsImpl implements ChkRelationalExpression
 {
   /**
    * The cached value of the '{@link #getV1() <em>V1</em>}' containment reference.

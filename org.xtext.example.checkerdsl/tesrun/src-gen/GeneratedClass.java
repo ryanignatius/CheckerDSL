@@ -5,6 +5,8 @@ import java.util.Scanner;
 public class GeneratedClass {
   private Scanner sc;
   
+  private int current_subtask;
+  
   private static int cur_lines;
   
   public static void die(final String message) {
@@ -78,9 +80,20 @@ public class GeneratedClass {
   
   public boolean validateN(final int value, final int subtask) {
     switch (subtask){
+    case 1 :
+    if ((1 <= value && value <= 100)){
+    return true;
+    } else {
+    return false;
+    }
+    default:
+    return true;
+    }
   }
   
   private int n;
+  
+  private int n_2;
   
   public int getN() {
     return this.n;
@@ -92,7 +105,7 @@ public class GeneratedClass {
   
   public void readN(final String token) {
     n = intReader(token);
-    if (!validateN(n)){
+    if (!validateN(n,current_subtask)){
     	GeneratedClass.die("value not in valid range");
     }
   }
@@ -103,9 +116,20 @@ public class GeneratedClass {
   
   public boolean validateM(final int value, final int subtask) {
     switch (subtask){
+    case 1 :
+    if ((1 <= value && value <= 100)){
+    return true;
+    } else {
+    return false;
+    }
+    default:
+    return true;
+    }
   }
   
   private int m;
+  
+  private int m_2;
   
   public int getM() {
     return this.m;
@@ -117,7 +141,7 @@ public class GeneratedClass {
   
   public void readM(final String token) {
     m = intReader(token);
-    if (!validateM(m)){
+    if (!validateM(m,current_subtask)){
     	GeneratedClass.die("value not in valid range");
     }
   }
@@ -128,9 +152,20 @@ public class GeneratedClass {
   
   public boolean validateP(final int value, final int subtask) {
     switch (subtask){
+    case 1 :
+    if ((1 <= value && value <= 100)){
+    return true;
+    } else {
+    return false;
+    }
+    default:
+    return true;
+    }
   }
   
   private ArrayList p;
+  
+  private ArrayList p_2;
   
   public ArrayList getP() {
     return this.p;
@@ -144,7 +179,7 @@ public class GeneratedClass {
     p = new ArrayList();
     for (int i=0; i<n; i++){
     	p.add(intReader(tokens[i]));
-    	if (!validateP((int)p.get(i))){
+    	if (!validateP((int)p.get(i),current_subtask)){
     		GeneratedClass.die("value not in valid range");
     	}
     }
@@ -168,9 +203,20 @@ public class GeneratedClass {
   
   public boolean validateW(final int value, final int subtask) {
     switch (subtask){
+    case 1 :
+    if ((1 <= value && value <= 100)){
+    return true;
+    } else {
+    return false;
+    }
+    default:
+    return true;
+    }
   }
   
   private ArrayList w;
+  
+  private ArrayList w_2;
   
   public ArrayList getW() {
     return this.w;
@@ -184,7 +230,7 @@ public class GeneratedClass {
     w = new ArrayList();
     for (int i=0; i<n; i++){
     	w.add(intReader(tokens[i]));
-    	if (!validateW((int)w.get(i))){
+    	if (!validateW((int)w.get(i),current_subtask)){
     		GeneratedClass.die("value not in valid range");
     	}
     }
@@ -208,9 +254,20 @@ public class GeneratedClass {
   
   public boolean validateC(final int value, final int subtask) {
     switch (subtask){
+    case 1 :
+    if ((1 <= value && value <= 100)){
+    return true;
+    } else {
+    return false;
+    }
+    default:
+    return true;
+    }
   }
   
   private ArrayList c;
+  
+  private ArrayList c_2;
   
   public ArrayList getC() {
     return this.c;
@@ -224,7 +281,7 @@ public class GeneratedClass {
     c = new ArrayList();
     for (int i=0; i<m; i++){
     	c.add(intReader(tokens[i]));
-    	if (!validateC((int)c.get(i))){
+    	if (!validateC((int)c.get(i),current_subtask)){
     		GeneratedClass.die("value not in valid range");
     	}
     }
@@ -248,9 +305,18 @@ public class GeneratedClass {
   
   public boolean validateY(final int value, final int subtask) {
     switch (subtask){
+    default :
+    if ((0 <= value && value <= m)){
+    return true;
+    } else {
+    return false;
+    }
+    }
   }
   
   private ArrayList y;
+  
+  private ArrayList y_2;
   
   public ArrayList getY() {
     return this.y;
@@ -264,7 +330,7 @@ public class GeneratedClass {
     y = new ArrayList();
     for (int i=0; i<n; i++){
     	y.add(intReader(tokens[i]));
-    	if (!validateY((int)y.get(i))){
+    	if (!validateY((int)y.get(i),current_subtask)){
     		GeneratedClass.die("value not in valid range");
     	}
     }
@@ -287,10 +353,12 @@ public class GeneratedClass {
   }
   
   public boolean validateTp(final int value, final int subtask) {
-    switch (subtask){
+    return true;
   }
   
   private int tp;
+  
+  private int tp_2;
   
   public int getTp() {
     return this.tp;
@@ -302,13 +370,17 @@ public class GeneratedClass {
   
   public void readTp(final String token) {
     tp = intReader(token);
-    if (!validateTp(tp)){
+    if (!validateTp(tp,current_subtask)){
     	GeneratedClass.die("value not in valid range");
     }
   }
   
   public void writeTp() {
     System.out.print(tp);
+  }
+  
+  public void printScore() {
+    System.out.println("Subtask : 1, Score : 100");
   }
   
   /**
@@ -419,8 +491,126 @@ public class GeneratedClass {
     System.out.println();
   }
   
+  public boolean output_check() {
+    bool ok = true;
+    if (!(tp==tp;)) ok = false;
+    if (!(;)) ok = false;
+    return ok;
+  }
+  
+  public void mr_followup_1() {
+    initMRVar();
+    
+  }
+  
+  public void mr_check_1() {
+    initMRVar();
+    
+  }
+  
+  public void mr_followup_2() {
+    initMRVar();
+    
+  }
+  
+  public void mr_check_2() {
+    initMRVar();
+    
+  }
+  
+  public void mr_followup_3() {
+    initMRVar();
+    
+  }
+  
+  public void mr_check_3() {
+    initMRVar();
+    
+  }
+  
+  public void mr_followup_4() {
+    initMRVar();
+    
+  }
+  
+  public void mr_check_4() {
+    initMRVar();
+    
+  }
+  
+  public void mr_followup_5() {
+    initMRVar();
+    
+  }
+  
+  public void mr_check_5() {
+    initMRVar();
+    
+  }
+  
+  public void mr_followup_6() {
+    initMRVar();
+    
+  }
+  
+  public void mr_check_6() {
+    initMRVar();
+    
+  }
+  
+  public void mr_followup_7() {
+    initMRVar();
+    
+  }
+  
+  public void mr_check_7() {
+    initMRVar();
+    
+  }
+  
+  public void mr_followup_8() {
+    initMRVar();
+    
+  }
+  
+  public void mr_check_8() {
+    initMRVar();
+    
+  }
+  
+  public void mr_followup_9() {
+    initMRVar();
+    
+  }
+  
+  public void mr_check_9() {
+    initMRVar();
+    
+  }
+  
+  public void mr_followup_10() {
+    initMRVar();
+    
+  }
+  
+  public void mr_check_10() {
+    initMRVar();
+    
+  }
+  
+  public void initMRVar() {
+    n_2 = n;
+    m_2 = m;
+    p_2 = new ArrayList(p);
+    w_2 = new ArrayList(w);
+    c_2 = new ArrayList(c);
+    y_2 = new ArrayList(y);
+    tp_2 = tp;
+  }
+  
   public void init() {
     sc = new Scanner(System.in);
+    current_subtask = 1;
     GeneratedClass.cur_lines = 1;
     readInput();
     readOutput();

@@ -14,12 +14,12 @@ import org.xtext.example.checkerdsl.checkerDsl.Check;
 import org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage;
 import org.xtext.example.checkerdsl.checkerDsl.ChkAssignment;
 import org.xtext.example.checkerdsl.checkerDsl.ChkExpression;
+import org.xtext.example.checkerdsl.checkerDsl.ChkGeneralExpressions;
 import org.xtext.example.checkerdsl.checkerDsl.ChkItemGroup;
 import org.xtext.example.checkerdsl.checkerDsl.ChkLoopExpression;
 import org.xtext.example.checkerdsl.checkerDsl.ChkOperation;
 import org.xtext.example.checkerdsl.checkerDsl.ChkPrefix;
 import org.xtext.example.checkerdsl.checkerDsl.ChkRelationalExpression;
-import org.xtext.example.checkerdsl.checkerDsl.ChkRelationalExpressions;
 import org.xtext.example.checkerdsl.checkerDsl.ChkScoreExpression;
 import org.xtext.example.checkerdsl.checkerDsl.ChkVariable;
 import org.xtext.example.checkerdsl.checkerDsl.ChkVariableDeclaration;
@@ -206,9 +206,9 @@ public class CheckerDslAdapterFactory extends AdapterFactoryImpl
         return createChkAssignmentAdapter();
       }
       @Override
-      public Adapter caseChkRelationalExpressions(ChkRelationalExpressions object)
+      public Adapter caseChkGeneralExpressions(ChkGeneralExpressions object)
       {
-        return createChkRelationalExpressionsAdapter();
+        return createChkGeneralExpressionsAdapter();
       }
       @Override
       public Adapter caseChkOperation(ChkOperation object)
@@ -588,16 +588,16 @@ public class CheckerDslAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.example.checkerdsl.checkerDsl.ChkRelationalExpressions <em>Chk Relational Expressions</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.example.checkerdsl.checkerDsl.ChkGeneralExpressions <em>Chk General Expressions</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.example.checkerdsl.checkerDsl.ChkRelationalExpressions
+   * @see org.xtext.example.checkerdsl.checkerDsl.ChkGeneralExpressions
    * @generated
    */
-  public Adapter createChkRelationalExpressionsAdapter()
+  public Adapter createChkGeneralExpressionsAdapter()
   {
     return null;
   }

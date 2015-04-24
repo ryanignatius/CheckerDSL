@@ -5,10 +5,22 @@ import org.xtext.example.checkerdsl.checkerDsl.Class
 import org.xtext.example.checkerdsl.checkerDsl.Method
 import org.xtext.example.checkerdsl.checkerDsl.ChkVariableDeclaration
 import org.xtext.example.checkerdsl.checkerDsl.Limit
+import org.xtext.example.checkerdsl.checkerDsl.Subtask
 import org.xtext.example.checkerdsl.checkerDsl.Format
 import org.xtext.example.checkerdsl.checkerDsl.InputFormat
 import org.xtext.example.checkerdsl.checkerDsl.OutputFormat
+import org.xtext.example.checkerdsl.checkerDsl.Check
+import org.xtext.example.checkerdsl.checkerDsl.ChkVariable
+import org.xtext.example.checkerdsl.checkerDsl.ChkVariables
+import org.xtext.example.checkerdsl.checkerDsl.MR
+import org.xtext.example.checkerdsl.checkerDsl.Score
 import org.xtext.example.checkerdsl.checkerDsl.FormatExpression
+import org.xtext.example.checkerdsl.checkerDsl.ChkExpression
+import org.xtext.example.checkerdsl.checkerDsl.ChkLoopExpression
+import org.xtext.example.checkerdsl.checkerDsl.Helper
+import org.xtext.example.checkerdsl.checkerDsl.ChkRelationalExpression
+import org.xtext.example.checkerdsl.checkerDsl.MethodCall
+import org.xtext.example.checkerdsl.checkerDsl.ChkAssignment
 import org.eclipse.xtext.naming.IQualifiedNameProvider
 import org.eclipse.xtext.xbase.jvmmodel.AbstractModelInferrer
 import org.eclipse.xtext.xbase.jvmmodel.IJvmDeclaredTypeAcceptor
@@ -41,6 +53,7 @@ class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
 	String bd3;
 	String bd2a;
 	String bd3a;
+	String copy_var = "";
 	int sz;
 	String class_name = "GeneratedClass"
 	JvmTypeReference tp;
@@ -55,6 +68,7 @@ class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
       if (element.superType != null)
         superTypes += element.superType.cloneWithProxies
       members += element.toField("sc",typeRef(java.util.Scanner))
+      members += element.toField("current_subtask",typeRef(int))
       
       members += element.toField("cur_lines",typeRef(int))[
       	static = true
@@ -169,18 +183,25 @@ class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
           	} else if (feature.type == 'string'){
           		t2 = typeRef(java.lang.String)
           	}
-          	if (feature.limit != null){
+          	if (feature.limit1 != null){
           		tp = t2
           		//for (lim : feature.limit){
 		          	members += feature.toMethod("validate"+feature.name.toFirstUpper, typeRef(boolean))[
 		      			parameters += element.toParameter("value",tp)
 		      			parameters += element.toParameter("subtask",typeRef(int))
-		      			bd1 = "switch (subtask){\n"
-		      			for (lim : feature.limit){
-	      					bd1 = bd1 + lim.validateBody
-	      				}
 		      			body = '''
-		      				«bd1»
+		      				switch (subtask){
+		      				«var validateBody=feature.limit1.validateBody»
+		      				«var defaultSwitch = false»
+		      				«for (lim : feature.limit){
+		      					validateBody = validateBody.concat(lim.validateBody)
+		      					if (lim.sub == null) defaultSwitch = true
+		      					else {}
+		      				}»
+		      				«if (feature.limit1.sub != null && defaultSwitch == false){
+		      					validateBody = validateBody+"default:\nreturn true;\n"
+		      				} else {validateBody}»
+		      				}
 		        		'''
 		     		]
 	     		//}
@@ -188,6 +209,7 @@ class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
      			tp = t2
 	          	members += feature.toMethod("validate"+feature.name.toFirstUpper, typeRef(boolean))[
 	      			parameters += element.toParameter("value",tp)
+	      			parameters += element.toParameter("subtask",typeRef(int))
 	      			body = '''
 	        			return true;
 	        		'''
@@ -198,6 +220,8 @@ class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
           		t = typeRef(java.util.ArrayList)
           		
           		members += feature.toField(feature.name, t)
+          		members += feature.toField(feature.name+"_2", t)
+          		copy_var = copy_var+feature.name+"_2 = new ArrayList("+feature.name+");\n"
 	            members += feature.toGetter(feature.name, t)
 	            members += feature.toSetter(feature.name, t)
           		
@@ -208,7 +232,7 @@ class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
 	          				«feature.name» = new ArrayList();
 	          				for (int i=0; i<«feature.sz.get(0)»; i++){
 	          					«feature.name».add(«feature.type»Reader(tokens[i]));
-	          					if (!validate«feature.name.toFirstUpper»((int)«feature.name».get(i))){
+	          					if (!validate«feature.name.toFirstUpper»((int)«feature.name».get(i),current_subtask)){
 	          						«class_name».die("value not in valid range");
 	          					}
 	          				}
@@ -245,7 +269,7 @@ class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
 	          					ArrayList temp = new ArrayList();
 	          					for (int j=0; j<«feature.sz.get(1)»; j++){
 	          						temp.add(«feature.type»Reader());
-	          						if (!validate«feature.name.toFirstUpper»((int)temp.get(j))){
+	          						if (!validate«feature.name.toFirstUpper»((int)temp.get(j),current_subtask)){
 	          							«class_name».die("value not in valid range");
 	          						}
 	          					}
@@ -284,14 +308,16 @@ class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
           		}
       		} else {
       			members += feature.toField(feature.name, t2)
-	            members += feature.toGetter(feature.name, t2)
+	            members += feature.toField(feature.name+"_2", t2)
+          		copy_var = copy_var+feature.name+"_2 = "+feature.name+";\n"
+          		members += feature.toGetter(feature.name, t2)
 	            members += feature.toSetter(feature.name, t2)
 	            
 	            members += feature.toMethod("read"+feature.name.toFirstUpper, typeRef(void))[
           			parameters += element.toParameter("token",typeRef(String))
           			body = '''
 	        			«feature.name» = «feature.type»Reader(token);
-	        			if (!validate«feature.name.toFirstUpper»(«feature.name»)){
+	        			if (!validate«feature.name.toFirstUpper»(«feature.name»,current_subtask)){
 	        				«class_name».die("value not in valid range");
 	        			}
 	        		'''
@@ -332,6 +358,7 @@ class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
 	          	'''
           	]
           }
+          
           OutputFormat : {
           	members += feature.toMethod("readOutput", typeRef(void)) [
           		documentation = feature.documentation
@@ -360,12 +387,65 @@ class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
 	          	'''
           	]
           }
+          
+          Check:{
+          	members += element.toMethod("output_check", typeRef(boolean)) [
+				body = '''
+					«var checkBody = "boolean ok = true;\n"»
+					«for (ch : feature.chk){
+		          		switch ch{
+		          			ChkExpression:{
+		          				checkBody = checkBody+"if (!("+checkExp(ch)+")) ok = false;\n"
+		          			}
+		          			ChkLoopExpression:{
+		          				
+		          			}
+		          		}
+		          	}»
+					«checkBody»
+					return ok;
+				'''
+				]
+          }
+          
+          MR:{
+          	members += element.toMethod("mr_followup_"+feature.num, typeRef(void)) [
+				body = '''
+					initMRVar();
+					
+				'''
+				]
+			members += element.toMethod("mr_check_"+feature.num, typeRef(void)) [
+				body = '''
+					initMRVar();
+					
+				'''
+				]
+          }
+          
+          Score:{
+          	members += element.toMethod("printScore", typeRef(void)) [
+				body = '''
+					«var scoreBody = ""»
+					«for (score : feature.scores){
+						scoreBody = scoreBody+"System.out.println(\"Subtask : "+score.subtask+", Score : "+score.score+"\");\n"
+					}»
+					«scoreBody»
+				'''
+				]
+          }
         }
       }
       
+      members += element.toMethod("initMRVar", typeRef(void)) [
+		body = '''
+			«copy_var»
+		'''
+		]
 	  members += element.toMethod("init", typeRef(void)) [
 		body = '''
 			sc = new Scanner(System.in);
+			current_subtask = 1;
 			«class_name».cur_lines = 1;
 			readInput();
 			readOutput();
@@ -376,23 +456,90 @@ class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
     ]
   }
   
+  def String chkVar(ChkVariable element){
+  	var cc = ""
+  	// todo prefix
+  	cc = cc+element.^var
+  	// todo newtest
+  	for (v : element.v){
+  		cc = cc+"["+v+"]"
+  	}
+  	println("var "+cc)
+  	return cc
+  }
+  
+  def String chkVars(ChkVariables element){
+  	var cc = ""
+  	if (element.va != null){
+  		cc = cc+chkVar(element.va)
+  	}
+  	if (element.nu != null){
+  		cc = cc+element.nu
+  	}
+  	println("vars "+cc)
+  	return cc
+  }
+  
+  def String relationalExp(ChkRelationalExpression element){
+  	var cc = ""
+  	cc = cc+chkVars(element.v1)
+  	cc = cc+element.opr
+  	cc = cc+chkVars(element.v2)
+  	println("rel "+cc)
+  	return cc
+  }
+  
+  def String checkExp(ChkExpression element){
+  	var cc = ""
+  	var cond = ""
+  	if (element.where != null){
+  		cond = cond+"("+relationalExp(element.cond.get(0));
+  	} else cond = "true"
+	if (element.asg != null) cc = cc+"int "+element.asg+" = "
+	var exp = element.exp
+	switch exp{
+		Helper:{
+			
+		}
+		ChkRelationalExpression:{
+			cc = cc+relationalExp(exp)
+		}
+		MethodCall:{
+			cc = cc+exp.name+"("
+			var first=true
+			for (p : exp.params){
+				if (first) first = false
+				else cc = cc+","
+				cc = cc+p
+			}
+			cc = cc+")\n"
+		}
+		ChkAssignment:{
+			
+		}
+	}
+	println("check "+cc)
+	return cc
+  }
+  
   def String validateBody(Limit element){
-  	var bd = ""
+  	var cc = ""
 	var idx = 0
-	bd = "Case "+element.sub+" :\n"
-	bd = bd+"if ("
+	if (element.sub != null) cc = "case "+element.sub.num+" :\n"
+	else cc = "default :\n"
+	cc = cc+"if ("
 	for (i : element.a){
-		if (idx > 0) bd = bd+" || "
-		bd = bd+"("+i+" <= value && value <= "+element.b.get(idx)+")"
+		if (idx > 0) cc = cc+" || "
+		cc = cc+"("+i+" <= value && value <= "+element.b.get(idx)+")"
 		idx = idx+1
 	}
-	bd = bd+"){\n"
-	bd = bd+"return true;\n"
-	bd = bd+"} else {\n"
-	bd = bd+"return false;\n"
-	bd = bd+"}\n"
-	bd = bd+"break;\n"
-	return bd
+	cc = cc+"){\n"
+	cc = cc+"return true;\n"
+	cc = cc+"} else {\n"
+	cc = cc+"return false;\n"
+	cc = cc+"}\n"
+	//cc = cc+"break;\n"
+	return cc
   }
   
   def String inputBody(FormatExpression element) {

@@ -2726,7 +2726,7 @@ public class InternalCheckerDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleChkVariableDeclaration"
-    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:954:1: ruleChkVariableDeclaration returns [EObject current=null] : ( ( (lv_type_0_0= ruleChkTypeReference ) ) (otherlv_1= '[' ( (lv_sz_2_0= ruleMY_NUMBER ) ) otherlv_3= ']' )* ( (lv_name_4_0= ruleValidID ) ) (otherlv_5= '(' ( (lv_limit_6_0= ruleLimit ) ) (otherlv_7= ';' ( (lv_limit_8_0= ruleLimit ) ) )* otherlv_9= ')' )? (otherlv_10= 'sp' otherlv_11= '{' ( (lv_spValue_12_0= ruleSpValue ) ) otherlv_13= '}' )? ) ;
+    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:954:1: ruleChkVariableDeclaration returns [EObject current=null] : ( ( (lv_type_0_0= ruleChkTypeReference ) ) (otherlv_1= '[' ( (lv_sz_2_0= ruleMY_NUMBER ) ) otherlv_3= ']' )* ( (lv_name_4_0= ruleValidID ) ) (otherlv_5= '(' ( (lv_limit1_6_0= ruleLimit ) ) (otherlv_7= ';' ( (lv_limit_8_0= ruleLimit ) ) )* otherlv_9= ')' )? (otherlv_10= 'sp' otherlv_11= '{' ( (lv_spValue_12_0= ruleSpValue ) ) otherlv_13= '}' )? ) ;
     public final EObject ruleChkVariableDeclaration() throws RecognitionException {
         EObject current = null;
 
@@ -2744,7 +2744,7 @@ public class InternalCheckerDslParser extends AbstractInternalAntlrParser {
 
         AntlrDatatypeRuleToken lv_name_4_0 = null;
 
-        EObject lv_limit_6_0 = null;
+        EObject lv_limit1_6_0 = null;
 
         EObject lv_limit_8_0 = null;
 
@@ -2754,11 +2754,11 @@ public class InternalCheckerDslParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:957:28: ( ( ( (lv_type_0_0= ruleChkTypeReference ) ) (otherlv_1= '[' ( (lv_sz_2_0= ruleMY_NUMBER ) ) otherlv_3= ']' )* ( (lv_name_4_0= ruleValidID ) ) (otherlv_5= '(' ( (lv_limit_6_0= ruleLimit ) ) (otherlv_7= ';' ( (lv_limit_8_0= ruleLimit ) ) )* otherlv_9= ')' )? (otherlv_10= 'sp' otherlv_11= '{' ( (lv_spValue_12_0= ruleSpValue ) ) otherlv_13= '}' )? ) )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:958:1: ( ( (lv_type_0_0= ruleChkTypeReference ) ) (otherlv_1= '[' ( (lv_sz_2_0= ruleMY_NUMBER ) ) otherlv_3= ']' )* ( (lv_name_4_0= ruleValidID ) ) (otherlv_5= '(' ( (lv_limit_6_0= ruleLimit ) ) (otherlv_7= ';' ( (lv_limit_8_0= ruleLimit ) ) )* otherlv_9= ')' )? (otherlv_10= 'sp' otherlv_11= '{' ( (lv_spValue_12_0= ruleSpValue ) ) otherlv_13= '}' )? )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:957:28: ( ( ( (lv_type_0_0= ruleChkTypeReference ) ) (otherlv_1= '[' ( (lv_sz_2_0= ruleMY_NUMBER ) ) otherlv_3= ']' )* ( (lv_name_4_0= ruleValidID ) ) (otherlv_5= '(' ( (lv_limit1_6_0= ruleLimit ) ) (otherlv_7= ';' ( (lv_limit_8_0= ruleLimit ) ) )* otherlv_9= ')' )? (otherlv_10= 'sp' otherlv_11= '{' ( (lv_spValue_12_0= ruleSpValue ) ) otherlv_13= '}' )? ) )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:958:1: ( ( (lv_type_0_0= ruleChkTypeReference ) ) (otherlv_1= '[' ( (lv_sz_2_0= ruleMY_NUMBER ) ) otherlv_3= ']' )* ( (lv_name_4_0= ruleValidID ) ) (otherlv_5= '(' ( (lv_limit1_6_0= ruleLimit ) ) (otherlv_7= ';' ( (lv_limit_8_0= ruleLimit ) ) )* otherlv_9= ')' )? (otherlv_10= 'sp' otherlv_11= '{' ( (lv_spValue_12_0= ruleSpValue ) ) otherlv_13= '}' )? )
             {
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:958:1: ( ( (lv_type_0_0= ruleChkTypeReference ) ) (otherlv_1= '[' ( (lv_sz_2_0= ruleMY_NUMBER ) ) otherlv_3= ']' )* ( (lv_name_4_0= ruleValidID ) ) (otherlv_5= '(' ( (lv_limit_6_0= ruleLimit ) ) (otherlv_7= ';' ( (lv_limit_8_0= ruleLimit ) ) )* otherlv_9= ')' )? (otherlv_10= 'sp' otherlv_11= '{' ( (lv_spValue_12_0= ruleSpValue ) ) otherlv_13= '}' )? )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:958:2: ( (lv_type_0_0= ruleChkTypeReference ) ) (otherlv_1= '[' ( (lv_sz_2_0= ruleMY_NUMBER ) ) otherlv_3= ']' )* ( (lv_name_4_0= ruleValidID ) ) (otherlv_5= '(' ( (lv_limit_6_0= ruleLimit ) ) (otherlv_7= ';' ( (lv_limit_8_0= ruleLimit ) ) )* otherlv_9= ')' )? (otherlv_10= 'sp' otherlv_11= '{' ( (lv_spValue_12_0= ruleSpValue ) ) otherlv_13= '}' )?
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:958:1: ( ( (lv_type_0_0= ruleChkTypeReference ) ) (otherlv_1= '[' ( (lv_sz_2_0= ruleMY_NUMBER ) ) otherlv_3= ']' )* ( (lv_name_4_0= ruleValidID ) ) (otherlv_5= '(' ( (lv_limit1_6_0= ruleLimit ) ) (otherlv_7= ';' ( (lv_limit_8_0= ruleLimit ) ) )* otherlv_9= ')' )? (otherlv_10= 'sp' otherlv_11= '{' ( (lv_spValue_12_0= ruleSpValue ) ) otherlv_13= '}' )? )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:958:2: ( (lv_type_0_0= ruleChkTypeReference ) ) (otherlv_1= '[' ( (lv_sz_2_0= ruleMY_NUMBER ) ) otherlv_3= ']' )* ( (lv_name_4_0= ruleValidID ) ) (otherlv_5= '(' ( (lv_limit1_6_0= ruleLimit ) ) (otherlv_7= ';' ( (lv_limit_8_0= ruleLimit ) ) )* otherlv_9= ')' )? (otherlv_10= 'sp' otherlv_11= '{' ( (lv_spValue_12_0= ruleSpValue ) ) otherlv_13= '}' )?
             {
             // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:958:2: ( (lv_type_0_0= ruleChkTypeReference ) )
             // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:959:1: (lv_type_0_0= ruleChkTypeReference )
@@ -2901,7 +2901,7 @@ public class InternalCheckerDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:1020:2: (otherlv_5= '(' ( (lv_limit_6_0= ruleLimit ) ) (otherlv_7= ';' ( (lv_limit_8_0= ruleLimit ) ) )* otherlv_9= ')' )?
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:1020:2: (otherlv_5= '(' ( (lv_limit1_6_0= ruleLimit ) ) (otherlv_7= ';' ( (lv_limit_8_0= ruleLimit ) ) )* otherlv_9= ')' )?
             int alt19=2;
             int LA19_0 = input.LA(1);
 
@@ -2910,7 +2910,7 @@ public class InternalCheckerDslParser extends AbstractInternalAntlrParser {
             }
             switch (alt19) {
                 case 1 :
-                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:1020:4: otherlv_5= '(' ( (lv_limit_6_0= ruleLimit ) ) (otherlv_7= ';' ( (lv_limit_8_0= ruleLimit ) ) )* otherlv_9= ')'
+                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:1020:4: otherlv_5= '(' ( (lv_limit1_6_0= ruleLimit ) ) (otherlv_7= ';' ( (lv_limit_8_0= ruleLimit ) ) )* otherlv_9= ')'
                     {
                     otherlv_5=(Token)match(input,19,FOLLOW_19_in_ruleChkVariableDeclaration2098); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -2918,19 +2918,19 @@ public class InternalCheckerDslParser extends AbstractInternalAntlrParser {
                           	newLeafNode(otherlv_5, grammarAccess.getChkVariableDeclarationAccess().getLeftParenthesisKeyword_3_0());
                           
                     }
-                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:1024:1: ( (lv_limit_6_0= ruleLimit ) )
-                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:1025:1: (lv_limit_6_0= ruleLimit )
+                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:1024:1: ( (lv_limit1_6_0= ruleLimit ) )
+                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:1025:1: (lv_limit1_6_0= ruleLimit )
                     {
-                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:1025:1: (lv_limit_6_0= ruleLimit )
-                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:1026:3: lv_limit_6_0= ruleLimit
+                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:1025:1: (lv_limit1_6_0= ruleLimit )
+                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:1026:3: lv_limit1_6_0= ruleLimit
                     {
                     if ( state.backtracking==0 ) {
                        
-                      	        newCompositeNode(grammarAccess.getChkVariableDeclarationAccess().getLimitLimitParserRuleCall_3_1_0()); 
+                      	        newCompositeNode(grammarAccess.getChkVariableDeclarationAccess().getLimit1LimitParserRuleCall_3_1_0()); 
                       	    
                     }
                     pushFollow(FOLLOW_ruleLimit_in_ruleChkVariableDeclaration2119);
-                    lv_limit_6_0=ruleLimit();
+                    lv_limit1_6_0=ruleLimit();
 
                     state._fsp--;
                     if (state.failed) return current;
@@ -2939,10 +2939,10 @@ public class InternalCheckerDslParser extends AbstractInternalAntlrParser {
                       	        if (current==null) {
                       	            current = createModelElementForParent(grammarAccess.getChkVariableDeclarationRule());
                       	        }
-                             		add(
+                             		set(
                              			current, 
-                             			"limit",
-                              		lv_limit_6_0, 
+                             			"limit1",
+                              		lv_limit1_6_0, 
                               		"Limit");
                       	        afterParserOrEnumRuleCall();
                       	    
@@ -7236,30 +7236,30 @@ public class InternalCheckerDslParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleChkAssignment"
 
 
-    // $ANTLR start "entryRuleChkRelationalExpressions"
-    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:2735:1: entryRuleChkRelationalExpressions returns [EObject current=null] : iv_ruleChkRelationalExpressions= ruleChkRelationalExpressions EOF ;
-    public final EObject entryRuleChkRelationalExpressions() throws RecognitionException {
+    // $ANTLR start "entryRuleChkGeneralExpressions"
+    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:2735:1: entryRuleChkGeneralExpressions returns [EObject current=null] : iv_ruleChkGeneralExpressions= ruleChkGeneralExpressions EOF ;
+    public final EObject entryRuleChkGeneralExpressions() throws RecognitionException {
         EObject current = null;
 
-        EObject iv_ruleChkRelationalExpressions = null;
+        EObject iv_ruleChkGeneralExpressions = null;
 
 
         try {
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:2736:2: (iv_ruleChkRelationalExpressions= ruleChkRelationalExpressions EOF )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:2737:2: iv_ruleChkRelationalExpressions= ruleChkRelationalExpressions EOF
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:2736:2: (iv_ruleChkGeneralExpressions= ruleChkGeneralExpressions EOF )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:2737:2: iv_ruleChkGeneralExpressions= ruleChkGeneralExpressions EOF
             {
             if ( state.backtracking==0 ) {
-               newCompositeNode(grammarAccess.getChkRelationalExpressionsRule()); 
+               newCompositeNode(grammarAccess.getChkGeneralExpressionsRule()); 
             }
-            pushFollow(FOLLOW_ruleChkRelationalExpressions_in_entryRuleChkRelationalExpressions5524);
-            iv_ruleChkRelationalExpressions=ruleChkRelationalExpressions();
+            pushFollow(FOLLOW_ruleChkGeneralExpressions_in_entryRuleChkGeneralExpressions5524);
+            iv_ruleChkGeneralExpressions=ruleChkGeneralExpressions();
 
             state._fsp--;
             if (state.failed) return current;
             if ( state.backtracking==0 ) {
-               current =iv_ruleChkRelationalExpressions; 
+               current =iv_ruleChkGeneralExpressions; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleChkRelationalExpressions5534); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleChkGeneralExpressions5534); if (state.failed) return current;
 
             }
 
@@ -7273,12 +7273,12 @@ public class InternalCheckerDslParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "entryRuleChkRelationalExpressions"
+    // $ANTLR end "entryRuleChkGeneralExpressions"
 
 
-    // $ANTLR start "ruleChkRelationalExpressions"
-    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:2744:1: ruleChkRelationalExpressions returns [EObject current=null] : (this_Helper_0= ruleHelper | this_ChkRelationalExpression_1= ruleChkRelationalExpression | this_MethodCall_2= ruleMethodCall | this_ChkAssignment_3= ruleChkAssignment ) ;
-    public final EObject ruleChkRelationalExpressions() throws RecognitionException {
+    // $ANTLR start "ruleChkGeneralExpressions"
+    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:2744:1: ruleChkGeneralExpressions returns [EObject current=null] : (this_Helper_0= ruleHelper | this_ChkRelationalExpression_1= ruleChkRelationalExpression | this_MethodCall_2= ruleMethodCall | this_ChkAssignment_3= ruleChkAssignment ) ;
+    public final EObject ruleChkGeneralExpressions() throws RecognitionException {
         EObject current = null;
 
         EObject this_Helper_0 = null;
@@ -7305,10 +7305,10 @@ public class InternalCheckerDslParser extends AbstractInternalAntlrParser {
                     {
                     if ( state.backtracking==0 ) {
                        
-                              newCompositeNode(grammarAccess.getChkRelationalExpressionsAccess().getHelperParserRuleCall_0()); 
+                              newCompositeNode(grammarAccess.getChkGeneralExpressionsAccess().getHelperParserRuleCall_0()); 
                           
                     }
-                    pushFollow(FOLLOW_ruleHelper_in_ruleChkRelationalExpressions5581);
+                    pushFollow(FOLLOW_ruleHelper_in_ruleChkGeneralExpressions5581);
                     this_Helper_0=ruleHelper();
 
                     state._fsp--;
@@ -7327,10 +7327,10 @@ public class InternalCheckerDslParser extends AbstractInternalAntlrParser {
                     {
                     if ( state.backtracking==0 ) {
                        
-                              newCompositeNode(grammarAccess.getChkRelationalExpressionsAccess().getChkRelationalExpressionParserRuleCall_1()); 
+                              newCompositeNode(grammarAccess.getChkGeneralExpressionsAccess().getChkRelationalExpressionParserRuleCall_1()); 
                           
                     }
-                    pushFollow(FOLLOW_ruleChkRelationalExpression_in_ruleChkRelationalExpressions5608);
+                    pushFollow(FOLLOW_ruleChkRelationalExpression_in_ruleChkGeneralExpressions5608);
                     this_ChkRelationalExpression_1=ruleChkRelationalExpression();
 
                     state._fsp--;
@@ -7349,10 +7349,10 @@ public class InternalCheckerDslParser extends AbstractInternalAntlrParser {
                     {
                     if ( state.backtracking==0 ) {
                        
-                              newCompositeNode(grammarAccess.getChkRelationalExpressionsAccess().getMethodCallParserRuleCall_2()); 
+                              newCompositeNode(grammarAccess.getChkGeneralExpressionsAccess().getMethodCallParserRuleCall_2()); 
                           
                     }
-                    pushFollow(FOLLOW_ruleMethodCall_in_ruleChkRelationalExpressions5635);
+                    pushFollow(FOLLOW_ruleMethodCall_in_ruleChkGeneralExpressions5635);
                     this_MethodCall_2=ruleMethodCall();
 
                     state._fsp--;
@@ -7371,10 +7371,10 @@ public class InternalCheckerDslParser extends AbstractInternalAntlrParser {
                     {
                     if ( state.backtracking==0 ) {
                        
-                              newCompositeNode(grammarAccess.getChkRelationalExpressionsAccess().getChkAssignmentParserRuleCall_3()); 
+                              newCompositeNode(grammarAccess.getChkGeneralExpressionsAccess().getChkAssignmentParserRuleCall_3()); 
                           
                     }
-                    pushFollow(FOLLOW_ruleChkAssignment_in_ruleChkRelationalExpressions5662);
+                    pushFollow(FOLLOW_ruleChkAssignment_in_ruleChkGeneralExpressions5662);
                     this_ChkAssignment_3=ruleChkAssignment();
 
                     state._fsp--;
@@ -7407,7 +7407,7 @@ public class InternalCheckerDslParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "ruleChkRelationalExpressions"
+    // $ANTLR end "ruleChkGeneralExpressions"
 
 
     // $ANTLR start "entryRuleChkOpAssignment"
@@ -8463,7 +8463,7 @@ public class InternalCheckerDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleChkExpression"
-    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:3149:1: ruleChkExpression returns [EObject current=null] : ( (otherlv_0= 'def' ( (lv_asg_1_0= ruleValidID ) ) otherlv_2= '=' )? otherlv_3= '(' ( (lv_exp_4_0= ruleChkRelationalExpressions ) ) ( ( (lv_where_5_0= 'where' ) ) ( (lv_cond_6_0= ruleChkRelationalExpression ) ) ( ( (lv_type_7_0= ruleChkAndOr ) ) ( (lv_cond_8_0= ruleChkRelationalExpression ) ) )* )? ( ( (lv_op_9_0= ruleChkOpRelational ) ) ( (lv_v_10_0= ruleChkVariable ) ) )? otherlv_11= ')' ) ;
+    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:3149:1: ruleChkExpression returns [EObject current=null] : ( (otherlv_0= 'def' ( (lv_asg_1_0= ruleValidID ) ) otherlv_2= '=' )? otherlv_3= '(' ( (lv_exp_4_0= ruleChkGeneralExpressions ) ) ( ( (lv_where_5_0= 'where' ) ) ( (lv_cond_6_0= ruleChkRelationalExpression ) ) ( ( (lv_type_7_0= ruleChkAndOr ) ) ( (lv_cond_8_0= ruleChkRelationalExpression ) ) )* )? ( ( (lv_op_9_0= ruleChkOpRelational ) ) ( (lv_v_10_0= ruleChkVariable ) ) )? otherlv_11= ')' ) ;
     public final EObject ruleChkExpression() throws RecognitionException {
         EObject current = null;
 
@@ -8490,11 +8490,11 @@ public class InternalCheckerDslParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:3152:28: ( ( (otherlv_0= 'def' ( (lv_asg_1_0= ruleValidID ) ) otherlv_2= '=' )? otherlv_3= '(' ( (lv_exp_4_0= ruleChkRelationalExpressions ) ) ( ( (lv_where_5_0= 'where' ) ) ( (lv_cond_6_0= ruleChkRelationalExpression ) ) ( ( (lv_type_7_0= ruleChkAndOr ) ) ( (lv_cond_8_0= ruleChkRelationalExpression ) ) )* )? ( ( (lv_op_9_0= ruleChkOpRelational ) ) ( (lv_v_10_0= ruleChkVariable ) ) )? otherlv_11= ')' ) )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:3153:1: ( (otherlv_0= 'def' ( (lv_asg_1_0= ruleValidID ) ) otherlv_2= '=' )? otherlv_3= '(' ( (lv_exp_4_0= ruleChkRelationalExpressions ) ) ( ( (lv_where_5_0= 'where' ) ) ( (lv_cond_6_0= ruleChkRelationalExpression ) ) ( ( (lv_type_7_0= ruleChkAndOr ) ) ( (lv_cond_8_0= ruleChkRelationalExpression ) ) )* )? ( ( (lv_op_9_0= ruleChkOpRelational ) ) ( (lv_v_10_0= ruleChkVariable ) ) )? otherlv_11= ')' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:3152:28: ( ( (otherlv_0= 'def' ( (lv_asg_1_0= ruleValidID ) ) otherlv_2= '=' )? otherlv_3= '(' ( (lv_exp_4_0= ruleChkGeneralExpressions ) ) ( ( (lv_where_5_0= 'where' ) ) ( (lv_cond_6_0= ruleChkRelationalExpression ) ) ( ( (lv_type_7_0= ruleChkAndOr ) ) ( (lv_cond_8_0= ruleChkRelationalExpression ) ) )* )? ( ( (lv_op_9_0= ruleChkOpRelational ) ) ( (lv_v_10_0= ruleChkVariable ) ) )? otherlv_11= ')' ) )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:3153:1: ( (otherlv_0= 'def' ( (lv_asg_1_0= ruleValidID ) ) otherlv_2= '=' )? otherlv_3= '(' ( (lv_exp_4_0= ruleChkGeneralExpressions ) ) ( ( (lv_where_5_0= 'where' ) ) ( (lv_cond_6_0= ruleChkRelationalExpression ) ) ( ( (lv_type_7_0= ruleChkAndOr ) ) ( (lv_cond_8_0= ruleChkRelationalExpression ) ) )* )? ( ( (lv_op_9_0= ruleChkOpRelational ) ) ( (lv_v_10_0= ruleChkVariable ) ) )? otherlv_11= ')' )
             {
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:3153:1: ( (otherlv_0= 'def' ( (lv_asg_1_0= ruleValidID ) ) otherlv_2= '=' )? otherlv_3= '(' ( (lv_exp_4_0= ruleChkRelationalExpressions ) ) ( ( (lv_where_5_0= 'where' ) ) ( (lv_cond_6_0= ruleChkRelationalExpression ) ) ( ( (lv_type_7_0= ruleChkAndOr ) ) ( (lv_cond_8_0= ruleChkRelationalExpression ) ) )* )? ( ( (lv_op_9_0= ruleChkOpRelational ) ) ( (lv_v_10_0= ruleChkVariable ) ) )? otherlv_11= ')' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:3153:2: (otherlv_0= 'def' ( (lv_asg_1_0= ruleValidID ) ) otherlv_2= '=' )? otherlv_3= '(' ( (lv_exp_4_0= ruleChkRelationalExpressions ) ) ( ( (lv_where_5_0= 'where' ) ) ( (lv_cond_6_0= ruleChkRelationalExpression ) ) ( ( (lv_type_7_0= ruleChkAndOr ) ) ( (lv_cond_8_0= ruleChkRelationalExpression ) ) )* )? ( ( (lv_op_9_0= ruleChkOpRelational ) ) ( (lv_v_10_0= ruleChkVariable ) ) )? otherlv_11= ')'
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:3153:1: ( (otherlv_0= 'def' ( (lv_asg_1_0= ruleValidID ) ) otherlv_2= '=' )? otherlv_3= '(' ( (lv_exp_4_0= ruleChkGeneralExpressions ) ) ( ( (lv_where_5_0= 'where' ) ) ( (lv_cond_6_0= ruleChkRelationalExpression ) ) ( ( (lv_type_7_0= ruleChkAndOr ) ) ( (lv_cond_8_0= ruleChkRelationalExpression ) ) )* )? ( ( (lv_op_9_0= ruleChkOpRelational ) ) ( (lv_v_10_0= ruleChkVariable ) ) )? otherlv_11= ')' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:3153:2: (otherlv_0= 'def' ( (lv_asg_1_0= ruleValidID ) ) otherlv_2= '=' )? otherlv_3= '(' ( (lv_exp_4_0= ruleChkGeneralExpressions ) ) ( ( (lv_where_5_0= 'where' ) ) ( (lv_cond_6_0= ruleChkRelationalExpression ) ) ( ( (lv_type_7_0= ruleChkAndOr ) ) ( (lv_cond_8_0= ruleChkRelationalExpression ) ) )* )? ( ( (lv_op_9_0= ruleChkOpRelational ) ) ( (lv_v_10_0= ruleChkVariable ) ) )? otherlv_11= ')'
             {
             // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:3153:2: (otherlv_0= 'def' ( (lv_asg_1_0= ruleValidID ) ) otherlv_2= '=' )?
             int alt42=2;
@@ -8566,19 +8566,19 @@ public class InternalCheckerDslParser extends AbstractInternalAntlrParser {
                   	newLeafNode(otherlv_3, grammarAccess.getChkExpressionAccess().getLeftParenthesisKeyword_1());
                   
             }
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:3183:1: ( (lv_exp_4_0= ruleChkRelationalExpressions ) )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:3184:1: (lv_exp_4_0= ruleChkRelationalExpressions )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:3183:1: ( (lv_exp_4_0= ruleChkGeneralExpressions ) )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:3184:1: (lv_exp_4_0= ruleChkGeneralExpressions )
             {
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:3184:1: (lv_exp_4_0= ruleChkRelationalExpressions )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:3185:3: lv_exp_4_0= ruleChkRelationalExpressions
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:3184:1: (lv_exp_4_0= ruleChkGeneralExpressions )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:3185:3: lv_exp_4_0= ruleChkGeneralExpressions
             {
             if ( state.backtracking==0 ) {
                
-              	        newCompositeNode(grammarAccess.getChkExpressionAccess().getExpChkRelationalExpressionsParserRuleCall_2_0()); 
+              	        newCompositeNode(grammarAccess.getChkExpressionAccess().getExpChkGeneralExpressionsParserRuleCall_2_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleChkRelationalExpressions_in_ruleChkExpression6686);
-            lv_exp_4_0=ruleChkRelationalExpressions();
+            pushFollow(FOLLOW_ruleChkGeneralExpressions_in_ruleChkExpression6686);
+            lv_exp_4_0=ruleChkGeneralExpressions();
 
             state._fsp--;
             if (state.failed) return current;
@@ -8591,7 +8591,7 @@ public class InternalCheckerDslParser extends AbstractInternalAntlrParser {
                      			current, 
                      			"exp",
                       		lv_exp_4_0, 
-                      		"ChkRelationalExpressions");
+                      		"ChkGeneralExpressions");
               	        afterParserOrEnumRuleCall();
               	    
             }
@@ -34332,12 +34332,12 @@ public class InternalCheckerDslParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleChkOpAssignment_in_ruleChkAssignment5443 = new BitSet(new long[]{0xFDFF4E0000000110L,0x0000000000000013L});
     public static final BitSet FOLLOW_ruleChkOperation_in_ruleChkAssignment5466 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleHelper_in_ruleChkAssignment5485 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleChkRelationalExpressions_in_entryRuleChkRelationalExpressions5524 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleChkRelationalExpressions5534 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleHelper_in_ruleChkRelationalExpressions5581 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleChkRelationalExpression_in_ruleChkRelationalExpressions5608 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMethodCall_in_ruleChkRelationalExpressions5635 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleChkAssignment_in_ruleChkRelationalExpressions5662 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleChkGeneralExpressions_in_entryRuleChkGeneralExpressions5524 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleChkGeneralExpressions5534 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleHelper_in_ruleChkGeneralExpressions5581 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleChkRelationalExpression_in_ruleChkGeneralExpressions5608 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMethodCall_in_ruleChkGeneralExpressions5635 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleChkAssignment_in_ruleChkGeneralExpressions5662 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleChkOpAssignment_in_entryRuleChkOpAssignment5698 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleChkOpAssignment5709 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_66_in_ruleChkOpAssignment5746 = new BitSet(new long[]{0x0000000000000002L});
@@ -34381,7 +34381,7 @@ public class InternalCheckerDslParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleValidID_in_ruleChkExpression6639 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000004L});
     public static final BitSet FOLLOW_66_in_ruleChkExpression6651 = new BitSet(new long[]{0x0000000000080000L});
     public static final BitSet FOLLOW_19_in_ruleChkExpression6665 = new BitSet(new long[]{0xFDFF4E0000000110L,0x0000000000000013L});
-    public static final BitSet FOLLOW_ruleChkRelationalExpressions_in_ruleChkExpression6686 = new BitSet(new long[]{0x0000C00000200000L,0x0000000000008780L});
+    public static final BitSet FOLLOW_ruleChkGeneralExpressions_in_ruleChkExpression6686 = new BitSet(new long[]{0x0000C00000200000L,0x0000000000008780L});
     public static final BitSet FOLLOW_79_in_ruleChkExpression6705 = new BitSet(new long[]{0x00004E0000000110L,0x0000000000000010L});
     public static final BitSet FOLLOW_ruleChkRelationalExpression_in_ruleChkExpression6739 = new BitSet(new long[]{0x0000C00000200000L,0x0000000000001F80L});
     public static final BitSet FOLLOW_ruleChkAndOr_in_ruleChkExpression6761 = new BitSet(new long[]{0x00004E0000000110L,0x0000000000000010L});

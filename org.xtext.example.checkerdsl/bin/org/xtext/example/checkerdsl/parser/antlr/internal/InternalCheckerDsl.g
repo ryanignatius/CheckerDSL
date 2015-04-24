@@ -1024,16 +1024,16 @@ ruleChkVariableDeclaration returns [EObject current=null]
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getChkVariableDeclarationAccess().getLimitLimitParserRuleCall_3_1_0()); 
+	        newCompositeNode(grammarAccess.getChkVariableDeclarationAccess().getLimit1LimitParserRuleCall_3_1_0()); 
 	    }
-		lv_limit_6_0=ruleLimit		{
+		lv_limit1_6_0=ruleLimit		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getChkVariableDeclarationRule());
 	        }
-       		add(
+       		set(
        			$current, 
-       			"limit",
-        		lv_limit_6_0, 
+       			"limit1",
+        		lv_limit1_6_0, 
         		"Limit");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -2731,23 +2731,23 @@ ruleChkAssignment returns [EObject current=null]
 
 
 
-// Entry rule entryRuleChkRelationalExpressions
-entryRuleChkRelationalExpressions returns [EObject current=null] 
+// Entry rule entryRuleChkGeneralExpressions
+entryRuleChkGeneralExpressions returns [EObject current=null] 
 	:
-	{ newCompositeNode(grammarAccess.getChkRelationalExpressionsRule()); }
-	 iv_ruleChkRelationalExpressions=ruleChkRelationalExpressions 
-	 { $current=$iv_ruleChkRelationalExpressions.current; } 
+	{ newCompositeNode(grammarAccess.getChkGeneralExpressionsRule()); }
+	 iv_ruleChkGeneralExpressions=ruleChkGeneralExpressions 
+	 { $current=$iv_ruleChkGeneralExpressions.current; } 
 	 EOF 
 ;
 
-// Rule ChkRelationalExpressions
-ruleChkRelationalExpressions returns [EObject current=null] 
+// Rule ChkGeneralExpressions
+ruleChkGeneralExpressions returns [EObject current=null] 
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
 (
     { 
-        newCompositeNode(grammarAccess.getChkRelationalExpressionsAccess().getHelperParserRuleCall_0()); 
+        newCompositeNode(grammarAccess.getChkGeneralExpressionsAccess().getHelperParserRuleCall_0()); 
     }
     this_Helper_0=ruleHelper
     { 
@@ -2757,7 +2757,7 @@ ruleChkRelationalExpressions returns [EObject current=null]
 
     |
     { 
-        newCompositeNode(grammarAccess.getChkRelationalExpressionsAccess().getChkRelationalExpressionParserRuleCall_1()); 
+        newCompositeNode(grammarAccess.getChkGeneralExpressionsAccess().getChkRelationalExpressionParserRuleCall_1()); 
     }
     this_ChkRelationalExpression_1=ruleChkRelationalExpression
     { 
@@ -2767,7 +2767,7 @@ ruleChkRelationalExpressions returns [EObject current=null]
 
     |
     { 
-        newCompositeNode(grammarAccess.getChkRelationalExpressionsAccess().getMethodCallParserRuleCall_2()); 
+        newCompositeNode(grammarAccess.getChkGeneralExpressionsAccess().getMethodCallParserRuleCall_2()); 
     }
     this_MethodCall_2=ruleMethodCall
     { 
@@ -2777,7 +2777,7 @@ ruleChkRelationalExpressions returns [EObject current=null]
 
     |
     { 
-        newCompositeNode(grammarAccess.getChkRelationalExpressionsAccess().getChkAssignmentParserRuleCall_3()); 
+        newCompositeNode(grammarAccess.getChkGeneralExpressionsAccess().getChkAssignmentParserRuleCall_3()); 
     }
     this_ChkAssignment_3=ruleChkAssignment
     { 
@@ -3183,9 +3183,9 @@ ruleChkExpression returns [EObject current=null]
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getChkExpressionAccess().getExpChkRelationalExpressionsParserRuleCall_2_0()); 
+	        newCompositeNode(grammarAccess.getChkExpressionAccess().getExpChkGeneralExpressionsParserRuleCall_2_0()); 
 	    }
-		lv_exp_4_0=ruleChkRelationalExpressions		{
+		lv_exp_4_0=ruleChkGeneralExpressions		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getChkExpressionRule());
 	        }
@@ -3193,7 +3193,7 @@ ruleChkExpression returns [EObject current=null]
        			$current, 
        			"exp",
         		lv_exp_4_0, 
-        		"ChkRelationalExpressions");
+        		"ChkGeneralExpressions");
 	        afterParserOrEnumRuleCall();
 	    }
 

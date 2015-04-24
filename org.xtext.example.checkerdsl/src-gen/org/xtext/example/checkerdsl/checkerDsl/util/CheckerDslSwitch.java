@@ -12,12 +12,12 @@ import org.xtext.example.checkerdsl.checkerDsl.Check;
 import org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage;
 import org.xtext.example.checkerdsl.checkerDsl.ChkAssignment;
 import org.xtext.example.checkerdsl.checkerDsl.ChkExpression;
+import org.xtext.example.checkerdsl.checkerDsl.ChkGeneralExpressions;
 import org.xtext.example.checkerdsl.checkerDsl.ChkItemGroup;
 import org.xtext.example.checkerdsl.checkerDsl.ChkLoopExpression;
 import org.xtext.example.checkerdsl.checkerDsl.ChkOperation;
 import org.xtext.example.checkerdsl.checkerDsl.ChkPrefix;
 import org.xtext.example.checkerdsl.checkerDsl.ChkRelationalExpression;
-import org.xtext.example.checkerdsl.checkerDsl.ChkRelationalExpressions;
 import org.xtext.example.checkerdsl.checkerDsl.ChkScoreExpression;
 import org.xtext.example.checkerdsl.checkerDsl.ChkVariable;
 import org.xtext.example.checkerdsl.checkerDsl.ChkVariableDeclaration;
@@ -197,7 +197,7 @@ public class CheckerDslSwitch<T> extends Switch<T>
       {
         MethodCall methodCall = (MethodCall)theEObject;
         T result = caseMethodCall(methodCall);
-        if (result == null) result = caseChkRelationalExpressions(methodCall);
+        if (result == null) result = caseChkGeneralExpressions(methodCall);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -233,7 +233,7 @@ public class CheckerDslSwitch<T> extends Switch<T>
       {
         Helper helper = (Helper)theEObject;
         T result = caseHelper(helper);
-        if (result == null) result = caseChkRelationalExpressions(helper);
+        if (result == null) result = caseChkGeneralExpressions(helper);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -241,7 +241,7 @@ public class CheckerDslSwitch<T> extends Switch<T>
       {
         ChkRelationalExpression chkRelationalExpression = (ChkRelationalExpression)theEObject;
         T result = caseChkRelationalExpression(chkRelationalExpression);
-        if (result == null) result = caseChkRelationalExpressions(chkRelationalExpression);
+        if (result == null) result = caseChkGeneralExpressions(chkRelationalExpression);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -249,14 +249,14 @@ public class CheckerDslSwitch<T> extends Switch<T>
       {
         ChkAssignment chkAssignment = (ChkAssignment)theEObject;
         T result = caseChkAssignment(chkAssignment);
-        if (result == null) result = caseChkRelationalExpressions(chkAssignment);
+        if (result == null) result = caseChkGeneralExpressions(chkAssignment);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case CheckerDslPackage.CHK_RELATIONAL_EXPRESSIONS:
+      case CheckerDslPackage.CHK_GENERAL_EXPRESSIONS:
       {
-        ChkRelationalExpressions chkRelationalExpressions = (ChkRelationalExpressions)theEObject;
-        T result = caseChkRelationalExpressions(chkRelationalExpressions);
+        ChkGeneralExpressions chkGeneralExpressions = (ChkGeneralExpressions)theEObject;
+        T result = caseChkGeneralExpressions(chkGeneralExpressions);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -668,17 +668,17 @@ public class CheckerDslSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Chk Relational Expressions</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Chk General Expressions</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Chk Relational Expressions</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Chk General Expressions</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseChkRelationalExpressions(ChkRelationalExpressions object)
+  public T caseChkGeneralExpressions(ChkGeneralExpressions object)
   {
     return null;
   }

@@ -65,12 +65,14 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="sz" unique="false" upperBound="-1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="limit1" eType="#//Limit"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="limit" upperBound="-1"
         eType="#//Limit" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="spValue" eType="#//SpValue"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="MethodCall" eSuperTypes="#//ChkRelationalExpressions">
+  <eClassifiers xsi:type="ecore:EClass" name="MethodCall" eSuperTypes="#//ChkGeneralExpressions">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="params" unique="false"
         upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -97,7 +99,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="vars" upperBound="-1" eType="#//ChkVariable"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Helper" eSuperTypes="#//ChkRelationalExpressions">
+  <eClassifiers xsi:type="ecore:EClass" name="Helper" eSuperTypes="#//ChkGeneralExpressions">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="sum" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="var" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
         containment="true"/>
@@ -128,21 +130,21 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="exclude" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="compositional" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ChkRelationalExpression" eSuperTypes="#//ChkRelationalExpressions">
+  <eClassifiers xsi:type="ecore:EClass" name="ChkRelationalExpression" eSuperTypes="#//ChkGeneralExpressions">
     <eStructuralFeatures xsi:type="ecore:EReference" name="v1" eType="#//ChkVariables"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="opr" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="v2" eType="#//ChkVariables"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ChkAssignment" eSuperTypes="#//ChkRelationalExpressions">
+  <eClassifiers xsi:type="ecore:EClass" name="ChkAssignment" eSuperTypes="#//ChkGeneralExpressions">
     <eStructuralFeatures xsi:type="ecore:EReference" name="v1" eType="#//ChkOperation"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="opr" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="v2" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ChkRelationalExpressions"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ChkGeneralExpressions"/>
   <eClassifiers xsi:type="ecore:EClass" name="ChkOperation">
     <eStructuralFeatures xsi:type="ecore:EReference" name="operand" upperBound="-1"
         eType="#//ChkVariables" containment="true"/>
@@ -159,7 +161,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ChkExpression">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="asg" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="exp" eType="#//ChkRelationalExpressions"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="exp" eType="#//ChkGeneralExpressions"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="where" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="cond" upperBound="-1" eType="#//ChkRelationalExpression"

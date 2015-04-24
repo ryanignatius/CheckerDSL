@@ -1,6 +1,3 @@
-
-
-
 // Specification untuk soal knapsack pada paper
 class Knapsack{
 	/*
@@ -180,5 +177,5 @@ class Knapsack{
 			(y` = remove(y) where y[i]==1)
 			(tp` = tp-v)
 		}
-	}	
+	}
 }

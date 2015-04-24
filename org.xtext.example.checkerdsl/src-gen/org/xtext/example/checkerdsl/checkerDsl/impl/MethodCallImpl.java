@@ -31,7 +31,7 @@ import org.xtext.example.checkerdsl.checkerDsl.MethodCall;
  *
  * @generated
  */
-public class MethodCallImpl extends ChkRelationalExpressionsImpl implements MethodCall
+public class MethodCallImpl extends ChkGeneralExpressionsImpl implements MethodCall
 {
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.

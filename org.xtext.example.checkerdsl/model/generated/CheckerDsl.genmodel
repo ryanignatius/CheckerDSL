@@ -54,6 +54,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//ChkVariableDeclaration/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//ChkVariableDeclaration/sz"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//ChkVariableDeclaration/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//ChkVariableDeclaration/limit1"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//ChkVariableDeclaration/limit"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//ChkVariableDeclaration/spValue"/>
     </genClasses>
@@ -114,7 +115,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//ChkAssignment/opr"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//ChkAssignment/v2"/>
     </genClasses>
-    <genClasses ecoreClass="CheckerDsl.ecore#//ChkRelationalExpressions"/>
+    <genClasses ecoreClass="CheckerDsl.ecore#//ChkGeneralExpressions"/>
     <genClasses ecoreClass="CheckerDsl.ecore#//ChkOperation">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//ChkOperation/operand"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//ChkOperation/operator"/>

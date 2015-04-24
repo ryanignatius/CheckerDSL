@@ -203,13 +203,13 @@ public interface CheckerDslFactory extends EFactory
   ChkAssignment createChkAssignment();
 
   /**
-   * Returns a new object of class '<em>Chk Relational Expressions</em>'.
+   * Returns a new object of class '<em>Chk General Expressions</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Chk Relational Expressions</em>'.
+   * @return a new object of class '<em>Chk General Expressions</em>'.
    * @generated
    */
-  ChkRelationalExpressions createChkRelationalExpressions();
+  ChkGeneralExpressions createChkGeneralExpressions();
 
   /**
    * Returns a new object of class '<em>Chk Operation</em>'.

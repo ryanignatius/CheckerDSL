@@ -16,12 +16,12 @@ import org.xtext.example.checkerdsl.checkerDsl.CheckerDslFactory;
 import org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage;
 import org.xtext.example.checkerdsl.checkerDsl.ChkAssignment;
 import org.xtext.example.checkerdsl.checkerDsl.ChkExpression;
+import org.xtext.example.checkerdsl.checkerDsl.ChkGeneralExpressions;
 import org.xtext.example.checkerdsl.checkerDsl.ChkItemGroup;
 import org.xtext.example.checkerdsl.checkerDsl.ChkLoopExpression;
 import org.xtext.example.checkerdsl.checkerDsl.ChkOperation;
 import org.xtext.example.checkerdsl.checkerDsl.ChkPrefix;
 import org.xtext.example.checkerdsl.checkerDsl.ChkRelationalExpression;
-import org.xtext.example.checkerdsl.checkerDsl.ChkRelationalExpressions;
 import org.xtext.example.checkerdsl.checkerDsl.ChkScoreExpression;
 import org.xtext.example.checkerdsl.checkerDsl.ChkVariable;
 import org.xtext.example.checkerdsl.checkerDsl.ChkVariableDeclaration;
@@ -116,7 +116,7 @@ public class CheckerDslFactoryImpl extends EFactoryImpl implements CheckerDslFac
       case CheckerDslPackage.HELPER: return createHelper();
       case CheckerDslPackage.CHK_RELATIONAL_EXPRESSION: return createChkRelationalExpression();
       case CheckerDslPackage.CHK_ASSIGNMENT: return createChkAssignment();
-      case CheckerDslPackage.CHK_RELATIONAL_EXPRESSIONS: return createChkRelationalExpressions();
+      case CheckerDslPackage.CHK_GENERAL_EXPRESSIONS: return createChkGeneralExpressions();
       case CheckerDslPackage.CHK_OPERATION: return createChkOperation();
       case CheckerDslPackage.CHK_LOOP_EXPRESSION: return createChkLoopExpression();
       case CheckerDslPackage.CHK_EXPRESSION: return createChkExpression();
@@ -358,10 +358,10 @@ public class CheckerDslFactoryImpl extends EFactoryImpl implements CheckerDslFac
    * <!-- end-user-doc -->
    * @generated
    */
-  public ChkRelationalExpressions createChkRelationalExpressions()
+  public ChkGeneralExpressions createChkGeneralExpressions()
   {
-    ChkRelationalExpressionsImpl chkRelationalExpressions = new ChkRelationalExpressionsImpl();
-    return chkRelationalExpressions;
+    ChkGeneralExpressionsImpl chkGeneralExpressions = new ChkGeneralExpressionsImpl();
+    return chkGeneralExpressions;
   }
 
   /**

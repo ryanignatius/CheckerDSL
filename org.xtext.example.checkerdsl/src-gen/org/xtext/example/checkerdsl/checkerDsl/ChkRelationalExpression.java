@@ -21,7 +21,7 @@ package org.xtext.example.checkerdsl.checkerDsl;
  * @model
  * @generated
  */
-public interface ChkRelationalExpression extends ChkRelationalExpressions
+public interface ChkRelationalExpression extends ChkGeneralExpressions
 {
   /**
    * Returns the value of the '<em><b>V1</b></em>' containment reference.

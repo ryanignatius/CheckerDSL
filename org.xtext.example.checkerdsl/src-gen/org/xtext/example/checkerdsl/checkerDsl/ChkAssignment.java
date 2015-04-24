@@ -22,7 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface ChkAssignment extends ChkRelationalExpressions
+public interface ChkAssignment extends ChkGeneralExpressions
 {
   /**
    * Returns the value of the '<em><b>V1</b></em>' containment reference.

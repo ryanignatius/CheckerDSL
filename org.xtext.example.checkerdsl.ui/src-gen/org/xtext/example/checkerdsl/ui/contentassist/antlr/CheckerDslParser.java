@@ -48,7 +48,7 @@ public class CheckerDslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getHelperAccess().getAlternatives(), "rule__Helper__Alternatives");
 					put(grammarAccess.getHelperAccess().getAlternatives_7_2(), "rule__Helper__Alternatives_7_2");
 					put(grammarAccess.getChkAssignmentAccess().getV2Alternatives_2_0(), "rule__ChkAssignment__V2Alternatives_2_0");
-					put(grammarAccess.getChkRelationalExpressionsAccess().getAlternatives(), "rule__ChkRelationalExpressions__Alternatives");
+					put(grammarAccess.getChkGeneralExpressionsAccess().getAlternatives(), "rule__ChkGeneralExpressions__Alternatives");
 					put(grammarAccess.getChkOperatorAccess().getAlternatives(), "rule__ChkOperator__Alternatives");
 					put(grammarAccess.getChkOpRelationalAccess().getAlternatives(), "rule__ChkOpRelational__Alternatives");
 					put(grammarAccess.getChkAndOrAccess().getAlternatives(), "rule__ChkAndOr__Alternatives");
@@ -370,7 +370,7 @@ public class CheckerDslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getChkVariableDeclarationAccess().getTypeAssignment_0(), "rule__ChkVariableDeclaration__TypeAssignment_0");
 					put(grammarAccess.getChkVariableDeclarationAccess().getSzAssignment_1_1(), "rule__ChkVariableDeclaration__SzAssignment_1_1");
 					put(grammarAccess.getChkVariableDeclarationAccess().getNameAssignment_2(), "rule__ChkVariableDeclaration__NameAssignment_2");
-					put(grammarAccess.getChkVariableDeclarationAccess().getLimitAssignment_3_1(), "rule__ChkVariableDeclaration__LimitAssignment_3_1");
+					put(grammarAccess.getChkVariableDeclarationAccess().getLimit1Assignment_3_1(), "rule__ChkVariableDeclaration__Limit1Assignment_3_1");
 					put(grammarAccess.getChkVariableDeclarationAccess().getLimitAssignment_3_2_1(), "rule__ChkVariableDeclaration__LimitAssignment_3_2_1");
 					put(grammarAccess.getChkVariableDeclarationAccess().getSpValueAssignment_4_2(), "rule__ChkVariableDeclaration__SpValueAssignment_4_2");
 					put(grammarAccess.getMethodCallAccess().getNameAssignment_0(), "rule__MethodCall__NameAssignment_0");

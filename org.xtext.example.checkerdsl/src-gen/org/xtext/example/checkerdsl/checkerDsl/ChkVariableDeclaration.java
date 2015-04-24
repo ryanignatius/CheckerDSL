@@ -16,6 +16,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.ChkVariableDeclaration#getType <em>Type</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.ChkVariableDeclaration#getSz <em>Sz</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.ChkVariableDeclaration#getName <em>Name</em>}</li>
+ *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.ChkVariableDeclaration#getLimit1 <em>Limit1</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.ChkVariableDeclaration#getLimit <em>Limit</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.ChkVariableDeclaration#getSpValue <em>Sp Value</em>}</li>
  * </ul>
@@ -93,6 +94,32 @@ public interface ChkVariableDeclaration extends Feature
    * @generated
    */
   void setName(String value);
+
+  /**
+   * Returns the value of the '<em><b>Limit1</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Limit1</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Limit1</em>' containment reference.
+   * @see #setLimit1(Limit)
+   * @see org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage#getChkVariableDeclaration_Limit1()
+   * @model containment="true"
+   * @generated
+   */
+  Limit getLimit1();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.checkerdsl.checkerDsl.ChkVariableDeclaration#getLimit1 <em>Limit1</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Limit1</em>' containment reference.
+   * @see #getLimit1()
+   * @generated
+   */
+  void setLimit1(Limit value);
 
   /**
    * Returns the value of the '<em><b>Limit</b></em>' containment reference list.

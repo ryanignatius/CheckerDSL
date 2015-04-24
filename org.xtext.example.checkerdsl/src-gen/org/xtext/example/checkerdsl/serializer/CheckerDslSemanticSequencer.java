@@ -105,7 +105,7 @@ public class CheckerDslSemanticSequencer extends XbaseSemanticSequencer {
 				else break;
 			case CheckerDslPackage.CHK_ASSIGNMENT:
 				if(context == grammarAccess.getChkAssignmentRule() ||
-				   context == grammarAccess.getChkRelationalExpressionsRule()) {
+				   context == grammarAccess.getChkGeneralExpressionsRule()) {
 					sequence_ChkAssignment(context, (ChkAssignment) semanticObject); 
 					return; 
 				}
@@ -141,8 +141,8 @@ public class CheckerDslSemanticSequencer extends XbaseSemanticSequencer {
 				}
 				else break;
 			case CheckerDslPackage.CHK_RELATIONAL_EXPRESSION:
-				if(context == grammarAccess.getChkRelationalExpressionRule() ||
-				   context == grammarAccess.getChkRelationalExpressionsRule()) {
+				if(context == grammarAccess.getChkGeneralExpressionsRule() ||
+				   context == grammarAccess.getChkRelationalExpressionRule()) {
 					sequence_ChkRelationalExpression(context, (ChkRelationalExpression) semanticObject); 
 					return; 
 				}
@@ -198,7 +198,7 @@ public class CheckerDslSemanticSequencer extends XbaseSemanticSequencer {
 				}
 				else break;
 			case CheckerDslPackage.HELPER:
-				if(context == grammarAccess.getChkRelationalExpressionsRule() ||
+				if(context == grammarAccess.getChkGeneralExpressionsRule() ||
 				   context == grammarAccess.getHelperRule()) {
 					sequence_Helper(context, (Helper) semanticObject); 
 					return; 
@@ -233,7 +233,7 @@ public class CheckerDslSemanticSequencer extends XbaseSemanticSequencer {
 				}
 				else break;
 			case CheckerDslPackage.METHOD_CALL:
-				if(context == grammarAccess.getChkRelationalExpressionsRule() ||
+				if(context == grammarAccess.getChkGeneralExpressionsRule() ||
 				   context == grammarAccess.getMethodCallRule()) {
 					sequence_MethodCall(context, (MethodCall) semanticObject); 
 					return; 
@@ -1412,7 +1412,7 @@ public class CheckerDslSemanticSequencer extends XbaseSemanticSequencer {
 	 * Constraint:
 	 *     (
 	 *         asg=ValidID? 
-	 *         exp=ChkRelationalExpressions 
+	 *         exp=ChkGeneralExpressions 
 	 *         (where='where' cond+=ChkRelationalExpression (type+=ChkAndOr cond+=ChkRelationalExpression)*)? 
 	 *         (op=ChkOpRelational v=ChkVariable)?
 	 *     )
@@ -1501,7 +1501,7 @@ public class CheckerDslSemanticSequencer extends XbaseSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (type=ChkTypeReference sz+=MY_NUMBER* name=ValidID (limit+=Limit limit+=Limit*)? spValue=SpValue?)
+	 *     (type=ChkTypeReference sz+=MY_NUMBER* name=ValidID (limit1=Limit limit+=Limit*)? spValue=SpValue?)
 	 */
 	protected void sequence_ChkVariableDeclaration(EObject context, ChkVariableDeclaration semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

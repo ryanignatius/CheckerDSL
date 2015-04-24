@@ -58,7 +58,7 @@ import org.xtext.example.checkerdsl.checkerDsl.Helper;
  *
  * @generated
  */
-public class HelperImpl extends ChkRelationalExpressionsImpl implements Helper
+public class HelperImpl extends ChkGeneralExpressionsImpl implements Helper
 {
   /**
    * The default value of the '{@link #getSum() <em>Sum</em>}' attribute.

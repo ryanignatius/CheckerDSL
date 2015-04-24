@@ -30,7 +30,7 @@ import org.xtext.example.checkerdsl.checkerDsl.ChkOperation;
  *
  * @generated
  */
-public class ChkAssignmentImpl extends ChkRelationalExpressionsImpl implements ChkAssignment
+public class ChkAssignmentImpl extends ChkGeneralExpressionsImpl implements ChkAssignment
 {
   /**
    * The cached value of the '{@link #getV1() <em>V1</em>}' containment reference.

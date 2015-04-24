@@ -21,8 +21,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage;
 import org.xtext.example.checkerdsl.checkerDsl.ChkExpression;
+import org.xtext.example.checkerdsl.checkerDsl.ChkGeneralExpressions;
 import org.xtext.example.checkerdsl.checkerDsl.ChkRelationalExpression;
-import org.xtext.example.checkerdsl.checkerDsl.ChkRelationalExpressions;
 import org.xtext.example.checkerdsl.checkerDsl.ChkVariable;
 
 /**
@@ -74,7 +74,7 @@ public class ChkExpressionImpl extends MinimalEObjectImpl.Container implements C
    * @generated
    * @ordered
    */
-  protected ChkRelationalExpressions exp;
+  protected ChkGeneralExpressions exp;
 
   /**
    * The default value of the '{@link #getWhere() <em>Where</em>}' attribute.
@@ -195,7 +195,7 @@ public class ChkExpressionImpl extends MinimalEObjectImpl.Container implements C
    * <!-- end-user-doc -->
    * @generated
    */
-  public ChkRelationalExpressions getExp()
+  public ChkGeneralExpressions getExp()
   {
     return exp;
   }
@@ -205,9 +205,9 @@ public class ChkExpressionImpl extends MinimalEObjectImpl.Container implements C
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetExp(ChkRelationalExpressions newExp, NotificationChain msgs)
+  public NotificationChain basicSetExp(ChkGeneralExpressions newExp, NotificationChain msgs)
   {
-    ChkRelationalExpressions oldExp = exp;
+    ChkGeneralExpressions oldExp = exp;
     exp = newExp;
     if (eNotificationRequired())
     {
@@ -222,7 +222,7 @@ public class ChkExpressionImpl extends MinimalEObjectImpl.Container implements C
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setExp(ChkRelationalExpressions newExp)
+  public void setExp(ChkGeneralExpressions newExp)
   {
     if (newExp != exp)
     {
@@ -423,7 +423,7 @@ public class ChkExpressionImpl extends MinimalEObjectImpl.Container implements C
         setAsg((String)newValue);
         return;
       case CheckerDslPackage.CHK_EXPRESSION__EXP:
-        setExp((ChkRelationalExpressions)newValue);
+        setExp((ChkGeneralExpressions)newValue);
         return;
       case CheckerDslPackage.CHK_EXPRESSION__WHERE:
         setWhere((String)newValue);
@@ -460,7 +460,7 @@ public class ChkExpressionImpl extends MinimalEObjectImpl.Container implements C
         setAsg(ASG_EDEFAULT);
         return;
       case CheckerDslPackage.CHK_EXPRESSION__EXP:
-        setExp((ChkRelationalExpressions)null);
+        setExp((ChkGeneralExpressions)null);
         return;
       case CheckerDslPackage.CHK_EXPRESSION__WHERE:
         setWhere(WHERE_EDEFAULT);

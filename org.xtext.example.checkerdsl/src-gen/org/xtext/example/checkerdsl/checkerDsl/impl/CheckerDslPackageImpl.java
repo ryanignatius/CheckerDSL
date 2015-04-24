@@ -21,12 +21,12 @@ import org.xtext.example.checkerdsl.checkerDsl.CheckerDslFactory;
 import org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage;
 import org.xtext.example.checkerdsl.checkerDsl.ChkAssignment;
 import org.xtext.example.checkerdsl.checkerDsl.ChkExpression;
+import org.xtext.example.checkerdsl.checkerDsl.ChkGeneralExpressions;
 import org.xtext.example.checkerdsl.checkerDsl.ChkItemGroup;
 import org.xtext.example.checkerdsl.checkerDsl.ChkLoopExpression;
 import org.xtext.example.checkerdsl.checkerDsl.ChkOperation;
 import org.xtext.example.checkerdsl.checkerDsl.ChkPrefix;
 import org.xtext.example.checkerdsl.checkerDsl.ChkRelationalExpression;
-import org.xtext.example.checkerdsl.checkerDsl.ChkRelationalExpressions;
 import org.xtext.example.checkerdsl.checkerDsl.ChkScoreExpression;
 import org.xtext.example.checkerdsl.checkerDsl.ChkVariable;
 import org.xtext.example.checkerdsl.checkerDsl.ChkVariableDeclaration;
@@ -201,7 +201,7 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass chkRelationalExpressionsEClass = null;
+  private EClass chkGeneralExpressionsEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -722,7 +722,7 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getChkVariableDeclaration_Limit()
+  public EReference getChkVariableDeclaration_Limit1()
   {
     return (EReference)chkVariableDeclarationEClass.getEStructuralFeatures().get(3);
   }
@@ -732,9 +732,19 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getChkVariableDeclaration_SpValue()
+  public EReference getChkVariableDeclaration_Limit()
   {
     return (EReference)chkVariableDeclarationEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getChkVariableDeclaration_SpValue()
+  {
+    return (EReference)chkVariableDeclarationEClass.getEStructuralFeatures().get(5);
   }
 
   /**
@@ -1232,9 +1242,9 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getChkRelationalExpressions()
+  public EClass getChkGeneralExpressions()
   {
-    return chkRelationalExpressionsEClass;
+    return chkGeneralExpressionsEClass;
   }
 
   /**
@@ -1675,6 +1685,7 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
     createEAttribute(chkVariableDeclarationEClass, CHK_VARIABLE_DECLARATION__TYPE);
     createEAttribute(chkVariableDeclarationEClass, CHK_VARIABLE_DECLARATION__SZ);
     createEAttribute(chkVariableDeclarationEClass, CHK_VARIABLE_DECLARATION__NAME);
+    createEReference(chkVariableDeclarationEClass, CHK_VARIABLE_DECLARATION__LIMIT1);
     createEReference(chkVariableDeclarationEClass, CHK_VARIABLE_DECLARATION__LIMIT);
     createEReference(chkVariableDeclarationEClass, CHK_VARIABLE_DECLARATION__SP_VALUE);
 
@@ -1735,7 +1746,7 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
     createEAttribute(chkAssignmentEClass, CHK_ASSIGNMENT__OPR);
     createEReference(chkAssignmentEClass, CHK_ASSIGNMENT__V2);
 
-    chkRelationalExpressionsEClass = createEClass(CHK_RELATIONAL_EXPRESSIONS);
+    chkGeneralExpressionsEClass = createEClass(CHK_GENERAL_EXPRESSIONS);
 
     chkOperationEClass = createEClass(CHK_OPERATION);
     createEReference(chkOperationEClass, CHK_OPERATION__OPERAND);
@@ -1825,10 +1836,10 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
     scoreEClass.getESuperTypes().add(this.getFeature());
     mrEClass.getESuperTypes().add(this.getFeature());
     chkVariableDeclarationEClass.getESuperTypes().add(this.getFeature());
-    methodCallEClass.getESuperTypes().add(this.getChkRelationalExpressions());
-    helperEClass.getESuperTypes().add(this.getChkRelationalExpressions());
-    chkRelationalExpressionEClass.getESuperTypes().add(this.getChkRelationalExpressions());
-    chkAssignmentEClass.getESuperTypes().add(this.getChkRelationalExpressions());
+    methodCallEClass.getESuperTypes().add(this.getChkGeneralExpressions());
+    helperEClass.getESuperTypes().add(this.getChkGeneralExpressions());
+    chkRelationalExpressionEClass.getESuperTypes().add(this.getChkGeneralExpressions());
+    chkAssignmentEClass.getESuperTypes().add(this.getChkGeneralExpressions());
     checkEClass.getESuperTypes().add(this.getFeature());
     formatEClass.getESuperTypes().add(this.getFeature());
     inputFormatEClass.getESuperTypes().add(this.getFormat());
@@ -1883,6 +1894,7 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
     initEAttribute(getChkVariableDeclaration_Type(), ecorePackage.getEString(), "type", null, 0, 1, ChkVariableDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getChkVariableDeclaration_Sz(), ecorePackage.getEString(), "sz", null, 0, -1, ChkVariableDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getChkVariableDeclaration_Name(), ecorePackage.getEString(), "name", null, 0, 1, ChkVariableDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getChkVariableDeclaration_Limit1(), this.getLimit(), null, "limit1", null, 0, 1, ChkVariableDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getChkVariableDeclaration_Limit(), this.getLimit(), null, "limit", null, 0, -1, ChkVariableDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getChkVariableDeclaration_SpValue(), this.getSpValue(), null, "spValue", null, 0, 1, ChkVariableDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -1943,7 +1955,7 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
     initEAttribute(getChkAssignment_Opr(), ecorePackage.getEString(), "opr", null, 0, 1, ChkAssignment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getChkAssignment_V2(), ecorePackage.getEObject(), null, "v2", null, 0, 1, ChkAssignment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(chkRelationalExpressionsEClass, ChkRelationalExpressions.class, "ChkRelationalExpressions", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEClass(chkGeneralExpressionsEClass, ChkGeneralExpressions.class, "ChkGeneralExpressions", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(chkOperationEClass, ChkOperation.class, "ChkOperation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getChkOperation_Operand(), this.getChkVariables(), null, "operand", null, 0, -1, ChkOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1956,7 +1968,7 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
 
     initEClass(chkExpressionEClass, ChkExpression.class, "ChkExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getChkExpression_Asg(), ecorePackage.getEString(), "asg", null, 0, 1, ChkExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getChkExpression_Exp(), this.getChkRelationalExpressions(), null, "exp", null, 0, 1, ChkExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getChkExpression_Exp(), this.getChkGeneralExpressions(), null, "exp", null, 0, 1, ChkExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getChkExpression_Where(), ecorePackage.getEString(), "where", null, 0, 1, ChkExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getChkExpression_Cond(), this.getChkRelationalExpression(), null, "cond", null, 0, -1, ChkExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getChkExpression_Type(), ecorePackage.getEString(), "type", null, 0, -1, ChkExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

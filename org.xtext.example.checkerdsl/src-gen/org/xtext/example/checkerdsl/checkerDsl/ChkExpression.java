@@ -65,12 +65,12 @@ public interface ChkExpression extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Exp</em>' containment reference.
-   * @see #setExp(ChkRelationalExpressions)
+   * @see #setExp(ChkGeneralExpressions)
    * @see org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage#getChkExpression_Exp()
    * @model containment="true"
    * @generated
    */
-  ChkRelationalExpressions getExp();
+  ChkGeneralExpressions getExp();
 
   /**
    * Sets the value of the '{@link org.xtext.example.checkerdsl.checkerDsl.ChkExpression#getExp <em>Exp</em>}' containment reference.
@@ -80,7 +80,7 @@ public interface ChkExpression extends EObject
    * @see #getExp()
    * @generated
    */
-  void setExp(ChkRelationalExpressions value);
+  void setExp(ChkGeneralExpressions value);
 
   /**
    * Returns the value of the '<em><b>Where</b></em>' attribute.

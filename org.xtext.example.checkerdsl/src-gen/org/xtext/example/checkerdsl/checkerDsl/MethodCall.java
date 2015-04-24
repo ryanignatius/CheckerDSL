@@ -21,7 +21,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface MethodCall extends ChkRelationalExpressions
+public interface MethodCall extends ChkGeneralExpressions
 {
   /**
    * Returns the value of the '<em><b>Name</b></em>' attribute.

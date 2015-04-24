@@ -519,13 +519,22 @@ public interface CheckerDslPackage extends EPackage
   int CHK_VARIABLE_DECLARATION__NAME = FEATURE_FEATURE_COUNT + 2;
 
   /**
+   * The feature id for the '<em><b>Limit1</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CHK_VARIABLE_DECLARATION__LIMIT1 = FEATURE_FEATURE_COUNT + 3;
+
+  /**
    * The feature id for the '<em><b>Limit</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CHK_VARIABLE_DECLARATION__LIMIT = FEATURE_FEATURE_COUNT + 3;
+  int CHK_VARIABLE_DECLARATION__LIMIT = FEATURE_FEATURE_COUNT + 4;
 
   /**
    * The feature id for the '<em><b>Sp Value</b></em>' containment reference.
@@ -534,7 +543,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CHK_VARIABLE_DECLARATION__SP_VALUE = FEATURE_FEATURE_COUNT + 4;
+  int CHK_VARIABLE_DECLARATION__SP_VALUE = FEATURE_FEATURE_COUNT + 5;
 
   /**
    * The number of structural features of the '<em>Chk Variable Declaration</em>' class.
@@ -543,26 +552,26 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CHK_VARIABLE_DECLARATION_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 5;
+  int CHK_VARIABLE_DECLARATION_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 6;
 
   /**
-   * The meta object id for the '{@link org.xtext.example.checkerdsl.checkerDsl.impl.ChkRelationalExpressionsImpl <em>Chk Relational Expressions</em>}' class.
+   * The meta object id for the '{@link org.xtext.example.checkerdsl.checkerDsl.impl.ChkGeneralExpressionsImpl <em>Chk General Expressions</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.xtext.example.checkerdsl.checkerDsl.impl.ChkRelationalExpressionsImpl
-   * @see org.xtext.example.checkerdsl.checkerDsl.impl.CheckerDslPackageImpl#getChkRelationalExpressions()
+   * @see org.xtext.example.checkerdsl.checkerDsl.impl.ChkGeneralExpressionsImpl
+   * @see org.xtext.example.checkerdsl.checkerDsl.impl.CheckerDslPackageImpl#getChkGeneralExpressions()
    * @generated
    */
-  int CHK_RELATIONAL_EXPRESSIONS = 20;
+  int CHK_GENERAL_EXPRESSIONS = 20;
 
   /**
-   * The number of structural features of the '<em>Chk Relational Expressions</em>' class.
+   * The number of structural features of the '<em>Chk General Expressions</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CHK_RELATIONAL_EXPRESSIONS_FEATURE_COUNT = 0;
+  int CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT = 0;
 
   /**
    * The meta object id for the '{@link org.xtext.example.checkerdsl.checkerDsl.impl.MethodCallImpl <em>Method Call</em>}' class.
@@ -581,7 +590,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int METHOD_CALL__NAME = CHK_RELATIONAL_EXPRESSIONS_FEATURE_COUNT + 0;
+  int METHOD_CALL__NAME = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Params</b></em>' attribute list.
@@ -590,7 +599,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int METHOD_CALL__PARAMS = CHK_RELATIONAL_EXPRESSIONS_FEATURE_COUNT + 1;
+  int METHOD_CALL__PARAMS = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>Method Call</em>' class.
@@ -599,7 +608,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int METHOD_CALL_FEATURE_COUNT = CHK_RELATIONAL_EXPRESSIONS_FEATURE_COUNT + 2;
+  int METHOD_CALL_FEATURE_COUNT = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link org.xtext.example.checkerdsl.checkerDsl.impl.ChkPrefixImpl <em>Chk Prefix</em>}' class.
@@ -775,7 +784,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int HELPER__SUM = CHK_RELATIONAL_EXPRESSIONS_FEATURE_COUNT + 0;
+  int HELPER__SUM = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Var</b></em>' containment reference.
@@ -784,7 +793,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int HELPER__VAR = CHK_RELATIONAL_EXPRESSIONS_FEATURE_COUNT + 1;
+  int HELPER__VAR = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Max</b></em>' attribute.
@@ -793,7 +802,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int HELPER__MAX = CHK_RELATIONAL_EXPRESSIONS_FEATURE_COUNT + 2;
+  int HELPER__MAX = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Min</b></em>' attribute.
@@ -802,7 +811,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int HELPER__MIN = CHK_RELATIONAL_EXPRESSIONS_FEATURE_COUNT + 3;
+  int HELPER__MIN = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 3;
 
   /**
    * The feature id for the '<em><b>Prime</b></em>' attribute.
@@ -811,7 +820,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int HELPER__PRIME = CHK_RELATIONAL_EXPRESSIONS_FEATURE_COUNT + 4;
+  int HELPER__PRIME = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 4;
 
   /**
    * The feature id for the '<em><b>Swap</b></em>' attribute.
@@ -820,7 +829,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int HELPER__SWAP = CHK_RELATIONAL_EXPRESSIONS_FEATURE_COUNT + 5;
+  int HELPER__SWAP = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 5;
 
   /**
    * The feature id for the '<em><b>Var1</b></em>' attribute.
@@ -829,7 +838,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int HELPER__VAR1 = CHK_RELATIONAL_EXPRESSIONS_FEATURE_COUNT + 6;
+  int HELPER__VAR1 = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 6;
 
   /**
    * The feature id for the '<em><b>Var2</b></em>' attribute.
@@ -838,7 +847,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int HELPER__VAR2 = CHK_RELATIONAL_EXPRESSIONS_FEATURE_COUNT + 7;
+  int HELPER__VAR2 = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 7;
 
   /**
    * The feature id for the '<em><b>Select</b></em>' attribute.
@@ -847,7 +856,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int HELPER__SELECT = CHK_RELATIONAL_EXPRESSIONS_FEATURE_COUNT + 8;
+  int HELPER__SELECT = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 8;
 
   /**
    * The feature id for the '<em><b>Vars</b></em>' attribute list.
@@ -856,7 +865,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int HELPER__VARS = CHK_RELATIONAL_EXPRESSIONS_FEATURE_COUNT + 9;
+  int HELPER__VARS = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 9;
 
   /**
    * The feature id for the '<em><b>Add</b></em>' attribute.
@@ -865,7 +874,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int HELPER__ADD = CHK_RELATIONAL_EXPRESSIONS_FEATURE_COUNT + 10;
+  int HELPER__ADD = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 10;
 
   /**
    * The feature id for the '<em><b>Var3</b></em>' containment reference.
@@ -874,7 +883,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int HELPER__VAR3 = CHK_RELATIONAL_EXPRESSIONS_FEATURE_COUNT + 11;
+  int HELPER__VAR3 = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 11;
 
   /**
    * The feature id for the '<em><b>Remove</b></em>' attribute.
@@ -883,7 +892,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int HELPER__REMOVE = CHK_RELATIONAL_EXPRESSIONS_FEATURE_COUNT + 12;
+  int HELPER__REMOVE = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 12;
 
   /**
    * The feature id for the '<em><b>G</b></em>' containment reference.
@@ -892,7 +901,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int HELPER__G = CHK_RELATIONAL_EXPRESSIONS_FEATURE_COUNT + 13;
+  int HELPER__G = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 13;
 
   /**
    * The feature id for the '<em><b>Random</b></em>' attribute.
@@ -901,7 +910,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int HELPER__RANDOM = CHK_RELATIONAL_EXPRESSIONS_FEATURE_COUNT + 14;
+  int HELPER__RANDOM = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 14;
 
   /**
    * The feature id for the '<em><b>Var4</b></em>' containment reference.
@@ -910,7 +919,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int HELPER__VAR4 = CHK_RELATIONAL_EXPRESSIONS_FEATURE_COUNT + 15;
+  int HELPER__VAR4 = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 15;
 
   /**
    * The feature id for the '<em><b>Size</b></em>' attribute.
@@ -919,7 +928,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int HELPER__SIZE = CHK_RELATIONAL_EXPRESSIONS_FEATURE_COUNT + 16;
+  int HELPER__SIZE = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 16;
 
   /**
    * The feature id for the '<em><b>Permute</b></em>' attribute.
@@ -928,7 +937,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int HELPER__PERMUTE = CHK_RELATIONAL_EXPRESSIONS_FEATURE_COUNT + 17;
+  int HELPER__PERMUTE = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 17;
 
   /**
    * The feature id for the '<em><b>Plus</b></em>' attribute.
@@ -937,7 +946,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int HELPER__PLUS = CHK_RELATIONAL_EXPRESSIONS_FEATURE_COUNT + 18;
+  int HELPER__PLUS = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 18;
 
   /**
    * The feature id for the '<em><b>Multiply</b></em>' attribute.
@@ -946,7 +955,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int HELPER__MULTIPLY = CHK_RELATIONAL_EXPRESSIONS_FEATURE_COUNT + 19;
+  int HELPER__MULTIPLY = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 19;
 
   /**
    * The feature id for the '<em><b>Invert</b></em>' attribute.
@@ -955,7 +964,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int HELPER__INVERT = CHK_RELATIONAL_EXPRESSIONS_FEATURE_COUNT + 20;
+  int HELPER__INVERT = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 20;
 
   /**
    * The feature id for the '<em><b>Include</b></em>' attribute.
@@ -964,7 +973,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int HELPER__INCLUDE = CHK_RELATIONAL_EXPRESSIONS_FEATURE_COUNT + 21;
+  int HELPER__INCLUDE = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 21;
 
   /**
    * The feature id for the '<em><b>Exclude</b></em>' attribute.
@@ -973,7 +982,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int HELPER__EXCLUDE = CHK_RELATIONAL_EXPRESSIONS_FEATURE_COUNT + 22;
+  int HELPER__EXCLUDE = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 22;
 
   /**
    * The feature id for the '<em><b>Compositional</b></em>' attribute.
@@ -982,7 +991,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int HELPER__COMPOSITIONAL = CHK_RELATIONAL_EXPRESSIONS_FEATURE_COUNT + 23;
+  int HELPER__COMPOSITIONAL = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 23;
 
   /**
    * The number of structural features of the '<em>Helper</em>' class.
@@ -991,7 +1000,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int HELPER_FEATURE_COUNT = CHK_RELATIONAL_EXPRESSIONS_FEATURE_COUNT + 24;
+  int HELPER_FEATURE_COUNT = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 24;
 
   /**
    * The meta object id for the '{@link org.xtext.example.checkerdsl.checkerDsl.impl.ChkRelationalExpressionImpl <em>Chk Relational Expression</em>}' class.
@@ -1010,7 +1019,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CHK_RELATIONAL_EXPRESSION__V1 = CHK_RELATIONAL_EXPRESSIONS_FEATURE_COUNT + 0;
+  int CHK_RELATIONAL_EXPRESSION__V1 = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Opr</b></em>' attribute.
@@ -1019,7 +1028,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CHK_RELATIONAL_EXPRESSION__OPR = CHK_RELATIONAL_EXPRESSIONS_FEATURE_COUNT + 1;
+  int CHK_RELATIONAL_EXPRESSION__OPR = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>V2</b></em>' containment reference.
@@ -1028,7 +1037,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CHK_RELATIONAL_EXPRESSION__V2 = CHK_RELATIONAL_EXPRESSIONS_FEATURE_COUNT + 2;
+  int CHK_RELATIONAL_EXPRESSION__V2 = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 2;
 
   /**
    * The number of structural features of the '<em>Chk Relational Expression</em>' class.
@@ -1037,7 +1046,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CHK_RELATIONAL_EXPRESSION_FEATURE_COUNT = CHK_RELATIONAL_EXPRESSIONS_FEATURE_COUNT + 3;
+  int CHK_RELATIONAL_EXPRESSION_FEATURE_COUNT = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 3;
 
   /**
    * The meta object id for the '{@link org.xtext.example.checkerdsl.checkerDsl.impl.ChkAssignmentImpl <em>Chk Assignment</em>}' class.
@@ -1056,7 +1065,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CHK_ASSIGNMENT__V1 = CHK_RELATIONAL_EXPRESSIONS_FEATURE_COUNT + 0;
+  int CHK_ASSIGNMENT__V1 = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Opr</b></em>' attribute.
@@ -1065,7 +1074,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CHK_ASSIGNMENT__OPR = CHK_RELATIONAL_EXPRESSIONS_FEATURE_COUNT + 1;
+  int CHK_ASSIGNMENT__OPR = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>V2</b></em>' containment reference.
@@ -1074,7 +1083,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CHK_ASSIGNMENT__V2 = CHK_RELATIONAL_EXPRESSIONS_FEATURE_COUNT + 2;
+  int CHK_ASSIGNMENT__V2 = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 2;
 
   /**
    * The number of structural features of the '<em>Chk Assignment</em>' class.
@@ -1083,7 +1092,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CHK_ASSIGNMENT_FEATURE_COUNT = CHK_RELATIONAL_EXPRESSIONS_FEATURE_COUNT + 3;
+  int CHK_ASSIGNMENT_FEATURE_COUNT = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 3;
 
   /**
    * The meta object id for the '{@link org.xtext.example.checkerdsl.checkerDsl.impl.ChkOperationImpl <em>Chk Operation</em>}' class.
@@ -1934,6 +1943,17 @@ public interface CheckerDslPackage extends EPackage
   EAttribute getChkVariableDeclaration_Name();
 
   /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.checkerdsl.checkerDsl.ChkVariableDeclaration#getLimit1 <em>Limit1</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Limit1</em>'.
+   * @see org.xtext.example.checkerdsl.checkerDsl.ChkVariableDeclaration#getLimit1()
+   * @see #getChkVariableDeclaration()
+   * @generated
+   */
+  EReference getChkVariableDeclaration_Limit1();
+
+  /**
    * Returns the meta object for the containment reference list '{@link org.xtext.example.checkerdsl.checkerDsl.ChkVariableDeclaration#getLimit <em>Limit</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2487,14 +2507,14 @@ public interface CheckerDslPackage extends EPackage
   EReference getChkAssignment_V2();
 
   /**
-   * Returns the meta object for class '{@link org.xtext.example.checkerdsl.checkerDsl.ChkRelationalExpressions <em>Chk Relational Expressions</em>}'.
+   * Returns the meta object for class '{@link org.xtext.example.checkerdsl.checkerDsl.ChkGeneralExpressions <em>Chk General Expressions</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Chk Relational Expressions</em>'.
-   * @see org.xtext.example.checkerdsl.checkerDsl.ChkRelationalExpressions
+   * @return the meta object for class '<em>Chk General Expressions</em>'.
+   * @see org.xtext.example.checkerdsl.checkerDsl.ChkGeneralExpressions
    * @generated
    */
-  EClass getChkRelationalExpressions();
+  EClass getChkGeneralExpressions();
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.checkerdsl.checkerDsl.ChkOperation <em>Chk Operation</em>}'.
@@ -3225,6 +3245,14 @@ public interface CheckerDslPackage extends EPackage
     EAttribute CHK_VARIABLE_DECLARATION__NAME = eINSTANCE.getChkVariableDeclaration_Name();
 
     /**
+     * The meta object literal for the '<em><b>Limit1</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CHK_VARIABLE_DECLARATION__LIMIT1 = eINSTANCE.getChkVariableDeclaration_Limit1();
+
+    /**
      * The meta object literal for the '<em><b>Limit</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3649,14 +3677,14 @@ public interface CheckerDslPackage extends EPackage
     EReference CHK_ASSIGNMENT__V2 = eINSTANCE.getChkAssignment_V2();
 
     /**
-     * The meta object literal for the '{@link org.xtext.example.checkerdsl.checkerDsl.impl.ChkRelationalExpressionsImpl <em>Chk Relational Expressions</em>}' class.
+     * The meta object literal for the '{@link org.xtext.example.checkerdsl.checkerDsl.impl.ChkGeneralExpressionsImpl <em>Chk General Expressions</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.xtext.example.checkerdsl.checkerDsl.impl.ChkRelationalExpressionsImpl
-     * @see org.xtext.example.checkerdsl.checkerDsl.impl.CheckerDslPackageImpl#getChkRelationalExpressions()
+     * @see org.xtext.example.checkerdsl.checkerDsl.impl.ChkGeneralExpressionsImpl
+     * @see org.xtext.example.checkerdsl.checkerDsl.impl.CheckerDslPackageImpl#getChkGeneralExpressions()
      * @generated
      */
-    EClass CHK_RELATIONAL_EXPRESSIONS = eINSTANCE.getChkRelationalExpressions();
+    EClass CHK_GENERAL_EXPRESSIONS = eINSTANCE.getChkGeneralExpressions();
 
     /**
      * The meta object literal for the '{@link org.xtext.example.checkerdsl.checkerDsl.impl.ChkOperationImpl <em>Chk Operation</em>}' class.

@@ -45,7 +45,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface Helper extends ChkRelationalExpressions
+public interface Helper extends ChkGeneralExpressions
 {
   /**
    * Returns the value of the '<em><b>Sum</b></em>' attribute.

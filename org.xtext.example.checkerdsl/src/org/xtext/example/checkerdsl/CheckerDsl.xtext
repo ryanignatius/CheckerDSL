@@ -54,7 +54,7 @@ MR:
 
 ChkVariableDeclaration:
   type=ChkTypeReference ('[' sz+=MY_NUMBER ']')* name=ValidID
-  ('(' limit+=Limit (';' limit+=Limit)* ')')?
+  ('(' limit1=Limit (';' limit+=Limit)* ')')?
   ('sp' '{' spValue=SpValue '}')?;
 
 ChkTypeReference:
@@ -104,7 +104,7 @@ ChkRelationalExpression:
 ChkAssignment:
 	v1=ChkOperation opr=ChkOpAssignment v2=(ChkOperation | Helper);
 
-ChkRelationalExpressions:
+ChkGeneralExpressions:
 	(Helper | ChkRelationalExpression | MethodCall | ChkAssignment);
 
 ChkOpAssignment:
@@ -128,7 +128,7 @@ ChkLoopExpression:
 	);
 
 ChkExpression:
-	('def' asg=ValidID '=')? '(' exp=ChkRelationalExpressions (where='where' cond+=ChkRelationalExpression
+	('def' asg=ValidID '=')? '(' exp=ChkGeneralExpressions (where='where' cond+=ChkRelationalExpression
 		(type+=ChkAndOr cond+=ChkRelationalExpression)*
 	)?
 	(op=ChkOpRelational v=ChkVariable)? ')';

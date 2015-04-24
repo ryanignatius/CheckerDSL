@@ -519,8 +519,8 @@ public class CheckerDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cNameValidIDParserRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
 		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
 		private final Keyword cLeftParenthesisKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
-		private final Assignment cLimitAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
-		private final RuleCall cLimitLimitParserRuleCall_3_1_0 = (RuleCall)cLimitAssignment_3_1.eContents().get(0);
+		private final Assignment cLimit1Assignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cLimit1LimitParserRuleCall_3_1_0 = (RuleCall)cLimit1Assignment_3_1.eContents().get(0);
 		private final Group cGroup_3_2 = (Group)cGroup_3.eContents().get(2);
 		private final Keyword cSemicolonKeyword_3_2_0 = (Keyword)cGroup_3_2.eContents().get(0);
 		private final Assignment cLimitAssignment_3_2_1 = (Assignment)cGroup_3_2.eContents().get(1);
@@ -534,11 +534,11 @@ public class CheckerDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_4_3 = (Keyword)cGroup_4.eContents().get(3);
 		
 		//ChkVariableDeclaration:
-		//	type=ChkTypeReference ("[" sz+=MY_NUMBER "]")* name=ValidID ("(" limit+=Limit (";" limit+=Limit)* ")")? ("sp" "{"
+		//	type=ChkTypeReference ("[" sz+=MY_NUMBER "]")* name=ValidID ("(" limit1=Limit (";" limit+=Limit)* ")")? ("sp" "{"
 		//	spValue=SpValue "}")?;
 		public ParserRule getRule() { return rule; }
 
-		//type=ChkTypeReference ("[" sz+=MY_NUMBER "]")* name=ValidID ("(" limit+=Limit (";" limit+=Limit)* ")")? ("sp" "{"
+		//type=ChkTypeReference ("[" sz+=MY_NUMBER "]")* name=ValidID ("(" limit1=Limit (";" limit+=Limit)* ")")? ("sp" "{"
 		//spValue=SpValue "}")?
 		public Group getGroup() { return cGroup; }
 
@@ -569,17 +569,17 @@ public class CheckerDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ValidID
 		public RuleCall getNameValidIDParserRuleCall_2_0() { return cNameValidIDParserRuleCall_2_0; }
 
-		//("(" limit+=Limit (";" limit+=Limit)* ")")?
+		//("(" limit1=Limit (";" limit+=Limit)* ")")?
 		public Group getGroup_3() { return cGroup_3; }
 
 		//"("
 		public Keyword getLeftParenthesisKeyword_3_0() { return cLeftParenthesisKeyword_3_0; }
 
-		//limit+=Limit
-		public Assignment getLimitAssignment_3_1() { return cLimitAssignment_3_1; }
+		//limit1=Limit
+		public Assignment getLimit1Assignment_3_1() { return cLimit1Assignment_3_1; }
 
 		//Limit
-		public RuleCall getLimitLimitParserRuleCall_3_1_0() { return cLimitLimitParserRuleCall_3_1_0; }
+		public RuleCall getLimit1LimitParserRuleCall_3_1_0() { return cLimit1LimitParserRuleCall_3_1_0; }
 
 		//(";" limit+=Limit)*
 		public Group getGroup_3_2() { return cGroup_3_2; }
@@ -1623,15 +1623,15 @@ public class CheckerDslGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getV2HelperParserRuleCall_2_0_1() { return cV2HelperParserRuleCall_2_0_1; }
 	}
 
-	public class ChkRelationalExpressionsElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ChkRelationalExpressions");
+	public class ChkGeneralExpressionsElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ChkGeneralExpressions");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cHelperParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cChkRelationalExpressionParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		private final RuleCall cMethodCallParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		private final RuleCall cChkAssignmentParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
 		
-		//ChkRelationalExpressions:
+		//ChkGeneralExpressions:
 		//	Helper | ChkRelationalExpression | MethodCall | ChkAssignment;
 		public ParserRule getRule() { return rule; }
 
@@ -1857,7 +1857,7 @@ public class CheckerDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cEqualsSignKeyword_0_2 = (Keyword)cGroup_0.eContents().get(2);
 		private final Keyword cLeftParenthesisKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cExpAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cExpChkRelationalExpressionsParserRuleCall_2_0 = (RuleCall)cExpAssignment_2.eContents().get(0);
+		private final RuleCall cExpChkGeneralExpressionsParserRuleCall_2_0 = (RuleCall)cExpAssignment_2.eContents().get(0);
 		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
 		private final Assignment cWhereAssignment_3_0 = (Assignment)cGroup_3.eContents().get(0);
 		private final Keyword cWhereWhereKeyword_3_0_0 = (Keyword)cWhereAssignment_3_0.eContents().get(0);
@@ -1876,11 +1876,11 @@ public class CheckerDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightParenthesisKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//ChkExpression:
-		//	("def" asg=ValidID "=")? "(" exp=ChkRelationalExpressions (where="where" cond+=ChkRelationalExpression
-		//	(type+=ChkAndOr cond+=ChkRelationalExpression)*)? (op=ChkOpRelational v=ChkVariable)? ")";
+		//	("def" asg=ValidID "=")? "(" exp=ChkGeneralExpressions (where="where" cond+=ChkRelationalExpression (type+=ChkAndOr
+		//	cond+=ChkRelationalExpression)*)? (op=ChkOpRelational v=ChkVariable)? ")";
 		public ParserRule getRule() { return rule; }
 
-		//("def" asg=ValidID "=")? "(" exp=ChkRelationalExpressions (where="where" cond+=ChkRelationalExpression (type+=ChkAndOr
+		//("def" asg=ValidID "=")? "(" exp=ChkGeneralExpressions (where="where" cond+=ChkRelationalExpression (type+=ChkAndOr
 		//cond+=ChkRelationalExpression)*)? (op=ChkOpRelational v=ChkVariable)? ")"
 		public Group getGroup() { return cGroup; }
 
@@ -1902,11 +1902,11 @@ public class CheckerDslGrammarAccess extends AbstractGrammarElementFinder {
 		//"("
 		public Keyword getLeftParenthesisKeyword_1() { return cLeftParenthesisKeyword_1; }
 
-		//exp=ChkRelationalExpressions
+		//exp=ChkGeneralExpressions
 		public Assignment getExpAssignment_2() { return cExpAssignment_2; }
 
-		//ChkRelationalExpressions
-		public RuleCall getExpChkRelationalExpressionsParserRuleCall_2_0() { return cExpChkRelationalExpressionsParserRuleCall_2_0; }
+		//ChkGeneralExpressions
+		public RuleCall getExpChkGeneralExpressionsParserRuleCall_2_0() { return cExpChkGeneralExpressionsParserRuleCall_2_0; }
 
 		//(where="where" cond+=ChkRelationalExpression (type+=ChkAndOr cond+=ChkRelationalExpression)*)?
 		public Group getGroup_3() { return cGroup_3; }
@@ -2403,7 +2403,7 @@ public class CheckerDslGrammarAccess extends AbstractGrammarElementFinder {
 	private final HelperElements pHelper;
 	private final ChkRelationalExpressionElements pChkRelationalExpression;
 	private final ChkAssignmentElements pChkAssignment;
-	private final ChkRelationalExpressionsElements pChkRelationalExpressions;
+	private final ChkGeneralExpressionsElements pChkGeneralExpressions;
 	private final ChkOpAssignmentElements pChkOpAssignment;
 	private final ChkOperatorElements pChkOperator;
 	private final ChkOperationElements pChkOperation;
@@ -2453,7 +2453,7 @@ public class CheckerDslGrammarAccess extends AbstractGrammarElementFinder {
 		this.pHelper = new HelperElements();
 		this.pChkRelationalExpression = new ChkRelationalExpressionElements();
 		this.pChkAssignment = new ChkAssignmentElements();
-		this.pChkRelationalExpressions = new ChkRelationalExpressionsElements();
+		this.pChkGeneralExpressions = new ChkGeneralExpressionsElements();
 		this.pChkOpAssignment = new ChkOpAssignmentElements();
 		this.pChkOperator = new ChkOperatorElements();
 		this.pChkOperation = new ChkOperationElements();
@@ -2613,7 +2613,7 @@ public class CheckerDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//ChkVariableDeclaration:
-	//	type=ChkTypeReference ("[" sz+=MY_NUMBER "]")* name=ValidID ("(" limit+=Limit (";" limit+=Limit)* ")")? ("sp" "{"
+	//	type=ChkTypeReference ("[" sz+=MY_NUMBER "]")* name=ValidID ("(" limit1=Limit (";" limit+=Limit)* ")")? ("sp" "{"
 	//	spValue=SpValue "}")?;
 	public ChkVariableDeclarationElements getChkVariableDeclarationAccess() {
 		return pChkVariableDeclaration;
@@ -2721,14 +2721,14 @@ public class CheckerDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getChkAssignmentAccess().getRule();
 	}
 
-	//ChkRelationalExpressions:
+	//ChkGeneralExpressions:
 	//	Helper | ChkRelationalExpression | MethodCall | ChkAssignment;
-	public ChkRelationalExpressionsElements getChkRelationalExpressionsAccess() {
-		return pChkRelationalExpressions;
+	public ChkGeneralExpressionsElements getChkGeneralExpressionsAccess() {
+		return pChkGeneralExpressions;
 	}
 	
-	public ParserRule getChkRelationalExpressionsRule() {
-		return getChkRelationalExpressionsAccess().getRule();
+	public ParserRule getChkGeneralExpressionsRule() {
+		return getChkGeneralExpressionsAccess().getRule();
 	}
 
 	//ChkOpAssignment:
@@ -2792,8 +2792,8 @@ public class CheckerDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//ChkExpression:
-	//	("def" asg=ValidID "=")? "(" exp=ChkRelationalExpressions (where="where" cond+=ChkRelationalExpression
-	//	(type+=ChkAndOr cond+=ChkRelationalExpression)*)? (op=ChkOpRelational v=ChkVariable)? ")";
+	//	("def" asg=ValidID "=")? "(" exp=ChkGeneralExpressions (where="where" cond+=ChkRelationalExpression (type+=ChkAndOr
+	//	cond+=ChkRelationalExpression)*)? (op=ChkOpRelational v=ChkVariable)? ")";
 	public ChkExpressionElements getChkExpressionAccess() {
 		return pChkExpression;
 	}

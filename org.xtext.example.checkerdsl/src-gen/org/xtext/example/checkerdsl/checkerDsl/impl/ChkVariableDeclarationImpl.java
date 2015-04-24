@@ -34,6 +34,7 @@ import org.xtext.example.checkerdsl.checkerDsl.SpValue;
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.ChkVariableDeclarationImpl#getType <em>Type</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.ChkVariableDeclarationImpl#getSz <em>Sz</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.ChkVariableDeclarationImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.ChkVariableDeclarationImpl#getLimit1 <em>Limit1</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.ChkVariableDeclarationImpl#getLimit <em>Limit</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.ChkVariableDeclarationImpl#getSpValue <em>Sp Value</em>}</li>
  * </ul>
@@ -91,6 +92,16 @@ public class ChkVariableDeclarationImpl extends FeatureImpl implements ChkVariab
    * @ordered
    */
   protected String name = NAME_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getLimit1() <em>Limit1</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getLimit1()
+   * @generated
+   * @ordered
+   */
+  protected Limit limit1;
 
   /**
    * The cached value of the '{@link #getLimit() <em>Limit</em>}' containment reference list.
@@ -198,6 +209,54 @@ public class ChkVariableDeclarationImpl extends FeatureImpl implements ChkVariab
    * <!-- end-user-doc -->
    * @generated
    */
+  public Limit getLimit1()
+  {
+    return limit1;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetLimit1(Limit newLimit1, NotificationChain msgs)
+  {
+    Limit oldLimit1 = limit1;
+    limit1 = newLimit1;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CheckerDslPackage.CHK_VARIABLE_DECLARATION__LIMIT1, oldLimit1, newLimit1);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setLimit1(Limit newLimit1)
+  {
+    if (newLimit1 != limit1)
+    {
+      NotificationChain msgs = null;
+      if (limit1 != null)
+        msgs = ((InternalEObject)limit1).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CheckerDslPackage.CHK_VARIABLE_DECLARATION__LIMIT1, null, msgs);
+      if (newLimit1 != null)
+        msgs = ((InternalEObject)newLimit1).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CheckerDslPackage.CHK_VARIABLE_DECLARATION__LIMIT1, null, msgs);
+      msgs = basicSetLimit1(newLimit1, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, CheckerDslPackage.CHK_VARIABLE_DECLARATION__LIMIT1, newLimit1, newLimit1));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EList<Limit> getLimit()
   {
     if (limit == null)
@@ -265,6 +324,8 @@ public class ChkVariableDeclarationImpl extends FeatureImpl implements ChkVariab
   {
     switch (featureID)
     {
+      case CheckerDslPackage.CHK_VARIABLE_DECLARATION__LIMIT1:
+        return basicSetLimit1(null, msgs);
       case CheckerDslPackage.CHK_VARIABLE_DECLARATION__LIMIT:
         return ((InternalEList<?>)getLimit()).basicRemove(otherEnd, msgs);
       case CheckerDslPackage.CHK_VARIABLE_DECLARATION__SP_VALUE:
@@ -289,6 +350,8 @@ public class ChkVariableDeclarationImpl extends FeatureImpl implements ChkVariab
         return getSz();
       case CheckerDslPackage.CHK_VARIABLE_DECLARATION__NAME:
         return getName();
+      case CheckerDslPackage.CHK_VARIABLE_DECLARATION__LIMIT1:
+        return getLimit1();
       case CheckerDslPackage.CHK_VARIABLE_DECLARATION__LIMIT:
         return getLimit();
       case CheckerDslPackage.CHK_VARIABLE_DECLARATION__SP_VALUE:
@@ -317,6 +380,9 @@ public class ChkVariableDeclarationImpl extends FeatureImpl implements ChkVariab
         return;
       case CheckerDslPackage.CHK_VARIABLE_DECLARATION__NAME:
         setName((String)newValue);
+        return;
+      case CheckerDslPackage.CHK_VARIABLE_DECLARATION__LIMIT1:
+        setLimit1((Limit)newValue);
         return;
       case CheckerDslPackage.CHK_VARIABLE_DECLARATION__LIMIT:
         getLimit().clear();
@@ -348,6 +414,9 @@ public class ChkVariableDeclarationImpl extends FeatureImpl implements ChkVariab
       case CheckerDslPackage.CHK_VARIABLE_DECLARATION__NAME:
         setName(NAME_EDEFAULT);
         return;
+      case CheckerDslPackage.CHK_VARIABLE_DECLARATION__LIMIT1:
+        setLimit1((Limit)null);
+        return;
       case CheckerDslPackage.CHK_VARIABLE_DECLARATION__LIMIT:
         getLimit().clear();
         return;
@@ -374,6 +443,8 @@ public class ChkVariableDeclarationImpl extends FeatureImpl implements ChkVariab
         return sz != null && !sz.isEmpty();
       case CheckerDslPackage.CHK_VARIABLE_DECLARATION__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case CheckerDslPackage.CHK_VARIABLE_DECLARATION__LIMIT1:
+        return limit1 != null;
       case CheckerDslPackage.CHK_VARIABLE_DECLARATION__LIMIT:
         return limit != null && !limit.isEmpty();
       case CheckerDslPackage.CHK_VARIABLE_DECLARATION__SP_VALUE:
