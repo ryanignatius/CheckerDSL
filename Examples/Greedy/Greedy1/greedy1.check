@@ -1,0 +1,153 @@
+// Specification untuk soal greedy key lock problem
+class Greedy{
+/*
+	 * variable declaration
+	 * akan digunakan untuk men-generate atribut private,
+	 * fungsi untuk membaca, menulis, dan validator variable tersebut
+	 */
+	
+	// variable untuk input
+	int x (1..100) // x adalah variabel jumlah key (baris)
+	int y (1..100) // y adalah variabel jumlah lock (kolom)
+	int[x][y] m (0..1) // m adalah matriks yang berisi relasi antara ki an lj
+
+	// variable untuk output
+	int numKey(1..x)
+	int[x] o(1..x) // o berisi keys yang digunakan untuk membuka semua lock
+
+	/*
+	 * input format
+	 */
+	input {
+		1 (x,y) // 1 baris pertama berisi 2 buah integer x dan y
+		x (m[i]<y>) // x baris berikutnya berisi y buah integer m
+	}
+	
+	/*
+	 * output format
+	 */
+	output {
+		1 (numKey) // 1 baris berikutnya berisi 1 buah integer numKey
+		1 (o<numKey>) // 1 baris berikutnya berisi numKey buah integer o
+	}
+	
+	MR 1 {
+		(select(k,l) where (1<=k and k<l and l<=n))
+		followup {
+			(m` = swapColumn(m,k,l))
+		}
+		check {
+			
+		}
+	}
+	
+	MR 2 {
+		followup {
+			(x` = x+1)
+			(m` = addRow(m))
+			for (j,y){
+				(m`[x][j] = 0)
+			}
+		}
+		check {
+			
+		}
+	}
+	
+	MR 3 {
+		followup {
+			(y` = y+1)
+			(m` = addColumn(m))
+			for (i,x){
+				(m`[i][y] = 0)
+			}
+		}
+		check {
+			
+		}
+	}
+	
+	MR 4 {
+		followup {
+			for (j,numKey){
+				(m`[j] = m[o[j]])
+			}
+		}
+		check {
+			
+		}
+	}
+	
+	MR 5 {
+		(select(k) where k >= 1 and k<numKey)
+		followup {
+			(x` = x+1)
+			(m` = addRow(m))
+			for (j,y){
+				(m`[x][j] = (m[o[k]][j] | m[o[k+1]][j])
+			}
+		}
+		check {
+			(numKey` = numKey+1)
+			(o` = remove(o,k+1))
+		}
+	}
+	
+	MR 6 {
+		(select(k) where k >= 2 and k<=numKey)
+		followup {
+			for (j,y){
+				(m`[1][j] = (m[1][j] | m[o[k]][j]))
+			}
+		}
+		check {
+			(numKey` = numKey-1)
+			(o` = remove(o,k))
+		}
+	}
+	
+	MR 7 {
+		(select(k) where k >= 1 and k<=numKey)
+		followup {
+			for (j,y){
+				(m` = deleteColumn(m,j) where m[o[k]][j] = 1)
+			}
+		}
+		check {
+			(numKey` = numKey-1)
+			(o` = deleteRow(o[k]))
+			(o` = remove(o,k))
+		}
+	}
+	
+	MR 8 {
+		(select(k) where not o.contains(k))
+		followup {
+			(y` = y+1)
+			(m` = addColumn(m))
+			for (i,x){
+				(m`[i][y] = 1 where i==k)
+				(m`[i][y] = 0 where i!=k)
+			}
+		}
+		check {
+			(numKey` = numKey+1)
+			(o` = add(o,k))
+		}
+	}
+	
+	MR 9 {
+		(select(k) where not o.contains(k))
+		followup {
+			(y` = y+1)
+			(m` = addColumn(m))
+			for (i,y){
+				(m`[k][i] = 0)
+			}
+		}
+		check {
+			(numKey` = numKey+1)
+			(o` = add(o,k))
+		}
+	}
+}
