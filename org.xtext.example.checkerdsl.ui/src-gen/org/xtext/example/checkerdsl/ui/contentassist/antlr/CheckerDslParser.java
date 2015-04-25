@@ -46,7 +46,6 @@ public class CheckerDslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getChkPrefixAccess().getTypeAlternatives_0_0(), "rule__ChkPrefix__TypeAlternatives_0_0");
 					put(grammarAccess.getChkVariablesAccess().getAlternatives(), "rule__ChkVariables__Alternatives");
 					put(grammarAccess.getHelperAccess().getAlternatives(), "rule__Helper__Alternatives");
-					put(grammarAccess.getHelperAccess().getAlternatives_7_2(), "rule__Helper__Alternatives_7_2");
 					put(grammarAccess.getChkAssignmentAccess().getV2Alternatives_2_0(), "rule__ChkAssignment__V2Alternatives_2_0");
 					put(grammarAccess.getChkGeneralExpressionsAccess().getAlternatives(), "rule__ChkGeneralExpressions__Alternatives");
 					put(grammarAccess.getChkOperatorAccess().getAlternatives(), "rule__ChkOperator__Alternatives");
@@ -393,7 +392,7 @@ public class CheckerDslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getHelperAccess().getMinAssignment_2_0(), "rule__Helper__MinAssignment_2_0");
 					put(grammarAccess.getHelperAccess().getVarAssignment_2_2(), "rule__Helper__VarAssignment_2_2");
 					put(grammarAccess.getHelperAccess().getPrimeAssignment_3_0(), "rule__Helper__PrimeAssignment_3_0");
-					put(grammarAccess.getHelperAccess().getVarAssignment_3_2(), "rule__Helper__VarAssignment_3_2");
+					put(grammarAccess.getHelperAccess().getVar3Assignment_3_2(), "rule__Helper__Var3Assignment_3_2");
 					put(grammarAccess.getHelperAccess().getSwapAssignment_4_0(), "rule__Helper__SwapAssignment_4_0");
 					put(grammarAccess.getHelperAccess().getVarAssignment_4_2(), "rule__Helper__VarAssignment_4_2");
 					put(grammarAccess.getHelperAccess().getVar1Assignment_4_4(), "rule__Helper__Var1Assignment_4_4");
@@ -405,8 +404,7 @@ public class CheckerDslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getHelperAccess().getVarAssignment_6_2(), "rule__Helper__VarAssignment_6_2");
 					put(grammarAccess.getHelperAccess().getVar3Assignment_6_4(), "rule__Helper__Var3Assignment_6_4");
 					put(grammarAccess.getHelperAccess().getRemoveAssignment_7_0(), "rule__Helper__RemoveAssignment_7_0");
-					put(grammarAccess.getHelperAccess().getGAssignment_7_2_0(), "rule__Helper__GAssignment_7_2_0");
-					put(grammarAccess.getHelperAccess().getVarAssignment_7_2_1(), "rule__Helper__VarAssignment_7_2_1");
+					put(grammarAccess.getHelperAccess().getVarAssignment_7_2(), "rule__Helper__VarAssignment_7_2");
 					put(grammarAccess.getHelperAccess().getVar3Assignment_7_3_1(), "rule__Helper__Var3Assignment_7_3_1");
 					put(grammarAccess.getHelperAccess().getRandomAssignment_8_0(), "rule__Helper__RandomAssignment_8_0");
 					put(grammarAccess.getHelperAccess().getVar3Assignment_8_2_0(), "rule__Helper__Var3Assignment_8_2_0");

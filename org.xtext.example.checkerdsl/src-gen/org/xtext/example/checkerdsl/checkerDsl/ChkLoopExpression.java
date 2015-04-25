@@ -35,12 +35,12 @@ public interface ChkLoopExpression extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Index</em>' containment reference.
-   * @see #setIndex(ChkVariables)
+   * @see #setIndex(ChkVariable)
    * @see org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage#getChkLoopExpression_Index()
    * @model containment="true"
    * @generated
    */
-  ChkVariables getIndex();
+  ChkVariable getIndex();
 
   /**
    * Sets the value of the '{@link org.xtext.example.checkerdsl.checkerDsl.ChkLoopExpression#getIndex <em>Index</em>}' containment reference.
@@ -50,7 +50,7 @@ public interface ChkLoopExpression extends EObject
    * @see #getIndex()
    * @generated
    */
-  void setIndex(ChkVariables value);
+  void setIndex(ChkVariable value);
 
   /**
    * Returns the value of the '<em><b>Max Index</b></em>' containment reference.

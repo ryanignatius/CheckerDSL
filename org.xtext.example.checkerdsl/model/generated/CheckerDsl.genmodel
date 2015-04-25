@@ -85,15 +85,14 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//Helper/max"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//Helper/min"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//Helper/prime"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//Helper/var3"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//Helper/swap"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//Helper/var1"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//Helper/var2"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//Helper/select"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//Helper/vars"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//Helper/add"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//Helper/var3"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//Helper/remove"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//Helper/g"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//Helper/random"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//Helper/var4"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//Helper/size"/>

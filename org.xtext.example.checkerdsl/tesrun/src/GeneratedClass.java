@@ -175,6 +175,10 @@ public class GeneratedClass {
     this.p = p;
   }
   
+  public int getP(final int id1) {
+    return (int)p.get(id1);
+  }
+  
   public void readP(final String[] tokens) {
     p = new ArrayList();
     for (int i=0; i<n; i++){
@@ -224,6 +228,10 @@ public class GeneratedClass {
   
   public void setW(final ArrayList w) {
     this.w = w;
+  }
+  
+  public int getW(final int id1) {
+    return (int)w.get(id1);
   }
   
   public void readW(final String[] tokens) {
@@ -277,6 +285,10 @@ public class GeneratedClass {
     this.c = c;
   }
   
+  public int getC(final int id1) {
+    return (int)c.get(id1);
+  }
+  
   public void readC(final String[] tokens) {
     c = new ArrayList();
     for (int i=0; i<m; i++){
@@ -324,6 +336,10 @@ public class GeneratedClass {
   
   public void setY(final ArrayList y) {
     this.y = y;
+  }
+  
+  public int getY(final int id1) {
+    return (int)y.get(id1);
   }
   
   public void readY(final String[] tokens) {
@@ -492,9 +508,26 @@ public class GeneratedClass {
   }
   
   public boolean output_check() {
-    bool ok = true;
-    if (!(tp==tp;)) ok = false;
-    if (!(;)) ok = false;
+	  GeneratedClass in = new GeneratedClass();
+	  GeneratedClass out = new GeneratedClass();
+	  GeneratedClass ans = new GeneratedClass();
+    ArrayList cond_arr;
+    boolean ok = true;
+    if (!(ans.tp==out.tp)) ok = false;
+    cond_arr = new ArrayList<Boolean>();
+    for (int i=0; i<in.p.size(); i++){
+    if (out.getY(i)>0) cond_arr.add(true);
+    else cond_arr.add(false);
+    }
+    if (!(LibraryFunction.sum(in.p, cond_arr)==out.tp)) ok = false;
+    for (int j=0; j<m; j++){
+    cond_arr = new ArrayList<Boolean>();
+    for (int i=0; i<in.w.size(); i++){
+    if (out.getY(i)==j) cond_arr.add(true);
+    else cond_arr.add(false);
+    }
+    if (!(LibraryFunction.sum(in.w, cond_arr)<=in.getC(j))) ok = false;
+    }
     return ok;
   }
   

@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage;
 import org.xtext.example.checkerdsl.checkerDsl.ChkExpression;
 import org.xtext.example.checkerdsl.checkerDsl.ChkLoopExpression;
+import org.xtext.example.checkerdsl.checkerDsl.ChkVariable;
 import org.xtext.example.checkerdsl.checkerDsl.ChkVariables;
 
 /**
@@ -48,7 +49,7 @@ public class ChkLoopExpressionImpl extends MinimalEObjectImpl.Container implemen
    * @generated
    * @ordered
    */
-  protected ChkVariables index;
+  protected ChkVariable index;
 
   /**
    * The cached value of the '{@link #getMaxIndex() <em>Max Index</em>}' containment reference.
@@ -96,7 +97,7 @@ public class ChkLoopExpressionImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public ChkVariables getIndex()
+  public ChkVariable getIndex()
   {
     return index;
   }
@@ -106,9 +107,9 @@ public class ChkLoopExpressionImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetIndex(ChkVariables newIndex, NotificationChain msgs)
+  public NotificationChain basicSetIndex(ChkVariable newIndex, NotificationChain msgs)
   {
-    ChkVariables oldIndex = index;
+    ChkVariable oldIndex = index;
     index = newIndex;
     if (eNotificationRequired())
     {
@@ -123,7 +124,7 @@ public class ChkLoopExpressionImpl extends MinimalEObjectImpl.Container implemen
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setIndex(ChkVariables newIndex)
+  public void setIndex(ChkVariable newIndex)
   {
     if (newIndex != index)
     {
@@ -253,7 +254,7 @@ public class ChkLoopExpressionImpl extends MinimalEObjectImpl.Container implemen
     switch (featureID)
     {
       case CheckerDslPackage.CHK_LOOP_EXPRESSION__INDEX:
-        setIndex((ChkVariables)newValue);
+        setIndex((ChkVariable)newValue);
         return;
       case CheckerDslPackage.CHK_LOOP_EXPRESSION__MAX_INDEX:
         setMaxIndex((ChkVariables)newValue);
@@ -277,7 +278,7 @@ public class ChkLoopExpressionImpl extends MinimalEObjectImpl.Container implemen
     switch (featureID)
     {
       case CheckerDslPackage.CHK_LOOP_EXPRESSION__INDEX:
-        setIndex((ChkVariables)null);
+        setIndex((ChkVariable)null);
         return;
       case CheckerDslPackage.CHK_LOOP_EXPRESSION__MAX_INDEX:
         setMaxIndex((ChkVariables)null);

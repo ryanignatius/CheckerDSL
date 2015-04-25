@@ -1752,16 +1752,16 @@ ruleHelper returns [EObject current=null]
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getHelperAccess().getVarChkVariablesParserRuleCall_3_2_0()); 
+	        newCompositeNode(grammarAccess.getHelperAccess().getVar3ChkVariablesParserRuleCall_3_2_0()); 
 	    }
-		lv_var_14_0=ruleChkVariables		{
+		lv_var3_14_0=ruleChkVariables		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getHelperRule());
 	        }
        		set(
        			$current, 
-       			"var",
-        		lv_var_14_0, 
+       			"var3",
+        		lv_var3_14_0, 
         		"ChkVariables");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -2005,556 +2005,537 @@ ruleHelper returns [EObject current=null]
     {
     	newLeafNode(otherlv_37, grammarAccess.getHelperAccess().getLeftParenthesisKeyword_7_1());
     }
-((
+(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getHelperAccess().getGChkItemGroupParserRuleCall_7_2_0_0()); 
+	        newCompositeNode(grammarAccess.getHelperAccess().getVarChkVariableParserRuleCall_7_2_0()); 
 	    }
-		lv_g_38_0=ruleChkItemGroup		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getHelperRule());
-	        }
-       		set(
-       			$current, 
-       			"g",
-        		lv_g_38_0, 
-        		"ChkItemGroup");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-)
-    |(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getHelperAccess().getVarChkVariableParserRuleCall_7_2_1_0()); 
-	    }
-		lv_var_39_0=ruleChkVariable		{
+		lv_var_38_0=ruleChkVariable		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getHelperRule());
 	        }
        		set(
        			$current, 
        			"var",
-        		lv_var_39_0, 
+        		lv_var_38_0, 
         		"ChkVariable");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-))(	otherlv_40=',' 
+)(	otherlv_39=',' 
     {
-    	newLeafNode(otherlv_40, grammarAccess.getHelperAccess().getCommaKeyword_7_3_0());
+    	newLeafNode(otherlv_39, grammarAccess.getHelperAccess().getCommaKeyword_7_3_0());
     }
 (
 (
 		{ 
 	        newCompositeNode(grammarAccess.getHelperAccess().getVar3ChkVariablesParserRuleCall_7_3_1_0()); 
 	    }
-		lv_var3_41_0=ruleChkVariables		{
+		lv_var3_40_0=ruleChkVariables		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getHelperRule());
 	        }
        		set(
        			$current, 
        			"var3",
-        		lv_var3_41_0, 
+        		lv_var3_40_0, 
         		"ChkVariables");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-))?	otherlv_42=')' 
+))?	otherlv_41=')' 
     {
-    	newLeafNode(otherlv_42, grammarAccess.getHelperAccess().getRightParenthesisKeyword_7_4());
+    	newLeafNode(otherlv_41, grammarAccess.getHelperAccess().getRightParenthesisKeyword_7_4());
     }
 )
     |((
 (
-		lv_random_43_0=	'random' 
+		lv_random_42_0=	'random' 
     {
-        newLeafNode(lv_random_43_0, grammarAccess.getHelperAccess().getRandomRandomKeyword_8_0_0());
+        newLeafNode(lv_random_42_0, grammarAccess.getHelperAccess().getRandomRandomKeyword_8_0_0());
     }
  
 	    {
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getHelperRule());
 	        }
-       		setWithLastConsumed($current, "random", lv_random_43_0, "random");
+       		setWithLastConsumed($current, "random", lv_random_42_0, "random");
 	    }
 
 )
-)	otherlv_44='(' 
+)	otherlv_43='(' 
     {
-    	newLeafNode(otherlv_44, grammarAccess.getHelperAccess().getLeftParenthesisKeyword_8_1());
+    	newLeafNode(otherlv_43, grammarAccess.getHelperAccess().getLeftParenthesisKeyword_8_1());
     }
 ((
 (
 		{ 
 	        newCompositeNode(grammarAccess.getHelperAccess().getVar3ChkVariablesParserRuleCall_8_2_0_0()); 
 	    }
-		lv_var3_45_0=ruleChkVariables		{
+		lv_var3_44_0=ruleChkVariables		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getHelperRule());
 	        }
        		set(
        			$current, 
        			"var3",
-        		lv_var3_45_0, 
+        		lv_var3_44_0, 
         		"ChkVariables");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)	otherlv_46='..' 
+)	otherlv_45='..' 
     {
-    	newLeafNode(otherlv_46, grammarAccess.getHelperAccess().getFullStopFullStopKeyword_8_2_1());
+    	newLeafNode(otherlv_45, grammarAccess.getHelperAccess().getFullStopFullStopKeyword_8_2_1());
     }
 (
 (
 		{ 
 	        newCompositeNode(grammarAccess.getHelperAccess().getVar4ChkVariablesParserRuleCall_8_2_2_0()); 
 	    }
-		lv_var4_47_0=ruleChkVariables		{
+		lv_var4_46_0=ruleChkVariables		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getHelperRule());
 	        }
        		set(
        			$current, 
        			"var4",
-        		lv_var4_47_0, 
+        		lv_var4_46_0, 
         		"ChkVariables");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-))?	otherlv_48=')' 
+))?	otherlv_47=')' 
     {
-    	newLeafNode(otherlv_48, grammarAccess.getHelperAccess().getRightParenthesisKeyword_8_3());
+    	newLeafNode(otherlv_47, grammarAccess.getHelperAccess().getRightParenthesisKeyword_8_3());
     }
 )
     |((
 (
-		lv_size_49_0=	'size' 
+		lv_size_48_0=	'size' 
     {
-        newLeafNode(lv_size_49_0, grammarAccess.getHelperAccess().getSizeSizeKeyword_9_0_0());
+        newLeafNode(lv_size_48_0, grammarAccess.getHelperAccess().getSizeSizeKeyword_9_0_0());
     }
  
 	    {
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getHelperRule());
 	        }
-       		setWithLastConsumed($current, "size", lv_size_49_0, "size");
+       		setWithLastConsumed($current, "size", lv_size_48_0, "size");
 	    }
 
 )
-)	otherlv_50='(' 
+)	otherlv_49='(' 
     {
-    	newLeafNode(otherlv_50, grammarAccess.getHelperAccess().getLeftParenthesisKeyword_9_1());
+    	newLeafNode(otherlv_49, grammarAccess.getHelperAccess().getLeftParenthesisKeyword_9_1());
     }
 (
 (
 		{ 
 	        newCompositeNode(grammarAccess.getHelperAccess().getVarChkVariableParserRuleCall_9_2_0()); 
 	    }
-		lv_var_51_0=ruleChkVariable		{
+		lv_var_50_0=ruleChkVariable		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getHelperRule());
 	        }
        		set(
        			$current, 
        			"var",
-        		lv_var_51_0, 
+        		lv_var_50_0, 
         		"ChkVariable");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)	otherlv_52=')' 
+)	otherlv_51=')' 
     {
-    	newLeafNode(otherlv_52, grammarAccess.getHelperAccess().getRightParenthesisKeyword_9_3());
+    	newLeafNode(otherlv_51, grammarAccess.getHelperAccess().getRightParenthesisKeyword_9_3());
     }
 )
     |((
 (
-		lv_permute_53_0=	'permute' 
+		lv_permute_52_0=	'permute' 
     {
-        newLeafNode(lv_permute_53_0, grammarAccess.getHelperAccess().getPermutePermuteKeyword_10_0_0());
+        newLeafNode(lv_permute_52_0, grammarAccess.getHelperAccess().getPermutePermuteKeyword_10_0_0());
     }
  
 	    {
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getHelperRule());
 	        }
-       		setWithLastConsumed($current, "permute", lv_permute_53_0, "permute");
+       		setWithLastConsumed($current, "permute", lv_permute_52_0, "permute");
 	    }
 
 )
-)	otherlv_54='(' 
+)	otherlv_53='(' 
     {
-    	newLeafNode(otherlv_54, grammarAccess.getHelperAccess().getLeftParenthesisKeyword_10_1());
+    	newLeafNode(otherlv_53, grammarAccess.getHelperAccess().getLeftParenthesisKeyword_10_1());
     }
 (
 (
 		{ 
 	        newCompositeNode(grammarAccess.getHelperAccess().getVarChkVariableParserRuleCall_10_2_0()); 
 	    }
-		lv_var_55_0=ruleChkVariable		{
+		lv_var_54_0=ruleChkVariable		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getHelperRule());
 	        }
        		set(
        			$current, 
        			"var",
-        		lv_var_55_0, 
+        		lv_var_54_0, 
         		"ChkVariable");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)	otherlv_56=')' 
+)	otherlv_55=')' 
     {
-    	newLeafNode(otherlv_56, grammarAccess.getHelperAccess().getRightParenthesisKeyword_10_3());
+    	newLeafNode(otherlv_55, grammarAccess.getHelperAccess().getRightParenthesisKeyword_10_3());
     }
 )
     |((
 (
-		lv_plus_57_0=	'plus' 
+		lv_plus_56_0=	'plus' 
     {
-        newLeafNode(lv_plus_57_0, grammarAccess.getHelperAccess().getPlusPlusKeyword_11_0_0());
+        newLeafNode(lv_plus_56_0, grammarAccess.getHelperAccess().getPlusPlusKeyword_11_0_0());
     }
  
 	    {
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getHelperRule());
 	        }
-       		setWithLastConsumed($current, "plus", lv_plus_57_0, "plus");
+       		setWithLastConsumed($current, "plus", lv_plus_56_0, "plus");
 	    }
 
 )
-)	otherlv_58='(' 
+)	otherlv_57='(' 
     {
-    	newLeafNode(otherlv_58, grammarAccess.getHelperAccess().getLeftParenthesisKeyword_11_1());
+    	newLeafNode(otherlv_57, grammarAccess.getHelperAccess().getLeftParenthesisKeyword_11_1());
     }
 (
 (
 		{ 
 	        newCompositeNode(grammarAccess.getHelperAccess().getVarChkVariableParserRuleCall_11_2_0()); 
 	    }
-		lv_var_59_0=ruleChkVariable		{
+		lv_var_58_0=ruleChkVariable		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getHelperRule());
 	        }
        		set(
        			$current, 
        			"var",
-        		lv_var_59_0, 
+        		lv_var_58_0, 
         		"ChkVariable");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)	otherlv_60=',' 
+)	otherlv_59=',' 
     {
-    	newLeafNode(otherlv_60, grammarAccess.getHelperAccess().getCommaKeyword_11_3());
+    	newLeafNode(otherlv_59, grammarAccess.getHelperAccess().getCommaKeyword_11_3());
     }
 (
 (
 		{ 
 	        newCompositeNode(grammarAccess.getHelperAccess().getVar3ChkVariablesParserRuleCall_11_4_0()); 
 	    }
-		lv_var3_61_0=ruleChkVariables		{
+		lv_var3_60_0=ruleChkVariables		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getHelperRule());
 	        }
        		set(
        			$current, 
        			"var3",
-        		lv_var3_61_0, 
+        		lv_var3_60_0, 
         		"ChkVariables");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)	otherlv_62=')' 
+)	otherlv_61=')' 
     {
-    	newLeafNode(otherlv_62, grammarAccess.getHelperAccess().getRightParenthesisKeyword_11_5());
+    	newLeafNode(otherlv_61, grammarAccess.getHelperAccess().getRightParenthesisKeyword_11_5());
     }
 )
     |((
 (
-		lv_multiply_63_0=	'multiply' 
+		lv_multiply_62_0=	'multiply' 
     {
-        newLeafNode(lv_multiply_63_0, grammarAccess.getHelperAccess().getMultiplyMultiplyKeyword_12_0_0());
+        newLeafNode(lv_multiply_62_0, grammarAccess.getHelperAccess().getMultiplyMultiplyKeyword_12_0_0());
     }
  
 	    {
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getHelperRule());
 	        }
-       		setWithLastConsumed($current, "multiply", lv_multiply_63_0, "multiply");
+       		setWithLastConsumed($current, "multiply", lv_multiply_62_0, "multiply");
 	    }
 
 )
-)	otherlv_64='(' 
+)	otherlv_63='(' 
     {
-    	newLeafNode(otherlv_64, grammarAccess.getHelperAccess().getLeftParenthesisKeyword_12_1());
+    	newLeafNode(otherlv_63, grammarAccess.getHelperAccess().getLeftParenthesisKeyword_12_1());
     }
 (
 (
 		{ 
 	        newCompositeNode(grammarAccess.getHelperAccess().getVarChkVariableParserRuleCall_12_2_0()); 
 	    }
-		lv_var_65_0=ruleChkVariable		{
+		lv_var_64_0=ruleChkVariable		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getHelperRule());
 	        }
        		set(
        			$current, 
        			"var",
-        		lv_var_65_0, 
+        		lv_var_64_0, 
         		"ChkVariable");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)	otherlv_66=',' 
+)	otherlv_65=',' 
     {
-    	newLeafNode(otherlv_66, grammarAccess.getHelperAccess().getCommaKeyword_12_3());
+    	newLeafNode(otherlv_65, grammarAccess.getHelperAccess().getCommaKeyword_12_3());
     }
 (
 (
 		{ 
 	        newCompositeNode(grammarAccess.getHelperAccess().getVar3ChkVariablesParserRuleCall_12_4_0()); 
 	    }
-		lv_var3_67_0=ruleChkVariables		{
+		lv_var3_66_0=ruleChkVariables		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getHelperRule());
 	        }
        		set(
        			$current, 
        			"var3",
-        		lv_var3_67_0, 
+        		lv_var3_66_0, 
         		"ChkVariables");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)	otherlv_68=')' 
+)	otherlv_67=')' 
     {
-    	newLeafNode(otherlv_68, grammarAccess.getHelperAccess().getRightParenthesisKeyword_12_5());
+    	newLeafNode(otherlv_67, grammarAccess.getHelperAccess().getRightParenthesisKeyword_12_5());
     }
 )
     |((
 (
-		lv_invert_69_0=	'invert' 
+		lv_invert_68_0=	'invert' 
     {
-        newLeafNode(lv_invert_69_0, grammarAccess.getHelperAccess().getInvertInvertKeyword_13_0_0());
+        newLeafNode(lv_invert_68_0, grammarAccess.getHelperAccess().getInvertInvertKeyword_13_0_0());
     }
  
 	    {
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getHelperRule());
 	        }
-       		setWithLastConsumed($current, "invert", lv_invert_69_0, "invert");
+       		setWithLastConsumed($current, "invert", lv_invert_68_0, "invert");
 	    }
 
 )
-)	otherlv_70='(' 
+)	otherlv_69='(' 
     {
-    	newLeafNode(otherlv_70, grammarAccess.getHelperAccess().getLeftParenthesisKeyword_13_1());
+    	newLeafNode(otherlv_69, grammarAccess.getHelperAccess().getLeftParenthesisKeyword_13_1());
     }
 (
 (
 		{ 
 	        newCompositeNode(grammarAccess.getHelperAccess().getVarChkVariableParserRuleCall_13_2_0()); 
 	    }
-		lv_var_71_0=ruleChkVariable		{
+		lv_var_70_0=ruleChkVariable		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getHelperRule());
 	        }
        		set(
        			$current, 
        			"var",
-        		lv_var_71_0, 
+        		lv_var_70_0, 
         		"ChkVariable");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)	otherlv_72=')' 
+)	otherlv_71=')' 
     {
-    	newLeafNode(otherlv_72, grammarAccess.getHelperAccess().getRightParenthesisKeyword_13_3());
+    	newLeafNode(otherlv_71, grammarAccess.getHelperAccess().getRightParenthesisKeyword_13_3());
     }
 )
     |((
 (
-		lv_include_73_0=	'include' 
+		lv_include_72_0=	'include' 
     {
-        newLeafNode(lv_include_73_0, grammarAccess.getHelperAccess().getIncludeIncludeKeyword_14_0_0());
+        newLeafNode(lv_include_72_0, grammarAccess.getHelperAccess().getIncludeIncludeKeyword_14_0_0());
     }
  
 	    {
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getHelperRule());
 	        }
-       		setWithLastConsumed($current, "include", lv_include_73_0, "include");
+       		setWithLastConsumed($current, "include", lv_include_72_0, "include");
 	    }
 
 )
-)	otherlv_74='(' 
+)	otherlv_73='(' 
     {
-    	newLeafNode(otherlv_74, grammarAccess.getHelperAccess().getLeftParenthesisKeyword_14_1());
+    	newLeafNode(otherlv_73, grammarAccess.getHelperAccess().getLeftParenthesisKeyword_14_1());
     }
 (
 (
 		{ 
 	        newCompositeNode(grammarAccess.getHelperAccess().getVarChkVariableParserRuleCall_14_2_0()); 
 	    }
-		lv_var_75_0=ruleChkVariable		{
+		lv_var_74_0=ruleChkVariable		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getHelperRule());
 	        }
        		set(
        			$current, 
        			"var",
-        		lv_var_75_0, 
+        		lv_var_74_0, 
         		"ChkVariable");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)	otherlv_76=',' 
+)	otherlv_75=',' 
     {
-    	newLeafNode(otherlv_76, grammarAccess.getHelperAccess().getCommaKeyword_14_3());
+    	newLeafNode(otherlv_75, grammarAccess.getHelperAccess().getCommaKeyword_14_3());
     }
 (
 (
 		{ 
 	        newCompositeNode(grammarAccess.getHelperAccess().getVar3ChkVariablesParserRuleCall_14_4_0()); 
 	    }
-		lv_var3_77_0=ruleChkVariables		{
+		lv_var3_76_0=ruleChkVariables		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getHelperRule());
 	        }
        		set(
        			$current, 
        			"var3",
-        		lv_var3_77_0, 
+        		lv_var3_76_0, 
         		"ChkVariables");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)	otherlv_78=')' 
+)	otherlv_77=')' 
     {
-    	newLeafNode(otherlv_78, grammarAccess.getHelperAccess().getRightParenthesisKeyword_14_5());
+    	newLeafNode(otherlv_77, grammarAccess.getHelperAccess().getRightParenthesisKeyword_14_5());
     }
 )
     |((
 (
-		lv_exclude_79_0=	'exclude' 
+		lv_exclude_78_0=	'exclude' 
     {
-        newLeafNode(lv_exclude_79_0, grammarAccess.getHelperAccess().getExcludeExcludeKeyword_15_0_0());
+        newLeafNode(lv_exclude_78_0, grammarAccess.getHelperAccess().getExcludeExcludeKeyword_15_0_0());
     }
  
 	    {
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getHelperRule());
 	        }
-       		setWithLastConsumed($current, "exclude", lv_exclude_79_0, "exclude");
+       		setWithLastConsumed($current, "exclude", lv_exclude_78_0, "exclude");
 	    }
 
 )
-)	otherlv_80='(' 
+)	otherlv_79='(' 
     {
-    	newLeafNode(otherlv_80, grammarAccess.getHelperAccess().getLeftParenthesisKeyword_15_1());
+    	newLeafNode(otherlv_79, grammarAccess.getHelperAccess().getLeftParenthesisKeyword_15_1());
     }
 (
 (
 		{ 
 	        newCompositeNode(grammarAccess.getHelperAccess().getVarChkVariableParserRuleCall_15_2_0()); 
 	    }
-		lv_var_81_0=ruleChkVariable		{
+		lv_var_80_0=ruleChkVariable		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getHelperRule());
 	        }
        		set(
        			$current, 
        			"var",
-        		lv_var_81_0, 
+        		lv_var_80_0, 
         		"ChkVariable");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)	otherlv_82=',' 
+)	otherlv_81=',' 
     {
-    	newLeafNode(otherlv_82, grammarAccess.getHelperAccess().getCommaKeyword_15_3());
+    	newLeafNode(otherlv_81, grammarAccess.getHelperAccess().getCommaKeyword_15_3());
     }
 (
 (
 		{ 
 	        newCompositeNode(grammarAccess.getHelperAccess().getVar3ChkVariablesParserRuleCall_15_4_0()); 
 	    }
-		lv_var3_83_0=ruleChkVariables		{
+		lv_var3_82_0=ruleChkVariables		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getHelperRule());
 	        }
        		set(
        			$current, 
        			"var3",
-        		lv_var3_83_0, 
+        		lv_var3_82_0, 
         		"ChkVariables");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)	otherlv_84=')' 
+)	otherlv_83=')' 
     {
-    	newLeafNode(otherlv_84, grammarAccess.getHelperAccess().getRightParenthesisKeyword_15_5());
+    	newLeafNode(otherlv_83, grammarAccess.getHelperAccess().getRightParenthesisKeyword_15_5());
     }
 )
     |((
 (
-		lv_compositional_85_0=	'compositional' 
+		lv_compositional_84_0=	'compositional' 
     {
-        newLeafNode(lv_compositional_85_0, grammarAccess.getHelperAccess().getCompositionalCompositionalKeyword_16_0_0());
+        newLeafNode(lv_compositional_84_0, grammarAccess.getHelperAccess().getCompositionalCompositionalKeyword_16_0_0());
     }
  
 	    {
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getHelperRule());
 	        }
-       		setWithLastConsumed($current, "compositional", lv_compositional_85_0, "compositional");
+       		setWithLastConsumed($current, "compositional", lv_compositional_84_0, "compositional");
 	    }
 
 )
-)	otherlv_86='(' 
+)	otherlv_85='(' 
     {
-    	newLeafNode(otherlv_86, grammarAccess.getHelperAccess().getLeftParenthesisKeyword_16_1());
+    	newLeafNode(otherlv_85, grammarAccess.getHelperAccess().getLeftParenthesisKeyword_16_1());
     }
 (
 (
 		{ 
 	        newCompositeNode(grammarAccess.getHelperAccess().getVarChkVariableParserRuleCall_16_2_0()); 
 	    }
-		lv_var_87_0=ruleChkVariable		{
+		lv_var_86_0=ruleChkVariable		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getHelperRule());
 	        }
        		set(
        			$current, 
        			"var",
-        		lv_var_87_0, 
+        		lv_var_86_0, 
         		"ChkVariable");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)	otherlv_88=')' 
+)	otherlv_87=')' 
     {
-    	newLeafNode(otherlv_88, grammarAccess.getHelperAccess().getRightParenthesisKeyword_16_3());
+    	newLeafNode(otherlv_87, grammarAccess.getHelperAccess().getRightParenthesisKeyword_16_3());
     }
 ))
 ;
@@ -3062,9 +3043,9 @@ ruleChkLoopExpression returns [EObject current=null]
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getChkLoopExpressionAccess().getIndexChkVariablesParserRuleCall_2_0()); 
+	        newCompositeNode(grammarAccess.getChkLoopExpressionAccess().getIndexChkVariableParserRuleCall_2_0()); 
 	    }
-		lv_index_2_0=ruleChkVariables		{
+		lv_index_2_0=ruleChkVariable		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getChkLoopExpressionRule());
 	        }
@@ -3072,7 +3053,7 @@ ruleChkLoopExpression returns [EObject current=null]
        			$current, 
        			"index",
         		lv_index_2_0, 
-        		"ChkVariables");
+        		"ChkVariable");
 	        afterParserOrEnumRuleCall();
 	    }
 

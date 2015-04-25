@@ -823,13 +823,22 @@ public interface CheckerDslPackage extends EPackage
   int HELPER__PRIME = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 4;
 
   /**
+   * The feature id for the '<em><b>Var3</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HELPER__VAR3 = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 5;
+
+  /**
    * The feature id for the '<em><b>Swap</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int HELPER__SWAP = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 5;
+  int HELPER__SWAP = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 6;
 
   /**
    * The feature id for the '<em><b>Var1</b></em>' attribute.
@@ -838,7 +847,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int HELPER__VAR1 = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 6;
+  int HELPER__VAR1 = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 7;
 
   /**
    * The feature id for the '<em><b>Var2</b></em>' attribute.
@@ -847,7 +856,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int HELPER__VAR2 = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 7;
+  int HELPER__VAR2 = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 8;
 
   /**
    * The feature id for the '<em><b>Select</b></em>' attribute.
@@ -856,7 +865,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int HELPER__SELECT = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 8;
+  int HELPER__SELECT = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 9;
 
   /**
    * The feature id for the '<em><b>Vars</b></em>' attribute list.
@@ -865,7 +874,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int HELPER__VARS = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 9;
+  int HELPER__VARS = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 10;
 
   /**
    * The feature id for the '<em><b>Add</b></em>' attribute.
@@ -874,16 +883,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int HELPER__ADD = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 10;
-
-  /**
-   * The feature id for the '<em><b>Var3</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int HELPER__VAR3 = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 11;
+  int HELPER__ADD = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 11;
 
   /**
    * The feature id for the '<em><b>Remove</b></em>' attribute.
@@ -895,22 +895,13 @@ public interface CheckerDslPackage extends EPackage
   int HELPER__REMOVE = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 12;
 
   /**
-   * The feature id for the '<em><b>G</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int HELPER__G = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 13;
-
-  /**
    * The feature id for the '<em><b>Random</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int HELPER__RANDOM = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 14;
+  int HELPER__RANDOM = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 13;
 
   /**
    * The feature id for the '<em><b>Var4</b></em>' containment reference.
@@ -919,7 +910,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int HELPER__VAR4 = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 15;
+  int HELPER__VAR4 = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 14;
 
   /**
    * The feature id for the '<em><b>Size</b></em>' attribute.
@@ -928,7 +919,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int HELPER__SIZE = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 16;
+  int HELPER__SIZE = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 15;
 
   /**
    * The feature id for the '<em><b>Permute</b></em>' attribute.
@@ -937,7 +928,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int HELPER__PERMUTE = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 17;
+  int HELPER__PERMUTE = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 16;
 
   /**
    * The feature id for the '<em><b>Plus</b></em>' attribute.
@@ -946,7 +937,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int HELPER__PLUS = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 18;
+  int HELPER__PLUS = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 17;
 
   /**
    * The feature id for the '<em><b>Multiply</b></em>' attribute.
@@ -955,7 +946,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int HELPER__MULTIPLY = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 19;
+  int HELPER__MULTIPLY = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 18;
 
   /**
    * The feature id for the '<em><b>Invert</b></em>' attribute.
@@ -964,7 +955,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int HELPER__INVERT = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 20;
+  int HELPER__INVERT = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 19;
 
   /**
    * The feature id for the '<em><b>Include</b></em>' attribute.
@@ -973,7 +964,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int HELPER__INCLUDE = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 21;
+  int HELPER__INCLUDE = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 20;
 
   /**
    * The feature id for the '<em><b>Exclude</b></em>' attribute.
@@ -982,7 +973,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int HELPER__EXCLUDE = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 22;
+  int HELPER__EXCLUDE = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 21;
 
   /**
    * The feature id for the '<em><b>Compositional</b></em>' attribute.
@@ -991,7 +982,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int HELPER__COMPOSITIONAL = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 23;
+  int HELPER__COMPOSITIONAL = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 22;
 
   /**
    * The number of structural features of the '<em>Helper</em>' class.
@@ -1000,7 +991,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int HELPER_FEATURE_COUNT = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 24;
+  int HELPER_FEATURE_COUNT = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 23;
 
   /**
    * The meta object id for the '{@link org.xtext.example.checkerdsl.checkerDsl.impl.ChkRelationalExpressionImpl <em>Chk Relational Expression</em>}' class.
@@ -2212,6 +2203,17 @@ public interface CheckerDslPackage extends EPackage
   EAttribute getHelper_Prime();
 
   /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getVar3 <em>Var3</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Var3</em>'.
+   * @see org.xtext.example.checkerdsl.checkerDsl.Helper#getVar3()
+   * @see #getHelper()
+   * @generated
+   */
+  EReference getHelper_Var3();
+
+  /**
    * Returns the meta object for the attribute '{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getSwap <em>Swap</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2278,17 +2280,6 @@ public interface CheckerDslPackage extends EPackage
   EAttribute getHelper_Add();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getVar3 <em>Var3</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Var3</em>'.
-   * @see org.xtext.example.checkerdsl.checkerDsl.Helper#getVar3()
-   * @see #getHelper()
-   * @generated
-   */
-  EReference getHelper_Var3();
-
-  /**
    * Returns the meta object for the attribute '{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getRemove <em>Remove</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2298,17 +2289,6 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    */
   EAttribute getHelper_Remove();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getG <em>G</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>G</em>'.
-   * @see org.xtext.example.checkerdsl.checkerDsl.Helper#getG()
-   * @see #getHelper()
-   * @generated
-   */
-  EReference getHelper_G();
 
   /**
    * Returns the meta object for the attribute '{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getRandom <em>Random</em>}'.
@@ -3457,6 +3437,14 @@ public interface CheckerDslPackage extends EPackage
     EAttribute HELPER__PRIME = eINSTANCE.getHelper_Prime();
 
     /**
+     * The meta object literal for the '<em><b>Var3</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference HELPER__VAR3 = eINSTANCE.getHelper_Var3();
+
+    /**
      * The meta object literal for the '<em><b>Swap</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3505,28 +3493,12 @@ public interface CheckerDslPackage extends EPackage
     EAttribute HELPER__ADD = eINSTANCE.getHelper_Add();
 
     /**
-     * The meta object literal for the '<em><b>Var3</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference HELPER__VAR3 = eINSTANCE.getHelper_Var3();
-
-    /**
      * The meta object literal for the '<em><b>Remove</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     EAttribute HELPER__REMOVE = eINSTANCE.getHelper_Remove();
-
-    /**
-     * The meta object literal for the '<em><b>G</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference HELPER__G = eINSTANCE.getHelper_G();
 
     /**
      * The meta object literal for the '<em><b>Random</b></em>' attribute feature.

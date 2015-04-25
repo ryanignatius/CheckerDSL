@@ -1433,7 +1433,7 @@ public class CheckerDslSemanticSequencer extends XbaseSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (index=ChkVariables maxIndex=ChkVariables ex+=ChkExpression*)
+	 *     (index=ChkVariable maxIndex=ChkVariables ex+=ChkExpression*)
 	 */
 	protected void sequence_ChkLoopExpression(EObject context, ChkLoopExpression semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1568,11 +1568,11 @@ public class CheckerDslSemanticSequencer extends XbaseSemanticSequencer {
 	 *         (sum='sum' var=ChkVariable) | 
 	 *         (max='max' var=ChkVariable) | 
 	 *         (min='min' var=ChkVariable) | 
-	 *         (prime='prime' var=ChkVariables) | 
+	 *         (prime='prime' var3=ChkVariables) | 
 	 *         (swap='swap' var=ChkVariable var1=ValidID var2=ValidID) | 
 	 *         (select='select' vars+=ValidID vars+=ValidID*) | 
 	 *         (add='add' var=ChkVariable var3=ChkVariables) | 
-	 *         (remove='remove' (g=ChkItemGroup | var=ChkVariable) var3=ChkVariables?) | 
+	 *         (remove='remove' var=ChkVariable var3=ChkVariables?) | 
 	 *         (random='random' (var3=ChkVariables var4=ChkVariables)?) | 
 	 *         (size='size' var=ChkVariable) | 
 	 *         (permute='permute' var=ChkVariable) | 

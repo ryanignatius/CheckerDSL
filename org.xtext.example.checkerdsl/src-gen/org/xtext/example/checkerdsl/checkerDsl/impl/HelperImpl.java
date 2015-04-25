@@ -10,7 +10,6 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -18,7 +17,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EDataTypeEList;
 
 import org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage;
-import org.xtext.example.checkerdsl.checkerDsl.ChkItemGroup;
+import org.xtext.example.checkerdsl.checkerDsl.ChkVariable;
 import org.xtext.example.checkerdsl.checkerDsl.ChkVariables;
 import org.xtext.example.checkerdsl.checkerDsl.Helper;
 
@@ -35,15 +34,14 @@ import org.xtext.example.checkerdsl.checkerDsl.Helper;
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.HelperImpl#getMax <em>Max</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.HelperImpl#getMin <em>Min</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.HelperImpl#getPrime <em>Prime</em>}</li>
+ *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.HelperImpl#getVar3 <em>Var3</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.HelperImpl#getSwap <em>Swap</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.HelperImpl#getVar1 <em>Var1</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.HelperImpl#getVar2 <em>Var2</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.HelperImpl#getSelect <em>Select</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.HelperImpl#getVars <em>Vars</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.HelperImpl#getAdd <em>Add</em>}</li>
- *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.HelperImpl#getVar3 <em>Var3</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.HelperImpl#getRemove <em>Remove</em>}</li>
- *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.HelperImpl#getG <em>G</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.HelperImpl#getRandom <em>Random</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.HelperImpl#getVar4 <em>Var4</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.HelperImpl#getSize <em>Size</em>}</li>
@@ -88,7 +86,7 @@ public class HelperImpl extends ChkGeneralExpressionsImpl implements Helper
    * @generated
    * @ordered
    */
-  protected EObject var;
+  protected ChkVariable var;
 
   /**
    * The default value of the '{@link #getMax() <em>Max</em>}' attribute.
@@ -149,6 +147,16 @@ public class HelperImpl extends ChkGeneralExpressionsImpl implements Helper
    * @ordered
    */
   protected String prime = PRIME_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getVar3() <em>Var3</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getVar3()
+   * @generated
+   * @ordered
+   */
+  protected ChkVariables var3;
 
   /**
    * The default value of the '{@link #getSwap() <em>Swap</em>}' attribute.
@@ -261,16 +269,6 @@ public class HelperImpl extends ChkGeneralExpressionsImpl implements Helper
   protected String add = ADD_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getVar3() <em>Var3</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getVar3()
-   * @generated
-   * @ordered
-   */
-  protected ChkVariables var3;
-
-  /**
    * The default value of the '{@link #getRemove() <em>Remove</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -289,16 +287,6 @@ public class HelperImpl extends ChkGeneralExpressionsImpl implements Helper
    * @ordered
    */
   protected String remove = REMOVE_EDEFAULT;
-
-  /**
-   * The cached value of the '{@link #getG() <em>G</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getG()
-   * @generated
-   * @ordered
-   */
-  protected ChkItemGroup g;
 
   /**
    * The default value of the '{@link #getRandom() <em>Random</em>}' attribute.
@@ -539,7 +527,7 @@ public class HelperImpl extends ChkGeneralExpressionsImpl implements Helper
    * <!-- end-user-doc -->
    * @generated
    */
-  public EObject getVar()
+  public ChkVariable getVar()
   {
     return var;
   }
@@ -549,9 +537,9 @@ public class HelperImpl extends ChkGeneralExpressionsImpl implements Helper
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetVar(EObject newVar, NotificationChain msgs)
+  public NotificationChain basicSetVar(ChkVariable newVar, NotificationChain msgs)
   {
-    EObject oldVar = var;
+    ChkVariable oldVar = var;
     var = newVar;
     if (eNotificationRequired())
     {
@@ -566,7 +554,7 @@ public class HelperImpl extends ChkGeneralExpressionsImpl implements Helper
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setVar(EObject newVar)
+  public void setVar(ChkVariable newVar)
   {
     if (newVar != var)
     {
@@ -649,6 +637,54 @@ public class HelperImpl extends ChkGeneralExpressionsImpl implements Helper
     prime = newPrime;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, CheckerDslPackage.HELPER__PRIME, oldPrime, prime));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ChkVariables getVar3()
+  {
+    return var3;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetVar3(ChkVariables newVar3, NotificationChain msgs)
+  {
+    ChkVariables oldVar3 = var3;
+    var3 = newVar3;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CheckerDslPackage.HELPER__VAR3, oldVar3, newVar3);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setVar3(ChkVariables newVar3)
+  {
+    if (newVar3 != var3)
+    {
+      NotificationChain msgs = null;
+      if (var3 != null)
+        msgs = ((InternalEObject)var3).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CheckerDslPackage.HELPER__VAR3, null, msgs);
+      if (newVar3 != null)
+        msgs = ((InternalEObject)newVar3).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CheckerDslPackage.HELPER__VAR3, null, msgs);
+      msgs = basicSetVar3(newVar3, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, CheckerDslPackage.HELPER__VAR3, newVar3, newVar3));
   }
 
   /**
@@ -785,54 +821,6 @@ public class HelperImpl extends ChkGeneralExpressionsImpl implements Helper
    * <!-- end-user-doc -->
    * @generated
    */
-  public ChkVariables getVar3()
-  {
-    return var3;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetVar3(ChkVariables newVar3, NotificationChain msgs)
-  {
-    ChkVariables oldVar3 = var3;
-    var3 = newVar3;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CheckerDslPackage.HELPER__VAR3, oldVar3, newVar3);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setVar3(ChkVariables newVar3)
-  {
-    if (newVar3 != var3)
-    {
-      NotificationChain msgs = null;
-      if (var3 != null)
-        msgs = ((InternalEObject)var3).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CheckerDslPackage.HELPER__VAR3, null, msgs);
-      if (newVar3 != null)
-        msgs = ((InternalEObject)newVar3).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CheckerDslPackage.HELPER__VAR3, null, msgs);
-      msgs = basicSetVar3(newVar3, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, CheckerDslPackage.HELPER__VAR3, newVar3, newVar3));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public String getRemove()
   {
     return remove;
@@ -849,54 +837,6 @@ public class HelperImpl extends ChkGeneralExpressionsImpl implements Helper
     remove = newRemove;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, CheckerDslPackage.HELPER__REMOVE, oldRemove, remove));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public ChkItemGroup getG()
-  {
-    return g;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetG(ChkItemGroup newG, NotificationChain msgs)
-  {
-    ChkItemGroup oldG = g;
-    g = newG;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CheckerDslPackage.HELPER__G, oldG, newG);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setG(ChkItemGroup newG)
-  {
-    if (newG != g)
-    {
-      NotificationChain msgs = null;
-      if (g != null)
-        msgs = ((InternalEObject)g).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CheckerDslPackage.HELPER__G, null, msgs);
-      if (newG != null)
-        msgs = ((InternalEObject)newG).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CheckerDslPackage.HELPER__G, null, msgs);
-      msgs = basicSetG(newG, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, CheckerDslPackage.HELPER__G, newG, newG));
   }
 
   /**
@@ -1168,8 +1108,6 @@ public class HelperImpl extends ChkGeneralExpressionsImpl implements Helper
         return basicSetVar(null, msgs);
       case CheckerDslPackage.HELPER__VAR3:
         return basicSetVar3(null, msgs);
-      case CheckerDslPackage.HELPER__G:
-        return basicSetG(null, msgs);
       case CheckerDslPackage.HELPER__VAR4:
         return basicSetVar4(null, msgs);
     }
@@ -1196,6 +1134,8 @@ public class HelperImpl extends ChkGeneralExpressionsImpl implements Helper
         return getMin();
       case CheckerDslPackage.HELPER__PRIME:
         return getPrime();
+      case CheckerDslPackage.HELPER__VAR3:
+        return getVar3();
       case CheckerDslPackage.HELPER__SWAP:
         return getSwap();
       case CheckerDslPackage.HELPER__VAR1:
@@ -1208,12 +1148,8 @@ public class HelperImpl extends ChkGeneralExpressionsImpl implements Helper
         return getVars();
       case CheckerDslPackage.HELPER__ADD:
         return getAdd();
-      case CheckerDslPackage.HELPER__VAR3:
-        return getVar3();
       case CheckerDslPackage.HELPER__REMOVE:
         return getRemove();
-      case CheckerDslPackage.HELPER__G:
-        return getG();
       case CheckerDslPackage.HELPER__RANDOM:
         return getRandom();
       case CheckerDslPackage.HELPER__VAR4:
@@ -1253,7 +1189,7 @@ public class HelperImpl extends ChkGeneralExpressionsImpl implements Helper
         setSum((String)newValue);
         return;
       case CheckerDslPackage.HELPER__VAR:
-        setVar((EObject)newValue);
+        setVar((ChkVariable)newValue);
         return;
       case CheckerDslPackage.HELPER__MAX:
         setMax((String)newValue);
@@ -1263,6 +1199,9 @@ public class HelperImpl extends ChkGeneralExpressionsImpl implements Helper
         return;
       case CheckerDslPackage.HELPER__PRIME:
         setPrime((String)newValue);
+        return;
+      case CheckerDslPackage.HELPER__VAR3:
+        setVar3((ChkVariables)newValue);
         return;
       case CheckerDslPackage.HELPER__SWAP:
         setSwap((String)newValue);
@@ -1283,14 +1222,8 @@ public class HelperImpl extends ChkGeneralExpressionsImpl implements Helper
       case CheckerDslPackage.HELPER__ADD:
         setAdd((String)newValue);
         return;
-      case CheckerDslPackage.HELPER__VAR3:
-        setVar3((ChkVariables)newValue);
-        return;
       case CheckerDslPackage.HELPER__REMOVE:
         setRemove((String)newValue);
-        return;
-      case CheckerDslPackage.HELPER__G:
-        setG((ChkItemGroup)newValue);
         return;
       case CheckerDslPackage.HELPER__RANDOM:
         setRandom((String)newValue);
@@ -1340,7 +1273,7 @@ public class HelperImpl extends ChkGeneralExpressionsImpl implements Helper
         setSum(SUM_EDEFAULT);
         return;
       case CheckerDslPackage.HELPER__VAR:
-        setVar((EObject)null);
+        setVar((ChkVariable)null);
         return;
       case CheckerDslPackage.HELPER__MAX:
         setMax(MAX_EDEFAULT);
@@ -1350,6 +1283,9 @@ public class HelperImpl extends ChkGeneralExpressionsImpl implements Helper
         return;
       case CheckerDslPackage.HELPER__PRIME:
         setPrime(PRIME_EDEFAULT);
+        return;
+      case CheckerDslPackage.HELPER__VAR3:
+        setVar3((ChkVariables)null);
         return;
       case CheckerDslPackage.HELPER__SWAP:
         setSwap(SWAP_EDEFAULT);
@@ -1369,14 +1305,8 @@ public class HelperImpl extends ChkGeneralExpressionsImpl implements Helper
       case CheckerDslPackage.HELPER__ADD:
         setAdd(ADD_EDEFAULT);
         return;
-      case CheckerDslPackage.HELPER__VAR3:
-        setVar3((ChkVariables)null);
-        return;
       case CheckerDslPackage.HELPER__REMOVE:
         setRemove(REMOVE_EDEFAULT);
-        return;
-      case CheckerDslPackage.HELPER__G:
-        setG((ChkItemGroup)null);
         return;
       case CheckerDslPackage.HELPER__RANDOM:
         setRandom(RANDOM_EDEFAULT);
@@ -1432,6 +1362,8 @@ public class HelperImpl extends ChkGeneralExpressionsImpl implements Helper
         return MIN_EDEFAULT == null ? min != null : !MIN_EDEFAULT.equals(min);
       case CheckerDslPackage.HELPER__PRIME:
         return PRIME_EDEFAULT == null ? prime != null : !PRIME_EDEFAULT.equals(prime);
+      case CheckerDslPackage.HELPER__VAR3:
+        return var3 != null;
       case CheckerDslPackage.HELPER__SWAP:
         return SWAP_EDEFAULT == null ? swap != null : !SWAP_EDEFAULT.equals(swap);
       case CheckerDslPackage.HELPER__VAR1:
@@ -1444,12 +1376,8 @@ public class HelperImpl extends ChkGeneralExpressionsImpl implements Helper
         return vars != null && !vars.isEmpty();
       case CheckerDslPackage.HELPER__ADD:
         return ADD_EDEFAULT == null ? add != null : !ADD_EDEFAULT.equals(add);
-      case CheckerDslPackage.HELPER__VAR3:
-        return var3 != null;
       case CheckerDslPackage.HELPER__REMOVE:
         return REMOVE_EDEFAULT == null ? remove != null : !REMOVE_EDEFAULT.equals(remove);
-      case CheckerDslPackage.HELPER__G:
-        return g != null;
       case CheckerDslPackage.HELPER__RANDOM:
         return RANDOM_EDEFAULT == null ? random != null : !RANDOM_EDEFAULT.equals(random);
       case CheckerDslPackage.HELPER__VAR4:

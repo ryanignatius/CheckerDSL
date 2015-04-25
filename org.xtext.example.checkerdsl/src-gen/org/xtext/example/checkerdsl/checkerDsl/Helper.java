@@ -4,8 +4,6 @@ package org.xtext.example.checkerdsl.checkerDsl;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Helper</b></em>'.
@@ -20,15 +18,14 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getMax <em>Max</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getMin <em>Min</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getPrime <em>Prime</em>}</li>
+ *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getVar3 <em>Var3</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getSwap <em>Swap</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getVar1 <em>Var1</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getVar2 <em>Var2</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getSelect <em>Select</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getVars <em>Vars</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getAdd <em>Add</em>}</li>
- *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getVar3 <em>Var3</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getRemove <em>Remove</em>}</li>
- *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getG <em>G</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getRandom <em>Random</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getVar4 <em>Var4</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getSize <em>Size</em>}</li>
@@ -82,12 +79,12 @@ public interface Helper extends ChkGeneralExpressions
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Var</em>' containment reference.
-   * @see #setVar(EObject)
+   * @see #setVar(ChkVariable)
    * @see org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage#getHelper_Var()
    * @model containment="true"
    * @generated
    */
-  EObject getVar();
+  ChkVariable getVar();
 
   /**
    * Sets the value of the '{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getVar <em>Var</em>}' containment reference.
@@ -97,7 +94,7 @@ public interface Helper extends ChkGeneralExpressions
    * @see #getVar()
    * @generated
    */
-  void setVar(EObject value);
+  void setVar(ChkVariable value);
 
   /**
    * Returns the value of the '<em><b>Max</b></em>' attribute.
@@ -176,6 +173,32 @@ public interface Helper extends ChkGeneralExpressions
    * @generated
    */
   void setPrime(String value);
+
+  /**
+   * Returns the value of the '<em><b>Var3</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Var3</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Var3</em>' containment reference.
+   * @see #setVar3(ChkVariables)
+   * @see org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage#getHelper_Var3()
+   * @model containment="true"
+   * @generated
+   */
+  ChkVariables getVar3();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getVar3 <em>Var3</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Var3</em>' containment reference.
+   * @see #getVar3()
+   * @generated
+   */
+  void setVar3(ChkVariables value);
 
   /**
    * Returns the value of the '<em><b>Swap</b></em>' attribute.
@@ -324,32 +347,6 @@ public interface Helper extends ChkGeneralExpressions
   void setAdd(String value);
 
   /**
-   * Returns the value of the '<em><b>Var3</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Var3</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Var3</em>' containment reference.
-   * @see #setVar3(ChkVariables)
-   * @see org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage#getHelper_Var3()
-   * @model containment="true"
-   * @generated
-   */
-  ChkVariables getVar3();
-
-  /**
-   * Sets the value of the '{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getVar3 <em>Var3</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Var3</em>' containment reference.
-   * @see #getVar3()
-   * @generated
-   */
-  void setVar3(ChkVariables value);
-
-  /**
    * Returns the value of the '<em><b>Remove</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
@@ -374,32 +371,6 @@ public interface Helper extends ChkGeneralExpressions
    * @generated
    */
   void setRemove(String value);
-
-  /**
-   * Returns the value of the '<em><b>G</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>G</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>G</em>' containment reference.
-   * @see #setG(ChkItemGroup)
-   * @see org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage#getHelper_G()
-   * @model containment="true"
-   * @generated
-   */
-  ChkItemGroup getG();
-
-  /**
-   * Sets the value of the '{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getG <em>G</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>G</em>' containment reference.
-   * @see #getG()
-   * @generated
-   */
-  void setG(ChkItemGroup value);
 
   /**
    * Returns the value of the '<em><b>Random</b></em>' attribute.

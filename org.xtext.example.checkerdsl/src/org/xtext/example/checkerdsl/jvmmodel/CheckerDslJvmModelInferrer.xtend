@@ -56,6 +56,7 @@ class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
 	String copy_var = "";
 	int sz;
 	String class_name = "GeneratedClass"
+	String lib_class_name = "LibraryFunction"
 	JvmTypeReference tp;
   
   def dispatch void infer(Class element, 
@@ -226,6 +227,14 @@ class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
 	            members += feature.toSetter(feature.name, t)
           		
           		if (feature.sz.size() == 1){
+	          		members += feature.toMethod("get"+feature.name.toFirstUpper, t2)[
+          				parameters += element.toParameter("id1",typeRef(int))
+	          			body = '''
+	          				«var typeReturn=chkType(feature)»
+	          				return («typeReturn»)«feature.name».get(id1);
+	          			'''
+ 	         		]
+	          		
 	          		members += feature.toMethod("read"+feature.name.toFirstUpper, typeRef(void))[
 	          			parameters += element.toParameter("tokens",typeRef(String).addArrayTypeDimension)
 	          			body = '''
@@ -392,16 +401,18 @@ class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
           	members += element.toMethod("output_check", typeRef(boolean)) [
 				body = '''
 					«var checkBody = "boolean ok = true;\n"»
+					«var condArr = "ArrayList cond_arr;\n"»
 					«for (ch : feature.chk){
 		          		switch ch{
 		          			ChkExpression:{
-		          				checkBody = checkBody+"if (!("+checkExp(ch)+")) ok = false;\n"
+		          				checkBody = checkBody+checkExp(ch)
 		          			}
 		          			ChkLoopExpression:{
-		          				
+		          				checkBody = checkBody+checkLoopExp(ch)
 		          			}
 		          		}
 		          	}»
+					«condArr»
 					«checkBody»
 					return ok;
 				'''
@@ -458,11 +469,17 @@ class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
   
   def String chkVar(ChkVariable element){
   	var cc = ""
-  	// todo prefix
-  	cc = cc+element.^var
-  	// todo newtest
-  	for (v : element.v){
-  		cc = cc+"["+v+"]"
+  	if (element.pref != null) cc = cc+element.pref.type+"."
+  	if (element.v.size() == 0){
+  		// todo newtest
+  		cc = cc+element.^var
+  		
+  	} else {
+  		cc = cc+"get"+element.^var.toFirstUpper+"("
+  		for (v : element.v){
+  			cc = cc+v
+  		}
+  		cc = cc+")"
   	}
   	println("var "+cc)
   	return cc
@@ -491,20 +508,74 @@ class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
   
   def String checkExp(ChkExpression element){
   	var cc = ""
-  	var cond = ""
-  	if (element.where != null){
-  		cond = cond+"("+relationalExp(element.cond.get(0));
-  	} else cond = "true"
-	if (element.asg != null) cc = cc+"int "+element.asg+" = "
+  	if (element.asg != null) cc = cc+"int "+element.asg+" = "
 	var exp = element.exp
 	switch exp{
 		Helper:{
+			if (exp.select != null){
+				// special where handling
+				
+			} else if (exp.sum != null || exp.max != null || exp.min != null
+				|| (exp.remove != null && exp.var3 == null)
+			){
+				//  general where handling
+				var xx = -1
+				cc = cc+"cond_arr = new ArrayList<Boolean>();\n"
+				if (element.where != null){
+					cc = cc+"for (int i=0; i<"+chkVar(exp.^var)+".size(); i++){\n"
+					cc = cc+"if ("
+					for (co : element.cond){
+						if (xx >= 0){
+							if (element.type.get(xx).equals("and")) cc = cc+" && "
+							if (element.type.get(xx).equals("or")) cc = cc+" || "
+						}
+						cc = cc+relationalExp(co)
+						xx = xx+1
+					}
+					cc = cc+") cond_arr.add(true);\n"
+					cc = cc+"else cond_arr.add(false);\n"
+					cc = cc+"}\n"
+				} else {
+					cc = cc+"for (int i=0; i<"+chkVar(exp.^var)+".size(); i++){\n"
+					cc = cc+"cond_arr.add(true);\n"
+					cc = cc+"}\n"
+				}
+				if (element.op != null){
+			  		cc = cc+"if (!("
+			  	}
+			  	cc = cc+lib_class_name+"."
+				if (exp.sum != null){
+					cc = cc+"sum("+chkVar(exp.^var)+", cond_arr)"
+				} else if (exp.max != null){
+					cc = cc+"max("+chkVar(exp.^var)+", cond_arr)"
+				} else if (exp.min != null){
+					cc = cc+"min("+chkVar(exp.^var)+", cond_arr)"
+				} else if (exp.remove != null){
+					cc = cc+"remove("+chkVar(exp.^var)+", cond_arr)"
+				}
+			} else {
+				if (element.op != null){
+			  		cc = cc+"if (!("
+			  	}
+			  	cc = cc+lib_class_name+"."
+				// no where
+				if (exp.prime != null){
+					cc = cc+"prime("+chkVars(exp.var3)+");"
+				} else if (exp.random != null){
+					cc = cc+"random("+chkVars(exp.var3)+","+chkVars(exp.var4)+")"
+				} else if (exp.size != null){
+					cc = cc+"size("+chkVar(exp.^var)+")"
+				}
+			}
 			
 		}
 		ChkRelationalExpression:{
-			cc = cc+relationalExp(exp)
+			cc = cc+"if (!("+relationalExp(exp)+")) ok = false"
 		}
 		MethodCall:{
+			if (element.op != null){
+		  		cc = cc+"if (!("
+		  	}
 			cc = cc+exp.name+"("
 			var first=true
 			for (p : exp.params){
@@ -515,10 +586,28 @@ class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
 			cc = cc+")\n"
 		}
 		ChkAssignment:{
-			
+			if (element.op != null){
+		  		cc = cc+"if (!("
+		  	}
+		  	// todo assignment
 		}
 	}
+	if (element.op != null){
+		cc = cc+element.op
+		cc = cc+chkVar(element.v)+")) ok = false;\n"
+	} else cc = cc+";\n"
 	println("check "+cc)
+	return cc
+  }
+  
+  def String checkLoopExp(ChkLoopExpression element){
+  	var v = chkVar(element.index)
+  	var m = chkVars(element.maxIndex)
+  	var cc = "for (int "+v+"=0; "+v+"<"+m+"; "+v+"++){\n"
+  	for (chkex : element.ex){
+  		cc = cc+checkExp(chkex)
+  	}
+  	cc = cc+"}\n"
 	return cc
   }
   
@@ -591,6 +680,10 @@ class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
 	if (element.count.size() == 0) cc = cc+"System.out.println();\n"
 	if (!element.num.equals("1")) cc = cc+"}\n"
 	return cc
+  }
+  
+  def String chkType(ChkVariableDeclaration element) {
+	return element.type
   }
   
 }

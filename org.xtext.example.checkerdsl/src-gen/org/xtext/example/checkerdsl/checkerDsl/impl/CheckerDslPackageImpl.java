@@ -972,9 +972,9 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getHelper_Swap()
+  public EReference getHelper_Var3()
   {
-    return (EAttribute)helperEClass.getEStructuralFeatures().get(5);
+    return (EReference)helperEClass.getEStructuralFeatures().get(5);
   }
 
   /**
@@ -982,7 +982,7 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getHelper_Var1()
+  public EAttribute getHelper_Swap()
   {
     return (EAttribute)helperEClass.getEStructuralFeatures().get(6);
   }
@@ -992,7 +992,7 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getHelper_Var2()
+  public EAttribute getHelper_Var1()
   {
     return (EAttribute)helperEClass.getEStructuralFeatures().get(7);
   }
@@ -1002,7 +1002,7 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getHelper_Select()
+  public EAttribute getHelper_Var2()
   {
     return (EAttribute)helperEClass.getEStructuralFeatures().get(8);
   }
@@ -1012,7 +1012,7 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getHelper_Vars()
+  public EAttribute getHelper_Select()
   {
     return (EAttribute)helperEClass.getEStructuralFeatures().get(9);
   }
@@ -1022,7 +1022,7 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getHelper_Add()
+  public EAttribute getHelper_Vars()
   {
     return (EAttribute)helperEClass.getEStructuralFeatures().get(10);
   }
@@ -1032,9 +1032,9 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getHelper_Var3()
+  public EAttribute getHelper_Add()
   {
-    return (EReference)helperEClass.getEStructuralFeatures().get(11);
+    return (EAttribute)helperEClass.getEStructuralFeatures().get(11);
   }
 
   /**
@@ -1052,19 +1052,9 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getHelper_G()
-  {
-    return (EReference)helperEClass.getEStructuralFeatures().get(13);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EAttribute getHelper_Random()
   {
-    return (EAttribute)helperEClass.getEStructuralFeatures().get(14);
+    return (EAttribute)helperEClass.getEStructuralFeatures().get(13);
   }
 
   /**
@@ -1074,7 +1064,7 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
    */
   public EReference getHelper_Var4()
   {
-    return (EReference)helperEClass.getEStructuralFeatures().get(15);
+    return (EReference)helperEClass.getEStructuralFeatures().get(14);
   }
 
   /**
@@ -1084,7 +1074,7 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
    */
   public EAttribute getHelper_Size()
   {
-    return (EAttribute)helperEClass.getEStructuralFeatures().get(16);
+    return (EAttribute)helperEClass.getEStructuralFeatures().get(15);
   }
 
   /**
@@ -1094,7 +1084,7 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
    */
   public EAttribute getHelper_Permute()
   {
-    return (EAttribute)helperEClass.getEStructuralFeatures().get(17);
+    return (EAttribute)helperEClass.getEStructuralFeatures().get(16);
   }
 
   /**
@@ -1104,7 +1094,7 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
    */
   public EAttribute getHelper_Plus()
   {
-    return (EAttribute)helperEClass.getEStructuralFeatures().get(18);
+    return (EAttribute)helperEClass.getEStructuralFeatures().get(17);
   }
 
   /**
@@ -1114,7 +1104,7 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
    */
   public EAttribute getHelper_Multiply()
   {
-    return (EAttribute)helperEClass.getEStructuralFeatures().get(19);
+    return (EAttribute)helperEClass.getEStructuralFeatures().get(18);
   }
 
   /**
@@ -1124,7 +1114,7 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
    */
   public EAttribute getHelper_Invert()
   {
-    return (EAttribute)helperEClass.getEStructuralFeatures().get(20);
+    return (EAttribute)helperEClass.getEStructuralFeatures().get(19);
   }
 
   /**
@@ -1134,7 +1124,7 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
    */
   public EAttribute getHelper_Include()
   {
-    return (EAttribute)helperEClass.getEStructuralFeatures().get(21);
+    return (EAttribute)helperEClass.getEStructuralFeatures().get(20);
   }
 
   /**
@@ -1144,7 +1134,7 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
    */
   public EAttribute getHelper_Exclude()
   {
-    return (EAttribute)helperEClass.getEStructuralFeatures().get(22);
+    return (EAttribute)helperEClass.getEStructuralFeatures().get(21);
   }
 
   /**
@@ -1154,7 +1144,7 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
    */
   public EAttribute getHelper_Compositional()
   {
-    return (EAttribute)helperEClass.getEStructuralFeatures().get(23);
+    return (EAttribute)helperEClass.getEStructuralFeatures().get(22);
   }
 
   /**
@@ -1716,15 +1706,14 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
     createEAttribute(helperEClass, HELPER__MAX);
     createEAttribute(helperEClass, HELPER__MIN);
     createEAttribute(helperEClass, HELPER__PRIME);
+    createEReference(helperEClass, HELPER__VAR3);
     createEAttribute(helperEClass, HELPER__SWAP);
     createEAttribute(helperEClass, HELPER__VAR1);
     createEAttribute(helperEClass, HELPER__VAR2);
     createEAttribute(helperEClass, HELPER__SELECT);
     createEAttribute(helperEClass, HELPER__VARS);
     createEAttribute(helperEClass, HELPER__ADD);
-    createEReference(helperEClass, HELPER__VAR3);
     createEAttribute(helperEClass, HELPER__REMOVE);
-    createEReference(helperEClass, HELPER__G);
     createEAttribute(helperEClass, HELPER__RANDOM);
     createEReference(helperEClass, HELPER__VAR4);
     createEAttribute(helperEClass, HELPER__SIZE);
@@ -1921,19 +1910,18 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
 
     initEClass(helperEClass, Helper.class, "Helper", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getHelper_Sum(), ecorePackage.getEString(), "sum", null, 0, 1, Helper.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getHelper_Var(), ecorePackage.getEObject(), null, "var", null, 0, 1, Helper.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getHelper_Var(), this.getChkVariable(), null, "var", null, 0, 1, Helper.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getHelper_Max(), ecorePackage.getEString(), "max", null, 0, 1, Helper.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getHelper_Min(), ecorePackage.getEString(), "min", null, 0, 1, Helper.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getHelper_Prime(), ecorePackage.getEString(), "prime", null, 0, 1, Helper.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getHelper_Var3(), this.getChkVariables(), null, "var3", null, 0, 1, Helper.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getHelper_Swap(), ecorePackage.getEString(), "swap", null, 0, 1, Helper.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getHelper_Var1(), ecorePackage.getEString(), "var1", null, 0, 1, Helper.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getHelper_Var2(), ecorePackage.getEString(), "var2", null, 0, 1, Helper.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getHelper_Select(), ecorePackage.getEString(), "select", null, 0, 1, Helper.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getHelper_Vars(), ecorePackage.getEString(), "vars", null, 0, -1, Helper.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getHelper_Add(), ecorePackage.getEString(), "add", null, 0, 1, Helper.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getHelper_Var3(), this.getChkVariables(), null, "var3", null, 0, 1, Helper.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getHelper_Remove(), ecorePackage.getEString(), "remove", null, 0, 1, Helper.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getHelper_G(), this.getChkItemGroup(), null, "g", null, 0, 1, Helper.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getHelper_Random(), ecorePackage.getEString(), "random", null, 0, 1, Helper.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getHelper_Var4(), this.getChkVariables(), null, "var4", null, 0, 1, Helper.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getHelper_Size(), ecorePackage.getEString(), "size", null, 0, 1, Helper.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1962,7 +1950,7 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
     initEAttribute(getChkOperation_Operator(), ecorePackage.getEString(), "operator", null, 0, -1, ChkOperation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(chkLoopExpressionEClass, ChkLoopExpression.class, "ChkLoopExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getChkLoopExpression_Index(), this.getChkVariables(), null, "index", null, 0, 1, ChkLoopExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getChkLoopExpression_Index(), this.getChkVariable(), null, "index", null, 0, 1, ChkLoopExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getChkLoopExpression_MaxIndex(), this.getChkVariables(), null, "maxIndex", null, 0, 1, ChkLoopExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getChkLoopExpression_Ex(), this.getChkExpression(), null, "ex", null, 0, -1, ChkLoopExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

@@ -81,11 +81,11 @@ Helper:
 	(sum='sum' '(' var=ChkVariable ')' |
 		max='max'  '(' var=ChkVariable ')' |
 		min='min'  '(' var=ChkVariable ')' |
-		prime='prime'  '(' var=ChkVariables ')' |
+		prime='prime'  '(' var3=ChkVariables ')' |
 		swap='swap'  '(' var=ChkVariable ',' var1=ValidID ',' var2=ValidID ')' |
 		select='select' '(' vars+=ValidID (',' vars+=ValidID)* ')' |
 		add='add' '(' var=ChkVariable ',' var3=ChkVariables ')' |
-		remove='remove' '(' (g=ChkItemGroup | var=ChkVariable) (',' var3=ChkVariables)? ')' |
+		remove='remove' '(' var=ChkVariable (',' var3=ChkVariables)? ')' |
 		random='random' '(' ((var3=ChkVariables) '..' (var4=ChkVariables))? ')' |
 		size='size' '(' (var=ChkVariable) ')' |
 		
@@ -123,7 +123,7 @@ ChkAndOr:
 	'and' | 'or';
 
 ChkLoopExpression:
-	('for' '(' (index=ChkVariables) ',' (maxIndex=ChkVariables) ')'
+	('for' '(' (index=ChkVariable) ',' (maxIndex=ChkVariables) ')'
 		'{' (ex+=ChkExpression)* '}'
 	);
 
