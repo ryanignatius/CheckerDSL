@@ -1,4 +1,16 @@
 # Created by https://www.gitignore.io
+# modified
+
+### XText ###
+org.xtext.example.checkerdsl/.launch/
+org.xtext.example.checkerdsl/.metadata/
+org.xtext.example.checkerdsl/.recommenders/
+org.xtext.example.checkerdsl/.settings/
+org.xtext.example.checkerdsl/bin/
+org.xtext.example.checkerdsl.tests/
+org.xtext.example.checkerdsl.ui/
+org.xtext.example.checkerdsl/tesrun/.settings/
+org.xtext.example.checkerdsl/tesrun/bin/
 
 ### Eclipse ###
 *.pydevproject

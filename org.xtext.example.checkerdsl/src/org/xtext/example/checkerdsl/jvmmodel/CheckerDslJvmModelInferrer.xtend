@@ -30,6 +30,9 @@ import org.eclipse.xtext.common.types.impl.JvmVoidImpl
 import org.eclipse.xtext.xbase.jvmmodel.JvmTypeReferenceBuilder
 import java.util.Scanner
 import java.util.ArrayList
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
 import org.eclipse.xtext.common.types.impl.JvmFormalParameterImpl
 
 /**
@@ -45,6 +48,9 @@ class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
    * in readable way.
    */
   @Inject extension JvmTypesBuilder
+  //@Inject extension BufferedReader
+  //@Inject extension File
+  //@Inject extension FileReader
   //@Inject extension Scanner
   @Inject extension IQualifiedNameProvider
 	
@@ -53,8 +59,10 @@ class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
 	String bd3;
 	String bd2a;
 	String bd3a;
+	String mr_list = "";
 	String copy_var = "";
 	int sz;
+	int mr=0;
 	String class_name = "GeneratedClass"
 	String lib_class_name = "LibraryFunction"
 	JvmTypeReference tp;
@@ -69,7 +77,15 @@ class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
       if (element.superType != null)
         superTypes += element.superType.cloneWithProxies
       members += element.toField("sc",typeRef(java.util.Scanner))
+      members += element.toField("buf",typeRef(java.io.BufferedReader))
+      members += element.toField("fr",typeRef(java.io.FileReader))
+      members += element.toField("fl",typeRef(java.io.File))
       members += element.toField("current_subtask",typeRef(int))
+      members += element.toField("current_testcase",typeRef(int))
+      members += element.toField("num_mr",typeRef(int))
+      members += element.toField("is_valid",typeRef(boolean))[
+      	static = true
+      ]
       
       members += element.toField("cur_lines",typeRef(int))[
       	static = true
@@ -79,7 +95,8 @@ class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
       	parameters += element.toParameter("message",typeRef(String))
 		body = '''
       		System.out.println(message);
-      		System.exit(0);
+      		is_valid = false;
+      		//System.exit(0);
 		'''
       ]
       
@@ -353,15 +370,22 @@ class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
           InputFormat : {
           	members += feature.toMethod("readInput", typeRef(void)) [
           		documentation = feature.documentation
+          		parameters += element.toParameter("num",typeRef(int))
 	      		bd2 = "int sz = 0;\n"
+	      		bd2 = bd2+class_name+".is_valid = true;\n"
+	      		bd2 = bd2+"String line;\n"
+	      		bd2 = bd2+"String[] tokens;\n"
+	      		bd2 = bd2+"try{\n"
+	      		bd2 = bd2+"BufferedReader reader = new BufferedReader(new FileReader(new File(\"tc/Subtask\"+current_subtask+\"/in/\"+num+\"/\"+current_testcase+\".in\")));\n"
 	      		for (p : feature.exp) {
 	            	bd2 = bd2.concat(p.inputBody)
 	          	}
-	          	/*
-	          	bd2 = bd2+"if (sc.hasNextLine()){\n"
+	          	
+	          	bd2 = bd2+"if (reader.readLine() != null){\n"
 	          	bd2 = bd2+class_name+".die(\"number of lines not match\");\n"
 				bd2 = bd2+"}\n"
-	          	*/
+	          	bd2 = bd2+"reader.close();\n"
+	          	bd2 = bd2+"} catch (Exception e){}\n"
 	          	body = '''
 		      		«bd2»
 	          	'''
@@ -371,15 +395,26 @@ class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
           OutputFormat : {
           	members += feature.toMethod("readOutput", typeRef(void)) [
           		documentation = feature.documentation
+	      		parameters += element.toParameter("num",typeRef(int))
 	      		bd3a = "int sz = 0;\n"
+	      		bd3a = bd3a+"String line;\n"
+	      		bd3a = bd3a+"String[] tokens;\n"
+	      		bd3a = bd3a+"try{\n"
+	      		bd3a = bd3a+"BufferedReader reader = new BufferedReader(new FileReader(new File(\"tc/Subtask\"+current_subtask+\"/out/\"+num+\"/\"+current_testcase+\".out\")));\n"
 	      		for (p : feature.exp) {
 	            	bd3a = bd3a.concat(p.inputBody)
 	          	}
-	          	/*
-	          	bd3a = bd3a+"if (sc.hasNextLine()){\n"
+	          	bd3a = bd3a+"if (reader.readLine() != null){\n"
 	          	bd3a = bd3a+class_name+".die(\"number of lines not match\");\n"
 				bd3a = bd3a+"}\n"
-				*/
+	          	bd3a = bd3a+"reader.close();\n"
+	          	bd3a = bd3a+"} catch (Exception e){}\n"
+	          	bd3a = bd3a+"if ("+class_name+".is_valid){\n"
+	          	bd3a = bd3a+"if (num == 0){\n"
+	          	bd3a = bd3a+mr_list
+	          	bd3a = bd3a+"} else {\n"
+	          	// migrate to new in/0
+	          	bd3a = bd3a+"}\n}\n"
 	          	body = '''
 		      		«bd3a»
 	          	'''
@@ -420,6 +455,8 @@ class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
           }
           
           MR:{
+          	mr = mr+1
+          	mr_list = mr_list+"mr_followup_"+feature.num+"();\n"
           	members += element.toMethod("mr_followup_"+feature.num, typeRef(void)) [
 				body = '''
 					initMRVar();
@@ -457,9 +494,11 @@ class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
 		body = '''
 			sc = new Scanner(System.in);
 			current_subtask = 1;
+			current_testcase = 1;
+			num_mr = «mr»;
 			«class_name».cur_lines = 1;
-			readInput();
-			readOutput();
+			readInput(0);
+			readOutput(0);
 			writeOutput();
 		'''
 		]
@@ -644,11 +683,10 @@ class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
 		}
 	}
 	cc = cc+";\n"
-	cc = cc+"if (sc.hasNextLine()){\n"
-	cc = cc+"String st = sc.nextLine();\n"
-	cc = cc+"st = st.trim();\n"
-	cc = cc+"st = st.replaceAll(\"\\\\s+\", \" \");\n"
-	cc = cc+"String[] tokens = st.split(\" \");\n"
+	cc = cc+"if ((line = reader.readLine()) != null){\n"
+	cc = cc+"line = line.trim();\n"
+	cc = cc+"line = line.replaceAll(\"\\\\s+\", \" \");\n"
+	cc = cc+"tokens = line.split(\" \");\n"
 	cc = cc+"if (tokens.length == sz){\n"
 	for (v : element.^var){
 		if (element.count.size() == 0){

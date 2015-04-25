@@ -1,3 +1,6 @@
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -5,13 +8,26 @@ import java.util.Scanner;
 public class GeneratedClass {
   private Scanner sc;
   
+  private BufferedReader buf;
+  
+  private FileReader fr;
+  
+  private File fl;
+  
   private int current_subtask;
+  
+  private int current_testcase;
+  
+  private int num_mr;
+  
+  private static boolean is_valid;
   
   private static int cur_lines;
   
   public static void die(final String message) {
     System.out.println(message);
-    System.exit(0);
+    is_valid = false;
+    //System.exit(0);
   }
   
   public int intReader(final String token) {
@@ -402,14 +418,18 @@ public class GeneratedClass {
   /**
    * input format
    */
-  public void readInput() {
+  public void readInput(final int num) {
     int sz = 0;
+    GeneratedClass.is_valid = true;
+    String line;
+    String[] tokens;
+    try{
+    BufferedReader reader = new BufferedReader(new FileReader(new File("tc/Subtask"+current_subtask+"/in/"+num+"/"+current_testcase+".in")));
     sz = 2;
-    if (sc.hasNextLine()){
-    String st = sc.nextLine();
-    st = st.trim();
-    st = st.replaceAll("\\s+", " ");
-    String[] tokens = st.split(" ");
+    if ((line = reader.readLine()) != null){
+    line = line.trim();
+    line = line.replaceAll("\\s+", " ");
+    tokens = line.split(" ");
     if (tokens.length == sz){
     readN(tokens[0]);
     readM(tokens[1]);
@@ -420,11 +440,10 @@ public class GeneratedClass {
     GeneratedClass.die("number of lines not match");
     }
     sz = 0+n;
-    if (sc.hasNextLine()){
-    String st = sc.nextLine();
-    st = st.trim();
-    st = st.replaceAll("\\s+", " ");
-    String[] tokens = st.split(" ");
+    if ((line = reader.readLine()) != null){
+    line = line.trim();
+    line = line.replaceAll("\\s+", " ");
+    tokens = line.split(" ");
     if (tokens.length == sz){
     readP(tokens);
     } else {
@@ -434,11 +453,10 @@ public class GeneratedClass {
     GeneratedClass.die("number of lines not match");
     }
     sz = 0+n;
-    if (sc.hasNextLine()){
-    String st = sc.nextLine();
-    st = st.trim();
-    st = st.replaceAll("\\s+", " ");
-    String[] tokens = st.split(" ");
+    if ((line = reader.readLine()) != null){
+    line = line.trim();
+    line = line.replaceAll("\\s+", " ");
+    tokens = line.split(" ");
     if (tokens.length == sz){
     readW(tokens);
     } else {
@@ -448,11 +466,10 @@ public class GeneratedClass {
     GeneratedClass.die("number of lines not match");
     }
     sz = 0+m;
-    if (sc.hasNextLine()){
-    String st = sc.nextLine();
-    st = st.trim();
-    st = st.replaceAll("\\s+", " ");
-    String[] tokens = st.split(" ");
+    if ((line = reader.readLine()) != null){
+    line = line.trim();
+    line = line.replaceAll("\\s+", " ");
+    tokens = line.split(" ");
     if (tokens.length == sz){
     readC(tokens);
     } else {
@@ -461,19 +478,27 @@ public class GeneratedClass {
     } else {
     GeneratedClass.die("number of lines not match");
     }
+    if (reader.readLine() != null){
+    GeneratedClass.die("number of lines not match");
+    }
+    reader.close();
+    } catch (Exception e){}
   }
   
   /**
    * output format
    */
-  public void readOutput() {
+  public void readOutput(final int num) {
     int sz = 0;
+    String line;
+    String[] tokens;
+    try{
+    BufferedReader reader = new BufferedReader(new FileReader(new File("tc/Subtask"+current_subtask+"/out/"+num+"/"+current_testcase+".out")));
     sz = 0+n;
-    if (sc.hasNextLine()){
-    String st = sc.nextLine();
-    st = st.trim();
-    st = st.replaceAll("\\s+", " ");
-    String[] tokens = st.split(" ");
+    if ((line = reader.readLine()) != null){
+    line = line.trim();
+    line = line.replaceAll("\\s+", " ");
+    tokens = line.split(" ");
     if (tokens.length == sz){
     readY(tokens);
     } else {
@@ -483,11 +508,10 @@ public class GeneratedClass {
     GeneratedClass.die("number of lines not match");
     }
     sz = 1;
-    if (sc.hasNextLine()){
-    String st = sc.nextLine();
-    st = st.trim();
-    st = st.replaceAll("\\s+", " ");
-    String[] tokens = st.split(" ");
+    if ((line = reader.readLine()) != null){
+    line = line.trim();
+    line = line.replaceAll("\\s+", " ");
+    tokens = line.split(" ");
     if (tokens.length == sz){
     readTp(tokens[0]);
     } else {
@@ -495,6 +519,16 @@ public class GeneratedClass {
     }
     } else {
     GeneratedClass.die("number of lines not match");
+    }
+    if (reader.readLine() != null){
+    GeneratedClass.die("number of lines not match");
+    }
+    reader.close();
+    } catch (Exception e){}
+    if (GeneratedClass.is_valid){
+    if (num == 0){
+    } else {
+    }
     }
   }
   
@@ -506,11 +540,8 @@ public class GeneratedClass {
     writeTp();
     System.out.println();
   }
-  
+  /*
   public boolean output_check() {
-	  GeneratedClass in = new GeneratedClass();
-	  GeneratedClass out = new GeneratedClass();
-	  GeneratedClass ans = new GeneratedClass();
     ArrayList cond_arr;
     boolean ok = true;
     if (!(ans.tp==out.tp)) ok = false;
@@ -529,7 +560,7 @@ public class GeneratedClass {
     if (!(LibraryFunction.sum(in.w, cond_arr)<=in.getC(j))) ok = false;
     }
     return ok;
-  }
+  }*/
   
   public void mr_followup_1() {
     initMRVar();
@@ -644,9 +675,11 @@ public class GeneratedClass {
   public void init() {
     sc = new Scanner(System.in);
     current_subtask = 1;
+    current_testcase = 1;
+    num_mr = 10;
     GeneratedClass.cur_lines = 1;
-    readInput();
-    readOutput();
+    readInput(0);
+    readOutput(0);
     writeOutput();
   }
 }
