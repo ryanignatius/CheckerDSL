@@ -28589,8 +28589,8 @@ rule__ChkAssignment__V1Assignment_0
     }
 :
 (
-{ before(grammarAccess.getChkAssignmentAccess().getV1ChkOperationParserRuleCall_0_0()); }
-	ruleChkOperation{ after(grammarAccess.getChkAssignmentAccess().getV1ChkOperationParserRuleCall_0_0()); }
+{ before(grammarAccess.getChkAssignmentAccess().getV1ChkVariableParserRuleCall_0_0()); }
+	ruleChkVariable{ after(grammarAccess.getChkAssignmentAccess().getV1ChkVariableParserRuleCall_0_0()); }
 )
 
 ;

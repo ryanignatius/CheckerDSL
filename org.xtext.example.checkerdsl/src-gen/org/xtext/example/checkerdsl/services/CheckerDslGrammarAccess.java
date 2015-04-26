@@ -1571,7 +1571,7 @@ public class CheckerDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ChkAssignment");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cV1Assignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cV1ChkOperationParserRuleCall_0_0 = (RuleCall)cV1Assignment_0.eContents().get(0);
+		private final RuleCall cV1ChkVariableParserRuleCall_0_0 = (RuleCall)cV1Assignment_0.eContents().get(0);
 		private final Assignment cOprAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cOprChkOpAssignmentParserRuleCall_1_0 = (RuleCall)cOprAssignment_1.eContents().get(0);
 		private final Assignment cV2Assignment_2 = (Assignment)cGroup.eContents().get(2);
@@ -1580,17 +1580,17 @@ public class CheckerDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cV2HelperParserRuleCall_2_0_1 = (RuleCall)cV2Alternatives_2_0.eContents().get(1);
 		
 		//ChkAssignment:
-		//	v1=ChkOperation opr=ChkOpAssignment v2=(ChkOperation | Helper);
+		//	v1=ChkVariable opr=ChkOpAssignment v2=(ChkOperation | Helper);
 		public ParserRule getRule() { return rule; }
 
-		//v1=ChkOperation opr=ChkOpAssignment v2=(ChkOperation | Helper)
+		//v1=ChkVariable opr=ChkOpAssignment v2=(ChkOperation | Helper)
 		public Group getGroup() { return cGroup; }
 
-		//v1=ChkOperation
+		//v1=ChkVariable
 		public Assignment getV1Assignment_0() { return cV1Assignment_0; }
 
-		//ChkOperation
-		public RuleCall getV1ChkOperationParserRuleCall_0_0() { return cV1ChkOperationParserRuleCall_0_0; }
+		//ChkVariable
+		public RuleCall getV1ChkVariableParserRuleCall_0_0() { return cV1ChkVariableParserRuleCall_0_0; }
 
 		//opr=ChkOpAssignment
 		public Assignment getOprAssignment_1() { return cOprAssignment_1; }
@@ -2700,7 +2700,7 @@ public class CheckerDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//ChkAssignment:
-	//	v1=ChkOperation opr=ChkOpAssignment v2=(ChkOperation | Helper);
+	//	v1=ChkVariable opr=ChkOpAssignment v2=(ChkOperation | Helper);
 	public ChkAssignmentElements getChkAssignmentAccess() {
 		return pChkAssignment;
 	}

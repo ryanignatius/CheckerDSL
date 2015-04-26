@@ -136,7 +136,7 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ChkAssignment" eSuperTypes="#//ChkGeneralExpressions">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="v1" eType="#//ChkOperation"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="v1" eType="#//ChkVariable"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="opr" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="v2" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"

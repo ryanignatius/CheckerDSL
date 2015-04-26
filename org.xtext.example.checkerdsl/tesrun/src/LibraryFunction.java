@@ -74,15 +74,11 @@ public class LibraryFunction {
 		}
 		return ret;
 	}
-	public static ArrayList select(int num){
-		ArrayList ret = new ArrayList();
+	public static int select(){
 		int r;
 		Random rand = new Random();
-		for (int i=0; i<num; i++){
-			r = rand.nextInt();
-			ret.add(r);
-		}
-		return ret;
+		r = rand.nextInt();
+		return r;
 	}
 	public static ArrayList add(ArrayList arr, Object element){
 		return include(arr,element);

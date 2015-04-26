@@ -1939,7 +1939,7 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
     initEReference(getChkRelationalExpression_V2(), this.getChkVariables(), null, "v2", null, 0, 1, ChkRelationalExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(chkAssignmentEClass, ChkAssignment.class, "ChkAssignment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getChkAssignment_V1(), this.getChkOperation(), null, "v1", null, 0, 1, ChkAssignment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getChkAssignment_V1(), this.getChkVariable(), null, "v1", null, 0, 1, ChkAssignment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getChkAssignment_Opr(), ecorePackage.getEString(), "opr", null, 0, 1, ChkAssignment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getChkAssignment_V2(), ecorePackage.getEObject(), null, "v2", null, 0, 1, ChkAssignment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage;
 import org.xtext.example.checkerdsl.checkerDsl.ChkAssignment;
-import org.xtext.example.checkerdsl.checkerDsl.ChkOperation;
+import org.xtext.example.checkerdsl.checkerDsl.ChkVariable;
 
 /**
  * <!-- begin-user-doc -->
@@ -40,7 +40,7 @@ public class ChkAssignmentImpl extends ChkGeneralExpressionsImpl implements ChkA
    * @generated
    * @ordered
    */
-  protected ChkOperation v1;
+  protected ChkVariable v1;
 
   /**
    * The default value of the '{@link #getOpr() <em>Opr</em>}' attribute.
@@ -98,7 +98,7 @@ public class ChkAssignmentImpl extends ChkGeneralExpressionsImpl implements ChkA
    * <!-- end-user-doc -->
    * @generated
    */
-  public ChkOperation getV1()
+  public ChkVariable getV1()
   {
     return v1;
   }
@@ -108,9 +108,9 @@ public class ChkAssignmentImpl extends ChkGeneralExpressionsImpl implements ChkA
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetV1(ChkOperation newV1, NotificationChain msgs)
+  public NotificationChain basicSetV1(ChkVariable newV1, NotificationChain msgs)
   {
-    ChkOperation oldV1 = v1;
+    ChkVariable oldV1 = v1;
     v1 = newV1;
     if (eNotificationRequired())
     {
@@ -125,7 +125,7 @@ public class ChkAssignmentImpl extends ChkGeneralExpressionsImpl implements ChkA
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setV1(ChkOperation newV1)
+  public void setV1(ChkVariable newV1)
   {
     if (newV1 != v1)
     {
@@ -261,7 +261,7 @@ public class ChkAssignmentImpl extends ChkGeneralExpressionsImpl implements ChkA
     switch (featureID)
     {
       case CheckerDslPackage.CHK_ASSIGNMENT__V1:
-        setV1((ChkOperation)newValue);
+        setV1((ChkVariable)newValue);
         return;
       case CheckerDslPackage.CHK_ASSIGNMENT__OPR:
         setOpr((String)newValue);
@@ -284,7 +284,7 @@ public class ChkAssignmentImpl extends ChkGeneralExpressionsImpl implements ChkA
     switch (featureID)
     {
       case CheckerDslPackage.CHK_ASSIGNMENT__V1:
-        setV1((ChkOperation)null);
+        setV1((ChkVariable)null);
         return;
       case CheckerDslPackage.CHK_ASSIGNMENT__OPR:
         setOpr(OPR_EDEFAULT);

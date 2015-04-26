@@ -102,7 +102,7 @@ ChkRelationalExpression:
 	v1=ChkVariables opr=ChkOpRelational v2=ChkVariables;
 
 ChkAssignment:
-	v1=ChkOperation opr=ChkOpAssignment v2=(ChkOperation | Helper);
+	v1=ChkVariable opr=ChkOpAssignment v2=(ChkOperation | Helper);
 
 ChkGeneralExpressions:
 	(Helper | ChkRelationalExpression | MethodCall | ChkAssignment);

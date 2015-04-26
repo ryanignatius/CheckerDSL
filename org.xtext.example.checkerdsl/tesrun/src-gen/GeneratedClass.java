@@ -1,6 +1,8 @@
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -14,11 +16,19 @@ public class GeneratedClass {
   
   private File fl;
   
+  private FileWriter fw;
+  
+  private BufferedWriter writer;
+  
   private int current_subtask;
   
   private int current_testcase;
   
+  private int current_mr;
+  
   private int num_mr;
+  
+  private int num_subtask;
   
   private static boolean is_valid;
   
@@ -119,6 +129,14 @@ public class GeneratedClass {
     this.n = n;
   }
   
+  public int getN_2() {
+    return this.n_2;
+  }
+  
+  public void setN_2(final int n_2) {
+    this.n_2 = n_2;
+  }
+  
   public void readN(final String token) {
     n = intReader(token);
     if (!validateN(n,current_subtask)){
@@ -127,7 +145,15 @@ public class GeneratedClass {
   }
   
   public void writeN() {
-    System.out.print(n);
+    try {
+    	writer.write(""+(int)n);
+    } catch (Exception e){}
+  }
+  
+  public void writeN_2() {
+    try {
+    	writer.write(""+(int)n_2);
+    } catch (Exception e){}
   }
   
   public boolean validateM(final int value, final int subtask) {
@@ -155,6 +181,14 @@ public class GeneratedClass {
     this.m = m;
   }
   
+  public int getM_2() {
+    return this.m_2;
+  }
+  
+  public void setM_2(final int m_2) {
+    this.m_2 = m_2;
+  }
+  
   public void readM(final String token) {
     m = intReader(token);
     if (!validateM(m,current_subtask)){
@@ -163,7 +197,15 @@ public class GeneratedClass {
   }
   
   public void writeM() {
-    System.out.print(m);
+    try {
+    	writer.write(""+(int)m);
+    } catch (Exception e){}
+  }
+  
+  public void writeM_2() {
+    try {
+    	writer.write(""+(int)m_2);
+    } catch (Exception e){}
   }
   
   public boolean validateP(final int value, final int subtask) {
@@ -195,6 +237,18 @@ public class GeneratedClass {
     return (int)p.get(id1);
   }
   
+  public void setP(final int id1, final Object val) {
+    p.set(id1,val);
+  }
+  
+  public int getP_2(final int id1) {
+    return (int)p_2.get(id1);
+  }
+  
+  public void setP_2(final int id1, final Object val) {
+    p_2.set(id1,val);
+  }
+  
   public void readP(final String[] tokens) {
     p = new ArrayList();
     for (int i=0; i<n; i++){
@@ -210,15 +264,35 @@ public class GeneratedClass {
   }
   
   public void writeP() {
-    for (int i=0; i<n; i++){
-    	if (i > 0) System.out.print(" ");
-    	System.out.print(p.get(i));
-    }
-    System.out.println();
+    try {
+    	for (int i=0; i<n; i++){
+    		if (i > 0) writer.write(" ");
+    		writer.write(""+(int)p.get(i));
+    	}
+    	writer.write(System.lineSeparator());
+    } catch (Exception e){}
   }
   
   public void writeP(final int idx) {
-    System.out.print(p.get(idx));
+    try {
+    	writer.write(""+(int)p.get(idx));
+    } catch (Exception e){}
+  }
+  
+  public void writeP_2() {
+    try {
+    	for (int i=0; i<n; i++){
+    		if (i > 0) writer.write(" ");
+    		writer.write(""+(int)p_2.get(i));
+    	}
+    	writer.write(System.lineSeparator());
+    } catch (Exception e){}
+  }
+  
+  public void writeP_2(final int idx) {
+    try {
+    	writer.write(""+(int)p_2.get(idx));
+    } catch (Exception e){}
   }
   
   public boolean validateW(final int value, final int subtask) {
@@ -250,6 +324,18 @@ public class GeneratedClass {
     return (int)w.get(id1);
   }
   
+  public void setW(final int id1, final Object val) {
+    w.set(id1,val);
+  }
+  
+  public int getW_2(final int id1) {
+    return (int)w_2.get(id1);
+  }
+  
+  public void setW_2(final int id1, final Object val) {
+    w_2.set(id1,val);
+  }
+  
   public void readW(final String[] tokens) {
     w = new ArrayList();
     for (int i=0; i<n; i++){
@@ -265,15 +351,35 @@ public class GeneratedClass {
   }
   
   public void writeW() {
-    for (int i=0; i<n; i++){
-    	if (i > 0) System.out.print(" ");
-    	System.out.print(w.get(i));
-    }
-    System.out.println();
+    try {
+    	for (int i=0; i<n; i++){
+    		if (i > 0) writer.write(" ");
+    		writer.write(""+(int)w.get(i));
+    	}
+    	writer.write(System.lineSeparator());
+    } catch (Exception e){}
   }
   
   public void writeW(final int idx) {
-    System.out.print(w.get(idx));
+    try {
+    	writer.write(""+(int)w.get(idx));
+    } catch (Exception e){}
+  }
+  
+  public void writeW_2() {
+    try {
+    	for (int i=0; i<n; i++){
+    		if (i > 0) writer.write(" ");
+    		writer.write(""+(int)w_2.get(i));
+    	}
+    	writer.write(System.lineSeparator());
+    } catch (Exception e){}
+  }
+  
+  public void writeW_2(final int idx) {
+    try {
+    	writer.write(""+(int)w_2.get(idx));
+    } catch (Exception e){}
   }
   
   public boolean validateC(final int value, final int subtask) {
@@ -305,6 +411,18 @@ public class GeneratedClass {
     return (int)c.get(id1);
   }
   
+  public void setC(final int id1, final Object val) {
+    c.set(id1,val);
+  }
+  
+  public int getC_2(final int id1) {
+    return (int)c_2.get(id1);
+  }
+  
+  public void setC_2(final int id1, final Object val) {
+    c_2.set(id1,val);
+  }
+  
   public void readC(final String[] tokens) {
     c = new ArrayList();
     for (int i=0; i<m; i++){
@@ -320,15 +438,35 @@ public class GeneratedClass {
   }
   
   public void writeC() {
-    for (int i=0; i<m; i++){
-    	if (i > 0) System.out.print(" ");
-    	System.out.print(c.get(i));
-    }
-    System.out.println();
+    try {
+    	for (int i=0; i<m; i++){
+    		if (i > 0) writer.write(" ");
+    		writer.write(""+(int)c.get(i));
+    	}
+    	writer.write(System.lineSeparator());
+    } catch (Exception e){}
   }
   
   public void writeC(final int idx) {
-    System.out.print(c.get(idx));
+    try {
+    	writer.write(""+(int)c.get(idx));
+    } catch (Exception e){}
+  }
+  
+  public void writeC_2() {
+    try {
+    	for (int i=0; i<m; i++){
+    		if (i > 0) writer.write(" ");
+    		writer.write(""+(int)c_2.get(i));
+    	}
+    	writer.write(System.lineSeparator());
+    } catch (Exception e){}
+  }
+  
+  public void writeC_2(final int idx) {
+    try {
+    	writer.write(""+(int)c_2.get(idx));
+    } catch (Exception e){}
   }
   
   public boolean validateY(final int value, final int subtask) {
@@ -358,6 +496,18 @@ public class GeneratedClass {
     return (int)y.get(id1);
   }
   
+  public void setY(final int id1, final Object val) {
+    y.set(id1,val);
+  }
+  
+  public int getY_2(final int id1) {
+    return (int)y_2.get(id1);
+  }
+  
+  public void setY_2(final int id1, final Object val) {
+    y_2.set(id1,val);
+  }
+  
   public void readY(final String[] tokens) {
     y = new ArrayList();
     for (int i=0; i<n; i++){
@@ -373,15 +523,35 @@ public class GeneratedClass {
   }
   
   public void writeY() {
-    for (int i=0; i<n; i++){
-    	if (i > 0) System.out.print(" ");
-    	System.out.print(y.get(i));
-    }
-    System.out.println();
+    try {
+    	for (int i=0; i<n; i++){
+    		if (i > 0) writer.write(" ");
+    		writer.write(""+(int)y.get(i));
+    	}
+    	writer.write(System.lineSeparator());
+    } catch (Exception e){}
   }
   
   public void writeY(final int idx) {
-    System.out.print(y.get(idx));
+    try {
+    	writer.write(""+(int)y.get(idx));
+    } catch (Exception e){}
+  }
+  
+  public void writeY_2() {
+    try {
+    	for (int i=0; i<n; i++){
+    		if (i > 0) writer.write(" ");
+    		writer.write(""+(int)y_2.get(i));
+    	}
+    	writer.write(System.lineSeparator());
+    } catch (Exception e){}
+  }
+  
+  public void writeY_2(final int idx) {
+    try {
+    	writer.write(""+(int)y_2.get(idx));
+    } catch (Exception e){}
   }
   
   public boolean validateTp(final int value, final int subtask) {
@@ -400,6 +570,14 @@ public class GeneratedClass {
     this.tp = tp;
   }
   
+  public int getTp_2() {
+    return this.tp_2;
+  }
+  
+  public void setTp_2(final int tp_2) {
+    this.tp_2 = tp_2;
+  }
+  
   public void readTp(final String token) {
     tp = intReader(token);
     if (!validateTp(tp,current_subtask)){
@@ -408,7 +586,15 @@ public class GeneratedClass {
   }
   
   public void writeTp() {
-    System.out.print(tp);
+    try {
+    	writer.write(""+(int)tp);
+    } catch (Exception e){}
+  }
+  
+  public void writeTp_2() {
+    try {
+    	writer.write(""+(int)tp_2);
+    } catch (Exception e){}
   }
   
   public void printScore() {
@@ -527,6 +713,7 @@ public class GeneratedClass {
     } catch (Exception e){}
     if (GeneratedClass.is_valid){
     if (num == 0){
+    mr_start();
     } else {
     }
     }
@@ -536,9 +723,16 @@ public class GeneratedClass {
    * output format
    */
   public void writeOutput() {
-    writeY();
-    writeTp();
-    System.out.println();
+    try {
+    File wfile = new File("tc/Subtask"+current_subtask+"/out/"+current_mr+"/"+current_testcase+".out");
+    if(!wfile.exists()) wfile.createNewFile();
+    fw = new FileWriter(wfile);
+    writer = new BufferedWriter(fw);
+    writeY_2();
+    writeTp_2();
+    writer.write(System.lineSeparator());
+    writer.close();
+    } catch(Exception e){}
   }
   
   public boolean output_check() {
@@ -564,102 +758,335 @@ public class GeneratedClass {
   
   public void mr_followup_1() {
     initMRVar();
-    
+    current_mr++;
+    ArrayList cond_arr;
+    int k;
+    int l;
+    do {k = LibraryFunction.select();
+    l = LibraryFunction.select();
+    } while (!(1<=k && k<l && l<=n && getP(k)!=getP(l) || getW(k)!=getW(l)));
+    ;
+    p_2 = LibraryFunction.swap(p,k,l);
+    ;
+    w_2 = LibraryFunction.swap(w,k,l);
+    ;
+    writeOutput();
   }
   
   public void mr_check_1() {
     initMRVar();
-    
+    boolean ok = true;
+    ArrayList cond_arr;
+    int k;
+    int l;
+    do {k = LibraryFunction.select();
+    l = LibraryFunction.select();
+    } while (!(1<=k && k<l && l<=n && getP(k)!=getP(l) || getW(k)!=getW(l)));
+    ;
+    y_2 = LibraryFunction.swap(y,k,l);
+    ;
   }
   
   public void mr_followup_2() {
     initMRVar();
-    
+    current_mr++;
+    ArrayList cond_arr;
+    int k;
+    do {k = LibraryFunction.select();
+    } while (!(getY(k)==1));
+    ;
+    int cc = LibraryFunction.random(0,100);
+    setP_2(k,getP(k)+cc);
+    ;
+    writeOutput();
   }
   
   public void mr_check_2() {
     initMRVar();
-    
+    boolean ok = true;
+    ArrayList cond_arr;
+    int k;
+    do {k = LibraryFunction.select();
+    } while (!(getY(k)==1));
+    ;
+    int cc = LibraryFunction.random(0,100);
+    tp_2 = tp+cc;
+    ;
   }
   
   public void mr_followup_3() {
     initMRVar();
-    
+    current_mr++;
+    ArrayList cond_arr;
+    int k;
+    do {k = LibraryFunction.select();
+    } while (!(getY(k)==0));
+    ;
+    int cc = LibraryFunction.random(0,100);
+    setW_2(k,getW(k)+cc);
+    ;
+    writeOutput();
   }
   
   public void mr_check_3() {
     initMRVar();
-    
+    boolean ok = true;
+    ArrayList cond_arr;
+    int k;
+    do {k = LibraryFunction.select();
+    } while (!(getY(k)==0));
+    ;
+    int cc = LibraryFunction.random(0,100);
   }
   
   public void mr_followup_4() {
     initMRVar();
-    
+    current_mr++;
+    ArrayList cond_arr;
+    int k;
+    do {k = LibraryFunction.select();
+    } while (!(getY(k)==0));
+    ;
+    int cc = LibraryFunction.random(0,100);
+    setP_2(k,getP(k)-cc);
+    ;
+    writeOutput();
   }
   
   public void mr_check_4() {
     initMRVar();
-    
+    boolean ok = true;
+    ArrayList cond_arr;
+    int k;
+    do {k = LibraryFunction.select();
+    } while (!(getY(k)==0));
+    ;
+    int cc = LibraryFunction.random(0,100);
   }
   
   public void mr_followup_5() {
     initMRVar();
-    
+    current_mr++;
+    ArrayList cond_arr;
+    cond_arr = new ArrayList<Boolean>();
+    for (int i=0; i<w.size(); i++){
+    if (getY(i)==1) cond_arr.add(true);
+    else cond_arr.add(false);
+    }
+    int c1 = LibraryFunction.sum(w, cond_arr);
+    setC_2(1,c1);
+    ;
+    writeOutput();
   }
   
   public void mr_check_5() {
     initMRVar();
-    
+    boolean ok = true;
+    ArrayList cond_arr;
+    cond_arr = new ArrayList<Boolean>();
+    for (int i=0; i<w.size(); i++){
+    if (getY(i)==1) cond_arr.add(true);
+    else cond_arr.add(false);
+    }
+    int c1 = LibraryFunction.sum(w, cond_arr);
   }
   
   public void mr_followup_6() {
     initMRVar();
-    
+    current_mr++;
+    ArrayList cond_arr;
+    cond_arr = new ArrayList<Boolean>();
+    for (int i=0; i<p.size(); i++){
+    if (getY(i)!=0) cond_arr.add(true);
+    else cond_arr.add(false);
+    }
+    int pnew = LibraryFunction.min(p, cond_arr);
+    cond_arr = new ArrayList<Boolean>();
+    for (int i=0; i<w.size(); i++){
+    if (getY(i)!=0) cond_arr.add(true);
+    else cond_arr.add(false);
+    }
+    int wnew = LibraryFunction.max(w, cond_arr);
+    n_2 = n+1;
+    ;
+    p_2 = LibraryFunction.add(p,pnew);
+    ;
+    w_2 = LibraryFunction.add(w,wnew);
+    ;
+    writeOutput();
   }
   
   public void mr_check_6() {
     initMRVar();
-    
+    boolean ok = true;
+    ArrayList cond_arr;
+    cond_arr = new ArrayList<Boolean>();
+    for (int i=0; i<p.size(); i++){
+    if (getY(i)!=0) cond_arr.add(true);
+    else cond_arr.add(false);
+    }
+    int pnew = LibraryFunction.min(p, cond_arr);
+    cond_arr = new ArrayList<Boolean>();
+    for (int i=0; i<w.size(); i++){
+    if (getY(i)!=0) cond_arr.add(true);
+    else cond_arr.add(false);
+    }
+    int wnew = LibraryFunction.max(w, cond_arr);
+    y_2 = LibraryFunction.add(y,0);
+    ;
   }
   
   public void mr_followup_7() {
     initMRVar();
-    
+    current_mr++;
+    ArrayList cond_arr;
+    int k;
+    do {k = LibraryFunction.select();
+    } while (!(getY(k)==0));
+    ;
+    n_2 = n-1;
+    ;
+    p_2 = LibraryFunction.remove(p,k);
+    ;
+    w_2 = LibraryFunction.remove(w,k);
+    ;
+    writeOutput();
   }
   
   public void mr_check_7() {
     initMRVar();
-    
+    boolean ok = true;
+    ArrayList cond_arr;
+    int k;
+    do {k = LibraryFunction.select();
+    } while (!(getY(k)==0));
+    ;
+    y_2 = LibraryFunction.remove(y,k);
+    ;
   }
   
   public void mr_followup_8() {
     initMRVar();
-    
+    current_mr++;
+    ArrayList cond_arr;
+    int k;
+    do {k = LibraryFunction.select();
+    } while (!(getY(k)==1));
+    ;
+    n_2 = n-1;
+    ;
+    setC_2(1,getC(1)-getW(k));
+    ;
+    p_2 = LibraryFunction.remove(p,k);
+    ;
+    w_2 = LibraryFunction.remove(w,k);
+    ;
+    writeOutput();
   }
   
   public void mr_check_8() {
     initMRVar();
-    
+    boolean ok = true;
+    ArrayList cond_arr;
+    int k;
+    do {k = LibraryFunction.select();
+    } while (!(getY(k)==1));
+    ;
+    tp_2 = tp-getP(k);
+    ;
+    y_2 = LibraryFunction.remove(y,k);
+    ;
   }
   
   public void mr_followup_9() {
     initMRVar();
-    
+    current_mr++;
+    ArrayList cond_arr;
+    int k;
+    int l;
+    do {k = LibraryFunction.select();
+    l = LibraryFunction.select();
+    } while (!(1<=k && k<l && l<=n && getY(k)==1 && getY(l)==1));
+    ;
+    setP_2(k,getP(k)+getP(l));
+    ;
+    setW_2(k,getW(k)+getW(l));
+    ;
+    n_2 = n-1;
+    ;
+    p_2 = LibraryFunction.remove(p,l);
+    ;
+    w_2 = LibraryFunction.remove(w,l);
+    ;
+    writeOutput();
   }
   
   public void mr_check_9() {
     initMRVar();
-    
+    boolean ok = true;
+    ArrayList cond_arr;
+    int k;
+    int l;
+    do {k = LibraryFunction.select();
+    l = LibraryFunction.select();
+    } while (!(1<=k && k<l && l<=n && getY(k)==1 && getY(l)==1));
+    ;
+    y_2 = LibraryFunction.remove(y,l);
+    ;
   }
   
   public void mr_followup_10() {
     initMRVar();
-    
+    current_mr++;
+    ArrayList cond_arr;
+    cond_arr = new ArrayList<Boolean>();
+    for (int i=0; i<p.size(); i++){
+    if (getY(i)==1) cond_arr.add(true);
+    else cond_arr.add(false);
+    }
+    int v = LibraryFunction.sum(p, cond_arr);
+    cond_arr = new ArrayList<Boolean>();
+    for (int i=0; i<p.size(); i++){
+    if (getY(i)==1) cond_arr.add(true);
+    else cond_arr.add(false);
+    }
+    p_2 = LibraryFunction.remove(p, cond_arr);
+    ;
+    cond_arr = new ArrayList<Boolean>();
+    for (int i=0; i<w.size(); i++){
+    if (getY(i)==1) cond_arr.add(true);
+    else cond_arr.add(false);
+    }
+    w_2 = LibraryFunction.remove(w, cond_arr);
+    ;
+    n_2 = LibraryFunction.size(p);
+    ;
+    c_2 = LibraryFunction.remove(c,0);
+    ;
+    m_2 = m-1;
+    ;
+    writeOutput();
   }
   
   public void mr_check_10() {
     initMRVar();
-    
+    boolean ok = true;
+    ArrayList cond_arr;
+    cond_arr = new ArrayList<Boolean>();
+    for (int i=0; i<p.size(); i++){
+    if (getY(i)==1) cond_arr.add(true);
+    else cond_arr.add(false);
+    }
+    int v = LibraryFunction.sum(p, cond_arr);
+    cond_arr = new ArrayList<Boolean>();
+    for (int i=0; i<y.size(); i++){
+    if (getY(i)==1) cond_arr.add(true);
+    else cond_arr.add(false);
+    }
+    y_2 = LibraryFunction.remove(y, cond_arr);
+    ;
+    tp_2 = tp-v;
+    ;
   }
   
   public void initMRVar() {
@@ -672,14 +1099,29 @@ public class GeneratedClass {
     tp_2 = tp;
   }
   
+  public void mr_start() {
+    mr_followup_1();
+    mr_followup_2();
+    mr_followup_3();
+    mr_followup_4();
+    mr_followup_5();
+    mr_followup_6();
+    mr_followup_7();
+    mr_followup_8();
+    mr_followup_9();
+    mr_followup_10();
+  }
+  
   public void init() {
     sc = new Scanner(System.in);
     current_subtask = 1;
-    current_testcase = 1;
+    current_testcase = 0;
+    current_mr = 0;
     num_mr = 10;
+    num_subtask = 1;
     GeneratedClass.cur_lines = 1;
     readInput(0);
     readOutput(0);
-    writeOutput();
+    //writeOutput();
   }
 }

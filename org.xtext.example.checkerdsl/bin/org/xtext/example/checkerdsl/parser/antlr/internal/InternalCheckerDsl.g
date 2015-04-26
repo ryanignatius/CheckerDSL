@@ -2636,9 +2636,9 @@ ruleChkAssignment returns [EObject current=null]
 ((
 (
 		{ 
-	        newCompositeNode(grammarAccess.getChkAssignmentAccess().getV1ChkOperationParserRuleCall_0_0()); 
+	        newCompositeNode(grammarAccess.getChkAssignmentAccess().getV1ChkVariableParserRuleCall_0_0()); 
 	    }
-		lv_v1_0_0=ruleChkOperation		{
+		lv_v1_0_0=ruleChkVariable		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getChkAssignmentRule());
 	        }
@@ -2646,7 +2646,7 @@ ruleChkAssignment returns [EObject current=null]
        			$current, 
        			"v1",
         		lv_v1_0_0, 
-        		"ChkOperation");
+        		"ChkVariable");
 	        afterParserOrEnumRuleCall();
 	    }
 

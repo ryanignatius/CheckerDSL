@@ -1401,7 +1401,7 @@ public class CheckerDslSemanticSequencer extends XbaseSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (v1=ChkOperation opr=ChkOpAssignment (v2=ChkOperation | v2=Helper))
+	 *     (v1=ChkVariable opr=ChkOpAssignment (v2=ChkOperation | v2=Helper))
 	 */
 	protected void sequence_ChkAssignment(EObject context, ChkAssignment semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

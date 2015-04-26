@@ -33,12 +33,12 @@ public interface ChkAssignment extends ChkGeneralExpressions
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>V1</em>' containment reference.
-   * @see #setV1(ChkOperation)
+   * @see #setV1(ChkVariable)
    * @see org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage#getChkAssignment_V1()
    * @model containment="true"
    * @generated
    */
-  ChkOperation getV1();
+  ChkVariable getV1();
 
   /**
    * Sets the value of the '{@link org.xtext.example.checkerdsl.checkerDsl.ChkAssignment#getV1 <em>V1</em>}' containment reference.
@@ -48,7 +48,7 @@ public interface ChkAssignment extends ChkGeneralExpressions
    * @see #getV1()
    * @generated
    */
-  void setV1(ChkOperation value);
+  void setV1(ChkVariable value);
 
   /**
    * Returns the value of the '<em><b>Opr</b></em>' attribute.
