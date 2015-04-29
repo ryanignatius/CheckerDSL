@@ -1,4 +1,4 @@
-// Specification untuk soal knapsack pada paper
+// Specification untuk soal knapsack Polo the Penguin and the Test
 class Knapsack{
 	/*
 	 * variable declaration
@@ -7,19 +7,19 @@ class Knapsack{
 	 */
 	
 	// variable untuk input
-	int n (subtask 1 : 1..100) // n adalah variabel jumlah item
-	int m (subtask 1 : 1..100) // m adalah jumlah knapsack
-	int[n] p (subtask 1 : 1..100) // p adalah profit dari n buah item
-	int[n] w (subtask 1 : 1..100) // w adalah weight dari n buah item
-	int[m] c (subtask 1 : 1..100) // c adalah capacity dari m buah knapsack
+	int tc (subtask 1 : 1..100) // tc is number of test cases
+	int n (subtask 1 : 1..100) // n is number of questions
+	int w (subtask 1 : 1..100) // w is time limit for study
+	int[n] c (subtask 1 : 1..100) // c[i] is the number of tests that will contain this question
+	int[n] p (subtask 1 : 1..100) // p[i] is the number of points that he will get for correctly answering this question on each of tests
+	int[n] t (subtask 1 : 1..100) // t[i] is the amount of time (in minutes) that he needs to spend to learn this question
 	
 	// variable untuk output
-	int[n] y (0..m) // y adalah nomor tempat knapsack item i atau 0 jika tidak dipilih
-	int tp // tp adalah variable total profit
+	int point // point is maximal possible total number of points he can get for all tests if he studies for no more than W minutes
 	
-	/*
-	 * score for each subtasks
-	 */
+	// hidden variable (for mr only)
+	int[n] y (0..1) // y adalah nomor tempat knapsack item i atau 0 jika tidak dipilih
+	
 	score {
 		(1 : 100)
 	}
@@ -28,62 +28,44 @@ class Knapsack{
 	 * input format
 	 */
 	input {
-		1 (n,m) // 1 baris pertama berisi 2 buah integer n dan m
-		1 (p<n>) // 1 baris berikutnya berisi n buah integer p
-		1 (w<n>) // 1 baris berikutnya berisi n buah integer w
-		1 (c<m>) // 1 baris berikutnya berisi m buah integer c
+		1 (tc)
+		for (k,tc) {
+			1 (n,w) // 1 baris pertama berisi 2 buah integer n dan w
+			1 (c<n>) // 1 baris berikutnya berisi n buah integer c
+			1 (p<n>) // 1 baris berikutnya berisi n buah integer p
+			1 (t<n>) // 1 baris berikutnya berisi n buah integer t
+		}
 	}
 	
 	/*
 	 * output format
 	 */
 	output {
-		1 (y<n>) // 1 baris berikutnya berisi n buah integer y
-		1 (tp) // 1 baris berikutnya berisi 1 buah integer tp
+		1 (point) // 1 baris berikutnya berisi 1 buah integer point
 	}
 	
-	/*
-	 * checker logic
-	 */
-	check {
-		// ans contains problem setter answer
-		// out contains contestant output
-		// in contains input test case
-		(ans.tp == out.tp)
-		(sum(in.p) where out.y[i]>0 == out.tp)
-		for (j,m) {
-			(sum(in.w) where out.y[i]==j <= in.c[j])
-		}
+	hidden {
+		1 (y<n>)
 	}
 	
 	MR 1 {
-		(select(k,l) where 1<=k and k<l and l<=n and p[k]!=p[l] or w[k]!=w[l])
+		(select(k,l) where 1<=k and k<l and l<=n and c[k]!=c[l] or p[k]!=p[l] or t[k]!=t[l])
 		followup {
+			(c` = swap(c,k,l))
 			(p` = swap(p,k,l))
-			(w` = swap(w,k,l))
+			(t` = swap(t,k,l))
 		}
 		check {
-			(y` = swap(y,k,l))
+			
 		}
 		
-	}
-	
-	MR 2 {
-		(select(k) where y[k]==1)
-		def cc = (random(0..100))
-		followup {
-			(p`[k] = p[k]+cc)
-		}
-		check {
-			(tp` = tp+cc)
-		}
 	}
 	
 	MR 3 {
 		(select(k) where y[k]==0)
 		def cc = (random(0..100))
 		followup {
-			(w`[k] = w[k]+cc)
+			(t`[k] = t[k]+cc)
 		}
 		check {
 			
@@ -102,7 +84,7 @@ class Knapsack{
 	}
 	
 	MR 5 {
-		def c1 = (sum(w) where y[i]==1)
+		def c1 = (sum(t) where y[i]==1)
 		followup {
 			(c`[1] = c1)
 		}
@@ -112,15 +94,17 @@ class Knapsack{
 	}
 	
 	MR 6 {
+		def cnew = (min(c) where y[i] != 0)
 		def pnew = (min(p) where y[i] != 0)
-		def wnew = (max(w) where y[i] != 0)
+		def tnew = (max(t) where y[i] != 0)
 		followup {
 			(n` = n+1)
+			(c` = add(c,cnew))
 			(p` = add(p,pnew))
-			(w` = add(w,wnew))
+			(t` = add(t,tnew))
 		}
 		check {
-			(y` = add(y,0))
+			
 		}
 	}
 	
@@ -128,11 +112,12 @@ class Knapsack{
 		(select(k) where y[k]==0)
 		followup {
 			(n` = n-1)
+			(c` = remove(c,k))
 			(p` = remove(p,k))
-			(w` = remove(w,k))
+			(t` = remove(t,k))
 		}
 		check {
-			(y` = remove(y,k))
+			
 		}
 	}
 	
@@ -140,42 +125,51 @@ class Knapsack{
 		(select(k) where y[k]==1)
 		followup {
 			(n` = n-1)
-			(c`[1] = c[1]-w[k])
+			(c`[1] = c[1]-t[k])
+			(c` = remove(c,k))
 			(p` = remove(p,k))
-			(w` = remove(w,k))
+			(t` = remove(t,k))
 		}
 		check {
-			(tp` = tp-p[k])
-			(y` = remove(y,k))
+			(point` = point-p[k]*c[k])
 		}
 	}
 	
 	MR 9 {
 		(select(k,l) where 1<=k and k<l and l<=n and y[k]==1 and y[l]==1)
 		followup {
-			(p`[k] = p[k]+p[l])
-			(w`[k] = w[k]+w[l])
+			(c`[k] = 1)
+			(p`[k] = c[k]*p[k]+c[l]*p[l])
+			(t`[k] = t[k]+t[l])
 			(n` = n-1)
+			(c` = remove(c,l))
 			(p` = remove(p,l))
-			(w` = remove(w,l))
+			(t` = remove(t,l))
 		}
 		check {
-			(y` = remove(y,l))
+			
 		}
 	}
 	
-	MR 10 {
-		def v = (sum(p) where y[i]==1)
+	MR 11 {
+		(select(k) where y[k]==1)
+		(def cc = random(0..100))
 		followup {
-			(p` = remove(p) where y[i]==1)
-			(w` = remove(w) where y[i]==1)
-			(n` = size(p))
-			(c` = remove(c,0))
-			(m` = m-1)
+			(p`[k] = p[k]+cc)
 		}
 		check {
-			(y` = remove(y) where y[i]==1)
-			(tp` = tp-v)
+			(point` = point+cc*c[k])
+		}
+	}
+	
+	MR 12 {
+		(select(k) where y[k]==1)
+		(def cc = random(0..100))
+		followup {
+			(c`[k] = c[k]+cc)
+		}
+		check {
+			(point` = point+cc*p[k])
 		}
 	}
 }

@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.FormatExpression#getNum <em>Num</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.FormatExpression#getVar <em>Var</em>}</li>
+ *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.FormatExpression#getSz <em>Sz</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.FormatExpression#getCount <em>Count</em>}</li>
  * </ul>
  *
@@ -67,6 +68,22 @@ public interface FormatExpression extends EObject
    * @generated
    */
   EList<String> getVar();
+
+  /**
+   * Returns the value of the '<em><b>Sz</b></em>' attribute list.
+   * The list contents are of type {@link java.lang.String}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Sz</em>' attribute list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Sz</em>' attribute list.
+   * @see org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage#getFormatExpression_Sz()
+   * @model unique="false"
+   * @generated
+   */
+  EList<String> getSz();
 
   /**
    * Returns the value of the '<em><b>Count</b></em>' attribute list.

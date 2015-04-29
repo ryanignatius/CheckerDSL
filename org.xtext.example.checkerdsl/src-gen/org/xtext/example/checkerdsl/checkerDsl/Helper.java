@@ -29,6 +29,13 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getRandom <em>Random</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getVar4 <em>Var4</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getSize <em>Size</em>}</li>
+ *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getContains <em>Contains</em>}</li>
+ *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getAddRow <em>Add Row</em>}</li>
+ *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getAddCol <em>Add Col</em>}</li>
+ *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getSwapRow <em>Swap Row</em>}</li>
+ *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getSwapCol <em>Swap Col</em>}</li>
+ *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getRemoveRow <em>Remove Row</em>}</li>
+ *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getRemoveCol <em>Remove Col</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getPermute <em>Permute</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getPlus <em>Plus</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getMultiply <em>Multiply</em>}</li>
@@ -449,6 +456,188 @@ public interface Helper extends ChkGeneralExpressions
    * @generated
    */
   void setSize(String value);
+
+  /**
+   * Returns the value of the '<em><b>Contains</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Contains</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Contains</em>' attribute.
+   * @see #setContains(String)
+   * @see org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage#getHelper_Contains()
+   * @model
+   * @generated
+   */
+  String getContains();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getContains <em>Contains</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Contains</em>' attribute.
+   * @see #getContains()
+   * @generated
+   */
+  void setContains(String value);
+
+  /**
+   * Returns the value of the '<em><b>Add Row</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Add Row</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Add Row</em>' attribute.
+   * @see #setAddRow(String)
+   * @see org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage#getHelper_AddRow()
+   * @model
+   * @generated
+   */
+  String getAddRow();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getAddRow <em>Add Row</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Add Row</em>' attribute.
+   * @see #getAddRow()
+   * @generated
+   */
+  void setAddRow(String value);
+
+  /**
+   * Returns the value of the '<em><b>Add Col</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Add Col</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Add Col</em>' attribute.
+   * @see #setAddCol(String)
+   * @see org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage#getHelper_AddCol()
+   * @model
+   * @generated
+   */
+  String getAddCol();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getAddCol <em>Add Col</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Add Col</em>' attribute.
+   * @see #getAddCol()
+   * @generated
+   */
+  void setAddCol(String value);
+
+  /**
+   * Returns the value of the '<em><b>Swap Row</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Swap Row</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Swap Row</em>' attribute.
+   * @see #setSwapRow(String)
+   * @see org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage#getHelper_SwapRow()
+   * @model
+   * @generated
+   */
+  String getSwapRow();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getSwapRow <em>Swap Row</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Swap Row</em>' attribute.
+   * @see #getSwapRow()
+   * @generated
+   */
+  void setSwapRow(String value);
+
+  /**
+   * Returns the value of the '<em><b>Swap Col</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Swap Col</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Swap Col</em>' attribute.
+   * @see #setSwapCol(String)
+   * @see org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage#getHelper_SwapCol()
+   * @model
+   * @generated
+   */
+  String getSwapCol();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getSwapCol <em>Swap Col</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Swap Col</em>' attribute.
+   * @see #getSwapCol()
+   * @generated
+   */
+  void setSwapCol(String value);
+
+  /**
+   * Returns the value of the '<em><b>Remove Row</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Remove Row</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Remove Row</em>' attribute.
+   * @see #setRemoveRow(String)
+   * @see org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage#getHelper_RemoveRow()
+   * @model
+   * @generated
+   */
+  String getRemoveRow();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getRemoveRow <em>Remove Row</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Remove Row</em>' attribute.
+   * @see #getRemoveRow()
+   * @generated
+   */
+  void setRemoveRow(String value);
+
+  /**
+   * Returns the value of the '<em><b>Remove Col</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Remove Col</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Remove Col</em>' attribute.
+   * @see #setRemoveCol(String)
+   * @see org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage#getHelper_RemoveCol()
+   * @model
+   * @generated
+   */
+  String getRemoveCol();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getRemoveCol <em>Remove Col</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Remove Col</em>' attribute.
+   * @see #getRemoveCol()
+   * @generated
+   */
+  void setRemoveCol(String value);
 
   /**
    * Returns the value of the '<em><b>Permute</b></em>' attribute.

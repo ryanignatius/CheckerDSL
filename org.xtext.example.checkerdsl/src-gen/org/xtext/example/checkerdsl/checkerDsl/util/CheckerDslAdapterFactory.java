@@ -27,9 +27,11 @@ import org.xtext.example.checkerdsl.checkerDsl.ChkVariables;
 import org.xtext.example.checkerdsl.checkerDsl.Dsl;
 import org.xtext.example.checkerdsl.checkerDsl.Feature;
 import org.xtext.example.checkerdsl.checkerDsl.FollowUp;
+import org.xtext.example.checkerdsl.checkerDsl.ForFormatExpression;
 import org.xtext.example.checkerdsl.checkerDsl.Format;
 import org.xtext.example.checkerdsl.checkerDsl.FormatExpression;
 import org.xtext.example.checkerdsl.checkerDsl.Helper;
+import org.xtext.example.checkerdsl.checkerDsl.HiddenFormat;
 import org.xtext.example.checkerdsl.checkerDsl.InputFormat;
 import org.xtext.example.checkerdsl.checkerDsl.Limit;
 import org.xtext.example.checkerdsl.checkerDsl.MR;
@@ -251,6 +253,11 @@ public class CheckerDslAdapterFactory extends AdapterFactoryImpl
         return createFormatAdapter();
       }
       @Override
+      public Adapter caseForFormatExpression(ForFormatExpression object)
+      {
+        return createForFormatExpressionAdapter();
+      }
+      @Override
       public Adapter caseInputFormat(InputFormat object)
       {
         return createInputFormatAdapter();
@@ -259,6 +266,11 @@ public class CheckerDslAdapterFactory extends AdapterFactoryImpl
       public Adapter caseOutputFormat(OutputFormat object)
       {
         return createOutputFormatAdapter();
+      }
+      @Override
+      public Adapter caseHiddenFormat(HiddenFormat object)
+      {
+        return createHiddenFormatAdapter();
       }
       @Override
       public Adapter caseFormatExpression(FormatExpression object)
@@ -723,6 +735,21 @@ public class CheckerDslAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.checkerdsl.checkerDsl.ForFormatExpression <em>For Format Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.checkerdsl.checkerDsl.ForFormatExpression
+   * @generated
+   */
+  public Adapter createForFormatExpressionAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.xtext.example.checkerdsl.checkerDsl.InputFormat <em>Input Format</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -748,6 +775,21 @@ public class CheckerDslAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createOutputFormatAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.checkerdsl.checkerDsl.HiddenFormat <em>Hidden Format</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.checkerdsl.checkerDsl.HiddenFormat
+   * @generated
+   */
+  public Adapter createHiddenFormatAdapter()
   {
     return null;
   }

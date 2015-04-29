@@ -9,6 +9,7 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
@@ -16,7 +17,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage;
 import org.xtext.example.checkerdsl.checkerDsl.Format;
-import org.xtext.example.checkerdsl.checkerDsl.FormatExpression;
 
 /**
  * <!-- begin-user-doc -->
@@ -41,7 +41,7 @@ public class FormatImpl extends FeatureImpl implements Format
    * @generated
    * @ordered
    */
-  protected EList<FormatExpression> exp;
+  protected EList<EObject> exp;
 
   /**
    * <!-- begin-user-doc -->
@@ -69,11 +69,11 @@ public class FormatImpl extends FeatureImpl implements Format
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<FormatExpression> getExp()
+  public EList<EObject> getExp()
   {
     if (exp == null)
     {
-      exp = new EObjectContainmentEList<FormatExpression>(FormatExpression.class, this, CheckerDslPackage.FORMAT__EXP);
+      exp = new EObjectContainmentEList<EObject>(EObject.class, this, CheckerDslPackage.FORMAT__EXP);
     }
     return exp;
   }
@@ -123,7 +123,7 @@ public class FormatImpl extends FeatureImpl implements Format
     {
       case CheckerDslPackage.FORMAT__EXP:
         getExp().clear();
-        getExp().addAll((Collection<? extends FormatExpression>)newValue);
+        getExp().addAll((Collection<? extends EObject>)newValue);
         return;
     }
     super.eSet(featureID, newValue);

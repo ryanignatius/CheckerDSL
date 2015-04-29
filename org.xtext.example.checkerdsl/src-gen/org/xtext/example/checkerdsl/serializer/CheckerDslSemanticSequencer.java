@@ -73,8 +73,10 @@ import org.xtext.example.checkerdsl.checkerDsl.ChkVariableDeclaration;
 import org.xtext.example.checkerdsl.checkerDsl.ChkVariables;
 import org.xtext.example.checkerdsl.checkerDsl.Dsl;
 import org.xtext.example.checkerdsl.checkerDsl.FollowUp;
+import org.xtext.example.checkerdsl.checkerDsl.ForFormatExpression;
 import org.xtext.example.checkerdsl.checkerDsl.FormatExpression;
 import org.xtext.example.checkerdsl.checkerDsl.Helper;
+import org.xtext.example.checkerdsl.checkerDsl.HiddenFormat;
 import org.xtext.example.checkerdsl.checkerDsl.InputFormat;
 import org.xtext.example.checkerdsl.checkerDsl.Limit;
 import org.xtext.example.checkerdsl.checkerDsl.MR;
@@ -191,6 +193,12 @@ public class CheckerDslSemanticSequencer extends XbaseSemanticSequencer {
 					return; 
 				}
 				else break;
+			case CheckerDslPackage.FOR_FORMAT_EXPRESSION:
+				if(context == grammarAccess.getForFormatExpressionRule()) {
+					sequence_ForFormatExpression(context, (ForFormatExpression) semanticObject); 
+					return; 
+				}
+				else break;
 			case CheckerDslPackage.FORMAT_EXPRESSION:
 				if(context == grammarAccess.getFormatExpressionRule()) {
 					sequence_FormatExpression(context, (FormatExpression) semanticObject); 
@@ -201,6 +209,14 @@ public class CheckerDslSemanticSequencer extends XbaseSemanticSequencer {
 				if(context == grammarAccess.getChkGeneralExpressionsRule() ||
 				   context == grammarAccess.getHelperRule()) {
 					sequence_Helper(context, (Helper) semanticObject); 
+					return; 
+				}
+				else break;
+			case CheckerDslPackage.HIDDEN_FORMAT:
+				if(context == grammarAccess.getFeatureRule() ||
+				   context == grammarAccess.getFormatRule() ||
+				   context == grammarAccess.getHiddenFormatRule()) {
+					sequence_HiddenFormat(context, (HiddenFormat) semanticObject); 
 					return; 
 				}
 				else break;
@@ -1401,7 +1417,7 @@ public class CheckerDslSemanticSequencer extends XbaseSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (v1=ChkVariable opr=ChkOpAssignment (v2=ChkOperation | v2=Helper))
+	 *     (def='def'? v1=ChkVariable opr=ChkOpAssignment (v2=ChkOperation | v2=Helper))
 	 */
 	protected void sequence_ChkAssignment(EObject context, ChkAssignment semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1411,9 +1427,8 @@ public class CheckerDslSemanticSequencer extends XbaseSemanticSequencer {
 	/**
 	 * Constraint:
 	 *     (
-	 *         asg=ValidID? 
 	 *         exp=ChkGeneralExpressions 
-	 *         (where='where' cond+=ChkRelationalExpression (type+=ChkAndOr cond+=ChkRelationalExpression)*)? 
+	 *         (where='where' not='not'? (cond+=ChkRelationalExpression | cond+=Helper) (type+=ChkAndOr (cond+=ChkRelationalExpression | cond+=Helper))*)? 
 	 *         (op=ChkOpRelational v=ChkVariable)?
 	 *     )
 	 */
@@ -1501,7 +1516,7 @@ public class CheckerDslSemanticSequencer extends XbaseSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (type=ChkTypeReference sz+=MY_NUMBER* name=ValidID (limit1=Limit limit+=Limit*)? spValue=SpValue?)
+	 *     (type=ChkTypeReference sz+=CHK_NUMBER* name=ValidID (limit1=Limit limit+=Limit*)? spValue=SpValue?)
 	 */
 	protected void sequence_ChkVariableDeclaration(EObject context, ChkVariableDeclaration semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1510,7 +1525,7 @@ public class CheckerDslSemanticSequencer extends XbaseSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (pref=ChkPrefix? var=ValidID newtest='`'? v+=MY_NUMBER*)
+	 *     (pref=ChkPrefix? var=ValidID newtest='`'? v+=CHK_NUMBER*)
 	 */
 	protected void sequence_ChkVariable(EObject context, ChkVariable semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1555,7 +1570,16 @@ public class CheckerDslSemanticSequencer extends XbaseSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (num=MY_NUMBER (var+=ValidID count+=MY_NUMBER? (var+=ValidID count+=MY_NUMBER?)*)?)
+	 *     (index=ChkVariable maxIndex=ChkVariables ex+=FormatExpression*)
+	 */
+	protected void sequence_ForFormatExpression(EObject context, ForFormatExpression semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (num=CHK_NUMBER (var+=ValidID sz+=CHK_NUMBER* count+=CHK_NUMBER? (var+=ValidID count+=CHK_NUMBER?)*)?)
 	 */
 	protected void sequence_FormatExpression(EObject context, FormatExpression semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1575,6 +1599,13 @@ public class CheckerDslSemanticSequencer extends XbaseSemanticSequencer {
 	 *         (remove='remove' var=ChkVariable var3=ChkVariables?) | 
 	 *         (random='random' (var3=ChkVariables var4=ChkVariables)?) | 
 	 *         (size='size' var=ChkVariable) | 
+	 *         (contains='contain' var=ChkVariable var3=ChkVariables) | 
+	 *         (addRow='addRow' var=ChkVariable) | 
+	 *         (addCol='addColumn' var=ChkVariable) | 
+	 *         (swapRow='swapRow' var=ChkVariable var1=ValidID var2=ValidID) | 
+	 *         (swapCol='swapColumn' var=ChkVariable var1=ValidID var2=ValidID) | 
+	 *         (removeRow='removeRow' var=ChkVariable var3=ChkVariables) | 
+	 *         (removeCol='removeColumn' var=ChkVariable var3=ChkVariables) | 
 	 *         (permute='permute' var=ChkVariable) | 
 	 *         (plus='plus' var=ChkVariable var3=ChkVariables) | 
 	 *         (multiply='multiply' var=ChkVariable var3=ChkVariables) | 
@@ -1591,7 +1622,16 @@ public class CheckerDslSemanticSequencer extends XbaseSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (input='input' exp+=FormatExpression*)
+	 *     (hid='hidden' (exp+=FormatExpression | exp+=ForFormatExpression)*)
+	 */
+	protected void sequence_HiddenFormat(EObject context, HiddenFormat semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (input='input' (exp+=FormatExpression | exp+=ForFormatExpression)*)
 	 */
 	protected void sequence_InputFormat(EObject context, InputFormat semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1600,7 +1640,7 @@ public class CheckerDslSemanticSequencer extends XbaseSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (sub=Subtask? a+=MY_ELEMENT b+=MY_ELEMENT (a+=MY_ELEMENT b+=MY_ELEMENT)*)
+	 *     (sub=Subtask? a+=CHK_ELEMENT b+=CHK_ELEMENT (a+=CHK_ELEMENT b+=CHK_ELEMENT)*)
 	 */
 	protected void sequence_Limit(EObject context, Limit semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1636,7 +1676,7 @@ public class CheckerDslSemanticSequencer extends XbaseSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (output='output' exp+=FormatExpression*)
+	 *     (output='output' (exp+=FormatExpression | exp+=ForFormatExpression)*)
 	 */
 	protected void sequence_OutputFormat(EObject context, OutputFormat semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1672,7 +1712,7 @@ public class CheckerDslSemanticSequencer extends XbaseSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (val+=MY_NUMBER val+=MY_NUMBER*)
+	 *     (val+=CHK_NUMBER val+=CHK_NUMBER*)
 	 */
 	protected void sequence_SpValue(EObject context, SpValue semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

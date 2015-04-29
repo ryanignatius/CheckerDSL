@@ -1,9 +1,0 @@
-
-public class KnapsackCheker {
-	public static void main(String[] args) {
-		// args[0] = in
-		// args[1] = 
-		GeneratedClass g = new GeneratedClass();
-		g.init();
-	}
-}

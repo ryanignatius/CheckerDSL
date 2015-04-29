@@ -7,8 +7,8 @@ class Knapsack{
 	 */
 	
 	// variable untuk input
-	int n (subtask 1 : 1..10) // n adalah variabel jumlah item
-	int m (subtask 1 : 1..10) // m adalah jumlah knapsack
+	int n (subtask 1 : 1..100) // n adalah variabel jumlah item
+	int m (subtask 1 : 1..100) // m adalah jumlah knapsack
 	int[n] p (subtask 1 : 1..100) // p adalah profit dari n buah item
 	int[n] w (subtask 1 : 1..100) // w adalah weight dari n buah item
 	int[m] c (subtask 1 : 1..100) // c adalah capacity dari m buah knapsack
@@ -102,7 +102,7 @@ class Knapsack{
 	}
 	
 	MR 5 {
-		def c1 = (sum(w) where y==1)
+		def c1 = (sum(w) where y[i]==1)
 		followup {
 			(c`[1] = c1)
 		}
@@ -112,8 +112,8 @@ class Knapsack{
 	}
 	
 	MR 6 {
-		def pnew = (min(p) where y[j] != 0)
-		def wnew = (max(w) where y[j] != 0)
+		def pnew = (min(p) where y[i] != 0)
+		def wnew = (max(w) where y[i] != 0)
 		followup {
 			(n` = n+1)
 			(p` = add(p,pnew))
@@ -165,7 +165,7 @@ class Knapsack{
 	}
 	
 	MR 10 {
-		def v = (sum(p) where y==1)
+		def v = (sum(p) where y[i]==1)
 		followup {
 			(p` = remove(p) where y[i]==1)
 			(w` = remove(w) where y[i]==1)
@@ -177,5 +177,5 @@ class Knapsack{
 			(y` = remove(y) where y[i]==1)
 			(tp` = tp-v)
 		}
-	}	
+	}
 }

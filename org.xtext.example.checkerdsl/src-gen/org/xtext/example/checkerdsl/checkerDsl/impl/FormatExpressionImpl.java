@@ -28,6 +28,7 @@ import org.xtext.example.checkerdsl.checkerDsl.FormatExpression;
  * <ul>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.FormatExpressionImpl#getNum <em>Num</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.FormatExpressionImpl#getVar <em>Var</em>}</li>
+ *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.FormatExpressionImpl#getSz <em>Sz</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.FormatExpressionImpl#getCount <em>Count</em>}</li>
  * </ul>
  *
@@ -64,6 +65,16 @@ public class FormatExpressionImpl extends MinimalEObjectImpl.Container implement
    * @ordered
    */
   protected EList<String> var;
+
+  /**
+   * The cached value of the '{@link #getSz() <em>Sz</em>}' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getSz()
+   * @generated
+   * @ordered
+   */
+  protected EList<String> sz;
 
   /**
    * The cached value of the '{@link #getCount() <em>Count</em>}' attribute list.
@@ -138,6 +149,20 @@ public class FormatExpressionImpl extends MinimalEObjectImpl.Container implement
    * <!-- end-user-doc -->
    * @generated
    */
+  public EList<String> getSz()
+  {
+    if (sz == null)
+    {
+      sz = new EDataTypeEList<String>(String.class, this, CheckerDslPackage.FORMAT_EXPRESSION__SZ);
+    }
+    return sz;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EList<String> getCount()
   {
     if (count == null)
@@ -161,6 +186,8 @@ public class FormatExpressionImpl extends MinimalEObjectImpl.Container implement
         return getNum();
       case CheckerDslPackage.FORMAT_EXPRESSION__VAR:
         return getVar();
+      case CheckerDslPackage.FORMAT_EXPRESSION__SZ:
+        return getSz();
       case CheckerDslPackage.FORMAT_EXPRESSION__COUNT:
         return getCount();
     }
@@ -184,6 +211,10 @@ public class FormatExpressionImpl extends MinimalEObjectImpl.Container implement
       case CheckerDslPackage.FORMAT_EXPRESSION__VAR:
         getVar().clear();
         getVar().addAll((Collection<? extends String>)newValue);
+        return;
+      case CheckerDslPackage.FORMAT_EXPRESSION__SZ:
+        getSz().clear();
+        getSz().addAll((Collection<? extends String>)newValue);
         return;
       case CheckerDslPackage.FORMAT_EXPRESSION__COUNT:
         getCount().clear();
@@ -209,6 +240,9 @@ public class FormatExpressionImpl extends MinimalEObjectImpl.Container implement
       case CheckerDslPackage.FORMAT_EXPRESSION__VAR:
         getVar().clear();
         return;
+      case CheckerDslPackage.FORMAT_EXPRESSION__SZ:
+        getSz().clear();
+        return;
       case CheckerDslPackage.FORMAT_EXPRESSION__COUNT:
         getCount().clear();
         return;
@@ -230,6 +264,8 @@ public class FormatExpressionImpl extends MinimalEObjectImpl.Container implement
         return NUM_EDEFAULT == null ? num != null : !NUM_EDEFAULT.equals(num);
       case CheckerDslPackage.FORMAT_EXPRESSION__VAR:
         return var != null && !var.isEmpty();
+      case CheckerDslPackage.FORMAT_EXPRESSION__SZ:
+        return sz != null && !sz.isEmpty();
       case CheckerDslPackage.FORMAT_EXPRESSION__COUNT:
         return count != null && !count.isEmpty();
     }
@@ -251,6 +287,8 @@ public class FormatExpressionImpl extends MinimalEObjectImpl.Container implement
     result.append(num);
     result.append(", var: ");
     result.append(var);
+    result.append(", sz: ");
+    result.append(sz);
     result.append(", count: ");
     result.append(count);
     result.append(')');

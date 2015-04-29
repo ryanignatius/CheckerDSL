@@ -45,6 +45,13 @@ import org.xtext.example.checkerdsl.checkerDsl.Helper;
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.HelperImpl#getRandom <em>Random</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.HelperImpl#getVar4 <em>Var4</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.HelperImpl#getSize <em>Size</em>}</li>
+ *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.HelperImpl#getContains <em>Contains</em>}</li>
+ *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.HelperImpl#getAddRow <em>Add Row</em>}</li>
+ *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.HelperImpl#getAddCol <em>Add Col</em>}</li>
+ *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.HelperImpl#getSwapRow <em>Swap Row</em>}</li>
+ *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.HelperImpl#getSwapCol <em>Swap Col</em>}</li>
+ *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.HelperImpl#getRemoveRow <em>Remove Row</em>}</li>
+ *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.HelperImpl#getRemoveCol <em>Remove Col</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.HelperImpl#getPermute <em>Permute</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.HelperImpl#getPlus <em>Plus</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.HelperImpl#getMultiply <em>Multiply</em>}</li>
@@ -337,6 +344,146 @@ public class HelperImpl extends ChkGeneralExpressionsImpl implements Helper
    * @ordered
    */
   protected String size = SIZE_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getContains() <em>Contains</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getContains()
+   * @generated
+   * @ordered
+   */
+  protected static final String CONTAINS_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getContains() <em>Contains</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getContains()
+   * @generated
+   * @ordered
+   */
+  protected String contains = CONTAINS_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getAddRow() <em>Add Row</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getAddRow()
+   * @generated
+   * @ordered
+   */
+  protected static final String ADD_ROW_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getAddRow() <em>Add Row</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getAddRow()
+   * @generated
+   * @ordered
+   */
+  protected String addRow = ADD_ROW_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getAddCol() <em>Add Col</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getAddCol()
+   * @generated
+   * @ordered
+   */
+  protected static final String ADD_COL_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getAddCol() <em>Add Col</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getAddCol()
+   * @generated
+   * @ordered
+   */
+  protected String addCol = ADD_COL_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getSwapRow() <em>Swap Row</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getSwapRow()
+   * @generated
+   * @ordered
+   */
+  protected static final String SWAP_ROW_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getSwapRow() <em>Swap Row</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getSwapRow()
+   * @generated
+   * @ordered
+   */
+  protected String swapRow = SWAP_ROW_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getSwapCol() <em>Swap Col</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getSwapCol()
+   * @generated
+   * @ordered
+   */
+  protected static final String SWAP_COL_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getSwapCol() <em>Swap Col</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getSwapCol()
+   * @generated
+   * @ordered
+   */
+  protected String swapCol = SWAP_COL_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getRemoveRow() <em>Remove Row</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getRemoveRow()
+   * @generated
+   * @ordered
+   */
+  protected static final String REMOVE_ROW_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getRemoveRow() <em>Remove Row</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getRemoveRow()
+   * @generated
+   * @ordered
+   */
+  protected String removeRow = REMOVE_ROW_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getRemoveCol() <em>Remove Col</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getRemoveCol()
+   * @generated
+   * @ordered
+   */
+  protected static final String REMOVE_COL_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getRemoveCol() <em>Remove Col</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getRemoveCol()
+   * @generated
+   * @ordered
+   */
+  protected String removeCol = REMOVE_COL_EDEFAULT;
 
   /**
    * The default value of the '{@link #getPermute() <em>Permute</em>}' attribute.
@@ -938,6 +1085,167 @@ public class HelperImpl extends ChkGeneralExpressionsImpl implements Helper
    * <!-- end-user-doc -->
    * @generated
    */
+  public String getContains()
+  {
+    return contains;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setContains(String newContains)
+  {
+    String oldContains = contains;
+    contains = newContains;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, CheckerDslPackage.HELPER__CONTAINS, oldContains, contains));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getAddRow()
+  {
+    return addRow;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setAddRow(String newAddRow)
+  {
+    String oldAddRow = addRow;
+    addRow = newAddRow;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, CheckerDslPackage.HELPER__ADD_ROW, oldAddRow, addRow));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getAddCol()
+  {
+    return addCol;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setAddCol(String newAddCol)
+  {
+    String oldAddCol = addCol;
+    addCol = newAddCol;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, CheckerDslPackage.HELPER__ADD_COL, oldAddCol, addCol));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getSwapRow()
+  {
+    return swapRow;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setSwapRow(String newSwapRow)
+  {
+    String oldSwapRow = swapRow;
+    swapRow = newSwapRow;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, CheckerDslPackage.HELPER__SWAP_ROW, oldSwapRow, swapRow));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getSwapCol()
+  {
+    return swapCol;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setSwapCol(String newSwapCol)
+  {
+    String oldSwapCol = swapCol;
+    swapCol = newSwapCol;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, CheckerDslPackage.HELPER__SWAP_COL, oldSwapCol, swapCol));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getRemoveRow()
+  {
+    return removeRow;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setRemoveRow(String newRemoveRow)
+  {
+    String oldRemoveRow = removeRow;
+    removeRow = newRemoveRow;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, CheckerDslPackage.HELPER__REMOVE_ROW, oldRemoveRow, removeRow));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getRemoveCol()
+  {
+    return removeCol;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setRemoveCol(String newRemoveCol)
+  {
+    String oldRemoveCol = removeCol;
+    removeCol = newRemoveCol;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, CheckerDslPackage.HELPER__REMOVE_COL, oldRemoveCol, removeCol));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public String getPermute()
   {
     return permute;
@@ -1156,6 +1464,20 @@ public class HelperImpl extends ChkGeneralExpressionsImpl implements Helper
         return getVar4();
       case CheckerDslPackage.HELPER__SIZE:
         return getSize();
+      case CheckerDslPackage.HELPER__CONTAINS:
+        return getContains();
+      case CheckerDslPackage.HELPER__ADD_ROW:
+        return getAddRow();
+      case CheckerDslPackage.HELPER__ADD_COL:
+        return getAddCol();
+      case CheckerDslPackage.HELPER__SWAP_ROW:
+        return getSwapRow();
+      case CheckerDslPackage.HELPER__SWAP_COL:
+        return getSwapCol();
+      case CheckerDslPackage.HELPER__REMOVE_ROW:
+        return getRemoveRow();
+      case CheckerDslPackage.HELPER__REMOVE_COL:
+        return getRemoveCol();
       case CheckerDslPackage.HELPER__PERMUTE:
         return getPermute();
       case CheckerDslPackage.HELPER__PLUS:
@@ -1233,6 +1555,27 @@ public class HelperImpl extends ChkGeneralExpressionsImpl implements Helper
         return;
       case CheckerDslPackage.HELPER__SIZE:
         setSize((String)newValue);
+        return;
+      case CheckerDslPackage.HELPER__CONTAINS:
+        setContains((String)newValue);
+        return;
+      case CheckerDslPackage.HELPER__ADD_ROW:
+        setAddRow((String)newValue);
+        return;
+      case CheckerDslPackage.HELPER__ADD_COL:
+        setAddCol((String)newValue);
+        return;
+      case CheckerDslPackage.HELPER__SWAP_ROW:
+        setSwapRow((String)newValue);
+        return;
+      case CheckerDslPackage.HELPER__SWAP_COL:
+        setSwapCol((String)newValue);
+        return;
+      case CheckerDslPackage.HELPER__REMOVE_ROW:
+        setRemoveRow((String)newValue);
+        return;
+      case CheckerDslPackage.HELPER__REMOVE_COL:
+        setRemoveCol((String)newValue);
         return;
       case CheckerDslPackage.HELPER__PERMUTE:
         setPermute((String)newValue);
@@ -1317,6 +1660,27 @@ public class HelperImpl extends ChkGeneralExpressionsImpl implements Helper
       case CheckerDslPackage.HELPER__SIZE:
         setSize(SIZE_EDEFAULT);
         return;
+      case CheckerDslPackage.HELPER__CONTAINS:
+        setContains(CONTAINS_EDEFAULT);
+        return;
+      case CheckerDslPackage.HELPER__ADD_ROW:
+        setAddRow(ADD_ROW_EDEFAULT);
+        return;
+      case CheckerDslPackage.HELPER__ADD_COL:
+        setAddCol(ADD_COL_EDEFAULT);
+        return;
+      case CheckerDslPackage.HELPER__SWAP_ROW:
+        setSwapRow(SWAP_ROW_EDEFAULT);
+        return;
+      case CheckerDslPackage.HELPER__SWAP_COL:
+        setSwapCol(SWAP_COL_EDEFAULT);
+        return;
+      case CheckerDslPackage.HELPER__REMOVE_ROW:
+        setRemoveRow(REMOVE_ROW_EDEFAULT);
+        return;
+      case CheckerDslPackage.HELPER__REMOVE_COL:
+        setRemoveCol(REMOVE_COL_EDEFAULT);
+        return;
       case CheckerDslPackage.HELPER__PERMUTE:
         setPermute(PERMUTE_EDEFAULT);
         return;
@@ -1384,6 +1748,20 @@ public class HelperImpl extends ChkGeneralExpressionsImpl implements Helper
         return var4 != null;
       case CheckerDslPackage.HELPER__SIZE:
         return SIZE_EDEFAULT == null ? size != null : !SIZE_EDEFAULT.equals(size);
+      case CheckerDslPackage.HELPER__CONTAINS:
+        return CONTAINS_EDEFAULT == null ? contains != null : !CONTAINS_EDEFAULT.equals(contains);
+      case CheckerDslPackage.HELPER__ADD_ROW:
+        return ADD_ROW_EDEFAULT == null ? addRow != null : !ADD_ROW_EDEFAULT.equals(addRow);
+      case CheckerDslPackage.HELPER__ADD_COL:
+        return ADD_COL_EDEFAULT == null ? addCol != null : !ADD_COL_EDEFAULT.equals(addCol);
+      case CheckerDslPackage.HELPER__SWAP_ROW:
+        return SWAP_ROW_EDEFAULT == null ? swapRow != null : !SWAP_ROW_EDEFAULT.equals(swapRow);
+      case CheckerDslPackage.HELPER__SWAP_COL:
+        return SWAP_COL_EDEFAULT == null ? swapCol != null : !SWAP_COL_EDEFAULT.equals(swapCol);
+      case CheckerDslPackage.HELPER__REMOVE_ROW:
+        return REMOVE_ROW_EDEFAULT == null ? removeRow != null : !REMOVE_ROW_EDEFAULT.equals(removeRow);
+      case CheckerDslPackage.HELPER__REMOVE_COL:
+        return REMOVE_COL_EDEFAULT == null ? removeCol != null : !REMOVE_COL_EDEFAULT.equals(removeCol);
       case CheckerDslPackage.HELPER__PERMUTE:
         return PERMUTE_EDEFAULT == null ? permute != null : !PERMUTE_EDEFAULT.equals(permute);
       case CheckerDslPackage.HELPER__PLUS:
@@ -1439,6 +1817,20 @@ public class HelperImpl extends ChkGeneralExpressionsImpl implements Helper
     result.append(random);
     result.append(", size: ");
     result.append(size);
+    result.append(", contains: ");
+    result.append(contains);
+    result.append(", addRow: ");
+    result.append(addRow);
+    result.append(", addCol: ");
+    result.append(addCol);
+    result.append(", swapRow: ");
+    result.append(swapRow);
+    result.append(", swapCol: ");
+    result.append(swapCol);
+    result.append(", removeRow: ");
+    result.append(removeRow);
+    result.append(", removeCol: ");
+    result.append(removeCol);
     result.append(", permute: ");
     result.append(permute);
     result.append(", plus: ");

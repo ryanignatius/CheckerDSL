@@ -15,6 +15,7 @@ import org.xtext.example.checkerdsl.checkerDsl.ChkVariables
 import org.xtext.example.checkerdsl.checkerDsl.MR
 import org.xtext.example.checkerdsl.checkerDsl.Score
 import org.xtext.example.checkerdsl.checkerDsl.FormatExpression
+import org.xtext.example.checkerdsl.checkerDsl.ForFormatExpression
 import org.xtext.example.checkerdsl.checkerDsl.ChkOperation
 import org.xtext.example.checkerdsl.checkerDsl.ChkExpression
 import org.xtext.example.checkerdsl.checkerDsl.ChkLoopExpression
@@ -471,7 +472,15 @@ class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
 	      		bd2 = bd2+"try{\n"
 	      		bd2 = bd2+"BufferedReader reader = new BufferedReader(new FileReader(new File(\"tc/Subtask\"+current_subtask+\"/in/\"+num+\"/\"+current_testcase+\".in\")));\n"
 	      		for (p : feature.exp) {
-	            	bd2 = bd2.concat(p.inputBody)
+	      			switch (p){
+	      				FormatExpression:{
+	      					bd2 = bd2.concat(p.inputBody)
+	      				}
+	      				ForFormatExpression:{
+	      					
+	      				}
+	      			}
+	            	
 	          	}
 	          	
 	          	bd2 = bd2+"if (reader.readLine() != null){\n"
@@ -495,7 +504,15 @@ class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
 	      		bd3a = bd3a+"try{\n"
 	      		bd3a = bd3a+"BufferedReader reader = new BufferedReader(new FileReader(new File(\"tc/Subtask\"+current_subtask+\"/out/\"+num+\"/\"+current_testcase+\".out\")));\n"
 	      		for (p : feature.exp) {
-	            	bd3a = bd3a.concat(p.inputBody)
+	      			switch (p){
+	      				FormatExpression:{
+	      					bd3a = bd3a.concat(p.inputBody)
+	      				}
+	      				ForFormatExpression:{
+	      					
+	      				}
+	      			}
+	            	
 	          	}
 	          	bd3a = bd3a+"if (reader.readLine() != null){\n"
 	          	bd3a = bd3a+class_name+".die(\"number of lines not match\");\n"
@@ -521,7 +538,15 @@ class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
 	      		bd3 = bd3+"fw = new FileWriter(wfile);\n"
 	      		bd3 = bd3+"writer = new BufferedWriter(fw);\n"
 	      		for (p : feature.exp) {
-	            	bd3 = bd3.concat(p.outputBody)
+	      			switch (p){
+	      				FormatExpression:{
+	      					bd3 = bd3.concat(p.outputBody)
+	      				}
+	      				ForFormatExpression:{
+	      					
+	      				}
+	      			}
+	            	
 	          	}
 	          	bd3 = bd3+"writer.close();\n"
 	          	bd3 = bd3+"} catch(Exception e){}\n"
@@ -719,7 +744,7 @@ class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
   def String checkExp(ChkExpression element){
   	var cc = ""
   	var lt = ""
-  	if (element.asg != null) lt = lt+"int "+element.asg+" = "
+  	//todo if (element.asg != null) lt = lt+"int "+element.asg+" = "
 	var exp = element.exp
 	switch exp{
 		Helper:{
@@ -739,7 +764,11 @@ class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
 						if (element.type.get(xx).equals("and")) cc = cc+" && "
 						if (element.type.get(xx).equals("or")) cc = cc+" || "
 					}
-					cc = cc+relationalExp(co)
+					switch co{
+						ChkRelationalExpression:{
+							cc = cc+relationalExp(co)
+						}
+					}
 					xx = xx+1
 				}
 				cc = cc+"));\n"
@@ -757,7 +786,11 @@ class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
 							if (element.type.get(xx).equals("and")) cc = cc+" && "
 							if (element.type.get(xx).equals("or")) cc = cc+" || "
 						}
-						cc = cc+relationalExp(co)
+						switch co{
+							ChkRelationalExpression:{
+								cc = cc+relationalExp(co)
+							}
+						}
 						xx = xx+1
 					}
 					cc = cc+") cond_arr.add(true);\n"
@@ -865,7 +898,11 @@ class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
 								if (element.type.get(xx).equals("and")) cc = cc+" && "
 								if (element.type.get(xx).equals("or")) cc = cc+" || "
 							}
-							cc = cc+relationalExp(co)
+							switch co{
+								ChkRelationalExpression:{
+									cc = cc+relationalExp(co)
+								}
+							}
 							xx = xx+1
 						}
 						cc = cc+"));\n"
@@ -883,7 +920,11 @@ class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
 									if (element.type.get(xx).equals("and")) cc = cc+" && "
 									if (element.type.get(xx).equals("or")) cc = cc+" || "
 								}
-								cc = cc+relationalExp(co)
+								switch co{
+									ChkRelationalExpression:{
+										cc = cc+relationalExp(co)
+									}
+								}
 								xx = xx+1
 							}
 							cc = cc+") cond_arr.add(true);\n"

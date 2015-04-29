@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.ChkAssignment#getDef <em>Def</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.ChkAssignment#getV1 <em>V1</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.ChkAssignment#getOpr <em>Opr</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.ChkAssignment#getV2 <em>V2</em>}</li>
@@ -24,6 +25,32 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface ChkAssignment extends ChkGeneralExpressions
 {
+  /**
+   * Returns the value of the '<em><b>Def</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Def</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Def</em>' attribute.
+   * @see #setDef(String)
+   * @see org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage#getChkAssignment_Def()
+   * @model
+   * @generated
+   */
+  String getDef();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.checkerdsl.checkerDsl.ChkAssignment#getDef <em>Def</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Def</em>' attribute.
+   * @see #getDef()
+   * @generated
+   */
+  void setDef(String value);
+
   /**
    * Returns the value of the '<em><b>V1</b></em>' containment reference.
    * <!-- begin-user-doc -->

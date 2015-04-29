@@ -29,9 +29,11 @@ import org.xtext.example.checkerdsl.checkerDsl.ChkVariables;
 import org.xtext.example.checkerdsl.checkerDsl.Dsl;
 import org.xtext.example.checkerdsl.checkerDsl.Feature;
 import org.xtext.example.checkerdsl.checkerDsl.FollowUp;
+import org.xtext.example.checkerdsl.checkerDsl.ForFormatExpression;
 import org.xtext.example.checkerdsl.checkerDsl.Format;
 import org.xtext.example.checkerdsl.checkerDsl.FormatExpression;
 import org.xtext.example.checkerdsl.checkerDsl.Helper;
+import org.xtext.example.checkerdsl.checkerDsl.HiddenFormat;
 import org.xtext.example.checkerdsl.checkerDsl.InputFormat;
 import org.xtext.example.checkerdsl.checkerDsl.Limit;
 import org.xtext.example.checkerdsl.checkerDsl.MR;
@@ -125,8 +127,10 @@ public class CheckerDslFactoryImpl extends EFactoryImpl implements CheckerDslFac
       case CheckerDslPackage.LIMIT: return createLimit();
       case CheckerDslPackage.SUBTASK: return createSubtask();
       case CheckerDslPackage.FORMAT: return createFormat();
+      case CheckerDslPackage.FOR_FORMAT_EXPRESSION: return createForFormatExpression();
       case CheckerDslPackage.INPUT_FORMAT: return createInputFormat();
       case CheckerDslPackage.OUTPUT_FORMAT: return createOutputFormat();
+      case CheckerDslPackage.HIDDEN_FORMAT: return createHiddenFormat();
       case CheckerDslPackage.FORMAT_EXPRESSION: return createFormatExpression();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -457,6 +461,17 @@ public class CheckerDslFactoryImpl extends EFactoryImpl implements CheckerDslFac
    * <!-- end-user-doc -->
    * @generated
    */
+  public ForFormatExpression createForFormatExpression()
+  {
+    ForFormatExpressionImpl forFormatExpression = new ForFormatExpressionImpl();
+    return forFormatExpression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public InputFormat createInputFormat()
   {
     InputFormatImpl inputFormat = new InputFormatImpl();
@@ -472,6 +487,17 @@ public class CheckerDslFactoryImpl extends EFactoryImpl implements CheckerDslFac
   {
     OutputFormatImpl outputFormat = new OutputFormatImpl();
     return outputFormat;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public HiddenFormat createHiddenFormat()
+  {
+    HiddenFormatImpl hiddenFormat = new HiddenFormatImpl();
+    return hiddenFormat;
   }
 
   /**

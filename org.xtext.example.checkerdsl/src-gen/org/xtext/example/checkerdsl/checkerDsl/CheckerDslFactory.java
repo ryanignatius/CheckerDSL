@@ -284,6 +284,15 @@ public interface CheckerDslFactory extends EFactory
   Format createFormat();
 
   /**
+   * Returns a new object of class '<em>For Format Expression</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>For Format Expression</em>'.
+   * @generated
+   */
+  ForFormatExpression createForFormatExpression();
+
+  /**
    * Returns a new object of class '<em>Input Format</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -300,6 +309,15 @@ public interface CheckerDslFactory extends EFactory
    * @generated
    */
   OutputFormat createOutputFormat();
+
+  /**
+   * Returns a new object of class '<em>Hidden Format</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Hidden Format</em>'.
+   * @generated
+   */
+  HiddenFormat createHiddenFormat();
 
   /**
    * Returns a new object of class '<em>Format Expression</em>'.

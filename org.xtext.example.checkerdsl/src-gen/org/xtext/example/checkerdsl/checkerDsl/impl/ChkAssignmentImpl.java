@@ -23,6 +23,7 @@ import org.xtext.example.checkerdsl.checkerDsl.ChkVariable;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.ChkAssignmentImpl#getDef <em>Def</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.ChkAssignmentImpl#getV1 <em>V1</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.ChkAssignmentImpl#getOpr <em>Opr</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.ChkAssignmentImpl#getV2 <em>V2</em>}</li>
@@ -32,6 +33,26 @@ import org.xtext.example.checkerdsl.checkerDsl.ChkVariable;
  */
 public class ChkAssignmentImpl extends ChkGeneralExpressionsImpl implements ChkAssignment
 {
+  /**
+   * The default value of the '{@link #getDef() <em>Def</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getDef()
+   * @generated
+   * @ordered
+   */
+  protected static final String DEF_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getDef() <em>Def</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getDef()
+   * @generated
+   * @ordered
+   */
+  protected String def = DEF_EDEFAULT;
+
   /**
    * The cached value of the '{@link #getV1() <em>V1</em>}' containment reference.
    * <!-- begin-user-doc -->
@@ -91,6 +112,29 @@ public class ChkAssignmentImpl extends ChkGeneralExpressionsImpl implements ChkA
   protected EClass eStaticClass()
   {
     return CheckerDslPackage.Literals.CHK_ASSIGNMENT;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getDef()
+  {
+    return def;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setDef(String newDef)
+  {
+    String oldDef = def;
+    def = newDef;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, CheckerDslPackage.CHK_ASSIGNMENT__DEF, oldDef, def));
   }
 
   /**
@@ -240,6 +284,8 @@ public class ChkAssignmentImpl extends ChkGeneralExpressionsImpl implements ChkA
   {
     switch (featureID)
     {
+      case CheckerDslPackage.CHK_ASSIGNMENT__DEF:
+        return getDef();
       case CheckerDslPackage.CHK_ASSIGNMENT__V1:
         return getV1();
       case CheckerDslPackage.CHK_ASSIGNMENT__OPR:
@@ -260,6 +306,9 @@ public class ChkAssignmentImpl extends ChkGeneralExpressionsImpl implements ChkA
   {
     switch (featureID)
     {
+      case CheckerDslPackage.CHK_ASSIGNMENT__DEF:
+        setDef((String)newValue);
+        return;
       case CheckerDslPackage.CHK_ASSIGNMENT__V1:
         setV1((ChkVariable)newValue);
         return;
@@ -283,6 +332,9 @@ public class ChkAssignmentImpl extends ChkGeneralExpressionsImpl implements ChkA
   {
     switch (featureID)
     {
+      case CheckerDslPackage.CHK_ASSIGNMENT__DEF:
+        setDef(DEF_EDEFAULT);
+        return;
       case CheckerDslPackage.CHK_ASSIGNMENT__V1:
         setV1((ChkVariable)null);
         return;
@@ -306,6 +358,8 @@ public class ChkAssignmentImpl extends ChkGeneralExpressionsImpl implements ChkA
   {
     switch (featureID)
     {
+      case CheckerDslPackage.CHK_ASSIGNMENT__DEF:
+        return DEF_EDEFAULT == null ? def != null : !DEF_EDEFAULT.equals(def);
       case CheckerDslPackage.CHK_ASSIGNMENT__V1:
         return v1 != null;
       case CheckerDslPackage.CHK_ASSIGNMENT__OPR:
@@ -327,7 +381,9 @@ public class ChkAssignmentImpl extends ChkGeneralExpressionsImpl implements ChkA
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (opr: ");
+    result.append(" (def: ");
+    result.append(def);
+    result.append(", opr: ");
     result.append(opr);
     result.append(')');
     return result.toString();

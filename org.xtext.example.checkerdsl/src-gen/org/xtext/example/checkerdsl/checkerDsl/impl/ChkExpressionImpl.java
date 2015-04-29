@@ -22,7 +22,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage;
 import org.xtext.example.checkerdsl.checkerDsl.ChkExpression;
 import org.xtext.example.checkerdsl.checkerDsl.ChkGeneralExpressions;
-import org.xtext.example.checkerdsl.checkerDsl.ChkRelationalExpression;
 import org.xtext.example.checkerdsl.checkerDsl.ChkVariable;
 
 /**
@@ -33,9 +32,9 @@ import org.xtext.example.checkerdsl.checkerDsl.ChkVariable;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.ChkExpressionImpl#getAsg <em>Asg</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.ChkExpressionImpl#getExp <em>Exp</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.ChkExpressionImpl#getWhere <em>Where</em>}</li>
+ *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.ChkExpressionImpl#getNot <em>Not</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.ChkExpressionImpl#getCond <em>Cond</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.ChkExpressionImpl#getType <em>Type</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.ChkExpressionImpl#getOp <em>Op</em>}</li>
@@ -46,26 +45,6 @@ import org.xtext.example.checkerdsl.checkerDsl.ChkVariable;
  */
 public class ChkExpressionImpl extends MinimalEObjectImpl.Container implements ChkExpression
 {
-  /**
-   * The default value of the '{@link #getAsg() <em>Asg</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getAsg()
-   * @generated
-   * @ordered
-   */
-  protected static final String ASG_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getAsg() <em>Asg</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getAsg()
-   * @generated
-   * @ordered
-   */
-  protected String asg = ASG_EDEFAULT;
-
   /**
    * The cached value of the '{@link #getExp() <em>Exp</em>}' containment reference.
    * <!-- begin-user-doc -->
@@ -97,6 +76,26 @@ public class ChkExpressionImpl extends MinimalEObjectImpl.Container implements C
   protected String where = WHERE_EDEFAULT;
 
   /**
+   * The default value of the '{@link #getNot() <em>Not</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getNot()
+   * @generated
+   * @ordered
+   */
+  protected static final String NOT_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getNot() <em>Not</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getNot()
+   * @generated
+   * @ordered
+   */
+  protected String not = NOT_EDEFAULT;
+
+  /**
    * The cached value of the '{@link #getCond() <em>Cond</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -104,7 +103,7 @@ public class ChkExpressionImpl extends MinimalEObjectImpl.Container implements C
    * @generated
    * @ordered
    */
-  protected EList<ChkRelationalExpression> cond;
+  protected EList<ChkGeneralExpressions> cond;
 
   /**
    * The cached value of the '{@link #getType() <em>Type</em>}' attribute list.
@@ -165,29 +164,6 @@ public class ChkExpressionImpl extends MinimalEObjectImpl.Container implements C
   protected EClass eStaticClass()
   {
     return CheckerDslPackage.Literals.CHK_EXPRESSION;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String getAsg()
-  {
-    return asg;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setAsg(String newAsg)
-  {
-    String oldAsg = asg;
-    asg = newAsg;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, CheckerDslPackage.CHK_EXPRESSION__ASG, oldAsg, asg));
   }
 
   /**
@@ -266,11 +242,34 @@ public class ChkExpressionImpl extends MinimalEObjectImpl.Container implements C
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<ChkRelationalExpression> getCond()
+  public String getNot()
+  {
+    return not;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setNot(String newNot)
+  {
+    String oldNot = not;
+    not = newNot;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, CheckerDslPackage.CHK_EXPRESSION__NOT, oldNot, not));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EList<ChkGeneralExpressions> getCond()
   {
     if (cond == null)
     {
-      cond = new EObjectContainmentEList<ChkRelationalExpression>(ChkRelationalExpression.class, this, CheckerDslPackage.CHK_EXPRESSION__COND);
+      cond = new EObjectContainmentEList<ChkGeneralExpressions>(ChkGeneralExpressions.class, this, CheckerDslPackage.CHK_EXPRESSION__COND);
     }
     return cond;
   }
@@ -390,12 +389,12 @@ public class ChkExpressionImpl extends MinimalEObjectImpl.Container implements C
   {
     switch (featureID)
     {
-      case CheckerDslPackage.CHK_EXPRESSION__ASG:
-        return getAsg();
       case CheckerDslPackage.CHK_EXPRESSION__EXP:
         return getExp();
       case CheckerDslPackage.CHK_EXPRESSION__WHERE:
         return getWhere();
+      case CheckerDslPackage.CHK_EXPRESSION__NOT:
+        return getNot();
       case CheckerDslPackage.CHK_EXPRESSION__COND:
         return getCond();
       case CheckerDslPackage.CHK_EXPRESSION__TYPE:
@@ -419,18 +418,18 @@ public class ChkExpressionImpl extends MinimalEObjectImpl.Container implements C
   {
     switch (featureID)
     {
-      case CheckerDslPackage.CHK_EXPRESSION__ASG:
-        setAsg((String)newValue);
-        return;
       case CheckerDslPackage.CHK_EXPRESSION__EXP:
         setExp((ChkGeneralExpressions)newValue);
         return;
       case CheckerDslPackage.CHK_EXPRESSION__WHERE:
         setWhere((String)newValue);
         return;
+      case CheckerDslPackage.CHK_EXPRESSION__NOT:
+        setNot((String)newValue);
+        return;
       case CheckerDslPackage.CHK_EXPRESSION__COND:
         getCond().clear();
-        getCond().addAll((Collection<? extends ChkRelationalExpression>)newValue);
+        getCond().addAll((Collection<? extends ChkGeneralExpressions>)newValue);
         return;
       case CheckerDslPackage.CHK_EXPRESSION__TYPE:
         getType().clear();
@@ -456,14 +455,14 @@ public class ChkExpressionImpl extends MinimalEObjectImpl.Container implements C
   {
     switch (featureID)
     {
-      case CheckerDslPackage.CHK_EXPRESSION__ASG:
-        setAsg(ASG_EDEFAULT);
-        return;
       case CheckerDslPackage.CHK_EXPRESSION__EXP:
         setExp((ChkGeneralExpressions)null);
         return;
       case CheckerDslPackage.CHK_EXPRESSION__WHERE:
         setWhere(WHERE_EDEFAULT);
+        return;
+      case CheckerDslPackage.CHK_EXPRESSION__NOT:
+        setNot(NOT_EDEFAULT);
         return;
       case CheckerDslPackage.CHK_EXPRESSION__COND:
         getCond().clear();
@@ -491,12 +490,12 @@ public class ChkExpressionImpl extends MinimalEObjectImpl.Container implements C
   {
     switch (featureID)
     {
-      case CheckerDslPackage.CHK_EXPRESSION__ASG:
-        return ASG_EDEFAULT == null ? asg != null : !ASG_EDEFAULT.equals(asg);
       case CheckerDslPackage.CHK_EXPRESSION__EXP:
         return exp != null;
       case CheckerDslPackage.CHK_EXPRESSION__WHERE:
         return WHERE_EDEFAULT == null ? where != null : !WHERE_EDEFAULT.equals(where);
+      case CheckerDslPackage.CHK_EXPRESSION__NOT:
+        return NOT_EDEFAULT == null ? not != null : !NOT_EDEFAULT.equals(not);
       case CheckerDslPackage.CHK_EXPRESSION__COND:
         return cond != null && !cond.isEmpty();
       case CheckerDslPackage.CHK_EXPRESSION__TYPE:
@@ -520,10 +519,10 @@ public class ChkExpressionImpl extends MinimalEObjectImpl.Container implements C
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (asg: ");
-    result.append(asg);
-    result.append(", where: ");
+    result.append(" (where: ");
     result.append(where);
+    result.append(", not: ");
+    result.append(not);
     result.append(", type: ");
     result.append(type);
     result.append(", op: ");

@@ -32,7 +32,7 @@ class Greedy{
 	}
 	
 	MR 1 {
-		(select(k,l) where (1<=k and k<l and l<=n))
+		(select(k,l) where 1<=k and k<l and l<=n)
 		followup {
 			(m` = swapColumn(m,k,l))
 		}
@@ -70,7 +70,8 @@ class Greedy{
 	MR 4 {
 		followup {
 			for (j,numKey){
-				(m`[j] = m[o[j]])
+				(def temp = o[j])
+				(m`[j] = m[temp])
 			}
 		}
 		check {
@@ -84,12 +85,16 @@ class Greedy{
 			(x` = x+1)
 			(m` = addRow(m))
 			for (j,y){
-				(m`[x][j] = (m[o[k]][j] | m[o[k+1]][j])
+				(def temp = o[k])
+				(def k1 = k+1)
+				(def temp2 = o[k1])
+				(m`[x][j] = m[temp][j] | m[temp2][j])
 			}
 		}
 		check {
 			(numKey` = numKey+1)
-			(o` = remove(o,k+1))
+			(def k1 = k+1)
+			(o` = remove(o,k1))
 		}
 	}
 	
@@ -97,7 +102,8 @@ class Greedy{
 		(select(k) where k >= 2 and k<=numKey)
 		followup {
 			for (j,y){
-				(m`[1][j] = (m[1][j] | m[o[k]][j]))
+				(def temp = o[k])
+				(m`[1][j] = m[1][j] | m[temp][j])
 			}
 		}
 		check {
@@ -110,18 +116,19 @@ class Greedy{
 		(select(k) where k >= 1 and k<=numKey)
 		followup {
 			for (j,y){
-				(m` = deleteColumn(m,j) where m[o[k]][j] = 1)
+				(def temp = o[k])
+				(m` = removeColumn(m,j) where m[temp][j] == 1)
 			}
 		}
 		check {
 			(numKey` = numKey-1)
-			(o` = deleteRow(o[k]))
+			(m` = removeRow(m,k))
 			(o` = remove(o,k))
 		}
 	}
 	
 	MR 8 {
-		(select(k) where not o.contains(k))
+		(select(k) where not contain(o,k))
 		followup {
 			(y` = y+1)
 			(m` = addColumn(m))
@@ -137,7 +144,7 @@ class Greedy{
 	}
 	
 	MR 9 {
-		(select(k) where not o.contains(k))
+		(select(k) where not contain(o,k))
 		followup {
 			(y` = y+1)
 			(m` = addColumn(m))

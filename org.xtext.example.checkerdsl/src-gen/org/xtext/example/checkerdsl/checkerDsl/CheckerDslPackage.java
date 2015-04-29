@@ -922,13 +922,76 @@ public interface CheckerDslPackage extends EPackage
   int HELPER__SIZE = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 15;
 
   /**
+   * The feature id for the '<em><b>Contains</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HELPER__CONTAINS = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 16;
+
+  /**
+   * The feature id for the '<em><b>Add Row</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HELPER__ADD_ROW = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 17;
+
+  /**
+   * The feature id for the '<em><b>Add Col</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HELPER__ADD_COL = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 18;
+
+  /**
+   * The feature id for the '<em><b>Swap Row</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HELPER__SWAP_ROW = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 19;
+
+  /**
+   * The feature id for the '<em><b>Swap Col</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HELPER__SWAP_COL = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 20;
+
+  /**
+   * The feature id for the '<em><b>Remove Row</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HELPER__REMOVE_ROW = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 21;
+
+  /**
+   * The feature id for the '<em><b>Remove Col</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HELPER__REMOVE_COL = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 22;
+
+  /**
    * The feature id for the '<em><b>Permute</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int HELPER__PERMUTE = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 16;
+  int HELPER__PERMUTE = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 23;
 
   /**
    * The feature id for the '<em><b>Plus</b></em>' attribute.
@@ -937,7 +1000,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int HELPER__PLUS = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 17;
+  int HELPER__PLUS = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 24;
 
   /**
    * The feature id for the '<em><b>Multiply</b></em>' attribute.
@@ -946,7 +1009,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int HELPER__MULTIPLY = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 18;
+  int HELPER__MULTIPLY = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 25;
 
   /**
    * The feature id for the '<em><b>Invert</b></em>' attribute.
@@ -955,7 +1018,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int HELPER__INVERT = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 19;
+  int HELPER__INVERT = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 26;
 
   /**
    * The feature id for the '<em><b>Include</b></em>' attribute.
@@ -964,7 +1027,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int HELPER__INCLUDE = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 20;
+  int HELPER__INCLUDE = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 27;
 
   /**
    * The feature id for the '<em><b>Exclude</b></em>' attribute.
@@ -973,7 +1036,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int HELPER__EXCLUDE = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 21;
+  int HELPER__EXCLUDE = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 28;
 
   /**
    * The feature id for the '<em><b>Compositional</b></em>' attribute.
@@ -982,7 +1045,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int HELPER__COMPOSITIONAL = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 22;
+  int HELPER__COMPOSITIONAL = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 29;
 
   /**
    * The number of structural features of the '<em>Helper</em>' class.
@@ -991,7 +1054,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int HELPER_FEATURE_COUNT = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 23;
+  int HELPER_FEATURE_COUNT = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 30;
 
   /**
    * The meta object id for the '{@link org.xtext.example.checkerdsl.checkerDsl.impl.ChkRelationalExpressionImpl <em>Chk Relational Expression</em>}' class.
@@ -1050,13 +1113,22 @@ public interface CheckerDslPackage extends EPackage
   int CHK_ASSIGNMENT = 19;
 
   /**
+   * The feature id for the '<em><b>Def</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CHK_ASSIGNMENT__DEF = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 0;
+
+  /**
    * The feature id for the '<em><b>V1</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CHK_ASSIGNMENT__V1 = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 0;
+  int CHK_ASSIGNMENT__V1 = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Opr</b></em>' attribute.
@@ -1065,7 +1137,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CHK_ASSIGNMENT__OPR = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 1;
+  int CHK_ASSIGNMENT__OPR = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>V2</b></em>' containment reference.
@@ -1074,7 +1146,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CHK_ASSIGNMENT__V2 = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 2;
+  int CHK_ASSIGNMENT__V2 = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 3;
 
   /**
    * The number of structural features of the '<em>Chk Assignment</em>' class.
@@ -1083,7 +1155,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CHK_ASSIGNMENT_FEATURE_COUNT = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 3;
+  int CHK_ASSIGNMENT_FEATURE_COUNT = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 4;
 
   /**
    * The meta object id for the '{@link org.xtext.example.checkerdsl.checkerDsl.impl.ChkOperationImpl <em>Chk Operation</em>}' class.
@@ -1179,22 +1251,13 @@ public interface CheckerDslPackage extends EPackage
   int CHK_EXPRESSION = 23;
 
   /**
-   * The feature id for the '<em><b>Asg</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CHK_EXPRESSION__ASG = 0;
-
-  /**
    * The feature id for the '<em><b>Exp</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CHK_EXPRESSION__EXP = 1;
+  int CHK_EXPRESSION__EXP = 0;
 
   /**
    * The feature id for the '<em><b>Where</b></em>' attribute.
@@ -1203,7 +1266,16 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CHK_EXPRESSION__WHERE = 2;
+  int CHK_EXPRESSION__WHERE = 1;
+
+  /**
+   * The feature id for the '<em><b>Not</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CHK_EXPRESSION__NOT = 2;
 
   /**
    * The feature id for the '<em><b>Cond</b></em>' containment reference list.
@@ -1418,6 +1490,52 @@ public interface CheckerDslPackage extends EPackage
   int FORMAT_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 1;
 
   /**
+   * The meta object id for the '{@link org.xtext.example.checkerdsl.checkerDsl.impl.ForFormatExpressionImpl <em>For Format Expression</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.checkerdsl.checkerDsl.impl.ForFormatExpressionImpl
+   * @see org.xtext.example.checkerdsl.checkerDsl.impl.CheckerDslPackageImpl#getForFormatExpression()
+   * @generated
+   */
+  int FOR_FORMAT_EXPRESSION = 29;
+
+  /**
+   * The feature id for the '<em><b>Index</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FOR_FORMAT_EXPRESSION__INDEX = 0;
+
+  /**
+   * The feature id for the '<em><b>Max Index</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FOR_FORMAT_EXPRESSION__MAX_INDEX = 1;
+
+  /**
+   * The feature id for the '<em><b>Ex</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FOR_FORMAT_EXPRESSION__EX = 2;
+
+  /**
+   * The number of structural features of the '<em>For Format Expression</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FOR_FORMAT_EXPRESSION_FEATURE_COUNT = 3;
+
+  /**
    * The meta object id for the '{@link org.xtext.example.checkerdsl.checkerDsl.impl.InputFormatImpl <em>Input Format</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1425,7 +1543,7 @@ public interface CheckerDslPackage extends EPackage
    * @see org.xtext.example.checkerdsl.checkerDsl.impl.CheckerDslPackageImpl#getInputFormat()
    * @generated
    */
-  int INPUT_FORMAT = 29;
+  int INPUT_FORMAT = 30;
 
   /**
    * The feature id for the '<em><b>Exp</b></em>' containment reference list.
@@ -1462,7 +1580,7 @@ public interface CheckerDslPackage extends EPackage
    * @see org.xtext.example.checkerdsl.checkerDsl.impl.CheckerDslPackageImpl#getOutputFormat()
    * @generated
    */
-  int OUTPUT_FORMAT = 30;
+  int OUTPUT_FORMAT = 31;
 
   /**
    * The feature id for the '<em><b>Exp</b></em>' containment reference list.
@@ -1492,6 +1610,43 @@ public interface CheckerDslPackage extends EPackage
   int OUTPUT_FORMAT_FEATURE_COUNT = FORMAT_FEATURE_COUNT + 1;
 
   /**
+   * The meta object id for the '{@link org.xtext.example.checkerdsl.checkerDsl.impl.HiddenFormatImpl <em>Hidden Format</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.checkerdsl.checkerDsl.impl.HiddenFormatImpl
+   * @see org.xtext.example.checkerdsl.checkerDsl.impl.CheckerDslPackageImpl#getHiddenFormat()
+   * @generated
+   */
+  int HIDDEN_FORMAT = 32;
+
+  /**
+   * The feature id for the '<em><b>Exp</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HIDDEN_FORMAT__EXP = FORMAT__EXP;
+
+  /**
+   * The feature id for the '<em><b>Hid</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HIDDEN_FORMAT__HID = FORMAT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Hidden Format</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HIDDEN_FORMAT_FEATURE_COUNT = FORMAT_FEATURE_COUNT + 1;
+
+  /**
    * The meta object id for the '{@link org.xtext.example.checkerdsl.checkerDsl.impl.FormatExpressionImpl <em>Format Expression</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1499,7 +1654,7 @@ public interface CheckerDslPackage extends EPackage
    * @see org.xtext.example.checkerdsl.checkerDsl.impl.CheckerDslPackageImpl#getFormatExpression()
    * @generated
    */
-  int FORMAT_EXPRESSION = 31;
+  int FORMAT_EXPRESSION = 33;
 
   /**
    * The feature id for the '<em><b>Num</b></em>' attribute.
@@ -1520,13 +1675,22 @@ public interface CheckerDslPackage extends EPackage
   int FORMAT_EXPRESSION__VAR = 1;
 
   /**
+   * The feature id for the '<em><b>Sz</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FORMAT_EXPRESSION__SZ = 2;
+
+  /**
    * The feature id for the '<em><b>Count</b></em>' attribute list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int FORMAT_EXPRESSION__COUNT = 2;
+  int FORMAT_EXPRESSION__COUNT = 3;
 
   /**
    * The number of structural features of the '<em>Format Expression</em>' class.
@@ -1535,7 +1699,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int FORMAT_EXPRESSION_FEATURE_COUNT = 3;
+  int FORMAT_EXPRESSION_FEATURE_COUNT = 4;
 
 
   /**
@@ -2324,6 +2488,83 @@ public interface CheckerDslPackage extends EPackage
   EAttribute getHelper_Size();
 
   /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getContains <em>Contains</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Contains</em>'.
+   * @see org.xtext.example.checkerdsl.checkerDsl.Helper#getContains()
+   * @see #getHelper()
+   * @generated
+   */
+  EAttribute getHelper_Contains();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getAddRow <em>Add Row</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Add Row</em>'.
+   * @see org.xtext.example.checkerdsl.checkerDsl.Helper#getAddRow()
+   * @see #getHelper()
+   * @generated
+   */
+  EAttribute getHelper_AddRow();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getAddCol <em>Add Col</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Add Col</em>'.
+   * @see org.xtext.example.checkerdsl.checkerDsl.Helper#getAddCol()
+   * @see #getHelper()
+   * @generated
+   */
+  EAttribute getHelper_AddCol();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getSwapRow <em>Swap Row</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Swap Row</em>'.
+   * @see org.xtext.example.checkerdsl.checkerDsl.Helper#getSwapRow()
+   * @see #getHelper()
+   * @generated
+   */
+  EAttribute getHelper_SwapRow();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getSwapCol <em>Swap Col</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Swap Col</em>'.
+   * @see org.xtext.example.checkerdsl.checkerDsl.Helper#getSwapCol()
+   * @see #getHelper()
+   * @generated
+   */
+  EAttribute getHelper_SwapCol();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getRemoveRow <em>Remove Row</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Remove Row</em>'.
+   * @see org.xtext.example.checkerdsl.checkerDsl.Helper#getRemoveRow()
+   * @see #getHelper()
+   * @generated
+   */
+  EAttribute getHelper_RemoveRow();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getRemoveCol <em>Remove Col</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Remove Col</em>'.
+   * @see org.xtext.example.checkerdsl.checkerDsl.Helper#getRemoveCol()
+   * @see #getHelper()
+   * @generated
+   */
+  EAttribute getHelper_RemoveCol();
+
+  /**
    * Returns the meta object for the attribute '{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getPermute <em>Permute</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2454,6 +2695,17 @@ public interface CheckerDslPackage extends EPackage
   EClass getChkAssignment();
 
   /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.checkerdsl.checkerDsl.ChkAssignment#getDef <em>Def</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Def</em>'.
+   * @see org.xtext.example.checkerdsl.checkerDsl.ChkAssignment#getDef()
+   * @see #getChkAssignment()
+   * @generated
+   */
+  EAttribute getChkAssignment_Def();
+
+  /**
    * Returns the meta object for the containment reference '{@link org.xtext.example.checkerdsl.checkerDsl.ChkAssignment#getV1 <em>V1</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2582,17 +2834,6 @@ public interface CheckerDslPackage extends EPackage
   EClass getChkExpression();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.checkerdsl.checkerDsl.ChkExpression#getAsg <em>Asg</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Asg</em>'.
-   * @see org.xtext.example.checkerdsl.checkerDsl.ChkExpression#getAsg()
-   * @see #getChkExpression()
-   * @generated
-   */
-  EAttribute getChkExpression_Asg();
-
-  /**
    * Returns the meta object for the containment reference '{@link org.xtext.example.checkerdsl.checkerDsl.ChkExpression#getExp <em>Exp</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2613,6 +2854,17 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    */
   EAttribute getChkExpression_Where();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.checkerdsl.checkerDsl.ChkExpression#getNot <em>Not</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Not</em>'.
+   * @see org.xtext.example.checkerdsl.checkerDsl.ChkExpression#getNot()
+   * @see #getChkExpression()
+   * @generated
+   */
+  EAttribute getChkExpression_Not();
 
   /**
    * Returns the meta object for the containment reference list '{@link org.xtext.example.checkerdsl.checkerDsl.ChkExpression#getCond <em>Cond</em>}'.
@@ -2797,6 +3049,49 @@ public interface CheckerDslPackage extends EPackage
   EReference getFormat_Exp();
 
   /**
+   * Returns the meta object for class '{@link org.xtext.example.checkerdsl.checkerDsl.ForFormatExpression <em>For Format Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>For Format Expression</em>'.
+   * @see org.xtext.example.checkerdsl.checkerDsl.ForFormatExpression
+   * @generated
+   */
+  EClass getForFormatExpression();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.checkerdsl.checkerDsl.ForFormatExpression#getIndex <em>Index</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Index</em>'.
+   * @see org.xtext.example.checkerdsl.checkerDsl.ForFormatExpression#getIndex()
+   * @see #getForFormatExpression()
+   * @generated
+   */
+  EReference getForFormatExpression_Index();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.checkerdsl.checkerDsl.ForFormatExpression#getMaxIndex <em>Max Index</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Max Index</em>'.
+   * @see org.xtext.example.checkerdsl.checkerDsl.ForFormatExpression#getMaxIndex()
+   * @see #getForFormatExpression()
+   * @generated
+   */
+  EReference getForFormatExpression_MaxIndex();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.checkerdsl.checkerDsl.ForFormatExpression#getEx <em>Ex</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Ex</em>'.
+   * @see org.xtext.example.checkerdsl.checkerDsl.ForFormatExpression#getEx()
+   * @see #getForFormatExpression()
+   * @generated
+   */
+  EReference getForFormatExpression_Ex();
+
+  /**
    * Returns the meta object for class '{@link org.xtext.example.checkerdsl.checkerDsl.InputFormat <em>Input Format</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2839,6 +3134,27 @@ public interface CheckerDslPackage extends EPackage
   EAttribute getOutputFormat_Output();
 
   /**
+   * Returns the meta object for class '{@link org.xtext.example.checkerdsl.checkerDsl.HiddenFormat <em>Hidden Format</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Hidden Format</em>'.
+   * @see org.xtext.example.checkerdsl.checkerDsl.HiddenFormat
+   * @generated
+   */
+  EClass getHiddenFormat();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.checkerdsl.checkerDsl.HiddenFormat#getHid <em>Hid</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Hid</em>'.
+   * @see org.xtext.example.checkerdsl.checkerDsl.HiddenFormat#getHid()
+   * @see #getHiddenFormat()
+   * @generated
+   */
+  EAttribute getHiddenFormat_Hid();
+
+  /**
    * Returns the meta object for class '{@link org.xtext.example.checkerdsl.checkerDsl.FormatExpression <em>Format Expression</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2869,6 +3185,17 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    */
   EAttribute getFormatExpression_Var();
+
+  /**
+   * Returns the meta object for the attribute list '{@link org.xtext.example.checkerdsl.checkerDsl.FormatExpression#getSz <em>Sz</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute list '<em>Sz</em>'.
+   * @see org.xtext.example.checkerdsl.checkerDsl.FormatExpression#getSz()
+   * @see #getFormatExpression()
+   * @generated
+   */
+  EAttribute getFormatExpression_Sz();
 
   /**
    * Returns the meta object for the attribute list '{@link org.xtext.example.checkerdsl.checkerDsl.FormatExpression#getCount <em>Count</em>}'.
@@ -3525,6 +3852,62 @@ public interface CheckerDslPackage extends EPackage
     EAttribute HELPER__SIZE = eINSTANCE.getHelper_Size();
 
     /**
+     * The meta object literal for the '<em><b>Contains</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute HELPER__CONTAINS = eINSTANCE.getHelper_Contains();
+
+    /**
+     * The meta object literal for the '<em><b>Add Row</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute HELPER__ADD_ROW = eINSTANCE.getHelper_AddRow();
+
+    /**
+     * The meta object literal for the '<em><b>Add Col</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute HELPER__ADD_COL = eINSTANCE.getHelper_AddCol();
+
+    /**
+     * The meta object literal for the '<em><b>Swap Row</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute HELPER__SWAP_ROW = eINSTANCE.getHelper_SwapRow();
+
+    /**
+     * The meta object literal for the '<em><b>Swap Col</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute HELPER__SWAP_COL = eINSTANCE.getHelper_SwapCol();
+
+    /**
+     * The meta object literal for the '<em><b>Remove Row</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute HELPER__REMOVE_ROW = eINSTANCE.getHelper_RemoveRow();
+
+    /**
+     * The meta object literal for the '<em><b>Remove Col</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute HELPER__REMOVE_COL = eINSTANCE.getHelper_RemoveCol();
+
+    /**
      * The meta object literal for the '<em><b>Permute</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3623,6 +4006,14 @@ public interface CheckerDslPackage extends EPackage
      * @generated
      */
     EClass CHK_ASSIGNMENT = eINSTANCE.getChkAssignment();
+
+    /**
+     * The meta object literal for the '<em><b>Def</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CHK_ASSIGNMENT__DEF = eINSTANCE.getChkAssignment_Def();
 
     /**
      * The meta object literal for the '<em><b>V1</b></em>' containment reference feature.
@@ -3729,14 +4120,6 @@ public interface CheckerDslPackage extends EPackage
     EClass CHK_EXPRESSION = eINSTANCE.getChkExpression();
 
     /**
-     * The meta object literal for the '<em><b>Asg</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute CHK_EXPRESSION__ASG = eINSTANCE.getChkExpression_Asg();
-
-    /**
      * The meta object literal for the '<em><b>Exp</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3751,6 +4134,14 @@ public interface CheckerDslPackage extends EPackage
      * @generated
      */
     EAttribute CHK_EXPRESSION__WHERE = eINSTANCE.getChkExpression_Where();
+
+    /**
+     * The meta object literal for the '<em><b>Not</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CHK_EXPRESSION__NOT = eINSTANCE.getChkExpression_Not();
 
     /**
      * The meta object literal for the '<em><b>Cond</b></em>' containment reference list feature.
@@ -3899,6 +4290,40 @@ public interface CheckerDslPackage extends EPackage
     EReference FORMAT__EXP = eINSTANCE.getFormat_Exp();
 
     /**
+     * The meta object literal for the '{@link org.xtext.example.checkerdsl.checkerDsl.impl.ForFormatExpressionImpl <em>For Format Expression</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.checkerdsl.checkerDsl.impl.ForFormatExpressionImpl
+     * @see org.xtext.example.checkerdsl.checkerDsl.impl.CheckerDslPackageImpl#getForFormatExpression()
+     * @generated
+     */
+    EClass FOR_FORMAT_EXPRESSION = eINSTANCE.getForFormatExpression();
+
+    /**
+     * The meta object literal for the '<em><b>Index</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference FOR_FORMAT_EXPRESSION__INDEX = eINSTANCE.getForFormatExpression_Index();
+
+    /**
+     * The meta object literal for the '<em><b>Max Index</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference FOR_FORMAT_EXPRESSION__MAX_INDEX = eINSTANCE.getForFormatExpression_MaxIndex();
+
+    /**
+     * The meta object literal for the '<em><b>Ex</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference FOR_FORMAT_EXPRESSION__EX = eINSTANCE.getForFormatExpression_Ex();
+
+    /**
      * The meta object literal for the '{@link org.xtext.example.checkerdsl.checkerDsl.impl.InputFormatImpl <em>Input Format</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3935,6 +4360,24 @@ public interface CheckerDslPackage extends EPackage
     EAttribute OUTPUT_FORMAT__OUTPUT = eINSTANCE.getOutputFormat_Output();
 
     /**
+     * The meta object literal for the '{@link org.xtext.example.checkerdsl.checkerDsl.impl.HiddenFormatImpl <em>Hidden Format</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.checkerdsl.checkerDsl.impl.HiddenFormatImpl
+     * @see org.xtext.example.checkerdsl.checkerDsl.impl.CheckerDslPackageImpl#getHiddenFormat()
+     * @generated
+     */
+    EClass HIDDEN_FORMAT = eINSTANCE.getHiddenFormat();
+
+    /**
+     * The meta object literal for the '<em><b>Hid</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute HIDDEN_FORMAT__HID = eINSTANCE.getHiddenFormat_Hid();
+
+    /**
      * The meta object literal for the '{@link org.xtext.example.checkerdsl.checkerDsl.impl.FormatExpressionImpl <em>Format Expression</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3959,6 +4402,14 @@ public interface CheckerDslPackage extends EPackage
      * @generated
      */
     EAttribute FORMAT_EXPRESSION__VAR = eINSTANCE.getFormatExpression_Var();
+
+    /**
+     * The meta object literal for the '<em><b>Sz</b></em>' attribute list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute FORMAT_EXPRESSION__SZ = eINSTANCE.getFormatExpression_Sz();
 
     /**
      * The meta object literal for the '<em><b>Count</b></em>' attribute list feature.

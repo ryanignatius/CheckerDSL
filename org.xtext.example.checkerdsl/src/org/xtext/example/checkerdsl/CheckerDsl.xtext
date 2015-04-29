@@ -53,7 +53,7 @@ MR:
   	'}';
 
 ChkVariableDeclaration:
-  type=ChkTypeReference ('[' sz+=MY_NUMBER ']')* name=ValidID
+  type=ChkTypeReference ('[' sz+=CHK_NUMBER ']')* name=ValidID
   ('(' limit1=Limit (';' limit+=Limit)* ')')?
   ('sp' '{' spValue=SpValue '}')?;
 
@@ -69,7 +69,7 @@ ChkPrefix:
 	(type = ('in' | 'out' | 'ans')) ('.');
 
 ChkVariable:
-	(pref=ChkPrefix)? (var=ValidID) ((newtest='`')?) ('[' v+=MY_NUMBER ']')*;
+	(pref=ChkPrefix)? (var=ValidID) ((newtest='`')?) ('[' v+=CHK_NUMBER ']')*;
 
 ChkVariables:
 	va=ChkVariable | nu=CHK_INT | gr = ChkItemGroup;
@@ -89,6 +89,15 @@ Helper:
 		random='random' '(' ((var3=ChkVariables) '..' (var4=ChkVariables))? ')' |
 		size='size' '(' (var=ChkVariable) ')' |
 		
+		contains='contain' '(' var=ChkVariable ',' var3=ChkVariables ')' |
+		
+		addRow='addRow' '(' var=ChkVariable ')' |
+		addCol='addColumn' '(' var=ChkVariable ')' |
+		swapRow='swapRow' '(' var=ChkVariable ',' var1=ValidID ',' var2=ValidID ')' |
+		swapCol='swapColumn' '(' var=ChkVariable ',' var1=ValidID ',' var2=ValidID ')' |
+		removeRow='removeRow' '(' var=ChkVariable ',' var3=ChkVariables ')' |
+		removeCol='removeColumn' '(' var=ChkVariable ',' var3=ChkVariables ')' |
+		
 		permute='permute' '(' var=ChkVariable ')' |
 		plus='plus' '(' var=ChkVariable ',' var3=ChkVariables ')' |
 		multiply='multiply' '(' var=ChkVariable ',' var3=ChkVariables ')' |
@@ -102,7 +111,7 @@ ChkRelationalExpression:
 	v1=ChkVariables opr=ChkOpRelational v2=ChkVariables;
 
 ChkAssignment:
-	v1=ChkVariable opr=ChkOpAssignment v2=(ChkOperation | Helper);
+	(def='def')? v1=ChkVariable opr=ChkOpAssignment v2=(ChkOperation | Helper);
 
 ChkGeneralExpressions:
 	(Helper | ChkRelationalExpression | MethodCall | ChkAssignment);
@@ -111,7 +120,7 @@ ChkOpAssignment:
 	'=';
 	
 ChkOperator:
-	('+' | '-' | '*' | '/');
+	('+' | '-' | '*' | '/' | '|' | '&' | '^');
 
 ChkOperation:
 	operand+=ChkVariables (operator+=ChkOperator operand+=ChkVariables)*;
@@ -128,8 +137,8 @@ ChkLoopExpression:
 	);
 
 ChkExpression:
-	('def' asg=ValidID '=')? '(' exp=ChkGeneralExpressions (where='where' cond+=ChkRelationalExpression
-		(type+=ChkAndOr cond+=ChkRelationalExpression)*
+	'(' exp=ChkGeneralExpressions (where='where' (not='not')? cond+=(ChkRelationalExpression | Helper)
+		(type+=ChkAndOr cond+=(ChkRelationalExpression | Helper))*
 	)?
 	(op=ChkOpRelational v=ChkVariable)? ')';
 
@@ -139,34 +148,42 @@ Check:
   	'}'; 
 
 SpValue:
-	val+=MY_NUMBER (',' val+=MY_NUMBER)*;
+	val+=CHK_NUMBER (',' val+=CHK_NUMBER)*;
 
 Limit:
 	(sub=Subtask)?
-	(a+=MY_ELEMENT) '..' (b+=MY_ELEMENT)
-	(',' (a+=MY_ELEMENT) '..' (b+=MY_ELEMENT))*;
+	(a+=CHK_ELEMENT) '..' (b+=CHK_ELEMENT)
+	(',' (a+=CHK_ELEMENT) '..' (b+=CHK_ELEMENT))*;
 
 Subtask:
 	'subtask' num=INT ':';
 
 Format:
-	InputFormat | OutputFormat;
+	InputFormat | OutputFormat | HiddenFormat;
+
+ForFormatExpression:
+	('for' '(' (index=ChkVariable) ',' (maxIndex=ChkVariables) ')'
+		'{' (ex+=FormatExpression)* '}'
+	);
 
 InputFormat:
-	input = 'input' '{' exp+=FormatExpression* '}';
+	input = 'input' '{' exp+=(FormatExpression | ForFormatExpression)* '}';
 
 OutputFormat:
-	output = 'output' '{' exp+=FormatExpression* '}';
+	output = 'output' '{' exp+=(FormatExpression | ForFormatExpression)* '}';
+
+HiddenFormat:
+	hid = 'hidden' '{' exp+=(FormatExpression | ForFormatExpression)* '}';
 
 FormatExpression:
-	num = MY_NUMBER '(' (var+=ValidID ('<' (count+=MY_NUMBER) '>')?
-		(',' var+=ValidID ('<' (count+=MY_NUMBER) '>')?)*)? ')';
+	num = CHK_NUMBER '(' (var+=ValidID ('[' sz+=CHK_NUMBER ']')* ('<' (count+=CHK_NUMBER) '>')?
+		(',' var+=ValidID ('<' (count+=CHK_NUMBER) '>')?)*)? ')';
 
 CHK_INT:
 	'-'? INT;
 
-MY_ELEMENT:
-	MY_NUMBER | STRING;
+CHK_ELEMENT:
+	CHK_NUMBER | STRING;
 
-MY_NUMBER:
+CHK_NUMBER:
 	CHK_INT | ValidID;

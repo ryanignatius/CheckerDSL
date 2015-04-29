@@ -44,17 +44,25 @@ public class InternalCheckerDslLexer extends Lexer {
     public static final int T__97=97;
     public static final int T__96=96;
     public static final int T__95=95;
+    public static final int T__139=139;
+    public static final int T__138=138;
+    public static final int T__137=137;
+    public static final int T__136=136;
     public static final int T__80=80;
     public static final int T__81=81;
     public static final int T__82=82;
     public static final int T__83=83;
+    public static final int T__141=141;
     public static final int T__85=85;
+    public static final int T__142=142;
     public static final int T__84=84;
     public static final int T__87=87;
+    public static final int T__140=140;
     public static final int T__86=86;
     public static final int T__89=89;
     public static final int T__88=88;
     public static final int RULE_ML_COMMENT=9;
+    public static final int T__143=143;
     public static final int T__126=126;
     public static final int T__125=125;
     public static final int T__128=128;
@@ -73,7 +81,9 @@ public class InternalCheckerDslLexer extends Lexer {
     public static final int T__132=132;
     public static final int T__133=133;
     public static final int T__79=79;
+    public static final int T__134=134;
     public static final int T__78=78;
+    public static final int T__135=135;
     public static final int T__77=77;
     public static final int T__68=68;
     public static final int T__69=69;
@@ -1115,10 +1125,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__59;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:57:7: ( 'permute' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:57:9: 'permute'
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:57:7: ( 'contain' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:57:9: 'contain'
             {
-            match("permute"); 
+            match("contain"); 
 
 
             }
@@ -1136,10 +1146,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__60;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:58:7: ( 'plus' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:58:9: 'plus'
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:58:7: ( 'addRow' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:58:9: 'addRow'
             {
-            match("plus"); 
+            match("addRow"); 
 
 
             }
@@ -1157,10 +1167,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__61;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:59:7: ( 'multiply' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:59:9: 'multiply'
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:59:7: ( 'addColumn' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:59:9: 'addColumn'
             {
-            match("multiply"); 
+            match("addColumn"); 
 
 
             }
@@ -1178,10 +1188,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__62;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:60:7: ( 'invert' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:60:9: 'invert'
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:60:7: ( 'swapRow' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:60:9: 'swapRow'
             {
-            match("invert"); 
+            match("swapRow"); 
 
 
             }
@@ -1199,10 +1209,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__63;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:61:7: ( 'include' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:61:9: 'include'
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:61:7: ( 'swapColumn' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:61:9: 'swapColumn'
             {
-            match("include"); 
+            match("swapColumn"); 
 
 
             }
@@ -1220,10 +1230,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__64;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:62:7: ( 'exclude' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:62:9: 'exclude'
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:62:7: ( 'removeRow' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:62:9: 'removeRow'
             {
-            match("exclude"); 
+            match("removeRow"); 
 
 
             }
@@ -1241,10 +1251,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__65;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:63:7: ( 'compositional' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:63:9: 'compositional'
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:63:7: ( 'removeColumn' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:63:9: 'removeColumn'
             {
-            match("compositional"); 
+            match("removeColumn"); 
 
 
             }
@@ -1262,10 +1272,11 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__66;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:64:7: ( '=' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:64:9: '='
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:64:7: ( 'permute' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:64:9: 'permute'
             {
-            match('='); 
+            match("permute"); 
+
 
             }
 
@@ -1282,10 +1293,11 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__67;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:65:7: ( '+' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:65:9: '+'
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:65:7: ( 'plus' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:65:9: 'plus'
             {
-            match('+'); 
+            match("plus"); 
+
 
             }
 
@@ -1302,10 +1314,11 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__68;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:66:7: ( '-' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:66:9: '-'
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:66:7: ( 'multiply' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:66:9: 'multiply'
             {
-            match('-'); 
+            match("multiply"); 
+
 
             }
 
@@ -1322,10 +1335,11 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__69;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:67:7: ( '*' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:67:9: '*'
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:67:7: ( 'invert' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:67:9: 'invert'
             {
-            match('*'); 
+            match("invert"); 
+
 
             }
 
@@ -1342,10 +1356,11 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__70;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:68:7: ( '/' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:68:9: '/'
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:68:7: ( 'include' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:68:9: 'include'
             {
-            match('/'); 
+            match("include"); 
+
 
             }
 
@@ -1362,10 +1377,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__71;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:69:7: ( '==' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:69:9: '=='
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:69:7: ( 'exclude' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:69:9: 'exclude'
             {
-            match("=="); 
+            match("exclude"); 
 
 
             }
@@ -1383,10 +1398,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__72;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:70:7: ( '!=' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:70:9: '!='
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:70:7: ( 'compositional' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:70:9: 'compositional'
             {
-            match("!="); 
+            match("compositional"); 
 
 
             }
@@ -1404,10 +1419,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__73;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:71:7: ( '>=' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:71:9: '>='
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:71:7: ( 'def' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:71:9: 'def'
             {
-            match(">="); 
+            match("def"); 
 
 
             }
@@ -1425,11 +1440,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__74;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:72:7: ( '<=' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:72:9: '<='
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:72:7: ( '=' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:72:9: '='
             {
-            match("<="); 
-
+            match('='); 
 
             }
 
@@ -1446,11 +1460,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__75;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:73:7: ( 'and' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:73:9: 'and'
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:73:7: ( '+' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:73:9: '+'
             {
-            match("and"); 
-
+            match('+'); 
 
             }
 
@@ -1467,11 +1480,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__76;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:74:7: ( 'or' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:74:9: 'or'
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:74:7: ( '-' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:74:9: '-'
             {
-            match("or"); 
-
+            match('-'); 
 
             }
 
@@ -1488,11 +1500,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__77;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:75:7: ( 'for' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:75:9: 'for'
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:75:7: ( '*' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:75:9: '*'
             {
-            match("for"); 
-
+            match('*'); 
 
             }
 
@@ -1509,11 +1520,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__78;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:76:7: ( 'def' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:76:9: 'def'
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:76:7: ( '/' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:76:9: '/'
             {
-            match("def"); 
-
+            match('/'); 
 
             }
 
@@ -1530,11 +1540,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__79;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:77:7: ( 'where' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:77:9: 'where'
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:77:7: ( '|' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:77:9: '|'
             {
-            match("where"); 
-
+            match('|'); 
 
             }
 
@@ -1551,11 +1560,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__80;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:78:7: ( 'subtask' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:78:9: 'subtask'
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:78:7: ( '&' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:78:9: '&'
             {
-            match("subtask"); 
-
+            match('&'); 
 
             }
 
@@ -1572,11 +1580,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__81;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:79:7: ( 'input' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:79:9: 'input'
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:79:7: ( '^' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:79:9: '^'
             {
-            match("input"); 
-
+            match('^'); 
 
             }
 
@@ -1593,10 +1600,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__82;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:80:7: ( 'output' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:80:9: 'output'
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:80:7: ( '==' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:80:9: '=='
             {
-            match("output"); 
+            match("=="); 
 
 
             }
@@ -1614,10 +1621,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__83;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:81:7: ( '+=' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:81:9: '+='
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:81:7: ( '!=' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:81:9: '!='
             {
-            match("+="); 
+            match("!="); 
 
 
             }
@@ -1635,10 +1642,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__84;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:82:7: ( '-=' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:82:9: '-='
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:82:7: ( '>=' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:82:9: '>='
             {
-            match("-="); 
+            match(">="); 
 
 
             }
@@ -1656,10 +1663,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__85;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:83:7: ( '*=' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:83:9: '*='
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:83:7: ( '<=' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:83:9: '<='
             {
-            match("*="); 
+            match("<="); 
 
 
             }
@@ -1677,10 +1684,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__86;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:84:7: ( '/=' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:84:9: '/='
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:84:7: ( 'and' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:84:9: 'and'
             {
-            match("/="); 
+            match("and"); 
 
 
             }
@@ -1698,10 +1705,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__87;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:85:7: ( '%=' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:85:9: '%='
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:85:7: ( 'or' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:85:9: 'or'
             {
-            match("%="); 
+            match("or"); 
 
 
             }
@@ -1719,10 +1726,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__88;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:86:7: ( '||' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:86:9: '||'
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:86:7: ( 'for' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:86:9: 'for'
             {
-            match("||"); 
+            match("for"); 
 
 
             }
@@ -1740,10 +1747,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__89;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:87:7: ( '&&' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:87:9: '&&'
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:87:7: ( 'where' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:87:9: 'where'
             {
-            match("&&"); 
+            match("where"); 
 
 
             }
@@ -1761,10 +1768,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__90;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:88:7: ( '===' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:88:9: '==='
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:88:7: ( 'not' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:88:9: 'not'
             {
-            match("==="); 
+            match("not"); 
 
 
             }
@@ -1782,10 +1789,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__91;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:89:7: ( '!==' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:89:9: '!=='
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:89:7: ( 'subtask' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:89:9: 'subtask'
             {
-            match("!=="); 
+            match("subtask"); 
 
 
             }
@@ -1803,10 +1810,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__92;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:90:7: ( 'instanceof' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:90:9: 'instanceof'
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:90:7: ( 'input' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:90:9: 'input'
             {
-            match("instanceof"); 
+            match("input"); 
 
 
             }
@@ -1824,10 +1831,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__93;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:91:7: ( '->' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:91:9: '->'
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:91:7: ( 'output' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:91:9: 'output'
             {
-            match("->"); 
+            match("output"); 
 
 
             }
@@ -1845,10 +1852,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__94;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:92:7: ( '..<' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:92:9: '..<'
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:92:7: ( 'hidden' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:92:9: 'hidden'
             {
-            match("..<"); 
+            match("hidden"); 
 
 
             }
@@ -1866,10 +1873,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__95;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:93:7: ( '=>' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:93:9: '=>'
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:93:7: ( '+=' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:93:9: '+='
             {
-            match("=>"); 
+            match("+="); 
 
 
             }
@@ -1887,10 +1894,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__96;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:94:7: ( '<>' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:94:9: '<>'
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:94:7: ( '-=' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:94:9: '-='
             {
-            match("<>"); 
+            match("-="); 
 
 
             }
@@ -1908,10 +1915,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__97;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:95:7: ( '?:' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:95:9: '?:'
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:95:7: ( '*=' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:95:9: '*='
             {
-            match("?:"); 
+            match("*="); 
 
 
             }
@@ -1929,10 +1936,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__98;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:96:7: ( '**' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:96:9: '**'
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:96:7: ( '/=' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:96:9: '/='
             {
-            match("**"); 
+            match("/="); 
 
 
             }
@@ -1950,10 +1957,11 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__99;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:97:7: ( '%' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:97:9: '%'
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:97:7: ( '%=' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:97:9: '%='
             {
-            match('%'); 
+            match("%="); 
+
 
             }
 
@@ -1970,10 +1978,11 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__100;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:98:8: ( '!' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:98:10: '!'
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:98:8: ( '||' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:98:10: '||'
             {
-            match('!'); 
+            match("||"); 
+
 
             }
 
@@ -1990,10 +1999,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__101;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:99:8: ( 'as' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:99:10: 'as'
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:99:8: ( '&&' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:99:10: '&&'
             {
-            match("as"); 
+            match("&&"); 
 
 
             }
@@ -2011,10 +2020,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__102;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:100:8: ( '++' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:100:10: '++'
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:100:8: ( '===' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:100:10: '==='
             {
-            match("++"); 
+            match("==="); 
 
 
             }
@@ -2032,10 +2041,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__103;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:101:8: ( '--' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:101:10: '--'
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:101:8: ( '!==' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:101:10: '!=='
             {
-            match("--"); 
+            match("!=="); 
 
 
             }
@@ -2053,10 +2062,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__104;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:102:8: ( '::' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:102:10: '::'
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:102:8: ( 'instanceof' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:102:10: 'instanceof'
             {
-            match("::"); 
+            match("instanceof"); 
 
 
             }
@@ -2074,10 +2083,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__105;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:103:8: ( '?.' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:103:10: '?.'
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:103:8: ( '->' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:103:10: '->'
             {
-            match("?."); 
+            match("->"); 
 
 
             }
@@ -2095,10 +2104,11 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__106;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:104:8: ( '#' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:104:10: '#'
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:104:8: ( '..<' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:104:10: '..<'
             {
-            match('#'); 
+            match("..<"); 
+
 
             }
 
@@ -2115,10 +2125,11 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__107;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:105:8: ( '|' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:105:10: '|'
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:105:8: ( '=>' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:105:10: '=>'
             {
-            match('|'); 
+            match("=>"); 
+
 
             }
 
@@ -2135,10 +2146,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__108;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:106:8: ( 'if' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:106:10: 'if'
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:106:8: ( '<>' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:106:10: '<>'
             {
-            match("if"); 
+            match("<>"); 
 
 
             }
@@ -2156,10 +2167,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__109;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:107:8: ( 'else' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:107:10: 'else'
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:107:8: ( '?:' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:107:10: '?:'
             {
-            match("else"); 
+            match("?:"); 
 
 
             }
@@ -2177,10 +2188,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__110;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:108:8: ( 'switch' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:108:10: 'switch'
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:108:8: ( '**' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:108:10: '**'
             {
-            match("switch"); 
+            match("**"); 
 
 
             }
@@ -2198,11 +2209,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__111;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:109:8: ( 'default' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:109:10: 'default'
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:109:8: ( '%' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:109:10: '%'
             {
-            match("default"); 
-
+            match('%'); 
 
             }
 
@@ -2219,11 +2229,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__112;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:110:8: ( 'case' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:110:10: 'case'
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:110:8: ( '!' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:110:10: '!'
             {
-            match("case"); 
-
+            match('!'); 
 
             }
 
@@ -2240,10 +2249,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__113;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:111:8: ( 'while' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:111:10: 'while'
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:111:8: ( 'as' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:111:10: 'as'
             {
-            match("while"); 
+            match("as"); 
 
 
             }
@@ -2261,10 +2270,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__114;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:112:8: ( 'do' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:112:10: 'do'
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:112:8: ( '++' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:112:10: '++'
             {
-            match("do"); 
+            match("++"); 
 
 
             }
@@ -2282,10 +2291,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__115;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:113:8: ( 'var' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:113:10: 'var'
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:113:8: ( '--' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:113:10: '--'
             {
-            match("var"); 
+            match("--"); 
 
 
             }
@@ -2303,10 +2312,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__116;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:114:8: ( 'val' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:114:10: 'val'
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:114:8: ( '::' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:114:10: '::'
             {
-            match("val"); 
+            match("::"); 
 
 
             }
@@ -2324,10 +2333,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__117;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:115:8: ( 'static' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:115:10: 'static'
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:115:8: ( '?.' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:115:10: '?.'
             {
-            match("static"); 
+            match("?."); 
 
 
             }
@@ -2345,11 +2354,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__118;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:116:8: ( 'import' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:116:10: 'import'
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:116:8: ( '#' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:116:10: '#'
             {
-            match("import"); 
-
+            match('#'); 
 
             }
 
@@ -2366,10 +2374,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__119;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:117:8: ( 'extension' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:117:10: 'extension'
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:117:8: ( 'if' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:117:10: 'if'
             {
-            match("extension"); 
+            match("if"); 
 
 
             }
@@ -2387,10 +2395,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__120;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:118:8: ( 'super' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:118:10: 'super'
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:118:8: ( 'else' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:118:10: 'else'
             {
-            match("super"); 
+            match("else"); 
 
 
             }
@@ -2408,10 +2416,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__121;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:119:8: ( 'new' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:119:10: 'new'
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:119:8: ( 'switch' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:119:10: 'switch'
             {
-            match("new"); 
+            match("switch"); 
 
 
             }
@@ -2429,10 +2437,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__122;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:120:8: ( 'false' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:120:10: 'false'
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:120:8: ( 'default' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:120:10: 'default'
             {
-            match("false"); 
+            match("default"); 
 
 
             }
@@ -2450,10 +2458,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__123;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:121:8: ( 'true' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:121:10: 'true'
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:121:8: ( 'case' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:121:10: 'case'
             {
-            match("true"); 
+            match("case"); 
 
 
             }
@@ -2471,10 +2479,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__124;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:122:8: ( 'null' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:122:10: 'null'
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:122:8: ( 'while' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:122:10: 'while'
             {
-            match("null"); 
+            match("while"); 
 
 
             }
@@ -2492,10 +2500,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__125;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:123:8: ( 'typeof' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:123:10: 'typeof'
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:123:8: ( 'do' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:123:10: 'do'
             {
-            match("typeof"); 
+            match("do"); 
 
 
             }
@@ -2513,10 +2521,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__126;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:124:8: ( 'throw' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:124:10: 'throw'
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:124:8: ( 'var' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:124:10: 'var'
             {
-            match("throw"); 
+            match("var"); 
 
 
             }
@@ -2534,10 +2542,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__127;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:125:8: ( 'return' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:125:10: 'return'
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:125:8: ( 'val' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:125:10: 'val'
             {
-            match("return"); 
+            match("val"); 
 
 
             }
@@ -2555,10 +2563,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__128;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:126:8: ( 'try' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:126:10: 'try'
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:126:8: ( 'static' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:126:10: 'static'
             {
-            match("try"); 
+            match("static"); 
 
 
             }
@@ -2576,10 +2584,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__129;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:127:8: ( 'finally' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:127:10: 'finally'
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:127:8: ( 'import' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:127:10: 'import'
             {
-            match("finally"); 
+            match("import"); 
 
 
             }
@@ -2597,10 +2605,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__130;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:128:8: ( 'synchronized' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:128:10: 'synchronized'
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:128:8: ( 'extension' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:128:10: 'extension'
             {
-            match("synchronized"); 
+            match("extension"); 
 
 
             }
@@ -2618,10 +2626,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__131;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:129:8: ( 'catch' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:129:10: 'catch'
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:129:8: ( 'super' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:129:10: 'super'
             {
-            match("catch"); 
+            match("super"); 
 
 
             }
@@ -2639,10 +2647,11 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__132;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:130:8: ( '?' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:130:10: '?'
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:130:8: ( 'new' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:130:10: 'new'
             {
-            match('?'); 
+            match("new"); 
+
 
             }
 
@@ -2659,10 +2668,11 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = T__133;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:131:8: ( '&' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:131:10: '&'
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:131:8: ( 'false' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:131:10: 'false'
             {
-            match('&'); 
+            match("false"); 
+
 
             }
 
@@ -2674,15 +2684,224 @@ public class InternalCheckerDslLexer extends Lexer {
     }
     // $ANTLR end "T__133"
 
+    // $ANTLR start "T__134"
+    public final void mT__134() throws RecognitionException {
+        try {
+            int _type = T__134;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:132:8: ( 'true' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:132:10: 'true'
+            {
+            match("true"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__134"
+
+    // $ANTLR start "T__135"
+    public final void mT__135() throws RecognitionException {
+        try {
+            int _type = T__135;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:133:8: ( 'null' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:133:10: 'null'
+            {
+            match("null"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__135"
+
+    // $ANTLR start "T__136"
+    public final void mT__136() throws RecognitionException {
+        try {
+            int _type = T__136;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:134:8: ( 'typeof' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:134:10: 'typeof'
+            {
+            match("typeof"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__136"
+
+    // $ANTLR start "T__137"
+    public final void mT__137() throws RecognitionException {
+        try {
+            int _type = T__137;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:135:8: ( 'throw' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:135:10: 'throw'
+            {
+            match("throw"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__137"
+
+    // $ANTLR start "T__138"
+    public final void mT__138() throws RecognitionException {
+        try {
+            int _type = T__138;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:136:8: ( 'return' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:136:10: 'return'
+            {
+            match("return"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__138"
+
+    // $ANTLR start "T__139"
+    public final void mT__139() throws RecognitionException {
+        try {
+            int _type = T__139;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:137:8: ( 'try' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:137:10: 'try'
+            {
+            match("try"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__139"
+
+    // $ANTLR start "T__140"
+    public final void mT__140() throws RecognitionException {
+        try {
+            int _type = T__140;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:138:8: ( 'finally' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:138:10: 'finally'
+            {
+            match("finally"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__140"
+
+    // $ANTLR start "T__141"
+    public final void mT__141() throws RecognitionException {
+        try {
+            int _type = T__141;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:139:8: ( 'synchronized' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:139:10: 'synchronized'
+            {
+            match("synchronized"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__141"
+
+    // $ANTLR start "T__142"
+    public final void mT__142() throws RecognitionException {
+        try {
+            int _type = T__142;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:140:8: ( 'catch' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:140:10: 'catch'
+            {
+            match("catch"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__142"
+
+    // $ANTLR start "T__143"
+    public final void mT__143() throws RecognitionException {
+        try {
+            int _type = T__143;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:141:8: ( '?' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:141:10: '?'
+            {
+            match('?'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__143"
+
     // $ANTLR start "RULE_HEX"
     public final void mRULE_HEX() throws RecognitionException {
         try {
             int _type = RULE_HEX;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10023:10: ( ( '0x' | '0X' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' | '_' )+ ( '#' ( ( 'b' | 'B' ) ( 'i' | 'I' ) | ( 'l' | 'L' ) ) )? )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10023:12: ( '0x' | '0X' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' | '_' )+ ( '#' ( ( 'b' | 'B' ) ( 'i' | 'I' ) | ( 'l' | 'L' ) ) )?
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10783:10: ( ( '0x' | '0X' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' | '_' )+ ( '#' ( ( 'b' | 'B' ) ( 'i' | 'I' ) | ( 'l' | 'L' ) ) )? )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10783:12: ( '0x' | '0X' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' | '_' )+ ( '#' ( ( 'b' | 'B' ) ( 'i' | 'I' ) | ( 'l' | 'L' ) ) )?
             {
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10023:12: ( '0x' | '0X' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10783:12: ( '0x' | '0X' )
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -2710,7 +2929,7 @@ public class InternalCheckerDslLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10023:13: '0x'
+                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10783:13: '0x'
                     {
                     match("0x"); 
 
@@ -2718,7 +2937,7 @@ public class InternalCheckerDslLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10023:18: '0X'
+                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10783:18: '0X'
                     {
                     match("0X"); 
 
@@ -2728,7 +2947,7 @@ public class InternalCheckerDslLexer extends Lexer {
 
             }
 
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10023:24: ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' | '_' )+
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10783:24: ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' | '_' )+
             int cnt2=0;
             loop2:
             do {
@@ -2766,7 +2985,7 @@ public class InternalCheckerDslLexer extends Lexer {
                 cnt2++;
             } while (true);
 
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10023:58: ( '#' ( ( 'b' | 'B' ) ( 'i' | 'I' ) | ( 'l' | 'L' ) ) )?
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10783:58: ( '#' ( ( 'b' | 'B' ) ( 'i' | 'I' ) | ( 'l' | 'L' ) ) )?
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -2775,10 +2994,10 @@ public class InternalCheckerDslLexer extends Lexer {
             }
             switch (alt4) {
                 case 1 :
-                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10023:59: '#' ( ( 'b' | 'B' ) ( 'i' | 'I' ) | ( 'l' | 'L' ) )
+                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10783:59: '#' ( ( 'b' | 'B' ) ( 'i' | 'I' ) | ( 'l' | 'L' ) )
                     {
                     match('#'); 
-                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10023:63: ( ( 'b' | 'B' ) ( 'i' | 'I' ) | ( 'l' | 'L' ) )
+                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10783:63: ( ( 'b' | 'B' ) ( 'i' | 'I' ) | ( 'l' | 'L' ) )
                     int alt3=2;
                     int LA3_0 = input.LA(1);
 
@@ -2796,7 +3015,7 @@ public class InternalCheckerDslLexer extends Lexer {
                     }
                     switch (alt3) {
                         case 1 :
-                            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10023:64: ( 'b' | 'B' ) ( 'i' | 'I' )
+                            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10783:64: ( 'b' | 'B' ) ( 'i' | 'I' )
                             {
                             if ( input.LA(1)=='B'||input.LA(1)=='b' ) {
                                 input.consume();
@@ -2820,7 +3039,7 @@ public class InternalCheckerDslLexer extends Lexer {
                             }
                             break;
                         case 2 :
-                            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10023:84: ( 'l' | 'L' )
+                            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10783:84: ( 'l' | 'L' )
                             {
                             if ( input.LA(1)=='L'||input.LA(1)=='l' ) {
                                 input.consume();
@@ -2859,11 +3078,11 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10025:10: ( '0' .. '9' ( '0' .. '9' | '_' )* )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10025:12: '0' .. '9' ( '0' .. '9' | '_' )*
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10785:10: ( '0' .. '9' ( '0' .. '9' | '_' )* )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10785:12: '0' .. '9' ( '0' .. '9' | '_' )*
             {
             matchRange('0','9'); 
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10025:21: ( '0' .. '9' | '_' )*
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10785:21: ( '0' .. '9' | '_' )*
             loop5:
             do {
                 int alt5=2;
@@ -2912,11 +3131,11 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = RULE_DECIMAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10027:14: ( RULE_INT ( ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT )? ( ( 'b' | 'B' ) ( 'i' | 'I' | 'd' | 'D' ) | ( 'l' | 'L' | 'd' | 'D' | 'f' | 'F' ) )? )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10027:16: RULE_INT ( ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT )? ( ( 'b' | 'B' ) ( 'i' | 'I' | 'd' | 'D' ) | ( 'l' | 'L' | 'd' | 'D' | 'f' | 'F' ) )?
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10787:14: ( RULE_INT ( ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT )? ( ( 'b' | 'B' ) ( 'i' | 'I' | 'd' | 'D' ) | ( 'l' | 'L' | 'd' | 'D' | 'f' | 'F' ) )? )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10787:16: RULE_INT ( ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT )? ( ( 'b' | 'B' ) ( 'i' | 'I' | 'd' | 'D' ) | ( 'l' | 'L' | 'd' | 'D' | 'f' | 'F' ) )?
             {
             mRULE_INT(); 
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10027:25: ( ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT )?
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10787:25: ( ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT )?
             int alt7=2;
             int LA7_0 = input.LA(1);
 
@@ -2925,7 +3144,7 @@ public class InternalCheckerDslLexer extends Lexer {
             }
             switch (alt7) {
                 case 1 :
-                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10027:26: ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT
+                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10787:26: ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT
                     {
                     if ( input.LA(1)=='E'||input.LA(1)=='e' ) {
                         input.consume();
@@ -2936,7 +3155,7 @@ public class InternalCheckerDslLexer extends Lexer {
                         recover(mse);
                         throw mse;}
 
-                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10027:36: ( '+' | '-' )?
+                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10787:36: ( '+' | '-' )?
                     int alt6=2;
                     int LA6_0 = input.LA(1);
 
@@ -2969,7 +3188,7 @@ public class InternalCheckerDslLexer extends Lexer {
 
             }
 
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10027:58: ( ( 'b' | 'B' ) ( 'i' | 'I' | 'd' | 'D' ) | ( 'l' | 'L' | 'd' | 'D' | 'f' | 'F' ) )?
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10787:58: ( ( 'b' | 'B' ) ( 'i' | 'I' | 'd' | 'D' ) | ( 'l' | 'L' | 'd' | 'D' | 'f' | 'F' ) )?
             int alt8=3;
             int LA8_0 = input.LA(1);
 
@@ -2981,7 +3200,7 @@ public class InternalCheckerDslLexer extends Lexer {
             }
             switch (alt8) {
                 case 1 :
-                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10027:59: ( 'b' | 'B' ) ( 'i' | 'I' | 'd' | 'D' )
+                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10787:59: ( 'b' | 'B' ) ( 'i' | 'I' | 'd' | 'D' )
                     {
                     if ( input.LA(1)=='B'||input.LA(1)=='b' ) {
                         input.consume();
@@ -3005,7 +3224,7 @@ public class InternalCheckerDslLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10027:87: ( 'l' | 'L' | 'd' | 'D' | 'f' | 'F' )
+                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10787:87: ( 'l' | 'L' | 'd' | 'D' | 'f' | 'F' )
                     {
                     if ( input.LA(1)=='D'||input.LA(1)=='F'||input.LA(1)=='L'||input.LA(1)=='d'||input.LA(1)=='f'||input.LA(1)=='l' ) {
                         input.consume();
@@ -3038,10 +3257,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10029:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '$' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '$' | '_' | '0' .. '9' )* )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10029:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '$' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '$' | '_' | '0' .. '9' )*
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10789:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '$' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '$' | '_' | '0' .. '9' )* )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10789:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '$' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '$' | '_' | '0' .. '9' )*
             {
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10029:11: ( '^' )?
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10789:11: ( '^' )?
             int alt9=2;
             int LA9_0 = input.LA(1);
 
@@ -3050,7 +3269,7 @@ public class InternalCheckerDslLexer extends Lexer {
             }
             switch (alt9) {
                 case 1 :
-                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10029:11: '^'
+                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10789:11: '^'
                     {
                     match('^'); 
 
@@ -3068,7 +3287,7 @@ public class InternalCheckerDslLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10029:44: ( 'a' .. 'z' | 'A' .. 'Z' | '$' | '_' | '0' .. '9' )*
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10789:44: ( 'a' .. 'z' | 'A' .. 'Z' | '$' | '_' | '0' .. '9' )*
             loop10:
             do {
                 int alt10=2;
@@ -3117,10 +3336,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10031:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* ( '\"' )? | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* ( '\\'' )? ) )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10031:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* ( '\"' )? | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* ( '\\'' )? )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10791:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* ( '\"' )? | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* ( '\\'' )? ) )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10791:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* ( '\"' )? | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* ( '\\'' )? )
             {
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10031:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* ( '\"' )? | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* ( '\\'' )? )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10791:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* ( '\"' )? | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* ( '\\'' )? )
             int alt15=2;
             int LA15_0 = input.LA(1);
 
@@ -3138,10 +3357,10 @@ public class InternalCheckerDslLexer extends Lexer {
             }
             switch (alt15) {
                 case 1 :
-                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10031:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* ( '\"' )?
+                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10791:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* ( '\"' )?
                     {
                     match('\"'); 
-                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10031:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10791:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop11:
                     do {
                         int alt11=3;
@@ -3157,7 +3376,7 @@ public class InternalCheckerDslLexer extends Lexer {
 
                         switch (alt11) {
                     	case 1 :
-                    	    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10031:21: '\\\\' .
+                    	    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10791:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -3165,7 +3384,7 @@ public class InternalCheckerDslLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10031:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10791:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -3185,7 +3404,7 @@ public class InternalCheckerDslLexer extends Lexer {
                         }
                     } while (true);
 
-                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10031:44: ( '\"' )?
+                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10791:44: ( '\"' )?
                     int alt12=2;
                     int LA12_0 = input.LA(1);
 
@@ -3194,7 +3413,7 @@ public class InternalCheckerDslLexer extends Lexer {
                     }
                     switch (alt12) {
                         case 1 :
-                            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10031:44: '\"'
+                            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10791:44: '\"'
                             {
                             match('\"'); 
 
@@ -3207,10 +3426,10 @@ public class InternalCheckerDslLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10031:49: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* ( '\\'' )?
+                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10791:49: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* ( '\\'' )?
                     {
                     match('\''); 
-                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10031:54: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10791:54: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop13:
                     do {
                         int alt13=3;
@@ -3226,7 +3445,7 @@ public class InternalCheckerDslLexer extends Lexer {
 
                         switch (alt13) {
                     	case 1 :
-                    	    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10031:55: '\\\\' .
+                    	    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10791:55: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -3234,7 +3453,7 @@ public class InternalCheckerDslLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10031:62: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10791:62: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -3254,7 +3473,7 @@ public class InternalCheckerDslLexer extends Lexer {
                         }
                     } while (true);
 
-                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10031:79: ( '\\'' )?
+                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10791:79: ( '\\'' )?
                     int alt14=2;
                     int LA14_0 = input.LA(1);
 
@@ -3263,7 +3482,7 @@ public class InternalCheckerDslLexer extends Lexer {
                     }
                     switch (alt14) {
                         case 1 :
-                            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10031:79: '\\''
+                            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10791:79: '\\''
                             {
                             match('\''); 
 
@@ -3294,12 +3513,12 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10033:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10033:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10793:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10793:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10033:24: ( options {greedy=false; } : . )*
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10793:24: ( options {greedy=false; } : . )*
             loop16:
             do {
                 int alt16=2;
@@ -3324,7 +3543,7 @@ public class InternalCheckerDslLexer extends Lexer {
 
                 switch (alt16) {
             	case 1 :
-            	    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10033:52: .
+            	    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10793:52: .
             	    {
             	    matchAny(); 
 
@@ -3354,12 +3573,12 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10035:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10035:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10795:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10795:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10035:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10795:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop17:
             do {
                 int alt17=2;
@@ -3372,7 +3591,7 @@ public class InternalCheckerDslLexer extends Lexer {
 
                 switch (alt17) {
             	case 1 :
-            	    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10035:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10795:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -3392,7 +3611,7 @@ public class InternalCheckerDslLexer extends Lexer {
                 }
             } while (true);
 
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10035:40: ( ( '\\r' )? '\\n' )?
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10795:40: ( ( '\\r' )? '\\n' )?
             int alt19=2;
             int LA19_0 = input.LA(1);
 
@@ -3401,9 +3620,9 @@ public class InternalCheckerDslLexer extends Lexer {
             }
             switch (alt19) {
                 case 1 :
-                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10035:41: ( '\\r' )? '\\n'
+                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10795:41: ( '\\r' )? '\\n'
                     {
-                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10035:41: ( '\\r' )?
+                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10795:41: ( '\\r' )?
                     int alt18=2;
                     int LA18_0 = input.LA(1);
 
@@ -3412,7 +3631,7 @@ public class InternalCheckerDslLexer extends Lexer {
                     }
                     switch (alt18) {
                         case 1 :
-                            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10035:41: '\\r'
+                            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10795:41: '\\r'
                             {
                             match('\r'); 
 
@@ -3444,10 +3663,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10037:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10037:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10797:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10797:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10037:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10797:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt20=0;
             loop20:
             do {
@@ -3501,8 +3720,8 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10039:16: ( . )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10039:18: .
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10799:16: ( . )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10799:18: .
             {
             matchAny(); 
 
@@ -3517,8 +3736,8 @@ public class InternalCheckerDslLexer extends Lexer {
     // $ANTLR end "RULE_ANY_OTHER"
 
     public void mTokens() throws RecognitionException {
-        // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:1:8: ( T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | T__80 | T__81 | T__82 | T__83 | T__84 | T__85 | T__86 | T__87 | T__88 | T__89 | T__90 | T__91 | T__92 | T__93 | T__94 | T__95 | T__96 | T__97 | T__98 | T__99 | T__100 | T__101 | T__102 | T__103 | T__104 | T__105 | T__106 | T__107 | T__108 | T__109 | T__110 | T__111 | T__112 | T__113 | T__114 | T__115 | T__116 | T__117 | T__118 | T__119 | T__120 | T__121 | T__122 | T__123 | T__124 | T__125 | T__126 | T__127 | T__128 | T__129 | T__130 | T__131 | T__132 | T__133 | RULE_HEX | RULE_INT | RULE_DECIMAL | RULE_ID | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
-        int alt21=130;
+        // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:1:8: ( T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | T__80 | T__81 | T__82 | T__83 | T__84 | T__85 | T__86 | T__87 | T__88 | T__89 | T__90 | T__91 | T__92 | T__93 | T__94 | T__95 | T__96 | T__97 | T__98 | T__99 | T__100 | T__101 | T__102 | T__103 | T__104 | T__105 | T__106 | T__107 | T__108 | T__109 | T__110 | T__111 | T__112 | T__113 | T__114 | T__115 | T__116 | T__117 | T__118 | T__119 | T__120 | T__121 | T__122 | T__123 | T__124 | T__125 | T__126 | T__127 | T__128 | T__129 | T__130 | T__131 | T__132 | T__133 | T__134 | T__135 | T__136 | T__137 | T__138 | T__139 | T__140 | T__141 | T__142 | T__143 | RULE_HEX | RULE_INT | RULE_DECIMAL | RULE_ID | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
+        int alt21=140;
         alt21 = dfa21.predict(input);
         switch (alt21) {
             case 1 :
@@ -4369,63 +4588,133 @@ public class InternalCheckerDslLexer extends Lexer {
                 }
                 break;
             case 122 :
-                // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:1:770: RULE_HEX
+                // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:1:770: T__134
+                {
+                mT__134(); 
+
+                }
+                break;
+            case 123 :
+                // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:1:777: T__135
+                {
+                mT__135(); 
+
+                }
+                break;
+            case 124 :
+                // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:1:784: T__136
+                {
+                mT__136(); 
+
+                }
+                break;
+            case 125 :
+                // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:1:791: T__137
+                {
+                mT__137(); 
+
+                }
+                break;
+            case 126 :
+                // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:1:798: T__138
+                {
+                mT__138(); 
+
+                }
+                break;
+            case 127 :
+                // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:1:805: T__139
+                {
+                mT__139(); 
+
+                }
+                break;
+            case 128 :
+                // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:1:812: T__140
+                {
+                mT__140(); 
+
+                }
+                break;
+            case 129 :
+                // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:1:819: T__141
+                {
+                mT__141(); 
+
+                }
+                break;
+            case 130 :
+                // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:1:826: T__142
+                {
+                mT__142(); 
+
+                }
+                break;
+            case 131 :
+                // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:1:833: T__143
+                {
+                mT__143(); 
+
+                }
+                break;
+            case 132 :
+                // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:1:840: RULE_HEX
                 {
                 mRULE_HEX(); 
 
                 }
                 break;
-            case 123 :
-                // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:1:779: RULE_INT
+            case 133 :
+                // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:1:849: RULE_INT
                 {
                 mRULE_INT(); 
 
                 }
                 break;
-            case 124 :
-                // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:1:788: RULE_DECIMAL
+            case 134 :
+                // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:1:858: RULE_DECIMAL
                 {
                 mRULE_DECIMAL(); 
 
                 }
                 break;
-            case 125 :
-                // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:1:801: RULE_ID
+            case 135 :
+                // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:1:871: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
-            case 126 :
-                // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:1:809: RULE_STRING
+            case 136 :
+                // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:1:879: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
-            case 127 :
-                // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:1:821: RULE_ML_COMMENT
+            case 137 :
+                // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:1:891: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
-            case 128 :
-                // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:1:837: RULE_SL_COMMENT
+            case 138 :
+                // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:1:907: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
-            case 129 :
-                // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:1:853: RULE_WS
+            case 139 :
+                // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:1:923: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
-            case 130 :
-                // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:1:861: RULE_ANY_OTHER
+            case 140 :
+                // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:1:931: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 
@@ -4439,247 +4728,260 @@ public class InternalCheckerDslLexer extends Lexer {
 
     protected DFA21 dfa21 = new DFA21(this);
     static final String DFA21_eotS =
-        "\1\uffff\1\67\2\uffff\3\67\3\uffff\1\107\3\67\3\uffff\6\67\1\146"+
-        "\1\uffff\1\152\1\154\2\67\1\164\1\167\1\173\1\176\1\u0082\1\u0084"+
-        "\1\67\1\u0087\1\u0089\1\u008b\1\u008e\1\uffff\2\67\2\u0095\1\62"+
-        "\5\uffff\4\67\3\uffff\6\67\1\u00a6\1\67\1\u00a8\5\uffff\1\67\1\u00aa"+
-        "\12\67\1\u00ba\3\uffff\1\u00c0\1\u00c1\2\67\1\u00c5\7\67\1\u00d1"+
-        "\1\u00d3\7\uffff\5\67\1\u00db\20\uffff\1\u00dd\1\uffff\1\67\12\uffff"+
-        "\3\67\1\uffff\1\u0095\4\uffff\15\67\1\uffff\1\u00f2\1\uffff\1\67"+
-        "\1\uffff\2\67\1\u00f6\10\67\1\u00ff\3\67\1\uffff\1\u0103\4\67\2"+
-        "\uffff\3\67\1\uffff\1\u010c\3\67\1\u0110\3\67\1\u0115\1\u0116\1"+
-        "\u0117\3\uffff\1\u0118\1\u0119\4\67\4\uffff\2\67\1\u0120\1\u0121"+
-        "\1\u0122\4\67\1\u0127\2\67\1\u012a\1\67\1\u012c\3\67\1\u0130\1\67"+
-        "\1\uffff\3\67\1\uffff\2\67\1\u0137\2\67\1\u013a\2\67\1\uffff\3\67"+
-        "\1\uffff\5\67\1\u0145\2\67\1\uffff\1\67\1\u0149\1\u014a\1\uffff"+
-        "\4\67\5\uffff\6\67\3\uffff\1\u0155\1\67\1\u0157\1\67\1\uffff\1\u0159"+
-        "\1\u015a\1\uffff\1\67\1\uffff\1\u015c\2\67\1\uffff\1\67\1\u0161"+
-        "\3\67\1\u0165\1\uffff\2\67\1\uffff\2\67\1\u016a\1\u016b\3\67\1\u016f"+
-        "\2\67\1\uffff\3\67\2\uffff\1\67\1\u0176\6\67\1\u017d\1\u017e\1\uffff"+
-        "\1\67\1\uffff\1\67\2\uffff\1\67\1\uffff\3\67\1\u0185\1\uffff\1\u0186"+
-        "\1\u0187\1\67\1\uffff\1\u0189\1\u018a\2\67\2\uffff\1\67\1\u018e"+
-        "\1\67\1\uffff\1\67\1\u0191\1\u0192\2\67\1\u0195\1\uffff\1\u0196"+
-        "\2\67\1\u0199\1\u019a\1\u019b\2\uffff\1\u019c\1\u019d\1\67\1\u019f"+
-        "\1\67\1\u01a1\3\uffff\1\u01a2\2\uffff\2\67\1\u01a5\1\uffff\1\u01a6"+
-        "\1\67\2\uffff\1\u01a8\1\u01a9\2\uffff\1\u01aa\1\67\5\uffff\1\67"+
-        "\1\uffff\1\67\2\uffff\1\67\1\u01af\2\uffff\1\67\3\uffff\1\u01b1"+
-        "\1\67\1\u01b3\1\67\1\uffff\1\67\1\uffff\1\67\1\uffff\1\67\1\u01b8"+
-        "\2\67\1\uffff\1\67\1\u01bc\1\u01bd\2\uffff";
+        "\1\uffff\1\70\2\uffff\3\70\3\uffff\1\110\3\70\3\uffff\6\70\1\147"+
+        "\1\uffff\1\153\1\155\2\70\1\165\1\170\1\174\1\177\1\u0083\1\u0085"+
+        "\1\u0087\1\u0088\1\u008a\3\70\1\u0091\1\u0094\1\uffff\1\70\2\u0099"+
+        "\5\uffff\4\70\3\uffff\6\70\1\u00ab\1\70\1\u00ad\5\uffff\1\70\1\u00af"+
+        "\12\70\1\u00bf\3\uffff\1\u00c5\1\u00c6\2\70\1\u00ca\7\70\1\u00d6"+
+        "\1\u00d8\7\uffff\5\70\1\u00e0\25\uffff\1\u00e2\1\uffff\5\70\6\uffff"+
+        "\1\70\1\uffff\1\u0099\4\uffff\16\70\1\uffff\1\u00fa\1\uffff\1\70"+
+        "\1\uffff\2\70\1\u00fe\10\70\1\u0107\3\70\1\uffff\1\u010b\4\70\2"+
+        "\uffff\3\70\1\uffff\1\u0114\3\70\1\u0118\3\70\1\u011f\1\u0120\1"+
+        "\u0121\3\uffff\1\u0122\1\u0123\4\70\4\uffff\2\70\1\u012a\1\u012b"+
+        "\2\70\1\u012e\1\u012f\3\70\1\u0133\2\70\1\u0136\2\70\1\u0139\3\70"+
+        "\1\u013d\1\70\1\uffff\3\70\1\uffff\2\70\1\u0146\2\70\1\u0149\2\70"+
+        "\1\uffff\3\70\1\uffff\5\70\1\u0154\2\70\1\uffff\1\70\1\u0158\1\u0159"+
+        "\1\uffff\6\70\5\uffff\6\70\2\uffff\1\u0166\1\70\2\uffff\1\70\1\u0169"+
+        "\1\70\1\uffff\1\u016b\1\u016c\1\uffff\2\70\1\uffff\1\u016f\2\70"+
+        "\1\uffff\1\70\1\u0174\3\70\1\u0178\2\70\1\uffff\2\70\1\uffff\2\70"+
+        "\1\u017f\1\u0180\3\70\1\u0184\2\70\1\uffff\3\70\2\uffff\1\70\1\u018b"+
+        "\10\70\1\u0194\1\u0195\1\uffff\2\70\1\uffff\1\70\2\uffff\2\70\1"+
+        "\uffff\3\70\1\u019e\1\uffff\1\u019f\1\u01a0\1\70\1\uffff\2\70\1"+
+        "\u01a4\1\u01a5\2\70\2\uffff\1\70\1\u01a9\1\70\1\uffff\1\70\1\u01ac"+
+        "\1\u01ad\2\70\1\u01b0\1\uffff\1\u01b1\1\70\1\u01b3\2\70\1\u01b8"+
+        "\1\u01b9\1\u01ba\2\uffff\1\u01bb\1\u01bc\1\u01bd\1\u01be\1\70\1"+
+        "\u01c0\1\70\1\u01c2\3\uffff\1\u01c3\1\u01c4\1\70\2\uffff\2\70\1"+
+        "\u01c8\1\uffff\1\u01c9\1\70\2\uffff\1\u01cb\1\u01cc\2\uffff\1\u01cd"+
+        "\1\uffff\4\70\7\uffff\1\70\1\uffff\1\70\3\uffff\2\70\1\u01d6\2\uffff"+
+        "\1\70\3\uffff\1\70\1\u01d9\3\70\1\u01dd\2\70\1\uffff\1\70\1\u01e1"+
+        "\1\uffff\1\u01e2\2\70\1\uffff\1\u01e5\1\70\1\u01e7\2\uffff\2\70"+
+        "\1\uffff\1\70\1\uffff\2\70\1\u01ed\1\u01ee\1\u01ef\3\uffff";
     static final String DFA21_eofS =
-        "\u01be\uffff";
+        "\u01f0\uffff";
     static final String DFA21_minS =
         "\1\0\1\141\2\uffff\1\141\1\154\1\160\3\uffff\1\72\1\143\1\141\1"+
         "\122\3\uffff\1\146\1\157\1\145\1\157\1\150\1\144\1\56\1\uffff\2"+
-        "\75\2\141\1\75\1\53\1\55\2\52\1\75\1\150\1\75\1\174\1\46\1\56\1"+
-        "\uffff\1\141\1\145\2\60\1\44\5\uffff\1\143\1\151\1\162\1\165\3\uffff"+
-        "\2\141\1\155\1\163\1\143\1\163\1\44\1\164\1\44\5\uffff\1\157\1\44"+
-        "\1\141\1\142\1\141\1\154\1\172\1\156\1\154\1\157\1\154\1\156\1\44"+
-        "\3\uffff\2\44\1\160\1\156\1\44\1\146\1\157\1\145\1\160\1\162\2\144"+
-        "\1\44\1\74\7\uffff\1\170\1\156\1\154\1\155\1\156\1\75\20\uffff\1"+
-        "\75\1\uffff\1\145\12\uffff\1\154\1\167\1\154\1\uffff\1\60\4\uffff"+
-        "\1\153\2\155\2\163\1\143\1\162\1\160\1\145\1\143\1\145\1\154\1\145"+
-        "\1\uffff\1\44\1\uffff\1\162\1\uffff\1\151\1\164\1\44\1\164\1\145"+
-        "\1\160\1\164\2\145\1\143\1\154\1\44\1\141\1\163\1\141\1\uffff\1"+
-        "\44\1\145\1\154\1\165\1\164\2\uffff\1\157\1\147\1\142\1\uffff\1"+
-        "\44\1\154\2\145\1\44\1\145\1\157\1\114\3\44\3\uffff\2\44\1\164\1"+
-        "\157\1\165\1\144\4\uffff\1\162\1\154\3\44\1\154\1\141\1\145\1\165"+
-        "\1\44\1\163\1\153\1\44\1\157\1\44\1\150\1\156\1\165\1\44\1\165\1"+
-        "\uffff\1\145\1\156\1\151\1\uffff\1\141\1\162\1\44\2\143\1\44\1\150"+
-        "\1\157\1\uffff\1\164\1\145\1\154\1\uffff\1\162\1\165\1\164\1\141"+
-        "\1\162\1\44\1\154\1\165\1\uffff\1\145\2\44\1\uffff\1\157\1\167\1"+
-        "\141\1\151\5\uffff\1\151\1\166\1\162\1\157\2\145\3\uffff\1\44\1"+
-        "\147\1\44\1\164\1\uffff\2\44\1\uffff\1\163\1\uffff\1\44\2\144\1"+
-        "\uffff\1\164\1\44\1\147\1\143\1\163\1\44\1\uffff\1\150\1\164\1\uffff"+
-        "\1\162\1\167\2\44\1\154\1\164\1\144\1\44\1\156\1\164\1\uffff\1\145"+
-        "\1\154\1\141\2\uffff\1\146\1\44\1\164\1\163\1\160\1\145\1\156\1"+
-        "\155\2\44\1\uffff\1\145\1\uffff\1\145\2\uffff\1\151\1\uffff\1\163"+
-        "\1\151\1\145\1\44\1\uffff\2\44\1\153\1\uffff\2\44\1\157\1\165\2"+
-        "\uffff\1\171\1\44\1\145\1\uffff\1\143\2\44\1\164\1\156\1\44\1\uffff"+
-        "\1\44\1\164\1\154\3\44\2\uffff\2\44\1\164\1\44\1\157\1\44\3\uffff"+
-        "\1\44\2\uffff\1\156\1\160\1\44\1\uffff\1\44\1\145\2\uffff\2\44\2"+
-        "\uffff\1\44\1\171\5\uffff\1\151\1\uffff\1\156\2\uffff\1\151\1\44"+
-        "\2\uffff\1\157\3\uffff\1\44\1\157\1\44\1\172\1\uffff\1\146\1\uffff"+
-        "\1\156\1\uffff\1\145\1\44\1\141\1\144\1\uffff\1\154\2\44\2\uffff";
+        "\75\2\141\1\75\1\53\1\55\2\52\1\174\1\46\1\44\1\75\1\150\1\145\1"+
+        "\151\1\75\1\56\1\uffff\1\141\2\60\5\uffff\1\143\1\151\1\162\1\165"+
+        "\3\uffff\2\141\1\155\1\163\1\143\1\163\1\44\1\164\1\44\5\uffff\1"+
+        "\157\1\44\1\141\1\142\1\141\1\154\1\172\1\156\1\154\1\157\1\154"+
+        "\1\156\1\44\3\uffff\2\44\1\160\1\156\1\44\1\146\1\157\1\145\1\160"+
+        "\1\162\2\144\1\44\1\74\7\uffff\1\170\1\156\1\154\1\155\1\156\1\75"+
+        "\25\uffff\1\75\1\uffff\1\145\1\164\1\167\1\154\1\144\6\uffff\1\154"+
+        "\1\uffff\1\60\4\uffff\1\153\2\155\2\163\1\143\1\162\1\164\1\160"+
+        "\1\145\1\143\1\145\1\154\1\145\1\uffff\1\44\1\uffff\1\162\1\uffff"+
+        "\1\151\1\164\1\44\1\164\1\145\1\160\1\164\2\145\1\143\1\154\1\44"+
+        "\1\141\1\163\1\141\1\uffff\1\44\1\145\1\154\1\165\1\164\2\uffff"+
+        "\1\157\1\147\1\142\1\uffff\1\44\1\154\2\145\1\44\1\145\1\157\1\114"+
+        "\3\44\3\uffff\2\44\1\164\1\157\1\165\1\144\4\uffff\1\162\1\154\2"+
+        "\44\1\154\1\144\2\44\1\141\1\145\1\165\1\44\1\163\1\153\1\44\1\141"+
+        "\1\157\1\44\1\150\1\156\1\165\1\44\1\165\1\uffff\1\145\1\156\1\151"+
+        "\1\uffff\1\141\1\162\1\44\2\143\1\44\1\150\1\157\1\uffff\1\164\1"+
+        "\145\1\154\1\uffff\1\162\1\165\1\164\1\141\1\162\1\44\1\154\1\165"+
+        "\1\uffff\1\145\2\44\1\uffff\1\157\1\167\1\141\1\151\2\157\5\uffff"+
+        "\1\151\1\166\1\162\1\157\2\145\2\uffff\1\44\1\145\2\uffff\1\147"+
+        "\1\44\1\164\1\uffff\2\44\1\uffff\1\151\1\163\1\uffff\1\44\2\144"+
+        "\1\uffff\1\164\1\44\1\147\1\143\1\163\1\44\2\157\1\uffff\1\150\1"+
+        "\164\1\uffff\1\162\1\167\2\44\1\154\1\164\1\144\1\44\1\156\1\164"+
+        "\1\uffff\1\145\1\154\1\141\2\uffff\1\146\1\44\1\164\1\163\1\167"+
+        "\1\154\1\160\1\145\1\156\1\155\2\44\1\uffff\1\156\1\145\1\uffff"+
+        "\1\145\2\uffff\1\156\1\151\1\uffff\1\163\1\151\1\145\1\44\1\uffff"+
+        "\2\44\1\153\1\uffff\1\167\1\154\2\44\1\157\1\165\2\uffff\1\171\1"+
+        "\44\1\145\1\uffff\1\143\2\44\1\164\1\156\1\44\1\uffff\1\44\1\164"+
+        "\1\44\1\165\1\154\3\44\2\uffff\4\44\1\164\1\44\1\157\1\44\3\uffff"+
+        "\2\44\1\165\2\uffff\1\156\1\160\1\44\1\uffff\1\44\1\145\2\uffff"+
+        "\2\44\2\uffff\1\44\1\uffff\1\155\1\171\2\157\7\uffff\1\151\1\uffff"+
+        "\1\156\3\uffff\1\155\1\151\1\44\2\uffff\1\157\3\uffff\1\156\1\44"+
+        "\1\167\1\154\1\157\1\44\1\156\1\172\1\uffff\1\146\1\44\1\uffff\1"+
+        "\44\1\165\1\156\1\uffff\1\44\1\145\1\44\2\uffff\1\155\1\141\1\uffff"+
+        "\1\144\1\uffff\1\156\1\154\3\44\3\uffff";
     static final String DFA21_maxS =
         "\1\uffff\1\162\2\uffff\1\157\1\170\1\165\3\uffff\1\72\1\171\1\157"+
         "\1\122\3\uffff\1\156\3\157\1\171\1\163\1\56\1\uffff\1\76\1\75\1"+
-        "\165\1\145\1\76\1\75\1\76\3\75\1\150\1\75\1\174\1\46\1\72\1\uffff"+
-        "\1\141\1\165\1\170\1\154\1\172\5\uffff\1\143\1\151\1\162\1\165\3"+
-        "\uffff\1\141\1\145\1\155\2\164\1\163\1\172\1\164\1\172\5\uffff\1"+
-        "\157\1\172\1\162\1\160\1\151\1\154\1\172\1\156\1\162\1\157\1\154"+
-        "\1\156\1\172\3\uffff\2\172\1\160\1\156\1\172\1\146\1\157\1\171\1"+
-        "\160\1\162\1\152\1\163\1\172\1\74\7\uffff\1\170\1\156\1\154\1\164"+
-        "\1\156\1\75\20\uffff\1\75\1\uffff\1\151\12\uffff\1\162\1\167\1\154"+
-        "\1\uffff\1\154\4\uffff\1\153\2\155\2\163\1\143\1\162\1\160\1\145"+
-        "\1\143\1\145\1\154\1\145\1\uffff\1\172\1\uffff\1\162\1\uffff\1\151"+
-        "\1\164\1\172\1\164\1\145\1\160\1\164\2\145\1\143\1\154\1\172\1\141"+
-        "\1\163\1\141\1\uffff\1\172\1\145\1\154\1\165\1\164\2\uffff\1\157"+
-        "\1\147\1\142\1\uffff\1\172\1\154\2\145\1\172\1\145\1\157\1\115\3"+
-        "\172\3\uffff\2\172\1\164\1\157\1\165\1\144\4\uffff\1\162\1\154\3"+
-        "\172\1\154\1\141\1\145\1\165\1\172\1\163\1\153\1\172\1\157\1\172"+
-        "\1\150\1\156\1\165\1\172\1\165\1\uffff\1\145\1\156\1\151\1\uffff"+
-        "\1\141\1\162\1\172\2\143\1\172\1\150\1\157\1\uffff\1\164\1\145\1"+
-        "\154\1\uffff\1\162\1\165\1\164\1\141\1\162\1\172\1\154\1\165\1\uffff"+
-        "\1\145\2\172\1\uffff\1\157\1\167\1\141\1\151\5\uffff\1\151\1\166"+
-        "\1\162\1\157\2\145\3\uffff\1\172\1\147\1\172\1\164\1\uffff\2\172"+
-        "\1\uffff\1\163\1\uffff\1\172\1\163\1\144\1\uffff\1\164\1\172\1\147"+
-        "\1\143\1\163\1\172\1\uffff\1\150\1\164\1\uffff\1\162\1\167\2\172"+
-        "\1\154\1\164\1\144\1\172\1\156\1\164\1\uffff\1\145\1\154\1\141\2"+
-        "\uffff\1\146\1\172\1\164\1\163\1\160\1\145\1\156\1\155\2\172\1\uffff"+
-        "\1\145\1\uffff\1\145\2\uffff\1\151\1\uffff\1\163\1\151\1\145\1\172"+
-        "\1\uffff\2\172\1\153\1\uffff\2\172\1\157\1\165\2\uffff\1\171\1\172"+
-        "\1\145\1\uffff\1\143\2\172\1\164\1\156\1\172\1\uffff\1\172\1\164"+
-        "\1\154\3\172\2\uffff\2\172\1\164\1\172\1\157\1\172\3\uffff\1\172"+
-        "\2\uffff\1\156\1\160\1\172\1\uffff\1\172\1\145\2\uffff\2\172\2\uffff"+
-        "\1\172\1\171\5\uffff\1\151\1\uffff\1\156\2\uffff\1\151\1\172\2\uffff"+
-        "\1\157\3\uffff\1\172\1\157\2\172\1\uffff\1\146\1\uffff\1\156\1\uffff"+
-        "\1\145\1\172\1\141\1\144\1\uffff\1\154\2\172\2\uffff";
+        "\165\1\145\1\76\1\75\1\76\2\75\1\174\1\46\1\172\1\75\1\150\1\165"+
+        "\1\151\1\75\1\72\1\uffff\1\141\1\170\1\154\5\uffff\1\143\1\151\1"+
+        "\162\1\165\3\uffff\1\141\1\145\1\156\2\164\1\163\1\172\1\164\1\172"+
+        "\5\uffff\1\157\1\172\1\162\1\160\1\151\1\154\1\172\1\156\1\162\1"+
+        "\157\1\154\1\156\1\172\3\uffff\2\172\1\160\1\156\1\172\1\146\1\157"+
+        "\1\171\1\160\1\162\1\152\1\163\1\172\1\74\7\uffff\1\170\1\156\1"+
+        "\154\1\164\1\156\1\75\25\uffff\1\75\1\uffff\1\151\1\164\1\167\1"+
+        "\154\1\144\6\uffff\1\162\1\uffff\1\154\4\uffff\1\153\2\155\2\163"+
+        "\1\143\1\162\1\164\1\160\1\145\1\143\1\145\1\154\1\145\1\uffff\1"+
+        "\172\1\uffff\1\162\1\uffff\1\151\1\164\1\172\1\164\1\145\1\160\1"+
+        "\164\2\145\1\143\1\154\1\172\1\141\1\163\1\141\1\uffff\1\172\1\145"+
+        "\1\154\1\165\1\164\2\uffff\1\157\1\147\1\142\1\uffff\1\172\1\154"+
+        "\2\145\1\172\1\145\1\157\1\115\3\172\3\uffff\2\172\1\164\1\157\1"+
+        "\165\1\144\4\uffff\1\162\1\154\2\172\1\154\1\144\2\172\1\141\1\145"+
+        "\1\165\1\172\1\163\1\153\1\172\1\141\1\157\1\172\1\150\1\156\1\165"+
+        "\1\172\1\165\1\uffff\1\145\1\156\1\151\1\uffff\1\141\1\162\1\172"+
+        "\2\143\1\172\1\150\1\157\1\uffff\1\164\1\145\1\154\1\uffff\1\162"+
+        "\1\165\1\164\1\141\1\162\1\172\1\154\1\165\1\uffff\1\145\2\172\1"+
+        "\uffff\1\157\1\167\1\141\1\151\2\157\5\uffff\1\151\1\166\1\162\1"+
+        "\157\2\145\2\uffff\1\172\1\145\2\uffff\1\147\1\172\1\164\1\uffff"+
+        "\2\172\1\uffff\1\151\1\163\1\uffff\1\172\1\163\1\144\1\uffff\1\164"+
+        "\1\172\1\147\1\143\1\163\1\172\2\157\1\uffff\1\150\1\164\1\uffff"+
+        "\1\162\1\167\2\172\1\154\1\164\1\144\1\172\1\156\1\164\1\uffff\1"+
+        "\145\1\154\1\141\2\uffff\1\146\1\172\1\164\1\163\1\167\1\154\1\160"+
+        "\1\145\1\156\1\155\2\172\1\uffff\1\156\1\145\1\uffff\1\145\2\uffff"+
+        "\1\156\1\151\1\uffff\1\163\1\151\1\145\1\172\1\uffff\2\172\1\153"+
+        "\1\uffff\1\167\1\154\2\172\1\157\1\165\2\uffff\1\171\1\172\1\145"+
+        "\1\uffff\1\143\2\172\1\164\1\156\1\172\1\uffff\1\172\1\164\1\172"+
+        "\1\165\1\154\3\172\2\uffff\4\172\1\164\1\172\1\157\1\172\3\uffff"+
+        "\2\172\1\165\2\uffff\1\156\1\160\1\172\1\uffff\1\172\1\145\2\uffff"+
+        "\2\172\2\uffff\1\172\1\uffff\1\155\1\171\2\157\7\uffff\1\151\1\uffff"+
+        "\1\156\3\uffff\1\155\1\151\1\172\2\uffff\1\157\3\uffff\1\156\1\172"+
+        "\1\167\1\154\1\157\1\172\1\156\1\172\1\uffff\1\146\1\172\1\uffff"+
+        "\1\172\1\165\1\156\1\uffff\1\172\1\145\1\172\2\uffff\1\155\1\141"+
+        "\1\uffff\1\144\1\uffff\1\156\1\154\3\172\3\uffff";
     static final String DFA21_acceptS =
         "\2\uffff\1\2\1\3\3\uffff\1\7\1\10\1\11\4\uffff\1\17\1\20\1\21\7"+
-        "\uffff\1\41\17\uffff\1\136\5\uffff\1\175\2\176\1\u0081\1\u0082\4"+
-        "\uffff\1\175\1\2\1\3\11\uffff\1\7\1\10\1\11\1\134\1\12\15\uffff"+
-        "\1\17\1\20\1\21\16\uffff\1\40\1\41\1\76\1\124\1\42\1\75\1\43\6\uffff"+
-        "\1\123\1\66\1\107\1\132\1\67\1\110\1\121\1\133\1\70\1\111\1\126"+
-        "\1\71\1\112\1\177\1\u0080\1\72\1\uffff\1\130\1\uffff\1\113\1\127"+
-        "\1\114\1\137\1\115\1\171\1\125\1\135\1\170\1\136\3\uffff\1\172\1"+
-        "\uffff\1\173\1\174\1\176\1\u0081\15\uffff\1\6\1\uffff\1\100\1\uffff"+
-        "\1\22\17\uffff\1\16\5\uffff\1\35\1\140\3\uffff\1\146\13\uffff\1"+
-        "\131\1\122\1\55\6\uffff\1\116\1\73\1\117\1\74\24\uffff\1\36\3\uffff"+
-        "\1\44\10\uffff\1\101\3\uffff\1\23\10\uffff\1\102\3\uffff\1\164\4"+
-        "\uffff\1\52\1\37\1\77\1\45\1\46\6\uffff\1\147\1\150\1\155\4\uffff"+
-        "\1\60\2\uffff\1\30\1\uffff\1\144\3\uffff\1\141\6\uffff\1\50\2\uffff"+
-        "\1\56\12\uffff\1\24\3\uffff\1\32\1\157\12\uffff\1\160\1\uffff\1"+
-        "\47\1\uffff\1\4\1\15\1\uffff\1\167\4\uffff\1\13\3\uffff\1\154\4"+
-        "\uffff\1\25\1\156\3\uffff\1\105\6\uffff\1\162\6\uffff\1\103\1\145"+
-        "\6\uffff\1\106\1\31\1\151\1\uffff\1\142\1\51\3\uffff\1\62\2\uffff"+
-        "\1\152\1\26\2\uffff\1\161\1\33\2\uffff\1\53\1\163\1\54\1\1\1\57"+
-        "\1\uffff\1\5\1\uffff\1\64\1\104\2\uffff\1\165\1\63\1\uffff\1\143"+
-        "\1\27\1\34\4\uffff\1\14\1\uffff\1\61\1\uffff\1\153\4\uffff\1\120"+
-        "\3\uffff\1\166\1\65";
+        "\uffff\1\41\22\uffff\1\152\3\uffff\1\u0087\2\u0088\1\u008b\1\u008c"+
+        "\4\uffff\1\u0087\1\2\1\3\11\uffff\1\7\1\10\1\11\1\150\1\12\15\uffff"+
+        "\1\17\1\20\1\21\16\uffff\1\40\1\41\1\111\1\140\1\42\1\110\1\43\6"+
+        "\uffff\1\137\1\76\1\123\1\146\1\77\1\124\1\135\1\147\1\100\1\125"+
+        "\1\142\1\101\1\126\1\u0089\1\u008a\1\102\1\130\1\103\1\131\1\104"+
+        "\1\105\1\uffff\1\144\5\uffff\1\127\1\143\1\141\1\151\1\u0083\1\152"+
+        "\1\uffff\1\u0084\1\uffff\1\u0085\1\u0086\1\u0088\1\u008b\16\uffff"+
+        "\1\6\1\uffff\1\113\1\uffff\1\22\17\uffff\1\16\5\uffff\1\35\1\153"+
+        "\3\uffff\1\161\13\uffff\1\145\1\136\1\55\6\uffff\1\132\1\106\1\133"+
+        "\1\107\27\uffff\1\36\3\uffff\1\44\10\uffff\1\114\3\uffff\1\23\10"+
+        "\uffff\1\75\3\uffff\1\177\6\uffff\1\52\1\37\1\112\1\45\1\46\6\uffff"+
+        "\1\116\1\170\2\uffff\1\162\1\163\3\uffff\1\67\2\uffff\1\30\2\uffff"+
+        "\1\157\3\uffff\1\154\10\uffff\1\50\2\uffff\1\56\12\uffff\1\24\3"+
+        "\uffff\1\32\1\172\14\uffff\1\173\2\uffff\1\47\1\uffff\1\4\1\15\2"+
+        "\uffff\1\u0082\4\uffff\1\13\3\uffff\1\167\6\uffff\1\25\1\171\3\uffff"+
+        "\1\120\6\uffff\1\175\10\uffff\1\115\1\160\10\uffff\1\121\1\31\1"+
+        "\164\3\uffff\1\155\1\51\3\uffff\1\71\2\uffff\1\165\1\26\2\uffff"+
+        "\1\174\1\33\1\uffff\1\60\4\uffff\1\53\1\176\1\54\1\122\1\1\1\66"+
+        "\1\57\1\uffff\1\5\1\uffff\1\73\1\117\1\62\3\uffff\1\u0080\1\72\1"+
+        "\uffff\1\156\1\27\1\34\10\uffff\1\14\2\uffff\1\70\3\uffff\1\166"+
+        "\3\uffff\1\61\1\64\2\uffff\1\63\1\uffff\1\134\5\uffff\1\u0081\1"+
+        "\65\1\74";
     static final String DFA21_specialS =
-        "\1\0\u01bd\uffff}>";
+        "\1\0\u01ef\uffff}>";
     static final String[] DFA21_transitionS = {
-            "\11\62\2\61\2\62\1\61\22\62\1\61\1\42\1\57\1\50\1\56\1\44\1"+
-            "\46\1\60\1\7\1\11\1\40\1\36\1\10\1\37\1\27\1\41\1\53\11\54\1"+
-            "\12\1\20\1\31\1\35\1\32\1\47\1\62\14\56\1\15\15\56\1\16\1\62"+
-            "\1\17\1\55\1\56\1\30\1\26\1\24\1\4\1\23\1\5\1\14\2\56\1\21\2"+
-            "\56\1\22\1\33\1\52\1\6\1\1\1\56\1\34\1\13\1\25\1\56\1\51\1\43"+
-            "\3\56\1\2\1\45\1\3\uff82\62",
-            "\1\63\3\uffff\1\65\6\uffff\1\66\5\uffff\1\64",
+            "\11\63\2\62\2\63\1\62\22\63\1\62\1\45\1\60\1\53\1\57\1\51\1"+
+            "\43\1\61\1\7\1\11\1\40\1\36\1\10\1\37\1\27\1\41\1\55\11\56\1"+
+            "\12\1\20\1\31\1\35\1\32\1\52\1\63\14\57\1\15\15\57\1\16\1\63"+
+            "\1\17\1\44\1\57\1\30\1\26\1\24\1\4\1\23\1\5\1\14\1\57\1\50\1"+
+            "\21\2\57\1\22\1\33\1\47\1\6\1\1\1\57\1\34\1\13\1\25\1\57\1\54"+
+            "\1\46\3\57\1\2\1\42\1\3\uff82\63",
+            "\1\64\3\uffff\1\66\6\uffff\1\67\5\uffff\1\65",
             "",
             "",
-            "\1\75\6\uffff\1\73\3\uffff\1\72\2\uffff\1\74",
-            "\1\77\13\uffff\1\76",
-            "\1\100\1\uffff\1\102\2\uffff\1\101",
-            "",
-            "",
-            "",
-            "\1\106",
-            "\1\110\1\uffff\1\115\3\uffff\1\116\6\uffff\1\111\3\uffff\1"+
-            "\112\1\113\1\uffff\1\114\1\uffff\1\117",
-            "\1\122\7\uffff\1\123\2\uffff\1\121\2\uffff\1\120",
-            "\1\124",
+            "\1\76\6\uffff\1\74\3\uffff\1\73\2\uffff\1\75",
+            "\1\100\13\uffff\1\77",
+            "\1\101\1\uffff\1\103\2\uffff\1\102",
             "",
             "",
             "",
-            "\1\131\6\uffff\1\132\1\130",
-            "\1\133",
-            "\1\135\11\uffff\1\134",
-            "\1\136",
-            "\1\141\11\uffff\1\137\6\uffff\1\140",
-            "\1\142\11\uffff\1\143\4\uffff\1\144",
-            "\1\145",
+            "\1\107",
+            "\1\111\1\uffff\1\116\3\uffff\1\117\6\uffff\1\112\3\uffff\1"+
+            "\113\1\114\1\uffff\1\115\1\uffff\1\120",
+            "\1\123\7\uffff\1\124\2\uffff\1\122\2\uffff\1\121",
+            "\1\125",
             "",
-            "\1\150\1\151",
-            "\1\153",
-            "\1\155\7\uffff\1\156\13\uffff\1\157",
-            "\1\161\3\uffff\1\160",
-            "\1\162\1\163",
-            "\1\166\21\uffff\1\165",
-            "\1\172\17\uffff\1\170\1\171",
-            "\1\175\22\uffff\1\174",
-            "\1\u0080\4\uffff\1\u0081\15\uffff\1\177",
-            "\1\u0083",
-            "\1\u0085",
+            "",
+            "",
+            "\1\132\6\uffff\1\133\1\131",
+            "\1\134",
+            "\1\136\11\uffff\1\135",
+            "\1\137",
+            "\1\142\11\uffff\1\140\6\uffff\1\141",
+            "\1\143\11\uffff\1\144\4\uffff\1\145",
+            "\1\146",
+            "",
+            "\1\151\1\152",
+            "\1\154",
+            "\1\156\7\uffff\1\157\13\uffff\1\160",
+            "\1\162\3\uffff\1\161",
+            "\1\163\1\164",
+            "\1\167\21\uffff\1\166",
+            "\1\173\17\uffff\1\171\1\172",
+            "\1\176\22\uffff\1\175",
+            "\1\u0081\4\uffff\1\u0082\15\uffff\1\u0080",
+            "\1\u0084",
             "\1\u0086",
-            "\1\u0088",
-            "\1\u008a",
-            "\1\u008d\13\uffff\1\u008c",
-            "",
+            "\1\70\34\uffff\32\70\4\uffff\1\70\1\uffff\32\70",
+            "\1\u0089",
+            "\1\u008b",
+            "\1\u008d\11\uffff\1\u008c\5\uffff\1\u008e",
+            "\1\u008f",
             "\1\u0090",
-            "\1\u0091\17\uffff\1\u0092",
-            "\12\u0094\10\uffff\1\u0096\1\uffff\3\u0096\5\uffff\1\u0096"+
-            "\13\uffff\1\u0093\6\uffff\1\u0094\2\uffff\1\u0096\1\uffff\3"+
-            "\u0096\5\uffff\1\u0096\13\uffff\1\u0093",
-            "\12\u0094\10\uffff\1\u0096\1\uffff\3\u0096\5\uffff\1\u0096"+
-            "\22\uffff\1\u0094\2\uffff\1\u0096\1\uffff\3\u0096\5\uffff\1"+
-            "\u0096",
-            "\1\67\34\uffff\32\67\4\uffff\1\67\1\uffff\32\67",
+            "\1\u0093\13\uffff\1\u0092",
+            "",
+            "\1\u0096",
+            "\12\u0098\10\uffff\1\u009a\1\uffff\3\u009a\5\uffff\1\u009a"+
+            "\13\uffff\1\u0097\6\uffff\1\u0098\2\uffff\1\u009a\1\uffff\3"+
+            "\u009a\5\uffff\1\u009a\13\uffff\1\u0097",
+            "\12\u0098\10\uffff\1\u009a\1\uffff\3\u009a\5\uffff\1\u009a"+
+            "\22\uffff\1\u0098\2\uffff\1\u009a\1\uffff\3\u009a\5\uffff\1"+
+            "\u009a",
             "",
             "",
-            "",
-            "",
-            "",
-            "\1\u0099",
-            "\1\u009a",
-            "\1\u009b",
-            "\1\u009c",
             "",
             "",
             "",
             "\1\u009d",
-            "\1\u009f\3\uffff\1\u009e",
+            "\1\u009e",
+            "\1\u009f",
             "\1\u00a0",
-            "\1\u00a1\1\u00a2",
-            "\1\u00a4\20\uffff\1\u00a3",
-            "\1\u00a5",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
-            "\67",
-            "\1\u00a7",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
-            "\67",
+            "",
+            "",
+            "",
+            "\1\u00a1",
+            "\1\u00a3\3\uffff\1\u00a2",
+            "\1\u00a5\1\u00a4",
+            "\1\u00a6\1\u00a7",
+            "\1\u00a9\20\uffff\1\u00a8",
+            "\1\u00aa",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
+            "\1\u00ac",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
             "",
             "",
             "",
             "",
             "",
-            "\1\u00a9",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
-            "\67",
-            "\1\u00ac\20\uffff\1\u00ab",
-            "\1\u00ae\12\uffff\1\u00ad\2\uffff\1\u00af",
-            "\1\u00b0\7\uffff\1\u00b1",
-            "\1\u00b2",
-            "\1\u00b3",
-            "\1\u00b4",
-            "\1\u00b5\5\uffff\1\u00b6",
+            "\1\u00ae",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
+            "\1\u00b1\20\uffff\1\u00b0",
+            "\1\u00b3\12\uffff\1\u00b2\2\uffff\1\u00b4",
+            "\1\u00b5\7\uffff\1\u00b6",
             "\1\u00b7",
             "\1\u00b8",
             "\1\u00b9",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
-            "\67",
+            "\1\u00ba\5\uffff\1\u00bb",
+            "\1\u00bc",
+            "\1\u00bd",
+            "\1\u00be",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
             "",
             "",
             "",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\2"+
-            "\67\1\u00bd\14\67\1\u00be\2\67\1\u00bf\1\u00bb\1\67\1\u00bc"+
-            "\4\67",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
-            "\67",
-            "\1\u00c2",
-            "\1\u00c3",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\24"+
-            "\67\1\u00c4\5\67",
-            "\1\u00c6",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\2"+
+            "\70\1\u00c2\14\70\1\u00c3\2\70\1\u00c4\1\u00c0\1\70\1\u00c1"+
+            "\4\70",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
             "\1\u00c7",
-            "\1\u00c8\17\uffff\1\u00c9\3\uffff\1\u00ca",
+            "\1\u00c8",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\24"+
+            "\70\1\u00c9\5\70",
             "\1\u00cb",
             "\1\u00cc",
-            "\1\u00ce\5\uffff\1\u00cd",
-            "\1\u00d0\16\uffff\1\u00cf",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
-            "\67",
-            "\1\u00d2",
+            "\1\u00cd\17\uffff\1\u00ce\3\uffff\1\u00cf",
+            "\1\u00d0",
+            "\1\u00d1",
+            "\1\u00d3\5\uffff\1\u00d2",
+            "\1\u00d5\16\uffff\1\u00d4",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
+            "\1\u00d7",
             "",
             "",
             "",
@@ -4687,12 +4989,12 @@ public class InternalCheckerDslLexer extends Lexer {
             "",
             "",
             "",
-            "\1\u00d4",
-            "\1\u00d5",
-            "\1\u00d6",
-            "\1\u00d7\6\uffff\1\u00d8",
             "\1\u00d9",
             "\1\u00da",
+            "\1\u00db",
+            "\1\u00dc\6\uffff\1\u00dd",
+            "\1\u00de",
+            "\1\u00df",
             "",
             "",
             "",
@@ -4709,386 +5011,444 @@ public class InternalCheckerDslLexer extends Lexer {
             "",
             "",
             "",
-            "\1\u00dc",
-            "",
-            "\1\u00de\3\uffff\1\u00df",
             "",
             "",
             "",
             "",
             "",
+            "\1\u00e1",
             "",
-            "",
-            "",
-            "",
-            "",
-            "\1\u00e1\5\uffff\1\u00e0",
-            "\1\u00e2",
-            "\1\u00e3",
-            "",
-            "\12\u0094\10\uffff\1\u0096\1\uffff\3\u0096\5\uffff\1\u0096"+
-            "\22\uffff\1\u0094\2\uffff\1\u0096\1\uffff\3\u0096\5\uffff\1"+
-            "\u0096",
-            "",
-            "",
-            "",
-            "",
-            "\1\u00e4",
+            "\1\u00e3\3\uffff\1\u00e4",
             "\1\u00e5",
             "\1\u00e6",
             "\1\u00e7",
             "\1\u00e8",
-            "\1\u00e9",
-            "\1\u00ea",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "\1\u00ea\5\uffff\1\u00e9",
+            "",
+            "\12\u0098\10\uffff\1\u009a\1\uffff\3\u009a\5\uffff\1\u009a"+
+            "\22\uffff\1\u0098\2\uffff\1\u009a\1\uffff\3\u009a\5\uffff\1"+
+            "\u009a",
+            "",
+            "",
+            "",
+            "",
             "\1\u00eb",
             "\1\u00ec",
             "\1\u00ed",
             "\1\u00ee",
             "\1\u00ef",
             "\1\u00f0",
-            "",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\17"+
-            "\67\1\u00f1\12\67",
-            "",
+            "\1\u00f1",
+            "\1\u00f2",
             "\1\u00f3",
-            "",
             "\1\u00f4",
             "\1\u00f5",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
-            "\67",
+            "\1\u00f6",
             "\1\u00f7",
             "\1\u00f8",
-            "\1\u00f9",
-            "\1\u00fa",
+            "",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\17"+
+            "\70\1\u00f9\12\70",
+            "",
             "\1\u00fb",
+            "",
             "\1\u00fc",
             "\1\u00fd",
-            "\1\u00fe",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
-            "\67",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
+            "\1\u00ff",
             "\1\u0100",
             "\1\u0101",
             "\1\u0102",
-            "",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
-            "\67",
+            "\1\u0103",
             "\1\u0104",
             "\1\u0105",
             "\1\u0106",
-            "\1\u0107",
-            "",
-            "",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
             "\1\u0108",
             "\1\u0109",
             "\1\u010a",
             "",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\1"+
-            "\u010b\31\67",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
+            "\1\u010c",
             "\1\u010d",
             "\1\u010e",
             "\1\u010f",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
-            "\67",
+            "",
+            "",
+            "\1\u0110",
             "\1\u0111",
             "\1\u0112",
-            "\1\u0114\1\u0113",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
-            "\67",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
-            "\67",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
-            "\67",
             "",
-            "",
-            "",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
-            "\67",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
-            "\67",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\1"+
+            "\u0113\31\70",
+            "\1\u0115",
+            "\1\u0116",
+            "\1\u0117",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
+            "\1\u0119",
             "\1\u011a",
-            "\1\u011b",
-            "\1\u011c",
-            "\1\u011d",
+            "\1\u011c\1\u011b",
+            "\1\70\13\uffff\12\70\7\uffff\2\70\1\u011e\16\70\1\u011d\10"+
+            "\70\4\uffff\1\70\1\uffff\32\70",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
             "",
             "",
             "",
-            "",
-            "\1\u011e",
-            "\1\u011f",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
-            "\67",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
-            "\67",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
-            "\67",
-            "\1\u0123",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
             "\1\u0124",
             "\1\u0125",
             "\1\u0126",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
-            "\67",
+            "\1\u0127",
+            "",
+            "",
+            "",
+            "",
             "\1\u0128",
             "\1\u0129",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
-            "\67",
-            "\1\u012b",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
-            "\67",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
+            "\1\u012c",
             "\1\u012d",
-            "\1\u012e",
-            "\1\u012f",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
-            "\67",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
+            "\1\u0130",
             "\1\u0131",
-            "",
             "\1\u0132",
-            "\1\u0133",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
             "\1\u0134",
-            "",
             "\1\u0135",
-            "\1\u0136",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
-            "\67",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
+            "\1\u0137",
             "\1\u0138",
-            "\1\u0139",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
-            "\67",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
+            "\1\u013a",
             "\1\u013b",
             "\1\u013c",
-            "",
-            "\1\u013d",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
             "\1\u013e",
-            "\1\u013f",
             "",
+            "\1\u013f",
             "\1\u0140",
             "\1\u0141",
+            "",
             "\1\u0142",
             "\1\u0143",
-            "\1\u0144",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
-            "\67",
-            "\1\u0146",
+            "\1\70\13\uffff\12\70\7\uffff\2\70\1\u0145\16\70\1\u0144\10"+
+            "\70\4\uffff\1\70\1\uffff\32\70",
             "\1\u0147",
-            "",
             "\1\u0148",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
-            "\67",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
-            "\67",
-            "",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
+            "\1\u014a",
             "\1\u014b",
+            "",
             "\1\u014c",
             "\1\u014d",
             "\1\u014e",
-            "",
-            "",
-            "",
-            "",
             "",
             "\1\u014f",
             "\1\u0150",
             "\1\u0151",
             "\1\u0152",
             "\1\u0153",
-            "\1\u0154",
-            "",
-            "",
-            "",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
-            "\67",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
+            "\1\u0155",
             "\1\u0156",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
-            "\67",
-            "\1\u0158",
             "",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
-            "\67",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
-            "\67",
+            "\1\u0157",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
             "",
+            "\1\u015a",
             "\1\u015b",
-            "",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
-            "\67",
-            "\1\u015d\16\uffff\1\u015e",
+            "\1\u015c",
+            "\1\u015d",
+            "\1\u015e",
             "\1\u015f",
             "",
+            "",
+            "",
+            "",
+            "",
             "\1\u0160",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
-            "\67",
+            "\1\u0161",
             "\1\u0162",
             "\1\u0163",
             "\1\u0164",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
-            "\67",
+            "\1\u0165",
             "",
-            "\1\u0166",
+            "",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
             "\1\u0167",
             "",
+            "",
             "\1\u0168",
-            "\1\u0169",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
-            "\67",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
-            "\67",
-            "\1\u016c",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
+            "\1\u016a",
+            "",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
+            "",
             "\1\u016d",
             "\1\u016e",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
-            "\67",
-            "\1\u0170",
-            "\1\u0171",
             "",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
+            "\1\u0170\16\uffff\1\u0171",
             "\1\u0172",
+            "",
             "\1\u0173",
-            "\1\u0174",
-            "",
-            "",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
             "\1\u0175",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
-            "\67",
+            "\1\u0176",
             "\1\u0177",
-            "\1\u0178",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
             "\1\u0179",
             "\1\u017a",
+            "",
             "\1\u017b",
             "\1\u017c",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
-            "\67",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
-            "\67",
             "",
-            "\1\u017f",
-            "",
-            "\1\u0180",
-            "",
-            "",
+            "\1\u017d",
+            "\1\u017e",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
             "\1\u0181",
-            "",
             "\1\u0182",
             "\1\u0183",
-            "\1\u0184",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
-            "\67",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
+            "\1\u0185",
+            "\1\u0186",
             "",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
-            "\67",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
-            "\67",
+            "\1\u0187",
             "\1\u0188",
+            "\1\u0189",
             "",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
-            "\67",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
-            "\67",
-            "\1\u018b",
+            "",
+            "\1\u018a",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
             "\1\u018c",
-            "",
-            "",
             "\1\u018d",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
-            "\67",
+            "\1\u018e",
             "\1\u018f",
-            "",
             "\1\u0190",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
-            "\67",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
-            "\67",
+            "\1\u0191",
+            "\1\u0192",
             "\1\u0193",
-            "\1\u0194",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
-            "\67",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
             "",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
-            "\67",
+            "\1\u0196",
             "\1\u0197",
+            "",
             "\1\u0198",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
-            "\67",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
-            "\67",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
-            "\67",
             "",
             "",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
-            "\67",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
-            "\67",
-            "\1\u019e",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
-            "\67",
-            "\1\u01a0",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
-            "\67",
+            "\1\u0199",
+            "\1\u019a",
             "",
+            "\1\u019b",
+            "\1\u019c",
+            "\1\u019d",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
             "",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
+            "\1\u01a1",
             "",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
-            "\67",
-            "",
-            "",
+            "\1\u01a2",
             "\1\u01a3",
-            "\1\u01a4",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
-            "\67",
-            "",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
-            "\67",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
+            "\1\u01a6",
             "\1\u01a7",
             "",
             "",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
-            "\67",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
-            "\67",
+            "\1\u01a8",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
+            "\1\u01aa",
             "",
-            "",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
-            "\67",
             "\1\u01ab",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "\1\u01ac",
-            "",
-            "\1\u01ad",
-            "",
-            "",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
             "\1\u01ae",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
-            "\67",
+            "\1\u01af",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
             "",
-            "",
-            "\1\u01b0",
-            "",
-            "",
-            "",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
-            "\67",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
             "\1\u01b2",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
-            "\67",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
             "\1\u01b4",
-            "",
             "\1\u01b5",
+            "\1\70\13\uffff\12\70\7\uffff\2\70\1\u01b7\16\70\1\u01b6\10"+
+            "\70\4\uffff\1\70\1\uffff\32\70",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
             "",
-            "\1\u01b6",
             "",
-            "\1\u01b7",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
-            "\67",
-            "\1\u01b9",
-            "\1\u01ba",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
+            "\1\u01bf",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
+            "\1\u01c1",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
             "",
-            "\1\u01bb",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
-            "\67",
-            "\1\67\13\uffff\12\67\7\uffff\32\67\4\uffff\1\67\1\uffff\32"+
-            "\67",
+            "",
+            "",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
+            "\1\u01c5",
+            "",
+            "",
+            "\1\u01c6",
+            "\1\u01c7",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
+            "",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
+            "\1\u01ca",
+            "",
+            "",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
+            "",
+            "",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
+            "",
+            "\1\u01ce",
+            "\1\u01cf",
+            "\1\u01d0",
+            "\1\u01d1",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "\1\u01d2",
+            "",
+            "\1\u01d3",
+            "",
+            "",
+            "",
+            "\1\u01d4",
+            "\1\u01d5",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
+            "",
+            "",
+            "\1\u01d7",
+            "",
+            "",
+            "",
+            "\1\u01d8",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
+            "\1\u01da",
+            "\1\u01db",
+            "\1\u01dc",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
+            "\1\u01de",
+            "\1\u01df",
+            "",
+            "\1\u01e0",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
+            "",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
+            "\1\u01e3",
+            "\1\u01e4",
+            "",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
+            "\1\u01e6",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
+            "",
+            "",
+            "\1\u01e8",
+            "\1\u01e9",
+            "",
+            "\1\u01ea",
+            "",
+            "\1\u01eb",
+            "\1\u01ec",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
+            "\1\70\13\uffff\12\70\7\uffff\32\70\4\uffff\1\70\1\uffff\32"+
+            "\70",
+            "",
             "",
             ""
     };
@@ -5123,7 +5483,7 @@ public class InternalCheckerDslLexer extends Lexer {
             this.transition = DFA21_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | T__80 | T__81 | T__82 | T__83 | T__84 | T__85 | T__86 | T__87 | T__88 | T__89 | T__90 | T__91 | T__92 | T__93 | T__94 | T__95 | T__96 | T__97 | T__98 | T__99 | T__100 | T__101 | T__102 | T__103 | T__104 | T__105 | T__106 | T__107 | T__108 | T__109 | T__110 | T__111 | T__112 | T__113 | T__114 | T__115 | T__116 | T__117 | T__118 | T__119 | T__120 | T__121 | T__122 | T__123 | T__124 | T__125 | T__126 | T__127 | T__128 | T__129 | T__130 | T__131 | T__132 | T__133 | RULE_HEX | RULE_INT | RULE_DECIMAL | RULE_ID | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
+            return "1:1: Tokens : ( T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | T__77 | T__78 | T__79 | T__80 | T__81 | T__82 | T__83 | T__84 | T__85 | T__86 | T__87 | T__88 | T__89 | T__90 | T__91 | T__92 | T__93 | T__94 | T__95 | T__96 | T__97 | T__98 | T__99 | T__100 | T__101 | T__102 | T__103 | T__104 | T__105 | T__106 | T__107 | T__108 | T__109 | T__110 | T__111 | T__112 | T__113 | T__114 | T__115 | T__116 | T__117 | T__118 | T__119 | T__120 | T__121 | T__122 | T__123 | T__124 | T__125 | T__126 | T__127 | T__128 | T__129 | T__130 | T__131 | T__132 | T__133 | T__134 | T__135 | T__136 | T__137 | T__138 | T__139 | T__140 | T__141 | T__142 | T__143 | RULE_HEX | RULE_INT | RULE_DECIMAL | RULE_ID | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
@@ -5199,39 +5559,41 @@ public class InternalCheckerDslLexer extends Lexer {
 
                         else if ( (LA21_0=='/') ) {s = 33;}
 
-                        else if ( (LA21_0=='!') ) {s = 34;}
+                        else if ( (LA21_0=='|') ) {s = 34;}
 
-                        else if ( (LA21_0=='w') ) {s = 35;}
+                        else if ( (LA21_0=='&') ) {s = 35;}
 
-                        else if ( (LA21_0=='%') ) {s = 36;}
+                        else if ( (LA21_0=='^') ) {s = 36;}
 
-                        else if ( (LA21_0=='|') ) {s = 37;}
+                        else if ( (LA21_0=='!') ) {s = 37;}
 
-                        else if ( (LA21_0=='&') ) {s = 38;}
+                        else if ( (LA21_0=='w') ) {s = 38;}
 
-                        else if ( (LA21_0=='?') ) {s = 39;}
+                        else if ( (LA21_0=='n') ) {s = 39;}
 
-                        else if ( (LA21_0=='#') ) {s = 40;}
+                        else if ( (LA21_0=='h') ) {s = 40;}
 
-                        else if ( (LA21_0=='v') ) {s = 41;}
+                        else if ( (LA21_0=='%') ) {s = 41;}
 
-                        else if ( (LA21_0=='n') ) {s = 42;}
+                        else if ( (LA21_0=='?') ) {s = 42;}
 
-                        else if ( (LA21_0=='0') ) {s = 43;}
+                        else if ( (LA21_0=='#') ) {s = 43;}
 
-                        else if ( ((LA21_0>='1' && LA21_0<='9')) ) {s = 44;}
+                        else if ( (LA21_0=='v') ) {s = 44;}
 
-                        else if ( (LA21_0=='^') ) {s = 45;}
+                        else if ( (LA21_0=='0') ) {s = 45;}
 
-                        else if ( (LA21_0=='$'||(LA21_0>='A' && LA21_0<='L')||(LA21_0>='N' && LA21_0<='Z')||LA21_0=='_'||(LA21_0>='g' && LA21_0<='h')||(LA21_0>='j' && LA21_0<='k')||LA21_0=='q'||LA21_0=='u'||(LA21_0>='x' && LA21_0<='z')) ) {s = 46;}
+                        else if ( ((LA21_0>='1' && LA21_0<='9')) ) {s = 46;}
 
-                        else if ( (LA21_0=='\"') ) {s = 47;}
+                        else if ( (LA21_0=='$'||(LA21_0>='A' && LA21_0<='L')||(LA21_0>='N' && LA21_0<='Z')||LA21_0=='_'||LA21_0=='g'||(LA21_0>='j' && LA21_0<='k')||LA21_0=='q'||LA21_0=='u'||(LA21_0>='x' && LA21_0<='z')) ) {s = 47;}
 
-                        else if ( (LA21_0=='\'') ) {s = 48;}
+                        else if ( (LA21_0=='\"') ) {s = 48;}
 
-                        else if ( ((LA21_0>='\t' && LA21_0<='\n')||LA21_0=='\r'||LA21_0==' ') ) {s = 49;}
+                        else if ( (LA21_0=='\'') ) {s = 49;}
 
-                        else if ( ((LA21_0>='\u0000' && LA21_0<='\b')||(LA21_0>='\u000B' && LA21_0<='\f')||(LA21_0>='\u000E' && LA21_0<='\u001F')||LA21_0=='@'||LA21_0=='\\'||(LA21_0>='~' && LA21_0<='\uFFFF')) ) {s = 50;}
+                        else if ( ((LA21_0>='\t' && LA21_0<='\n')||LA21_0=='\r'||LA21_0==' ') ) {s = 50;}
+
+                        else if ( ((LA21_0>='\u0000' && LA21_0<='\b')||(LA21_0>='\u000B' && LA21_0<='\f')||(LA21_0>='\u000E' && LA21_0<='\u001F')||LA21_0=='@'||LA21_0=='\\'||(LA21_0>='~' && LA21_0<='\uFFFF')) ) {s = 51;}
 
                         if ( s>=0 ) return s;
                         break;

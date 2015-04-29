@@ -42,6 +42,7 @@ import org.xtext.example.checkerdsl.checkerDsl.ChkVariableDeclaration;
 import org.xtext.example.checkerdsl.checkerDsl.ChkVariables;
 import org.xtext.example.checkerdsl.checkerDsl.Feature;
 import org.xtext.example.checkerdsl.checkerDsl.FollowUp;
+import org.xtext.example.checkerdsl.checkerDsl.ForFormatExpression;
 import org.xtext.example.checkerdsl.checkerDsl.FormatExpression;
 import org.xtext.example.checkerdsl.checkerDsl.Helper;
 import org.xtext.example.checkerdsl.checkerDsl.InputFormat;
@@ -1481,11 +1482,22 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
                   CheckerDslJvmModelInferrer.this.bd2 = (CheckerDslJvmModelInferrer.this.bd2 + "String[] tokens;\n");
                   CheckerDslJvmModelInferrer.this.bd2 = (CheckerDslJvmModelInferrer.this.bd2 + "try{\n");
                   CheckerDslJvmModelInferrer.this.bd2 = (CheckerDslJvmModelInferrer.this.bd2 + "BufferedReader reader = new BufferedReader(new FileReader(new File(\"tc/Subtask\"+current_subtask+\"/in/\"+num+\"/\"+current_testcase+\".in\")));\n");
-                  EList<FormatExpression> _exp = ((InputFormat)feature).getExp();
-                  for (final FormatExpression p : _exp) {
-                    String _inputBody = CheckerDslJvmModelInferrer.this.inputBody(p);
-                    String _concat = CheckerDslJvmModelInferrer.this.bd2.concat(_inputBody);
-                    CheckerDslJvmModelInferrer.this.bd2 = _concat;
+                  EList<EObject> _exp = ((InputFormat)feature).getExp();
+                  for (final EObject p : _exp) {
+                    boolean _matched = false;
+                    if (!_matched) {
+                      if (p instanceof FormatExpression) {
+                        _matched=true;
+                        String _inputBody = CheckerDslJvmModelInferrer.this.inputBody(((FormatExpression)p));
+                        String _concat = CheckerDslJvmModelInferrer.this.bd2.concat(_inputBody);
+                        CheckerDslJvmModelInferrer.this.bd2 = _concat;
+                      }
+                    }
+                    if (!_matched) {
+                      if (p instanceof ForFormatExpression) {
+                        _matched=true;
+                      }
+                    }
                   }
                   CheckerDslJvmModelInferrer.this.bd2 = (CheckerDslJvmModelInferrer.this.bd2 + "if (reader.readLine() != null){\n");
                   CheckerDslJvmModelInferrer.this.bd2 = ((CheckerDslJvmModelInferrer.this.bd2 + CheckerDslJvmModelInferrer.this.class_name) + ".die(\"number of lines not match\");\n");
@@ -1524,11 +1536,22 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
                   CheckerDslJvmModelInferrer.this.bd3a = (CheckerDslJvmModelInferrer.this.bd3a + "String[] tokens;\n");
                   CheckerDslJvmModelInferrer.this.bd3a = (CheckerDslJvmModelInferrer.this.bd3a + "try{\n");
                   CheckerDslJvmModelInferrer.this.bd3a = (CheckerDslJvmModelInferrer.this.bd3a + "BufferedReader reader = new BufferedReader(new FileReader(new File(\"tc/Subtask\"+current_subtask+\"/out/\"+num+\"/\"+current_testcase+\".out\")));\n");
-                  EList<FormatExpression> _exp = ((OutputFormat)feature).getExp();
-                  for (final FormatExpression p : _exp) {
-                    String _inputBody = CheckerDslJvmModelInferrer.this.inputBody(p);
-                    String _concat = CheckerDslJvmModelInferrer.this.bd3a.concat(_inputBody);
-                    CheckerDslJvmModelInferrer.this.bd3a = _concat;
+                  EList<EObject> _exp = ((OutputFormat)feature).getExp();
+                  for (final EObject p : _exp) {
+                    boolean _matched = false;
+                    if (!_matched) {
+                      if (p instanceof FormatExpression) {
+                        _matched=true;
+                        String _inputBody = CheckerDslJvmModelInferrer.this.inputBody(((FormatExpression)p));
+                        String _concat = CheckerDslJvmModelInferrer.this.bd3a.concat(_inputBody);
+                        CheckerDslJvmModelInferrer.this.bd3a = _concat;
+                      }
+                    }
+                    if (!_matched) {
+                      if (p instanceof ForFormatExpression) {
+                        _matched=true;
+                      }
+                    }
                   }
                   CheckerDslJvmModelInferrer.this.bd3a = (CheckerDslJvmModelInferrer.this.bd3a + "if (reader.readLine() != null){\n");
                   CheckerDslJvmModelInferrer.this.bd3a = ((CheckerDslJvmModelInferrer.this.bd3a + CheckerDslJvmModelInferrer.this.class_name) + ".die(\"number of lines not match\");\n");
@@ -1563,11 +1586,22 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
                   CheckerDslJvmModelInferrer.this.bd3 = (CheckerDslJvmModelInferrer.this.bd3 + "if(!wfile.exists()) wfile.createNewFile();\n");
                   CheckerDslJvmModelInferrer.this.bd3 = (CheckerDslJvmModelInferrer.this.bd3 + "fw = new FileWriter(wfile);\n");
                   CheckerDslJvmModelInferrer.this.bd3 = (CheckerDslJvmModelInferrer.this.bd3 + "writer = new BufferedWriter(fw);\n");
-                  EList<FormatExpression> _exp = ((OutputFormat)feature).getExp();
-                  for (final FormatExpression p : _exp) {
-                    String _outputBody = CheckerDslJvmModelInferrer.this.outputBody(p);
-                    String _concat = CheckerDslJvmModelInferrer.this.bd3.concat(_outputBody);
-                    CheckerDslJvmModelInferrer.this.bd3 = _concat;
+                  EList<EObject> _exp = ((OutputFormat)feature).getExp();
+                  for (final EObject p : _exp) {
+                    boolean _matched = false;
+                    if (!_matched) {
+                      if (p instanceof FormatExpression) {
+                        _matched=true;
+                        String _outputBody = CheckerDslJvmModelInferrer.this.outputBody(((FormatExpression)p));
+                        String _concat = CheckerDslJvmModelInferrer.this.bd3.concat(_outputBody);
+                        CheckerDslJvmModelInferrer.this.bd3 = _concat;
+                      }
+                    }
+                    if (!_matched) {
+                      if (p instanceof ForFormatExpression) {
+                        _matched=true;
+                      }
+                    }
                   }
                   CheckerDslJvmModelInferrer.this.bd3 = (CheckerDslJvmModelInferrer.this.bd3 + "writer.close();\n");
                   CheckerDslJvmModelInferrer.this.bd3 = (CheckerDslJvmModelInferrer.this.bd3 + "} catch(Exception e){}\n");
@@ -2012,22 +2046,14 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
   public String checkExp(final ChkExpression element) {
     String cc = "";
     String lt = "";
-    String _asg = element.getAsg();
-    boolean _notEquals = (!Objects.equal(_asg, null));
-    if (_notEquals) {
-      String _asg_1 = element.getAsg();
-      String _plus = ((lt + "int ") + _asg_1);
-      String _plus_1 = (_plus + " = ");
-      lt = _plus_1;
-    }
     ChkGeneralExpressions exp = element.getExp();
     boolean _matched = false;
     if (!_matched) {
       if (exp instanceof Helper) {
         _matched=true;
         String _select = ((Helper)exp).getSelect();
-        boolean _notEquals_1 = (!Objects.equal(_select, null));
-        if (_notEquals_1) {
+        boolean _notEquals = (!Objects.equal(_select, null));
+        if (_notEquals) {
           EList<String> _vars = ((Helper)exp).getVars();
           for (final String vv : _vars) {
             cc = (((cc + "int ") + vv) + ";\n");
@@ -2039,8 +2065,8 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
           }
           cc = (cc + "} while (!(");
           int xx = (-1);
-          EList<ChkRelationalExpression> _cond = element.getCond();
-          for (final ChkRelationalExpression co : _cond) {
+          EList<ChkGeneralExpressions> _cond = element.getCond();
+          for (final ChkGeneralExpressions co : _cond) {
             {
               if ((xx >= 0)) {
                 EList<String> _type = element.getType();
@@ -2056,9 +2082,15 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
                   cc = (cc + " || ");
                 }
               }
-              String _relationalExp = this.relationalExp(co);
-              String _plus_2 = (cc + _relationalExp);
-              cc = _plus_2;
+              boolean _matched_1 = false;
+              if (!_matched_1) {
+                if (co instanceof ChkRelationalExpression) {
+                  _matched_1=true;
+                  String _relationalExp = this.relationalExp(((ChkRelationalExpression)co));
+                  String _plus = (cc + _relationalExp);
+                  cc = _plus;
+                }
+              }
               xx = (xx + 1);
             }
           }
@@ -2068,28 +2100,28 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
           boolean _or_1 = false;
           boolean _or_2 = false;
           String _sum = ((Helper)exp).getSum();
-          boolean _notEquals_2 = (!Objects.equal(_sum, null));
-          if (_notEquals_2) {
+          boolean _notEquals_1 = (!Objects.equal(_sum, null));
+          if (_notEquals_1) {
             _or_2 = true;
           } else {
             String _max = ((Helper)exp).getMax();
-            boolean _notEquals_3 = (!Objects.equal(_max, null));
-            _or_2 = _notEquals_3;
+            boolean _notEquals_2 = (!Objects.equal(_max, null));
+            _or_2 = _notEquals_2;
           }
           if (_or_2) {
             _or_1 = true;
           } else {
             String _min = ((Helper)exp).getMin();
-            boolean _notEquals_4 = (!Objects.equal(_min, null));
-            _or_1 = _notEquals_4;
+            boolean _notEquals_3 = (!Objects.equal(_min, null));
+            _or_1 = _notEquals_3;
           }
           if (_or_1) {
             _or = true;
           } else {
             boolean _and = false;
             String _remove = ((Helper)exp).getRemove();
-            boolean _notEquals_5 = (!Objects.equal(_remove, null));
-            if (!_notEquals_5) {
+            boolean _notEquals_4 = (!Objects.equal(_remove, null));
+            if (!_notEquals_4) {
               _and = false;
             } else {
               ChkVariables _var3 = ((Helper)exp).getVar3();
@@ -2102,16 +2134,16 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
             int xx_1 = (-1);
             cc = (cc + "cond_arr = new ArrayList<Boolean>();\n");
             String _where = element.getWhere();
-            boolean _notEquals_6 = (!Objects.equal(_where, null));
-            if (_notEquals_6) {
+            boolean _notEquals_5 = (!Objects.equal(_where, null));
+            if (_notEquals_5) {
               ChkVariable _var = ((Helper)exp).getVar();
               String _chkVar = this.chkVar(_var);
-              String _plus_2 = ((cc + "for (int i=0; i<") + _chkVar);
-              String _plus_3 = (_plus_2 + ".size(); i++){\n");
-              cc = _plus_3;
+              String _plus = ((cc + "for (int i=0; i<") + _chkVar);
+              String _plus_1 = (_plus + ".size(); i++){\n");
+              cc = _plus_1;
               cc = (cc + "if (");
-              EList<ChkRelationalExpression> _cond_1 = element.getCond();
-              for (final ChkRelationalExpression co_1 : _cond_1) {
+              EList<ChkGeneralExpressions> _cond_1 = element.getCond();
+              for (final ChkGeneralExpressions co_1 : _cond_1) {
                 {
                   if ((xx_1 >= 0)) {
                     EList<String> _type = element.getType();
@@ -2127,9 +2159,15 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
                       cc = (cc + " || ");
                     }
                   }
-                  String _relationalExp = this.relationalExp(co_1);
-                  String _plus_4 = (cc + _relationalExp);
-                  cc = _plus_4;
+                  boolean _matched_1 = false;
+                  if (!_matched_1) {
+                    if (co_1 instanceof ChkRelationalExpression) {
+                      _matched_1=true;
+                      String _relationalExp = this.relationalExp(((ChkRelationalExpression)co_1));
+                      String _plus_2 = (cc + _relationalExp);
+                      cc = _plus_2;
+                    }
+                  }
                   xx_1 = (xx_1 + 1);
                 }
               }
@@ -2139,137 +2177,137 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
             } else {
               ChkVariable _var_1 = ((Helper)exp).getVar();
               String _chkVar_1 = this.chkVar(_var_1);
-              String _plus_4 = ((cc + "for (int i=0; i<") + _chkVar_1);
-              String _plus_5 = (_plus_4 + ".size(); i++){\n");
-              cc = _plus_5;
+              String _plus_2 = ((cc + "for (int i=0; i<") + _chkVar_1);
+              String _plus_3 = (_plus_2 + ".size(); i++){\n");
+              cc = _plus_3;
               cc = (cc + "cond_arr.add(true);\n");
               cc = (cc + "}\n");
             }
             String _op = element.getOp();
-            boolean _notEquals_7 = (!Objects.equal(_op, null));
-            if (_notEquals_7) {
+            boolean _notEquals_6 = (!Objects.equal(_op, null));
+            if (_notEquals_6) {
               cc = (cc + "if (!(");
             }
             cc = (cc + lt);
             cc = ((cc + this.lib_class_name) + ".");
             String _sum_1 = ((Helper)exp).getSum();
-            boolean _notEquals_8 = (!Objects.equal(_sum_1, null));
-            if (_notEquals_8) {
+            boolean _notEquals_7 = (!Objects.equal(_sum_1, null));
+            if (_notEquals_7) {
               ChkVariable _var_2 = ((Helper)exp).getVar();
               String _chkVar_2 = this.chkVar(_var_2);
-              String _plus_6 = ((cc + "sum(") + _chkVar_2);
-              String _plus_7 = (_plus_6 + ", cond_arr)");
-              cc = _plus_7;
+              String _plus_4 = ((cc + "sum(") + _chkVar_2);
+              String _plus_5 = (_plus_4 + ", cond_arr)");
+              cc = _plus_5;
             } else {
               String _max_1 = ((Helper)exp).getMax();
-              boolean _notEquals_9 = (!Objects.equal(_max_1, null));
-              if (_notEquals_9) {
+              boolean _notEquals_8 = (!Objects.equal(_max_1, null));
+              if (_notEquals_8) {
                 ChkVariable _var_3 = ((Helper)exp).getVar();
                 String _chkVar_3 = this.chkVar(_var_3);
-                String _plus_8 = ((cc + "max(") + _chkVar_3);
-                String _plus_9 = (_plus_8 + ", cond_arr)");
-                cc = _plus_9;
+                String _plus_6 = ((cc + "max(") + _chkVar_3);
+                String _plus_7 = (_plus_6 + ", cond_arr)");
+                cc = _plus_7;
               } else {
                 String _min_1 = ((Helper)exp).getMin();
-                boolean _notEquals_10 = (!Objects.equal(_min_1, null));
-                if (_notEquals_10) {
+                boolean _notEquals_9 = (!Objects.equal(_min_1, null));
+                if (_notEquals_9) {
                   ChkVariable _var_4 = ((Helper)exp).getVar();
                   String _chkVar_4 = this.chkVar(_var_4);
-                  String _plus_10 = ((cc + "min(") + _chkVar_4);
-                  String _plus_11 = (_plus_10 + ", cond_arr)");
-                  cc = _plus_11;
+                  String _plus_8 = ((cc + "min(") + _chkVar_4);
+                  String _plus_9 = (_plus_8 + ", cond_arr)");
+                  cc = _plus_9;
                 } else {
                   String _remove_1 = ((Helper)exp).getRemove();
-                  boolean _notEquals_11 = (!Objects.equal(_remove_1, null));
-                  if (_notEquals_11) {
+                  boolean _notEquals_10 = (!Objects.equal(_remove_1, null));
+                  if (_notEquals_10) {
                     ChkVariable _var_5 = ((Helper)exp).getVar();
                     String _chkVar_5 = this.chkVar(_var_5);
-                    String _plus_12 = ((cc + "remove(") + _chkVar_5);
-                    String _plus_13 = (_plus_12 + ", cond_arr)");
-                    cc = _plus_13;
+                    String _plus_10 = ((cc + "remove(") + _chkVar_5);
+                    String _plus_11 = (_plus_10 + ", cond_arr)");
+                    cc = _plus_11;
                   }
                 }
               }
             }
           } else {
             String _op_1 = element.getOp();
-            boolean _notEquals_12 = (!Objects.equal(_op_1, null));
-            if (_notEquals_12) {
+            boolean _notEquals_11 = (!Objects.equal(_op_1, null));
+            if (_notEquals_11) {
               cc = (cc + "if (!(");
             }
             cc = (cc + lt);
             cc = ((cc + this.lib_class_name) + ".");
             String _prime = ((Helper)exp).getPrime();
-            boolean _notEquals_13 = (!Objects.equal(_prime, null));
-            if (_notEquals_13) {
+            boolean _notEquals_12 = (!Objects.equal(_prime, null));
+            if (_notEquals_12) {
               ChkVariables _var3_1 = ((Helper)exp).getVar3();
               String _chkVars = this.chkVars(_var3_1);
-              String _plus_14 = ((cc + "prime(") + _chkVars);
-              String _plus_15 = (_plus_14 + ");");
-              cc = _plus_15;
+              String _plus_12 = ((cc + "prime(") + _chkVars);
+              String _plus_13 = (_plus_12 + ");");
+              cc = _plus_13;
             } else {
               String _random = ((Helper)exp).getRandom();
-              boolean _notEquals_14 = (!Objects.equal(_random, null));
-              if (_notEquals_14) {
+              boolean _notEquals_13 = (!Objects.equal(_random, null));
+              if (_notEquals_13) {
                 ChkVariables _var3_2 = ((Helper)exp).getVar3();
                 String _chkVars_1 = this.chkVars(_var3_2);
-                String _plus_16 = ((cc + "random(") + _chkVars_1);
-                String _plus_17 = (_plus_16 + ",");
+                String _plus_14 = ((cc + "random(") + _chkVars_1);
+                String _plus_15 = (_plus_14 + ",");
                 ChkVariables _var4 = ((Helper)exp).getVar4();
                 String _chkVars_2 = this.chkVars(_var4);
-                String _plus_18 = (_plus_17 + _chkVars_2);
-                String _plus_19 = (_plus_18 + ")");
-                cc = _plus_19;
+                String _plus_16 = (_plus_15 + _chkVars_2);
+                String _plus_17 = (_plus_16 + ")");
+                cc = _plus_17;
               } else {
                 String _size = ((Helper)exp).getSize();
-                boolean _notEquals_15 = (!Objects.equal(_size, null));
-                if (_notEquals_15) {
+                boolean _notEquals_14 = (!Objects.equal(_size, null));
+                if (_notEquals_14) {
                   ChkVariable _var_6 = ((Helper)exp).getVar();
                   String _chkVar_6 = this.chkVar(_var_6);
-                  String _plus_20 = ((cc + "size(") + _chkVar_6);
-                  String _plus_21 = (_plus_20 + ")");
-                  cc = _plus_21;
+                  String _plus_18 = ((cc + "size(") + _chkVar_6);
+                  String _plus_19 = (_plus_18 + ")");
+                  cc = _plus_19;
                 } else {
                   String _swap = ((Helper)exp).getSwap();
-                  boolean _notEquals_16 = (!Objects.equal(_swap, null));
-                  if (_notEquals_16) {
+                  boolean _notEquals_15 = (!Objects.equal(_swap, null));
+                  if (_notEquals_15) {
                     ChkVariable _var_7 = ((Helper)exp).getVar();
                     String _chkVar_7 = this.chkVar(_var_7);
-                    String _plus_22 = ((cc + "swap(") + _chkVar_7);
-                    String _plus_23 = (_plus_22 + ",");
+                    String _plus_20 = ((cc + "swap(") + _chkVar_7);
+                    String _plus_21 = (_plus_20 + ",");
                     String _var1 = ((Helper)exp).getVar1();
-                    String _plus_24 = (_plus_23 + _var1);
-                    String _plus_25 = (_plus_24 + ",");
+                    String _plus_22 = (_plus_21 + _var1);
+                    String _plus_23 = (_plus_22 + ",");
                     String _var2 = ((Helper)exp).getVar2();
-                    String _plus_26 = (_plus_25 + _var2);
-                    String _plus_27 = (_plus_26 + ")");
-                    cc = _plus_27;
+                    String _plus_24 = (_plus_23 + _var2);
+                    String _plus_25 = (_plus_24 + ")");
+                    cc = _plus_25;
                   } else {
                     String _add = ((Helper)exp).getAdd();
-                    boolean _notEquals_17 = (!Objects.equal(_add, null));
-                    if (_notEquals_17) {
+                    boolean _notEquals_16 = (!Objects.equal(_add, null));
+                    if (_notEquals_16) {
                       ChkVariable _var_8 = ((Helper)exp).getVar();
                       String _chkVar_8 = this.chkVar(_var_8);
-                      String _plus_28 = ((cc + "add(") + _chkVar_8);
-                      String _plus_29 = (_plus_28 + ",");
+                      String _plus_26 = ((cc + "add(") + _chkVar_8);
+                      String _plus_27 = (_plus_26 + ",");
                       ChkVariables _var3_3 = ((Helper)exp).getVar3();
                       String _chkVars_3 = this.chkVars(_var3_3);
-                      String _plus_30 = (_plus_29 + _chkVars_3);
-                      String _plus_31 = (_plus_30 + ")");
-                      cc = _plus_31;
+                      String _plus_28 = (_plus_27 + _chkVars_3);
+                      String _plus_29 = (_plus_28 + ")");
+                      cc = _plus_29;
                     } else {
                       String _remove_2 = ((Helper)exp).getRemove();
-                      boolean _notEquals_18 = (!Objects.equal(_remove_2, null));
-                      if (_notEquals_18) {
+                      boolean _notEquals_17 = (!Objects.equal(_remove_2, null));
+                      if (_notEquals_17) {
                         ChkVariable _var_9 = ((Helper)exp).getVar();
                         String _chkVar_9 = this.chkVar(_var_9);
-                        String _plus_32 = ((cc + "remove(") + _chkVar_9);
-                        String _plus_33 = (_plus_32 + ",");
+                        String _plus_30 = ((cc + "remove(") + _chkVar_9);
+                        String _plus_31 = (_plus_30 + ",");
                         ChkVariables _var3_4 = ((Helper)exp).getVar3();
                         String _chkVars_4 = this.chkVars(_var3_4);
-                        String _plus_34 = (_plus_33 + _chkVars_4);
-                        String _plus_35 = (_plus_34 + ")");
-                        cc = _plus_35;
+                        String _plus_32 = (_plus_31 + _chkVars_4);
+                        String _plus_33 = (_plus_32 + ")");
+                        cc = _plus_33;
                       }
                     }
                   }
@@ -2285,24 +2323,24 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
         _matched=true;
         cc = (cc + lt);
         String _relationalExp = this.relationalExp(((ChkRelationalExpression)exp));
-        String _plus_2 = ((cc + "if (!(") + _relationalExp);
-        String _plus_3 = (_plus_2 + ")) ok = false");
-        cc = _plus_3;
+        String _plus = ((cc + "if (!(") + _relationalExp);
+        String _plus_1 = (_plus + ")) ok = false");
+        cc = _plus_1;
       }
     }
     if (!_matched) {
       if (exp instanceof MethodCall) {
         _matched=true;
         String _op = element.getOp();
-        boolean _notEquals_1 = (!Objects.equal(_op, null));
-        if (_notEquals_1) {
+        boolean _notEquals = (!Objects.equal(_op, null));
+        if (_notEquals) {
           cc = (cc + "if (!(");
         }
         cc = (cc + lt);
         String _name = ((MethodCall)exp).getName();
-        String _plus_2 = (cc + _name);
-        String _plus_3 = (_plus_2 + "(");
-        cc = _plus_3;
+        String _plus = (cc + _name);
+        String _plus_1 = (_plus + "(");
+        cc = _plus_1;
         boolean first = true;
         EList<String> _params = ((MethodCall)exp).getParams();
         for (final String p : _params) {
@@ -2330,31 +2368,31 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
         if (_equals) {
           ChkVariable _v1_1 = ((ChkAssignment)exp).getV1();
           String _chkVar = this.chkVar(_v1_1);
-          String _plus_2 = (lf + _chkVar);
-          String _plus_3 = (_plus_2 + " = ");
-          lf = _plus_3;
+          String _plus = (lf + _chkVar);
+          String _plus_1 = (_plus + " = ");
+          lf = _plus_1;
           rg = (rg + ";\n");
         } else {
           ChkVariable _v1_2 = ((ChkAssignment)exp).getV1();
           ChkPrefix _pref = _v1_2.getPref();
-          boolean _notEquals_1 = (!Objects.equal(_pref, null));
-          if (_notEquals_1) {
+          boolean _notEquals = (!Objects.equal(_pref, null));
+          if (_notEquals) {
             ChkVariable _v1_3 = ((ChkAssignment)exp).getV1();
             ChkPrefix _pref_1 = _v1_3.getPref();
             String _type = _pref_1.getType();
-            String _plus_4 = (lf + _type);
-            String _plus_5 = (_plus_4 + ".");
-            lf = _plus_5;
+            String _plus_2 = (lf + _type);
+            String _plus_3 = (_plus_2 + ".");
+            lf = _plus_3;
           }
           ChkVariable _v1_4 = ((ChkAssignment)exp).getV1();
           String _var = _v1_4.getVar();
           String _firstUpper = StringExtensions.toFirstUpper(_var);
-          String _plus_6 = ((lf + "set") + _firstUpper);
-          lf = _plus_6;
+          String _plus_4 = ((lf + "set") + _firstUpper);
+          lf = _plus_4;
           ChkVariable _v1_5 = ((ChkAssignment)exp).getV1();
           String _newtest = _v1_5.getNewtest();
-          boolean _notEquals_2 = (!Objects.equal(_newtest, null));
-          if (_notEquals_2) {
+          boolean _notEquals_1 = (!Objects.equal(_newtest, null));
+          if (_notEquals_1) {
             lf = (lf + "_2");
           }
           lf = (lf + "(");
@@ -2372,8 +2410,8 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
             _matched_1=true;
             cc = (cc + lf);
             String _chkOp = this.chkOp(((ChkOperation)expv2));
-            String _plus_7 = (cc + _chkOp);
-            cc = _plus_7;
+            String _plus_5 = (cc + _chkOp);
+            cc = _plus_5;
             cc = (cc + rg);
           }
         }
@@ -2381,8 +2419,8 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
           if (expv2 instanceof Helper) {
             _matched_1=true;
             String _select = ((Helper)expv2).getSelect();
-            boolean _notEquals_3 = (!Objects.equal(_select, null));
-            if (_notEquals_3) {
+            boolean _notEquals_2 = (!Objects.equal(_select, null));
+            if (_notEquals_2) {
               EList<String> _vars = ((Helper)expv2).getVars();
               for (final String vv : _vars) {
                 cc = (((cc + "int ") + vv) + ";\n");
@@ -2394,8 +2432,8 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
               }
               cc = (cc + "} while (!(");
               int xx = (-1);
-              EList<ChkRelationalExpression> _cond = element.getCond();
-              for (final ChkRelationalExpression co : _cond) {
+              EList<ChkGeneralExpressions> _cond = element.getCond();
+              for (final ChkGeneralExpressions co : _cond) {
                 {
                   if ((xx >= 0)) {
                     EList<String> _type_1 = element.getType();
@@ -2411,9 +2449,15 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
                       cc = (cc + " || ");
                     }
                   }
-                  String _relationalExp = this.relationalExp(co);
-                  String _plus_7 = (cc + _relationalExp);
-                  cc = _plus_7;
+                  boolean _matched_2 = false;
+                  if (!_matched_2) {
+                    if (co instanceof ChkRelationalExpression) {
+                      _matched_2=true;
+                      String _relationalExp = this.relationalExp(((ChkRelationalExpression)co));
+                      String _plus_5 = (cc + _relationalExp);
+                      cc = _plus_5;
+                    }
+                  }
                   xx = (xx + 1);
                 }
               }
@@ -2423,28 +2467,28 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
               boolean _or_1 = false;
               boolean _or_2 = false;
               String _sum = ((Helper)expv2).getSum();
-              boolean _notEquals_4 = (!Objects.equal(_sum, null));
-              if (_notEquals_4) {
+              boolean _notEquals_3 = (!Objects.equal(_sum, null));
+              if (_notEquals_3) {
                 _or_2 = true;
               } else {
                 String _max = ((Helper)expv2).getMax();
-                boolean _notEquals_5 = (!Objects.equal(_max, null));
-                _or_2 = _notEquals_5;
+                boolean _notEquals_4 = (!Objects.equal(_max, null));
+                _or_2 = _notEquals_4;
               }
               if (_or_2) {
                 _or_1 = true;
               } else {
                 String _min = ((Helper)expv2).getMin();
-                boolean _notEquals_6 = (!Objects.equal(_min, null));
-                _or_1 = _notEquals_6;
+                boolean _notEquals_5 = (!Objects.equal(_min, null));
+                _or_1 = _notEquals_5;
               }
               if (_or_1) {
                 _or = true;
               } else {
                 boolean _and = false;
                 String _remove = ((Helper)expv2).getRemove();
-                boolean _notEquals_7 = (!Objects.equal(_remove, null));
-                if (!_notEquals_7) {
+                boolean _notEquals_6 = (!Objects.equal(_remove, null));
+                if (!_notEquals_6) {
                   _and = false;
                 } else {
                   ChkVariables _var3 = ((Helper)expv2).getVar3();
@@ -2457,16 +2501,16 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
                 int xx_1 = (-1);
                 cc = (cc + "cond_arr = new ArrayList<Boolean>();\n");
                 String _where = element.getWhere();
-                boolean _notEquals_8 = (!Objects.equal(_where, null));
-                if (_notEquals_8) {
+                boolean _notEquals_7 = (!Objects.equal(_where, null));
+                if (_notEquals_7) {
                   ChkVariable _var_1 = ((Helper)expv2).getVar();
                   String _chkVar_1 = this.chkVar(_var_1);
-                  String _plus_7 = ((cc + "for (int i=0; i<") + _chkVar_1);
-                  String _plus_8 = (_plus_7 + ".size(); i++){\n");
-                  cc = _plus_8;
+                  String _plus_5 = ((cc + "for (int i=0; i<") + _chkVar_1);
+                  String _plus_6 = (_plus_5 + ".size(); i++){\n");
+                  cc = _plus_6;
                   cc = (cc + "if (");
-                  EList<ChkRelationalExpression> _cond_1 = element.getCond();
-                  for (final ChkRelationalExpression co_1 : _cond_1) {
+                  EList<ChkGeneralExpressions> _cond_1 = element.getCond();
+                  for (final ChkGeneralExpressions co_1 : _cond_1) {
                     {
                       if ((xx_1 >= 0)) {
                         EList<String> _type_1 = element.getType();
@@ -2482,9 +2526,15 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
                           cc = (cc + " || ");
                         }
                       }
-                      String _relationalExp = this.relationalExp(co_1);
-                      String _plus_9 = (cc + _relationalExp);
-                      cc = _plus_9;
+                      boolean _matched_2 = false;
+                      if (!_matched_2) {
+                        if (co_1 instanceof ChkRelationalExpression) {
+                          _matched_2=true;
+                          String _relationalExp = this.relationalExp(((ChkRelationalExpression)co_1));
+                          String _plus_7 = (cc + _relationalExp);
+                          cc = _plus_7;
+                        }
+                      }
                       xx_1 = (xx_1 + 1);
                     }
                   }
@@ -2494,54 +2544,54 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
                 } else {
                   ChkVariable _var_2 = ((Helper)expv2).getVar();
                   String _chkVar_2 = this.chkVar(_var_2);
-                  String _plus_9 = ((cc + "for (int i=0; i<") + _chkVar_2);
-                  String _plus_10 = (_plus_9 + ".size(); i++){\n");
-                  cc = _plus_10;
+                  String _plus_7 = ((cc + "for (int i=0; i<") + _chkVar_2);
+                  String _plus_8 = (_plus_7 + ".size(); i++){\n");
+                  cc = _plus_8;
                   cc = (cc + "cond_arr.add(true);\n");
                   cc = (cc + "}\n");
                 }
                 String _op = element.getOp();
-                boolean _notEquals_9 = (!Objects.equal(_op, null));
-                if (_notEquals_9) {
+                boolean _notEquals_8 = (!Objects.equal(_op, null));
+                if (_notEquals_8) {
                   cc = (cc + "if (!(");
                 }
                 cc = (cc + lf);
                 cc = ((cc + this.lib_class_name) + ".");
                 String _sum_1 = ((Helper)expv2).getSum();
-                boolean _notEquals_10 = (!Objects.equal(_sum_1, null));
-                if (_notEquals_10) {
+                boolean _notEquals_9 = (!Objects.equal(_sum_1, null));
+                if (_notEquals_9) {
                   ChkVariable _var_3 = ((Helper)expv2).getVar();
                   String _chkVar_3 = this.chkVar(_var_3);
-                  String _plus_11 = ((cc + "sum(") + _chkVar_3);
-                  String _plus_12 = (_plus_11 + ", cond_arr)");
-                  cc = _plus_12;
+                  String _plus_9 = ((cc + "sum(") + _chkVar_3);
+                  String _plus_10 = (_plus_9 + ", cond_arr)");
+                  cc = _plus_10;
                 } else {
                   String _max_1 = ((Helper)expv2).getMax();
-                  boolean _notEquals_11 = (!Objects.equal(_max_1, null));
-                  if (_notEquals_11) {
+                  boolean _notEquals_10 = (!Objects.equal(_max_1, null));
+                  if (_notEquals_10) {
                     ChkVariable _var_4 = ((Helper)expv2).getVar();
                     String _chkVar_4 = this.chkVar(_var_4);
-                    String _plus_13 = ((cc + "max(") + _chkVar_4);
-                    String _plus_14 = (_plus_13 + ", cond_arr)");
-                    cc = _plus_14;
+                    String _plus_11 = ((cc + "max(") + _chkVar_4);
+                    String _plus_12 = (_plus_11 + ", cond_arr)");
+                    cc = _plus_12;
                   } else {
                     String _min_1 = ((Helper)expv2).getMin();
-                    boolean _notEquals_12 = (!Objects.equal(_min_1, null));
-                    if (_notEquals_12) {
+                    boolean _notEquals_11 = (!Objects.equal(_min_1, null));
+                    if (_notEquals_11) {
                       ChkVariable _var_5 = ((Helper)expv2).getVar();
                       String _chkVar_5 = this.chkVar(_var_5);
-                      String _plus_15 = ((cc + "min(") + _chkVar_5);
-                      String _plus_16 = (_plus_15 + ", cond_arr)");
-                      cc = _plus_16;
+                      String _plus_13 = ((cc + "min(") + _chkVar_5);
+                      String _plus_14 = (_plus_13 + ", cond_arr)");
+                      cc = _plus_14;
                     } else {
                       String _remove_1 = ((Helper)expv2).getRemove();
-                      boolean _notEquals_13 = (!Objects.equal(_remove_1, null));
-                      if (_notEquals_13) {
+                      boolean _notEquals_12 = (!Objects.equal(_remove_1, null));
+                      if (_notEquals_12) {
                         ChkVariable _var_6 = ((Helper)expv2).getVar();
                         String _chkVar_6 = this.chkVar(_var_6);
-                        String _plus_17 = ((cc + "remove(") + _chkVar_6);
-                        String _plus_18 = (_plus_17 + ", cond_arr)");
-                        cc = _plus_18;
+                        String _plus_15 = ((cc + "remove(") + _chkVar_6);
+                        String _plus_16 = (_plus_15 + ", cond_arr)");
+                        cc = _plus_16;
                       }
                     }
                   }
@@ -2549,83 +2599,83 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
                 cc = (cc + rg);
               } else {
                 String _op_1 = element.getOp();
-                boolean _notEquals_14 = (!Objects.equal(_op_1, null));
-                if (_notEquals_14) {
+                boolean _notEquals_13 = (!Objects.equal(_op_1, null));
+                if (_notEquals_13) {
                   cc = (cc + "if (!(");
                 }
                 cc = (cc + lf);
                 cc = ((cc + this.lib_class_name) + ".");
                 String _prime = ((Helper)expv2).getPrime();
-                boolean _notEquals_15 = (!Objects.equal(_prime, null));
-                if (_notEquals_15) {
+                boolean _notEquals_14 = (!Objects.equal(_prime, null));
+                if (_notEquals_14) {
                   ChkVariables _var3_1 = ((Helper)expv2).getVar3();
                   String _chkVars = this.chkVars(_var3_1);
-                  String _plus_19 = ((cc + "prime(") + _chkVars);
-                  String _plus_20 = (_plus_19 + ");");
-                  cc = _plus_20;
+                  String _plus_17 = ((cc + "prime(") + _chkVars);
+                  String _plus_18 = (_plus_17 + ");");
+                  cc = _plus_18;
                 } else {
                   String _random = ((Helper)expv2).getRandom();
-                  boolean _notEquals_16 = (!Objects.equal(_random, null));
-                  if (_notEquals_16) {
+                  boolean _notEquals_15 = (!Objects.equal(_random, null));
+                  if (_notEquals_15) {
                     ChkVariables _var3_2 = ((Helper)expv2).getVar3();
                     String _chkVars_1 = this.chkVars(_var3_2);
-                    String _plus_21 = ((cc + "random(") + _chkVars_1);
-                    String _plus_22 = (_plus_21 + ",");
+                    String _plus_19 = ((cc + "random(") + _chkVars_1);
+                    String _plus_20 = (_plus_19 + ",");
                     ChkVariables _var4 = ((Helper)expv2).getVar4();
                     String _chkVars_2 = this.chkVars(_var4);
-                    String _plus_23 = (_plus_22 + _chkVars_2);
-                    String _plus_24 = (_plus_23 + ")");
-                    cc = _plus_24;
+                    String _plus_21 = (_plus_20 + _chkVars_2);
+                    String _plus_22 = (_plus_21 + ")");
+                    cc = _plus_22;
                   } else {
                     String _size_1 = ((Helper)expv2).getSize();
-                    boolean _notEquals_17 = (!Objects.equal(_size_1, null));
-                    if (_notEquals_17) {
+                    boolean _notEquals_16 = (!Objects.equal(_size_1, null));
+                    if (_notEquals_16) {
                       ChkVariable _var_7 = ((Helper)expv2).getVar();
                       String _chkVar_7 = this.chkVar(_var_7);
-                      String _plus_25 = ((cc + "size(") + _chkVar_7);
-                      String _plus_26 = (_plus_25 + ")");
-                      cc = _plus_26;
+                      String _plus_23 = ((cc + "size(") + _chkVar_7);
+                      String _plus_24 = (_plus_23 + ")");
+                      cc = _plus_24;
                     } else {
                       String _swap = ((Helper)expv2).getSwap();
-                      boolean _notEquals_18 = (!Objects.equal(_swap, null));
-                      if (_notEquals_18) {
+                      boolean _notEquals_17 = (!Objects.equal(_swap, null));
+                      if (_notEquals_17) {
                         ChkVariable _var_8 = ((Helper)expv2).getVar();
                         String _chkVar_8 = this.chkVar(_var_8);
-                        String _plus_27 = ((cc + "swap(") + _chkVar_8);
-                        String _plus_28 = (_plus_27 + ",");
+                        String _plus_25 = ((cc + "swap(") + _chkVar_8);
+                        String _plus_26 = (_plus_25 + ",");
                         String _var1 = ((Helper)expv2).getVar1();
-                        String _plus_29 = (_plus_28 + _var1);
-                        String _plus_30 = (_plus_29 + ",");
+                        String _plus_27 = (_plus_26 + _var1);
+                        String _plus_28 = (_plus_27 + ",");
                         String _var2 = ((Helper)expv2).getVar2();
-                        String _plus_31 = (_plus_30 + _var2);
-                        String _plus_32 = (_plus_31 + ")");
-                        cc = _plus_32;
+                        String _plus_29 = (_plus_28 + _var2);
+                        String _plus_30 = (_plus_29 + ")");
+                        cc = _plus_30;
                       } else {
                         String _add = ((Helper)expv2).getAdd();
-                        boolean _notEquals_19 = (!Objects.equal(_add, null));
-                        if (_notEquals_19) {
+                        boolean _notEquals_18 = (!Objects.equal(_add, null));
+                        if (_notEquals_18) {
                           ChkVariable _var_9 = ((Helper)expv2).getVar();
                           String _chkVar_9 = this.chkVar(_var_9);
-                          String _plus_33 = ((cc + "add(") + _chkVar_9);
-                          String _plus_34 = (_plus_33 + ",");
+                          String _plus_31 = ((cc + "add(") + _chkVar_9);
+                          String _plus_32 = (_plus_31 + ",");
                           ChkVariables _var3_3 = ((Helper)expv2).getVar3();
                           String _chkVars_3 = this.chkVars(_var3_3);
-                          String _plus_35 = (_plus_34 + _chkVars_3);
-                          String _plus_36 = (_plus_35 + ")");
-                          cc = _plus_36;
+                          String _plus_33 = (_plus_32 + _chkVars_3);
+                          String _plus_34 = (_plus_33 + ")");
+                          cc = _plus_34;
                         } else {
                           String _remove_2 = ((Helper)expv2).getRemove();
-                          boolean _notEquals_20 = (!Objects.equal(_remove_2, null));
-                          if (_notEquals_20) {
+                          boolean _notEquals_19 = (!Objects.equal(_remove_2, null));
+                          if (_notEquals_19) {
                             ChkVariable _var_10 = ((Helper)expv2).getVar();
                             String _chkVar_10 = this.chkVar(_var_10);
-                            String _plus_37 = ((cc + "remove(") + _chkVar_10);
-                            String _plus_38 = (_plus_37 + ",");
+                            String _plus_35 = ((cc + "remove(") + _chkVar_10);
+                            String _plus_36 = (_plus_35 + ",");
                             ChkVariables _var3_4 = ((Helper)expv2).getVar3();
                             String _chkVars_4 = this.chkVars(_var3_4);
-                            String _plus_39 = (_plus_38 + _chkVars_4);
-                            String _plus_40 = (_plus_39 + ")");
-                            cc = _plus_40;
+                            String _plus_37 = (_plus_36 + _chkVars_4);
+                            String _plus_38 = (_plus_37 + ")");
+                            cc = _plus_38;
                           }
                         }
                       }
@@ -2640,16 +2690,16 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
       }
     }
     String _op = element.getOp();
-    boolean _notEquals_1 = (!Objects.equal(_op, null));
-    if (_notEquals_1) {
+    boolean _notEquals = (!Objects.equal(_op, null));
+    if (_notEquals) {
       String _op_1 = element.getOp();
-      String _plus_2 = (cc + _op_1);
-      cc = _plus_2;
+      String _plus = (cc + _op_1);
+      cc = _plus;
       ChkVariable _v = element.getV();
       String _chkVar = this.chkVar(_v);
-      String _plus_3 = (cc + _chkVar);
-      String _plus_4 = (_plus_3 + ")) ok = false;\n");
-      cc = _plus_4;
+      String _plus_1 = (cc + _chkVar);
+      String _plus_2 = (_plus_1 + ")) ok = false;\n");
+      cc = _plus_2;
     } else {
       cc = (cc + ";\n");
     }

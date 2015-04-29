@@ -15,9 +15,9 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.ChkExpression#getAsg <em>Asg</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.ChkExpression#getExp <em>Exp</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.ChkExpression#getWhere <em>Where</em>}</li>
+ *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.ChkExpression#getNot <em>Not</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.ChkExpression#getCond <em>Cond</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.ChkExpression#getType <em>Type</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.ChkExpression#getOp <em>Op</em>}</li>
@@ -30,32 +30,6 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface ChkExpression extends EObject
 {
-  /**
-   * Returns the value of the '<em><b>Asg</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Asg</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Asg</em>' attribute.
-   * @see #setAsg(String)
-   * @see org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage#getChkExpression_Asg()
-   * @model
-   * @generated
-   */
-  String getAsg();
-
-  /**
-   * Sets the value of the '{@link org.xtext.example.checkerdsl.checkerDsl.ChkExpression#getAsg <em>Asg</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Asg</em>' attribute.
-   * @see #getAsg()
-   * @generated
-   */
-  void setAsg(String value);
-
   /**
    * Returns the value of the '<em><b>Exp</b></em>' containment reference.
    * <!-- begin-user-doc -->
@@ -109,8 +83,34 @@ public interface ChkExpression extends EObject
   void setWhere(String value);
 
   /**
+   * Returns the value of the '<em><b>Not</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Not</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Not</em>' attribute.
+   * @see #setNot(String)
+   * @see org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage#getChkExpression_Not()
+   * @model
+   * @generated
+   */
+  String getNot();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.checkerdsl.checkerDsl.ChkExpression#getNot <em>Not</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Not</em>' attribute.
+   * @see #getNot()
+   * @generated
+   */
+  void setNot(String value);
+
+  /**
    * Returns the value of the '<em><b>Cond</b></em>' containment reference list.
-   * The list contents are of type {@link org.xtext.example.checkerdsl.checkerDsl.ChkRelationalExpression}.
+   * The list contents are of type {@link org.xtext.example.checkerdsl.checkerDsl.ChkGeneralExpressions}.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Cond</em>' containment reference list isn't clear,
@@ -122,7 +122,7 @@ public interface ChkExpression extends EObject
    * @model containment="true"
    * @generated
    */
-  EList<ChkRelationalExpression> getCond();
+  EList<ChkGeneralExpressions> getCond();
 
   /**
    * Returns the value of the '<em><b>Type</b></em>' attribute list.

@@ -25,9 +25,11 @@ import org.xtext.example.checkerdsl.checkerDsl.ChkVariables;
 import org.xtext.example.checkerdsl.checkerDsl.Dsl;
 import org.xtext.example.checkerdsl.checkerDsl.Feature;
 import org.xtext.example.checkerdsl.checkerDsl.FollowUp;
+import org.xtext.example.checkerdsl.checkerDsl.ForFormatExpression;
 import org.xtext.example.checkerdsl.checkerDsl.Format;
 import org.xtext.example.checkerdsl.checkerDsl.FormatExpression;
 import org.xtext.example.checkerdsl.checkerDsl.Helper;
+import org.xtext.example.checkerdsl.checkerDsl.HiddenFormat;
 import org.xtext.example.checkerdsl.checkerDsl.InputFormat;
 import org.xtext.example.checkerdsl.checkerDsl.Limit;
 import org.xtext.example.checkerdsl.checkerDsl.MR;
@@ -318,6 +320,13 @@ public class CheckerDslSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case CheckerDslPackage.FOR_FORMAT_EXPRESSION:
+      {
+        ForFormatExpression forFormatExpression = (ForFormatExpression)theEObject;
+        T result = caseForFormatExpression(forFormatExpression);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case CheckerDslPackage.INPUT_FORMAT:
       {
         InputFormat inputFormat = (InputFormat)theEObject;
@@ -333,6 +342,15 @@ public class CheckerDslSwitch<T> extends Switch<T>
         T result = caseOutputFormat(outputFormat);
         if (result == null) result = caseFormat(outputFormat);
         if (result == null) result = caseFeature(outputFormat);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case CheckerDslPackage.HIDDEN_FORMAT:
+      {
+        HiddenFormat hiddenFormat = (HiddenFormat)theEObject;
+        T result = caseHiddenFormat(hiddenFormat);
+        if (result == null) result = caseFormat(hiddenFormat);
+        if (result == null) result = caseFeature(hiddenFormat);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -812,6 +830,22 @@ public class CheckerDslSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>For Format Expression</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>For Format Expression</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseForFormatExpression(ForFormatExpression object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Input Format</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -839,6 +873,22 @@ public class CheckerDslSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseOutputFormat(OutputFormat object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Hidden Format</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Hidden Format</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseHiddenFormat(HiddenFormat object)
   {
     return null;
   }
