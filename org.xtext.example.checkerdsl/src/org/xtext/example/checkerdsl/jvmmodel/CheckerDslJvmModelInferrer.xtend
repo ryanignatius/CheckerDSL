@@ -87,6 +87,8 @@ class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
       members += element.toField("writer",typeRef(java.io.BufferedWriter))
       members += element.toField("current_subtask",typeRef(int))
       members += element.toField("current_testcase",typeRef(int))
+      members += element.toField("num_tc",typeRef(int))
+      members += element.toField("max_testcase",typeRef(int))
       members += element.toField("current_mr",typeRef(int))
       members += element.toField("num_mr",typeRef(int))
       members += element.toField("num_subtask",typeRef(int))
@@ -326,7 +328,7 @@ class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
      	     		members += feature.toMethod("write"+feature.name.toFirstUpper+"_2", typeRef(void))[
 	          			body = '''
 		          			try {
-		          				for (int i=0; i<«feature.sz.get(0)»; i++){
+		          				for (int i=0; i<«feature.sz.get(0)»_2; i++){
 		          					if (i > 0) writer.write(" ");
 		          					writer.write(""+(«chkType(feature)»)«feature.name»_2.get(i));
 		          				}
@@ -488,8 +490,37 @@ class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
 				bd2 = bd2+"}\n"
 	          	bd2 = bd2+"reader.close();\n"
 	          	bd2 = bd2+"} catch (Exception e){}\n"
+	          	bd2 = bd2+"System.out.println(\"Finish read input \"+num+\"/\"+current_testcase+\".in\");\n"
 	          	body = '''
 		      		«bd2»
+	          	'''
+          	]
+          	
+          	members += feature.toMethod("writeInput", typeRef(void)) [
+          		documentation = feature.documentation
+          		parameters += element.toParameter("mr",typeRef(int))
+          		parameters += element.toParameter("tc",typeRef(int))
+	      		bd2a = "try {\n"
+	      		bd2a = bd2a+"File wfile = new File(\"tc/Subtask\"+current_subtask+\"/in/\"+mr+\"/\"+tc+\".in\");\n"
+	      		bd2a = bd2a+"if(!wfile.exists()) wfile.createNewFile();\n"
+	      		bd2a = bd2a+"fw = new FileWriter(wfile);\n"
+	      		bd2a = bd2a+"writer = new BufferedWriter(fw);\n"
+	      		for (p : feature.exp) {
+	      			switch (p){
+	      				FormatExpression:{
+	      					bd2a = bd2a.concat(p.outputBody)
+	      				}
+	      				ForFormatExpression:{
+	      					
+	      				}
+	      			}
+	            	
+	          	}
+	          	bd2a = bd2a+"writer.close();\n"
+	          	bd2a = bd2a+"} catch(Exception e){}\n"
+	          	bd2a = bd2a+"System.out.println(\"Finish write input \"+mr+\"/\"+tc+\".in\");\n"
+	          	body = '''
+		      		«bd2a»
 	          	'''
           	]
           }
@@ -519,11 +550,28 @@ class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
 				bd3a = bd3a+"}\n"
 	          	bd3a = bd3a+"reader.close();\n"
 	          	bd3a = bd3a+"} catch (Exception e){}\n"
+	          	bd3a = bd3a+"System.out.println(\"Finish read output \"+num+\"/\"+current_testcase+\".out\");\n"
 	          	bd3a = bd3a+"if ("+class_name+".is_valid){\n"
 	          	bd3a = bd3a+"if (num == 0){\n"
 	          	bd3a = bd3a+"mr_start();\n"
+				bd3a = bd3a+"current_mr = 0;\n"
+				bd3a = bd3a+"for (int i=1; i<=num_mr; i++){\n"
+				bd3a = bd3a+"readInput(i);\n"
+				bd3a = bd3a+"readOutput(i);\n"
+				bd3a = bd3a+"}\n"
+				bd3a = bd3a+"current_testcase++;\n"
+				bd3a = bd3a+"if (current_testcase <= max_testcase){\n"
+				bd3a = bd3a+"readInput(0);\n"
+				bd3a = bd3a+"readOutput(0);\n"
+				bd3a = bd3a+"}\n"
 	          	bd3a = bd3a+"} else {\n"
-	          	// migrate to new in/0
+	          	bd3a = bd3a+"initMRVar();\n"
+				bd3a = bd3a+"num_tc++;\n"
+				bd3a = bd3a+"System.out.println(\"Add new test case \"+num_tc);\n"
+				bd3a = bd3a+"if (num_tc <= max_testcase){\n"
+				bd3a = bd3a+"writeInput(0,num_tc);\n"
+			    bd3a = bd3a+"writeOutput(0,num_tc);\n"
+				bd3a = bd3a+"}\n"
 	          	bd3a = bd3a+"}\n}\n"
 	          	body = '''
 		      		«bd3a»
@@ -532,8 +580,10 @@ class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
           	
           	members += feature.toMethod("writeOutput", typeRef(void)) [
           		documentation = feature.documentation
+	      		parameters += element.toParameter("mr",typeRef(int))
+          		parameters += element.toParameter("tc",typeRef(int))
 	      		bd3 = "try {\n"
-	      		bd3 = bd3+"File wfile = new File(\"tc/Subtask\"+current_subtask+\"/out/\"+current_mr+\"/\"+current_testcase+\".out\");\n"
+	      		bd3 = bd3+"File wfile = new File(\"tc/Subtask\"+current_subtask+\"/out/\"+mr+\"/\"+tc+\".out\");\n"
 	      		bd3 = bd3+"if(!wfile.exists()) wfile.createNewFile();\n"
 	      		bd3 = bd3+"fw = new FileWriter(wfile);\n"
 	      		bd3 = bd3+"writer = new BufferedWriter(fw);\n"
@@ -550,6 +600,7 @@ class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
 	          	}
 	          	bd3 = bd3+"writer.close();\n"
 	          	bd3 = bd3+"} catch(Exception e){}\n"
+	          	bd3 = bd3+"System.out.println(\"Finish write output \"+mr+\"/\"+tc+\".out\");\n"
 	          	body = '''
 		      		«bd3»
 	          	'''
@@ -608,9 +659,20 @@ class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
 		          			}
 		          		}
 					}»
+					«for (pr : feature.property.properties){
+						switch pr{
+		          			ChkExpression:{
+		          				genExp = genExp+checkExp(pr)
+		          			}
+		          			ChkLoopExpression:{
+		          				genExp = genExp+checkLoopExp(pr)
+		          			}
+		          		}
+					}»
 					«condArr»
 					«genExp»
-					writeOutput();
+					writeInput(current_mr,current_testcase);
+					writeOutput(current_mr,current_testcase);
 				'''
 				]
 			members += element.toMethod("mr_check_"+feature.num, typeRef(void)) [
@@ -672,17 +734,20 @@ class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
 		'''
 		]
 	  members += element.toMethod("init", typeRef(void)) [
+	  	parameters += element.toParameter("tc",typeRef(int))
+	  	parameters += element.toParameter("max_tc",typeRef(int))
 		body = '''
 			sc = new Scanner(System.in);
 			current_subtask = 1;
-			current_testcase = 0;
+			current_testcase = 1;
+			num_tc = tc;
+			max_testcase = max_tc;
 			current_mr = 0;
 			num_mr = «num_mr»;
 			num_subtask = «num_subtask»;
 			«class_name».cur_lines = 1;
-			readInput(0);
-			readOutput(0);
-			//writeOutput();
+			//readInput(0);
+			//readOutput(0);
 		'''
 		]
       
@@ -834,6 +899,12 @@ class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
 					cc = cc+"add("+chkVar(exp.^var)+","+chkVars(exp.var3)+")"
 				} else if (exp.remove != null){
 					cc = cc+"remove("+chkVar(exp.^var)+","+chkVars(exp.var3)+")"
+				} else if (exp.reverse != null){
+					cc = cc+"reverse("+chkVar(exp.^var)+")"
+				} else if (exp.plus != null){
+					cc = cc+"plus("+chkVar(exp.^var)+","+chkVars(exp.var3)+")"
+				} else if (exp.multiply != null){
+					cc = cc+"multiply("+chkVar(exp.^var)+","+chkVars(exp.var3)+")"
 				}
 			}
 			
@@ -858,6 +929,9 @@ class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
 		}
 		ChkAssignment:{
 			var lf = ""
+			if (exp.def != null){
+				lf = "int "
+			}
 			var rg = ""
 			if (exp.v1.v.size() == 0){
 				lf = lf+chkVar(exp.v1)+" = "
@@ -969,6 +1043,12 @@ class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
 							cc = cc+"add("+chkVar(expv2.^var)+","+chkVars(expv2.var3)+")"
 						} else if (expv2.remove != null){
 							cc = cc+"remove("+chkVar(expv2.^var)+","+chkVars(expv2.var3)+")"
+						} else if (expv2.reverse != null){
+							cc = cc+"reverse("+chkVar(expv2.^var)+")"
+						} else if (expv2.plus != null){
+							cc = cc+"plus("+chkVar(expv2.^var)+","+chkVars(expv2.var3)+")"
+						} else if (expv2.multiply != null){
+							cc = cc+"multiply("+chkVar(expv2.^var)+","+chkVars(expv2.var3)+")"
 						}
 						cc = cc+rg
 					}
@@ -979,7 +1059,7 @@ class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
 	if (element.op != null){
 		cc = cc+element.op
 		cc = cc+chkVar(element.v)+")) ok = false;\n"
-	} else cc = cc+";\n"
+	} //else cc = cc+";\n"
 	println("check "+cc)
 	return cc
   }
@@ -1059,6 +1139,7 @@ class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
 	for (e : element.^var){
 		if (i > 0) cc = cc+"writer.write(\" \");\n"
 		cc = cc+"write"+e.toFirstUpper+"_2();\n"
+		i = i+1
 	}
 	if (element.count.size() == 0) cc = cc+"writer.write(System.lineSeparator());\n"
 	if (!element.num.equals("1")) cc = cc+"}\n"

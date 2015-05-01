@@ -1,5 +1,5 @@
-// Specification untuk soal knapsack Polo the Penguin and the Test
-class Knapsack{
+// Specification untuk soal Jual Ayam
+class JualAyam{
 	/*
 	 * variable declaration
 	 * akan digunakan untuk men-generate atribut private,
@@ -7,18 +7,14 @@ class Knapsack{
 	 */
 	
 	// variable untuk input
-	int tc (subtask 1 : 1..100) // tc is number of test cases
-	int n (subtask 1 : 1..100) // n is number of questions
-	int w (subtask 1 : 1..100) // w is time limit for study
-	int[n] c (subtask 1 : 1..100) // c[i] is the number of tests that will contain this question
-	int[n] p (subtask 1 : 1..100) // p[i] is the number of points that he will get for correctly answering this question on each of tests
-	int[n] t (subtask 1 : 1..100) // t[i] is the amount of time (in minutes) that he needs to spend to learn this question
+	int n (subtask 1 : 1..100000)
+	int t (subtask 1 : 1..100)
+	int[n] w (subtask 1 : 1..1000000)
+	int[n] d (subtask 1 : 1..1000000)
+	int[n] p (subtask 1 : 1..1000000)
 	
 	// variable untuk output
-	int point // point is maximal possible total number of points he can get for all tests if he studies for no more than W minutes
-	
-	// hidden variable (for mr only)
-	int[n] y (0..1) // y adalah nomor tempat knapsack item i atau 0 jika tidak dipilih
+	int[n] k (1..n)
 	
 	score {
 		(1 : 100)
@@ -28,44 +24,43 @@ class Knapsack{
 	 * input format
 	 */
 	input {
-		1 (tc)
-		for (k,tc) {
-			1 (n,w) // 1 baris pertama berisi 2 buah integer n dan w
-			1 (c<n>) // 1 baris berikutnya berisi n buah integer c
-			1 (p<n>) // 1 baris berikutnya berisi n buah integer p
-			1 (t<n>) // 1 baris berikutnya berisi n buah integer t
-		}
+		1 (n,t) // 1 baris pertama berisi 2 buah integer n dan t
+		1 (w<n>) // 1 baris berikutnya berisi n buah integer w
+		1 (d<n>) // 1 baris berikutnya berisi n buah integer d
+		1 (p<n>) // 1 baris berikutnya berisi n buah integer p
 	}
 	
 	/*
 	 * output format
 	 */
 	output {
-		1 (point) // 1 baris berikutnya berisi 1 buah integer point
-	}
-	
-	hidden {
-		1 (y<n>)
+		1 (k<n>) // 1 baris berikutnya berisi n buah integer k
 	}
 	
 	MR 1 {
-		(select(k,l) where 1<=k and k<l and l<=n and c[k]!=c[l] or p[k]!=p[l] or t[k]!=t[l])
+		(def cc = random(1..1000))
 		followup {
-			(c` = swap(c,k,l))
-			(p` = swap(p,k,l))
-			(t` = swap(t,k,l))
+			(w` = multiply(w,cc))
 		}
 		check {
 			
 		}
-		
+	}
+	
+	MR 2 {
+		(def cc = random(1..1000))
+		followup {
+			(p` = plus(p,cc))
+		}
+		check {
+			
+		}
 	}
 	
 	MR 3 {
-		(select(k) where y[k]==0)
-		def cc = (random(0..100))
+		(def cc = random(-1000..-1))
 		followup {
-			(t`[k] = t[k]+cc)
+			(p` = plus(p,cc))
 		}
 		check {
 			
@@ -73,10 +68,9 @@ class Knapsack{
 	}
 	
 	MR 4 {
-		(select(k) where y[k]==0)
-		def cc = (random(0..100))
+		(def cc = random(1..1000))
 		followup {
-			(p`[k] = p[k]-cc)
+			(d` = plus(d,cc))
 		}
 		check {
 			
@@ -84,9 +78,9 @@ class Knapsack{
 	}
 	
 	MR 5 {
-		def c1 = (sum(t) where y[i]==1)
+		(def cc = random(-1000..-1))
 		followup {
-			(c`[1] = c1)
+			(d` = plus(d,cc))
 		}
 		check {
 			
@@ -94,82 +88,15 @@ class Knapsack{
 	}
 	
 	MR 6 {
-		def cnew = (min(c) where y[i] != 0)
-		def pnew = (min(p) where y[i] != 0)
-		def tnew = (max(t) where y[i] != 0)
 		followup {
-			(n` = n+1)
-			(c` = add(c,cnew))
-			(p` = add(p,pnew))
-			(t` = add(t,tnew))
-		}
-		check {
-			
-		}
-	}
-	
-	MR 7 {
-		(select(k) where y[k]==0)
-		followup {
+			(def n1 = n-1)
+			(w` = remove(w,n1))
+			(d` = remove(d) where k[i]==n)
+			(p` = remove(p) where k[i]==n)
 			(n` = n-1)
-			(c` = remove(c,k))
-			(p` = remove(p,k))
-			(t` = remove(t,k))
 		}
 		check {
-			
-		}
-	}
-	
-	MR 8 {
-		(select(k) where y[k]==1)
-		followup {
-			(n` = n-1)
-			(c`[1] = c[1]-t[k])
-			(c` = remove(c,k))
-			(p` = remove(p,k))
-			(t` = remove(t,k))
-		}
-		check {
-			(point` = point-p[k]*c[k])
-		}
-	}
-	
-	MR 9 {
-		(select(k,l) where 1<=k and k<l and l<=n and y[k]==1 and y[l]==1)
-		followup {
-			(c`[k] = 1)
-			(p`[k] = c[k]*p[k]+c[l]*p[l])
-			(t`[k] = t[k]+t[l])
-			(n` = n-1)
-			(c` = remove(c,l))
-			(p` = remove(p,l))
-			(t` = remove(t,l))
-		}
-		check {
-			
-		}
-	}
-	
-	MR 11 {
-		(select(k) where y[k]==1)
-		(def cc = random(0..100))
-		followup {
-			(p`[k] = p[k]+cc)
-		}
-		check {
-			(point` = point+cc*c[k])
-		}
-	}
-	
-	MR 12 {
-		(select(k) where y[k]==1)
-		(def cc = random(0..100))
-		followup {
-			(c`[k] = c[k]+cc)
-		}
-		check {
-			(point` = point+cc*p[k])
+			(k` = remove(k) where k[i]==n)
 		}
 	}
 }

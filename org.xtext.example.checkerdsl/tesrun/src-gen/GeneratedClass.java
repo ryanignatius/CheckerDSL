@@ -876,7 +876,7 @@ public class GeneratedClass {
     num_mr = 6;
     num_subtask = 1;
     GeneratedClass.cur_lines = 1;
-    //readInput(0);
-    //readOutput(0);
+    readInput(0);
+    readOutput(0);
   }
 }

@@ -1599,6 +1599,7 @@ public class CheckerDslSemanticSequencer extends XbaseSemanticSequencer {
 	 *         (remove='remove' var=ChkVariable var3=ChkVariables?) | 
 	 *         (random='random' (var3=ChkVariables var4=ChkVariables)?) | 
 	 *         (size='size' var=ChkVariable) | 
+	 *         (reverse='reverse' var=ChkVariable) | 
 	 *         (contains='contain' var=ChkVariable var3=ChkVariables) | 
 	 *         (addRow='addRow' var=ChkVariable) | 
 	 *         (addCol='addColumn' var=ChkVariable) | 

@@ -1098,7 +1098,7 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getHelper_Contains()
+  public EAttribute getHelper_Reverse()
   {
     return (EAttribute)helperEClass.getEStructuralFeatures().get(16);
   }
@@ -1108,7 +1108,7 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getHelper_AddRow()
+  public EAttribute getHelper_Contains()
   {
     return (EAttribute)helperEClass.getEStructuralFeatures().get(17);
   }
@@ -1118,7 +1118,7 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getHelper_AddCol()
+  public EAttribute getHelper_AddRow()
   {
     return (EAttribute)helperEClass.getEStructuralFeatures().get(18);
   }
@@ -1128,7 +1128,7 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getHelper_SwapRow()
+  public EAttribute getHelper_AddCol()
   {
     return (EAttribute)helperEClass.getEStructuralFeatures().get(19);
   }
@@ -1138,7 +1138,7 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getHelper_SwapCol()
+  public EAttribute getHelper_SwapRow()
   {
     return (EAttribute)helperEClass.getEStructuralFeatures().get(20);
   }
@@ -1148,7 +1148,7 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getHelper_RemoveRow()
+  public EAttribute getHelper_SwapCol()
   {
     return (EAttribute)helperEClass.getEStructuralFeatures().get(21);
   }
@@ -1158,7 +1158,7 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getHelper_RemoveCol()
+  public EAttribute getHelper_RemoveRow()
   {
     return (EAttribute)helperEClass.getEStructuralFeatures().get(22);
   }
@@ -1168,7 +1168,7 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getHelper_Permute()
+  public EAttribute getHelper_RemoveCol()
   {
     return (EAttribute)helperEClass.getEStructuralFeatures().get(23);
   }
@@ -1178,7 +1178,7 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getHelper_Plus()
+  public EAttribute getHelper_Permute()
   {
     return (EAttribute)helperEClass.getEStructuralFeatures().get(24);
   }
@@ -1188,7 +1188,7 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getHelper_Multiply()
+  public EAttribute getHelper_Plus()
   {
     return (EAttribute)helperEClass.getEStructuralFeatures().get(25);
   }
@@ -1198,7 +1198,7 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getHelper_Invert()
+  public EAttribute getHelper_Multiply()
   {
     return (EAttribute)helperEClass.getEStructuralFeatures().get(26);
   }
@@ -1208,7 +1208,7 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getHelper_Include()
+  public EAttribute getHelper_Invert()
   {
     return (EAttribute)helperEClass.getEStructuralFeatures().get(27);
   }
@@ -1218,7 +1218,7 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getHelper_Exclude()
+  public EAttribute getHelper_Include()
   {
     return (EAttribute)helperEClass.getEStructuralFeatures().get(28);
   }
@@ -1228,9 +1228,19 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getHelper_Compositional()
+  public EAttribute getHelper_Exclude()
   {
     return (EAttribute)helperEClass.getEStructuralFeatures().get(29);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getHelper_Compositional()
+  {
+    return (EAttribute)helperEClass.getEStructuralFeatures().get(30);
   }
 
   /**
@@ -1883,6 +1893,7 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
     createEAttribute(helperEClass, HELPER__RANDOM);
     createEReference(helperEClass, HELPER__VAR4);
     createEAttribute(helperEClass, HELPER__SIZE);
+    createEAttribute(helperEClass, HELPER__REVERSE);
     createEAttribute(helperEClass, HELPER__CONTAINS);
     createEAttribute(helperEClass, HELPER__ADD_ROW);
     createEAttribute(helperEClass, HELPER__ADD_COL);
@@ -2109,6 +2120,7 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
     initEAttribute(getHelper_Random(), ecorePackage.getEString(), "random", null, 0, 1, Helper.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getHelper_Var4(), this.getChkVariables(), null, "var4", null, 0, 1, Helper.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getHelper_Size(), ecorePackage.getEString(), "size", null, 0, 1, Helper.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getHelper_Reverse(), ecorePackage.getEString(), "reverse", null, 0, 1, Helper.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getHelper_Contains(), ecorePackage.getEString(), "contains", null, 0, 1, Helper.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getHelper_AddRow(), ecorePackage.getEString(), "addRow", null, 0, 1, Helper.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getHelper_AddCol(), ecorePackage.getEString(), "addCol", null, 0, 1, Helper.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

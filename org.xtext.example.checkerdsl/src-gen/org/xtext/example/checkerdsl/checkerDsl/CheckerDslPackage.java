@@ -922,13 +922,22 @@ public interface CheckerDslPackage extends EPackage
   int HELPER__SIZE = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 15;
 
   /**
+   * The feature id for the '<em><b>Reverse</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HELPER__REVERSE = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 16;
+
+  /**
    * The feature id for the '<em><b>Contains</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int HELPER__CONTAINS = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 16;
+  int HELPER__CONTAINS = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 17;
 
   /**
    * The feature id for the '<em><b>Add Row</b></em>' attribute.
@@ -937,7 +946,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int HELPER__ADD_ROW = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 17;
+  int HELPER__ADD_ROW = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 18;
 
   /**
    * The feature id for the '<em><b>Add Col</b></em>' attribute.
@@ -946,7 +955,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int HELPER__ADD_COL = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 18;
+  int HELPER__ADD_COL = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 19;
 
   /**
    * The feature id for the '<em><b>Swap Row</b></em>' attribute.
@@ -955,7 +964,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int HELPER__SWAP_ROW = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 19;
+  int HELPER__SWAP_ROW = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 20;
 
   /**
    * The feature id for the '<em><b>Swap Col</b></em>' attribute.
@@ -964,7 +973,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int HELPER__SWAP_COL = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 20;
+  int HELPER__SWAP_COL = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 21;
 
   /**
    * The feature id for the '<em><b>Remove Row</b></em>' attribute.
@@ -973,7 +982,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int HELPER__REMOVE_ROW = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 21;
+  int HELPER__REMOVE_ROW = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 22;
 
   /**
    * The feature id for the '<em><b>Remove Col</b></em>' attribute.
@@ -982,7 +991,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int HELPER__REMOVE_COL = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 22;
+  int HELPER__REMOVE_COL = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 23;
 
   /**
    * The feature id for the '<em><b>Permute</b></em>' attribute.
@@ -991,7 +1000,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int HELPER__PERMUTE = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 23;
+  int HELPER__PERMUTE = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 24;
 
   /**
    * The feature id for the '<em><b>Plus</b></em>' attribute.
@@ -1000,7 +1009,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int HELPER__PLUS = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 24;
+  int HELPER__PLUS = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 25;
 
   /**
    * The feature id for the '<em><b>Multiply</b></em>' attribute.
@@ -1009,7 +1018,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int HELPER__MULTIPLY = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 25;
+  int HELPER__MULTIPLY = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 26;
 
   /**
    * The feature id for the '<em><b>Invert</b></em>' attribute.
@@ -1018,7 +1027,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int HELPER__INVERT = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 26;
+  int HELPER__INVERT = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 27;
 
   /**
    * The feature id for the '<em><b>Include</b></em>' attribute.
@@ -1027,7 +1036,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int HELPER__INCLUDE = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 27;
+  int HELPER__INCLUDE = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 28;
 
   /**
    * The feature id for the '<em><b>Exclude</b></em>' attribute.
@@ -1036,7 +1045,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int HELPER__EXCLUDE = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 28;
+  int HELPER__EXCLUDE = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 29;
 
   /**
    * The feature id for the '<em><b>Compositional</b></em>' attribute.
@@ -1045,7 +1054,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int HELPER__COMPOSITIONAL = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 29;
+  int HELPER__COMPOSITIONAL = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 30;
 
   /**
    * The number of structural features of the '<em>Helper</em>' class.
@@ -1054,7 +1063,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int HELPER_FEATURE_COUNT = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 30;
+  int HELPER_FEATURE_COUNT = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 31;
 
   /**
    * The meta object id for the '{@link org.xtext.example.checkerdsl.checkerDsl.impl.ChkRelationalExpressionImpl <em>Chk Relational Expression</em>}' class.
@@ -2488,6 +2497,17 @@ public interface CheckerDslPackage extends EPackage
   EAttribute getHelper_Size();
 
   /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getReverse <em>Reverse</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Reverse</em>'.
+   * @see org.xtext.example.checkerdsl.checkerDsl.Helper#getReverse()
+   * @see #getHelper()
+   * @generated
+   */
+  EAttribute getHelper_Reverse();
+
+  /**
    * Returns the meta object for the attribute '{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getContains <em>Contains</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -3850,6 +3870,14 @@ public interface CheckerDslPackage extends EPackage
      * @generated
      */
     EAttribute HELPER__SIZE = eINSTANCE.getHelper_Size();
+
+    /**
+     * The meta object literal for the '<em><b>Reverse</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute HELPER__REVERSE = eINSTANCE.getHelper_Reverse();
 
     /**
      * The meta object literal for the '<em><b>Contains</b></em>' attribute feature.

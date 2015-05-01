@@ -3,7 +3,9 @@ public class MainGenerator {
 
 	public static void main(String[] args) {
 		GeneratedClass g = new GeneratedClass();
-		g.init();
+		g.init(1,10);
+		g.readInput(0);
+		g.readOutput(0);
 		int idx = 0;
 		boolean gen_all = true;
 		while (idx < args.length){

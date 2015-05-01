@@ -527,18 +527,18 @@ public class CheckerDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cLimitLimitParserRuleCall_3_2_1_0 = (RuleCall)cLimitAssignment_3_2_1.eContents().get(0);
 		private final Keyword cRightParenthesisKeyword_3_3 = (Keyword)cGroup_3.eContents().get(3);
 		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
-		private final Keyword cSpKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Keyword cValueKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_4_1 = (Keyword)cGroup_4.eContents().get(1);
 		private final Assignment cSpValueAssignment_4_2 = (Assignment)cGroup_4.eContents().get(2);
 		private final RuleCall cSpValueSpValueParserRuleCall_4_2_0 = (RuleCall)cSpValueAssignment_4_2.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_4_3 = (Keyword)cGroup_4.eContents().get(3);
 		
 		//ChkVariableDeclaration:
-		//	type=ChkTypeReference ("[" sz+=CHK_NUMBER "]")* name=ValidID ("(" limit1=Limit (";" limit+=Limit)* ")")? ("sp" "{"
+		//	type=ChkTypeReference ("[" sz+=CHK_NUMBER "]")* name=ValidID ("(" limit1=Limit (";" limit+=Limit)* ")")? ("value" "{"
 		//	spValue=SpValue "}")?;
 		public ParserRule getRule() { return rule; }
 
-		//type=ChkTypeReference ("[" sz+=CHK_NUMBER "]")* name=ValidID ("(" limit1=Limit (";" limit+=Limit)* ")")? ("sp" "{"
+		//type=ChkTypeReference ("[" sz+=CHK_NUMBER "]")* name=ValidID ("(" limit1=Limit (";" limit+=Limit)* ")")? ("value" "{"
 		//spValue=SpValue "}")?
 		public Group getGroup() { return cGroup; }
 
@@ -596,11 +596,11 @@ public class CheckerDslGrammarAccess extends AbstractGrammarElementFinder {
 		//")"
 		public Keyword getRightParenthesisKeyword_3_3() { return cRightParenthesisKeyword_3_3; }
 
-		//("sp" "{" spValue=SpValue "}")?
+		//("value" "{" spValue=SpValue "}")?
 		public Group getGroup_4() { return cGroup_4; }
 
-		//"sp"
-		public Keyword getSpKeyword_4_0() { return cSpKeyword_4_0; }
+		//"value"
+		public Keyword getValueKeyword_4_0() { return cValueKeyword_4_0; }
 
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_4_1() { return cLeftCurlyBracketKeyword_4_1; }
@@ -990,45 +990,39 @@ public class CheckerDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cVarChkVariableParserRuleCall_9_2_0 = (RuleCall)cVarAssignment_9_2.eContents().get(0);
 		private final Keyword cRightParenthesisKeyword_9_3 = (Keyword)cGroup_9.eContents().get(3);
 		private final Group cGroup_10 = (Group)cAlternatives.eContents().get(10);
-		private final Assignment cContainsAssignment_10_0 = (Assignment)cGroup_10.eContents().get(0);
-		private final Keyword cContainsContainKeyword_10_0_0 = (Keyword)cContainsAssignment_10_0.eContents().get(0);
+		private final Assignment cReverseAssignment_10_0 = (Assignment)cGroup_10.eContents().get(0);
+		private final Keyword cReverseReverseKeyword_10_0_0 = (Keyword)cReverseAssignment_10_0.eContents().get(0);
 		private final Keyword cLeftParenthesisKeyword_10_1 = (Keyword)cGroup_10.eContents().get(1);
 		private final Assignment cVarAssignment_10_2 = (Assignment)cGroup_10.eContents().get(2);
 		private final RuleCall cVarChkVariableParserRuleCall_10_2_0 = (RuleCall)cVarAssignment_10_2.eContents().get(0);
-		private final Keyword cCommaKeyword_10_3 = (Keyword)cGroup_10.eContents().get(3);
-		private final Assignment cVar3Assignment_10_4 = (Assignment)cGroup_10.eContents().get(4);
-		private final RuleCall cVar3ChkVariablesParserRuleCall_10_4_0 = (RuleCall)cVar3Assignment_10_4.eContents().get(0);
-		private final Keyword cRightParenthesisKeyword_10_5 = (Keyword)cGroup_10.eContents().get(5);
+		private final Keyword cRightParenthesisKeyword_10_3 = (Keyword)cGroup_10.eContents().get(3);
 		private final Group cGroup_11 = (Group)cAlternatives.eContents().get(11);
-		private final Assignment cAddRowAssignment_11_0 = (Assignment)cGroup_11.eContents().get(0);
-		private final Keyword cAddRowAddRowKeyword_11_0_0 = (Keyword)cAddRowAssignment_11_0.eContents().get(0);
+		private final Assignment cContainsAssignment_11_0 = (Assignment)cGroup_11.eContents().get(0);
+		private final Keyword cContainsContainKeyword_11_0_0 = (Keyword)cContainsAssignment_11_0.eContents().get(0);
 		private final Keyword cLeftParenthesisKeyword_11_1 = (Keyword)cGroup_11.eContents().get(1);
 		private final Assignment cVarAssignment_11_2 = (Assignment)cGroup_11.eContents().get(2);
 		private final RuleCall cVarChkVariableParserRuleCall_11_2_0 = (RuleCall)cVarAssignment_11_2.eContents().get(0);
-		private final Keyword cRightParenthesisKeyword_11_3 = (Keyword)cGroup_11.eContents().get(3);
+		private final Keyword cCommaKeyword_11_3 = (Keyword)cGroup_11.eContents().get(3);
+		private final Assignment cVar3Assignment_11_4 = (Assignment)cGroup_11.eContents().get(4);
+		private final RuleCall cVar3ChkVariablesParserRuleCall_11_4_0 = (RuleCall)cVar3Assignment_11_4.eContents().get(0);
+		private final Keyword cRightParenthesisKeyword_11_5 = (Keyword)cGroup_11.eContents().get(5);
 		private final Group cGroup_12 = (Group)cAlternatives.eContents().get(12);
-		private final Assignment cAddColAssignment_12_0 = (Assignment)cGroup_12.eContents().get(0);
-		private final Keyword cAddColAddColumnKeyword_12_0_0 = (Keyword)cAddColAssignment_12_0.eContents().get(0);
+		private final Assignment cAddRowAssignment_12_0 = (Assignment)cGroup_12.eContents().get(0);
+		private final Keyword cAddRowAddRowKeyword_12_0_0 = (Keyword)cAddRowAssignment_12_0.eContents().get(0);
 		private final Keyword cLeftParenthesisKeyword_12_1 = (Keyword)cGroup_12.eContents().get(1);
 		private final Assignment cVarAssignment_12_2 = (Assignment)cGroup_12.eContents().get(2);
 		private final RuleCall cVarChkVariableParserRuleCall_12_2_0 = (RuleCall)cVarAssignment_12_2.eContents().get(0);
 		private final Keyword cRightParenthesisKeyword_12_3 = (Keyword)cGroup_12.eContents().get(3);
 		private final Group cGroup_13 = (Group)cAlternatives.eContents().get(13);
-		private final Assignment cSwapRowAssignment_13_0 = (Assignment)cGroup_13.eContents().get(0);
-		private final Keyword cSwapRowSwapRowKeyword_13_0_0 = (Keyword)cSwapRowAssignment_13_0.eContents().get(0);
+		private final Assignment cAddColAssignment_13_0 = (Assignment)cGroup_13.eContents().get(0);
+		private final Keyword cAddColAddColumnKeyword_13_0_0 = (Keyword)cAddColAssignment_13_0.eContents().get(0);
 		private final Keyword cLeftParenthesisKeyword_13_1 = (Keyword)cGroup_13.eContents().get(1);
 		private final Assignment cVarAssignment_13_2 = (Assignment)cGroup_13.eContents().get(2);
 		private final RuleCall cVarChkVariableParserRuleCall_13_2_0 = (RuleCall)cVarAssignment_13_2.eContents().get(0);
-		private final Keyword cCommaKeyword_13_3 = (Keyword)cGroup_13.eContents().get(3);
-		private final Assignment cVar1Assignment_13_4 = (Assignment)cGroup_13.eContents().get(4);
-		private final RuleCall cVar1ValidIDParserRuleCall_13_4_0 = (RuleCall)cVar1Assignment_13_4.eContents().get(0);
-		private final Keyword cCommaKeyword_13_5 = (Keyword)cGroup_13.eContents().get(5);
-		private final Assignment cVar2Assignment_13_6 = (Assignment)cGroup_13.eContents().get(6);
-		private final RuleCall cVar2ValidIDParserRuleCall_13_6_0 = (RuleCall)cVar2Assignment_13_6.eContents().get(0);
-		private final Keyword cRightParenthesisKeyword_13_7 = (Keyword)cGroup_13.eContents().get(7);
+		private final Keyword cRightParenthesisKeyword_13_3 = (Keyword)cGroup_13.eContents().get(3);
 		private final Group cGroup_14 = (Group)cAlternatives.eContents().get(14);
-		private final Assignment cSwapColAssignment_14_0 = (Assignment)cGroup_14.eContents().get(0);
-		private final Keyword cSwapColSwapColumnKeyword_14_0_0 = (Keyword)cSwapColAssignment_14_0.eContents().get(0);
+		private final Assignment cSwapRowAssignment_14_0 = (Assignment)cGroup_14.eContents().get(0);
+		private final Keyword cSwapRowSwapRowKeyword_14_0_0 = (Keyword)cSwapRowAssignment_14_0.eContents().get(0);
 		private final Keyword cLeftParenthesisKeyword_14_1 = (Keyword)cGroup_14.eContents().get(1);
 		private final Assignment cVarAssignment_14_2 = (Assignment)cGroup_14.eContents().get(2);
 		private final RuleCall cVarChkVariableParserRuleCall_14_2_0 = (RuleCall)cVarAssignment_14_2.eContents().get(0);
@@ -1040,18 +1034,21 @@ public class CheckerDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cVar2ValidIDParserRuleCall_14_6_0 = (RuleCall)cVar2Assignment_14_6.eContents().get(0);
 		private final Keyword cRightParenthesisKeyword_14_7 = (Keyword)cGroup_14.eContents().get(7);
 		private final Group cGroup_15 = (Group)cAlternatives.eContents().get(15);
-		private final Assignment cRemoveRowAssignment_15_0 = (Assignment)cGroup_15.eContents().get(0);
-		private final Keyword cRemoveRowRemoveRowKeyword_15_0_0 = (Keyword)cRemoveRowAssignment_15_0.eContents().get(0);
+		private final Assignment cSwapColAssignment_15_0 = (Assignment)cGroup_15.eContents().get(0);
+		private final Keyword cSwapColSwapColumnKeyword_15_0_0 = (Keyword)cSwapColAssignment_15_0.eContents().get(0);
 		private final Keyword cLeftParenthesisKeyword_15_1 = (Keyword)cGroup_15.eContents().get(1);
 		private final Assignment cVarAssignment_15_2 = (Assignment)cGroup_15.eContents().get(2);
 		private final RuleCall cVarChkVariableParserRuleCall_15_2_0 = (RuleCall)cVarAssignment_15_2.eContents().get(0);
 		private final Keyword cCommaKeyword_15_3 = (Keyword)cGroup_15.eContents().get(3);
-		private final Assignment cVar3Assignment_15_4 = (Assignment)cGroup_15.eContents().get(4);
-		private final RuleCall cVar3ChkVariablesParserRuleCall_15_4_0 = (RuleCall)cVar3Assignment_15_4.eContents().get(0);
-		private final Keyword cRightParenthesisKeyword_15_5 = (Keyword)cGroup_15.eContents().get(5);
+		private final Assignment cVar1Assignment_15_4 = (Assignment)cGroup_15.eContents().get(4);
+		private final RuleCall cVar1ValidIDParserRuleCall_15_4_0 = (RuleCall)cVar1Assignment_15_4.eContents().get(0);
+		private final Keyword cCommaKeyword_15_5 = (Keyword)cGroup_15.eContents().get(5);
+		private final Assignment cVar2Assignment_15_6 = (Assignment)cGroup_15.eContents().get(6);
+		private final RuleCall cVar2ValidIDParserRuleCall_15_6_0 = (RuleCall)cVar2Assignment_15_6.eContents().get(0);
+		private final Keyword cRightParenthesisKeyword_15_7 = (Keyword)cGroup_15.eContents().get(7);
 		private final Group cGroup_16 = (Group)cAlternatives.eContents().get(16);
-		private final Assignment cRemoveColAssignment_16_0 = (Assignment)cGroup_16.eContents().get(0);
-		private final Keyword cRemoveColRemoveColumnKeyword_16_0_0 = (Keyword)cRemoveColAssignment_16_0.eContents().get(0);
+		private final Assignment cRemoveRowAssignment_16_0 = (Assignment)cGroup_16.eContents().get(0);
+		private final Keyword cRemoveRowRemoveRowKeyword_16_0_0 = (Keyword)cRemoveRowAssignment_16_0.eContents().get(0);
 		private final Keyword cLeftParenthesisKeyword_16_1 = (Keyword)cGroup_16.eContents().get(1);
 		private final Assignment cVarAssignment_16_2 = (Assignment)cGroup_16.eContents().get(2);
 		private final RuleCall cVarChkVariableParserRuleCall_16_2_0 = (RuleCall)cVarAssignment_16_2.eContents().get(0);
@@ -1060,25 +1057,25 @@ public class CheckerDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cVar3ChkVariablesParserRuleCall_16_4_0 = (RuleCall)cVar3Assignment_16_4.eContents().get(0);
 		private final Keyword cRightParenthesisKeyword_16_5 = (Keyword)cGroup_16.eContents().get(5);
 		private final Group cGroup_17 = (Group)cAlternatives.eContents().get(17);
-		private final Assignment cPermuteAssignment_17_0 = (Assignment)cGroup_17.eContents().get(0);
-		private final Keyword cPermutePermuteKeyword_17_0_0 = (Keyword)cPermuteAssignment_17_0.eContents().get(0);
+		private final Assignment cRemoveColAssignment_17_0 = (Assignment)cGroup_17.eContents().get(0);
+		private final Keyword cRemoveColRemoveColumnKeyword_17_0_0 = (Keyword)cRemoveColAssignment_17_0.eContents().get(0);
 		private final Keyword cLeftParenthesisKeyword_17_1 = (Keyword)cGroup_17.eContents().get(1);
 		private final Assignment cVarAssignment_17_2 = (Assignment)cGroup_17.eContents().get(2);
 		private final RuleCall cVarChkVariableParserRuleCall_17_2_0 = (RuleCall)cVarAssignment_17_2.eContents().get(0);
-		private final Keyword cRightParenthesisKeyword_17_3 = (Keyword)cGroup_17.eContents().get(3);
+		private final Keyword cCommaKeyword_17_3 = (Keyword)cGroup_17.eContents().get(3);
+		private final Assignment cVar3Assignment_17_4 = (Assignment)cGroup_17.eContents().get(4);
+		private final RuleCall cVar3ChkVariablesParserRuleCall_17_4_0 = (RuleCall)cVar3Assignment_17_4.eContents().get(0);
+		private final Keyword cRightParenthesisKeyword_17_5 = (Keyword)cGroup_17.eContents().get(5);
 		private final Group cGroup_18 = (Group)cAlternatives.eContents().get(18);
-		private final Assignment cPlusAssignment_18_0 = (Assignment)cGroup_18.eContents().get(0);
-		private final Keyword cPlusPlusKeyword_18_0_0 = (Keyword)cPlusAssignment_18_0.eContents().get(0);
+		private final Assignment cPermuteAssignment_18_0 = (Assignment)cGroup_18.eContents().get(0);
+		private final Keyword cPermutePermuteKeyword_18_0_0 = (Keyword)cPermuteAssignment_18_0.eContents().get(0);
 		private final Keyword cLeftParenthesisKeyword_18_1 = (Keyword)cGroup_18.eContents().get(1);
 		private final Assignment cVarAssignment_18_2 = (Assignment)cGroup_18.eContents().get(2);
 		private final RuleCall cVarChkVariableParserRuleCall_18_2_0 = (RuleCall)cVarAssignment_18_2.eContents().get(0);
-		private final Keyword cCommaKeyword_18_3 = (Keyword)cGroup_18.eContents().get(3);
-		private final Assignment cVar3Assignment_18_4 = (Assignment)cGroup_18.eContents().get(4);
-		private final RuleCall cVar3ChkVariablesParserRuleCall_18_4_0 = (RuleCall)cVar3Assignment_18_4.eContents().get(0);
-		private final Keyword cRightParenthesisKeyword_18_5 = (Keyword)cGroup_18.eContents().get(5);
+		private final Keyword cRightParenthesisKeyword_18_3 = (Keyword)cGroup_18.eContents().get(3);
 		private final Group cGroup_19 = (Group)cAlternatives.eContents().get(19);
-		private final Assignment cMultiplyAssignment_19_0 = (Assignment)cGroup_19.eContents().get(0);
-		private final Keyword cMultiplyMultiplyKeyword_19_0_0 = (Keyword)cMultiplyAssignment_19_0.eContents().get(0);
+		private final Assignment cPlusAssignment_19_0 = (Assignment)cGroup_19.eContents().get(0);
+		private final Keyword cPlusPlusKeyword_19_0_0 = (Keyword)cPlusAssignment_19_0.eContents().get(0);
 		private final Keyword cLeftParenthesisKeyword_19_1 = (Keyword)cGroup_19.eContents().get(1);
 		private final Assignment cVarAssignment_19_2 = (Assignment)cGroup_19.eContents().get(2);
 		private final RuleCall cVarChkVariableParserRuleCall_19_2_0 = (RuleCall)cVarAssignment_19_2.eContents().get(0);
@@ -1087,25 +1084,25 @@ public class CheckerDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cVar3ChkVariablesParserRuleCall_19_4_0 = (RuleCall)cVar3Assignment_19_4.eContents().get(0);
 		private final Keyword cRightParenthesisKeyword_19_5 = (Keyword)cGroup_19.eContents().get(5);
 		private final Group cGroup_20 = (Group)cAlternatives.eContents().get(20);
-		private final Assignment cInvertAssignment_20_0 = (Assignment)cGroup_20.eContents().get(0);
-		private final Keyword cInvertInvertKeyword_20_0_0 = (Keyword)cInvertAssignment_20_0.eContents().get(0);
+		private final Assignment cMultiplyAssignment_20_0 = (Assignment)cGroup_20.eContents().get(0);
+		private final Keyword cMultiplyMultiplyKeyword_20_0_0 = (Keyword)cMultiplyAssignment_20_0.eContents().get(0);
 		private final Keyword cLeftParenthesisKeyword_20_1 = (Keyword)cGroup_20.eContents().get(1);
 		private final Assignment cVarAssignment_20_2 = (Assignment)cGroup_20.eContents().get(2);
 		private final RuleCall cVarChkVariableParserRuleCall_20_2_0 = (RuleCall)cVarAssignment_20_2.eContents().get(0);
-		private final Keyword cRightParenthesisKeyword_20_3 = (Keyword)cGroup_20.eContents().get(3);
+		private final Keyword cCommaKeyword_20_3 = (Keyword)cGroup_20.eContents().get(3);
+		private final Assignment cVar3Assignment_20_4 = (Assignment)cGroup_20.eContents().get(4);
+		private final RuleCall cVar3ChkVariablesParserRuleCall_20_4_0 = (RuleCall)cVar3Assignment_20_4.eContents().get(0);
+		private final Keyword cRightParenthesisKeyword_20_5 = (Keyword)cGroup_20.eContents().get(5);
 		private final Group cGroup_21 = (Group)cAlternatives.eContents().get(21);
-		private final Assignment cIncludeAssignment_21_0 = (Assignment)cGroup_21.eContents().get(0);
-		private final Keyword cIncludeIncludeKeyword_21_0_0 = (Keyword)cIncludeAssignment_21_0.eContents().get(0);
+		private final Assignment cInvertAssignment_21_0 = (Assignment)cGroup_21.eContents().get(0);
+		private final Keyword cInvertInvertKeyword_21_0_0 = (Keyword)cInvertAssignment_21_0.eContents().get(0);
 		private final Keyword cLeftParenthesisKeyword_21_1 = (Keyword)cGroup_21.eContents().get(1);
 		private final Assignment cVarAssignment_21_2 = (Assignment)cGroup_21.eContents().get(2);
 		private final RuleCall cVarChkVariableParserRuleCall_21_2_0 = (RuleCall)cVarAssignment_21_2.eContents().get(0);
-		private final Keyword cCommaKeyword_21_3 = (Keyword)cGroup_21.eContents().get(3);
-		private final Assignment cVar3Assignment_21_4 = (Assignment)cGroup_21.eContents().get(4);
-		private final RuleCall cVar3ChkVariablesParserRuleCall_21_4_0 = (RuleCall)cVar3Assignment_21_4.eContents().get(0);
-		private final Keyword cRightParenthesisKeyword_21_5 = (Keyword)cGroup_21.eContents().get(5);
+		private final Keyword cRightParenthesisKeyword_21_3 = (Keyword)cGroup_21.eContents().get(3);
 		private final Group cGroup_22 = (Group)cAlternatives.eContents().get(22);
-		private final Assignment cExcludeAssignment_22_0 = (Assignment)cGroup_22.eContents().get(0);
-		private final Keyword cExcludeExcludeKeyword_22_0_0 = (Keyword)cExcludeAssignment_22_0.eContents().get(0);
+		private final Assignment cIncludeAssignment_22_0 = (Assignment)cGroup_22.eContents().get(0);
+		private final Keyword cIncludeIncludeKeyword_22_0_0 = (Keyword)cIncludeAssignment_22_0.eContents().get(0);
 		private final Keyword cLeftParenthesisKeyword_22_1 = (Keyword)cGroup_22.eContents().get(1);
 		private final Assignment cVarAssignment_22_2 = (Assignment)cGroup_22.eContents().get(2);
 		private final RuleCall cVarChkVariableParserRuleCall_22_2_0 = (RuleCall)cVarAssignment_22_2.eContents().get(0);
@@ -1114,42 +1111,52 @@ public class CheckerDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cVar3ChkVariablesParserRuleCall_22_4_0 = (RuleCall)cVar3Assignment_22_4.eContents().get(0);
 		private final Keyword cRightParenthesisKeyword_22_5 = (Keyword)cGroup_22.eContents().get(5);
 		private final Group cGroup_23 = (Group)cAlternatives.eContents().get(23);
-		private final Assignment cCompositionalAssignment_23_0 = (Assignment)cGroup_23.eContents().get(0);
-		private final Keyword cCompositionalCompositionalKeyword_23_0_0 = (Keyword)cCompositionalAssignment_23_0.eContents().get(0);
+		private final Assignment cExcludeAssignment_23_0 = (Assignment)cGroup_23.eContents().get(0);
+		private final Keyword cExcludeExcludeKeyword_23_0_0 = (Keyword)cExcludeAssignment_23_0.eContents().get(0);
 		private final Keyword cLeftParenthesisKeyword_23_1 = (Keyword)cGroup_23.eContents().get(1);
 		private final Assignment cVarAssignment_23_2 = (Assignment)cGroup_23.eContents().get(2);
 		private final RuleCall cVarChkVariableParserRuleCall_23_2_0 = (RuleCall)cVarAssignment_23_2.eContents().get(0);
-		private final Keyword cRightParenthesisKeyword_23_3 = (Keyword)cGroup_23.eContents().get(3);
+		private final Keyword cCommaKeyword_23_3 = (Keyword)cGroup_23.eContents().get(3);
+		private final Assignment cVar3Assignment_23_4 = (Assignment)cGroup_23.eContents().get(4);
+		private final RuleCall cVar3ChkVariablesParserRuleCall_23_4_0 = (RuleCall)cVar3Assignment_23_4.eContents().get(0);
+		private final Keyword cRightParenthesisKeyword_23_5 = (Keyword)cGroup_23.eContents().get(5);
+		private final Group cGroup_24 = (Group)cAlternatives.eContents().get(24);
+		private final Assignment cCompositionalAssignment_24_0 = (Assignment)cGroup_24.eContents().get(0);
+		private final Keyword cCompositionalCompositionalKeyword_24_0_0 = (Keyword)cCompositionalAssignment_24_0.eContents().get(0);
+		private final Keyword cLeftParenthesisKeyword_24_1 = (Keyword)cGroup_24.eContents().get(1);
+		private final Assignment cVarAssignment_24_2 = (Assignment)cGroup_24.eContents().get(2);
+		private final RuleCall cVarChkVariableParserRuleCall_24_2_0 = (RuleCall)cVarAssignment_24_2.eContents().get(0);
+		private final Keyword cRightParenthesisKeyword_24_3 = (Keyword)cGroup_24.eContents().get(3);
 		
 		//Helper:
 		//	sum="sum" "(" var=ChkVariable ")" | max="max" "(" var=ChkVariable ")" | min="min" "(" var=ChkVariable ")" |
 		//	prime="prime" "(" var3=ChkVariables ")" | swap="swap" "(" var=ChkVariable "," var1=ValidID "," var2=ValidID ")" |
 		//	select="select" "(" vars+=ValidID ("," vars+=ValidID)* ")" | add="add" "(" var=ChkVariable "," var3=ChkVariables ")"
 		//	| remove="remove" "(" var=ChkVariable ("," var3=ChkVariables)? ")" | random="random" "(" (var3=ChkVariables ".."
-		//	var4=ChkVariables)? ")" | size="size" "(" var=ChkVariable ")" | contains="contain" "(" var=ChkVariable ","
-		//	var3=ChkVariables ")" | addRow="addRow" "(" var=ChkVariable ")" | addCol="addColumn" "(" var=ChkVariable ")" |
-		//	swapRow="swapRow" "(" var=ChkVariable "," var1=ValidID "," var2=ValidID ")" | swapCol="swapColumn" "("
-		//	var=ChkVariable "," var1=ValidID "," var2=ValidID ")" | removeRow="removeRow" "(" var=ChkVariable ","
-		//	var3=ChkVariables ")" | removeCol="removeColumn" "(" var=ChkVariable "," var3=ChkVariables ")" | permute="permute"
-		//	"(" var=ChkVariable ")" | plus="plus" "(" var=ChkVariable "," var3=ChkVariables ")" | multiply="multiply" "("
-		//	var=ChkVariable "," var3=ChkVariables ")" | invert="invert" "(" var=ChkVariable ")" | include="include" "("
-		//	var=ChkVariable "," var3=ChkVariables ")" | exclude="exclude" "(" var=ChkVariable "," var3=ChkVariables ")" |
-		//	compositional="compositional" "(" var=ChkVariable ")";
+		//	var4=ChkVariables)? ")" | size="size" "(" var=ChkVariable ")" | reverse="reverse" "(" var=ChkVariable ")" |
+		//	contains="contain" "(" var=ChkVariable "," var3=ChkVariables ")" | addRow="addRow" "(" var=ChkVariable ")" |
+		//	addCol="addColumn" "(" var=ChkVariable ")" | swapRow="swapRow" "(" var=ChkVariable "," var1=ValidID "," var2=ValidID
+		//	")" | swapCol="swapColumn" "(" var=ChkVariable "," var1=ValidID "," var2=ValidID ")" | removeRow="removeRow" "("
+		//	var=ChkVariable "," var3=ChkVariables ")" | removeCol="removeColumn" "(" var=ChkVariable "," var3=ChkVariables ")" |
+		//	permute="permute" "(" var=ChkVariable ")" | plus="plus" "(" var=ChkVariable "," var3=ChkVariables ")" |
+		//	multiply="multiply" "(" var=ChkVariable "," var3=ChkVariables ")" | invert="invert" "(" var=ChkVariable ")" |
+		//	include="include" "(" var=ChkVariable "," var3=ChkVariables ")" | exclude="exclude" "(" var=ChkVariable ","
+		//	var3=ChkVariables ")" | compositional="compositional" "(" var=ChkVariable ")";
 		public ParserRule getRule() { return rule; }
 
 		//sum="sum" "(" var=ChkVariable ")" | max="max" "(" var=ChkVariable ")" | min="min" "(" var=ChkVariable ")" |
 		//prime="prime" "(" var3=ChkVariables ")" | swap="swap" "(" var=ChkVariable "," var1=ValidID "," var2=ValidID ")" |
 		//select="select" "(" vars+=ValidID ("," vars+=ValidID)* ")" | add="add" "(" var=ChkVariable "," var3=ChkVariables ")" |
 		//remove="remove" "(" var=ChkVariable ("," var3=ChkVariables)? ")" | random="random" "(" (var3=ChkVariables ".."
-		//var4=ChkVariables)? ")" | size="size" "(" var=ChkVariable ")" | contains="contain" "(" var=ChkVariable ","
-		//var3=ChkVariables ")" | addRow="addRow" "(" var=ChkVariable ")" | addCol="addColumn" "(" var=ChkVariable ")" |
-		//swapRow="swapRow" "(" var=ChkVariable "," var1=ValidID "," var2=ValidID ")" | swapCol="swapColumn" "(" var=ChkVariable
-		//"," var1=ValidID "," var2=ValidID ")" | removeRow="removeRow" "(" var=ChkVariable "," var3=ChkVariables ")" |
-		//removeCol="removeColumn" "(" var=ChkVariable "," var3=ChkVariables ")" | permute="permute" "(" var=ChkVariable ")" |
-		//plus="plus" "(" var=ChkVariable "," var3=ChkVariables ")" | multiply="multiply" "(" var=ChkVariable ","
-		//var3=ChkVariables ")" | invert="invert" "(" var=ChkVariable ")" | include="include" "(" var=ChkVariable ","
-		//var3=ChkVariables ")" | exclude="exclude" "(" var=ChkVariable "," var3=ChkVariables ")" |
-		//compositional="compositional" "(" var=ChkVariable ")"
+		//var4=ChkVariables)? ")" | size="size" "(" var=ChkVariable ")" | reverse="reverse" "(" var=ChkVariable ")" |
+		//contains="contain" "(" var=ChkVariable "," var3=ChkVariables ")" | addRow="addRow" "(" var=ChkVariable ")" |
+		//addCol="addColumn" "(" var=ChkVariable ")" | swapRow="swapRow" "(" var=ChkVariable "," var1=ValidID "," var2=ValidID
+		//")" | swapCol="swapColumn" "(" var=ChkVariable "," var1=ValidID "," var2=ValidID ")" | removeRow="removeRow" "("
+		//var=ChkVariable "," var3=ChkVariables ")" | removeCol="removeColumn" "(" var=ChkVariable "," var3=ChkVariables ")" |
+		//permute="permute" "(" var=ChkVariable ")" | plus="plus" "(" var=ChkVariable "," var3=ChkVariables ")" |
+		//multiply="multiply" "(" var=ChkVariable "," var3=ChkVariables ")" | invert="invert" "(" var=ChkVariable ")" |
+		//include="include" "(" var=ChkVariable "," var3=ChkVariables ")" | exclude="exclude" "(" var=ChkVariable ","
+		//var3=ChkVariables ")" | compositional="compositional" "(" var=ChkVariable ")"
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//sum="sum" "(" var=ChkVariable ")"
@@ -1425,14 +1432,14 @@ public class CheckerDslGrammarAccess extends AbstractGrammarElementFinder {
 		//")"
 		public Keyword getRightParenthesisKeyword_9_3() { return cRightParenthesisKeyword_9_3; }
 
-		//contains="contain" "(" var=ChkVariable "," var3=ChkVariables ")"
+		//reverse="reverse" "(" var=ChkVariable ")"
 		public Group getGroup_10() { return cGroup_10; }
 
-		//contains="contain"
-		public Assignment getContainsAssignment_10_0() { return cContainsAssignment_10_0; }
+		//reverse="reverse"
+		public Assignment getReverseAssignment_10_0() { return cReverseAssignment_10_0; }
 
-		//"contain"
-		public Keyword getContainsContainKeyword_10_0_0() { return cContainsContainKeyword_10_0_0; }
+		//"reverse"
+		public Keyword getReverseReverseKeyword_10_0_0() { return cReverseReverseKeyword_10_0_0; }
 
 		//"("
 		public Keyword getLeftParenthesisKeyword_10_1() { return cLeftParenthesisKeyword_10_1; }
@@ -1443,26 +1450,17 @@ public class CheckerDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ChkVariable
 		public RuleCall getVarChkVariableParserRuleCall_10_2_0() { return cVarChkVariableParserRuleCall_10_2_0; }
 
-		//","
-		public Keyword getCommaKeyword_10_3() { return cCommaKeyword_10_3; }
-
-		//var3=ChkVariables
-		public Assignment getVar3Assignment_10_4() { return cVar3Assignment_10_4; }
-
-		//ChkVariables
-		public RuleCall getVar3ChkVariablesParserRuleCall_10_4_0() { return cVar3ChkVariablesParserRuleCall_10_4_0; }
-
 		//")"
-		public Keyword getRightParenthesisKeyword_10_5() { return cRightParenthesisKeyword_10_5; }
+		public Keyword getRightParenthesisKeyword_10_3() { return cRightParenthesisKeyword_10_3; }
 
-		//addRow="addRow" "(" var=ChkVariable ")"
+		//contains="contain" "(" var=ChkVariable "," var3=ChkVariables ")"
 		public Group getGroup_11() { return cGroup_11; }
 
-		//addRow="addRow"
-		public Assignment getAddRowAssignment_11_0() { return cAddRowAssignment_11_0; }
+		//contains="contain"
+		public Assignment getContainsAssignment_11_0() { return cContainsAssignment_11_0; }
 
-		//"addRow"
-		public Keyword getAddRowAddRowKeyword_11_0_0() { return cAddRowAddRowKeyword_11_0_0; }
+		//"contain"
+		public Keyword getContainsContainKeyword_11_0_0() { return cContainsContainKeyword_11_0_0; }
 
 		//"("
 		public Keyword getLeftParenthesisKeyword_11_1() { return cLeftParenthesisKeyword_11_1; }
@@ -1473,17 +1471,26 @@ public class CheckerDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ChkVariable
 		public RuleCall getVarChkVariableParserRuleCall_11_2_0() { return cVarChkVariableParserRuleCall_11_2_0; }
 
-		//")"
-		public Keyword getRightParenthesisKeyword_11_3() { return cRightParenthesisKeyword_11_3; }
+		//","
+		public Keyword getCommaKeyword_11_3() { return cCommaKeyword_11_3; }
 
-		//addCol="addColumn" "(" var=ChkVariable ")"
+		//var3=ChkVariables
+		public Assignment getVar3Assignment_11_4() { return cVar3Assignment_11_4; }
+
+		//ChkVariables
+		public RuleCall getVar3ChkVariablesParserRuleCall_11_4_0() { return cVar3ChkVariablesParserRuleCall_11_4_0; }
+
+		//")"
+		public Keyword getRightParenthesisKeyword_11_5() { return cRightParenthesisKeyword_11_5; }
+
+		//addRow="addRow" "(" var=ChkVariable ")"
 		public Group getGroup_12() { return cGroup_12; }
 
-		//addCol="addColumn"
-		public Assignment getAddColAssignment_12_0() { return cAddColAssignment_12_0; }
+		//addRow="addRow"
+		public Assignment getAddRowAssignment_12_0() { return cAddRowAssignment_12_0; }
 
-		//"addColumn"
-		public Keyword getAddColAddColumnKeyword_12_0_0() { return cAddColAddColumnKeyword_12_0_0; }
+		//"addRow"
+		public Keyword getAddRowAddRowKeyword_12_0_0() { return cAddRowAddRowKeyword_12_0_0; }
 
 		//"("
 		public Keyword getLeftParenthesisKeyword_12_1() { return cLeftParenthesisKeyword_12_1; }
@@ -1497,14 +1504,14 @@ public class CheckerDslGrammarAccess extends AbstractGrammarElementFinder {
 		//")"
 		public Keyword getRightParenthesisKeyword_12_3() { return cRightParenthesisKeyword_12_3; }
 
-		//swapRow="swapRow" "(" var=ChkVariable "," var1=ValidID "," var2=ValidID ")"
+		//addCol="addColumn" "(" var=ChkVariable ")"
 		public Group getGroup_13() { return cGroup_13; }
 
-		//swapRow="swapRow"
-		public Assignment getSwapRowAssignment_13_0() { return cSwapRowAssignment_13_0; }
+		//addCol="addColumn"
+		public Assignment getAddColAssignment_13_0() { return cAddColAssignment_13_0; }
 
-		//"swapRow"
-		public Keyword getSwapRowSwapRowKeyword_13_0_0() { return cSwapRowSwapRowKeyword_13_0_0; }
+		//"addColumn"
+		public Keyword getAddColAddColumnKeyword_13_0_0() { return cAddColAddColumnKeyword_13_0_0; }
 
 		//"("
 		public Keyword getLeftParenthesisKeyword_13_1() { return cLeftParenthesisKeyword_13_1; }
@@ -1515,35 +1522,17 @@ public class CheckerDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ChkVariable
 		public RuleCall getVarChkVariableParserRuleCall_13_2_0() { return cVarChkVariableParserRuleCall_13_2_0; }
 
-		//","
-		public Keyword getCommaKeyword_13_3() { return cCommaKeyword_13_3; }
-
-		//var1=ValidID
-		public Assignment getVar1Assignment_13_4() { return cVar1Assignment_13_4; }
-
-		//ValidID
-		public RuleCall getVar1ValidIDParserRuleCall_13_4_0() { return cVar1ValidIDParserRuleCall_13_4_0; }
-
-		//","
-		public Keyword getCommaKeyword_13_5() { return cCommaKeyword_13_5; }
-
-		//var2=ValidID
-		public Assignment getVar2Assignment_13_6() { return cVar2Assignment_13_6; }
-
-		//ValidID
-		public RuleCall getVar2ValidIDParserRuleCall_13_6_0() { return cVar2ValidIDParserRuleCall_13_6_0; }
-
 		//")"
-		public Keyword getRightParenthesisKeyword_13_7() { return cRightParenthesisKeyword_13_7; }
+		public Keyword getRightParenthesisKeyword_13_3() { return cRightParenthesisKeyword_13_3; }
 
-		//swapCol="swapColumn" "(" var=ChkVariable "," var1=ValidID "," var2=ValidID ")"
+		//swapRow="swapRow" "(" var=ChkVariable "," var1=ValidID "," var2=ValidID ")"
 		public Group getGroup_14() { return cGroup_14; }
 
-		//swapCol="swapColumn"
-		public Assignment getSwapColAssignment_14_0() { return cSwapColAssignment_14_0; }
+		//swapRow="swapRow"
+		public Assignment getSwapRowAssignment_14_0() { return cSwapRowAssignment_14_0; }
 
-		//"swapColumn"
-		public Keyword getSwapColSwapColumnKeyword_14_0_0() { return cSwapColSwapColumnKeyword_14_0_0; }
+		//"swapRow"
+		public Keyword getSwapRowSwapRowKeyword_14_0_0() { return cSwapRowSwapRowKeyword_14_0_0; }
 
 		//"("
 		public Keyword getLeftParenthesisKeyword_14_1() { return cLeftParenthesisKeyword_14_1; }
@@ -1575,14 +1564,14 @@ public class CheckerDslGrammarAccess extends AbstractGrammarElementFinder {
 		//")"
 		public Keyword getRightParenthesisKeyword_14_7() { return cRightParenthesisKeyword_14_7; }
 
-		//removeRow="removeRow" "(" var=ChkVariable "," var3=ChkVariables ")"
+		//swapCol="swapColumn" "(" var=ChkVariable "," var1=ValidID "," var2=ValidID ")"
 		public Group getGroup_15() { return cGroup_15; }
 
-		//removeRow="removeRow"
-		public Assignment getRemoveRowAssignment_15_0() { return cRemoveRowAssignment_15_0; }
+		//swapCol="swapColumn"
+		public Assignment getSwapColAssignment_15_0() { return cSwapColAssignment_15_0; }
 
-		//"removeRow"
-		public Keyword getRemoveRowRemoveRowKeyword_15_0_0() { return cRemoveRowRemoveRowKeyword_15_0_0; }
+		//"swapColumn"
+		public Keyword getSwapColSwapColumnKeyword_15_0_0() { return cSwapColSwapColumnKeyword_15_0_0; }
 
 		//"("
 		public Keyword getLeftParenthesisKeyword_15_1() { return cLeftParenthesisKeyword_15_1; }
@@ -1596,23 +1585,32 @@ public class CheckerDslGrammarAccess extends AbstractGrammarElementFinder {
 		//","
 		public Keyword getCommaKeyword_15_3() { return cCommaKeyword_15_3; }
 
-		//var3=ChkVariables
-		public Assignment getVar3Assignment_15_4() { return cVar3Assignment_15_4; }
+		//var1=ValidID
+		public Assignment getVar1Assignment_15_4() { return cVar1Assignment_15_4; }
 
-		//ChkVariables
-		public RuleCall getVar3ChkVariablesParserRuleCall_15_4_0() { return cVar3ChkVariablesParserRuleCall_15_4_0; }
+		//ValidID
+		public RuleCall getVar1ValidIDParserRuleCall_15_4_0() { return cVar1ValidIDParserRuleCall_15_4_0; }
+
+		//","
+		public Keyword getCommaKeyword_15_5() { return cCommaKeyword_15_5; }
+
+		//var2=ValidID
+		public Assignment getVar2Assignment_15_6() { return cVar2Assignment_15_6; }
+
+		//ValidID
+		public RuleCall getVar2ValidIDParserRuleCall_15_6_0() { return cVar2ValidIDParserRuleCall_15_6_0; }
 
 		//")"
-		public Keyword getRightParenthesisKeyword_15_5() { return cRightParenthesisKeyword_15_5; }
+		public Keyword getRightParenthesisKeyword_15_7() { return cRightParenthesisKeyword_15_7; }
 
-		//removeCol="removeColumn" "(" var=ChkVariable "," var3=ChkVariables ")"
+		//removeRow="removeRow" "(" var=ChkVariable "," var3=ChkVariables ")"
 		public Group getGroup_16() { return cGroup_16; }
 
-		//removeCol="removeColumn"
-		public Assignment getRemoveColAssignment_16_0() { return cRemoveColAssignment_16_0; }
+		//removeRow="removeRow"
+		public Assignment getRemoveRowAssignment_16_0() { return cRemoveRowAssignment_16_0; }
 
-		//"removeColumn"
-		public Keyword getRemoveColRemoveColumnKeyword_16_0_0() { return cRemoveColRemoveColumnKeyword_16_0_0; }
+		//"removeRow"
+		public Keyword getRemoveRowRemoveRowKeyword_16_0_0() { return cRemoveRowRemoveRowKeyword_16_0_0; }
 
 		//"("
 		public Keyword getLeftParenthesisKeyword_16_1() { return cLeftParenthesisKeyword_16_1; }
@@ -1635,14 +1633,14 @@ public class CheckerDslGrammarAccess extends AbstractGrammarElementFinder {
 		//")"
 		public Keyword getRightParenthesisKeyword_16_5() { return cRightParenthesisKeyword_16_5; }
 
-		//permute="permute" "(" var=ChkVariable ")"
+		//removeCol="removeColumn" "(" var=ChkVariable "," var3=ChkVariables ")"
 		public Group getGroup_17() { return cGroup_17; }
 
-		//permute="permute"
-		public Assignment getPermuteAssignment_17_0() { return cPermuteAssignment_17_0; }
+		//removeCol="removeColumn"
+		public Assignment getRemoveColAssignment_17_0() { return cRemoveColAssignment_17_0; }
 
-		//"permute"
-		public Keyword getPermutePermuteKeyword_17_0_0() { return cPermutePermuteKeyword_17_0_0; }
+		//"removeColumn"
+		public Keyword getRemoveColRemoveColumnKeyword_17_0_0() { return cRemoveColRemoveColumnKeyword_17_0_0; }
 
 		//"("
 		public Keyword getLeftParenthesisKeyword_17_1() { return cLeftParenthesisKeyword_17_1; }
@@ -1653,17 +1651,26 @@ public class CheckerDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ChkVariable
 		public RuleCall getVarChkVariableParserRuleCall_17_2_0() { return cVarChkVariableParserRuleCall_17_2_0; }
 
-		//")"
-		public Keyword getRightParenthesisKeyword_17_3() { return cRightParenthesisKeyword_17_3; }
+		//","
+		public Keyword getCommaKeyword_17_3() { return cCommaKeyword_17_3; }
 
-		//plus="plus" "(" var=ChkVariable "," var3=ChkVariables ")"
+		//var3=ChkVariables
+		public Assignment getVar3Assignment_17_4() { return cVar3Assignment_17_4; }
+
+		//ChkVariables
+		public RuleCall getVar3ChkVariablesParserRuleCall_17_4_0() { return cVar3ChkVariablesParserRuleCall_17_4_0; }
+
+		//")"
+		public Keyword getRightParenthesisKeyword_17_5() { return cRightParenthesisKeyword_17_5; }
+
+		//permute="permute" "(" var=ChkVariable ")"
 		public Group getGroup_18() { return cGroup_18; }
 
-		//plus="plus"
-		public Assignment getPlusAssignment_18_0() { return cPlusAssignment_18_0; }
+		//permute="permute"
+		public Assignment getPermuteAssignment_18_0() { return cPermuteAssignment_18_0; }
 
-		//"plus"
-		public Keyword getPlusPlusKeyword_18_0_0() { return cPlusPlusKeyword_18_0_0; }
+		//"permute"
+		public Keyword getPermutePermuteKeyword_18_0_0() { return cPermutePermuteKeyword_18_0_0; }
 
 		//"("
 		public Keyword getLeftParenthesisKeyword_18_1() { return cLeftParenthesisKeyword_18_1; }
@@ -1674,26 +1681,17 @@ public class CheckerDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ChkVariable
 		public RuleCall getVarChkVariableParserRuleCall_18_2_0() { return cVarChkVariableParserRuleCall_18_2_0; }
 
-		//","
-		public Keyword getCommaKeyword_18_3() { return cCommaKeyword_18_3; }
-
-		//var3=ChkVariables
-		public Assignment getVar3Assignment_18_4() { return cVar3Assignment_18_4; }
-
-		//ChkVariables
-		public RuleCall getVar3ChkVariablesParserRuleCall_18_4_0() { return cVar3ChkVariablesParserRuleCall_18_4_0; }
-
 		//")"
-		public Keyword getRightParenthesisKeyword_18_5() { return cRightParenthesisKeyword_18_5; }
+		public Keyword getRightParenthesisKeyword_18_3() { return cRightParenthesisKeyword_18_3; }
 
-		//multiply="multiply" "(" var=ChkVariable "," var3=ChkVariables ")"
+		//plus="plus" "(" var=ChkVariable "," var3=ChkVariables ")"
 		public Group getGroup_19() { return cGroup_19; }
 
-		//multiply="multiply"
-		public Assignment getMultiplyAssignment_19_0() { return cMultiplyAssignment_19_0; }
+		//plus="plus"
+		public Assignment getPlusAssignment_19_0() { return cPlusAssignment_19_0; }
 
-		//"multiply"
-		public Keyword getMultiplyMultiplyKeyword_19_0_0() { return cMultiplyMultiplyKeyword_19_0_0; }
+		//"plus"
+		public Keyword getPlusPlusKeyword_19_0_0() { return cPlusPlusKeyword_19_0_0; }
 
 		//"("
 		public Keyword getLeftParenthesisKeyword_19_1() { return cLeftParenthesisKeyword_19_1; }
@@ -1716,14 +1714,14 @@ public class CheckerDslGrammarAccess extends AbstractGrammarElementFinder {
 		//")"
 		public Keyword getRightParenthesisKeyword_19_5() { return cRightParenthesisKeyword_19_5; }
 
-		//invert="invert" "(" var=ChkVariable ")"
+		//multiply="multiply" "(" var=ChkVariable "," var3=ChkVariables ")"
 		public Group getGroup_20() { return cGroup_20; }
 
-		//invert="invert"
-		public Assignment getInvertAssignment_20_0() { return cInvertAssignment_20_0; }
+		//multiply="multiply"
+		public Assignment getMultiplyAssignment_20_0() { return cMultiplyAssignment_20_0; }
 
-		//"invert"
-		public Keyword getInvertInvertKeyword_20_0_0() { return cInvertInvertKeyword_20_0_0; }
+		//"multiply"
+		public Keyword getMultiplyMultiplyKeyword_20_0_0() { return cMultiplyMultiplyKeyword_20_0_0; }
 
 		//"("
 		public Keyword getLeftParenthesisKeyword_20_1() { return cLeftParenthesisKeyword_20_1; }
@@ -1734,17 +1732,26 @@ public class CheckerDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ChkVariable
 		public RuleCall getVarChkVariableParserRuleCall_20_2_0() { return cVarChkVariableParserRuleCall_20_2_0; }
 
-		//")"
-		public Keyword getRightParenthesisKeyword_20_3() { return cRightParenthesisKeyword_20_3; }
+		//","
+		public Keyword getCommaKeyword_20_3() { return cCommaKeyword_20_3; }
 
-		//include="include" "(" var=ChkVariable "," var3=ChkVariables ")"
+		//var3=ChkVariables
+		public Assignment getVar3Assignment_20_4() { return cVar3Assignment_20_4; }
+
+		//ChkVariables
+		public RuleCall getVar3ChkVariablesParserRuleCall_20_4_0() { return cVar3ChkVariablesParserRuleCall_20_4_0; }
+
+		//")"
+		public Keyword getRightParenthesisKeyword_20_5() { return cRightParenthesisKeyword_20_5; }
+
+		//invert="invert" "(" var=ChkVariable ")"
 		public Group getGroup_21() { return cGroup_21; }
 
-		//include="include"
-		public Assignment getIncludeAssignment_21_0() { return cIncludeAssignment_21_0; }
+		//invert="invert"
+		public Assignment getInvertAssignment_21_0() { return cInvertAssignment_21_0; }
 
-		//"include"
-		public Keyword getIncludeIncludeKeyword_21_0_0() { return cIncludeIncludeKeyword_21_0_0; }
+		//"invert"
+		public Keyword getInvertInvertKeyword_21_0_0() { return cInvertInvertKeyword_21_0_0; }
 
 		//"("
 		public Keyword getLeftParenthesisKeyword_21_1() { return cLeftParenthesisKeyword_21_1; }
@@ -1755,26 +1762,17 @@ public class CheckerDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ChkVariable
 		public RuleCall getVarChkVariableParserRuleCall_21_2_0() { return cVarChkVariableParserRuleCall_21_2_0; }
 
-		//","
-		public Keyword getCommaKeyword_21_3() { return cCommaKeyword_21_3; }
-
-		//var3=ChkVariables
-		public Assignment getVar3Assignment_21_4() { return cVar3Assignment_21_4; }
-
-		//ChkVariables
-		public RuleCall getVar3ChkVariablesParserRuleCall_21_4_0() { return cVar3ChkVariablesParserRuleCall_21_4_0; }
-
 		//")"
-		public Keyword getRightParenthesisKeyword_21_5() { return cRightParenthesisKeyword_21_5; }
+		public Keyword getRightParenthesisKeyword_21_3() { return cRightParenthesisKeyword_21_3; }
 
-		//exclude="exclude" "(" var=ChkVariable "," var3=ChkVariables ")"
+		//include="include" "(" var=ChkVariable "," var3=ChkVariables ")"
 		public Group getGroup_22() { return cGroup_22; }
 
-		//exclude="exclude"
-		public Assignment getExcludeAssignment_22_0() { return cExcludeAssignment_22_0; }
+		//include="include"
+		public Assignment getIncludeAssignment_22_0() { return cIncludeAssignment_22_0; }
 
-		//"exclude"
-		public Keyword getExcludeExcludeKeyword_22_0_0() { return cExcludeExcludeKeyword_22_0_0; }
+		//"include"
+		public Keyword getIncludeIncludeKeyword_22_0_0() { return cIncludeIncludeKeyword_22_0_0; }
 
 		//"("
 		public Keyword getLeftParenthesisKeyword_22_1() { return cLeftParenthesisKeyword_22_1; }
@@ -1797,14 +1795,14 @@ public class CheckerDslGrammarAccess extends AbstractGrammarElementFinder {
 		//")"
 		public Keyword getRightParenthesisKeyword_22_5() { return cRightParenthesisKeyword_22_5; }
 
-		//compositional="compositional" "(" var=ChkVariable ")"
+		//exclude="exclude" "(" var=ChkVariable "," var3=ChkVariables ")"
 		public Group getGroup_23() { return cGroup_23; }
 
-		//compositional="compositional"
-		public Assignment getCompositionalAssignment_23_0() { return cCompositionalAssignment_23_0; }
+		//exclude="exclude"
+		public Assignment getExcludeAssignment_23_0() { return cExcludeAssignment_23_0; }
 
-		//"compositional"
-		public Keyword getCompositionalCompositionalKeyword_23_0_0() { return cCompositionalCompositionalKeyword_23_0_0; }
+		//"exclude"
+		public Keyword getExcludeExcludeKeyword_23_0_0() { return cExcludeExcludeKeyword_23_0_0; }
 
 		//"("
 		public Keyword getLeftParenthesisKeyword_23_1() { return cLeftParenthesisKeyword_23_1; }
@@ -1815,8 +1813,38 @@ public class CheckerDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ChkVariable
 		public RuleCall getVarChkVariableParserRuleCall_23_2_0() { return cVarChkVariableParserRuleCall_23_2_0; }
 
+		//","
+		public Keyword getCommaKeyword_23_3() { return cCommaKeyword_23_3; }
+
+		//var3=ChkVariables
+		public Assignment getVar3Assignment_23_4() { return cVar3Assignment_23_4; }
+
+		//ChkVariables
+		public RuleCall getVar3ChkVariablesParserRuleCall_23_4_0() { return cVar3ChkVariablesParserRuleCall_23_4_0; }
+
 		//")"
-		public Keyword getRightParenthesisKeyword_23_3() { return cRightParenthesisKeyword_23_3; }
+		public Keyword getRightParenthesisKeyword_23_5() { return cRightParenthesisKeyword_23_5; }
+
+		//compositional="compositional" "(" var=ChkVariable ")"
+		public Group getGroup_24() { return cGroup_24; }
+
+		//compositional="compositional"
+		public Assignment getCompositionalAssignment_24_0() { return cCompositionalAssignment_24_0; }
+
+		//"compositional"
+		public Keyword getCompositionalCompositionalKeyword_24_0_0() { return cCompositionalCompositionalKeyword_24_0_0; }
+
+		//"("
+		public Keyword getLeftParenthesisKeyword_24_1() { return cLeftParenthesisKeyword_24_1; }
+
+		//var=ChkVariable
+		public Assignment getVarAssignment_24_2() { return cVarAssignment_24_2; }
+
+		//ChkVariable
+		public RuleCall getVarChkVariableParserRuleCall_24_2_0() { return cVarChkVariableParserRuleCall_24_2_0; }
+
+		//")"
+		public Keyword getRightParenthesisKeyword_24_3() { return cRightParenthesisKeyword_24_3; }
 	}
 
 	public class ChkRelationalExpressionElements extends AbstractParserRuleElementFinder {
@@ -3064,7 +3092,7 @@ public class CheckerDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//ChkVariableDeclaration:
-	//	type=ChkTypeReference ("[" sz+=CHK_NUMBER "]")* name=ValidID ("(" limit1=Limit (";" limit+=Limit)* ")")? ("sp" "{"
+	//	type=ChkTypeReference ("[" sz+=CHK_NUMBER "]")* name=ValidID ("(" limit1=Limit (";" limit+=Limit)* ")")? ("value" "{"
 	//	spValue=SpValue "}")?;
 	public ChkVariableDeclarationElements getChkVariableDeclarationAccess() {
 		return pChkVariableDeclaration;
@@ -3139,15 +3167,15 @@ public class CheckerDslGrammarAccess extends AbstractGrammarElementFinder {
 	//	prime="prime" "(" var3=ChkVariables ")" | swap="swap" "(" var=ChkVariable "," var1=ValidID "," var2=ValidID ")" |
 	//	select="select" "(" vars+=ValidID ("," vars+=ValidID)* ")" | add="add" "(" var=ChkVariable "," var3=ChkVariables ")"
 	//	| remove="remove" "(" var=ChkVariable ("," var3=ChkVariables)? ")" | random="random" "(" (var3=ChkVariables ".."
-	//	var4=ChkVariables)? ")" | size="size" "(" var=ChkVariable ")" | contains="contain" "(" var=ChkVariable ","
-	//	var3=ChkVariables ")" | addRow="addRow" "(" var=ChkVariable ")" | addCol="addColumn" "(" var=ChkVariable ")" |
-	//	swapRow="swapRow" "(" var=ChkVariable "," var1=ValidID "," var2=ValidID ")" | swapCol="swapColumn" "("
-	//	var=ChkVariable "," var1=ValidID "," var2=ValidID ")" | removeRow="removeRow" "(" var=ChkVariable ","
-	//	var3=ChkVariables ")" | removeCol="removeColumn" "(" var=ChkVariable "," var3=ChkVariables ")" | permute="permute"
-	//	"(" var=ChkVariable ")" | plus="plus" "(" var=ChkVariable "," var3=ChkVariables ")" | multiply="multiply" "("
-	//	var=ChkVariable "," var3=ChkVariables ")" | invert="invert" "(" var=ChkVariable ")" | include="include" "("
-	//	var=ChkVariable "," var3=ChkVariables ")" | exclude="exclude" "(" var=ChkVariable "," var3=ChkVariables ")" |
-	//	compositional="compositional" "(" var=ChkVariable ")";
+	//	var4=ChkVariables)? ")" | size="size" "(" var=ChkVariable ")" | reverse="reverse" "(" var=ChkVariable ")" |
+	//	contains="contain" "(" var=ChkVariable "," var3=ChkVariables ")" | addRow="addRow" "(" var=ChkVariable ")" |
+	//	addCol="addColumn" "(" var=ChkVariable ")" | swapRow="swapRow" "(" var=ChkVariable "," var1=ValidID "," var2=ValidID
+	//	")" | swapCol="swapColumn" "(" var=ChkVariable "," var1=ValidID "," var2=ValidID ")" | removeRow="removeRow" "("
+	//	var=ChkVariable "," var3=ChkVariables ")" | removeCol="removeColumn" "(" var=ChkVariable "," var3=ChkVariables ")" |
+	//	permute="permute" "(" var=ChkVariable ")" | plus="plus" "(" var=ChkVariable "," var3=ChkVariables ")" |
+	//	multiply="multiply" "(" var=ChkVariable "," var3=ChkVariables ")" | invert="invert" "(" var=ChkVariable ")" |
+	//	include="include" "(" var=ChkVariable "," var3=ChkVariables ")" | exclude="exclude" "(" var=ChkVariable ","
+	//	var3=ChkVariables ")" | compositional="compositional" "(" var=ChkVariable ")";
 	public HelperElements getHelperAccess() {
 		return pHelper;
 	}

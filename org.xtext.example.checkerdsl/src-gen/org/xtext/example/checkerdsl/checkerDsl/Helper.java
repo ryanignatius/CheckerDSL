@@ -29,6 +29,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getRandom <em>Random</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getVar4 <em>Var4</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getSize <em>Size</em>}</li>
+ *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getReverse <em>Reverse</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getContains <em>Contains</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getAddRow <em>Add Row</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getAddCol <em>Add Col</em>}</li>
@@ -456,6 +457,32 @@ public interface Helper extends ChkGeneralExpressions
    * @generated
    */
   void setSize(String value);
+
+  /**
+   * Returns the value of the '<em><b>Reverse</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Reverse</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Reverse</em>' attribute.
+   * @see #setReverse(String)
+   * @see org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage#getHelper_Reverse()
+   * @model
+   * @generated
+   */
+  String getReverse();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getReverse <em>Reverse</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Reverse</em>' attribute.
+   * @see #getReverse()
+   * @generated
+   */
+  void setReverse(String value);
 
   /**
    * Returns the value of the '<em><b>Contains</b></em>' attribute.

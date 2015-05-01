@@ -45,6 +45,7 @@ import org.xtext.example.checkerdsl.checkerDsl.Helper;
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.HelperImpl#getRandom <em>Random</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.HelperImpl#getVar4 <em>Var4</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.HelperImpl#getSize <em>Size</em>}</li>
+ *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.HelperImpl#getReverse <em>Reverse</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.HelperImpl#getContains <em>Contains</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.HelperImpl#getAddRow <em>Add Row</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.HelperImpl#getAddCol <em>Add Col</em>}</li>
@@ -344,6 +345,26 @@ public class HelperImpl extends ChkGeneralExpressionsImpl implements Helper
    * @ordered
    */
   protected String size = SIZE_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getReverse() <em>Reverse</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getReverse()
+   * @generated
+   * @ordered
+   */
+  protected static final String REVERSE_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getReverse() <em>Reverse</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getReverse()
+   * @generated
+   * @ordered
+   */
+  protected String reverse = REVERSE_EDEFAULT;
 
   /**
    * The default value of the '{@link #getContains() <em>Contains</em>}' attribute.
@@ -1085,6 +1106,29 @@ public class HelperImpl extends ChkGeneralExpressionsImpl implements Helper
    * <!-- end-user-doc -->
    * @generated
    */
+  public String getReverse()
+  {
+    return reverse;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setReverse(String newReverse)
+  {
+    String oldReverse = reverse;
+    reverse = newReverse;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, CheckerDslPackage.HELPER__REVERSE, oldReverse, reverse));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public String getContains()
   {
     return contains;
@@ -1464,6 +1508,8 @@ public class HelperImpl extends ChkGeneralExpressionsImpl implements Helper
         return getVar4();
       case CheckerDslPackage.HELPER__SIZE:
         return getSize();
+      case CheckerDslPackage.HELPER__REVERSE:
+        return getReverse();
       case CheckerDslPackage.HELPER__CONTAINS:
         return getContains();
       case CheckerDslPackage.HELPER__ADD_ROW:
@@ -1555,6 +1601,9 @@ public class HelperImpl extends ChkGeneralExpressionsImpl implements Helper
         return;
       case CheckerDslPackage.HELPER__SIZE:
         setSize((String)newValue);
+        return;
+      case CheckerDslPackage.HELPER__REVERSE:
+        setReverse((String)newValue);
         return;
       case CheckerDslPackage.HELPER__CONTAINS:
         setContains((String)newValue);
@@ -1660,6 +1709,9 @@ public class HelperImpl extends ChkGeneralExpressionsImpl implements Helper
       case CheckerDslPackage.HELPER__SIZE:
         setSize(SIZE_EDEFAULT);
         return;
+      case CheckerDslPackage.HELPER__REVERSE:
+        setReverse(REVERSE_EDEFAULT);
+        return;
       case CheckerDslPackage.HELPER__CONTAINS:
         setContains(CONTAINS_EDEFAULT);
         return;
@@ -1748,6 +1800,8 @@ public class HelperImpl extends ChkGeneralExpressionsImpl implements Helper
         return var4 != null;
       case CheckerDslPackage.HELPER__SIZE:
         return SIZE_EDEFAULT == null ? size != null : !SIZE_EDEFAULT.equals(size);
+      case CheckerDslPackage.HELPER__REVERSE:
+        return REVERSE_EDEFAULT == null ? reverse != null : !REVERSE_EDEFAULT.equals(reverse);
       case CheckerDslPackage.HELPER__CONTAINS:
         return CONTAINS_EDEFAULT == null ? contains != null : !CONTAINS_EDEFAULT.equals(contains);
       case CheckerDslPackage.HELPER__ADD_ROW:
@@ -1817,6 +1871,8 @@ public class HelperImpl extends ChkGeneralExpressionsImpl implements Helper
     result.append(random);
     result.append(", size: ");
     result.append(size);
+    result.append(", reverse: ");
+    result.append(reverse);
     result.append(", contains: ");
     result.append(contains);
     result.append(", addRow: ");
