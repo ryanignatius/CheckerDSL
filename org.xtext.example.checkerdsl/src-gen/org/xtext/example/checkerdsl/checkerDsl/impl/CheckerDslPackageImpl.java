@@ -718,7 +718,7 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getChkVariableDeclaration_Sz()
+  public EAttribute getChkVariableDeclaration_Arr()
   {
     return (EAttribute)chkVariableDeclarationEClass.getEStructuralFeatures().get(1);
   }
@@ -728,7 +728,7 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getChkVariableDeclaration_Name()
+  public EAttribute getChkVariableDeclaration_Sz()
   {
     return (EAttribute)chkVariableDeclarationEClass.getEStructuralFeatures().get(2);
   }
@@ -738,9 +738,9 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getChkVariableDeclaration_Limit1()
+  public EAttribute getChkVariableDeclaration_Name()
   {
-    return (EReference)chkVariableDeclarationEClass.getEStructuralFeatures().get(3);
+    return (EAttribute)chkVariableDeclarationEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -748,7 +748,7 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getChkVariableDeclaration_Limit()
+  public EReference getChkVariableDeclaration_Limit1()
   {
     return (EReference)chkVariableDeclarationEClass.getEStructuralFeatures().get(4);
   }
@@ -758,9 +758,19 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getChkVariableDeclaration_SpValue()
+  public EReference getChkVariableDeclaration_Limit()
   {
     return (EReference)chkVariableDeclarationEClass.getEStructuralFeatures().get(5);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getChkVariableDeclaration_SpValue()
+  {
+    return (EReference)chkVariableDeclarationEClass.getEStructuralFeatures().get(6);
   }
 
   /**
@@ -1849,6 +1859,7 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
 
     chkVariableDeclarationEClass = createEClass(CHK_VARIABLE_DECLARATION);
     createEAttribute(chkVariableDeclarationEClass, CHK_VARIABLE_DECLARATION__TYPE);
+    createEAttribute(chkVariableDeclarationEClass, CHK_VARIABLE_DECLARATION__ARR);
     createEAttribute(chkVariableDeclarationEClass, CHK_VARIABLE_DECLARATION__SZ);
     createEAttribute(chkVariableDeclarationEClass, CHK_VARIABLE_DECLARATION__NAME);
     createEReference(chkVariableDeclarationEClass, CHK_VARIABLE_DECLARATION__LIMIT1);
@@ -2076,6 +2087,7 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
 
     initEClass(chkVariableDeclarationEClass, ChkVariableDeclaration.class, "ChkVariableDeclaration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getChkVariableDeclaration_Type(), ecorePackage.getEString(), "type", null, 0, 1, ChkVariableDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getChkVariableDeclaration_Arr(), ecorePackage.getEString(), "arr", null, 0, -1, ChkVariableDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getChkVariableDeclaration_Sz(), ecorePackage.getEString(), "sz", null, 0, -1, ChkVariableDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getChkVariableDeclaration_Name(), ecorePackage.getEString(), "name", null, 0, 1, ChkVariableDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getChkVariableDeclaration_Limit1(), this.getLimit(), null, "limit1", null, 0, 1, ChkVariableDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

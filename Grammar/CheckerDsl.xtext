@@ -53,7 +53,7 @@ MR:
   	'}';
 
 ChkVariableDeclaration:
-  type=ChkTypeReference ('[' sz+=CHK_NUMBER ']')* name=ValidID
+  type=ChkTypeReference (arr+='[' (sz+=CHK_NUMBER)? ']')* name=ValidID
   ('(' limit1=Limit (';' limit+=Limit)* ')')?
   ('value' '{' spValue=SpValue '}')?;
 
@@ -178,7 +178,7 @@ HiddenFormat:
 
 FormatExpression:
 	num = CHK_NUMBER '(' (var+=ValidID ('[' sz+=CHK_NUMBER ']')* ('<' (count+=CHK_NUMBER) '>')?
-		(',' var+=ValidID ('<' (count+=CHK_NUMBER) '>')?)*)? ')';
+		(',' var+=ValidID ('[' sz+=CHK_NUMBER ']')* ('<' (count+=CHK_NUMBER) '>')?)*)? ')';
 
 CHK_INT:
 	'-'? INT;

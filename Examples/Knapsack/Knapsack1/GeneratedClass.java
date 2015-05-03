@@ -30,6 +30,9 @@ public class GeneratedClass {
   
   private int num_subtask;
   
+  // @NEW
+  private int num_tc;
+  
   private static boolean is_valid;
   
   private static int cur_lines;
@@ -281,7 +284,7 @@ public class GeneratedClass {
   
   public void writeP_2() {
     try {
-    	for (int i=0; i<n; i++){
+    	for (int i=0; i<n_2; i++){
     		if (i > 0) writer.write(" ");
     		writer.write(""+(int)p_2.get(i));
     	}
@@ -368,7 +371,7 @@ public class GeneratedClass {
   
   public void writeW_2() {
     try {
-    	for (int i=0; i<n; i++){
+    	for (int i=0; i<n_2; i++){
     		if (i > 0) writer.write(" ");
     		writer.write(""+(int)w_2.get(i));
     	}
@@ -455,7 +458,7 @@ public class GeneratedClass {
   
   public void writeC_2() {
     try {
-    	for (int i=0; i<m; i++){
+    	for (int i=0; i<m_2; i++){
     		if (i > 0) writer.write(" ");
     		writer.write(""+(int)c_2.get(i));
     	}
@@ -540,7 +543,7 @@ public class GeneratedClass {
   
   public void writeY_2() {
     try {
-    	for (int i=0; i<n; i++){
+    	for (int i=0; i<n_2; i++){
     		if (i > 0) writer.write(" ");
     		writer.write(""+(int)y_2.get(i));
     	}
@@ -669,6 +672,7 @@ public class GeneratedClass {
     }
     reader.close();
     } catch (Exception e){}
+	System.out.println("Finish read input "+num+"/"+current_testcase+".in");
   }
   
   /**
@@ -714,17 +718,66 @@ public class GeneratedClass {
     if (GeneratedClass.is_valid){
     if (num == 0){
     mr_start();
+	current_mr = 0;
+	for (int i=1; i<=num_mr; i++){
+		readInput(i);
+		readOutput(i);
+	}
+	current_testcase++;
+	if (current_testcase <= 5){
+		readInput(0);
+		readOutput(0);
+	}
     } else {
+	initMRVar();
+	num_tc++;
+	System.out.println("Add new test case "+num_tc);
+	if (num_tc <= 10){
+	writeInput(0,num_tc);
+    writeOutput(0,num_tc);
+	}
     }
     }
+	System.out.println("Finish read output "+num+"/"+current_testcase+".out");
   }
   
+  // @NEW
+  /**
+   * input format
+   */
+  public void writeInput(int mr, int tc) {
+    System.out.println("Execute write input "+mr+" "+tc+".."+num_tc);
+	try {
+    File wfile = new File("tc/Subtask"+current_subtask+"/in/"+mr+"/"+tc+".in");
+    if(!wfile.exists()) wfile.createNewFile();
+    fw = new FileWriter(wfile);
+    writer = new BufferedWriter(fw);
+    writeN_2();
+	writer.write(" ");
+	writeM_2();
+    writer.write(System.lineSeparator());
+	writeP_2();
+	writeW_2();
+	writeC_2();
+	
+	/*
+	writeY_2();
+    writeTp_2();
+    writer.write(System.lineSeparator());
+    */
+	writer.close();
+    } catch(Exception e){}
+	System.out.println("Finish write input "+mr+"/"+tc+".in");
+  }
+  
+  // @NEW
   /**
    * output format
    */
-  public void writeOutput() {
+  public void writeOutput(int mr, int tc) {
+    System.out.println("Execute write output "+mr+" "+tc+".."+num_tc);
     try {
-    File wfile = new File("tc/Subtask"+current_subtask+"/out/"+current_mr+"/"+current_testcase+".out");
+    File wfile = new File("tc/Subtask"+current_subtask+"/out/"+mr+"/"+tc+".out");
     if(!wfile.exists()) wfile.createNewFile();
     fw = new FileWriter(wfile);
     writer = new BufferedWriter(fw);
@@ -733,6 +786,7 @@ public class GeneratedClass {
     writer.write(System.lineSeparator());
     writer.close();
     } catch(Exception e){}
+	System.out.println("Finish write output "+mr+"/"+tc+".out");
   }
   /*
   public boolean output_check() {
@@ -756,21 +810,29 @@ public class GeneratedClass {
     return ok;
   }
   */
+  
+  // all follow up & check
+  // @NEW
   public void mr_followup_1() {
     initMRVar();
     current_mr++;
     ArrayList cond_arr;
     int k;
     int l;
-    do {k = LibraryFunction.select();
-    l = LibraryFunction.select();
-    } while (!(1<=k && k<l && l<=n && getP(k)!=getP(l) || getW(k)!=getW(l)));
+    do {
+	k = LibraryFunction.random(1,n);
+    l = LibraryFunction.random(1,n);
+	k--;
+	l--;
+    } while (!(getP(k)!=getP(l) || getW(k)!=getW(l)));
     ;
     p_2 = LibraryFunction.swap(p,k,l);
     ;
     w_2 = LibraryFunction.swap(w,k,l);
     ;
-    writeOutput();
+	y_2 = LibraryFunction.swap(y,k,l);
+    writeInput(current_mr,current_testcase);
+    writeOutput(current_mr,current_testcase);
   }
   
   public void mr_check_1() {
@@ -779,9 +841,12 @@ public class GeneratedClass {
     ArrayList cond_arr;
     int k;
     int l;
-    do {k = LibraryFunction.select();
-    l = LibraryFunction.select();
-    } while (!(1<=k && k<l && l<=n && getP(k)!=getP(l) || getW(k)!=getW(l)));
+    do {
+	k = LibraryFunction.random(1,n);
+    l = LibraryFunction.random(1,n);
+	k--;
+	l--;
+    } while (!(getP(k)!=getP(l) || getW(k)!=getW(l)));
     ;
     y_2 = LibraryFunction.swap(y,k,l);
     ;
@@ -792,13 +857,17 @@ public class GeneratedClass {
     current_mr++;
     ArrayList cond_arr;
     int k;
-    do {k = LibraryFunction.select();
+    do {
+	k = LibraryFunction.random(1,n);
+	k--;
     } while (!(getY(k)==1));
     ;
     int cc = LibraryFunction.random(0,100);
     setP_2(k,getP(k)+cc);
     ;
-    writeOutput();
+	tp_2 = tp+cc;
+    writeInput(current_mr,current_testcase);
+    writeOutput(current_mr,current_testcase);
   }
   
   public void mr_check_2() {
@@ -806,7 +875,9 @@ public class GeneratedClass {
     boolean ok = true;
     ArrayList cond_arr;
     int k;
-    do {k = LibraryFunction.select();
+    do {
+	k = LibraryFunction.random(1,n);
+	k--;
     } while (!(getY(k)==1));
     ;
     int cc = LibraryFunction.random(0,100);
@@ -819,13 +890,16 @@ public class GeneratedClass {
     current_mr++;
     ArrayList cond_arr;
     int k;
-    do {k = LibraryFunction.select();
+    do {
+	k = LibraryFunction.random(1,n);
+	k--;
     } while (!(getY(k)==0));
     ;
     int cc = LibraryFunction.random(0,100);
     setW_2(k,getW(k)+cc);
     ;
-    writeOutput();
+    writeInput(current_mr,current_testcase);
+    writeOutput(current_mr,current_testcase);
   }
   
   public void mr_check_3() {
@@ -833,7 +907,9 @@ public class GeneratedClass {
     boolean ok = true;
     ArrayList cond_arr;
     int k;
-    do {k = LibraryFunction.select();
+    do {
+	k = LibraryFunction.random(1,n);
+	k--;
     } while (!(getY(k)==0));
     ;
     int cc = LibraryFunction.random(0,100);
@@ -844,13 +920,16 @@ public class GeneratedClass {
     current_mr++;
     ArrayList cond_arr;
     int k;
-    do {k = LibraryFunction.select();
+    do {
+	k = LibraryFunction.random(1,n);
+	k--;
     } while (!(getY(k)==0));
     ;
     int cc = LibraryFunction.random(0,100);
     setP_2(k,getP(k)-cc);
     ;
-    writeOutput();
+    writeInput(current_mr,current_testcase);
+    writeOutput(current_mr,current_testcase);
   }
   
   public void mr_check_4() {
@@ -858,7 +937,9 @@ public class GeneratedClass {
     boolean ok = true;
     ArrayList cond_arr;
     int k;
-    do {k = LibraryFunction.select();
+    do {
+	k = LibraryFunction.random(1,n);
+	k--;
     } while (!(getY(k)==0));
     ;
     int cc = LibraryFunction.random(0,100);
@@ -874,9 +955,9 @@ public class GeneratedClass {
     else cond_arr.add(false);
     }
     int c1 = LibraryFunction.sum(w, cond_arr);
-    setC_2(1,c1);
-    ;
-    writeOutput();
+    setC_2(0,c1);
+    writeInput(current_mr,current_testcase);
+    writeOutput(current_mr,current_testcase);
   }
   
   public void mr_check_5() {
@@ -908,12 +989,11 @@ public class GeneratedClass {
     }
     int wnew = LibraryFunction.max(w, cond_arr);
     n_2 = n+1;
-    ;
     p_2 = LibraryFunction.add(p,pnew);
-    ;
     w_2 = LibraryFunction.add(w,wnew);
-    ;
-    writeOutput();
+	y_2 = LibraryFunction.add(y,0);
+    writeInput(current_mr,current_testcase);
+    writeOutput(current_mr,current_testcase);
   }
   
   public void mr_check_6() {
@@ -941,16 +1021,16 @@ public class GeneratedClass {
     current_mr++;
     ArrayList cond_arr;
     int k;
-    do {k = LibraryFunction.select();
+    do {
+	k = LibraryFunction.random(1,n);
+	k--;
     } while (!(getY(k)==0));
-    ;
     n_2 = n-1;
-    ;
     p_2 = LibraryFunction.remove(p,k);
-    ;
     w_2 = LibraryFunction.remove(w,k);
-    ;
-    writeOutput();
+	y_2 = LibraryFunction.remove(y,k);
+    writeInput(current_mr,current_testcase);
+    writeOutput(current_mr,current_testcase);
   }
   
   public void mr_check_7() {
@@ -958,11 +1038,11 @@ public class GeneratedClass {
     boolean ok = true;
     ArrayList cond_arr;
     int k;
-    do {k = LibraryFunction.select();
+    do {
+	k = LibraryFunction.random(1,n);
+	k--;
     } while (!(getY(k)==0));
-    ;
     y_2 = LibraryFunction.remove(y,k);
-    ;
   }
   
   public void mr_followup_8() {
@@ -970,7 +1050,9 @@ public class GeneratedClass {
     current_mr++;
     ArrayList cond_arr;
     int k;
-    do {k = LibraryFunction.select();
+    do {
+	k = LibraryFunction.random(1,n);
+	k--;
     } while (!(getY(k)==1));
     ;
     n_2 = n-1;
@@ -981,7 +1063,12 @@ public class GeneratedClass {
     ;
     w_2 = LibraryFunction.remove(w,k);
     ;
-    writeOutput();
+	tp_2 = tp-getP(k);
+    ;
+    y_2 = LibraryFunction.remove(y,k);
+    ;
+    writeInput(current_mr,current_testcase);
+    writeOutput(current_mr,current_testcase);
   }
   
   public void mr_check_8() {
@@ -989,7 +1076,9 @@ public class GeneratedClass {
     boolean ok = true;
     ArrayList cond_arr;
     int k;
-    do {k = LibraryFunction.select();
+    do {
+	k = LibraryFunction.random(1,n);
+	k--;
     } while (!(getY(k)==1));
     ;
     tp_2 = tp-getP(k);
@@ -1004,9 +1093,12 @@ public class GeneratedClass {
     ArrayList cond_arr;
     int k;
     int l;
-    do {k = LibraryFunction.select();
-    l = LibraryFunction.select();
-    } while (!(1<=k && k<l && l<=n && getY(k)==1 && getY(l)==1));
+    do {
+	k = LibraryFunction.random(1,n);
+	k--;
+    l = LibraryFunction.random(1,n);
+	l--;
+    } while (!(getY(k)==1 && getY(l)==1));
     ;
     setP_2(k,getP(k)+getP(l));
     ;
@@ -1018,7 +1110,10 @@ public class GeneratedClass {
     ;
     w_2 = LibraryFunction.remove(w,l);
     ;
-    writeOutput();
+	y_2 = LibraryFunction.remove(y,l);
+    ;
+    writeInput(current_mr,current_testcase);
+    writeOutput(current_mr,current_testcase);
   }
   
   public void mr_check_9() {
@@ -1027,9 +1122,12 @@ public class GeneratedClass {
     ArrayList cond_arr;
     int k;
     int l;
-    do {k = LibraryFunction.select();
-    l = LibraryFunction.select();
-    } while (!(1<=k && k<l && l<=n && getY(k)==1 && getY(l)==1));
+    do {
+	k = LibraryFunction.random(1,n);
+	k--;
+    l = LibraryFunction.random(1,n);
+	l--;
+    } while (!(getY(k)==1 && getY(l)==1));
     ;
     y_2 = LibraryFunction.remove(y,l);
     ;
@@ -1059,13 +1157,23 @@ public class GeneratedClass {
     }
     w_2 = LibraryFunction.remove(w, cond_arr);
     ;
-    n_2 = LibraryFunction.size(p);
+    n_2 = LibraryFunction.size(p_2);
     ;
     c_2 = LibraryFunction.remove(c,0);
     ;
     m_2 = m-1;
     ;
-    writeOutput();
+    cond_arr = new ArrayList<Boolean>();
+    for (int i=0; i<y.size(); i++){
+    if (getY(i)==1) cond_arr.add(true);
+    else cond_arr.add(false);
+    }
+    y_2 = LibraryFunction.remove(y, cond_arr);
+    ;
+    tp_2 = tp-v;
+    ;
+    writeInput(current_mr,current_testcase);
+    writeOutput(current_mr,current_testcase);
   }
   
   public void mr_check_10() {
@@ -1112,12 +1220,14 @@ public class GeneratedClass {
     mr_followup_10();
   }
   
-  public void init() {
+  // @NEW
+  public void init(int tc) {
     sc = new Scanner(System.in);
     current_subtask = 1;
-    current_testcase = 0;
+    current_testcase = 1;
     current_mr = 0;
     num_mr = 10;
+	num_tc = tc;
     num_subtask = 1;
     GeneratedClass.cur_lines = 1;
     readInput(0);

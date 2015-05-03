@@ -1,0 +1,87 @@
+// Specification untuk soal Teleportasi Minimal II
+class TeleportasiMinimalII{
+	/*
+	 * variable declaration
+	 * akan digunakan untuk men-generate atribut private,
+	 * fungsi untuk membaca, menulis, dan validator variable tersebut
+	 */
+	
+	// variable untuk input
+	int n (subtask 1 : 1..2000)
+	int d (subtask 1 : 1..120)
+	int[n] f (subtask 1 : 0..1000)
+	
+	// variable untuk output
+	int[] step
+	
+	score {
+		(1 : 100)
+	}
+	
+	/*
+	 * input format
+	 */
+	input {
+		1 (n,d) // 1 baris pertama berisi 2 buah integer n dan d
+		n (f[i]) // n baris berikutnya berisi n buah integer f
+	}
+	
+	/*
+	 * output format
+	 */
+	output {
+		1 (step<all>)
+	}
+	
+	MR 1 {
+		(def cc = random(1..100))
+		followup {
+			(f` = plus(f,cc))
+		}
+		check {
+			
+		}
+	}
+	
+	MR 2 {
+		(def cc = random(1..100))
+		followup {
+			(f` = multiply(f,cc))
+		}
+		check {
+			
+		}
+	}
+	
+	MR 3 {
+		(def st = size(step))
+		(select(l) where 1<=l and l<=st)
+		(def cc = random(1..100))
+		followup {
+			(f`[l] = f[l]-cc)
+		}
+		check {
+			
+		}
+	}
+	
+	MR 4 {
+		(select(l) where not contain(step,l))
+		(def cc = random(1..100))
+		followup {
+			(f`[l] = f[l]+cc)
+		}
+		check {
+			
+		}
+	}
+	
+	MR 5 {
+		followup {
+			(f` = reverse(f))
+		}
+		check {
+			
+		}
+	}
+}

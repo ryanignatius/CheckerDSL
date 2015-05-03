@@ -52,6 +52,7 @@
     </genClasses>
     <genClasses ecoreClass="CheckerDsl.ecore#//ChkVariableDeclaration">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//ChkVariableDeclaration/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//ChkVariableDeclaration/arr"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//ChkVariableDeclaration/sz"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//ChkVariableDeclaration/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//ChkVariableDeclaration/limit1"/>

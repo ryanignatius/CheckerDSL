@@ -1,0 +1,71 @@
+<div class="problem">
+	<h1 class="title" style="text-align: center;">
+		Teleportasi Minimal II</h1>
+	<div>
+		<table border="1" cellpadding="3" cellspacing="0" class="data_table" style="margin: 0px auto 15px; width: 150px;">
+			<tbody>
+				<tr>
+					<td>
+						Batas Waktu</td>
+					<td>
+						1 detik</td>
+				</tr>
+				<tr>
+					<td>
+						Batas Memori</td>
+					<td>
+						32 MB</td>
+				</tr>
+			</tbody>
+		</table>
+		<h3>
+			Deskripsi</h3>
+		<p>
+			Pak Dengklek baru teringat bahwa dia memiliki janji dengan seseorang (Bu Dengklek). Waktu tinggal sedikit, dan dia harus sampai ke tempat janjian secepat mungkin. Untungnya, Pak Dengklek memiliki mesin teleportasi yang bisa dibawa ke mana-mana.</p>
+		<p>
+			Jarak dari posisi Pak Dengklek ke tempat janjian adalah N meter. Untuk mempermudah pemahaman, anggap Pak Dengklek berada di meter ke-1 dan tempat janjian ada di meter ke-N. Jika Pak Dengklek sedang berada di meter ke-i, maka dia dapat teleport ke posisi meter ke-j apabila |i - j| tidak lebih dari D meter.</p>
+		<p>
+			Sayangnya, waktu yang dibutuhkan untuk teleport tidaklah instan. Hal ini disebabkan karena kondisi fisik lingkungan pada posisi awal dan posisi akhir teleportasi, seperti tekanan udara, suhu, dan intensitas cahaya. Demi kemudahan, setiap meter ke-i memiliki faktor waktu F[i]. Waktu yang dibutuhkan untuk berpindah dari meter ke-i ke posisi meter ke-j adalah F[i]*F[j].</p>
+		<p>
+			Pak Dengklek ingin sampai di tempat janjian secepat mungkin. Untuk berpindah, dia harus menggunakan mesin teleportnya (tidak boleh berjalan). Bantulah Pak Dengklek agar dia dapat sampai ke tempat tujuannya dengan waktu seminimal mungkin!</p>
+		<h3>
+			Format Masukan</h3>
+		<p>
+			Baris pertama berisi 2 bilangan, yaitu N dan D. Diikuti dengan N baris berikutnya. Bilangan di baris ke-i ini adalah F[i].</p>
+		<h3>
+			Format Keluaran</h3>
+		<p>
+			Jika K adalah banyaknya teleportasi yang perlu dilakukan untuk mencapai waktu seminimal mungkin, keluarkan K+1 buah bilangan di sebuah baris. Bilangan ke-i menyatakan posisi Pak Dengklek sebelum teleportasi ke-i. Bilangan ke-(K+1) adalah N. Jika ada lebih dari 1 solusi, keluarkan yang terkecil secara leksikografis.</p>
+		<h3>
+			Contoh Masukan</h3>
+		<pre>6 3
+3
+1
+2
+9
+1
+2</pre>
+		<h3>
+			Contoh Keluaran</h3>
+		<pre>1 2 5 6
+</pre>
+		<div style="border: 1px solid #ADC; background-color: #0CC; padding: 5px; margin-bottom: 10px;">
+			<h3>
+				Penjelasan</h3>
+			<p>
+				Teleport dari meter ke-1 menuju meter ke-2, lalu meter ke-5, baru akhirnya menuju meter ke-6. Total waktu yang dibutuhkan 3*1 + 1*1 + 1*2 = 6, dan tidak ada konfigurasi lain yang menghasilkan waktu lebih sedikit.</p>
+		</div>
+		<div style="border: 1px solid #FC0; background-color: #FFC; padding: 5px; margin-bottom: 10px;">
+			<h3>
+				Batasan</h3>
+			<ul>
+				<li>
+					1 &le; N &le; 2 000</li>
+				<li>
+					1 &le; D &le; 120</li>
+				<li>
+					0 &le; F[i] &le; 1 000</li>
+			</ul>
+		</div>
+	</div>
+</div>

@@ -501,13 +501,22 @@ public interface CheckerDslPackage extends EPackage
   int CHK_VARIABLE_DECLARATION__TYPE = FEATURE_FEATURE_COUNT + 0;
 
   /**
+   * The feature id for the '<em><b>Arr</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CHK_VARIABLE_DECLARATION__ARR = FEATURE_FEATURE_COUNT + 1;
+
+  /**
    * The feature id for the '<em><b>Sz</b></em>' attribute list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CHK_VARIABLE_DECLARATION__SZ = FEATURE_FEATURE_COUNT + 1;
+  int CHK_VARIABLE_DECLARATION__SZ = FEATURE_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -516,7 +525,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CHK_VARIABLE_DECLARATION__NAME = FEATURE_FEATURE_COUNT + 2;
+  int CHK_VARIABLE_DECLARATION__NAME = FEATURE_FEATURE_COUNT + 3;
 
   /**
    * The feature id for the '<em><b>Limit1</b></em>' containment reference.
@@ -525,7 +534,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CHK_VARIABLE_DECLARATION__LIMIT1 = FEATURE_FEATURE_COUNT + 3;
+  int CHK_VARIABLE_DECLARATION__LIMIT1 = FEATURE_FEATURE_COUNT + 4;
 
   /**
    * The feature id for the '<em><b>Limit</b></em>' containment reference list.
@@ -534,7 +543,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CHK_VARIABLE_DECLARATION__LIMIT = FEATURE_FEATURE_COUNT + 4;
+  int CHK_VARIABLE_DECLARATION__LIMIT = FEATURE_FEATURE_COUNT + 5;
 
   /**
    * The feature id for the '<em><b>Sp Value</b></em>' containment reference.
@@ -543,7 +552,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CHK_VARIABLE_DECLARATION__SP_VALUE = FEATURE_FEATURE_COUNT + 5;
+  int CHK_VARIABLE_DECLARATION__SP_VALUE = FEATURE_FEATURE_COUNT + 6;
 
   /**
    * The number of structural features of the '<em>Chk Variable Declaration</em>' class.
@@ -552,7 +561,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CHK_VARIABLE_DECLARATION_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 6;
+  int CHK_VARIABLE_DECLARATION_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 7;
 
   /**
    * The meta object id for the '{@link org.xtext.example.checkerdsl.checkerDsl.impl.ChkGeneralExpressionsImpl <em>Chk General Expressions</em>}' class.
@@ -2085,6 +2094,17 @@ public interface CheckerDslPackage extends EPackage
   EAttribute getChkVariableDeclaration_Type();
 
   /**
+   * Returns the meta object for the attribute list '{@link org.xtext.example.checkerdsl.checkerDsl.ChkVariableDeclaration#getArr <em>Arr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute list '<em>Arr</em>'.
+   * @see org.xtext.example.checkerdsl.checkerDsl.ChkVariableDeclaration#getArr()
+   * @see #getChkVariableDeclaration()
+   * @generated
+   */
+  EAttribute getChkVariableDeclaration_Arr();
+
+  /**
    * Returns the meta object for the attribute list '{@link org.xtext.example.checkerdsl.checkerDsl.ChkVariableDeclaration#getSz <em>Sz</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -3554,6 +3574,14 @@ public interface CheckerDslPackage extends EPackage
      * @generated
      */
     EAttribute CHK_VARIABLE_DECLARATION__TYPE = eINSTANCE.getChkVariableDeclaration_Type();
+
+    /**
+     * The meta object literal for the '<em><b>Arr</b></em>' attribute list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CHK_VARIABLE_DECLARATION__ARR = eINSTANCE.getChkVariableDeclaration_Arr();
 
     /**
      * The meta object literal for the '<em><b>Sz</b></em>' attribute list feature.

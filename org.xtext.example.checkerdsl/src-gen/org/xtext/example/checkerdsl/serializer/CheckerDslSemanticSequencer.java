@@ -1516,7 +1516,7 @@ public class CheckerDslSemanticSequencer extends XbaseSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (type=ChkTypeReference sz+=CHK_NUMBER* name=ValidID (limit1=Limit limit+=Limit*)? spValue=SpValue?)
+	 *     (type=ChkTypeReference (arr+='[' sz+=CHK_NUMBER?)* name=ValidID (limit1=Limit limit+=Limit*)? spValue=SpValue?)
 	 */
 	protected void sequence_ChkVariableDeclaration(EObject context, ChkVariableDeclaration semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1579,7 +1579,7 @@ public class CheckerDslSemanticSequencer extends XbaseSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (num=CHK_NUMBER (var+=ValidID sz+=CHK_NUMBER* count+=CHK_NUMBER? (var+=ValidID count+=CHK_NUMBER?)*)?)
+	 *     (num=CHK_NUMBER (var+=ValidID sz+=CHK_NUMBER* count+=CHK_NUMBER? (var+=ValidID sz+=CHK_NUMBER* count+=CHK_NUMBER?)*)?)
 	 */
 	protected void sequence_FormatExpression(EObject context, FormatExpression semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

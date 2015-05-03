@@ -1,0 +1,100 @@
+// Specification untuk soal Jual Ayam
+class JualAyam{
+	/*
+	 * variable declaration
+	 * akan digunakan untuk men-generate atribut private,
+	 * fungsi untuk membaca, menulis, dan validator variable tersebut
+	 */
+	
+	// variable untuk input
+	int n (subtask 1 : 1..100000)
+	int t (subtask 1 : 1..100)
+	int[n] w (subtask 1 : 1..1000000)
+	int[n] d (subtask 1 : 1..1000000)
+	int[n] p (subtask 1 : 1..1000000)
+	
+	// variable untuk output
+	int[n] k (1..n)
+	
+	score {
+		(1 : 100)
+	}
+	
+	/*
+	 * input format
+	 */
+	input {
+		1 (n,t) // 1 baris pertama berisi 2 buah integer n dan t
+		1 (w<n>) // 1 baris berikutnya berisi n buah integer w
+		1 (d<n>) // 1 baris berikutnya berisi n buah integer d
+		1 (p<n>) // 1 baris berikutnya berisi n buah integer p
+	}
+	
+	/*
+	 * output format
+	 */
+	output {
+		1 (k<n>) // 1 baris berikutnya berisi n buah integer k
+	}
+	
+	MR 1 {
+		(def cc = random(1..1000))
+		followup {
+			(w` = multiply(w,cc))
+		}
+		check {
+			
+		}
+	}
+	
+	MR 2 {
+		(def cc = random(1..1000))
+		followup {
+			(p` = plus(p,cc))
+		}
+		check {
+			
+		}
+	}
+	
+	MR 3 {
+		(def cc = random(-1000..-1))
+		followup {
+			(p` = plus(p,cc))
+		}
+		check {
+			
+		}
+	}
+	
+	MR 4 {
+		(def cc = random(1..1000))
+		followup {
+			(d` = plus(d,cc))
+		}
+		check {
+			
+		}
+	}
+	
+	MR 5 {
+		(def cc = random(-1000..-1))
+		followup {
+			(d` = plus(d,cc))
+		}
+		check {
+			
+		}
+	}
+	
+	MR 6 {
+		followup {
+			(w` = remove(w,n))
+			(d` = remove(d) where k[i]==n)
+			(p` = remove(p) where k[i]==n)
+		}
+		check {
+			(k` = remove(k) where k[i]==n)
+		}
+	}
+}

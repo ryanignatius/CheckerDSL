@@ -5,6 +5,7 @@ public class MainGenerator {
 		GeneratedClass g = new GeneratedClass();
 		g.init(1,10);
 		g.readInput(0);
+		g.readHidden(0);
 		g.readOutput(0);
 		int idx = 0;
 		boolean gen_all = true;

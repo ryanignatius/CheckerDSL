@@ -31,9 +31,7 @@ class Knapsack{
 		1 (tc)
 		for (k,tc) {
 			1 (n,w) // 1 baris pertama berisi 2 buah integer n dan w
-			1 (c<n>) // 1 baris berikutnya berisi n buah integer c
-			1 (p<n>) // 1 baris berikutnya berisi n buah integer p
-			1 (t<n>) // 1 baris berikutnya berisi n buah integer t
+			n (c[i],p[i],t[i]) // n baris berikutnya berisi 3 buah integer c,p,t
 		}
 	}
 	
@@ -63,7 +61,7 @@ class Knapsack{
 	
 	MR 3 {
 		(select(k) where y[k]==0)
-		def cc = (random(0..100))
+		(def cc = random(0..100))
 		followup {
 			(t`[k] = t[k]+cc)
 		}
@@ -74,7 +72,7 @@ class Knapsack{
 	
 	MR 4 {
 		(select(k) where y[k]==0)
-		def cc = (random(0..100))
+		(def cc = random(0..100))
 		followup {
 			(p`[k] = p[k]-cc)
 		}
@@ -84,7 +82,7 @@ class Knapsack{
 	}
 	
 	MR 5 {
-		def c1 = (sum(t) where y[i]==1)
+		(def c1 = sum(t) where y[i]==1)
 		followup {
 			(c`[1] = c1)
 		}
@@ -94,9 +92,9 @@ class Knapsack{
 	}
 	
 	MR 6 {
-		def cnew = (min(c) where y[i] != 0)
-		def pnew = (min(p) where y[i] != 0)
-		def tnew = (max(t) where y[i] != 0)
+		(def cnew = min(c) where y[i] != 0)
+		(def pnew = min(p) where y[i] != 0)
+		(def tnew = max(t) where y[i] != 0)
 		followup {
 			(n` = n+1)
 			(c` = add(c,cnew))
@@ -153,7 +151,7 @@ class Knapsack{
 	
 	MR 11 {
 		(select(k) where y[k]==1)
-		def cc = (random(0..100))
+		(def cc = random(0..100))
 		followup {
 			(p`[k] = p[k]+cc)
 		}
@@ -164,7 +162,7 @@ class Knapsack{
 	
 	MR 12 {
 		(select(k) where y[k]==1)
-		def cc = (random(0..100))
+		(def cc = random(0..100))
 		followup {
 			(c`[k] = c[k]+cc)
 		}

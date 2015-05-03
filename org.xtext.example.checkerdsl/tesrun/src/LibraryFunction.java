@@ -102,6 +102,16 @@ public class LibraryFunction {
 	public static int size(ArrayList arr){
 		return arr.size();
 	}
+	public static ArrayList reverse(ArrayList arr){
+		ArrayList ret = new ArrayList();
+		for (int i=arr.size()-1; i>=0; i--){
+			ret.add(arr.get(i));
+		}
+		return ret;
+	}
+	public static boolean contain(ArrayList arr, Object element){
+		return (arr.contains(element));
+	}
 	
 	public static ArrayList permute(ArrayList arr){
 		int s = arr.size();

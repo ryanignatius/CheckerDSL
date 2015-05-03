@@ -2920,10 +2920,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = RULE_HEX;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10825:10: ( ( '0x' | '0X' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' | '_' )+ ( '#' ( ( 'b' | 'B' ) ( 'i' | 'I' ) | ( 'l' | 'L' ) ) )? )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10825:12: ( '0x' | '0X' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' | '_' )+ ( '#' ( ( 'b' | 'B' ) ( 'i' | 'I' ) | ( 'l' | 'L' ) ) )?
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10862:10: ( ( '0x' | '0X' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' | '_' )+ ( '#' ( ( 'b' | 'B' ) ( 'i' | 'I' ) | ( 'l' | 'L' ) ) )? )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10862:12: ( '0x' | '0X' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' | '_' )+ ( '#' ( ( 'b' | 'B' ) ( 'i' | 'I' ) | ( 'l' | 'L' ) ) )?
             {
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10825:12: ( '0x' | '0X' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10862:12: ( '0x' | '0X' )
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -2951,7 +2951,7 @@ public class InternalCheckerDslLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10825:13: '0x'
+                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10862:13: '0x'
                     {
                     match("0x"); 
 
@@ -2959,7 +2959,7 @@ public class InternalCheckerDslLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10825:18: '0X'
+                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10862:18: '0X'
                     {
                     match("0X"); 
 
@@ -2969,7 +2969,7 @@ public class InternalCheckerDslLexer extends Lexer {
 
             }
 
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10825:24: ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' | '_' )+
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10862:24: ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' | '_' )+
             int cnt2=0;
             loop2:
             do {
@@ -3007,7 +3007,7 @@ public class InternalCheckerDslLexer extends Lexer {
                 cnt2++;
             } while (true);
 
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10825:58: ( '#' ( ( 'b' | 'B' ) ( 'i' | 'I' ) | ( 'l' | 'L' ) ) )?
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10862:58: ( '#' ( ( 'b' | 'B' ) ( 'i' | 'I' ) | ( 'l' | 'L' ) ) )?
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -3016,10 +3016,10 @@ public class InternalCheckerDslLexer extends Lexer {
             }
             switch (alt4) {
                 case 1 :
-                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10825:59: '#' ( ( 'b' | 'B' ) ( 'i' | 'I' ) | ( 'l' | 'L' ) )
+                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10862:59: '#' ( ( 'b' | 'B' ) ( 'i' | 'I' ) | ( 'l' | 'L' ) )
                     {
                     match('#'); 
-                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10825:63: ( ( 'b' | 'B' ) ( 'i' | 'I' ) | ( 'l' | 'L' ) )
+                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10862:63: ( ( 'b' | 'B' ) ( 'i' | 'I' ) | ( 'l' | 'L' ) )
                     int alt3=2;
                     int LA3_0 = input.LA(1);
 
@@ -3037,7 +3037,7 @@ public class InternalCheckerDslLexer extends Lexer {
                     }
                     switch (alt3) {
                         case 1 :
-                            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10825:64: ( 'b' | 'B' ) ( 'i' | 'I' )
+                            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10862:64: ( 'b' | 'B' ) ( 'i' | 'I' )
                             {
                             if ( input.LA(1)=='B'||input.LA(1)=='b' ) {
                                 input.consume();
@@ -3061,7 +3061,7 @@ public class InternalCheckerDslLexer extends Lexer {
                             }
                             break;
                         case 2 :
-                            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10825:84: ( 'l' | 'L' )
+                            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10862:84: ( 'l' | 'L' )
                             {
                             if ( input.LA(1)=='L'||input.LA(1)=='l' ) {
                                 input.consume();
@@ -3100,11 +3100,11 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10827:10: ( '0' .. '9' ( '0' .. '9' | '_' )* )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10827:12: '0' .. '9' ( '0' .. '9' | '_' )*
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10864:10: ( '0' .. '9' ( '0' .. '9' | '_' )* )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10864:12: '0' .. '9' ( '0' .. '9' | '_' )*
             {
             matchRange('0','9'); 
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10827:21: ( '0' .. '9' | '_' )*
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10864:21: ( '0' .. '9' | '_' )*
             loop5:
             do {
                 int alt5=2;
@@ -3153,11 +3153,11 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = RULE_DECIMAL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10829:14: ( RULE_INT ( ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT )? ( ( 'b' | 'B' ) ( 'i' | 'I' | 'd' | 'D' ) | ( 'l' | 'L' | 'd' | 'D' | 'f' | 'F' ) )? )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10829:16: RULE_INT ( ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT )? ( ( 'b' | 'B' ) ( 'i' | 'I' | 'd' | 'D' ) | ( 'l' | 'L' | 'd' | 'D' | 'f' | 'F' ) )?
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10866:14: ( RULE_INT ( ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT )? ( ( 'b' | 'B' ) ( 'i' | 'I' | 'd' | 'D' ) | ( 'l' | 'L' | 'd' | 'D' | 'f' | 'F' ) )? )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10866:16: RULE_INT ( ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT )? ( ( 'b' | 'B' ) ( 'i' | 'I' | 'd' | 'D' ) | ( 'l' | 'L' | 'd' | 'D' | 'f' | 'F' ) )?
             {
             mRULE_INT(); 
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10829:25: ( ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT )?
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10866:25: ( ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT )?
             int alt7=2;
             int LA7_0 = input.LA(1);
 
@@ -3166,7 +3166,7 @@ public class InternalCheckerDslLexer extends Lexer {
             }
             switch (alt7) {
                 case 1 :
-                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10829:26: ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT
+                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10866:26: ( 'e' | 'E' ) ( '+' | '-' )? RULE_INT
                     {
                     if ( input.LA(1)=='E'||input.LA(1)=='e' ) {
                         input.consume();
@@ -3177,7 +3177,7 @@ public class InternalCheckerDslLexer extends Lexer {
                         recover(mse);
                         throw mse;}
 
-                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10829:36: ( '+' | '-' )?
+                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10866:36: ( '+' | '-' )?
                     int alt6=2;
                     int LA6_0 = input.LA(1);
 
@@ -3210,7 +3210,7 @@ public class InternalCheckerDslLexer extends Lexer {
 
             }
 
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10829:58: ( ( 'b' | 'B' ) ( 'i' | 'I' | 'd' | 'D' ) | ( 'l' | 'L' | 'd' | 'D' | 'f' | 'F' ) )?
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10866:58: ( ( 'b' | 'B' ) ( 'i' | 'I' | 'd' | 'D' ) | ( 'l' | 'L' | 'd' | 'D' | 'f' | 'F' ) )?
             int alt8=3;
             int LA8_0 = input.LA(1);
 
@@ -3222,7 +3222,7 @@ public class InternalCheckerDslLexer extends Lexer {
             }
             switch (alt8) {
                 case 1 :
-                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10829:59: ( 'b' | 'B' ) ( 'i' | 'I' | 'd' | 'D' )
+                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10866:59: ( 'b' | 'B' ) ( 'i' | 'I' | 'd' | 'D' )
                     {
                     if ( input.LA(1)=='B'||input.LA(1)=='b' ) {
                         input.consume();
@@ -3246,7 +3246,7 @@ public class InternalCheckerDslLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10829:87: ( 'l' | 'L' | 'd' | 'D' | 'f' | 'F' )
+                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10866:87: ( 'l' | 'L' | 'd' | 'D' | 'f' | 'F' )
                     {
                     if ( input.LA(1)=='D'||input.LA(1)=='F'||input.LA(1)=='L'||input.LA(1)=='d'||input.LA(1)=='f'||input.LA(1)=='l' ) {
                         input.consume();
@@ -3279,10 +3279,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10831:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '$' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '$' | '_' | '0' .. '9' )* )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10831:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '$' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '$' | '_' | '0' .. '9' )*
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10868:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '$' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '$' | '_' | '0' .. '9' )* )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10868:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '$' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '$' | '_' | '0' .. '9' )*
             {
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10831:11: ( '^' )?
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10868:11: ( '^' )?
             int alt9=2;
             int LA9_0 = input.LA(1);
 
@@ -3291,7 +3291,7 @@ public class InternalCheckerDslLexer extends Lexer {
             }
             switch (alt9) {
                 case 1 :
-                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10831:11: '^'
+                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10868:11: '^'
                     {
                     match('^'); 
 
@@ -3309,7 +3309,7 @@ public class InternalCheckerDslLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10831:44: ( 'a' .. 'z' | 'A' .. 'Z' | '$' | '_' | '0' .. '9' )*
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10868:44: ( 'a' .. 'z' | 'A' .. 'Z' | '$' | '_' | '0' .. '9' )*
             loop10:
             do {
                 int alt10=2;
@@ -3358,10 +3358,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10833:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* ( '\"' )? | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* ( '\\'' )? ) )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10833:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* ( '\"' )? | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* ( '\\'' )? )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10870:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* ( '\"' )? | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* ( '\\'' )? ) )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10870:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* ( '\"' )? | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* ( '\\'' )? )
             {
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10833:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* ( '\"' )? | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* ( '\\'' )? )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10870:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* ( '\"' )? | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* ( '\\'' )? )
             int alt15=2;
             int LA15_0 = input.LA(1);
 
@@ -3379,10 +3379,10 @@ public class InternalCheckerDslLexer extends Lexer {
             }
             switch (alt15) {
                 case 1 :
-                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10833:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* ( '\"' )?
+                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10870:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* ( '\"' )?
                     {
                     match('\"'); 
-                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10833:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10870:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop11:
                     do {
                         int alt11=3;
@@ -3398,7 +3398,7 @@ public class InternalCheckerDslLexer extends Lexer {
 
                         switch (alt11) {
                     	case 1 :
-                    	    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10833:21: '\\\\' .
+                    	    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10870:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -3406,7 +3406,7 @@ public class InternalCheckerDslLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10833:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10870:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -3426,7 +3426,7 @@ public class InternalCheckerDslLexer extends Lexer {
                         }
                     } while (true);
 
-                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10833:44: ( '\"' )?
+                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10870:44: ( '\"' )?
                     int alt12=2;
                     int LA12_0 = input.LA(1);
 
@@ -3435,7 +3435,7 @@ public class InternalCheckerDslLexer extends Lexer {
                     }
                     switch (alt12) {
                         case 1 :
-                            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10833:44: '\"'
+                            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10870:44: '\"'
                             {
                             match('\"'); 
 
@@ -3448,10 +3448,10 @@ public class InternalCheckerDslLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10833:49: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* ( '\\'' )?
+                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10870:49: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* ( '\\'' )?
                     {
                     match('\''); 
-                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10833:54: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10870:54: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop13:
                     do {
                         int alt13=3;
@@ -3467,7 +3467,7 @@ public class InternalCheckerDslLexer extends Lexer {
 
                         switch (alt13) {
                     	case 1 :
-                    	    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10833:55: '\\\\' .
+                    	    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10870:55: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -3475,7 +3475,7 @@ public class InternalCheckerDslLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10833:62: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10870:62: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -3495,7 +3495,7 @@ public class InternalCheckerDslLexer extends Lexer {
                         }
                     } while (true);
 
-                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10833:79: ( '\\'' )?
+                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10870:79: ( '\\'' )?
                     int alt14=2;
                     int LA14_0 = input.LA(1);
 
@@ -3504,7 +3504,7 @@ public class InternalCheckerDslLexer extends Lexer {
                     }
                     switch (alt14) {
                         case 1 :
-                            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10833:79: '\\''
+                            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10870:79: '\\''
                             {
                             match('\''); 
 
@@ -3535,12 +3535,12 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10835:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10835:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10872:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10872:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10835:24: ( options {greedy=false; } : . )*
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10872:24: ( options {greedy=false; } : . )*
             loop16:
             do {
                 int alt16=2;
@@ -3565,7 +3565,7 @@ public class InternalCheckerDslLexer extends Lexer {
 
                 switch (alt16) {
             	case 1 :
-            	    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10835:52: .
+            	    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10872:52: .
             	    {
             	    matchAny(); 
 
@@ -3595,12 +3595,12 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10837:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10837:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10874:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10874:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10837:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10874:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop17:
             do {
                 int alt17=2;
@@ -3613,7 +3613,7 @@ public class InternalCheckerDslLexer extends Lexer {
 
                 switch (alt17) {
             	case 1 :
-            	    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10837:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10874:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -3633,7 +3633,7 @@ public class InternalCheckerDslLexer extends Lexer {
                 }
             } while (true);
 
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10837:40: ( ( '\\r' )? '\\n' )?
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10874:40: ( ( '\\r' )? '\\n' )?
             int alt19=2;
             int LA19_0 = input.LA(1);
 
@@ -3642,9 +3642,9 @@ public class InternalCheckerDslLexer extends Lexer {
             }
             switch (alt19) {
                 case 1 :
-                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10837:41: ( '\\r' )? '\\n'
+                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10874:41: ( '\\r' )? '\\n'
                     {
-                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10837:41: ( '\\r' )?
+                    // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10874:41: ( '\\r' )?
                     int alt18=2;
                     int LA18_0 = input.LA(1);
 
@@ -3653,7 +3653,7 @@ public class InternalCheckerDslLexer extends Lexer {
                     }
                     switch (alt18) {
                         case 1 :
-                            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10837:41: '\\r'
+                            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10874:41: '\\r'
                             {
                             match('\r'); 
 
@@ -3685,10 +3685,10 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10839:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10839:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10876:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10876:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10839:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10876:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt20=0;
             loop20:
             do {
@@ -3742,8 +3742,8 @@ public class InternalCheckerDslLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10841:16: ( . )
-            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10841:18: .
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10878:16: ( . )
+            // ../org.xtext.example.checkerdsl/src-gen/org/xtext/example/checkerdsl/parser/antlr/internal/InternalCheckerDsl.g:10878:18: .
             {
             matchAny(); 
 

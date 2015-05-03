@@ -32,6 +32,7 @@ import org.xtext.example.checkerdsl.checkerDsl.SpValue;
  * </p>
  * <ul>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.ChkVariableDeclarationImpl#getType <em>Type</em>}</li>
+ *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.ChkVariableDeclarationImpl#getArr <em>Arr</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.ChkVariableDeclarationImpl#getSz <em>Sz</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.ChkVariableDeclarationImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.ChkVariableDeclarationImpl#getLimit1 <em>Limit1</em>}</li>
@@ -62,6 +63,16 @@ public class ChkVariableDeclarationImpl extends FeatureImpl implements ChkVariab
    * @ordered
    */
   protected String type = TYPE_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getArr() <em>Arr</em>}' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getArr()
+   * @generated
+   * @ordered
+   */
+  protected EList<String> arr;
 
   /**
    * The cached value of the '{@link #getSz() <em>Sz</em>}' attribute list.
@@ -165,6 +176,20 @@ public class ChkVariableDeclarationImpl extends FeatureImpl implements ChkVariab
     type = newType;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, CheckerDslPackage.CHK_VARIABLE_DECLARATION__TYPE, oldType, type));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EList<String> getArr()
+  {
+    if (arr == null)
+    {
+      arr = new EDataTypeEList<String>(String.class, this, CheckerDslPackage.CHK_VARIABLE_DECLARATION__ARR);
+    }
+    return arr;
   }
 
   /**
@@ -346,6 +371,8 @@ public class ChkVariableDeclarationImpl extends FeatureImpl implements ChkVariab
     {
       case CheckerDslPackage.CHK_VARIABLE_DECLARATION__TYPE:
         return getType();
+      case CheckerDslPackage.CHK_VARIABLE_DECLARATION__ARR:
+        return getArr();
       case CheckerDslPackage.CHK_VARIABLE_DECLARATION__SZ:
         return getSz();
       case CheckerDslPackage.CHK_VARIABLE_DECLARATION__NAME:
@@ -373,6 +400,10 @@ public class ChkVariableDeclarationImpl extends FeatureImpl implements ChkVariab
     {
       case CheckerDslPackage.CHK_VARIABLE_DECLARATION__TYPE:
         setType((String)newValue);
+        return;
+      case CheckerDslPackage.CHK_VARIABLE_DECLARATION__ARR:
+        getArr().clear();
+        getArr().addAll((Collection<? extends String>)newValue);
         return;
       case CheckerDslPackage.CHK_VARIABLE_DECLARATION__SZ:
         getSz().clear();
@@ -408,6 +439,9 @@ public class ChkVariableDeclarationImpl extends FeatureImpl implements ChkVariab
       case CheckerDslPackage.CHK_VARIABLE_DECLARATION__TYPE:
         setType(TYPE_EDEFAULT);
         return;
+      case CheckerDslPackage.CHK_VARIABLE_DECLARATION__ARR:
+        getArr().clear();
+        return;
       case CheckerDslPackage.CHK_VARIABLE_DECLARATION__SZ:
         getSz().clear();
         return;
@@ -439,6 +473,8 @@ public class ChkVariableDeclarationImpl extends FeatureImpl implements ChkVariab
     {
       case CheckerDslPackage.CHK_VARIABLE_DECLARATION__TYPE:
         return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
+      case CheckerDslPackage.CHK_VARIABLE_DECLARATION__ARR:
+        return arr != null && !arr.isEmpty();
       case CheckerDslPackage.CHK_VARIABLE_DECLARATION__SZ:
         return sz != null && !sz.isEmpty();
       case CheckerDslPackage.CHK_VARIABLE_DECLARATION__NAME:
@@ -466,6 +502,8 @@ public class ChkVariableDeclarationImpl extends FeatureImpl implements ChkVariab
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (type: ");
     result.append(type);
+    result.append(", arr: ");
+    result.append(arr);
     result.append(", sz: ");
     result.append(sz);
     result.append(", name: ");

@@ -511,7 +511,8 @@ public class CheckerDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cTypeAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final RuleCall cTypeChkTypeReferenceParserRuleCall_0_0 = (RuleCall)cTypeAssignment_0.eContents().get(0);
 		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
-		private final Keyword cLeftSquareBracketKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final Assignment cArrAssignment_1_0 = (Assignment)cGroup_1.eContents().get(0);
+		private final Keyword cArrLeftSquareBracketKeyword_1_0_0 = (Keyword)cArrAssignment_1_0.eContents().get(0);
 		private final Assignment cSzAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
 		private final RuleCall cSzCHK_NUMBERParserRuleCall_1_1_0 = (RuleCall)cSzAssignment_1_1.eContents().get(0);
 		private final Keyword cRightSquareBracketKeyword_1_2 = (Keyword)cGroup_1.eContents().get(2);
@@ -534,12 +535,12 @@ public class CheckerDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_4_3 = (Keyword)cGroup_4.eContents().get(3);
 		
 		//ChkVariableDeclaration:
-		//	type=ChkTypeReference ("[" sz+=CHK_NUMBER "]")* name=ValidID ("(" limit1=Limit (";" limit+=Limit)* ")")? ("value" "{"
-		//	spValue=SpValue "}")?;
+		//	type=ChkTypeReference (arr+="[" sz+=CHK_NUMBER? "]")* name=ValidID ("(" limit1=Limit (";" limit+=Limit)* ")")?
+		//	("value" "{" spValue=SpValue "}")?;
 		public ParserRule getRule() { return rule; }
 
-		//type=ChkTypeReference ("[" sz+=CHK_NUMBER "]")* name=ValidID ("(" limit1=Limit (";" limit+=Limit)* ")")? ("value" "{"
-		//spValue=SpValue "}")?
+		//type=ChkTypeReference (arr+="[" sz+=CHK_NUMBER? "]")* name=ValidID ("(" limit1=Limit (";" limit+=Limit)* ")")? ("value"
+		//"{" spValue=SpValue "}")?
 		public Group getGroup() { return cGroup; }
 
 		//type=ChkTypeReference
@@ -548,13 +549,16 @@ public class CheckerDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ChkTypeReference
 		public RuleCall getTypeChkTypeReferenceParserRuleCall_0_0() { return cTypeChkTypeReferenceParserRuleCall_0_0; }
 
-		//("[" sz+=CHK_NUMBER "]")*
+		//(arr+="[" sz+=CHK_NUMBER? "]")*
 		public Group getGroup_1() { return cGroup_1; }
 
-		//"["
-		public Keyword getLeftSquareBracketKeyword_1_0() { return cLeftSquareBracketKeyword_1_0; }
+		//arr+="["
+		public Assignment getArrAssignment_1_0() { return cArrAssignment_1_0; }
 
-		//sz+=CHK_NUMBER
+		//"["
+		public Keyword getArrLeftSquareBracketKeyword_1_0_0() { return cArrLeftSquareBracketKeyword_1_0_0; }
+
+		//sz+=CHK_NUMBER?
 		public Assignment getSzAssignment_1_1() { return cSzAssignment_1_1; }
 
 		//CHK_NUMBER
@@ -2702,19 +2706,24 @@ public class CheckerDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cVarAssignment_2_3_1 = (Assignment)cGroup_2_3.eContents().get(1);
 		private final RuleCall cVarValidIDParserRuleCall_2_3_1_0 = (RuleCall)cVarAssignment_2_3_1.eContents().get(0);
 		private final Group cGroup_2_3_2 = (Group)cGroup_2_3.eContents().get(2);
-		private final Keyword cLessThanSignKeyword_2_3_2_0 = (Keyword)cGroup_2_3_2.eContents().get(0);
-		private final Assignment cCountAssignment_2_3_2_1 = (Assignment)cGroup_2_3_2.eContents().get(1);
-		private final RuleCall cCountCHK_NUMBERParserRuleCall_2_3_2_1_0 = (RuleCall)cCountAssignment_2_3_2_1.eContents().get(0);
-		private final Keyword cGreaterThanSignKeyword_2_3_2_2 = (Keyword)cGroup_2_3_2.eContents().get(2);
+		private final Keyword cLeftSquareBracketKeyword_2_3_2_0 = (Keyword)cGroup_2_3_2.eContents().get(0);
+		private final Assignment cSzAssignment_2_3_2_1 = (Assignment)cGroup_2_3_2.eContents().get(1);
+		private final RuleCall cSzCHK_NUMBERParserRuleCall_2_3_2_1_0 = (RuleCall)cSzAssignment_2_3_2_1.eContents().get(0);
+		private final Keyword cRightSquareBracketKeyword_2_3_2_2 = (Keyword)cGroup_2_3_2.eContents().get(2);
+		private final Group cGroup_2_3_3 = (Group)cGroup_2_3.eContents().get(3);
+		private final Keyword cLessThanSignKeyword_2_3_3_0 = (Keyword)cGroup_2_3_3.eContents().get(0);
+		private final Assignment cCountAssignment_2_3_3_1 = (Assignment)cGroup_2_3_3.eContents().get(1);
+		private final RuleCall cCountCHK_NUMBERParserRuleCall_2_3_3_1_0 = (RuleCall)cCountAssignment_2_3_3_1.eContents().get(0);
+		private final Keyword cGreaterThanSignKeyword_2_3_3_2 = (Keyword)cGroup_2_3_3.eContents().get(2);
 		private final Keyword cRightParenthesisKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//FormatExpression:
-		//	num=CHK_NUMBER "(" (var+=ValidID ("[" sz+=CHK_NUMBER "]")* ("<" count+=CHK_NUMBER ">")? ("," var+=ValidID ("<"
-		//	count+=CHK_NUMBER ">")?)*)? ")";
+		//	num=CHK_NUMBER "(" (var+=ValidID ("[" sz+=CHK_NUMBER "]")* ("<" count+=CHK_NUMBER ">")? ("," var+=ValidID ("["
+		//	sz+=CHK_NUMBER "]")* ("<" count+=CHK_NUMBER ">")?)*)? ")";
 		public ParserRule getRule() { return rule; }
 
-		//num=CHK_NUMBER "(" (var+=ValidID ("[" sz+=CHK_NUMBER "]")* ("<" count+=CHK_NUMBER ">")? ("," var+=ValidID ("<"
-		//count+=CHK_NUMBER ">")?)*)? ")"
+		//num=CHK_NUMBER "(" (var+=ValidID ("[" sz+=CHK_NUMBER "]")* ("<" count+=CHK_NUMBER ">")? ("," var+=ValidID ("["
+		//sz+=CHK_NUMBER "]")* ("<" count+=CHK_NUMBER ">")?)*)? ")"
 		public Group getGroup() { return cGroup; }
 
 		//num=CHK_NUMBER
@@ -2726,7 +2735,8 @@ public class CheckerDslGrammarAccess extends AbstractGrammarElementFinder {
 		//"("
 		public Keyword getLeftParenthesisKeyword_1() { return cLeftParenthesisKeyword_1; }
 
-		//(var+=ValidID ("[" sz+=CHK_NUMBER "]")* ("<" count+=CHK_NUMBER ">")? ("," var+=ValidID ("<" count+=CHK_NUMBER ">")?)*)?
+		//(var+=ValidID ("[" sz+=CHK_NUMBER "]")* ("<" count+=CHK_NUMBER ">")? ("," var+=ValidID ("[" sz+=CHK_NUMBER "]")* ("<"
+		//count+=CHK_NUMBER ">")?)*)?
 		public Group getGroup_2() { return cGroup_2; }
 
 		//var+=ValidID
@@ -2765,7 +2775,7 @@ public class CheckerDslGrammarAccess extends AbstractGrammarElementFinder {
 		//">"
 		public Keyword getGreaterThanSignKeyword_2_2_2() { return cGreaterThanSignKeyword_2_2_2; }
 
-		//("," var+=ValidID ("<" count+=CHK_NUMBER ">")?)*
+		//("," var+=ValidID ("[" sz+=CHK_NUMBER "]")* ("<" count+=CHK_NUMBER ">")?)*
 		public Group getGroup_2_3() { return cGroup_2_3; }
 
 		//","
@@ -2777,20 +2787,35 @@ public class CheckerDslGrammarAccess extends AbstractGrammarElementFinder {
 		//ValidID
 		public RuleCall getVarValidIDParserRuleCall_2_3_1_0() { return cVarValidIDParserRuleCall_2_3_1_0; }
 
-		//("<" count+=CHK_NUMBER ">")?
+		//("[" sz+=CHK_NUMBER "]")*
 		public Group getGroup_2_3_2() { return cGroup_2_3_2; }
 
-		//"<"
-		public Keyword getLessThanSignKeyword_2_3_2_0() { return cLessThanSignKeyword_2_3_2_0; }
+		//"["
+		public Keyword getLeftSquareBracketKeyword_2_3_2_0() { return cLeftSquareBracketKeyword_2_3_2_0; }
 
-		//count+=CHK_NUMBER
-		public Assignment getCountAssignment_2_3_2_1() { return cCountAssignment_2_3_2_1; }
+		//sz+=CHK_NUMBER
+		public Assignment getSzAssignment_2_3_2_1() { return cSzAssignment_2_3_2_1; }
 
 		//CHK_NUMBER
-		public RuleCall getCountCHK_NUMBERParserRuleCall_2_3_2_1_0() { return cCountCHK_NUMBERParserRuleCall_2_3_2_1_0; }
+		public RuleCall getSzCHK_NUMBERParserRuleCall_2_3_2_1_0() { return cSzCHK_NUMBERParserRuleCall_2_3_2_1_0; }
+
+		//"]"
+		public Keyword getRightSquareBracketKeyword_2_3_2_2() { return cRightSquareBracketKeyword_2_3_2_2; }
+
+		//("<" count+=CHK_NUMBER ">")?
+		public Group getGroup_2_3_3() { return cGroup_2_3_3; }
+
+		//"<"
+		public Keyword getLessThanSignKeyword_2_3_3_0() { return cLessThanSignKeyword_2_3_3_0; }
+
+		//count+=CHK_NUMBER
+		public Assignment getCountAssignment_2_3_3_1() { return cCountAssignment_2_3_3_1; }
+
+		//CHK_NUMBER
+		public RuleCall getCountCHK_NUMBERParserRuleCall_2_3_3_1_0() { return cCountCHK_NUMBERParserRuleCall_2_3_3_1_0; }
 
 		//">"
-		public Keyword getGreaterThanSignKeyword_2_3_2_2() { return cGreaterThanSignKeyword_2_3_2_2; }
+		public Keyword getGreaterThanSignKeyword_2_3_3_2() { return cGreaterThanSignKeyword_2_3_3_2; }
 
 		//")"
 		public Keyword getRightParenthesisKeyword_3() { return cRightParenthesisKeyword_3; }
@@ -3092,8 +3117,8 @@ public class CheckerDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//ChkVariableDeclaration:
-	//	type=ChkTypeReference ("[" sz+=CHK_NUMBER "]")* name=ValidID ("(" limit1=Limit (";" limit+=Limit)* ")")? ("value" "{"
-	//	spValue=SpValue "}")?;
+	//	type=ChkTypeReference (arr+="[" sz+=CHK_NUMBER? "]")* name=ValidID ("(" limit1=Limit (";" limit+=Limit)* ")")?
+	//	("value" "{" spValue=SpValue "}")?;
 	public ChkVariableDeclarationElements getChkVariableDeclarationAccess() {
 		return pChkVariableDeclaration;
 	}
@@ -3376,8 +3401,8 @@ public class CheckerDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//FormatExpression:
-	//	num=CHK_NUMBER "(" (var+=ValidID ("[" sz+=CHK_NUMBER "]")* ("<" count+=CHK_NUMBER ">")? ("," var+=ValidID ("<"
-	//	count+=CHK_NUMBER ">")?)*)? ")";
+	//	num=CHK_NUMBER "(" (var+=ValidID ("[" sz+=CHK_NUMBER "]")* ("<" count+=CHK_NUMBER ">")? ("," var+=ValidID ("["
+	//	sz+=CHK_NUMBER "]")* ("<" count+=CHK_NUMBER ">")?)*)? ")";
 	public FormatExpressionElements getFormatExpressionAccess() {
 		return pFormatExpression;
 	}
