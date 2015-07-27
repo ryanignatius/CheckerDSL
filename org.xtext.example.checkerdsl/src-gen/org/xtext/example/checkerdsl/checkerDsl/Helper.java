@@ -24,10 +24,10 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getVar2 <em>Var2</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getSelect <em>Select</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getVars <em>Vars</em>}</li>
+ *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getVar4 <em>Var4</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getAdd <em>Add</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getRemove <em>Remove</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getRandom <em>Random</em>}</li>
- *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getVar4 <em>Var4</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getSize <em>Size</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getReverse <em>Reverse</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getContains <em>Contains</em>}</li>
@@ -329,6 +329,32 @@ public interface Helper extends ChkGeneralExpressions
   EList<String> getVars();
 
   /**
+   * Returns the value of the '<em><b>Var4</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Var4</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Var4</em>' containment reference.
+   * @see #setVar4(ChkVariables)
+   * @see org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage#getHelper_Var4()
+   * @model containment="true"
+   * @generated
+   */
+  ChkVariables getVar4();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getVar4 <em>Var4</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Var4</em>' containment reference.
+   * @see #getVar4()
+   * @generated
+   */
+  void setVar4(ChkVariables value);
+
+  /**
    * Returns the value of the '<em><b>Add</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
@@ -405,32 +431,6 @@ public interface Helper extends ChkGeneralExpressions
    * @generated
    */
   void setRandom(String value);
-
-  /**
-   * Returns the value of the '<em><b>Var4</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Var4</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Var4</em>' containment reference.
-   * @see #setVar4(ChkVariables)
-   * @see org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage#getHelper_Var4()
-   * @model containment="true"
-   * @generated
-   */
-  ChkVariables getVar4();
-
-  /**
-   * Sets the value of the '{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getVar4 <em>Var4</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Var4</em>' containment reference.
-   * @see #getVar4()
-   * @generated
-   */
-  void setVar4(ChkVariables value);
 
   /**
    * Returns the value of the '<em><b>Size</b></em>' attribute.

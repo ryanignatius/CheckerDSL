@@ -14,7 +14,6 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.ChkVariableDeclaration#getType <em>Type</em>}</li>
- *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.ChkVariableDeclaration#getArr <em>Arr</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.ChkVariableDeclaration#getSz <em>Sz</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.ChkVariableDeclaration#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.ChkVariableDeclaration#getLimit1 <em>Limit1</em>}</li>
@@ -53,22 +52,6 @@ public interface ChkVariableDeclaration extends Feature
    * @generated
    */
   void setType(String value);
-
-  /**
-   * Returns the value of the '<em><b>Arr</b></em>' attribute list.
-   * The list contents are of type {@link java.lang.String}.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Arr</em>' attribute list isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Arr</em>' attribute list.
-   * @see org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage#getChkVariableDeclaration_Arr()
-   * @model unique="false"
-   * @generated
-   */
-  EList<String> getArr();
 
   /**
    * Returns the value of the '<em><b>Sz</b></em>' attribute list.

@@ -47,7 +47,8 @@ class Knapsack{
 	}
 	
 	MR 1 {
-		(select(k,l) where 1<=k and k<l and l<=n and c[k]!=c[l] or p[k]!=p[l] or t[k]!=t[l])
+		(def n1 = n-1)
+		(select(k,l:0..n1) where k<l and c[k]!=c[l] or k<l and p[k]!=p[l] or k<l and t[k]!=t[l])
 		followup {
 			(c` = swap(c,k,l))
 			(p` = swap(p,k,l))
@@ -60,7 +61,8 @@ class Knapsack{
 	}
 	
 	MR 3 {
-		(select(k) where y[k]==0)
+		(def n1 = n-1)
+		(select(k:0..n1) where y[k]==0)
 		(def cc = random(0..100))
 		followup {
 			(t`[k] = t[k]+cc)
@@ -71,7 +73,8 @@ class Knapsack{
 	}
 	
 	MR 4 {
-		(select(k) where y[k]==0)
+		(def n1 = n-1)
+		(select(k:0..n1) where y[k]==0)
 		(def cc = random(0..100))
 		followup {
 			(p`[k] = p[k]-cc)
@@ -107,7 +110,8 @@ class Knapsack{
 	}
 	
 	MR 7 {
-		(select(k) where y[k]==0)
+		(def n1 = n-1)
+		(select(k:0..n1) where y[k]==0)
 		followup {
 			(n` = n-1)
 			(c` = remove(c,k))
@@ -120,7 +124,8 @@ class Knapsack{
 	}
 	
 	MR 8 {
-		(select(k) where y[k]==1)
+		(def n1 = n-1)
+		(select(k:0..n1) where y[k]==1)
 		followup {
 			(n` = n-1)
 			(c`[1] = c[1]-t[k])
@@ -134,7 +139,8 @@ class Knapsack{
 	}
 	
 	MR 9 {
-		(select(k,l) where 1<=k and k<l and l<=n and y[k]==1 and y[l]==1)
+		(def n1 = n-1)
+		(select(k,l:0..n1) where k<l and y[k]==1 and y[l]==1)
 		followup {
 			(c`[k] = 1)
 			(p`[k] = c[k]*p[k]+c[l]*p[l])
@@ -150,7 +156,8 @@ class Knapsack{
 	}
 	
 	MR 11 {
-		(select(k) where y[k]==1)
+		(def n1 = n-1)
+		(select(k:0..n1) where y[k]==1)
 		(def cc = random(0..100))
 		followup {
 			(p`[k] = p[k]+cc)
@@ -161,7 +168,8 @@ class Knapsack{
 	}
 	
 	MR 12 {
-		(select(k) where y[k]==1)
+		(def n1 = n-1)
+		(select(k:0..n1) where y[k]==1)
 		(def cc = random(0..100))
 		followup {
 			(c`[k] = c[k]+cc)

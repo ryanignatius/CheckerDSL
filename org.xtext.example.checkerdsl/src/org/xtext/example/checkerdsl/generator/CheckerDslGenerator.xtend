@@ -6,8 +6,6 @@ package org.xtext.example.checkerdsl.generator
 import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.IFileSystemAccess
 import org.eclipse.xtext.generator.IGenerator
-import org.xtext.example.checkerdsl.checkerDsl.Class
-import org.xtext.example.checkerdsl.checkerDsl.ChkVariableDeclaration
 
 /**
  * Generates code from your model files on save.

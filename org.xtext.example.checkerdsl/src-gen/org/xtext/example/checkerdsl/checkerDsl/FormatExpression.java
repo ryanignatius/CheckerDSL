@@ -17,8 +17,6 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.FormatExpression#getNum <em>Num</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.FormatExpression#getVar <em>Var</em>}</li>
- *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.FormatExpression#getSz <em>Sz</em>}</li>
- *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.FormatExpression#getCount <em>Count</em>}</li>
  * </ul>
  *
  * @see org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage#getFormatExpression()
@@ -54,51 +52,19 @@ public interface FormatExpression extends EObject
   void setNum(String value);
 
   /**
-   * Returns the value of the '<em><b>Var</b></em>' attribute list.
-   * The list contents are of type {@link java.lang.String}.
+   * Returns the value of the '<em><b>Var</b></em>' containment reference list.
+   * The list contents are of type {@link org.xtext.example.checkerdsl.checkerDsl.FormatVariable}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Var</em>' attribute list isn't clear,
+   * If the meaning of the '<em>Var</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Var</em>' attribute list.
+   * @return the value of the '<em>Var</em>' containment reference list.
    * @see org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage#getFormatExpression_Var()
-   * @model unique="false"
+   * @model containment="true"
    * @generated
    */
-  EList<String> getVar();
-
-  /**
-   * Returns the value of the '<em><b>Sz</b></em>' attribute list.
-   * The list contents are of type {@link java.lang.String}.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Sz</em>' attribute list isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Sz</em>' attribute list.
-   * @see org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage#getFormatExpression_Sz()
-   * @model unique="false"
-   * @generated
-   */
-  EList<String> getSz();
-
-  /**
-   * Returns the value of the '<em><b>Count</b></em>' attribute list.
-   * The list contents are of type {@link java.lang.String}.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Count</em>' attribute list isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Count</em>' attribute list.
-   * @see org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage#getFormatExpression_Count()
-   * @model unique="false"
-   * @generated
-   */
-  EList<String> getCount();
+  EList<FormatVariable> getVar();
 
 } // FormatExpression

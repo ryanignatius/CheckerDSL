@@ -5,18 +5,22 @@ package org.xtext.example.checkerdsl.checkerDsl.impl;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EDataTypeEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.xtext.example.checkerdsl.checkerDsl.CheckerDslPackage;
 import org.xtext.example.checkerdsl.checkerDsl.FormatExpression;
+import org.xtext.example.checkerdsl.checkerDsl.FormatVariable;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,8 +32,6 @@ import org.xtext.example.checkerdsl.checkerDsl.FormatExpression;
  * <ul>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.FormatExpressionImpl#getNum <em>Num</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.FormatExpressionImpl#getVar <em>Var</em>}</li>
- *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.FormatExpressionImpl#getSz <em>Sz</em>}</li>
- *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.FormatExpressionImpl#getCount <em>Count</em>}</li>
  * </ul>
  *
  * @generated
@@ -57,34 +59,14 @@ public class FormatExpressionImpl extends MinimalEObjectImpl.Container implement
   protected String num = NUM_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getVar() <em>Var</em>}' attribute list.
+   * The cached value of the '{@link #getVar() <em>Var</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getVar()
    * @generated
    * @ordered
    */
-  protected EList<String> var;
-
-  /**
-   * The cached value of the '{@link #getSz() <em>Sz</em>}' attribute list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getSz()
-   * @generated
-   * @ordered
-   */
-  protected EList<String> sz;
-
-  /**
-   * The cached value of the '{@link #getCount() <em>Count</em>}' attribute list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getCount()
-   * @generated
-   * @ordered
-   */
-  protected EList<String> count;
+  protected EList<FormatVariable> var;
 
   /**
    * <!-- begin-user-doc -->
@@ -135,11 +117,11 @@ public class FormatExpressionImpl extends MinimalEObjectImpl.Container implement
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<String> getVar()
+  public EList<FormatVariable> getVar()
   {
     if (var == null)
     {
-      var = new EDataTypeEList<String>(String.class, this, CheckerDslPackage.FORMAT_EXPRESSION__VAR);
+      var = new EObjectContainmentEList<FormatVariable>(FormatVariable.class, this, CheckerDslPackage.FORMAT_EXPRESSION__VAR);
     }
     return var;
   }
@@ -149,27 +131,15 @@ public class FormatExpressionImpl extends MinimalEObjectImpl.Container implement
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<String> getSz()
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
-    if (sz == null)
+    switch (featureID)
     {
-      sz = new EDataTypeEList<String>(String.class, this, CheckerDslPackage.FORMAT_EXPRESSION__SZ);
+      case CheckerDslPackage.FORMAT_EXPRESSION__VAR:
+        return ((InternalEList<?>)getVar()).basicRemove(otherEnd, msgs);
     }
-    return sz;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EList<String> getCount()
-  {
-    if (count == null)
-    {
-      count = new EDataTypeEList<String>(String.class, this, CheckerDslPackage.FORMAT_EXPRESSION__COUNT);
-    }
-    return count;
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -186,10 +156,6 @@ public class FormatExpressionImpl extends MinimalEObjectImpl.Container implement
         return getNum();
       case CheckerDslPackage.FORMAT_EXPRESSION__VAR:
         return getVar();
-      case CheckerDslPackage.FORMAT_EXPRESSION__SZ:
-        return getSz();
-      case CheckerDslPackage.FORMAT_EXPRESSION__COUNT:
-        return getCount();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -210,15 +176,7 @@ public class FormatExpressionImpl extends MinimalEObjectImpl.Container implement
         return;
       case CheckerDslPackage.FORMAT_EXPRESSION__VAR:
         getVar().clear();
-        getVar().addAll((Collection<? extends String>)newValue);
-        return;
-      case CheckerDslPackage.FORMAT_EXPRESSION__SZ:
-        getSz().clear();
-        getSz().addAll((Collection<? extends String>)newValue);
-        return;
-      case CheckerDslPackage.FORMAT_EXPRESSION__COUNT:
-        getCount().clear();
-        getCount().addAll((Collection<? extends String>)newValue);
+        getVar().addAll((Collection<? extends FormatVariable>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -240,12 +198,6 @@ public class FormatExpressionImpl extends MinimalEObjectImpl.Container implement
       case CheckerDslPackage.FORMAT_EXPRESSION__VAR:
         getVar().clear();
         return;
-      case CheckerDslPackage.FORMAT_EXPRESSION__SZ:
-        getSz().clear();
-        return;
-      case CheckerDslPackage.FORMAT_EXPRESSION__COUNT:
-        getCount().clear();
-        return;
     }
     super.eUnset(featureID);
   }
@@ -264,10 +216,6 @@ public class FormatExpressionImpl extends MinimalEObjectImpl.Container implement
         return NUM_EDEFAULT == null ? num != null : !NUM_EDEFAULT.equals(num);
       case CheckerDslPackage.FORMAT_EXPRESSION__VAR:
         return var != null && !var.isEmpty();
-      case CheckerDslPackage.FORMAT_EXPRESSION__SZ:
-        return sz != null && !sz.isEmpty();
-      case CheckerDslPackage.FORMAT_EXPRESSION__COUNT:
-        return count != null && !count.isEmpty();
     }
     return super.eIsSet(featureID);
   }
@@ -285,12 +233,6 @@ public class FormatExpressionImpl extends MinimalEObjectImpl.Container implement
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (num: ");
     result.append(num);
-    result.append(", var: ");
-    result.append(var);
-    result.append(", sz: ");
-    result.append(sz);
-    result.append(", count: ");
-    result.append(count);
     result.append(')');
     return result.toString();
   }

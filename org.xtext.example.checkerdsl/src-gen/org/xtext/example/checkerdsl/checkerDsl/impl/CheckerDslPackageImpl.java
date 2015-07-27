@@ -37,6 +37,7 @@ import org.xtext.example.checkerdsl.checkerDsl.FollowUp;
 import org.xtext.example.checkerdsl.checkerDsl.ForFormatExpression;
 import org.xtext.example.checkerdsl.checkerDsl.Format;
 import org.xtext.example.checkerdsl.checkerDsl.FormatExpression;
+import org.xtext.example.checkerdsl.checkerDsl.FormatVariable;
 import org.xtext.example.checkerdsl.checkerDsl.Helper;
 import org.xtext.example.checkerdsl.checkerDsl.HiddenFormat;
 import org.xtext.example.checkerdsl.checkerDsl.InputFormat;
@@ -295,6 +296,13 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
    * @generated
    */
   private EClass formatExpressionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass formatVariableEClass = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -718,7 +726,7 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getChkVariableDeclaration_Arr()
+  public EAttribute getChkVariableDeclaration_Sz()
   {
     return (EAttribute)chkVariableDeclarationEClass.getEStructuralFeatures().get(1);
   }
@@ -728,7 +736,7 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getChkVariableDeclaration_Sz()
+  public EAttribute getChkVariableDeclaration_Name()
   {
     return (EAttribute)chkVariableDeclarationEClass.getEStructuralFeatures().get(2);
   }
@@ -738,19 +746,9 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getChkVariableDeclaration_Name()
-  {
-    return (EAttribute)chkVariableDeclarationEClass.getEStructuralFeatures().get(3);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EReference getChkVariableDeclaration_Limit1()
   {
-    return (EReference)chkVariableDeclarationEClass.getEStructuralFeatures().get(4);
+    return (EReference)chkVariableDeclarationEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -760,7 +758,7 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
    */
   public EReference getChkVariableDeclaration_Limit()
   {
-    return (EReference)chkVariableDeclarationEClass.getEStructuralFeatures().get(5);
+    return (EReference)chkVariableDeclarationEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -770,7 +768,7 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
    */
   public EReference getChkVariableDeclaration_SpValue()
   {
-    return (EReference)chkVariableDeclarationEClass.getEStructuralFeatures().get(6);
+    return (EReference)chkVariableDeclarationEClass.getEStructuralFeatures().get(5);
   }
 
   /**
@@ -1058,9 +1056,9 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getHelper_Add()
+  public EReference getHelper_Var4()
   {
-    return (EAttribute)helperEClass.getEStructuralFeatures().get(11);
+    return (EReference)helperEClass.getEStructuralFeatures().get(11);
   }
 
   /**
@@ -1068,7 +1066,7 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getHelper_Remove()
+  public EAttribute getHelper_Add()
   {
     return (EAttribute)helperEClass.getEStructuralFeatures().get(12);
   }
@@ -1078,7 +1076,7 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getHelper_Random()
+  public EAttribute getHelper_Remove()
   {
     return (EAttribute)helperEClass.getEStructuralFeatures().get(13);
   }
@@ -1088,9 +1086,9 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getHelper_Var4()
+  public EAttribute getHelper_Random()
   {
-    return (EReference)helperEClass.getEStructuralFeatures().get(14);
+    return (EAttribute)helperEClass.getEStructuralFeatures().get(14);
   }
 
   /**
@@ -1758,9 +1756,9 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getFormatExpression_Var()
+  public EReference getFormatExpression_Var()
   {
-    return (EAttribute)formatExpressionEClass.getEStructuralFeatures().get(1);
+    return (EReference)formatExpressionEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1768,9 +1766,9 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getFormatExpression_Sz()
+  public EClass getFormatVariable()
   {
-    return (EAttribute)formatExpressionEClass.getEStructuralFeatures().get(2);
+    return formatVariableEClass;
   }
 
   /**
@@ -1778,9 +1776,19 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getFormatExpression_Count()
+  public EReference getFormatVariable_Fv()
   {
-    return (EAttribute)formatExpressionEClass.getEStructuralFeatures().get(3);
+    return (EReference)formatVariableEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getFormatVariable_Count()
+  {
+    return (EAttribute)formatVariableEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1859,7 +1867,6 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
 
     chkVariableDeclarationEClass = createEClass(CHK_VARIABLE_DECLARATION);
     createEAttribute(chkVariableDeclarationEClass, CHK_VARIABLE_DECLARATION__TYPE);
-    createEAttribute(chkVariableDeclarationEClass, CHK_VARIABLE_DECLARATION__ARR);
     createEAttribute(chkVariableDeclarationEClass, CHK_VARIABLE_DECLARATION__SZ);
     createEAttribute(chkVariableDeclarationEClass, CHK_VARIABLE_DECLARATION__NAME);
     createEReference(chkVariableDeclarationEClass, CHK_VARIABLE_DECLARATION__LIMIT1);
@@ -1899,10 +1906,10 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
     createEAttribute(helperEClass, HELPER__VAR2);
     createEAttribute(helperEClass, HELPER__SELECT);
     createEAttribute(helperEClass, HELPER__VARS);
+    createEReference(helperEClass, HELPER__VAR4);
     createEAttribute(helperEClass, HELPER__ADD);
     createEAttribute(helperEClass, HELPER__REMOVE);
     createEAttribute(helperEClass, HELPER__RANDOM);
-    createEReference(helperEClass, HELPER__VAR4);
     createEAttribute(helperEClass, HELPER__SIZE);
     createEAttribute(helperEClass, HELPER__REVERSE);
     createEAttribute(helperEClass, HELPER__CONTAINS);
@@ -1985,9 +1992,11 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
 
     formatExpressionEClass = createEClass(FORMAT_EXPRESSION);
     createEAttribute(formatExpressionEClass, FORMAT_EXPRESSION__NUM);
-    createEAttribute(formatExpressionEClass, FORMAT_EXPRESSION__VAR);
-    createEAttribute(formatExpressionEClass, FORMAT_EXPRESSION__SZ);
-    createEAttribute(formatExpressionEClass, FORMAT_EXPRESSION__COUNT);
+    createEReference(formatExpressionEClass, FORMAT_EXPRESSION__VAR);
+
+    formatVariableEClass = createEClass(FORMAT_VARIABLE);
+    createEReference(formatVariableEClass, FORMAT_VARIABLE__FV);
+    createEAttribute(formatVariableEClass, FORMAT_VARIABLE__COUNT);
   }
 
   /**
@@ -2087,7 +2096,6 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
 
     initEClass(chkVariableDeclarationEClass, ChkVariableDeclaration.class, "ChkVariableDeclaration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getChkVariableDeclaration_Type(), ecorePackage.getEString(), "type", null, 0, 1, ChkVariableDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getChkVariableDeclaration_Arr(), ecorePackage.getEString(), "arr", null, 0, -1, ChkVariableDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getChkVariableDeclaration_Sz(), ecorePackage.getEString(), "sz", null, 0, -1, ChkVariableDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getChkVariableDeclaration_Name(), ecorePackage.getEString(), "name", null, 0, 1, ChkVariableDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getChkVariableDeclaration_Limit1(), this.getLimit(), null, "limit1", null, 0, 1, ChkVariableDeclaration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2127,10 +2135,10 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
     initEAttribute(getHelper_Var2(), ecorePackage.getEString(), "var2", null, 0, 1, Helper.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getHelper_Select(), ecorePackage.getEString(), "select", null, 0, 1, Helper.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getHelper_Vars(), ecorePackage.getEString(), "vars", null, 0, -1, Helper.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getHelper_Var4(), this.getChkVariables(), null, "var4", null, 0, 1, Helper.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getHelper_Add(), ecorePackage.getEString(), "add", null, 0, 1, Helper.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getHelper_Remove(), ecorePackage.getEString(), "remove", null, 0, 1, Helper.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getHelper_Random(), ecorePackage.getEString(), "random", null, 0, 1, Helper.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getHelper_Var4(), this.getChkVariables(), null, "var4", null, 0, 1, Helper.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getHelper_Size(), ecorePackage.getEString(), "size", null, 0, 1, Helper.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getHelper_Reverse(), ecorePackage.getEString(), "reverse", null, 0, 1, Helper.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getHelper_Contains(), ecorePackage.getEString(), "contains", null, 0, 1, Helper.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2213,9 +2221,11 @@ public class CheckerDslPackageImpl extends EPackageImpl implements CheckerDslPac
 
     initEClass(formatExpressionEClass, FormatExpression.class, "FormatExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getFormatExpression_Num(), ecorePackage.getEString(), "num", null, 0, 1, FormatExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getFormatExpression_Var(), ecorePackage.getEString(), "var", null, 0, -1, FormatExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getFormatExpression_Sz(), ecorePackage.getEString(), "sz", null, 0, -1, FormatExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getFormatExpression_Count(), ecorePackage.getEString(), "count", null, 0, -1, FormatExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getFormatExpression_Var(), this.getFormatVariable(), null, "var", null, 0, -1, FormatExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(formatVariableEClass, FormatVariable.class, "FormatVariable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getFormatVariable_Fv(), this.getChkVariable(), null, "fv", null, 0, 1, FormatVariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getFormatVariable_Count(), ecorePackage.getEString(), "count", null, 0, 1, FormatVariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

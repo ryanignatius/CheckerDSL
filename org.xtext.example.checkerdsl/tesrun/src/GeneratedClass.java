@@ -24,17 +24,29 @@ public class GeneratedClass {
   
   private int current_testcase;
   
-  private int num_tc;
-  
-  private int max_testcase;
-  
   private int current_mr;
   
   private int num_mr;
   
+  private int num_tc;
+  
+  private int max_tc;
+  
   private int num_subtask;
   
+  private int loop_counter;
+  
+  private int max_loop_counter;
+  
   private static boolean is_valid;
+  
+  public static boolean getIs_valid() {
+    return is_valid;
+  }
+  
+  public static void setIs_valid(final boolean new_valid) {
+    is_valid = new_valid;
+  }
   
   private static int cur_lines;
   
@@ -108,346 +120,236 @@ public class GeneratedClass {
     return token;
   }
   
-  public boolean validateQ(final int value, final int subtask) {
+  public boolean validateX(final int value, final int subtask) {
     switch (subtask){
-    case 1 :
-    if ((0 <= value && value <= 150000)){
+    default :
+    if ((1 <= value && value <= 100)){
     return true;
     } else {
     return false;
     }
-    default:
-    return true;
     }
   }
   
-  private int q;
+  private int x;
   
-  private int q_2;
+  private int x_2;
   
-  public int getQ() {
-    return this.q;
+  public int getX() {
+    return this.x;
   }
   
-  public void setQ(final int q) {
-    this.q = q;
+  public void setX(final int x) {
+    this.x = x;
   }
   
-  public int getQ_2() {
-    return this.q_2;
+  public int getX_2() {
+    return this.x_2;
   }
   
-  public void setQ_2(final int q_2) {
-    this.q_2 = q_2;
+  public void setX_2(final int x_2) {
+    this.x_2 = x_2;
   }
   
-  public void readQ(final String token) {
-    q = intReader(token);
-    if (!validateQ(q,current_subtask)){
+  public void readX(final String token) {
+    x = intReader(token);
+    if (!validateX(x,current_subtask)){
     	GeneratedClass.die("value not in valid range");
     }
   }
   
-  public void writeQ() {
+  public void writeX() {
     try {
-    	writer.write(""+(int)q);
+    	writer.write(""+(int)x);
     } catch (Exception e){}
   }
   
-  public void writeQ_2() {
+  public void writeX_2() {
     try {
-    	writer.write(""+(int)q_2);
+    	writer.write(""+(int)x_2);
+    } catch (Exception e){}
+  }
+  
+  public boolean validateY(final int value, final int subtask) {
+    switch (subtask){
+    default :
+    if ((1 <= value && value <= 100)){
+    return true;
+    } else {
+    return false;
+    }
+    }
+  }
+  
+  private int y;
+  
+  private int y_2;
+  
+  public int getY() {
+    return this.y;
+  }
+  
+  public void setY(final int y) {
+    this.y = y;
+  }
+  
+  public int getY_2() {
+    return this.y_2;
+  }
+  
+  public void setY_2(final int y_2) {
+    this.y_2 = y_2;
+  }
+  
+  public void readY(final String token) {
+    y = intReader(token);
+    if (!validateY(y,current_subtask)){
+    	GeneratedClass.die("value not in valid range");
+    }
+  }
+  
+  public void writeY() {
+    try {
+    	writer.write(""+(int)y);
+    } catch (Exception e){}
+  }
+  
+  public void writeY_2() {
+    try {
+    	writer.write(""+(int)y_2);
     } catch (Exception e){}
   }
   
   public boolean validateM(final int value, final int subtask) {
     switch (subtask){
-    case 1 :
-    if ((0 <= value && value <= 2000)){
+    default :
+    if ((0 <= value && value <= 1)){
     return true;
     } else {
     return false;
     }
-    default:
-    return true;
     }
   }
   
-  private int m;
+  private ArrayList m;
   
-  private int m_2;
+  private ArrayList m_2;
   
-  public int getM() {
+  public ArrayList getM() {
     return this.m;
   }
   
-  public void setM(final int m) {
+  public void setM(final ArrayList m) {
     this.m = m;
   }
   
-  public int getM_2() {
-    return this.m_2;
+  public ArrayList getM(final int idx1) {
+    return (ArrayList)m.get(idx1);
   }
   
-  public void setM_2(final int m_2) {
-    this.m_2 = m_2;
+  public int getM(final int idx1, final int idx2) {
+    ArrayList temp = (ArrayList)m.get(idx1);
+    return (int)temp.get(idx2);
   }
   
-  public void readM(final String token) {
-    m = intReader(token);
-    if (!validateM(m,current_subtask)){
-    	GeneratedClass.die("value not in valid range");
+  public void setM(final int idx1, final ArrayList val) {
+    m.set(idx1,val);
+  }
+  
+  public void setM(final int idx1, final int idx2, final Object val) {
+    ArrayList temp = (ArrayList)m.get(idx1);
+    temp.set(idx2,(int)val);
+    m.set(idx1,temp);
+  }
+  
+  public ArrayList getM_2(final int idx1) {
+    return (ArrayList)m_2.get(idx1);
+  }
+  
+  public int getM_2(final int idx1, final int idx2) {
+    ArrayList temp = (ArrayList)m_2.get(idx1);
+    return (int)temp.get(idx2);
+  }
+  
+  public void setM_2(final int idx1, final ArrayList val) {
+    m_2.set(idx1,val);
+  }
+  
+  public void setM_2(final int idx1, final int idx2, final Object val) {
+    ArrayList temp = (ArrayList)m_2.get(idx1);
+    temp.set(idx2,(int)val);
+    m_2.set(idx1,temp);
+  }
+  
+  public void readM(final String[] tokens, final int idx1) {
+    if (idx1 == 0) m = new ArrayList();
+    ArrayList temp = new ArrayList();
+    for (int i=0; i<y; i++){
+    	temp.add(intReader(tokens[i]));
+    	if (!validateM((int)temp.get(i),current_subtask)){
+    		GeneratedClass.die("value not in valid range");
+    	}
     }
+    m.add(temp);
+  }
+  
+  public void readM(final String token, final int idx1, final int idx2) {
+    ArrayList atemp = (ArrayList) m.get(idx1);
+    atemp.set(idx2,intReader(token));
+    m.set(idx1,atemp);
   }
   
   public void writeM() {
     try {
-    	writer.write(""+(int)m);
+    	for (int i=0; i<x; i++){
+    		for (int j=0; j<y; j++){
+    			if (j > 0) writer.write(" ");
+    			writer.write(""+(int)((ArrayList)m.get(i)).get(j));
+    		}
+    		writer.write(System.lineSeparator());
+    	}
+    } catch (Exception e){}
+  }
+  
+  public void writeM(final int idx1, final int idx2) {
+    try {
+    	writer.write(""+(int)((ArrayList)m.get(idx1)).get(idx2));
     } catch (Exception e){}
   }
   
   public void writeM_2() {
     try {
-    	writer.write(""+(int)m_2);
-    } catch (Exception e){}
-  }
-  
-  public boolean validateS(final int value, final int subtask) {
-    switch (subtask){
-    case 1 :
-    if ((0 <= value && value <= 2000)){
-    return true;
-    } else {
-    return false;
-    }
-    default:
-    return true;
-    }
-  }
-  
-  private int s;
-  
-  private int s_2;
-  
-  public int getS() {
-    return this.s;
-  }
-  
-  public void setS(final int s) {
-    this.s = s;
-  }
-  
-  public int getS_2() {
-    return this.s_2;
-  }
-  
-  public void setS_2(final int s_2) {
-    this.s_2 = s_2;
-  }
-  
-  public void readS(final String token) {
-    s = intReader(token);
-    if (!validateS(s,current_subtask)){
-    	GeneratedClass.die("value not in valid range");
-    }
-  }
-  
-  public void writeS() {
-    try {
-    	writer.write(""+(int)s);
-    } catch (Exception e){}
-  }
-  
-  public void writeS_2() {
-    try {
-    	writer.write(""+(int)s_2);
-    } catch (Exception e){}
-  }
-  
-  public boolean validateN(final int value, final int subtask) {
-    switch (subtask){
-    case 1 :
-    if ((3 <= value && value <= 150)){
-    return true;
-    } else {
-    return false;
-    }
-    default:
-    return true;
-    }
-  }
-  
-  private ArrayList n;
-  
-  private ArrayList n_2;
-  
-  public ArrayList getN() {
-    return this.n;
-  }
-  
-  public void setN(final ArrayList n) {
-    this.n = n;
-  }
-  
-  public int getN(final int id1) {
-    return (int)n.get(id1);
-  }
-  
-  public void setN(final int id1, final Object val) {
-    n.set(id1,val);
-  }
-  
-  public int getN_2(final int id1) {
-    return (int)n_2.get(id1);
-  }
-  
-  public void setN_2(final int id1, final Object val) {
-    n_2.set(id1,val);
-  }
-  
-  public void readN(final String[] tokens) {
-    n = new ArrayList();
-    for (int i=0; i<tokens.length; i++){
-    	n.add(intReader(tokens[i]));
-    	if (!validateN((int)n.get(i),current_subtask)){
-    		GeneratedClass.die("value not in valid range");
+    	for (int i=0; i<x; i++){
+    		for (int j=0; j<y; j++){
+    			if (j > 0) writer.write(" ");
+    			writer.write(""+(int)((ArrayList)m_2.get(i)).get(j));
+    		}
+    		writer.write(System.lineSeparator());
     	}
-    }
+    } catch (Exception e){}
   }
   
-  public void readN(final String token, final int idx) {
-    n.set(idx,intReader(token));
-    if (!validateN((int)n.get(idx),current_subtask)){
-    	GeneratedClass.die("value not in valid range");
-    }
-  }
-  
-  public void writeN() {
+  public void writeM_2(final int idx1) {
     try {
-    	for (int i=0; i<n.size(); i++){
-    		if (i > 0) writer.write(" ");
-    		writer.write(""+(int)n.get(i));
+    	ArrayList temp = (ArrayList)m.get(idx1);
+    	for (int j=0; j<y; j++){
+    		if (j > 0) writer.write(" ");
+    		writer.write(""+(int)temp.get(j));
     	}
     	writer.write(System.lineSeparator());
     } catch (Exception e){}
   }
   
-  public void writeN(final int idx) {
+  public void writeM_2(final int idx1, final int idx2) {
     try {
-    	writer.write(""+(int)n.get(idx));
+    	writer.write(""+(int)((ArrayList)m_2.get(idx1)).get(idx2));
     } catch (Exception e){}
   }
   
-  public void writeN_2() {
-    try {
-    	for (int i=0; i<n_2.size(); i++){
-    		if (i > 0) writer.write(" ");
-    		writer.write(""+(int)n_2.get(i));
-    	}
-    	writer.write(System.lineSeparator());
-    } catch (Exception e){}
-  }
-  
-  public void writeN_2(final int idx) {
-    try {
-    	writer.write(""+(int)n_2.get(idx));
-    } catch (Exception e){}
-  }
-  
-  public boolean validateR(final int value, final int subtask) {
-    switch (subtask){
-    case 1 :
-    if ((2 <= value && value <= 150)){
-    return true;
-    } else {
-    return false;
-    }
-    default:
-    return true;
-    }
-  }
-  
-  private ArrayList r;
-  
-  private ArrayList r_2;
-  
-  public ArrayList getR() {
-    return this.r;
-  }
-  
-  public void setR(final ArrayList r) {
-    this.r = r;
-  }
-  
-  public int getR(final int id1) {
-    return (int)r.get(id1);
-  }
-  
-  public void setR(final int id1, final Object val) {
-    r.set(id1,val);
-  }
-  
-  public int getR_2(final int id1) {
-    return (int)r_2.get(id1);
-  }
-  
-  public void setR_2(final int id1, final Object val) {
-    r_2.set(id1,val);
-  }
-  
-  public void readR(final String[] tokens) {
-    r = new ArrayList();
-    for (int i=0; i<tokens.length; i++){
-    	r.add(intReader(tokens[i]));
-    	if (!validateR((int)r.get(i),current_subtask)){
-    		GeneratedClass.die("value not in valid range");
-    	}
-    }
-  }
-  
-  public void readR(final String token, final int idx) {
-    r.set(idx,intReader(token));
-    if (!validateR((int)r.get(idx),current_subtask)){
-    	GeneratedClass.die("value not in valid range");
-    }
-  }
-  
-  public void writeR() {
-    try {
-    	for (int i=0; i<r.size(); i++){
-    		if (i > 0) writer.write(" ");
-    		writer.write(""+(int)r.get(i));
-    	}
-    	writer.write(System.lineSeparator());
-    } catch (Exception e){}
-  }
-  
-  public void writeR(final int idx) {
-    try {
-    	writer.write(""+(int)r.get(idx));
-    } catch (Exception e){}
-  }
-  
-  public void writeR_2() {
-    try {
-    	for (int i=0; i<r_2.size(); i++){
-    		if (i > 0) writer.write(" ");
-    		writer.write(""+(int)r_2.get(i));
-    	}
-    	writer.write(System.lineSeparator());
-    } catch (Exception e){}
-  }
-  
-  public void writeR_2(final int idx) {
-    try {
-    	writer.write(""+(int)r_2.get(idx));
-    } catch (Exception e){}
-  }
-  
-  public boolean validateOlive(final int value, final int subtask) {
+  public boolean validateNumKey(final int value, final int subtask) {
     switch (subtask){
     default :
-    if ((0 <= value && value <= q)){
+    if ((1 <= value && value <= x)){
     return true;
     } else {
     return false;
@@ -455,49 +357,49 @@ public class GeneratedClass {
     }
   }
   
-  private int olive;
+  private int numKey;
   
-  private int olive_2;
+  private int numKey_2;
   
-  public int getOlive() {
-    return this.olive;
+  public int getNumKey() {
+    return this.numKey;
   }
   
-  public void setOlive(final int olive) {
-    this.olive = olive;
+  public void setNumKey(final int numKey) {
+    this.numKey = numKey;
   }
   
-  public int getOlive_2() {
-    return this.olive_2;
+  public int getNumKey_2() {
+    return this.numKey_2;
   }
   
-  public void setOlive_2(final int olive_2) {
-    this.olive_2 = olive_2;
+  public void setNumKey_2(final int numKey_2) {
+    this.numKey_2 = numKey_2;
   }
   
-  public void readOlive(final String token) {
-    olive = intReader(token);
-    if (!validateOlive(olive,current_subtask)){
+  public void readNumKey(final String token) {
+    numKey = intReader(token);
+    if (!validateNumKey(numKey,current_subtask)){
     	GeneratedClass.die("value not in valid range");
     }
   }
   
-  public void writeOlive() {
+  public void writeNumKey() {
     try {
-    	writer.write(""+(int)olive);
+    	writer.write(""+(int)numKey);
     } catch (Exception e){}
   }
   
-  public void writeOlive_2() {
+  public void writeNumKey_2() {
     try {
-    	writer.write(""+(int)olive_2);
+    	writer.write(""+(int)numKey_2);
     } catch (Exception e){}
   }
   
-  public boolean validateYn(final int value, final int subtask) {
+  public boolean validateO(final int value, final int subtask) {
     switch (subtask){
     default :
-    if ((0 <= value && value <= 1)){
+    if ((1 <= value && value <= x)){
     return true;
     } else {
     return false;
@@ -505,173 +407,91 @@ public class GeneratedClass {
     }
   }
   
-  private ArrayList yn;
+  private ArrayList o;
   
-  private ArrayList yn_2;
+  private ArrayList o_2;
   
-  public ArrayList getYn() {
-    return this.yn;
+  public ArrayList getO() {
+    return this.o;
   }
   
-  public void setYn(final ArrayList yn) {
-    this.yn = yn;
+  public void setO(final ArrayList o) {
+    this.o = o;
   }
   
-  public int getYn(final int id1) {
-    return (int)yn.get(id1);
+  public int getO(final int id1) {
+    return (int)o.get(id1);
   }
   
-  public void setYn(final int id1, final Object val) {
-    yn.set(id1,val);
+  public void setO(final int id1, final Object val) {
+    o.set(id1,val);
   }
   
-  public int getYn_2(final int id1) {
-    return (int)yn_2.get(id1);
+  public int getO_2(final int id1) {
+    return (int)o_2.get(id1);
   }
   
-  public void setYn_2(final int id1, final Object val) {
-    yn_2.set(id1,val);
+  public void setO_2(final int id1, final Object val) {
+    o_2.set(id1,val);
   }
   
-  public void readYn(final String[] tokens) {
-    yn = new ArrayList();
-    for (int i=0; i<tokens.length; i++){
-    	yn.add(intReader(tokens[i]));
-    	if (!validateYn((int)yn.get(i),current_subtask)){
+  public void readO(final String[] tokens) {
+    o = new ArrayList();
+    for (int i=0; i<x; i++){
+    	o.add(intReader(tokens[i]));
+    	if (!validateO((int)o.get(i),current_subtask)){
     		GeneratedClass.die("value not in valid range");
     	}
     }
   }
   
-  public void readYn(final String token, final int idx) {
-    yn.set(idx,intReader(token));
-    if (!validateYn((int)yn.get(idx),current_subtask)){
-    	GeneratedClass.die("value not in valid range");
-    }
+  public void readO(final String token, final int idx) {
+    o.set(idx,intReader(token));
   }
   
-  public void writeYn() {
+  public void writeO() {
     try {
-    	for (int i=0; i<yn.size(); i++){
+    	for (int i=0; i<x; i++){
     		if (i > 0) writer.write(" ");
-    		writer.write(""+(int)yn.get(i));
+    		writer.write(""+(int)o.get(i));
     	}
     	writer.write(System.lineSeparator());
     } catch (Exception e){}
   }
   
-  public void writeYn(final int idx) {
+  public void writeO(final int idx) {
     try {
-    	writer.write(""+(int)yn.get(idx));
+    	writer.write(""+(int)o.get(idx));
     } catch (Exception e){}
   }
   
-  public void writeYn_2() {
+  public void writeO_2() {
     try {
-    	for (int i=0; i<yn_2.size(); i++){
+    	for (int i=0; i<x_2; i++){
     		if (i > 0) writer.write(" ");
-    		writer.write(""+(int)yn_2.get(i));
+    		writer.write(""+(int)o_2.get(i));
     	}
     	writer.write(System.lineSeparator());
     } catch (Exception e){}
   }
   
-  public void writeYn_2(final int idx) {
+  public void writeO_2(final int idx) {
     try {
-    	writer.write(""+(int)yn_2.get(idx));
-    } catch (Exception e){}
-  }
-  
-  public boolean validateYr(final int value, final int subtask) {
-    switch (subtask){
-    default :
-    if ((0 <= value && value <= 1)){
-    return true;
-    } else {
-    return false;
-    }
-    }
-  }
-  
-  private ArrayList yr;
-  
-  private ArrayList yr_2;
-  
-  public ArrayList getYr() {
-    return this.yr;
-  }
-  
-  public void setYr(final ArrayList yr) {
-    this.yr = yr;
-  }
-  
-  public int getYr(final int id1) {
-    return (int)yr.get(id1);
-  }
-  
-  public void setYr(final int id1, final Object val) {
-    yr.set(id1,val);
-  }
-  
-  public int getYr_2(final int id1) {
-    return (int)yr_2.get(id1);
-  }
-  
-  public void setYr_2(final int id1, final Object val) {
-    yr_2.set(id1,val);
-  }
-  
-  public void readYr(final String[] tokens) {
-    yr = new ArrayList();
-    for (int i=0; i<tokens.length; i++){
-    	yr.add(intReader(tokens[i]));
-    	if (!validateYr((int)yr.get(i),current_subtask)){
-    		GeneratedClass.die("value not in valid range");
-    	}
-    }
-  }
-  
-  public void readYr(final String token, final int idx) {
-    yr.set(idx,intReader(token));
-    if (!validateYr((int)yr.get(idx),current_subtask)){
-    	GeneratedClass.die("value not in valid range");
-    }
-  }
-  
-  public void writeYr() {
-    try {
-    	for (int i=0; i<yr.size(); i++){
-    		if (i > 0) writer.write(" ");
-    		writer.write(""+(int)yr.get(i));
-    	}
-    	writer.write(System.lineSeparator());
-    } catch (Exception e){}
-  }
-  
-  public void writeYr(final int idx) {
-    try {
-    	writer.write(""+(int)yr.get(idx));
-    } catch (Exception e){}
-  }
-  
-  public void writeYr_2() {
-    try {
-    	for (int i=0; i<yr_2.size(); i++){
-    		if (i > 0) writer.write(" ");
-    		writer.write(""+(int)yr_2.get(i));
-    	}
-    	writer.write(System.lineSeparator());
-    } catch (Exception e){}
-  }
-  
-  public void writeYr_2(final int idx) {
-    try {
-    	writer.write(""+(int)yr_2.get(idx));
+    	writer.write(""+(int)o_2.get(idx));
     } catch (Exception e){}
   }
   
   public void printScore() {
-    System.out.println("Subtask : 1, Score : 100");
+    File sfile;
+    try {
+    sfile = new File("tc/1.score");
+    if(!sfile.exists()) sfile.createNewFile();
+    fw = new FileWriter(sfile);
+    writer = new BufferedWriter(fw);
+    writer.write(""+100);
+    writer.write(System.lineSeparator());
+    writer.close();
+    } catch(Exception e){}
   }
   
   /**
@@ -684,53 +504,86 @@ public class GeneratedClass {
     String[] tokens;
     try{
     BufferedReader reader = new BufferedReader(new FileReader(new File("tc/Subtask"+current_subtask+"/in/"+num+"/"+current_testcase+".in")));
-    sz = 3;
+    sz = 0+1+1;
     if ((line = reader.readLine()) != null){
     line = line.trim();
     line = line.replaceAll("\\s+", " ");
     tokens = line.split(" ");
-    if (tokens.length == sz || sz < 0){
-    readQ(tokens[0]);
-    readM(tokens[1]);
-    readS(tokens[2]);
+    if (tokens.length == sz){
+    readX(tokens[0]);
+    readY(tokens[1]);
     } else {
     GeneratedClass.die("number of elements in lines not match");
     }
     } else {
     GeneratedClass.die("number of lines not match");
     }
-    sz = 0+m;
+    for (int i=0; i<x; i++){
+    sz = 0+y;
     if ((line = reader.readLine()) != null){
     line = line.trim();
     line = line.replaceAll("\\s+", " ");
     tokens = line.split(" ");
-    if (tokens.length == sz || sz < 0){
-    readN(tokens);
+    if (tokens.length == sz){
+    readM(tokens,i);
     } else {
     GeneratedClass.die("number of elements in lines not match");
     }
     } else {
     GeneratedClass.die("number of lines not match");
     }
-    sz = 0+s;
-    if ((line = reader.readLine()) != null){
-    line = line.trim();
-    line = line.replaceAll("\\s+", " ");
-    tokens = line.split(" ");
-    if (tokens.length == sz || sz < 0){
-    readR(tokens);
-    } else {
-    GeneratedClass.die("number of elements in lines not match");
-    }
-    } else {
-    GeneratedClass.die("number of lines not match");
     }
     if (reader.readLine() != null){
     GeneratedClass.die("number of lines not match");
     }
     reader.close();
     } catch (Exception e){}
-    System.out.println("Finish read input "+num+"/"+current_testcase+".in");
+  }
+  
+  /**
+   * input format
+   */
+  public void readInput(final String path) {
+    int sz = 0;
+    GeneratedClass.is_valid = true;
+    String line;
+    String[] tokens;
+    try{
+    BufferedReader reader = new BufferedReader(new FileReader(new File(path)));
+    sz = 0+1+1;
+    if ((line = reader.readLine()) != null){
+    line = line.trim();
+    line = line.replaceAll("\\s+", " ");
+    tokens = line.split(" ");
+    if (tokens.length == sz){
+    readX(tokens[0]);
+    readY(tokens[1]);
+    } else {
+    GeneratedClass.die("number of elements in lines not match");
+    }
+    } else {
+    GeneratedClass.die("number of lines not match");
+    }
+    for (int i=0; i<x; i++){
+    sz = 0+y;
+    if ((line = reader.readLine()) != null){
+    line = line.trim();
+    line = line.replaceAll("\\s+", " ");
+    tokens = line.split(" ");
+    if (tokens.length == sz){
+    readM(tokens,i);
+    } else {
+    GeneratedClass.die("number of elements in lines not match");
+    }
+    } else {
+    GeneratedClass.die("number of lines not match");
+    }
+    }
+    if (reader.readLine() != null){
+    GeneratedClass.die("number of lines not match");
+    }
+    reader.close();
+    } catch (Exception e){}
   }
   
   /**
@@ -742,17 +595,35 @@ public class GeneratedClass {
     if(!wfile.exists()) wfile.createNewFile();
     fw = new FileWriter(wfile);
     writer = new BufferedWriter(fw);
-    writeQ_2();
+    writeX_2();
     writer.write(" ");
-    writeM_2();
-    writer.write(" ");
-    writeS_2();
+    writeY_2();
     writer.write(System.lineSeparator());
-    writeN_2();
-    writeR_2();
+    for (int i=0; i<x; i++){
+    writeM_2(i);
+    }
     writer.close();
     } catch(Exception e){}
-    System.out.println("Finish write input "+mr+"/"+tc+".in");
+  }
+  
+  /**
+   * input format
+   */
+  public void writeInput(final String path) {
+    try {
+    File wfile = new File(path);
+    if(!wfile.exists()) wfile.createNewFile();
+    fw = new FileWriter(wfile);
+    writer = new BufferedWriter(fw);
+    writeX_2();
+    writer.write(" ");
+    writeY_2();
+    writer.write(System.lineSeparator());
+    for (int i=0; i<x; i++){
+    writeM_2(i);
+    }
+    writer.close();
+    } catch(Exception e){}
   }
   
   /**
@@ -764,13 +635,26 @@ public class GeneratedClass {
     String[] tokens;
     try{
     BufferedReader reader = new BufferedReader(new FileReader(new File("tc/Subtask"+current_subtask+"/out/"+num+"/"+current_testcase+".out")));
-    sz = 1;
+    sz = 0+1;
     if ((line = reader.readLine()) != null){
     line = line.trim();
     line = line.replaceAll("\\s+", " ");
     tokens = line.split(" ");
-    if (tokens.length == sz || sz < 0){
-    readOlive(tokens[0]);
+    if (tokens.length == sz){
+    readNumKey(tokens[0]);
+    } else {
+    GeneratedClass.die("number of elements in lines not match");
+    }
+    } else {
+    GeneratedClass.die("number of lines not match");
+    }
+    sz = 0+numKey;
+    if ((line = reader.readLine()) != null){
+    line = line.trim();
+    line = line.replaceAll("\\s+", " ");
+    tokens = line.split(" ");
+    if (tokens.length == sz){
+    readO(tokens);
     } else {
     GeneratedClass.die("number of elements in lines not match");
     }
@@ -782,7 +666,6 @@ public class GeneratedClass {
     }
     reader.close();
     } catch (Exception e){}
-    System.out.println("Finish read output "+num+"/"+current_testcase+".out");
     if (GeneratedClass.is_valid){
     if (num == 0){
     mr_start();
@@ -792,21 +675,61 @@ public class GeneratedClass {
     readOutput(i);
     }
     current_testcase++;
-    if (current_testcase <= max_testcase){
+    if (current_testcase <= max_tc){
     readInput(0);
     readOutput(0);
     }
     } else {
     initMRVar();
     num_tc++;
-    System.out.println("Add new test case "+num_tc);
-    if (num_tc <= max_testcase){
+    if (num_tc <= max_tc){
     writeInput(0,num_tc);
-    writeHidden(0,num_tc);
     writeOutput(0,num_tc);
     }
     }
     }
+  }
+  
+  /**
+   * output format
+   */
+  public void readOutput(final String path) {
+    int sz = 0;
+    String line;
+    String[] tokens;
+    try{
+    BufferedReader reader = new BufferedReader(new FileReader(new File(path)));
+    sz = 0+1;
+    if ((line = reader.readLine()) != null){
+    line = line.trim();
+    line = line.replaceAll("\\s+", " ");
+    tokens = line.split(" ");
+    if (tokens.length == sz){
+    readNumKey(tokens[0]);
+    } else {
+    GeneratedClass.die("number of elements in lines not match");
+    }
+    } else {
+    GeneratedClass.die("number of lines not match");
+    }
+    sz = 0+numKey;
+    if ((line = reader.readLine()) != null){
+    line = line.trim();
+    line = line.replaceAll("\\s+", " ");
+    tokens = line.split(" ");
+    if (tokens.length == sz){
+    readO(tokens);
+    } else {
+    GeneratedClass.die("number of elements in lines not match");
+    }
+    } else {
+    GeneratedClass.die("number of lines not match");
+    }
+    if (reader.readLine() != null){
+    GeneratedClass.die("number of lines not match");
+    }
+    reader.close();
+    } catch (Exception e){}
   }
   
   /**
@@ -818,286 +741,885 @@ public class GeneratedClass {
     if(!wfile.exists()) wfile.createNewFile();
     fw = new FileWriter(wfile);
     writer = new BufferedWriter(fw);
-    writeOlive_2();
+    writeNumKey_2();
     writer.write(System.lineSeparator());
+    writeO_2();
     writer.close();
     } catch(Exception e){}
-    System.out.println("Finish write output "+mr+"/"+tc+".out");
-  }
-  
-  public void readHidden(final int num) {
-    int sz = 0;
-    GeneratedClass.is_valid = true;
-    String line;
-    String[] tokens;
-    try{
-    BufferedReader reader = new BufferedReader(new FileReader(new File("tc/Subtask"+current_subtask+"/hidden/"+num+"/"+current_testcase+".hidden")));
-    sz = 0+m;
-    if ((line = reader.readLine()) != null){
-    line = line.trim();
-    line = line.replaceAll("\\s+", " ");
-    tokens = line.split(" ");
-    if (tokens.length == sz || sz < 0){
-    readYn(tokens);
-    } else {
-    GeneratedClass.die("number of elements in lines not match");
-    }
-    } else {
-    GeneratedClass.die("number of lines not match");
-    }
-    sz = 0+s;
-    if ((line = reader.readLine()) != null){
-    line = line.trim();
-    line = line.replaceAll("\\s+", " ");
-    tokens = line.split(" ");
-    if (tokens.length == sz || sz < 0){
-    readYr(tokens);
-    } else {
-    GeneratedClass.die("number of elements in lines not match");
-    }
-    } else {
-    GeneratedClass.die("number of lines not match");
-    }
-    if (reader.readLine() != null){
-    GeneratedClass.die("number of lines not match");
-    }
-    reader.close();
-    } catch (Exception e){}
-    System.out.println("Finish read hidden "+num+"/"+current_testcase+".hidden");
-  }
-  
-  public void writeHidden(final int mr, final int tc) {
-    try {
-    File wfile = new File("tc/Subtask"+current_subtask+"/hidden/"+mr+"/"+tc+".hidden");
-    if(!wfile.exists()) wfile.createNewFile();
-    fw = new FileWriter(wfile);
-    writer = new BufferedWriter(fw);
-    writeYn_2();
-    writeYr_2();
-    writer.close();
-    } catch(Exception e){}
-    System.out.println("Finish write hidden "+mr+"/"+tc+".hidden");
   }
   
   public void mr_followup_1() {
     initMRVar();
     current_mr++;
     ArrayList cond_arr;
+    int y1 = y-1;
+    ;
     int k;
     int l;
-    do {k = LibraryFunction.select();
-    l = LibraryFunction.select();
-    } while (!(1<=k && k<l && l<=m && getN(k)!=getN(l)));
-    n_2 = LibraryFunction.swap(n,k,l);
-    yn_2 = LibraryFunction.swap(yn,k,l);
-    writeInput(current_mr,current_testcase);
-    writeHidden(current_mr,current_testcase);
-    writeOutput(current_mr,current_testcase);
+    loop_counter = 0;
+    do {k = LibraryFunction.select(0,y1);
+    l = LibraryFunction.select(0,y1);
+    loop_counter++;
+    if (loop_counter >= max_loop_counter){
+    is_valid = false;
+    break;
+    }
+    } while (!(k<l));
+    ;
+    m_2 = LibraryFunction.swapColumn(m,k,l);
+    ;
   }
   
   public void mr_check_1() {
     initMRVar();
+    boolean ok = true;
+    ArrayList cond_arr;
+    int y1 = y-1;
+    ;
+    int k;
+    int l;
+    loop_counter = 0;
+    do {k = LibraryFunction.select(0,y1);
+    l = LibraryFunction.select(0,y1);
+    loop_counter++;
+    if (loop_counter >= max_loop_counter){
+    is_valid = false;
+    break;
+    }
+    } while (!(k<l));
+    ;
   }
   
   public void mr_followup_2() {
     initMRVar();
     current_mr++;
     ArrayList cond_arr;
-    int k;
-    int l;
-    do {k = LibraryFunction.select();
-    l = LibraryFunction.select();
-    } while (!(1<=k && k<l && l<=s && getR(k)!=getR(l)));
-    r_2 = LibraryFunction.swap(r,k,l);
-    yr_2 = LibraryFunction.swap(yr,k,l);
-    writeInput(current_mr,current_testcase);
-    writeHidden(current_mr,current_testcase);
-    writeOutput(current_mr,current_testcase);
+    x_2 = x+1;
+    ;
+    m_2 = LibraryFunction.addRow(m);
+    ;
+    for (int j=0; j<y; j++){
+    setM_2(x,j,0);
+    ;
+    }
   }
   
   public void mr_check_2() {
     initMRVar();
+    boolean ok = true;
+    ArrayList cond_arr;
   }
   
   public void mr_followup_3() {
     initMRVar();
     current_mr++;
     ArrayList cond_arr;
-    cond_arr = new ArrayList<Boolean>();
-    for (int i=0; i<n.size(); i++){
-    if (getYn(i)==0) cond_arr.add(true);
-    else cond_arr.add(false);
+    y_2 = y+1;
+    ;
+    m_2 = LibraryFunction.addColumn(m);
+    ;
+    for (int i=0; i<x; i++){
+    setM_2(i,y,0);
+    ;
     }
-    int nnew = LibraryFunction.min(n, cond_arr);
-    m_2 = m+1;
-    n_2 = LibraryFunction.add(n,nnew);
-    yn_2 = LibraryFunction.add(yn,0);
-    writeInput(current_mr,current_testcase);
-    writeHidden(current_mr,current_testcase);
-    writeOutput(current_mr,current_testcase);
   }
   
   public void mr_check_3() {
     initMRVar();
+    boolean ok = true;
+    ArrayList cond_arr;
   }
   
   public void mr_followup_4() {
     initMRVar();
     current_mr++;
     ArrayList cond_arr;
-    cond_arr = new ArrayList<Boolean>();
-    for (int i=0; i<r.size(); i++){
-    if (getYr(i)==0) cond_arr.add(true);
-    else cond_arr.add(false);
+    for (int j=0; j<numKey; j++){
+    int temp = getO(j);
+    ;
+    setM_2(j,getM(temp));
+    ;
     }
-    int rnew = LibraryFunction.min(r, cond_arr);
-    s_2 = s+1;
-    r_2 = LibraryFunction.add(r,rnew);
-    yr_2 = LibraryFunction.add(yr,0);
-    writeInput(current_mr,current_testcase);
-    writeHidden(current_mr,current_testcase);
-    writeOutput(current_mr,current_testcase);
   }
   
   public void mr_check_4() {
     initMRVar();
+    boolean ok = true;
+    ArrayList cond_arr;
   }
   
   public void mr_followup_5() {
     initMRVar();
     current_mr++;
     ArrayList cond_arr;
-    int k;
-    do {k = LibraryFunction.select();
-    } while (!(getYn(k)==0));
-    m_2 = m-1;
-    n_2 = LibraryFunction.remove(n,k);
-    yn_2 = LibraryFunction.remove(yn,k);
-    writeInput(current_mr,current_testcase);
-    writeHidden(current_mr,current_testcase);
-    writeOutput(current_mr,current_testcase);
+    int nk = numKey-2;
+    ;
+    int k = LibraryFunction.random(0,nk);
+    ;
+    x_2 = x+1;
+    ;
+    m_2 = LibraryFunction.addRow(m);
+    ;
+    for (int j=0; j<y; j++){
+    int temp = getO(k);
+    ;
+    int k1 = k+1;
+    ;
+    int temp2 = getO(k1);
+    ;
+    setM_2(x,j,getM(temp,j)|getM(temp2,j));
+    ;
+    }
+    numKey_2 = numKey+1;
+    ;
+    int k1 = k+1;
+    ;
+    o_2 = LibraryFunction.remove(o,k1);
+    ;
   }
   
   public void mr_check_5() {
     initMRVar();
+    boolean ok = true;
+    ArrayList cond_arr;
+    int nk = numKey-2;
+    ;
+    int k = LibraryFunction.random(0,nk);
+    ;
+    numKey_2 = numKey+1;
+    ;
+    int k1 = k+1;
+    ;
+    o_2 = LibraryFunction.remove(o,k1);
+    ;
   }
   
   public void mr_followup_6() {
     initMRVar();
     current_mr++;
     ArrayList cond_arr;
-    int k;
-    do {k = LibraryFunction.select();
-    } while (!(getYr(k)==0));
-    s_2 = s-1;
-    r_2 = LibraryFunction.remove(r,k);
-    yr_2 = LibraryFunction.remove(yr,k);
-    writeInput(current_mr,current_testcase);
-    writeHidden(current_mr,current_testcase);
-    writeOutput(current_mr,current_testcase);
+    int nk = numKey-1;
+    ;
+    int k = LibraryFunction.random(1,nk);
+    ;
+    for (int j=0; j<y; j++){
+    int temp = getO(k);
+    ;
+    setM_2(1,j,getM(1,j)|getM(temp,j));
+    ;
+    }
+    numKey_2 = numKey-1;
+    ;
+    o_2 = LibraryFunction.remove(o,k);
+    ;
   }
   
   public void mr_check_6() {
     initMRVar();
+    boolean ok = true;
+    ArrayList cond_arr;
+    int nk = numKey-1;
+    ;
+    int k = LibraryFunction.random(1,nk);
+    ;
+    numKey_2 = numKey-1;
+    ;
+    o_2 = LibraryFunction.remove(o,k);
+    ;
   }
   
   public void mr_followup_7() {
     initMRVar();
     current_mr++;
     ArrayList cond_arr;
-    int k;
-    do {k = LibraryFunction.select();
-    } while (!(getYn(k)==1));
-    m_2 = m-1;
-    q_2 = q-getN(k);
-    n_2 = LibraryFunction.remove(n,k);
-    yn_2 = LibraryFunction.remove(yn,k);
-    olive_2 = olive-getN(k);
-    writeInput(current_mr,current_testcase);
-    writeHidden(current_mr,current_testcase);
-    writeOutput(current_mr,current_testcase);
+    int nk = numKey-1;
+    ;
+    int k = LibraryFunction.random(0,nk);
+    ;
+    for (int j=0; j<y; j++){
+    int temp = getO(k);
+    ;
+    m_2 = LibraryFunction.;
+    ;
+    }
+    numKey_2 = numKey-1;
+    ;
+    m_2 = LibraryFunction.;
+    ;
+    o_2 = LibraryFunction.remove(o,k);
+    ;
   }
   
   public void mr_check_7() {
     initMRVar();
+    boolean ok = true;
+    ArrayList cond_arr;
+    int nk = numKey-1;
+    ;
+    int k = LibraryFunction.random(0,nk);
+    ;
+    numKey_2 = numKey-1;
+    ;
+    m_2 = LibraryFunction.;
+    ;
+    o_2 = LibraryFunction.remove(o,k);
+    ;
   }
   
   public void mr_followup_8() {
     initMRVar();
     current_mr++;
     ArrayList cond_arr;
+    int nk = numKey-1;
+    ;
     int k;
-    int l;
-    do {k = LibraryFunction.select();
-    l = LibraryFunction.select();
-    } while (!(1<=k && k<l && l<=m && getYn(k)==1 && getYn(l)==1));
-    setN_2(k,getN(k)+getN(l));
-    m_2 = m-1;
-    n_2 = LibraryFunction.remove(n,l);
-    yn_2 = LibraryFunction.remove(yn,l);
-    writeInput(current_mr,current_testcase);
-    writeHidden(current_mr,current_testcase);
-    writeOutput(current_mr,current_testcase);
+    loop_counter = 0;
+    do {k = LibraryFunction.select(0,nk);
+    loop_counter++;
+    if (loop_counter >= max_loop_counter){
+    is_valid = false;
+    break;
+    }
+    } while (!());
+    ;
+    y_2 = y+1;
+    ;
+    m_2 = LibraryFunction.addColumn(m);
+    ;
+    for (int i=0; i<x; i++){
+    setM_2(i,y,1);
+    ;
+    setM_2(i,y,0);
+    ;
+    }
+    numKey_2 = numKey+1;
+    ;
+    o_2 = LibraryFunction.add(o,k);
+    ;
   }
   
   public void mr_check_8() {
     initMRVar();
+    boolean ok = true;
+    ArrayList cond_arr;
+    int nk = numKey-1;
+    ;
+    int k;
+    loop_counter = 0;
+    do {k = LibraryFunction.select(0,nk);
+    loop_counter++;
+    if (loop_counter >= max_loop_counter){
+    is_valid = false;
+    break;
+    }
+    } while (!());
+    ;
+    numKey_2 = numKey+1;
+    ;
+    o_2 = LibraryFunction.add(o,k);
+    ;
   }
   
   public void mr_followup_9() {
     initMRVar();
     current_mr++;
     ArrayList cond_arr;
+    int nk = numKey-1;
+    ;
     int k;
-    do {k = LibraryFunction.select();
-    } while (!(getYn(k)==1));
-    int cc = LibraryFunction.random(0,100);
-    q_2 = q+cc;
-    setN_2(k,getN(k)+cc);
-    olive_2 = olive+cc;
-    writeInput(current_mr,current_testcase);
-    writeHidden(current_mr,current_testcase);
-    writeOutput(current_mr,current_testcase);
+    loop_counter = 0;
+    do {k = LibraryFunction.select(0,nk);
+    loop_counter++;
+    if (loop_counter >= max_loop_counter){
+    is_valid = false;
+    break;
+    }
+    } while (!());
+    ;
+    y_2 = y+1;
+    ;
+    m_2 = LibraryFunction.addColumn(m);
+    ;
+    for (int i=0; i<y; i++){
+    setM_2(k,i,0);
+    ;
+    }
+    numKey_2 = numKey+1;
+    ;
+    o_2 = LibraryFunction.add(o,k);
+    ;
   }
   
   public void mr_check_9() {
     initMRVar();
+    boolean ok = true;
+    ArrayList cond_arr;
+    int nk = numKey-1;
+    ;
+    int k;
+    loop_counter = 0;
+    do {k = LibraryFunction.select(0,nk);
+    loop_counter++;
+    if (loop_counter >= max_loop_counter){
+    is_valid = false;
+    break;
+    }
+    } while (!());
+    ;
+    numKey_2 = numKey+1;
+    ;
+    o_2 = LibraryFunction.add(o,k);
+    ;
   }
   
   public void initMRVar() {
-    q_2 = q;
-    m_2 = m;
-    s_2 = s;
-    n_2 = new ArrayList(n);
-    r_2 = new ArrayList(r);
-    olive_2 = olive;
-    yn_2 = new ArrayList(yn);
-    yr_2 = new ArrayList(yr);
+    x_2 = x;
+    y_2 = y;
+    m_2 = new ArrayList(m);
+    numKey_2 = numKey;
+    o_2 = new ArrayList(o);
   }
   
   public void mr_start() {
     mr_followup_1();
+    writeInput(current_mr,current_testcase);
+    writeOutput(current_mr,current_testcase);
     mr_followup_2();
+    writeInput(current_mr,current_testcase);
+    writeOutput(current_mr,current_testcase);
     mr_followup_3();
+    writeInput(current_mr,current_testcase);
+    writeOutput(current_mr,current_testcase);
     mr_followup_4();
+    writeInput(current_mr,current_testcase);
+    writeOutput(current_mr,current_testcase);
     mr_followup_5();
+    writeInput(current_mr,current_testcase);
+    writeOutput(current_mr,current_testcase);
     mr_followup_6();
+    writeInput(current_mr,current_testcase);
+    writeOutput(current_mr,current_testcase);
     mr_followup_7();
+    writeInput(current_mr,current_testcase);
+    writeOutput(current_mr,current_testcase);
     mr_followup_8();
+    writeInput(current_mr,current_testcase);
+    writeOutput(current_mr,current_testcase);
     mr_followup_9();
+    writeInput(current_mr,current_testcase);
+    writeOutput(current_mr,current_testcase);
   }
   
-  public void init(final int tc, final int max_tc) {
+  public void init() {
     sc = new Scanner(System.in);
-    current_subtask = 1;
-    current_testcase = 1;
-    num_tc = tc;
-    max_testcase = max_tc;
-    current_mr = 0;
+    max_loop_counter = 1000;
+    loop_counter = 0;
+  }
+  
+  public boolean mr_check(final String inPath, final String outPath) {
+    GeneratedClass ans = new GeneratedClass();
+    ans.init();
+    ans.readInput(inPath);
+    ans.readOutput(outPath);
+    if (!ans.getIs_valid()) return false;
+    boolean ok = true;
+    if ((int)x_2 != (int)ans.x) return false;
+    if ((int)y_2 != (int)ans.y) return false;
+    for (int i=0; i<x_2; i++){
+    for (int j=0; j<y_2; j++){
+    if ((int)((ArrayList)m_2.get(i)).get(j) != (int)((ArrayList)ans.m.get(i)).get(j)) return false;
+    }
+    }
+    if ((int)numKey_2 != (int)ans.numKey) return false;
+    for (int i=0; i<x_2; i++){
+    if ((int)o_2.get(i) != (int)ans.o.get(i)) return false;
+    }
+    return ok;
+  }
+  
+  public void generateOutputChecker(final int mx_subtask, final int mx_tc) {
+    try {
+    File wfile = new File("OutputChecker.java");
+    if(!wfile.exists()) wfile.createNewFile();
+    fw = new FileWriter(wfile);
+    writer = new BufferedWriter(fw);
+    writer.write("import java.io.*;");
+    writer.write(System.lineSeparator());
+    writer.write("import java.util.*;");
+    writer.write(System.lineSeparator());
+    writer.write("");
+    writer.write(System.lineSeparator());
+    writer.write("public class OutputChecker {");
+    writer.write(System.lineSeparator());
+    writer.write("");
+    writer.write(System.lineSeparator());
+    writer.write("	private static GeneratedClass g;");
+    writer.write(System.lineSeparator());
+    writer.write("	");
+    writer.write(System.lineSeparator());
+    writer.write("	public static void pipeStream(InputStream input, OutputStream output) throws IOException");
+    writer.write(System.lineSeparator());
+    writer.write("	{");
+    writer.write(System.lineSeparator());
+    writer.write("		byte buffer[] = new byte[1024];");
+    writer.write(System.lineSeparator());
+    writer.write("		int numRead = 0;");
+    writer.write(System.lineSeparator());
+    writer.write("");
+    writer.write(System.lineSeparator());
+    writer.write("		do");
+    writer.write(System.lineSeparator());
+    writer.write("		{");
+    writer.write(System.lineSeparator());
+    writer.write("			numRead = input.read(buffer);");
+    writer.write(System.lineSeparator());
+    writer.write("			output.write(buffer, 0, numRead);");
+    writer.write(System.lineSeparator());
+    writer.write("		} while (input.available() > 0);");
+    writer.write(System.lineSeparator());
+    writer.write("");
+    writer.write(System.lineSeparator());
+    writer.write("		output.flush();");
+    writer.write(System.lineSeparator());
+    writer.write("	}");
+    writer.write(System.lineSeparator());
+    writer.write("	");
+    writer.write(System.lineSeparator());
+    writer.write("	public static void main(String[] args) {");
+    writer.write(System.lineSeparator());
+    writer.write("		int subtask = "+mx_subtask+";");
+    writer.write(System.lineSeparator());
+    writer.write("		int tc = "+mx_tc+";");
+    writer.write(System.lineSeparator());
+    writer.write("		int score = 0;");
+    writer.write(System.lineSeparator());
+    writer.write("		boolean ok = true;");
+    writer.write(System.lineSeparator());
+    writer.write("		if (args.length >= 2) subtask = Integer.parseInt(args[1]);");
+    writer.write(System.lineSeparator());
+    writer.write("		if (args.length >= 3) tc = Integer.parseInt(args[2]);");
+    writer.write(System.lineSeparator());
+    writer.write("		");
+    writer.write(System.lineSeparator());
+    writer.write("		for (int s=1; s<=subtask; s++){");
+    writer.write(System.lineSeparator());
+    writer.write("			for (int t=1; t<=tc; t++){");
+    writer.write(System.lineSeparator());
+    writer.write("				String inFile = \"tc/Subtask\"+s+\"/in/0/\"+t+\".in\";");
+    writer.write(System.lineSeparator());
+    writer.write("				String outFile = \"bufferOut.temp\";");
+    writer.write(System.lineSeparator());
+    writer.write("				String ansFile = \"tc/Subtask\"+s+\"/out/0/\"+t+\".out\";");
+    writer.write(System.lineSeparator());
+    writer.write("			");
+    writer.write(System.lineSeparator());
+    writer.write("				g = new GeneratedClass();");
+    writer.write(System.lineSeparator());
+    writer.write("				");
+    writer.write(System.lineSeparator());
+    writer.write("				try {");
+    writer.write(System.lineSeparator());
+    writer.write("					FileInputStream fileIn = new FileInputStream(inFile);");
+    writer.write(System.lineSeparator());
+    writer.write("					FileOutputStream fileOut = new FileOutputStream(outFile);");
+    writer.write(System.lineSeparator());
+    writer.write("					");
+    writer.write(System.lineSeparator());
+    writer.write("					OutputStream procIn = null;");
+    writer.write(System.lineSeparator());
+    writer.write("					InputStream procOut = null;");
+    writer.write(System.lineSeparator());
+    writer.write("					");
+    writer.write(System.lineSeparator());
+    writer.write("					Process process = null;");
+    writer.write(System.lineSeparator());
+    writer.write("					process = Runtime.getRuntime().exec(args[0]);");
+    writer.write(System.lineSeparator());
+    writer.write("					procIn = process.getOutputStream();");
+    writer.write(System.lineSeparator());
+    writer.write("					procOut = process.getInputStream();");
+    writer.write(System.lineSeparator());
+    writer.write("");
+    writer.write(System.lineSeparator());
+    writer.write("					pipeStream(fileIn, procIn);");
+    writer.write(System.lineSeparator());
+    writer.write("					pipeStream(procOut, fileOut);");
+    writer.write(System.lineSeparator());
+    writer.write("					process.destroy();");
+    writer.write(System.lineSeparator());
+    writer.write("				} catch (Exception e){};");
+    writer.write(System.lineSeparator());
+    writer.write("				");
+    writer.write(System.lineSeparator());
+    writer.write("				if (g.output_check(inFile,outFile,ansFile)) System.out.println(\"Correct\");");
+    writer.write(System.lineSeparator());
+    writer.write("				else {");
+    writer.write(System.lineSeparator());
+    writer.write("					ok = false;");
+    writer.write(System.lineSeparator());
+    writer.write("					System.out.println(\"Wrong Answer\");");
+    writer.write(System.lineSeparator());
+    writer.write("				}");
+    writer.write(System.lineSeparator());
+    writer.write("			}");
+    writer.write(System.lineSeparator());
+    writer.write("			try {");
+    writer.write(System.lineSeparator());
+    writer.write("				InputStream fisOut = new FileInputStream(\"tc/\"+s+\".score\");");
+    writer.write(System.lineSeparator());
+    writer.write("				BufferedReader brOut = new BufferedReader(new InputStreamReader(fisOut));");
+    writer.write(System.lineSeparator());
+    writer.write("				String line = brOut.readLine();");
+    writer.write(System.lineSeparator());
+    writer.write("				if (ok) score += Integer.parseInt(line);");
+    writer.write(System.lineSeparator());
+    writer.write("				brOut.close();");
+    writer.write(System.lineSeparator());
+    writer.write("			} catch (Exception e){}");
+    writer.write(System.lineSeparator());
+    writer.write("		}");
+    writer.write(System.lineSeparator());
+    writer.write("		System.out.println(\"Score : \"+score);");
+    writer.write(System.lineSeparator());
+    writer.write("	}");
+    writer.write(System.lineSeparator());
+    writer.write("");
+    writer.write(System.lineSeparator());
+    writer.write("}");
+    writer.write(System.lineSeparator());
+    writer.close();
+    } catch(Exception e){}
+  }
+  
+  public void generateOutputCheckerMT(final int mx_subtask, final int mx_tc) {
+    try {
+    File wfile = new File("OutputCheckerMT.java");
+    if(!wfile.exists()) wfile.createNewFile();
+    fw = new FileWriter(wfile);
+    writer = new BufferedWriter(fw);
+    writer.write("import java.io.*;");
+    writer.write(System.lineSeparator());
+    writer.write("import java.util.*;");
+    writer.write(System.lineSeparator());
+    writer.write("");
+    writer.write(System.lineSeparator());
+    writer.write("public class OutputCheckerMT {");
+    writer.write(System.lineSeparator());
+    writer.write("");
+    writer.write(System.lineSeparator());
+    writer.write("	private static GeneratedClass g;");
+    writer.write(System.lineSeparator());
+    writer.write("	private static String exeFile;");
+    writer.write(System.lineSeparator());
+    writer.write("");
+    writer.write(System.lineSeparator());
+    writer.write("	public static void pipeStream(InputStream input, OutputStream output) throws IOException {");
+    writer.write(System.lineSeparator());
+    writer.write("		byte buffer[] = new byte[1024];");
+    writer.write(System.lineSeparator());
+    writer.write("		int numRead = 0;");
+    writer.write(System.lineSeparator());
+    writer.write("		do {");
+    writer.write(System.lineSeparator());
+    writer.write("			numRead = input.read(buffer);");
+    writer.write(System.lineSeparator());
+    writer.write("			output.write(buffer, 0, numRead);");
+    writer.write(System.lineSeparator());
+    writer.write("		} while (input.available() > 0);");
+    writer.write(System.lineSeparator());
+    writer.write("		output.flush();");
+    writer.write(System.lineSeparator());
+    writer.write("	}");
+    writer.write(System.lineSeparator());
+    writer.write("");
+    writer.write(System.lineSeparator());
+    writer.write("	public static void execute(String inF, String outF){");
+    writer.write(System.lineSeparator());
+    writer.write("		try {");
+    writer.write(System.lineSeparator());
+    writer.write("			FileInputStream fileIn = new FileInputStream(inF);");
+    writer.write(System.lineSeparator());
+    writer.write("			FileOutputStream fileOut = new FileOutputStream(outF);");
+    writer.write(System.lineSeparator());
+    writer.write("			OutputStream procIn = null;");
+    writer.write(System.lineSeparator());
+    writer.write("			InputStream procOut = null;");
+    writer.write(System.lineSeparator());
+    writer.write("			Process process = null;");
+    writer.write(System.lineSeparator());
+    writer.write("			process = Runtime.getRuntime().exec(exeFile);");
+    writer.write(System.lineSeparator());
+    writer.write("			procIn = process.getOutputStream();");
+    writer.write(System.lineSeparator());
+    writer.write("			procOut = process.getInputStream();");
+    writer.write(System.lineSeparator());
+    writer.write("			pipeStream(fileIn, procIn);");
+    writer.write(System.lineSeparator());
+    writer.write("			pipeStream(procOut, fileOut);");
+    writer.write(System.lineSeparator());
+    writer.write("			process.destroy();");
+    writer.write(System.lineSeparator());
+    writer.write("		} catch (Exception e){};");
+    writer.write(System.lineSeparator());
+    writer.write("	}");
+    writer.write(System.lineSeparator());
+    writer.write("	");
+    writer.write(System.lineSeparator());
+    writer.write("	public static void main(String[] args) {");
+    writer.write(System.lineSeparator());
+    writer.write("		int subtask = "+mx_subtask+";");
+    writer.write(System.lineSeparator());
+    writer.write("		int tc = "+mx_tc+";");
+    writer.write(System.lineSeparator());
+    writer.write("		int score = 0;");
+    writer.write(System.lineSeparator());
+    writer.write("		boolean ok = true;");
+    writer.write(System.lineSeparator());
+    writer.write("		boolean mr_ok = true;");
+    writer.write(System.lineSeparator());
+    writer.write("		exeFile = args[0];");
+    writer.write(System.lineSeparator());
+    writer.write("		if (args.length >= 2) subtask = Integer.parseInt(args[1]);");
+    writer.write(System.lineSeparator());
+    writer.write("		if (args.length >= 3) tc = Integer.parseInt(args[2]);");
+    writer.write(System.lineSeparator());
+    writer.write("		for (int s=1; s<=subtask; s++){");
+    writer.write(System.lineSeparator());
+    writer.write("			for (int t=1; t<=tc; t++){");
+    writer.write(System.lineSeparator());
+    writer.write("				String inFile = \"tc/Subtask\"+s+\"/in/0/\"+t+\".in\";");
+    writer.write(System.lineSeparator());
+    writer.write("				String inFile2 = \"bufferIn.temp\";");
+    writer.write(System.lineSeparator());
+    writer.write("				String outFile = \"bufferOut.temp\";");
+    writer.write(System.lineSeparator());
+    writer.write("				String outFile2 = \"bufferOut2.temp\";");
+    writer.write(System.lineSeparator());
+    writer.write("				g = new GeneratedClass();");
+    writer.write(System.lineSeparator());
+    writer.write("				execute(inFile,outFile);");
+    writer.write(System.lineSeparator());
+    writer.write("				g.readInput(inFile);");
+    writer.write(System.lineSeparator());
+    writer.write("				g.readOutput(outFile);");
+    writer.write(System.lineSeparator());
+    writer.write("				mr_ok = true;");
+    writer.write(System.lineSeparator());
+    writer.write("				g.setIs_valid(true);");
+    writer.write(System.lineSeparator());
+    writer.write("				g.readInput(inFile);");
+    writer.write(System.lineSeparator());
+    writer.write("				g.mr_followup_1();");
+    writer.write(System.lineSeparator());
+    writer.write("				g.writeInput(inFile2);");
+    writer.write(System.lineSeparator());
+    writer.write("				if (g.getIs_valid()) g.readInput(inFile2);");
+    writer.write(System.lineSeparator());
+    writer.write("				if (g.getIs_valid()){");
+    writer.write(System.lineSeparator());
+    writer.write("					execute(inFile2,outFile2);");
+    writer.write(System.lineSeparator());
+    writer.write("					if (!g.mr_check(inFile2,outFile2)){ mr_ok = false; }");
+    writer.write(System.lineSeparator());
+    writer.write("				}");
+    writer.write(System.lineSeparator());
+    writer.write("				g.setIs_valid(true);");
+    writer.write(System.lineSeparator());
+    writer.write("				g.readInput(inFile);");
+    writer.write(System.lineSeparator());
+    writer.write("				g.mr_followup_2();");
+    writer.write(System.lineSeparator());
+    writer.write("				g.writeInput(inFile2);");
+    writer.write(System.lineSeparator());
+    writer.write("				if (g.getIs_valid()) g.readInput(inFile2);");
+    writer.write(System.lineSeparator());
+    writer.write("				if (g.getIs_valid()){");
+    writer.write(System.lineSeparator());
+    writer.write("					execute(inFile2,outFile2);");
+    writer.write(System.lineSeparator());
+    writer.write("					if (!g.mr_check(inFile2,outFile2)){ mr_ok = false; }");
+    writer.write(System.lineSeparator());
+    writer.write("				}");
+    writer.write(System.lineSeparator());
+    writer.write("				g.setIs_valid(true);");
+    writer.write(System.lineSeparator());
+    writer.write("				g.readInput(inFile);");
+    writer.write(System.lineSeparator());
+    writer.write("				g.mr_followup_3();");
+    writer.write(System.lineSeparator());
+    writer.write("				g.writeInput(inFile2);");
+    writer.write(System.lineSeparator());
+    writer.write("				if (g.getIs_valid()) g.readInput(inFile2);");
+    writer.write(System.lineSeparator());
+    writer.write("				if (g.getIs_valid()){");
+    writer.write(System.lineSeparator());
+    writer.write("					execute(inFile2,outFile2);");
+    writer.write(System.lineSeparator());
+    writer.write("					if (!g.mr_check(inFile2,outFile2)){ mr_ok = false; }");
+    writer.write(System.lineSeparator());
+    writer.write("				}");
+    writer.write(System.lineSeparator());
+    writer.write("				g.setIs_valid(true);");
+    writer.write(System.lineSeparator());
+    writer.write("				g.readInput(inFile);");
+    writer.write(System.lineSeparator());
+    writer.write("				g.mr_followup_4();");
+    writer.write(System.lineSeparator());
+    writer.write("				g.writeInput(inFile2);");
+    writer.write(System.lineSeparator());
+    writer.write("				if (g.getIs_valid()) g.readInput(inFile2);");
+    writer.write(System.lineSeparator());
+    writer.write("				if (g.getIs_valid()){");
+    writer.write(System.lineSeparator());
+    writer.write("					execute(inFile2,outFile2);");
+    writer.write(System.lineSeparator());
+    writer.write("					if (!g.mr_check(inFile2,outFile2)){ mr_ok = false; }");
+    writer.write(System.lineSeparator());
+    writer.write("				}");
+    writer.write(System.lineSeparator());
+    writer.write("				g.setIs_valid(true);");
+    writer.write(System.lineSeparator());
+    writer.write("				g.readInput(inFile);");
+    writer.write(System.lineSeparator());
+    writer.write("				g.mr_followup_5();");
+    writer.write(System.lineSeparator());
+    writer.write("				g.writeInput(inFile2);");
+    writer.write(System.lineSeparator());
+    writer.write("				if (g.getIs_valid()) g.readInput(inFile2);");
+    writer.write(System.lineSeparator());
+    writer.write("				if (g.getIs_valid()){");
+    writer.write(System.lineSeparator());
+    writer.write("					execute(inFile2,outFile2);");
+    writer.write(System.lineSeparator());
+    writer.write("					if (!g.mr_check(inFile2,outFile2)){ mr_ok = false; }");
+    writer.write(System.lineSeparator());
+    writer.write("				}");
+    writer.write(System.lineSeparator());
+    writer.write("				g.setIs_valid(true);");
+    writer.write(System.lineSeparator());
+    writer.write("				g.readInput(inFile);");
+    writer.write(System.lineSeparator());
+    writer.write("				g.mr_followup_6();");
+    writer.write(System.lineSeparator());
+    writer.write("				g.writeInput(inFile2);");
+    writer.write(System.lineSeparator());
+    writer.write("				if (g.getIs_valid()) g.readInput(inFile2);");
+    writer.write(System.lineSeparator());
+    writer.write("				if (g.getIs_valid()){");
+    writer.write(System.lineSeparator());
+    writer.write("					execute(inFile2,outFile2);");
+    writer.write(System.lineSeparator());
+    writer.write("					if (!g.mr_check(inFile2,outFile2)){ mr_ok = false; }");
+    writer.write(System.lineSeparator());
+    writer.write("				}");
+    writer.write(System.lineSeparator());
+    writer.write("				g.setIs_valid(true);");
+    writer.write(System.lineSeparator());
+    writer.write("				g.readInput(inFile);");
+    writer.write(System.lineSeparator());
+    writer.write("				g.mr_followup_7();");
+    writer.write(System.lineSeparator());
+    writer.write("				g.writeInput(inFile2);");
+    writer.write(System.lineSeparator());
+    writer.write("				if (g.getIs_valid()) g.readInput(inFile2);");
+    writer.write(System.lineSeparator());
+    writer.write("				if (g.getIs_valid()){");
+    writer.write(System.lineSeparator());
+    writer.write("					execute(inFile2,outFile2);");
+    writer.write(System.lineSeparator());
+    writer.write("					if (!g.mr_check(inFile2,outFile2)){ mr_ok = false; }");
+    writer.write(System.lineSeparator());
+    writer.write("				}");
+    writer.write(System.lineSeparator());
+    writer.write("				g.setIs_valid(true);");
+    writer.write(System.lineSeparator());
+    writer.write("				g.readInput(inFile);");
+    writer.write(System.lineSeparator());
+    writer.write("				g.mr_followup_8();");
+    writer.write(System.lineSeparator());
+    writer.write("				g.writeInput(inFile2);");
+    writer.write(System.lineSeparator());
+    writer.write("				if (g.getIs_valid()) g.readInput(inFile2);");
+    writer.write(System.lineSeparator());
+    writer.write("				if (g.getIs_valid()){");
+    writer.write(System.lineSeparator());
+    writer.write("					execute(inFile2,outFile2);");
+    writer.write(System.lineSeparator());
+    writer.write("					if (!g.mr_check(inFile2,outFile2)){ mr_ok = false; }");
+    writer.write(System.lineSeparator());
+    writer.write("				}");
+    writer.write(System.lineSeparator());
+    writer.write("				g.setIs_valid(true);");
+    writer.write(System.lineSeparator());
+    writer.write("				g.readInput(inFile);");
+    writer.write(System.lineSeparator());
+    writer.write("				g.mr_followup_9();");
+    writer.write(System.lineSeparator());
+    writer.write("				g.writeInput(inFile2);");
+    writer.write(System.lineSeparator());
+    writer.write("				if (g.getIs_valid()) g.readInput(inFile2);");
+    writer.write(System.lineSeparator());
+    writer.write("				if (g.getIs_valid()){");
+    writer.write(System.lineSeparator());
+    writer.write("					execute(inFile2,outFile2);");
+    writer.write(System.lineSeparator());
+    writer.write("					if (!g.mr_check(inFile2,outFile2)){ mr_ok = false; }");
+    writer.write(System.lineSeparator());
+    writer.write("				}");
+    writer.write(System.lineSeparator());
+    writer.write("				if (mr_ok) System.out.println(\"Correct\");");
+    writer.write(System.lineSeparator());
+    writer.write("				else {");
+    writer.write(System.lineSeparator());
+    writer.write("					ok = false;");
+    writer.write(System.lineSeparator());
+    writer.write("					System.out.println(\"Wrong Answer\");");
+    writer.write(System.lineSeparator());
+    writer.write("				}");
+    writer.write(System.lineSeparator());
+    writer.write("			}");
+    writer.write(System.lineSeparator());
+    writer.write("			try {");
+    writer.write(System.lineSeparator());
+    writer.write("				InputStream fisOut = new FileInputStream(\"tc/\"+s+\".score\");");
+    writer.write(System.lineSeparator());
+    writer.write("				BufferedReader brOut = new BufferedReader(new InputStreamReader(fisOut));");
+    writer.write(System.lineSeparator());
+    writer.write("				String line = brOut.readLine();");
+    writer.write(System.lineSeparator());
+    writer.write("				if (ok) score += Integer.parseInt(line);");
+    writer.write(System.lineSeparator());
+    writer.write("				brOut.close();");
+    writer.write(System.lineSeparator());
+    writer.write("			} catch (Exception e){}");
+    writer.write(System.lineSeparator());
+    writer.write("		}");
+    writer.write(System.lineSeparator());
+    writer.write("		System.out.println(\"Score : \"+score);");
+    writer.write(System.lineSeparator());
+    writer.write("	}");
+    writer.write(System.lineSeparator());
+    writer.write("}");
+    writer.write(System.lineSeparator());
+    writer.close();
+    } catch(Exception e){}
+  }
+  
+  public void generate(final int tc, final int mtc) {
     num_mr = 9;
+    max_tc = mtc;
     num_subtask = 1;
     GeneratedClass.cur_lines = 1;
-    //readInput(0);
-    //readOutput(0);
+    printScore();
+    generateOutputChecker(num_subtask,max_tc);
+    generateOutputCheckerMT(num_subtask,max_tc);
+    for (int i=1; i<=num_subtask; i++){
+    	current_subtask = i;
+    	current_testcase = 1;
+    	current_mr = 0;
+    	num_tc = tc;
+    	readInput(0);
+    	readOutput(0);
+    }
   }
 }

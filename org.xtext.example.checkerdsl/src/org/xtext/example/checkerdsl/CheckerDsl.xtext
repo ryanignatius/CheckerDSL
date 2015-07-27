@@ -53,9 +53,9 @@ MR:
   	'}';
 
 ChkVariableDeclaration:
-  type=ChkTypeReference (arr+='[' (sz+=CHK_NUMBER)? ']')* name=ValidID
+  type=ChkTypeReference ('[' sz+=CHK_NUMBER ']')* name=ValidID
   ('(' limit1=Limit (';' limit+=Limit)* ')')?
-  ('value' '{' spValue=SpValue '}')?;
+  ('sp' '{' spValue=SpValue '}')?;
 
 ChkTypeReference:
 	('int' | 'long' | 'float' | 'double' | 'boolean' | 'char' | 'string' | 'tree' | 'adjMat' | 'adjList');
@@ -83,7 +83,7 @@ Helper:
 		min='min'  '(' var=ChkVariable ')' |
 		prime='prime'  '(' var3=ChkVariables ')' |
 		swap='swap'  '(' var=ChkVariable ',' var1=ValidID ',' var2=ValidID ')' |
-		select='select' '(' vars+=ValidID (',' vars+=ValidID)* ')' |
+		select='select' '(' vars+=ValidID (',' vars+=ValidID)* ':' ((var3=ChkVariables) '..' (var4=ChkVariables)) ')' |
 		add='add' '(' var=ChkVariable ',' var3=ChkVariables ')' |
 		remove='remove' '(' var=ChkVariable (',' var3=ChkVariables)? ')' |
 		random='random' '(' ((var3=ChkVariables) '..' (var4=ChkVariables))? ')' |
@@ -177,8 +177,10 @@ HiddenFormat:
 	hid = 'hidden' '{' exp+=(FormatExpression | ForFormatExpression)* '}';
 
 FormatExpression:
-	num = CHK_NUMBER '(' (var+=ValidID ('[' sz+=CHK_NUMBER ']')* ('<' (count+=CHK_NUMBER) '>')?
-		(',' var+=ValidID ('[' sz+=CHK_NUMBER ']')* ('<' (count+=CHK_NUMBER) '>')?)*)? ')';
+	num = CHK_NUMBER '(' (var+=FormatVariable (',' var+=FormatVariable)*)? ')';
+
+FormatVariable:
+	fv=ChkVariable ('<' (count=CHK_NUMBER) '>')?;
 
 CHK_INT:
 	'-'? INT;

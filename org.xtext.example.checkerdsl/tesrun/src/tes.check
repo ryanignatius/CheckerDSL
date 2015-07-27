@@ -1,22 +1,20 @@
-// Specification for IOI 2004 task day 2 : Farmer
-class Farmer {
+// Specification untuk soal Jual Ayam
+class JualAyam{
 	/*
 	 * variable declaration
+	 * akan digunakan untuk men-generate atribut private,
+	 * fungsi untuk membaca, menulis, dan validator variable tersebut
 	 */
 	
-	// variable for input
-	int q (subtask 1 : 0..150000) // q is number of cypress trees
-	int m (subtask 1 : 0..2000) // m is number of fields
-	int s (subtask 1 : 0..2000) // s is number of strips
-	int[m] n (subtask 1 : 3..150) // n is number of each cypress tree in fields
-	int[s] r (subtask 1 : 2..150) // r is number of each cypress tree in strips
+	// variable untuk input
+	int n (subtask 1 : 1..100000)
+	int t (subtask 1 : 1..100)
+	int[n] w (subtask 1 : 1..1000000)
+	int[n] d (subtask 1 : 1..1000000)
+	int[n] p (subtask 1 : 1..1000000)
 	
-	// variable for output
-	int olive (0..q) // olive is largest possible number of olive trees the son may inherit
-	
-	// hidden variable (for mr only)
-	int[m] yn (0..1) // yn is variable contain 1 if this tree is selected, 0 otherwise
-	int[s] yr (0..1) // yr is variable contain 1 if this tree is selected, 0 otherwise
+	// variable untuk output
+	int[n] k (1..n)
 	
 	score {
 		(1 : 100)
@@ -26,53 +24,48 @@ class Farmer {
 	 * input format
 	 */
 	input {
-		1 (q,m,s)
-		1 (n<m>)
-		1 (r<s>)
+		1 (n,t) // 1 baris pertama berisi 2 buah integer n dan t
+		1 (w<n>) // 1 baris berikutnya berisi n buah integer w
+		1 (d<n>) // 1 baris berikutnya berisi n buah integer d
+		1 (p<n>) // 1 baris berikutnya berisi n buah integer p
 	}
 	
 	/*
 	 * output format
 	 */
 	output {
-		1 (olive)
+		1 (k<n>) // 1 baris berikutnya berisi n buah integer k
 	}
 	
-	hidden {
-		1 (yn<m>)
-		1 (yr<s>)
+	op Integer factorial(Integer a){
+		if (a.equals(0)) return 1
+		else return a*factorial(a-1);
 	}
 	
 	MR 1 {
-		(select(k,l) where 1<=k and k<l and l<=m and n[k]!=n[l])
+		(def cc = random(1..1000))
 		followup {
-			(n` = swap(n,k,l))
-			(yn` = swap(yn,k,l))
+			(w` = multiply(w,cc))
 		}
 		check {
 			
 		}
-		
 	}
 	
 	MR 2 {
-		(select(k,l) where 1<=k and k<l and l<=s and r[k]!=r[l])
+		(def cc = random(1..1000))
 		followup {
-			(r` = swap(r,k,l))
-			(yr` = swap(yr,k,l))
+			(p` = plus(p,cc))
 		}
 		check {
 			
 		}
-		
 	}
 	
 	MR 3 {
-		(def nnew = min(n) where yn[i] == 0)
+		(def cc = random(-1000..-1))
 		followup {
-			(m` = m+1)
-			(n` = add(n,nnew))
-			(yn` = add(yn,0))
+			(p` = plus(p,cc))
 		}
 		check {
 			
@@ -80,11 +73,9 @@ class Farmer {
 	}
 	
 	MR 4 {
-		(def rnew = min(r) where yr[i] == 0)
+		(def cc = random(1..1000))
 		followup {
-			(s` = s+1)
-			(r` = add(r,rnew))
-			(yr` = add(yr,0))
+			(d` = plus(d,cc))
 		}
 		check {
 			
@@ -92,11 +83,9 @@ class Farmer {
 	}
 	
 	MR 5 {
-		(select(k) where yn[k]==0)
+		(def cc = random(-1000..-1))
 		followup {
-			(m` = m-1)
-			(n` = remove(n,k))
-			(yn` = remove(yn,k))
+			(d` = plus(d,cc))
 		}
 		check {
 			
@@ -104,52 +93,13 @@ class Farmer {
 	}
 	
 	MR 6 {
-		(select(k) where yr[k]==0)
 		followup {
-			(s` = s-1)
-			(r` = remove(r,k))
-			(yr` = remove(yr,k))
+			(w` = remove(w,n))
+			(d` = remove(d) where k[i]==n)
+			(p` = remove(p) where k[i]==n)
 		}
 		check {
-			
-		}
-	}
-	
-	MR 7 {
-		(select(k) where yn[k]==1)
-		followup {
-			(m` = m-1)
-			(q` = q-n[k])
-			(n` = remove(n,k))
-			(yn` = remove(yn,k))
-		}
-		check {
-			(olive` = olive-n[k])
-		}
-	}
-	
-	MR 8 {
-		(select(k,l) where 1<=k and k<l and l<=m and yn[k]==1 and yn[l]==1)
-		followup {
-			(n`[k] = n[k]+n[l])
-			(m` = m-1)
-			(n` = remove(n,l))
-			(yn` = remove(yn,l))
-		}
-		check {
-			
-		}
-	}
-	
-	MR 9 {
-		(select(k) where yn[k]==1)
-		(def cc = random(0..100))
-		followup {
-			(q` = q+cc)
-			(n`[k] = n[k]+cc)
-		}
-		check {
-			(olive` = olive+cc)
+			(k` = remove(k) where k[i]==n)
 		}
 	}
 }

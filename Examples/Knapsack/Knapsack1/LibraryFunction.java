@@ -74,11 +74,8 @@ public class LibraryFunction {
 		}
 		return ret;
 	}
-	public static int select(){
-		int r;
-		Random rand = new Random();
-		r = rand.nextInt();
-		return r;
+	public static int select(int a, int b){
+		return random(a,b);
 	}
 	public static ArrayList add(ArrayList arr, Object element){
 		return include(arr,element);
@@ -101,6 +98,16 @@ public class LibraryFunction {
 	}
 	public static int size(ArrayList arr){
 		return arr.size();
+	}
+	public static ArrayList reverse(ArrayList arr){
+		ArrayList ret = new ArrayList();
+		for (int i=arr.size()-1; i>=0; i--){
+			ret.add(arr.get(i));
+		}
+		return ret;
+	}
+	public static boolean contain(ArrayList arr, Object element){
+		return (arr.contains(element));
 	}
 	
 	public static ArrayList permute(ArrayList arr){

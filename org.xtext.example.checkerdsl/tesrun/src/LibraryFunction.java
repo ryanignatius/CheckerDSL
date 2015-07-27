@@ -74,11 +74,8 @@ public class LibraryFunction {
 		}
 		return ret;
 	}
-	public static int select(){
-		int r;
-		Random rand = new Random();
-		r = rand.nextInt();
-		return r;
+	public static int select(int a, int b){
+		return random(a,b);
 	}
 	public static ArrayList add(ArrayList arr, Object element){
 		return include(arr,element);
@@ -191,5 +188,38 @@ public class LibraryFunction {
 		}
 		Pair<ArrayList,ArrayList> ret = new Pair<ArrayList,ArrayList>(ret1,ret2);
 		return ret;
+	}
+	
+	public static ArrayList swapColumn(ArrayList arr, int c1, int c2){
+		ArrayList temp = new ArrayList();
+		for (int i=0; i<(int)arr.size(); i++){
+			ArrayList temp2 = (ArrayList)arr.get(i);
+			int a = (int)temp2.get(c1);
+			int b = (int)temp2.get(c2);
+			temp2.set(c1,b);
+			temp2.set(c2,a);
+			temp.add(temp2);
+		}
+		return temp;
+	}
+	
+	public static ArrayList addRow(ArrayList arr){
+		ArrayList temp = arr;
+		ArrayList newRow = (ArrayList)arr.get(0);
+		for (int j=0; j<newRow.size(); j++){
+			newRow.set(j,0);
+		}
+		temp.add(newRow);
+		return temp;
+	}
+	
+	public static ArrayList addColumn(ArrayList arr){
+		ArrayList temp = new ArrayList();
+		for (int i=0; i<arr.size(); i++){
+			ArrayList temp2 = (ArrayList)arr.get(i);
+			temp2.add(0);
+			temp.add(temp2);
+		}
+		return temp;
 	}
 }

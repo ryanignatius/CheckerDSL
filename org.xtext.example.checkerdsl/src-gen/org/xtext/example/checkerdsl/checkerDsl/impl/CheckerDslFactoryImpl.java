@@ -32,6 +32,7 @@ import org.xtext.example.checkerdsl.checkerDsl.FollowUp;
 import org.xtext.example.checkerdsl.checkerDsl.ForFormatExpression;
 import org.xtext.example.checkerdsl.checkerDsl.Format;
 import org.xtext.example.checkerdsl.checkerDsl.FormatExpression;
+import org.xtext.example.checkerdsl.checkerDsl.FormatVariable;
 import org.xtext.example.checkerdsl.checkerDsl.Helper;
 import org.xtext.example.checkerdsl.checkerDsl.HiddenFormat;
 import org.xtext.example.checkerdsl.checkerDsl.InputFormat;
@@ -132,6 +133,7 @@ public class CheckerDslFactoryImpl extends EFactoryImpl implements CheckerDslFac
       case CheckerDslPackage.OUTPUT_FORMAT: return createOutputFormat();
       case CheckerDslPackage.HIDDEN_FORMAT: return createHiddenFormat();
       case CheckerDslPackage.FORMAT_EXPRESSION: return createFormatExpression();
+      case CheckerDslPackage.FORMAT_VARIABLE: return createFormatVariable();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -509,6 +511,17 @@ public class CheckerDslFactoryImpl extends EFactoryImpl implements CheckerDslFac
   {
     FormatExpressionImpl formatExpression = new FormatExpressionImpl();
     return formatExpression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public FormatVariable createFormatVariable()
+  {
+    FormatVariableImpl formatVariable = new FormatVariableImpl();
+    return formatVariable;
   }
 
   /**

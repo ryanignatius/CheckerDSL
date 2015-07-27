@@ -501,22 +501,13 @@ public interface CheckerDslPackage extends EPackage
   int CHK_VARIABLE_DECLARATION__TYPE = FEATURE_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Arr</b></em>' attribute list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CHK_VARIABLE_DECLARATION__ARR = FEATURE_FEATURE_COUNT + 1;
-
-  /**
    * The feature id for the '<em><b>Sz</b></em>' attribute list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CHK_VARIABLE_DECLARATION__SZ = FEATURE_FEATURE_COUNT + 2;
+  int CHK_VARIABLE_DECLARATION__SZ = FEATURE_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -525,7 +516,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CHK_VARIABLE_DECLARATION__NAME = FEATURE_FEATURE_COUNT + 3;
+  int CHK_VARIABLE_DECLARATION__NAME = FEATURE_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Limit1</b></em>' containment reference.
@@ -534,7 +525,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CHK_VARIABLE_DECLARATION__LIMIT1 = FEATURE_FEATURE_COUNT + 4;
+  int CHK_VARIABLE_DECLARATION__LIMIT1 = FEATURE_FEATURE_COUNT + 3;
 
   /**
    * The feature id for the '<em><b>Limit</b></em>' containment reference list.
@@ -543,7 +534,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CHK_VARIABLE_DECLARATION__LIMIT = FEATURE_FEATURE_COUNT + 5;
+  int CHK_VARIABLE_DECLARATION__LIMIT = FEATURE_FEATURE_COUNT + 4;
 
   /**
    * The feature id for the '<em><b>Sp Value</b></em>' containment reference.
@@ -552,7 +543,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CHK_VARIABLE_DECLARATION__SP_VALUE = FEATURE_FEATURE_COUNT + 6;
+  int CHK_VARIABLE_DECLARATION__SP_VALUE = FEATURE_FEATURE_COUNT + 5;
 
   /**
    * The number of structural features of the '<em>Chk Variable Declaration</em>' class.
@@ -561,7 +552,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CHK_VARIABLE_DECLARATION_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 7;
+  int CHK_VARIABLE_DECLARATION_FEATURE_COUNT = FEATURE_FEATURE_COUNT + 6;
 
   /**
    * The meta object id for the '{@link org.xtext.example.checkerdsl.checkerDsl.impl.ChkGeneralExpressionsImpl <em>Chk General Expressions</em>}' class.
@@ -886,13 +877,22 @@ public interface CheckerDslPackage extends EPackage
   int HELPER__VARS = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 10;
 
   /**
+   * The feature id for the '<em><b>Var4</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HELPER__VAR4 = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 11;
+
+  /**
    * The feature id for the '<em><b>Add</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int HELPER__ADD = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 11;
+  int HELPER__ADD = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 12;
 
   /**
    * The feature id for the '<em><b>Remove</b></em>' attribute.
@@ -901,7 +901,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int HELPER__REMOVE = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 12;
+  int HELPER__REMOVE = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 13;
 
   /**
    * The feature id for the '<em><b>Random</b></em>' attribute.
@@ -910,16 +910,7 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int HELPER__RANDOM = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 13;
-
-  /**
-   * The feature id for the '<em><b>Var4</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int HELPER__VAR4 = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 14;
+  int HELPER__RANDOM = CHK_GENERAL_EXPRESSIONS_FEATURE_COUNT + 14;
 
   /**
    * The feature id for the '<em><b>Size</b></em>' attribute.
@@ -1684,7 +1675,7 @@ public interface CheckerDslPackage extends EPackage
   int FORMAT_EXPRESSION__NUM = 0;
 
   /**
-   * The feature id for the '<em><b>Var</b></em>' attribute list.
+   * The feature id for the '<em><b>Var</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -1693,31 +1684,50 @@ public interface CheckerDslPackage extends EPackage
   int FORMAT_EXPRESSION__VAR = 1;
 
   /**
-   * The feature id for the '<em><b>Sz</b></em>' attribute list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FORMAT_EXPRESSION__SZ = 2;
-
-  /**
-   * The feature id for the '<em><b>Count</b></em>' attribute list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int FORMAT_EXPRESSION__COUNT = 3;
-
-  /**
    * The number of structural features of the '<em>Format Expression</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int FORMAT_EXPRESSION_FEATURE_COUNT = 4;
+  int FORMAT_EXPRESSION_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.checkerdsl.checkerDsl.impl.FormatVariableImpl <em>Format Variable</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.checkerdsl.checkerDsl.impl.FormatVariableImpl
+   * @see org.xtext.example.checkerdsl.checkerDsl.impl.CheckerDslPackageImpl#getFormatVariable()
+   * @generated
+   */
+  int FORMAT_VARIABLE = 34;
+
+  /**
+   * The feature id for the '<em><b>Fv</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FORMAT_VARIABLE__FV = 0;
+
+  /**
+   * The feature id for the '<em><b>Count</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FORMAT_VARIABLE__COUNT = 1;
+
+  /**
+   * The number of structural features of the '<em>Format Variable</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FORMAT_VARIABLE_FEATURE_COUNT = 2;
 
 
   /**
@@ -2094,17 +2104,6 @@ public interface CheckerDslPackage extends EPackage
   EAttribute getChkVariableDeclaration_Type();
 
   /**
-   * Returns the meta object for the attribute list '{@link org.xtext.example.checkerdsl.checkerDsl.ChkVariableDeclaration#getArr <em>Arr</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Arr</em>'.
-   * @see org.xtext.example.checkerdsl.checkerDsl.ChkVariableDeclaration#getArr()
-   * @see #getChkVariableDeclaration()
-   * @generated
-   */
-  EAttribute getChkVariableDeclaration_Arr();
-
-  /**
    * Returns the meta object for the attribute list '{@link org.xtext.example.checkerdsl.checkerDsl.ChkVariableDeclaration#getSz <em>Sz</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2462,6 +2461,17 @@ public interface CheckerDslPackage extends EPackage
   EAttribute getHelper_Vars();
 
   /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getVar4 <em>Var4</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Var4</em>'.
+   * @see org.xtext.example.checkerdsl.checkerDsl.Helper#getVar4()
+   * @see #getHelper()
+   * @generated
+   */
+  EReference getHelper_Var4();
+
+  /**
    * Returns the meta object for the attribute '{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getAdd <em>Add</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2493,17 +2503,6 @@ public interface CheckerDslPackage extends EPackage
    * @generated
    */
   EAttribute getHelper_Random();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getVar4 <em>Var4</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Var4</em>'.
-   * @see org.xtext.example.checkerdsl.checkerDsl.Helper#getVar4()
-   * @see #getHelper()
-   * @generated
-   */
-  EReference getHelper_Var4();
 
   /**
    * Returns the meta object for the attribute '{@link org.xtext.example.checkerdsl.checkerDsl.Helper#getSize <em>Size</em>}'.
@@ -3216,37 +3215,47 @@ public interface CheckerDslPackage extends EPackage
   EAttribute getFormatExpression_Num();
 
   /**
-   * Returns the meta object for the attribute list '{@link org.xtext.example.checkerdsl.checkerDsl.FormatExpression#getVar <em>Var</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.checkerdsl.checkerDsl.FormatExpression#getVar <em>Var</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Var</em>'.
+   * @return the meta object for the containment reference list '<em>Var</em>'.
    * @see org.xtext.example.checkerdsl.checkerDsl.FormatExpression#getVar()
    * @see #getFormatExpression()
    * @generated
    */
-  EAttribute getFormatExpression_Var();
+  EReference getFormatExpression_Var();
 
   /**
-   * Returns the meta object for the attribute list '{@link org.xtext.example.checkerdsl.checkerDsl.FormatExpression#getSz <em>Sz</em>}'.
+   * Returns the meta object for class '{@link org.xtext.example.checkerdsl.checkerDsl.FormatVariable <em>Format Variable</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Sz</em>'.
-   * @see org.xtext.example.checkerdsl.checkerDsl.FormatExpression#getSz()
-   * @see #getFormatExpression()
+   * @return the meta object for class '<em>Format Variable</em>'.
+   * @see org.xtext.example.checkerdsl.checkerDsl.FormatVariable
    * @generated
    */
-  EAttribute getFormatExpression_Sz();
+  EClass getFormatVariable();
 
   /**
-   * Returns the meta object for the attribute list '{@link org.xtext.example.checkerdsl.checkerDsl.FormatExpression#getCount <em>Count</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.example.checkerdsl.checkerDsl.FormatVariable#getFv <em>Fv</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Count</em>'.
-   * @see org.xtext.example.checkerdsl.checkerDsl.FormatExpression#getCount()
-   * @see #getFormatExpression()
+   * @return the meta object for the containment reference '<em>Fv</em>'.
+   * @see org.xtext.example.checkerdsl.checkerDsl.FormatVariable#getFv()
+   * @see #getFormatVariable()
    * @generated
    */
-  EAttribute getFormatExpression_Count();
+  EReference getFormatVariable_Fv();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.checkerdsl.checkerDsl.FormatVariable#getCount <em>Count</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Count</em>'.
+   * @see org.xtext.example.checkerdsl.checkerDsl.FormatVariable#getCount()
+   * @see #getFormatVariable()
+   * @generated
+   */
+  EAttribute getFormatVariable_Count();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -3576,14 +3585,6 @@ public interface CheckerDslPackage extends EPackage
     EAttribute CHK_VARIABLE_DECLARATION__TYPE = eINSTANCE.getChkVariableDeclaration_Type();
 
     /**
-     * The meta object literal for the '<em><b>Arr</b></em>' attribute list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute CHK_VARIABLE_DECLARATION__ARR = eINSTANCE.getChkVariableDeclaration_Arr();
-
-    /**
      * The meta object literal for the '<em><b>Sz</b></em>' attribute list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3860,6 +3861,14 @@ public interface CheckerDslPackage extends EPackage
     EAttribute HELPER__VARS = eINSTANCE.getHelper_Vars();
 
     /**
+     * The meta object literal for the '<em><b>Var4</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference HELPER__VAR4 = eINSTANCE.getHelper_Var4();
+
+    /**
      * The meta object literal for the '<em><b>Add</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3882,14 +3891,6 @@ public interface CheckerDslPackage extends EPackage
      * @generated
      */
     EAttribute HELPER__RANDOM = eINSTANCE.getHelper_Random();
-
-    /**
-     * The meta object literal for the '<em><b>Var4</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference HELPER__VAR4 = eINSTANCE.getHelper_Var4();
 
     /**
      * The meta object literal for the '<em><b>Size</b></em>' attribute feature.
@@ -4452,28 +4453,38 @@ public interface CheckerDslPackage extends EPackage
     EAttribute FORMAT_EXPRESSION__NUM = eINSTANCE.getFormatExpression_Num();
 
     /**
-     * The meta object literal for the '<em><b>Var</b></em>' attribute list feature.
+     * The meta object literal for the '<em><b>Var</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute FORMAT_EXPRESSION__VAR = eINSTANCE.getFormatExpression_Var();
+    EReference FORMAT_EXPRESSION__VAR = eINSTANCE.getFormatExpression_Var();
 
     /**
-     * The meta object literal for the '<em><b>Sz</b></em>' attribute list feature.
+     * The meta object literal for the '{@link org.xtext.example.checkerdsl.checkerDsl.impl.FormatVariableImpl <em>Format Variable</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * @see org.xtext.example.checkerdsl.checkerDsl.impl.FormatVariableImpl
+     * @see org.xtext.example.checkerdsl.checkerDsl.impl.CheckerDslPackageImpl#getFormatVariable()
      * @generated
      */
-    EAttribute FORMAT_EXPRESSION__SZ = eINSTANCE.getFormatExpression_Sz();
+    EClass FORMAT_VARIABLE = eINSTANCE.getFormatVariable();
 
     /**
-     * The meta object literal for the '<em><b>Count</b></em>' attribute list feature.
+     * The meta object literal for the '<em><b>Fv</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute FORMAT_EXPRESSION__COUNT = eINSTANCE.getFormatExpression_Count();
+    EReference FORMAT_VARIABLE__FV = eINSTANCE.getFormatVariable_Fv();
+
+    /**
+     * The meta object literal for the '<em><b>Count</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute FORMAT_VARIABLE__COUNT = eINSTANCE.getFormatVariable_Count();
 
   }
 

@@ -44,8 +44,8 @@ import org.xtext.example.checkerdsl.checkerDsl.Feature;
 import org.xtext.example.checkerdsl.checkerDsl.FollowUp;
 import org.xtext.example.checkerdsl.checkerDsl.ForFormatExpression;
 import org.xtext.example.checkerdsl.checkerDsl.FormatExpression;
+import org.xtext.example.checkerdsl.checkerDsl.FormatVariable;
 import org.xtext.example.checkerdsl.checkerDsl.Helper;
-import org.xtext.example.checkerdsl.checkerDsl.HiddenFormat;
 import org.xtext.example.checkerdsl.checkerDsl.InputFormat;
 import org.xtext.example.checkerdsl.checkerDsl.Limit;
 import org.xtext.example.checkerdsl.checkerDsl.MR;
@@ -82,15 +82,23 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
   
   private String bd3;
   
-  private String bd4;
-  
   private String bd2a;
   
   private String bd3a;
   
-  private String bd4a;
+  private String bd2b;
+  
+  private String bd3b;
+  
+  private String bd2d;
+  
+  private String bd2c;
   
   private String mr_list = "";
+  
+  private String mr_chk = "";
+  
+  private String mr_gen = "";
   
   private String copy_var = "";
   
@@ -155,45 +163,91 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
         CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmField>operator_add(_members_7, _field_7);
         EList<JvmMember> _members_8 = it.getMembers();
         JvmTypeReference _typeRef_8 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(int.class);
-        JvmField _field_8 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toField(element, "num_tc", _typeRef_8);
+        JvmField _field_8 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toField(element, "current_mr", _typeRef_8);
         CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmField>operator_add(_members_8, _field_8);
         EList<JvmMember> _members_9 = it.getMembers();
         JvmTypeReference _typeRef_9 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(int.class);
-        JvmField _field_9 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toField(element, "max_testcase", _typeRef_9);
+        JvmField _field_9 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toField(element, "num_mr", _typeRef_9);
         CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmField>operator_add(_members_9, _field_9);
         EList<JvmMember> _members_10 = it.getMembers();
         JvmTypeReference _typeRef_10 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(int.class);
-        JvmField _field_10 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toField(element, "current_mr", _typeRef_10);
+        JvmField _field_10 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toField(element, "num_tc", _typeRef_10);
         CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmField>operator_add(_members_10, _field_10);
         EList<JvmMember> _members_11 = it.getMembers();
         JvmTypeReference _typeRef_11 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(int.class);
-        JvmField _field_11 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toField(element, "num_mr", _typeRef_11);
+        JvmField _field_11 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toField(element, "max_tc", _typeRef_11);
         CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmField>operator_add(_members_11, _field_11);
         EList<JvmMember> _members_12 = it.getMembers();
         JvmTypeReference _typeRef_12 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(int.class);
         JvmField _field_12 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toField(element, "num_subtask", _typeRef_12);
         CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmField>operator_add(_members_12, _field_12);
         EList<JvmMember> _members_13 = it.getMembers();
-        JvmTypeReference _typeRef_13 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(boolean.class);
+        JvmTypeReference _typeRef_13 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(int.class);
+        JvmField _field_13 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toField(element, "loop_counter", _typeRef_13);
+        CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmField>operator_add(_members_13, _field_13);
+        EList<JvmMember> _members_14 = it.getMembers();
+        JvmTypeReference _typeRef_14 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(int.class);
+        JvmField _field_14 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toField(element, "max_loop_counter", _typeRef_14);
+        CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmField>operator_add(_members_14, _field_14);
+        EList<JvmMember> _members_15 = it.getMembers();
+        JvmTypeReference _typeRef_15 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(boolean.class);
         final Procedure1<JvmField> _function = new Procedure1<JvmField>() {
           public void apply(final JvmField it) {
             it.setStatic(true);
           }
         };
-        JvmField _field_13 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toField(element, "is_valid", _typeRef_13, _function);
-        CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmField>operator_add(_members_13, _field_13);
-        EList<JvmMember> _members_14 = it.getMembers();
-        JvmTypeReference _typeRef_14 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(int.class);
-        final Procedure1<JvmField> _function_1 = new Procedure1<JvmField>() {
+        JvmField _field_15 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toField(element, "is_valid", _typeRef_15, _function);
+        CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmField>operator_add(_members_15, _field_15);
+        EList<JvmMember> _members_16 = it.getMembers();
+        JvmTypeReference _typeRef_16 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(boolean.class);
+        final Procedure1<JvmOperation> _function_1 = new Procedure1<JvmOperation>() {
+          public void apply(final JvmOperation it) {
+            it.setStatic(true);
+            StringConcatenationClient _client = new StringConcatenationClient() {
+              @Override
+              protected void appendTo(StringConcatenationClient.TargetStringConcatenation _builder) {
+                _builder.append("return is_valid;");
+                _builder.newLine();
+              }
+            };
+            CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setBody(it, _client);
+          }
+        };
+        JvmOperation _method = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(element, "getIs_valid", _typeRef_16, _function_1);
+        CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_16, _method);
+        EList<JvmMember> _members_17 = it.getMembers();
+        JvmTypeReference _typeRef_17 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(void.class);
+        final Procedure1<JvmOperation> _function_2 = new Procedure1<JvmOperation>() {
+          public void apply(final JvmOperation it) {
+            EList<JvmFormalParameter> _parameters = it.getParameters();
+            JvmTypeReference _typeRef = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(boolean.class);
+            JvmFormalParameter _parameter = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toParameter(element, "new_valid", _typeRef);
+            CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmFormalParameter>operator_add(_parameters, _parameter);
+            it.setStatic(true);
+            StringConcatenationClient _client = new StringConcatenationClient() {
+              @Override
+              protected void appendTo(StringConcatenationClient.TargetStringConcatenation _builder) {
+                _builder.append("is_valid = new_valid;");
+                _builder.newLine();
+              }
+            };
+            CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setBody(it, _client);
+          }
+        };
+        JvmOperation _method_1 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(element, "setIs_valid", _typeRef_17, _function_2);
+        CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_17, _method_1);
+        EList<JvmMember> _members_18 = it.getMembers();
+        JvmTypeReference _typeRef_18 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(int.class);
+        final Procedure1<JvmField> _function_3 = new Procedure1<JvmField>() {
           public void apply(final JvmField it) {
             it.setStatic(true);
           }
         };
-        JvmField _field_14 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toField(element, "cur_lines", _typeRef_14, _function_1);
-        CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmField>operator_add(_members_14, _field_14);
-        EList<JvmMember> _members_15 = it.getMembers();
-        JvmTypeReference _typeRef_15 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(void.class);
-        final Procedure1<JvmOperation> _function_2 = new Procedure1<JvmOperation>() {
+        JvmField _field_16 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toField(element, "cur_lines", _typeRef_18, _function_3);
+        CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmField>operator_add(_members_18, _field_16);
+        EList<JvmMember> _members_19 = it.getMembers();
+        JvmTypeReference _typeRef_19 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(void.class);
+        final Procedure1<JvmOperation> _function_4 = new Procedure1<JvmOperation>() {
           public void apply(final JvmOperation it) {
             it.setStatic(true);
             EList<JvmFormalParameter> _parameters = it.getParameters();
@@ -214,11 +268,11 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
             CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setBody(it, _client);
           }
         };
-        JvmOperation _method = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(element, "die", _typeRef_15, _function_2);
-        CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_15, _method);
-        EList<JvmMember> _members_16 = it.getMembers();
-        JvmTypeReference _typeRef_16 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(int.class);
-        final Procedure1<JvmOperation> _function_3 = new Procedure1<JvmOperation>() {
+        JvmOperation _method_2 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(element, "die", _typeRef_19, _function_4);
+        CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_19, _method_2);
+        EList<JvmMember> _members_20 = it.getMembers();
+        JvmTypeReference _typeRef_20 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(int.class);
+        final Procedure1<JvmOperation> _function_5 = new Procedure1<JvmOperation>() {
           public void apply(final JvmOperation it) {
             EList<JvmFormalParameter> _parameters = it.getParameters();
             JvmTypeReference _typeRef = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(String.class);
@@ -249,11 +303,11 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
             CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setBody(it, _client);
           }
         };
-        JvmOperation _method_1 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(element, "intReader", _typeRef_16, _function_3);
-        CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_16, _method_1);
-        EList<JvmMember> _members_17 = it.getMembers();
-        JvmTypeReference _typeRef_17 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(long.class);
-        final Procedure1<JvmOperation> _function_4 = new Procedure1<JvmOperation>() {
+        JvmOperation _method_3 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(element, "intReader", _typeRef_20, _function_5);
+        CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_20, _method_3);
+        EList<JvmMember> _members_21 = it.getMembers();
+        JvmTypeReference _typeRef_21 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(long.class);
+        final Procedure1<JvmOperation> _function_6 = new Procedure1<JvmOperation>() {
           public void apply(final JvmOperation it) {
             EList<JvmFormalParameter> _parameters = it.getParameters();
             JvmTypeReference _typeRef = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(String.class);
@@ -284,11 +338,11 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
             CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setBody(it, _client);
           }
         };
-        JvmOperation _method_2 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(element, "longReader", _typeRef_17, _function_4);
-        CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_17, _method_2);
-        EList<JvmMember> _members_18 = it.getMembers();
-        JvmTypeReference _typeRef_18 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(float.class);
-        final Procedure1<JvmOperation> _function_5 = new Procedure1<JvmOperation>() {
+        JvmOperation _method_4 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(element, "longReader", _typeRef_21, _function_6);
+        CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_21, _method_4);
+        EList<JvmMember> _members_22 = it.getMembers();
+        JvmTypeReference _typeRef_22 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(float.class);
+        final Procedure1<JvmOperation> _function_7 = new Procedure1<JvmOperation>() {
           public void apply(final JvmOperation it) {
             EList<JvmFormalParameter> _parameters = it.getParameters();
             JvmTypeReference _typeRef = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(String.class);
@@ -319,11 +373,11 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
             CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setBody(it, _client);
           }
         };
-        JvmOperation _method_3 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(element, "floatReader", _typeRef_18, _function_5);
-        CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_18, _method_3);
-        EList<JvmMember> _members_19 = it.getMembers();
-        JvmTypeReference _typeRef_19 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(double.class);
-        final Procedure1<JvmOperation> _function_6 = new Procedure1<JvmOperation>() {
+        JvmOperation _method_5 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(element, "floatReader", _typeRef_22, _function_7);
+        CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_22, _method_5);
+        EList<JvmMember> _members_23 = it.getMembers();
+        JvmTypeReference _typeRef_23 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(double.class);
+        final Procedure1<JvmOperation> _function_8 = new Procedure1<JvmOperation>() {
           public void apply(final JvmOperation it) {
             EList<JvmFormalParameter> _parameters = it.getParameters();
             JvmTypeReference _typeRef = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(String.class);
@@ -354,11 +408,11 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
             CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setBody(it, _client);
           }
         };
-        JvmOperation _method_4 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(element, "doubleReader", _typeRef_19, _function_6);
-        CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_19, _method_4);
-        EList<JvmMember> _members_20 = it.getMembers();
-        JvmTypeReference _typeRef_20 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(boolean.class);
-        final Procedure1<JvmOperation> _function_7 = new Procedure1<JvmOperation>() {
+        JvmOperation _method_6 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(element, "doubleReader", _typeRef_23, _function_8);
+        CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_23, _method_6);
+        EList<JvmMember> _members_24 = it.getMembers();
+        JvmTypeReference _typeRef_24 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(boolean.class);
+        final Procedure1<JvmOperation> _function_9 = new Procedure1<JvmOperation>() {
           public void apply(final JvmOperation it) {
             EList<JvmFormalParameter> _parameters = it.getParameters();
             JvmTypeReference _typeRef = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(String.class);
@@ -389,11 +443,11 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
             CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setBody(it, _client);
           }
         };
-        JvmOperation _method_5 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(element, "booleanReader", _typeRef_20, _function_7);
-        CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_20, _method_5);
-        EList<JvmMember> _members_21 = it.getMembers();
-        JvmTypeReference _typeRef_21 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(char.class);
-        final Procedure1<JvmOperation> _function_8 = new Procedure1<JvmOperation>() {
+        JvmOperation _method_7 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(element, "booleanReader", _typeRef_24, _function_9);
+        CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_24, _method_7);
+        EList<JvmMember> _members_25 = it.getMembers();
+        JvmTypeReference _typeRef_25 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(char.class);
+        final Procedure1<JvmOperation> _function_10 = new Procedure1<JvmOperation>() {
           public void apply(final JvmOperation it) {
             EList<JvmFormalParameter> _parameters = it.getParameters();
             JvmTypeReference _typeRef = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(String.class);
@@ -424,11 +478,11 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
             CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setBody(it, _client);
           }
         };
-        JvmOperation _method_6 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(element, "charReader", _typeRef_21, _function_8);
-        CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_21, _method_6);
-        EList<JvmMember> _members_22 = it.getMembers();
-        JvmTypeReference _typeRef_22 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(String.class);
-        final Procedure1<JvmOperation> _function_9 = new Procedure1<JvmOperation>() {
+        JvmOperation _method_8 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(element, "charReader", _typeRef_25, _function_10);
+        CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_25, _method_8);
+        EList<JvmMember> _members_26 = it.getMembers();
+        JvmTypeReference _typeRef_26 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(String.class);
+        final Procedure1<JvmOperation> _function_11 = new Procedure1<JvmOperation>() {
           public void apply(final JvmOperation it) {
             EList<JvmFormalParameter> _parameters = it.getParameters();
             JvmTypeReference _typeRef = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(String.class);
@@ -444,8 +498,8 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
             CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setBody(it, _client);
           }
         };
-        JvmOperation _method_7 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(element, "stringReader", _typeRef_22, _function_9);
-        CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_22, _method_7);
+        JvmOperation _method_9 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(element, "stringReader", _typeRef_26, _function_11);
+        CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_26, _method_9);
         EList<Feature> _features = element.getFeatures();
         for (final Feature feature : _features) {
           boolean _matched = false;
@@ -457,44 +511,44 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
               String _type = ((ChkVariableDeclaration)feature).getType();
               boolean _equals = Objects.equal(_type, "int");
               if (_equals) {
-                JvmTypeReference _typeRef_23 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(int.class);
-                t2 = _typeRef_23;
+                JvmTypeReference _typeRef_27 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(int.class);
+                t2 = _typeRef_27;
               } else {
                 String _type_1 = ((ChkVariableDeclaration)feature).getType();
                 boolean _equals_1 = Objects.equal(_type_1, "long");
                 if (_equals_1) {
-                  JvmTypeReference _typeRef_24 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(long.class);
-                  t2 = _typeRef_24;
+                  JvmTypeReference _typeRef_28 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(long.class);
+                  t2 = _typeRef_28;
                 } else {
                   String _type_2 = ((ChkVariableDeclaration)feature).getType();
                   boolean _equals_2 = Objects.equal(_type_2, "float");
                   if (_equals_2) {
-                    JvmTypeReference _typeRef_25 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(float.class);
-                    t2 = _typeRef_25;
+                    JvmTypeReference _typeRef_29 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(float.class);
+                    t2 = _typeRef_29;
                   } else {
                     String _type_3 = ((ChkVariableDeclaration)feature).getType();
                     boolean _equals_3 = Objects.equal(_type_3, "double");
                     if (_equals_3) {
-                      JvmTypeReference _typeRef_26 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(double.class);
-                      t2 = _typeRef_26;
+                      JvmTypeReference _typeRef_30 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(double.class);
+                      t2 = _typeRef_30;
                     } else {
                       String _type_4 = ((ChkVariableDeclaration)feature).getType();
                       boolean _equals_4 = Objects.equal(_type_4, "boolean");
                       if (_equals_4) {
-                        JvmTypeReference _typeRef_27 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(boolean.class);
-                        t2 = _typeRef_27;
+                        JvmTypeReference _typeRef_31 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(boolean.class);
+                        t2 = _typeRef_31;
                       } else {
                         String _type_5 = ((ChkVariableDeclaration)feature).getType();
                         boolean _equals_5 = Objects.equal(_type_5, "char");
                         if (_equals_5) {
-                          JvmTypeReference _typeRef_28 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(char.class);
-                          t2 = _typeRef_28;
+                          JvmTypeReference _typeRef_32 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(char.class);
+                          t2 = _typeRef_32;
                         } else {
                           String _type_6 = ((ChkVariableDeclaration)feature).getType();
                           boolean _equals_6 = Objects.equal(_type_6, "string");
                           if (_equals_6) {
-                            JvmTypeReference _typeRef_29 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(String.class);
-                            t2 = _typeRef_29;
+                            JvmTypeReference _typeRef_33 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(String.class);
+                            t2 = _typeRef_33;
                           }
                         }
                       }
@@ -506,12 +560,12 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
               boolean _notEquals_1 = (!Objects.equal(_limit1, null));
               if (_notEquals_1) {
                 CheckerDslJvmModelInferrer.this.tp = t2;
-                EList<JvmMember> _members_23 = it.getMembers();
+                EList<JvmMember> _members_27 = it.getMembers();
                 String _name = ((ChkVariableDeclaration)feature).getName();
                 String _firstUpper = StringExtensions.toFirstUpper(_name);
                 String _plus = ("validate" + _firstUpper);
-                JvmTypeReference _typeRef_30 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(boolean.class);
-                final Procedure1<JvmOperation> _function_10 = new Procedure1<JvmOperation>() {
+                JvmTypeReference _typeRef_34 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(boolean.class);
+                final Procedure1<JvmOperation> _function_12 = new Procedure1<JvmOperation>() {
                   public void apply(final JvmOperation it) {
                     EList<JvmFormalParameter> _parameters = it.getParameters();
                     JvmFormalParameter _parameter = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toParameter(element, "value", CheckerDslJvmModelInferrer.this.tp);
@@ -569,16 +623,16 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
                     CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setBody(it, _client);
                   }
                 };
-                JvmOperation _method_8 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(feature, _plus, _typeRef_30, _function_10);
-                CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_23, _method_8);
+                JvmOperation _method_10 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(feature, _plus, _typeRef_34, _function_12);
+                CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_27, _method_10);
               } else {
                 CheckerDslJvmModelInferrer.this.tp = t2;
-                EList<JvmMember> _members_24 = it.getMembers();
+                EList<JvmMember> _members_28 = it.getMembers();
                 String _name_1 = ((ChkVariableDeclaration)feature).getName();
                 String _firstUpper_1 = StringExtensions.toFirstUpper(_name_1);
                 String _plus_1 = ("validate" + _firstUpper_1);
-                JvmTypeReference _typeRef_31 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(boolean.class);
-                final Procedure1<JvmOperation> _function_11 = new Procedure1<JvmOperation>() {
+                JvmTypeReference _typeRef_35 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(boolean.class);
+                final Procedure1<JvmOperation> _function_13 = new Procedure1<JvmOperation>() {
                   public void apply(final JvmOperation it) {
                     EList<JvmFormalParameter> _parameters = it.getParameters();
                     JvmFormalParameter _parameter = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toParameter(element, "value", CheckerDslJvmModelInferrer.this.tp);
@@ -597,24 +651,24 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
                     CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setBody(it, _client);
                   }
                 };
-                JvmOperation _method_9 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(feature, _plus_1, _typeRef_31, _function_11);
-                CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_24, _method_9);
+                JvmOperation _method_11 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(feature, _plus_1, _typeRef_35, _function_13);
+                CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_28, _method_11);
               }
-              EList<String> _arr = ((ChkVariableDeclaration)feature).getArr();
-              int _size = _arr.size();
+              EList<String> _sz = ((ChkVariableDeclaration)feature).getSz();
+              int _size = _sz.size();
               boolean _notEquals_2 = (_size != 0);
               if (_notEquals_2) {
-                JvmTypeReference _typeRef_32 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(ArrayList.class);
-                t = _typeRef_32;
-                EList<JvmMember> _members_25 = it.getMembers();
+                JvmTypeReference _typeRef_36 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(ArrayList.class);
+                t = _typeRef_36;
+                EList<JvmMember> _members_29 = it.getMembers();
                 String _name_2 = ((ChkVariableDeclaration)feature).getName();
-                JvmField _field_15 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toField(feature, _name_2, t);
-                CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmField>operator_add(_members_25, _field_15);
-                EList<JvmMember> _members_26 = it.getMembers();
+                JvmField _field_17 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toField(feature, _name_2, t);
+                CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmField>operator_add(_members_29, _field_17);
+                EList<JvmMember> _members_30 = it.getMembers();
                 String _name_3 = ((ChkVariableDeclaration)feature).getName();
                 String _plus_2 = (_name_3 + "_2");
-                JvmField _field_16 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toField(feature, _plus_2, t);
-                CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmField>operator_add(_members_26, _field_16);
+                JvmField _field_18 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toField(feature, _plus_2, t);
+                CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmField>operator_add(_members_30, _field_18);
                 String _name_4 = ((ChkVariableDeclaration)feature).getName();
                 String _plus_3 = (CheckerDslJvmModelInferrer.this.copy_var + _name_4);
                 String _plus_4 = (_plus_3 + "_2 = new ArrayList(");
@@ -622,23 +676,23 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
                 String _plus_5 = (_plus_4 + _name_5);
                 String _plus_6 = (_plus_5 + ");\n");
                 CheckerDslJvmModelInferrer.this.copy_var = _plus_6;
-                EList<JvmMember> _members_27 = it.getMembers();
+                EList<JvmMember> _members_31 = it.getMembers();
                 String _name_6 = ((ChkVariableDeclaration)feature).getName();
                 JvmOperation _getter = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toGetter(feature, _name_6, t);
-                CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_27, _getter);
-                EList<JvmMember> _members_28 = it.getMembers();
+                CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_31, _getter);
+                EList<JvmMember> _members_32 = it.getMembers();
                 String _name_7 = ((ChkVariableDeclaration)feature).getName();
                 JvmOperation _setter = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toSetter(feature, _name_7, t);
-                CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_28, _setter);
-                EList<String> _arr_1 = ((ChkVariableDeclaration)feature).getArr();
-                int _size_1 = _arr_1.size();
+                CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_32, _setter);
+                EList<String> _sz_1 = ((ChkVariableDeclaration)feature).getSz();
+                int _size_1 = _sz_1.size();
                 boolean _equals_7 = (_size_1 == 1);
                 if (_equals_7) {
-                  EList<JvmMember> _members_29 = it.getMembers();
+                  EList<JvmMember> _members_33 = it.getMembers();
                   String _name_8 = ((ChkVariableDeclaration)feature).getName();
                   String _firstUpper_2 = StringExtensions.toFirstUpper(_name_8);
                   String _plus_7 = ("get" + _firstUpper_2);
-                  final Procedure1<JvmOperation> _function_12 = new Procedure1<JvmOperation>() {
+                  final Procedure1<JvmOperation> _function_14 = new Procedure1<JvmOperation>() {
                     public void apply(final JvmOperation it) {
                       EList<JvmFormalParameter> _parameters = it.getParameters();
                       JvmTypeReference _typeRef = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(int.class);
@@ -661,14 +715,14 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
                       CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setBody(it, _client);
                     }
                   };
-                  JvmOperation _method_10 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(feature, _plus_7, t2, _function_12);
-                  CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_29, _method_10);
-                  EList<JvmMember> _members_30 = it.getMembers();
+                  JvmOperation _method_12 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(feature, _plus_7, t2, _function_14);
+                  CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_33, _method_12);
+                  EList<JvmMember> _members_34 = it.getMembers();
                   String _name_9 = ((ChkVariableDeclaration)feature).getName();
                   String _firstUpper_3 = StringExtensions.toFirstUpper(_name_9);
                   String _plus_8 = ("set" + _firstUpper_3);
-                  JvmTypeReference _typeRef_33 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(void.class);
-                  final Procedure1<JvmOperation> _function_13 = new Procedure1<JvmOperation>() {
+                  JvmTypeReference _typeRef_37 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(void.class);
+                  final Procedure1<JvmOperation> _function_15 = new Procedure1<JvmOperation>() {
                     public void apply(final JvmOperation it) {
                       EList<JvmFormalParameter> _parameters = it.getParameters();
                       JvmTypeReference _typeRef = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(int.class);
@@ -690,14 +744,14 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
                       CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setBody(it, _client);
                     }
                   };
-                  JvmOperation _method_11 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(feature, _plus_8, _typeRef_33, _function_13);
-                  CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_30, _method_11);
-                  EList<JvmMember> _members_31 = it.getMembers();
+                  JvmOperation _method_13 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(feature, _plus_8, _typeRef_37, _function_15);
+                  CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_34, _method_13);
+                  EList<JvmMember> _members_35 = it.getMembers();
                   String _name_10 = ((ChkVariableDeclaration)feature).getName();
                   String _firstUpper_4 = StringExtensions.toFirstUpper(_name_10);
                   String _plus_9 = ("get" + _firstUpper_4);
                   String _plus_10 = (_plus_9 + "_2");
-                  final Procedure1<JvmOperation> _function_14 = new Procedure1<JvmOperation>() {
+                  final Procedure1<JvmOperation> _function_16 = new Procedure1<JvmOperation>() {
                     public void apply(final JvmOperation it) {
                       EList<JvmFormalParameter> _parameters = it.getParameters();
                       JvmTypeReference _typeRef = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(int.class);
@@ -720,15 +774,15 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
                       CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setBody(it, _client);
                     }
                   };
-                  JvmOperation _method_12 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(feature, _plus_10, t2, _function_14);
-                  CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_31, _method_12);
-                  EList<JvmMember> _members_32 = it.getMembers();
+                  JvmOperation _method_14 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(feature, _plus_10, t2, _function_16);
+                  CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_35, _method_14);
+                  EList<JvmMember> _members_36 = it.getMembers();
                   String _name_11 = ((ChkVariableDeclaration)feature).getName();
                   String _firstUpper_5 = StringExtensions.toFirstUpper(_name_11);
                   String _plus_11 = ("set" + _firstUpper_5);
                   String _plus_12 = (_plus_11 + "_2");
-                  JvmTypeReference _typeRef_34 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(void.class);
-                  final Procedure1<JvmOperation> _function_15 = new Procedure1<JvmOperation>() {
+                  JvmTypeReference _typeRef_38 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(void.class);
+                  final Procedure1<JvmOperation> _function_17 = new Procedure1<JvmOperation>() {
                     public void apply(final JvmOperation it) {
                       EList<JvmFormalParameter> _parameters = it.getParameters();
                       JvmTypeReference _typeRef = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(int.class);
@@ -750,14 +804,14 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
                       CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setBody(it, _client);
                     }
                   };
-                  JvmOperation _method_13 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(feature, _plus_12, _typeRef_34, _function_15);
-                  CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_32, _method_13);
-                  EList<JvmMember> _members_33 = it.getMembers();
+                  JvmOperation _method_15 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(feature, _plus_12, _typeRef_38, _function_17);
+                  CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_36, _method_15);
+                  EList<JvmMember> _members_37 = it.getMembers();
                   String _name_12 = ((ChkVariableDeclaration)feature).getName();
                   String _firstUpper_6 = StringExtensions.toFirstUpper(_name_12);
                   String _plus_13 = ("read" + _firstUpper_6);
-                  JvmTypeReference _typeRef_35 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(void.class);
-                  final Procedure1<JvmOperation> _function_16 = new Procedure1<JvmOperation>() {
+                  JvmTypeReference _typeRef_39 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(void.class);
+                  final Procedure1<JvmOperation> _function_18 = new Procedure1<JvmOperation>() {
                     public void apply(final JvmOperation it) {
                       EList<JvmFormalParameter> _parameters = it.getParameters();
                       JvmTypeReference _typeRef = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(String.class);
@@ -771,8 +825,12 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
                           _builder.append(_name, "");
                           _builder.append(" = new ArrayList();");
                           _builder.newLineIfNotEmpty();
-                          _builder.append("for (int i=0; i<tokens.length; i++){");
-                          _builder.newLine();
+                          _builder.append("for (int i=0; i<");
+                          EList<String> _sz = ((ChkVariableDeclaration)feature).getSz();
+                          String _get = _sz.get(0);
+                          _builder.append(_get, "");
+                          _builder.append("; i++){");
+                          _builder.newLineIfNotEmpty();
                           _builder.append("\t");
                           String _name_1 = ((ChkVariableDeclaration)feature).getName();
                           _builder.append(_name_1, "\t");
@@ -805,14 +863,14 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
                       CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setBody(it, _client);
                     }
                   };
-                  JvmOperation _method_14 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(feature, _plus_13, _typeRef_35, _function_16);
-                  CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_33, _method_14);
-                  EList<JvmMember> _members_34 = it.getMembers();
+                  JvmOperation _method_16 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(feature, _plus_13, _typeRef_39, _function_18);
+                  CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_37, _method_16);
+                  EList<JvmMember> _members_38 = it.getMembers();
                   String _name_13 = ((ChkVariableDeclaration)feature).getName();
                   String _firstUpper_7 = StringExtensions.toFirstUpper(_name_13);
                   String _plus_14 = ("read" + _firstUpper_7);
-                  JvmTypeReference _typeRef_36 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(void.class);
-                  final Procedure1<JvmOperation> _function_17 = new Procedure1<JvmOperation>() {
+                  JvmTypeReference _typeRef_40 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(void.class);
+                  final Procedure1<JvmOperation> _function_19 = new Procedure1<JvmOperation>() {
                     public void apply(final JvmOperation it) {
                       EList<JvmFormalParameter> _parameters = it.getParameters();
                       JvmTypeReference _typeRef = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(String.class);
@@ -832,34 +890,19 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
                           _builder.append(_type, "");
                           _builder.append("Reader(token));");
                           _builder.newLineIfNotEmpty();
-                          _builder.append("if (!validate");
-                          String _name_1 = ((ChkVariableDeclaration)feature).getName();
-                          String _firstUpper = StringExtensions.toFirstUpper(_name_1);
-                          _builder.append(_firstUpper, "");
-                          _builder.append("((int)");
-                          String _name_2 = ((ChkVariableDeclaration)feature).getName();
-                          _builder.append(_name_2, "");
-                          _builder.append(".get(idx),current_subtask)){");
-                          _builder.newLineIfNotEmpty();
-                          _builder.append("\t");
-                          _builder.append(CheckerDslJvmModelInferrer.this.class_name, "\t");
-                          _builder.append(".die(\"value not in valid range\");");
-                          _builder.newLineIfNotEmpty();
-                          _builder.append("}");
-                          _builder.newLine();
                         }
                       };
                       CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setBody(it, _client);
                     }
                   };
-                  JvmOperation _method_15 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(feature, _plus_14, _typeRef_36, _function_17);
-                  CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_34, _method_15);
-                  EList<JvmMember> _members_35 = it.getMembers();
+                  JvmOperation _method_17 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(feature, _plus_14, _typeRef_40, _function_19);
+                  CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_38, _method_17);
+                  EList<JvmMember> _members_39 = it.getMembers();
                   String _name_14 = ((ChkVariableDeclaration)feature).getName();
                   String _firstUpper_8 = StringExtensions.toFirstUpper(_name_14);
                   String _plus_15 = ("write" + _firstUpper_8);
-                  JvmTypeReference _typeRef_37 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(void.class);
-                  final Procedure1<JvmOperation> _function_18 = new Procedure1<JvmOperation>() {
+                  JvmTypeReference _typeRef_41 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(void.class);
+                  final Procedure1<JvmOperation> _function_20 = new Procedure1<JvmOperation>() {
                     public void apply(final JvmOperation it) {
                       StringConcatenationClient _client = new StringConcatenationClient() {
                         @Override
@@ -868,9 +911,10 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
                           _builder.newLine();
                           _builder.append("\t");
                           _builder.append("for (int i=0; i<");
-                          String _name = ((ChkVariableDeclaration)feature).getName();
-                          _builder.append(_name, "\t");
-                          _builder.append(".size(); i++){");
+                          EList<String> _sz = ((ChkVariableDeclaration)feature).getSz();
+                          String _get = _sz.get(0);
+                          _builder.append(_get, "\t");
+                          _builder.append("; i++){");
                           _builder.newLineIfNotEmpty();
                           _builder.append("\t\t");
                           _builder.append("if (i > 0) writer.write(\" \");");
@@ -880,8 +924,8 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
                           String _chkType = CheckerDslJvmModelInferrer.this.chkType(((ChkVariableDeclaration)feature));
                           _builder.append(_chkType, "\t\t");
                           _builder.append(")");
-                          String _name_1 = ((ChkVariableDeclaration)feature).getName();
-                          _builder.append(_name_1, "\t\t");
+                          String _name = ((ChkVariableDeclaration)feature).getName();
+                          _builder.append(_name, "\t\t");
                           _builder.append(".get(i));");
                           _builder.newLineIfNotEmpty();
                           _builder.append("\t");
@@ -897,14 +941,14 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
                       CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setBody(it, _client);
                     }
                   };
-                  JvmOperation _method_16 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(feature, _plus_15, _typeRef_37, _function_18);
-                  CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_35, _method_16);
-                  EList<JvmMember> _members_36 = it.getMembers();
+                  JvmOperation _method_18 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(feature, _plus_15, _typeRef_41, _function_20);
+                  CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_39, _method_18);
+                  EList<JvmMember> _members_40 = it.getMembers();
                   String _name_15 = ((ChkVariableDeclaration)feature).getName();
                   String _firstUpper_9 = StringExtensions.toFirstUpper(_name_15);
                   String _plus_16 = ("write" + _firstUpper_9);
-                  JvmTypeReference _typeRef_38 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(void.class);
-                  final Procedure1<JvmOperation> _function_19 = new Procedure1<JvmOperation>() {
+                  JvmTypeReference _typeRef_42 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(void.class);
+                  final Procedure1<JvmOperation> _function_21 = new Procedure1<JvmOperation>() {
                     public void apply(final JvmOperation it) {
                       EList<JvmFormalParameter> _parameters = it.getParameters();
                       JvmTypeReference _typeRef = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(int.class);
@@ -931,15 +975,15 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
                       CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setBody(it, _client);
                     }
                   };
-                  JvmOperation _method_17 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(feature, _plus_16, _typeRef_38, _function_19);
-                  CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_36, _method_17);
-                  EList<JvmMember> _members_37 = it.getMembers();
+                  JvmOperation _method_19 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(feature, _plus_16, _typeRef_42, _function_21);
+                  CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_40, _method_19);
+                  EList<JvmMember> _members_41 = it.getMembers();
                   String _name_16 = ((ChkVariableDeclaration)feature).getName();
                   String _firstUpper_10 = StringExtensions.toFirstUpper(_name_16);
                   String _plus_17 = ("write" + _firstUpper_10);
                   String _plus_18 = (_plus_17 + "_2");
-                  JvmTypeReference _typeRef_39 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(void.class);
-                  final Procedure1<JvmOperation> _function_20 = new Procedure1<JvmOperation>() {
+                  JvmTypeReference _typeRef_43 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(void.class);
+                  final Procedure1<JvmOperation> _function_22 = new Procedure1<JvmOperation>() {
                     public void apply(final JvmOperation it) {
                       StringConcatenationClient _client = new StringConcatenationClient() {
                         @Override
@@ -948,9 +992,10 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
                           _builder.newLine();
                           _builder.append("\t");
                           _builder.append("for (int i=0; i<");
-                          String _name = ((ChkVariableDeclaration)feature).getName();
-                          _builder.append(_name, "\t");
-                          _builder.append("_2.size(); i++){");
+                          EList<String> _sz = ((ChkVariableDeclaration)feature).getSz();
+                          String _get = _sz.get(0);
+                          _builder.append(_get, "\t");
+                          _builder.append("_2; i++){");
                           _builder.newLineIfNotEmpty();
                           _builder.append("\t\t");
                           _builder.append("if (i > 0) writer.write(\" \");");
@@ -960,8 +1005,8 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
                           String _chkType = CheckerDslJvmModelInferrer.this.chkType(((ChkVariableDeclaration)feature));
                           _builder.append(_chkType, "\t\t");
                           _builder.append(")");
-                          String _name_1 = ((ChkVariableDeclaration)feature).getName();
-                          _builder.append(_name_1, "\t\t");
+                          String _name = ((ChkVariableDeclaration)feature).getName();
+                          _builder.append(_name, "\t\t");
                           _builder.append("_2.get(i));");
                           _builder.newLineIfNotEmpty();
                           _builder.append("\t");
@@ -977,15 +1022,15 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
                       CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setBody(it, _client);
                     }
                   };
-                  JvmOperation _method_18 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(feature, _plus_18, _typeRef_39, _function_20);
-                  CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_37, _method_18);
-                  EList<JvmMember> _members_38 = it.getMembers();
+                  JvmOperation _method_20 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(feature, _plus_18, _typeRef_43, _function_22);
+                  CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_41, _method_20);
+                  EList<JvmMember> _members_42 = it.getMembers();
                   String _name_17 = ((ChkVariableDeclaration)feature).getName();
                   String _firstUpper_11 = StringExtensions.toFirstUpper(_name_17);
                   String _plus_19 = ("write" + _firstUpper_11);
                   String _plus_20 = (_plus_19 + "_2");
-                  JvmTypeReference _typeRef_40 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(void.class);
-                  final Procedure1<JvmOperation> _function_21 = new Procedure1<JvmOperation>() {
+                  JvmTypeReference _typeRef_44 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(void.class);
+                  final Procedure1<JvmOperation> _function_23 = new Procedure1<JvmOperation>() {
                     public void apply(final JvmOperation it) {
                       EList<JvmFormalParameter> _parameters = it.getParameters();
                       JvmTypeReference _typeRef = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(int.class);
@@ -1012,86 +1057,63 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
                       CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setBody(it, _client);
                     }
                   };
-                  JvmOperation _method_19 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(feature, _plus_20, _typeRef_40, _function_21);
-                  CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_38, _method_19);
+                  JvmOperation _method_21 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(feature, _plus_20, _typeRef_44, _function_23);
+                  CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_42, _method_21);
+                  EList<String> _sz_2 = ((ChkVariableDeclaration)feature).getSz();
+                  String _get = _sz_2.get(0);
+                  String _plus_21 = ((CheckerDslJvmModelInferrer.this.mr_chk + "for (int i=0; i<") + _get);
+                  String _plus_22 = (_plus_21 + "_2; i++){\n");
+                  CheckerDslJvmModelInferrer.this.mr_chk = _plus_22;
+                  String _chkType = CheckerDslJvmModelInferrer.this.chkType(((ChkVariableDeclaration)feature));
+                  String _plus_23 = ((CheckerDslJvmModelInferrer.this.mr_chk + "if ((") + _chkType);
+                  String _plus_24 = (_plus_23 + ")");
+                  String _name_18 = ((ChkVariableDeclaration)feature).getName();
+                  String _plus_25 = (_plus_24 + _name_18);
+                  String _plus_26 = (_plus_25 + "_2.get(i) != (");
+                  String _chkType_1 = CheckerDslJvmModelInferrer.this.chkType(((ChkVariableDeclaration)feature));
+                  String _plus_27 = (_plus_26 + _chkType_1);
+                  String _plus_28 = (_plus_27 + ")ans.");
+                  String _name_19 = ((ChkVariableDeclaration)feature).getName();
+                  String _plus_29 = (_plus_28 + _name_19);
+                  String _plus_30 = (_plus_29 + ".get(i)) return false;\n");
+                  CheckerDslJvmModelInferrer.this.mr_chk = _plus_30;
+                  CheckerDslJvmModelInferrer.this.mr_chk = (CheckerDslJvmModelInferrer.this.mr_chk + "}\n");
                 } else {
-                  EList<String> _arr_2 = ((ChkVariableDeclaration)feature).getArr();
-                  int _size_2 = _arr_2.size();
+                  EList<String> _sz_3 = ((ChkVariableDeclaration)feature).getSz();
+                  int _size_2 = _sz_3.size();
                   boolean _equals_8 = (_size_2 == 2);
                   if (_equals_8) {
-                    EList<JvmMember> _members_39 = it.getMembers();
-                    String _name_18 = ((ChkVariableDeclaration)feature).getName();
-                    String _firstUpper_12 = StringExtensions.toFirstUpper(_name_18);
-                    String _plus_21 = ("read" + _firstUpper_12);
-                    JvmTypeReference _typeRef_41 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(void.class);
-                    final Procedure1<JvmOperation> _function_22 = new Procedure1<JvmOperation>() {
+                    EList<JvmMember> _members_43 = it.getMembers();
+                    String _name_20 = ((ChkVariableDeclaration)feature).getName();
+                    String _firstUpper_12 = StringExtensions.toFirstUpper(_name_20);
+                    String _plus_31 = ("get" + _firstUpper_12);
+                    JvmTypeReference _typeRef_45 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(ArrayList.class);
+                    final Procedure1<JvmOperation> _function_24 = new Procedure1<JvmOperation>() {
                       public void apply(final JvmOperation it) {
+                        EList<JvmFormalParameter> _parameters = it.getParameters();
+                        JvmTypeReference _typeRef = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(int.class);
+                        JvmFormalParameter _parameter = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toParameter(feature, "idx1", _typeRef);
+                        CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmFormalParameter>operator_add(_parameters, _parameter);
                         StringConcatenationClient _client = new StringConcatenationClient() {
                           @Override
                           protected void appendTo(StringConcatenationClient.TargetStringConcatenation _builder) {
+                            _builder.append("return (ArrayList)");
                             String _name = ((ChkVariableDeclaration)feature).getName();
                             _builder.append(_name, "");
-                            _builder.append(" = new ArrayList();");
+                            _builder.append(".get(idx1);");
                             _builder.newLineIfNotEmpty();
-                            _builder.append("for (int i=0; i<");
-                            EList<String> _sz = ((ChkVariableDeclaration)feature).getSz();
-                            String _get = _sz.get(0);
-                            _builder.append(_get, "");
-                            _builder.append("; i++){");
-                            _builder.newLineIfNotEmpty();
-                            _builder.append("\t");
-                            _builder.append("ArrayList temp = new ArrayList();");
-                            _builder.newLine();
-                            _builder.append("\t");
-                            _builder.append("for (int j=0; j<");
-                            EList<String> _sz_1 = ((ChkVariableDeclaration)feature).getSz();
-                            String _get_1 = _sz_1.get(1);
-                            _builder.append(_get_1, "\t");
-                            _builder.append("; j++){");
-                            _builder.newLineIfNotEmpty();
-                            _builder.append("\t\t");
-                            _builder.append("temp.add(");
-                            String _type = ((ChkVariableDeclaration)feature).getType();
-                            _builder.append(_type, "\t\t");
-                            _builder.append("Reader());");
-                            _builder.newLineIfNotEmpty();
-                            _builder.append("\t\t");
-                            _builder.append("if (!validate");
-                            String _name_1 = ((ChkVariableDeclaration)feature).getName();
-                            String _firstUpper = StringExtensions.toFirstUpper(_name_1);
-                            _builder.append(_firstUpper, "\t\t");
-                            _builder.append("((int)temp.get(j),current_subtask)){");
-                            _builder.newLineIfNotEmpty();
-                            _builder.append("\t\t\t");
-                            _builder.append(CheckerDslJvmModelInferrer.this.class_name, "\t\t\t");
-                            _builder.append(".die(\"value not in valid range\");");
-                            _builder.newLineIfNotEmpty();
-                            _builder.append("\t\t");
-                            _builder.append("}");
-                            _builder.newLine();
-                            _builder.append("\t");
-                            _builder.append("}");
-                            _builder.newLine();
-                            _builder.append("\t");
-                            String _name_2 = ((ChkVariableDeclaration)feature).getName();
-                            _builder.append(_name_2, "\t");
-                            _builder.append(".add(temp);");
-                            _builder.newLineIfNotEmpty();
-                            _builder.append("}");
-                            _builder.newLine();
                           }
                         };
                         CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setBody(it, _client);
                       }
                     };
-                    JvmOperation _method_20 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(feature, _plus_21, _typeRef_41, _function_22);
-                    CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_39, _method_20);
-                    EList<JvmMember> _members_40 = it.getMembers();
-                    String _name_19 = ((ChkVariableDeclaration)feature).getName();
-                    String _firstUpper_13 = StringExtensions.toFirstUpper(_name_19);
-                    String _plus_22 = ("read" + _firstUpper_13);
-                    JvmTypeReference _typeRef_42 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(void.class);
-                    final Procedure1<JvmOperation> _function_23 = new Procedure1<JvmOperation>() {
+                    JvmOperation _method_22 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(feature, _plus_31, _typeRef_45, _function_24);
+                    CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_43, _method_22);
+                    EList<JvmMember> _members_44 = it.getMembers();
+                    String _name_21 = ((ChkVariableDeclaration)feature).getName();
+                    String _firstUpper_13 = StringExtensions.toFirstUpper(_name_21);
+                    String _plus_32 = ("get" + _firstUpper_13);
+                    final Procedure1<JvmOperation> _function_25 = new Procedure1<JvmOperation>() {
                       public void apply(final JvmOperation it) {
                         EList<JvmFormalParameter> _parameters = it.getParameters();
                         JvmTypeReference _typeRef = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(int.class);
@@ -1104,6 +1126,318 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
                         StringConcatenationClient _client = new StringConcatenationClient() {
                           @Override
                           protected void appendTo(StringConcatenationClient.TargetStringConcatenation _builder) {
+                            _builder.append("ArrayList temp = (ArrayList)");
+                            String _name = ((ChkVariableDeclaration)feature).getName();
+                            _builder.append(_name, "");
+                            _builder.append(".get(idx1);");
+                            _builder.newLineIfNotEmpty();
+                            _builder.append("return (");
+                            String _chkType = CheckerDslJvmModelInferrer.this.chkType(((ChkVariableDeclaration)feature));
+                            _builder.append(_chkType, "");
+                            _builder.append(")temp.get(idx2);");
+                            _builder.newLineIfNotEmpty();
+                          }
+                        };
+                        CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setBody(it, _client);
+                      }
+                    };
+                    JvmOperation _method_23 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(feature, _plus_32, t2, _function_25);
+                    CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_44, _method_23);
+                    EList<JvmMember> _members_45 = it.getMembers();
+                    String _name_22 = ((ChkVariableDeclaration)feature).getName();
+                    String _firstUpper_14 = StringExtensions.toFirstUpper(_name_22);
+                    String _plus_33 = ("set" + _firstUpper_14);
+                    JvmTypeReference _typeRef_46 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(void.class);
+                    final Procedure1<JvmOperation> _function_26 = new Procedure1<JvmOperation>() {
+                      public void apply(final JvmOperation it) {
+                        EList<JvmFormalParameter> _parameters = it.getParameters();
+                        JvmTypeReference _typeRef = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(int.class);
+                        JvmFormalParameter _parameter = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toParameter(feature, "idx1", _typeRef);
+                        CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmFormalParameter>operator_add(_parameters, _parameter);
+                        EList<JvmFormalParameter> _parameters_1 = it.getParameters();
+                        JvmTypeReference _typeRef_1 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(ArrayList.class);
+                        JvmFormalParameter _parameter_1 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toParameter(feature, "val", _typeRef_1);
+                        CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmFormalParameter>operator_add(_parameters_1, _parameter_1);
+                        StringConcatenationClient _client = new StringConcatenationClient() {
+                          @Override
+                          protected void appendTo(StringConcatenationClient.TargetStringConcatenation _builder) {
+                            String _name = ((ChkVariableDeclaration)feature).getName();
+                            _builder.append(_name, "");
+                            _builder.append(".set(idx1,val);");
+                            _builder.newLineIfNotEmpty();
+                          }
+                        };
+                        CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setBody(it, _client);
+                      }
+                    };
+                    JvmOperation _method_24 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(feature, _plus_33, _typeRef_46, _function_26);
+                    CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_45, _method_24);
+                    EList<JvmMember> _members_46 = it.getMembers();
+                    String _name_23 = ((ChkVariableDeclaration)feature).getName();
+                    String _firstUpper_15 = StringExtensions.toFirstUpper(_name_23);
+                    String _plus_34 = ("set" + _firstUpper_15);
+                    JvmTypeReference _typeRef_47 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(void.class);
+                    final Procedure1<JvmOperation> _function_27 = new Procedure1<JvmOperation>() {
+                      public void apply(final JvmOperation it) {
+                        EList<JvmFormalParameter> _parameters = it.getParameters();
+                        JvmTypeReference _typeRef = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(int.class);
+                        JvmFormalParameter _parameter = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toParameter(feature, "idx1", _typeRef);
+                        CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmFormalParameter>operator_add(_parameters, _parameter);
+                        EList<JvmFormalParameter> _parameters_1 = it.getParameters();
+                        JvmTypeReference _typeRef_1 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(int.class);
+                        JvmFormalParameter _parameter_1 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toParameter(feature, "idx2", _typeRef_1);
+                        CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmFormalParameter>operator_add(_parameters_1, _parameter_1);
+                        EList<JvmFormalParameter> _parameters_2 = it.getParameters();
+                        JvmTypeReference _typeRef_2 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(Object.class);
+                        JvmFormalParameter _parameter_2 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toParameter(feature, "val", _typeRef_2);
+                        CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmFormalParameter>operator_add(_parameters_2, _parameter_2);
+                        StringConcatenationClient _client = new StringConcatenationClient() {
+                          @Override
+                          protected void appendTo(StringConcatenationClient.TargetStringConcatenation _builder) {
+                            _builder.append("ArrayList temp = (ArrayList)");
+                            String _name = ((ChkVariableDeclaration)feature).getName();
+                            _builder.append(_name, "");
+                            _builder.append(".get(idx1);");
+                            _builder.newLineIfNotEmpty();
+                            _builder.append("temp.set(idx2,(");
+                            String _chkType = CheckerDslJvmModelInferrer.this.chkType(((ChkVariableDeclaration)feature));
+                            _builder.append(_chkType, "");
+                            _builder.append(")val);");
+                            _builder.newLineIfNotEmpty();
+                            String _name_1 = ((ChkVariableDeclaration)feature).getName();
+                            _builder.append(_name_1, "");
+                            _builder.append(".set(idx1,temp);");
+                            _builder.newLineIfNotEmpty();
+                          }
+                        };
+                        CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setBody(it, _client);
+                      }
+                    };
+                    JvmOperation _method_25 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(feature, _plus_34, _typeRef_47, _function_27);
+                    CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_46, _method_25);
+                    EList<JvmMember> _members_47 = it.getMembers();
+                    String _name_24 = ((ChkVariableDeclaration)feature).getName();
+                    String _firstUpper_16 = StringExtensions.toFirstUpper(_name_24);
+                    String _plus_35 = ("get" + _firstUpper_16);
+                    String _plus_36 = (_plus_35 + "_2");
+                    JvmTypeReference _typeRef_48 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(ArrayList.class);
+                    final Procedure1<JvmOperation> _function_28 = new Procedure1<JvmOperation>() {
+                      public void apply(final JvmOperation it) {
+                        EList<JvmFormalParameter> _parameters = it.getParameters();
+                        JvmTypeReference _typeRef = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(int.class);
+                        JvmFormalParameter _parameter = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toParameter(feature, "idx1", _typeRef);
+                        CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmFormalParameter>operator_add(_parameters, _parameter);
+                        StringConcatenationClient _client = new StringConcatenationClient() {
+                          @Override
+                          protected void appendTo(StringConcatenationClient.TargetStringConcatenation _builder) {
+                            _builder.append("return (ArrayList)");
+                            String _name = ((ChkVariableDeclaration)feature).getName();
+                            _builder.append(_name, "");
+                            _builder.append("_2.get(idx1);");
+                            _builder.newLineIfNotEmpty();
+                          }
+                        };
+                        CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setBody(it, _client);
+                      }
+                    };
+                    JvmOperation _method_26 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(feature, _plus_36, _typeRef_48, _function_28);
+                    CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_47, _method_26);
+                    EList<JvmMember> _members_48 = it.getMembers();
+                    String _name_25 = ((ChkVariableDeclaration)feature).getName();
+                    String _firstUpper_17 = StringExtensions.toFirstUpper(_name_25);
+                    String _plus_37 = ("get" + _firstUpper_17);
+                    String _plus_38 = (_plus_37 + "_2");
+                    final Procedure1<JvmOperation> _function_29 = new Procedure1<JvmOperation>() {
+                      public void apply(final JvmOperation it) {
+                        EList<JvmFormalParameter> _parameters = it.getParameters();
+                        JvmTypeReference _typeRef = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(int.class);
+                        JvmFormalParameter _parameter = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toParameter(feature, "idx1", _typeRef);
+                        CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmFormalParameter>operator_add(_parameters, _parameter);
+                        EList<JvmFormalParameter> _parameters_1 = it.getParameters();
+                        JvmTypeReference _typeRef_1 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(int.class);
+                        JvmFormalParameter _parameter_1 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toParameter(feature, "idx2", _typeRef_1);
+                        CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmFormalParameter>operator_add(_parameters_1, _parameter_1);
+                        StringConcatenationClient _client = new StringConcatenationClient() {
+                          @Override
+                          protected void appendTo(StringConcatenationClient.TargetStringConcatenation _builder) {
+                            _builder.append("ArrayList temp = (ArrayList)");
+                            String _name = ((ChkVariableDeclaration)feature).getName();
+                            _builder.append(_name, "");
+                            _builder.append("_2.get(idx1);");
+                            _builder.newLineIfNotEmpty();
+                            _builder.append("return (");
+                            String _chkType = CheckerDslJvmModelInferrer.this.chkType(((ChkVariableDeclaration)feature));
+                            _builder.append(_chkType, "");
+                            _builder.append(")temp.get(idx2);");
+                            _builder.newLineIfNotEmpty();
+                          }
+                        };
+                        CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setBody(it, _client);
+                      }
+                    };
+                    JvmOperation _method_27 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(feature, _plus_38, t2, _function_29);
+                    CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_48, _method_27);
+                    EList<JvmMember> _members_49 = it.getMembers();
+                    String _name_26 = ((ChkVariableDeclaration)feature).getName();
+                    String _firstUpper_18 = StringExtensions.toFirstUpper(_name_26);
+                    String _plus_39 = ("set" + _firstUpper_18);
+                    String _plus_40 = (_plus_39 + "_2");
+                    JvmTypeReference _typeRef_49 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(void.class);
+                    final Procedure1<JvmOperation> _function_30 = new Procedure1<JvmOperation>() {
+                      public void apply(final JvmOperation it) {
+                        EList<JvmFormalParameter> _parameters = it.getParameters();
+                        JvmTypeReference _typeRef = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(int.class);
+                        JvmFormalParameter _parameter = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toParameter(feature, "idx1", _typeRef);
+                        CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmFormalParameter>operator_add(_parameters, _parameter);
+                        EList<JvmFormalParameter> _parameters_1 = it.getParameters();
+                        JvmTypeReference _typeRef_1 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(ArrayList.class);
+                        JvmFormalParameter _parameter_1 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toParameter(feature, "val", _typeRef_1);
+                        CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmFormalParameter>operator_add(_parameters_1, _parameter_1);
+                        StringConcatenationClient _client = new StringConcatenationClient() {
+                          @Override
+                          protected void appendTo(StringConcatenationClient.TargetStringConcatenation _builder) {
+                            String _name = ((ChkVariableDeclaration)feature).getName();
+                            _builder.append(_name, "");
+                            _builder.append("_2.set(idx1,val);");
+                            _builder.newLineIfNotEmpty();
+                          }
+                        };
+                        CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setBody(it, _client);
+                      }
+                    };
+                    JvmOperation _method_28 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(feature, _plus_40, _typeRef_49, _function_30);
+                    CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_49, _method_28);
+                    EList<JvmMember> _members_50 = it.getMembers();
+                    String _name_27 = ((ChkVariableDeclaration)feature).getName();
+                    String _firstUpper_19 = StringExtensions.toFirstUpper(_name_27);
+                    String _plus_41 = ("set" + _firstUpper_19);
+                    String _plus_42 = (_plus_41 + "_2");
+                    JvmTypeReference _typeRef_50 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(void.class);
+                    final Procedure1<JvmOperation> _function_31 = new Procedure1<JvmOperation>() {
+                      public void apply(final JvmOperation it) {
+                        EList<JvmFormalParameter> _parameters = it.getParameters();
+                        JvmTypeReference _typeRef = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(int.class);
+                        JvmFormalParameter _parameter = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toParameter(feature, "idx1", _typeRef);
+                        CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmFormalParameter>operator_add(_parameters, _parameter);
+                        EList<JvmFormalParameter> _parameters_1 = it.getParameters();
+                        JvmTypeReference _typeRef_1 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(int.class);
+                        JvmFormalParameter _parameter_1 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toParameter(feature, "idx2", _typeRef_1);
+                        CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmFormalParameter>operator_add(_parameters_1, _parameter_1);
+                        EList<JvmFormalParameter> _parameters_2 = it.getParameters();
+                        JvmTypeReference _typeRef_2 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(Object.class);
+                        JvmFormalParameter _parameter_2 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toParameter(feature, "val", _typeRef_2);
+                        CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmFormalParameter>operator_add(_parameters_2, _parameter_2);
+                        StringConcatenationClient _client = new StringConcatenationClient() {
+                          @Override
+                          protected void appendTo(StringConcatenationClient.TargetStringConcatenation _builder) {
+                            _builder.append("ArrayList temp = (ArrayList)");
+                            String _name = ((ChkVariableDeclaration)feature).getName();
+                            _builder.append(_name, "");
+                            _builder.append("_2.get(idx1);");
+                            _builder.newLineIfNotEmpty();
+                            _builder.append("temp.set(idx2,(");
+                            String _chkType = CheckerDslJvmModelInferrer.this.chkType(((ChkVariableDeclaration)feature));
+                            _builder.append(_chkType, "");
+                            _builder.append(")val);");
+                            _builder.newLineIfNotEmpty();
+                            String _name_1 = ((ChkVariableDeclaration)feature).getName();
+                            _builder.append(_name_1, "");
+                            _builder.append("_2.set(idx1,temp);");
+                            _builder.newLineIfNotEmpty();
+                          }
+                        };
+                        CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setBody(it, _client);
+                      }
+                    };
+                    JvmOperation _method_29 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(feature, _plus_42, _typeRef_50, _function_31);
+                    CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_50, _method_29);
+                    EList<JvmMember> _members_51 = it.getMembers();
+                    String _name_28 = ((ChkVariableDeclaration)feature).getName();
+                    String _firstUpper_20 = StringExtensions.toFirstUpper(_name_28);
+                    String _plus_43 = ("read" + _firstUpper_20);
+                    JvmTypeReference _typeRef_51 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(void.class);
+                    final Procedure1<JvmOperation> _function_32 = new Procedure1<JvmOperation>() {
+                      public void apply(final JvmOperation it) {
+                        EList<JvmFormalParameter> _parameters = it.getParameters();
+                        JvmTypeReference _typeRef = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(String.class);
+                        JvmTypeReference _addArrayTypeDimension = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.addArrayTypeDimension(_typeRef);
+                        JvmFormalParameter _parameter = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toParameter(element, "tokens", _addArrayTypeDimension);
+                        CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmFormalParameter>operator_add(_parameters, _parameter);
+                        EList<JvmFormalParameter> _parameters_1 = it.getParameters();
+                        JvmTypeReference _typeRef_1 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(int.class);
+                        JvmFormalParameter _parameter_1 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toParameter(feature, "idx1", _typeRef_1);
+                        CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmFormalParameter>operator_add(_parameters_1, _parameter_1);
+                        StringConcatenationClient _client = new StringConcatenationClient() {
+                          @Override
+                          protected void appendTo(StringConcatenationClient.TargetStringConcatenation _builder) {
+                            _builder.append("if (idx1 == 0) ");
+                            String _name = ((ChkVariableDeclaration)feature).getName();
+                            _builder.append(_name, "");
+                            _builder.append(" = new ArrayList();");
+                            _builder.newLineIfNotEmpty();
+                            _builder.append("ArrayList temp = new ArrayList();");
+                            _builder.newLine();
+                            _builder.append("for (int i=0; i<");
+                            EList<String> _sz = ((ChkVariableDeclaration)feature).getSz();
+                            String _get = _sz.get(1);
+                            _builder.append(_get, "");
+                            _builder.append("; i++){");
+                            _builder.newLineIfNotEmpty();
+                            _builder.append("\t");
+                            _builder.append("temp.add(");
+                            String _type = ((ChkVariableDeclaration)feature).getType();
+                            _builder.append(_type, "\t");
+                            _builder.append("Reader(tokens[i]));");
+                            _builder.newLineIfNotEmpty();
+                            _builder.append("\t");
+                            _builder.append("if (!validate");
+                            String _name_1 = ((ChkVariableDeclaration)feature).getName();
+                            String _firstUpper = StringExtensions.toFirstUpper(_name_1);
+                            _builder.append(_firstUpper, "\t");
+                            _builder.append("((int)temp.get(i),current_subtask)){");
+                            _builder.newLineIfNotEmpty();
+                            _builder.append("\t\t");
+                            _builder.append(CheckerDslJvmModelInferrer.this.class_name, "\t\t");
+                            _builder.append(".die(\"value not in valid range\");");
+                            _builder.newLineIfNotEmpty();
+                            _builder.append("\t");
+                            _builder.append("}");
+                            _builder.newLine();
+                            _builder.append("}");
+                            _builder.newLine();
+                            String _name_2 = ((ChkVariableDeclaration)feature).getName();
+                            _builder.append(_name_2, "");
+                            _builder.append(".add(temp);");
+                            _builder.newLineIfNotEmpty();
+                          }
+                        };
+                        CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setBody(it, _client);
+                      }
+                    };
+                    JvmOperation _method_30 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(feature, _plus_43, _typeRef_51, _function_32);
+                    CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_51, _method_30);
+                    EList<JvmMember> _members_52 = it.getMembers();
+                    String _name_29 = ((ChkVariableDeclaration)feature).getName();
+                    String _firstUpper_21 = StringExtensions.toFirstUpper(_name_29);
+                    String _plus_44 = ("read" + _firstUpper_21);
+                    JvmTypeReference _typeRef_52 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(void.class);
+                    final Procedure1<JvmOperation> _function_33 = new Procedure1<JvmOperation>() {
+                      public void apply(final JvmOperation it) {
+                        EList<JvmFormalParameter> _parameters = it.getParameters();
+                        JvmTypeReference _typeRef = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(String.class);
+                        JvmFormalParameter _parameter = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toParameter(element, "token", _typeRef);
+                        CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmFormalParameter>operator_add(_parameters, _parameter);
+                        EList<JvmFormalParameter> _parameters_1 = it.getParameters();
+                        JvmTypeReference _typeRef_1 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(int.class);
+                        JvmFormalParameter _parameter_1 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toParameter(feature, "idx1", _typeRef_1);
+                        CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmFormalParameter>operator_add(_parameters_1, _parameter_1);
+                        EList<JvmFormalParameter> _parameters_2 = it.getParameters();
+                        JvmTypeReference _typeRef_2 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(int.class);
+                        JvmFormalParameter _parameter_2 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toParameter(feature, "idx2", _typeRef_2);
+                        CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmFormalParameter>operator_add(_parameters_2, _parameter_2);
+                        StringConcatenationClient _client = new StringConcatenationClient() {
+                          @Override
+                          protected void appendTo(StringConcatenationClient.TargetStringConcatenation _builder) {
                             _builder.append("ArrayList atemp = (ArrayList) ");
                             String _name = ((ChkVariableDeclaration)feature).getName();
                             _builder.append(_name, "");
@@ -1112,7 +1446,7 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
                             _builder.append("atemp.set(idx2,");
                             String _type = ((ChkVariableDeclaration)feature).getType();
                             _builder.append(_type, "");
-                            _builder.append("Reader());");
+                            _builder.append("Reader(token));");
                             _builder.newLineIfNotEmpty();
                             String _name_1 = ((ChkVariableDeclaration)feature).getName();
                             _builder.append(_name_1, "");
@@ -1123,14 +1457,14 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
                         CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setBody(it, _client);
                       }
                     };
-                    JvmOperation _method_21 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(feature, _plus_22, _typeRef_42, _function_23);
-                    CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_40, _method_21);
-                    EList<JvmMember> _members_41 = it.getMembers();
-                    String _name_20 = ((ChkVariableDeclaration)feature).getName();
-                    String _firstUpper_14 = StringExtensions.toFirstUpper(_name_20);
-                    String _plus_23 = ("write" + _firstUpper_14);
-                    JvmTypeReference _typeRef_43 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(void.class);
-                    final Procedure1<JvmOperation> _function_24 = new Procedure1<JvmOperation>() {
+                    JvmOperation _method_31 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(feature, _plus_44, _typeRef_52, _function_33);
+                    CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_52, _method_31);
+                    EList<JvmMember> _members_53 = it.getMembers();
+                    String _name_30 = ((ChkVariableDeclaration)feature).getName();
+                    String _firstUpper_22 = StringExtensions.toFirstUpper(_name_30);
+                    String _plus_45 = ("write" + _firstUpper_22);
+                    JvmTypeReference _typeRef_53 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(void.class);
+                    final Procedure1<JvmOperation> _function_34 = new Procedure1<JvmOperation>() {
                       public void apply(final JvmOperation it) {
                         StringConcatenationClient _client = new StringConcatenationClient() {
                           @Override
@@ -1179,14 +1513,14 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
                         CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setBody(it, _client);
                       }
                     };
-                    JvmOperation _method_22 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(feature, _plus_23, _typeRef_43, _function_24);
-                    CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_41, _method_22);
-                    EList<JvmMember> _members_42 = it.getMembers();
-                    String _name_21 = ((ChkVariableDeclaration)feature).getName();
-                    String _firstUpper_15 = StringExtensions.toFirstUpper(_name_21);
-                    String _plus_24 = ("write" + _firstUpper_15);
-                    JvmTypeReference _typeRef_44 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(void.class);
-                    final Procedure1<JvmOperation> _function_25 = new Procedure1<JvmOperation>() {
+                    JvmOperation _method_32 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(feature, _plus_45, _typeRef_53, _function_34);
+                    CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_53, _method_32);
+                    EList<JvmMember> _members_54 = it.getMembers();
+                    String _name_31 = ((ChkVariableDeclaration)feature).getName();
+                    String _firstUpper_23 = StringExtensions.toFirstUpper(_name_31);
+                    String _plus_46 = ("write" + _firstUpper_23);
+                    JvmTypeReference _typeRef_54 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(void.class);
+                    final Procedure1<JvmOperation> _function_35 = new Procedure1<JvmOperation>() {
                       public void apply(final JvmOperation it) {
                         EList<JvmFormalParameter> _parameters = it.getParameters();
                         JvmTypeReference _typeRef = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(int.class);
@@ -1217,15 +1551,15 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
                         CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setBody(it, _client);
                       }
                     };
-                    JvmOperation _method_23 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(feature, _plus_24, _typeRef_44, _function_25);
-                    CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_42, _method_23);
-                    EList<JvmMember> _members_43 = it.getMembers();
-                    String _name_22 = ((ChkVariableDeclaration)feature).getName();
-                    String _firstUpper_16 = StringExtensions.toFirstUpper(_name_22);
-                    String _plus_25 = ("write" + _firstUpper_16);
-                    String _plus_26 = (_plus_25 + "_2");
-                    JvmTypeReference _typeRef_45 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(void.class);
-                    final Procedure1<JvmOperation> _function_26 = new Procedure1<JvmOperation>() {
+                    JvmOperation _method_33 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(feature, _plus_46, _typeRef_54, _function_35);
+                    CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_54, _method_33);
+                    EList<JvmMember> _members_55 = it.getMembers();
+                    String _name_32 = ((ChkVariableDeclaration)feature).getName();
+                    String _firstUpper_24 = StringExtensions.toFirstUpper(_name_32);
+                    String _plus_47 = ("write" + _firstUpper_24);
+                    String _plus_48 = (_plus_47 + "_2");
+                    JvmTypeReference _typeRef_55 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(void.class);
+                    final Procedure1<JvmOperation> _function_36 = new Procedure1<JvmOperation>() {
                       public void apply(final JvmOperation it) {
                         StringConcatenationClient _client = new StringConcatenationClient() {
                           @Override
@@ -1274,15 +1608,69 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
                         CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setBody(it, _client);
                       }
                     };
-                    JvmOperation _method_24 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(feature, _plus_26, _typeRef_45, _function_26);
-                    CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_43, _method_24);
-                    EList<JvmMember> _members_44 = it.getMembers();
-                    String _name_23 = ((ChkVariableDeclaration)feature).getName();
-                    String _firstUpper_17 = StringExtensions.toFirstUpper(_name_23);
-                    String _plus_27 = ("write" + _firstUpper_17);
-                    String _plus_28 = (_plus_27 + "_2");
-                    JvmTypeReference _typeRef_46 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(void.class);
-                    final Procedure1<JvmOperation> _function_27 = new Procedure1<JvmOperation>() {
+                    JvmOperation _method_34 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(feature, _plus_48, _typeRef_55, _function_36);
+                    CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_55, _method_34);
+                    EList<JvmMember> _members_56 = it.getMembers();
+                    String _name_33 = ((ChkVariableDeclaration)feature).getName();
+                    String _firstUpper_25 = StringExtensions.toFirstUpper(_name_33);
+                    String _plus_49 = ("write" + _firstUpper_25);
+                    String _plus_50 = (_plus_49 + "_2");
+                    JvmTypeReference _typeRef_56 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(void.class);
+                    final Procedure1<JvmOperation> _function_37 = new Procedure1<JvmOperation>() {
+                      public void apply(final JvmOperation it) {
+                        EList<JvmFormalParameter> _parameters = it.getParameters();
+                        JvmTypeReference _typeRef = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(int.class);
+                        JvmFormalParameter _parameter = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toParameter(feature, "idx1", _typeRef);
+                        CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmFormalParameter>operator_add(_parameters, _parameter);
+                        StringConcatenationClient _client = new StringConcatenationClient() {
+                          @Override
+                          protected void appendTo(StringConcatenationClient.TargetStringConcatenation _builder) {
+                            _builder.append("try {");
+                            _builder.newLine();
+                            _builder.append("\t");
+                            _builder.append("ArrayList temp = (ArrayList)");
+                            String _name = ((ChkVariableDeclaration)feature).getName();
+                            _builder.append(_name, "\t");
+                            _builder.append(".get(idx1);");
+                            _builder.newLineIfNotEmpty();
+                            _builder.append("\t");
+                            _builder.append("for (int j=0; j<");
+                            EList<String> _sz = ((ChkVariableDeclaration)feature).getSz();
+                            String _get = _sz.get(1);
+                            _builder.append(_get, "\t");
+                            _builder.append("; j++){");
+                            _builder.newLineIfNotEmpty();
+                            _builder.append("\t\t");
+                            _builder.append("if (j > 0) writer.write(\" \");");
+                            _builder.newLine();
+                            _builder.append("\t\t");
+                            _builder.append("writer.write(\"\"+(");
+                            String _chkType = CheckerDslJvmModelInferrer.this.chkType(((ChkVariableDeclaration)feature));
+                            _builder.append(_chkType, "\t\t");
+                            _builder.append(")temp.get(j));");
+                            _builder.newLineIfNotEmpty();
+                            _builder.append("\t");
+                            _builder.append("}");
+                            _builder.newLine();
+                            _builder.append("\t");
+                            _builder.append("writer.write(System.lineSeparator());");
+                            _builder.newLine();
+                            _builder.append("} catch (Exception e){}");
+                            _builder.newLine();
+                          }
+                        };
+                        CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setBody(it, _client);
+                      }
+                    };
+                    JvmOperation _method_35 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(feature, _plus_50, _typeRef_56, _function_37);
+                    CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_56, _method_35);
+                    EList<JvmMember> _members_57 = it.getMembers();
+                    String _name_34 = ((ChkVariableDeclaration)feature).getName();
+                    String _firstUpper_26 = StringExtensions.toFirstUpper(_name_34);
+                    String _plus_51 = ("write" + _firstUpper_26);
+                    String _plus_52 = (_plus_51 + "_2");
+                    JvmTypeReference _typeRef_57 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(void.class);
+                    final Procedure1<JvmOperation> _function_38 = new Procedure1<JvmOperation>() {
                       public void apply(final JvmOperation it) {
                         EList<JvmFormalParameter> _parameters = it.getParameters();
                         JvmTypeReference _typeRef = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(int.class);
@@ -1313,51 +1701,76 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
                         CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setBody(it, _client);
                       }
                     };
-                    JvmOperation _method_25 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(feature, _plus_28, _typeRef_46, _function_27);
-                    CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_44, _method_25);
+                    JvmOperation _method_36 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(feature, _plus_52, _typeRef_57, _function_38);
+                    CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_57, _method_36);
+                    EList<String> _sz_4 = ((ChkVariableDeclaration)feature).getSz();
+                    String _get_1 = _sz_4.get(0);
+                    String _plus_53 = ((CheckerDslJvmModelInferrer.this.mr_chk + "for (int i=0; i<") + _get_1);
+                    String _plus_54 = (_plus_53 + "_2; i++){\n");
+                    CheckerDslJvmModelInferrer.this.mr_chk = _plus_54;
+                    EList<String> _sz_5 = ((ChkVariableDeclaration)feature).getSz();
+                    String _get_2 = _sz_5.get(1);
+                    String _plus_55 = ((CheckerDslJvmModelInferrer.this.mr_chk + "for (int j=0; j<") + _get_2);
+                    String _plus_56 = (_plus_55 + "_2; j++){\n");
+                    CheckerDslJvmModelInferrer.this.mr_chk = _plus_56;
+                    String _chkType_2 = CheckerDslJvmModelInferrer.this.chkType(((ChkVariableDeclaration)feature));
+                    String _plus_57 = ((CheckerDslJvmModelInferrer.this.mr_chk + "if ((") + _chkType_2);
+                    String _plus_58 = (_plus_57 + ")((ArrayList)");
+                    String _name_35 = ((ChkVariableDeclaration)feature).getName();
+                    String _plus_59 = (_plus_58 + _name_35);
+                    String _plus_60 = (_plus_59 + "_2.get(i)).get(j) != (");
+                    String _chkType_3 = CheckerDslJvmModelInferrer.this.chkType(((ChkVariableDeclaration)feature));
+                    String _plus_61 = (_plus_60 + _chkType_3);
+                    String _plus_62 = (_plus_61 + ")((ArrayList)ans.");
+                    String _name_36 = ((ChkVariableDeclaration)feature).getName();
+                    String _plus_63 = (_plus_62 + _name_36);
+                    String _plus_64 = (_plus_63 + ".get(i)).get(j)) return false;\n");
+                    CheckerDslJvmModelInferrer.this.mr_chk = _plus_64;
+                    CheckerDslJvmModelInferrer.this.mr_chk = (CheckerDslJvmModelInferrer.this.mr_chk + "}\n");
+                    CheckerDslJvmModelInferrer.this.mr_chk = (CheckerDslJvmModelInferrer.this.mr_chk + "}\n");
                   }
                 }
               } else {
-                EList<JvmMember> _members_45 = it.getMembers();
-                String _name_24 = ((ChkVariableDeclaration)feature).getName();
-                JvmField _field_17 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toField(feature, _name_24, t2);
-                CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmField>operator_add(_members_45, _field_17);
-                EList<JvmMember> _members_46 = it.getMembers();
-                String _name_25 = ((ChkVariableDeclaration)feature).getName();
-                String _plus_29 = (_name_25 + "_2");
-                JvmField _field_18 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toField(feature, _plus_29, t2);
-                CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmField>operator_add(_members_46, _field_18);
-                String _name_26 = ((ChkVariableDeclaration)feature).getName();
-                String _plus_30 = (CheckerDslJvmModelInferrer.this.copy_var + _name_26);
-                String _plus_31 = (_plus_30 + "_2 = ");
-                String _name_27 = ((ChkVariableDeclaration)feature).getName();
-                String _plus_32 = (_plus_31 + _name_27);
-                String _plus_33 = (_plus_32 + ";\n");
-                CheckerDslJvmModelInferrer.this.copy_var = _plus_33;
-                EList<JvmMember> _members_47 = it.getMembers();
-                String _name_28 = ((ChkVariableDeclaration)feature).getName();
-                JvmOperation _getter_1 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toGetter(feature, _name_28, t2);
-                CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_47, _getter_1);
-                EList<JvmMember> _members_48 = it.getMembers();
-                String _name_29 = ((ChkVariableDeclaration)feature).getName();
-                JvmOperation _setter_1 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toSetter(feature, _name_29, t2);
-                CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_48, _setter_1);
-                EList<JvmMember> _members_49 = it.getMembers();
-                String _name_30 = ((ChkVariableDeclaration)feature).getName();
-                String _plus_34 = (_name_30 + "_2");
-                JvmOperation _getter_2 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toGetter(feature, _plus_34, t2);
-                CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_49, _getter_2);
-                EList<JvmMember> _members_50 = it.getMembers();
-                String _name_31 = ((ChkVariableDeclaration)feature).getName();
-                String _plus_35 = (_name_31 + "_2");
-                JvmOperation _setter_2 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toSetter(feature, _plus_35, t2);
-                CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_50, _setter_2);
-                EList<JvmMember> _members_51 = it.getMembers();
-                String _name_32 = ((ChkVariableDeclaration)feature).getName();
-                String _firstUpper_18 = StringExtensions.toFirstUpper(_name_32);
-                String _plus_36 = ("read" + _firstUpper_18);
-                JvmTypeReference _typeRef_47 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(void.class);
-                final Procedure1<JvmOperation> _function_28 = new Procedure1<JvmOperation>() {
+                EList<JvmMember> _members_58 = it.getMembers();
+                String _name_37 = ((ChkVariableDeclaration)feature).getName();
+                JvmField _field_19 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toField(feature, _name_37, t2);
+                CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmField>operator_add(_members_58, _field_19);
+                EList<JvmMember> _members_59 = it.getMembers();
+                String _name_38 = ((ChkVariableDeclaration)feature).getName();
+                String _plus_65 = (_name_38 + "_2");
+                JvmField _field_20 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toField(feature, _plus_65, t2);
+                CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmField>operator_add(_members_59, _field_20);
+                String _name_39 = ((ChkVariableDeclaration)feature).getName();
+                String _plus_66 = (CheckerDslJvmModelInferrer.this.copy_var + _name_39);
+                String _plus_67 = (_plus_66 + "_2 = ");
+                String _name_40 = ((ChkVariableDeclaration)feature).getName();
+                String _plus_68 = (_plus_67 + _name_40);
+                String _plus_69 = (_plus_68 + ";\n");
+                CheckerDslJvmModelInferrer.this.copy_var = _plus_69;
+                EList<JvmMember> _members_60 = it.getMembers();
+                String _name_41 = ((ChkVariableDeclaration)feature).getName();
+                JvmOperation _getter_1 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toGetter(feature, _name_41, t2);
+                CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_60, _getter_1);
+                EList<JvmMember> _members_61 = it.getMembers();
+                String _name_42 = ((ChkVariableDeclaration)feature).getName();
+                JvmOperation _setter_1 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toSetter(feature, _name_42, t2);
+                CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_61, _setter_1);
+                EList<JvmMember> _members_62 = it.getMembers();
+                String _name_43 = ((ChkVariableDeclaration)feature).getName();
+                String _plus_70 = (_name_43 + "_2");
+                JvmOperation _getter_2 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toGetter(feature, _plus_70, t2);
+                CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_62, _getter_2);
+                EList<JvmMember> _members_63 = it.getMembers();
+                String _name_44 = ((ChkVariableDeclaration)feature).getName();
+                String _plus_71 = (_name_44 + "_2");
+                JvmOperation _setter_2 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toSetter(feature, _plus_71, t2);
+                CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_63, _setter_2);
+                EList<JvmMember> _members_64 = it.getMembers();
+                String _name_45 = ((ChkVariableDeclaration)feature).getName();
+                String _firstUpper_27 = StringExtensions.toFirstUpper(_name_45);
+                String _plus_72 = ("read" + _firstUpper_27);
+                JvmTypeReference _typeRef_58 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(void.class);
+                final Procedure1<JvmOperation> _function_39 = new Procedure1<JvmOperation>() {
                   public void apply(final JvmOperation it) {
                     EList<JvmFormalParameter> _parameters = it.getParameters();
                     JvmTypeReference _typeRef = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(String.class);
@@ -1393,14 +1806,14 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
                     CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setBody(it, _client);
                   }
                 };
-                JvmOperation _method_26 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(feature, _plus_36, _typeRef_47, _function_28);
-                CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_51, _method_26);
-                EList<JvmMember> _members_52 = it.getMembers();
-                String _name_33 = ((ChkVariableDeclaration)feature).getName();
-                String _firstUpper_19 = StringExtensions.toFirstUpper(_name_33);
-                String _plus_37 = ("write" + _firstUpper_19);
-                JvmTypeReference _typeRef_48 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(void.class);
-                final Procedure1<JvmOperation> _function_29 = new Procedure1<JvmOperation>() {
+                JvmOperation _method_37 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(feature, _plus_72, _typeRef_58, _function_39);
+                CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_64, _method_37);
+                EList<JvmMember> _members_65 = it.getMembers();
+                String _name_46 = ((ChkVariableDeclaration)feature).getName();
+                String _firstUpper_28 = StringExtensions.toFirstUpper(_name_46);
+                String _plus_73 = ("write" + _firstUpper_28);
+                JvmTypeReference _typeRef_59 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(void.class);
+                final Procedure1<JvmOperation> _function_40 = new Procedure1<JvmOperation>() {
                   public void apply(final JvmOperation it) {
                     StringConcatenationClient _client = new StringConcatenationClient() {
                       @Override
@@ -1423,15 +1836,15 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
                     CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setBody(it, _client);
                   }
                 };
-                JvmOperation _method_27 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(feature, _plus_37, _typeRef_48, _function_29);
-                CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_52, _method_27);
-                EList<JvmMember> _members_53 = it.getMembers();
-                String _name_34 = ((ChkVariableDeclaration)feature).getName();
-                String _firstUpper_20 = StringExtensions.toFirstUpper(_name_34);
-                String _plus_38 = ("write" + _firstUpper_20);
-                String _plus_39 = (_plus_38 + "_2");
-                JvmTypeReference _typeRef_49 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(void.class);
-                final Procedure1<JvmOperation> _function_30 = new Procedure1<JvmOperation>() {
+                JvmOperation _method_38 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(feature, _plus_73, _typeRef_59, _function_40);
+                CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_65, _method_38);
+                EList<JvmMember> _members_66 = it.getMembers();
+                String _name_47 = ((ChkVariableDeclaration)feature).getName();
+                String _firstUpper_29 = StringExtensions.toFirstUpper(_name_47);
+                String _plus_74 = ("write" + _firstUpper_29);
+                String _plus_75 = (_plus_74 + "_2");
+                JvmTypeReference _typeRef_60 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(void.class);
+                final Procedure1<JvmOperation> _function_41 = new Procedure1<JvmOperation>() {
                   public void apply(final JvmOperation it) {
                     StringConcatenationClient _client = new StringConcatenationClient() {
                       @Override
@@ -1454,18 +1867,31 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
                     CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setBody(it, _client);
                   }
                 };
-                JvmOperation _method_28 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(feature, _plus_39, _typeRef_49, _function_30);
-                CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_53, _method_28);
+                JvmOperation _method_39 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(feature, _plus_75, _typeRef_60, _function_41);
+                CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_66, _method_39);
+                String _chkType_4 = CheckerDslJvmModelInferrer.this.chkType(((ChkVariableDeclaration)feature));
+                String _plus_76 = ((CheckerDslJvmModelInferrer.this.mr_chk + "if ((") + _chkType_4);
+                String _plus_77 = (_plus_76 + ")");
+                String _name_48 = ((ChkVariableDeclaration)feature).getName();
+                String _plus_78 = (_plus_77 + _name_48);
+                String _plus_79 = (_plus_78 + "_2 != (");
+                String _chkType_5 = CheckerDslJvmModelInferrer.this.chkType(((ChkVariableDeclaration)feature));
+                String _plus_80 = (_plus_79 + _chkType_5);
+                String _plus_81 = (_plus_80 + ")ans.");
+                String _name_49 = ((ChkVariableDeclaration)feature).getName();
+                String _plus_82 = (_plus_81 + _name_49);
+                String _plus_83 = (_plus_82 + ") return false;\n");
+                CheckerDslJvmModelInferrer.this.mr_chk = _plus_83;
               }
             }
           }
           if (!_matched) {
             if (feature instanceof Method) {
               _matched=true;
-              EList<JvmMember> _members_23 = it.getMembers();
+              EList<JvmMember> _members_27 = it.getMembers();
               String _name = ((Method)feature).getName();
               JvmTypeReference _type = ((Method)feature).getType();
-              final Procedure1<JvmOperation> _function_10 = new Procedure1<JvmOperation>() {
+              final Procedure1<JvmOperation> _function_12 = new Procedure1<JvmOperation>() {
                 public void apply(final JvmOperation it) {
                   String _documentation = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.getDocumentation(feature);
                   CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setDocumentation(it, _documentation);
@@ -1481,16 +1907,16 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
                   CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setBody(it, _body);
                 }
               };
-              JvmOperation _method_8 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(feature, _name, _type, _function_10);
-              CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_23, _method_8);
+              JvmOperation _method_10 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(feature, _name, _type, _function_12);
+              CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_27, _method_10);
             }
           }
           if (!_matched) {
             if (feature instanceof InputFormat) {
               _matched=true;
-              EList<JvmMember> _members_23 = it.getMembers();
-              JvmTypeReference _typeRef_23 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(void.class);
-              final Procedure1<JvmOperation> _function_10 = new Procedure1<JvmOperation>() {
+              EList<JvmMember> _members_27 = it.getMembers();
+              JvmTypeReference _typeRef_27 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(void.class);
+              final Procedure1<JvmOperation> _function_12 = new Procedure1<JvmOperation>() {
                 public void apply(final JvmOperation it) {
                   String _documentation = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.getDocumentation(feature);
                   CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setDocumentation(it, _documentation);
@@ -1518,30 +1944,6 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
                     if (!_matched) {
                       if (p instanceof ForFormatExpression) {
                         _matched=true;
-                        ChkVariable _index = ((ForFormatExpression)p).getIndex();
-                        String _chkVar = CheckerDslJvmModelInferrer.this.chkVar(_index);
-                        String _plus = ((CheckerDslJvmModelInferrer.this.bd2 + "for (int ") + _chkVar);
-                        String _plus_1 = (_plus + "=1; ");
-                        ChkVariable _index_1 = ((ForFormatExpression)p).getIndex();
-                        String _chkVar_1 = CheckerDslJvmModelInferrer.this.chkVar(_index_1);
-                        String _plus_2 = (_plus_1 + _chkVar_1);
-                        String _plus_3 = (_plus_2 + "<=");
-                        ChkVariables _maxIndex = ((ForFormatExpression)p).getMaxIndex();
-                        String _chkVars = CheckerDslJvmModelInferrer.this.chkVars(_maxIndex);
-                        String _plus_4 = (_plus_3 + _chkVars);
-                        String _plus_5 = (_plus_4 + "; ");
-                        ChkVariable _index_2 = ((ForFormatExpression)p).getIndex();
-                        String _chkVar_2 = CheckerDslJvmModelInferrer.this.chkVar(_index_2);
-                        String _plus_6 = (_plus_5 + _chkVar_2);
-                        String _plus_7 = (_plus_6 + "++){\n");
-                        CheckerDslJvmModelInferrer.this.bd2 = _plus_7;
-                        EList<FormatExpression> _ex = ((ForFormatExpression)p).getEx();
-                        for (final FormatExpression pp : _ex) {
-                          String _inputBody = CheckerDslJvmModelInferrer.this.inputBody(pp);
-                          String _concat = CheckerDslJvmModelInferrer.this.bd2.concat(_inputBody);
-                          CheckerDslJvmModelInferrer.this.bd2 = _concat;
-                        }
-                        CheckerDslJvmModelInferrer.this.bd2 = (CheckerDslJvmModelInferrer.this.bd2 + "}\n");
                       }
                     }
                   }
@@ -1550,7 +1952,6 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
                   CheckerDslJvmModelInferrer.this.bd2 = (CheckerDslJvmModelInferrer.this.bd2 + "}\n");
                   CheckerDslJvmModelInferrer.this.bd2 = (CheckerDslJvmModelInferrer.this.bd2 + "reader.close();\n");
                   CheckerDslJvmModelInferrer.this.bd2 = (CheckerDslJvmModelInferrer.this.bd2 + "} catch (Exception e){}\n");
-                  CheckerDslJvmModelInferrer.this.bd2 = (CheckerDslJvmModelInferrer.this.bd2 + "System.out.println(\"Finish read input \"+num+\"/\"+current_testcase+\".in\");\n");
                   StringConcatenationClient _client = new StringConcatenationClient() {
                     @Override
                     protected void appendTo(StringConcatenationClient.TargetStringConcatenation _builder) {
@@ -1561,11 +1962,61 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
                   CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setBody(it, _client);
                 }
               };
-              JvmOperation _method_8 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(feature, "readInput", _typeRef_23, _function_10);
-              CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_23, _method_8);
-              EList<JvmMember> _members_24 = it.getMembers();
-              JvmTypeReference _typeRef_24 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(void.class);
-              final Procedure1<JvmOperation> _function_11 = new Procedure1<JvmOperation>() {
+              JvmOperation _method_10 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(feature, "readInput", _typeRef_27, _function_12);
+              CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_27, _method_10);
+              EList<JvmMember> _members_28 = it.getMembers();
+              JvmTypeReference _typeRef_28 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(void.class);
+              final Procedure1<JvmOperation> _function_13 = new Procedure1<JvmOperation>() {
+                public void apply(final JvmOperation it) {
+                  String _documentation = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.getDocumentation(feature);
+                  CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setDocumentation(it, _documentation);
+                  EList<JvmFormalParameter> _parameters = it.getParameters();
+                  JvmTypeReference _typeRef = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(String.class);
+                  JvmFormalParameter _parameter = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toParameter(element, "path", _typeRef);
+                  CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmFormalParameter>operator_add(_parameters, _parameter);
+                  CheckerDslJvmModelInferrer.this.bd2b = "int sz = 0;\n";
+                  CheckerDslJvmModelInferrer.this.bd2b = ((CheckerDslJvmModelInferrer.this.bd2b + CheckerDslJvmModelInferrer.this.class_name) + ".is_valid = true;\n");
+                  CheckerDslJvmModelInferrer.this.bd2b = (CheckerDslJvmModelInferrer.this.bd2b + "String line;\n");
+                  CheckerDslJvmModelInferrer.this.bd2b = (CheckerDslJvmModelInferrer.this.bd2b + "String[] tokens;\n");
+                  CheckerDslJvmModelInferrer.this.bd2b = (CheckerDslJvmModelInferrer.this.bd2b + "try{\n");
+                  CheckerDslJvmModelInferrer.this.bd2b = (CheckerDslJvmModelInferrer.this.bd2b + "BufferedReader reader = new BufferedReader(new FileReader(new File(path)));\n");
+                  EList<EObject> _exp = ((InputFormat)feature).getExp();
+                  for (final EObject p : _exp) {
+                    boolean _matched = false;
+                    if (!_matched) {
+                      if (p instanceof FormatExpression) {
+                        _matched=true;
+                        String _inputBody = CheckerDslJvmModelInferrer.this.inputBody(((FormatExpression)p));
+                        String _concat = CheckerDslJvmModelInferrer.this.bd2b.concat(_inputBody);
+                        CheckerDslJvmModelInferrer.this.bd2b = _concat;
+                      }
+                    }
+                    if (!_matched) {
+                      if (p instanceof ForFormatExpression) {
+                        _matched=true;
+                      }
+                    }
+                  }
+                  CheckerDslJvmModelInferrer.this.bd2b = (CheckerDslJvmModelInferrer.this.bd2b + "if (reader.readLine() != null){\n");
+                  CheckerDslJvmModelInferrer.this.bd2b = ((CheckerDslJvmModelInferrer.this.bd2b + CheckerDslJvmModelInferrer.this.class_name) + ".die(\"number of lines not match\");\n");
+                  CheckerDslJvmModelInferrer.this.bd2b = (CheckerDslJvmModelInferrer.this.bd2b + "}\n");
+                  CheckerDslJvmModelInferrer.this.bd2b = (CheckerDslJvmModelInferrer.this.bd2b + "reader.close();\n");
+                  CheckerDslJvmModelInferrer.this.bd2b = (CheckerDslJvmModelInferrer.this.bd2b + "} catch (Exception e){}\n");
+                  StringConcatenationClient _client = new StringConcatenationClient() {
+                    @Override
+                    protected void appendTo(StringConcatenationClient.TargetStringConcatenation _builder) {
+                      _builder.append(CheckerDslJvmModelInferrer.this.bd2b, "");
+                      _builder.newLineIfNotEmpty();
+                    }
+                  };
+                  CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setBody(it, _client);
+                }
+              };
+              JvmOperation _method_11 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(feature, "readInput", _typeRef_28, _function_13);
+              CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_28, _method_11);
+              EList<JvmMember> _members_29 = it.getMembers();
+              JvmTypeReference _typeRef_29 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(void.class);
+              final Procedure1<JvmOperation> _function_14 = new Procedure1<JvmOperation>() {
                 public void apply(final JvmOperation it) {
                   String _documentation = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.getDocumentation(feature);
                   CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setDocumentation(it, _documentation);
@@ -1596,36 +2047,11 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
                     if (!_matched) {
                       if (p instanceof ForFormatExpression) {
                         _matched=true;
-                        ChkVariable _index = ((ForFormatExpression)p).getIndex();
-                        String _chkVar = CheckerDslJvmModelInferrer.this.chkVar(_index);
-                        String _plus = ((CheckerDslJvmModelInferrer.this.bd2a + "for (int ") + _chkVar);
-                        String _plus_1 = (_plus + "=1; ");
-                        ChkVariable _index_1 = ((ForFormatExpression)p).getIndex();
-                        String _chkVar_1 = CheckerDslJvmModelInferrer.this.chkVar(_index_1);
-                        String _plus_2 = (_plus_1 + _chkVar_1);
-                        String _plus_3 = (_plus_2 + "<=");
-                        ChkVariables _maxIndex = ((ForFormatExpression)p).getMaxIndex();
-                        String _chkVars = CheckerDslJvmModelInferrer.this.chkVars(_maxIndex);
-                        String _plus_4 = (_plus_3 + _chkVars);
-                        String _plus_5 = (_plus_4 + "; ");
-                        ChkVariable _index_2 = ((ForFormatExpression)p).getIndex();
-                        String _chkVar_2 = CheckerDslJvmModelInferrer.this.chkVar(_index_2);
-                        String _plus_6 = (_plus_5 + _chkVar_2);
-                        String _plus_7 = (_plus_6 + "++){\n");
-                        CheckerDslJvmModelInferrer.this.bd2a = _plus_7;
-                        EList<FormatExpression> _ex = ((ForFormatExpression)p).getEx();
-                        for (final FormatExpression pp : _ex) {
-                          String _outputBody = CheckerDslJvmModelInferrer.this.outputBody(pp);
-                          String _concat = CheckerDslJvmModelInferrer.this.bd2a.concat(_outputBody);
-                          CheckerDslJvmModelInferrer.this.bd2a = _concat;
-                        }
-                        CheckerDslJvmModelInferrer.this.bd2a = (CheckerDslJvmModelInferrer.this.bd2a + "}\n");
                       }
                     }
                   }
                   CheckerDslJvmModelInferrer.this.bd2a = (CheckerDslJvmModelInferrer.this.bd2a + "writer.close();\n");
                   CheckerDslJvmModelInferrer.this.bd2a = (CheckerDslJvmModelInferrer.this.bd2a + "} catch(Exception e){}\n");
-                  CheckerDslJvmModelInferrer.this.bd2a = (CheckerDslJvmModelInferrer.this.bd2a + "System.out.println(\"Finish write input \"+mr+\"/\"+tc+\".in\");\n");
                   StringConcatenationClient _client = new StringConcatenationClient() {
                     @Override
                     protected void appendTo(StringConcatenationClient.TargetStringConcatenation _builder) {
@@ -1636,16 +2062,62 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
                   CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setBody(it, _client);
                 }
               };
-              JvmOperation _method_9 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(feature, "writeInput", _typeRef_24, _function_11);
-              CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_24, _method_9);
+              JvmOperation _method_12 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(feature, "writeInput", _typeRef_29, _function_14);
+              CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_29, _method_12);
+              EList<JvmMember> _members_30 = it.getMembers();
+              JvmTypeReference _typeRef_30 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(void.class);
+              final Procedure1<JvmOperation> _function_15 = new Procedure1<JvmOperation>() {
+                public void apply(final JvmOperation it) {
+                  String _documentation = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.getDocumentation(feature);
+                  CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setDocumentation(it, _documentation);
+                  EList<JvmFormalParameter> _parameters = it.getParameters();
+                  JvmTypeReference _typeRef = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(String.class);
+                  JvmFormalParameter _parameter = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toParameter(element, "path", _typeRef);
+                  CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmFormalParameter>operator_add(_parameters, _parameter);
+                  CheckerDslJvmModelInferrer.this.bd2d = "try {\n";
+                  CheckerDslJvmModelInferrer.this.bd2d = (CheckerDslJvmModelInferrer.this.bd2d + "File wfile = new File(path);\n");
+                  CheckerDslJvmModelInferrer.this.bd2d = (CheckerDslJvmModelInferrer.this.bd2d + "if(!wfile.exists()) wfile.createNewFile();\n");
+                  CheckerDslJvmModelInferrer.this.bd2d = (CheckerDslJvmModelInferrer.this.bd2d + "fw = new FileWriter(wfile);\n");
+                  CheckerDslJvmModelInferrer.this.bd2d = (CheckerDslJvmModelInferrer.this.bd2d + "writer = new BufferedWriter(fw);\n");
+                  EList<EObject> _exp = ((InputFormat)feature).getExp();
+                  for (final EObject p : _exp) {
+                    boolean _matched = false;
+                    if (!_matched) {
+                      if (p instanceof FormatExpression) {
+                        _matched=true;
+                        String _outputBody = CheckerDslJvmModelInferrer.this.outputBody(((FormatExpression)p));
+                        String _concat = CheckerDslJvmModelInferrer.this.bd2d.concat(_outputBody);
+                        CheckerDslJvmModelInferrer.this.bd2d = _concat;
+                      }
+                    }
+                    if (!_matched) {
+                      if (p instanceof ForFormatExpression) {
+                        _matched=true;
+                      }
+                    }
+                  }
+                  CheckerDslJvmModelInferrer.this.bd2d = (CheckerDslJvmModelInferrer.this.bd2d + "writer.close();\n");
+                  CheckerDslJvmModelInferrer.this.bd2d = (CheckerDslJvmModelInferrer.this.bd2d + "} catch(Exception e){}\n");
+                  StringConcatenationClient _client = new StringConcatenationClient() {
+                    @Override
+                    protected void appendTo(StringConcatenationClient.TargetStringConcatenation _builder) {
+                      _builder.append(CheckerDslJvmModelInferrer.this.bd2d, "");
+                      _builder.newLineIfNotEmpty();
+                    }
+                  };
+                  CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setBody(it, _client);
+                }
+              };
+              JvmOperation _method_13 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(feature, "writeInput", _typeRef_30, _function_15);
+              CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_30, _method_13);
             }
           }
           if (!_matched) {
             if (feature instanceof OutputFormat) {
               _matched=true;
-              EList<JvmMember> _members_23 = it.getMembers();
-              JvmTypeReference _typeRef_23 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(void.class);
-              final Procedure1<JvmOperation> _function_10 = new Procedure1<JvmOperation>() {
+              EList<JvmMember> _members_27 = it.getMembers();
+              JvmTypeReference _typeRef_27 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(void.class);
+              final Procedure1<JvmOperation> _function_12 = new Procedure1<JvmOperation>() {
                 public void apply(final JvmOperation it) {
                   String _documentation = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.getDocumentation(feature);
                   CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setDocumentation(it, _documentation);
@@ -1672,30 +2144,6 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
                     if (!_matched) {
                       if (p instanceof ForFormatExpression) {
                         _matched=true;
-                        ChkVariable _index = ((ForFormatExpression)p).getIndex();
-                        String _chkVar = CheckerDslJvmModelInferrer.this.chkVar(_index);
-                        String _plus = ((CheckerDslJvmModelInferrer.this.bd3a + "for (int ") + _chkVar);
-                        String _plus_1 = (_plus + "=1; ");
-                        ChkVariable _index_1 = ((ForFormatExpression)p).getIndex();
-                        String _chkVar_1 = CheckerDslJvmModelInferrer.this.chkVar(_index_1);
-                        String _plus_2 = (_plus_1 + _chkVar_1);
-                        String _plus_3 = (_plus_2 + "<=");
-                        ChkVariables _maxIndex = ((ForFormatExpression)p).getMaxIndex();
-                        String _chkVars = CheckerDslJvmModelInferrer.this.chkVars(_maxIndex);
-                        String _plus_4 = (_plus_3 + _chkVars);
-                        String _plus_5 = (_plus_4 + "; ");
-                        ChkVariable _index_2 = ((ForFormatExpression)p).getIndex();
-                        String _chkVar_2 = CheckerDslJvmModelInferrer.this.chkVar(_index_2);
-                        String _plus_6 = (_plus_5 + _chkVar_2);
-                        String _plus_7 = (_plus_6 + "++){\n");
-                        CheckerDslJvmModelInferrer.this.bd3a = _plus_7;
-                        EList<FormatExpression> _ex = ((ForFormatExpression)p).getEx();
-                        for (final FormatExpression pp : _ex) {
-                          String _inputBody = CheckerDslJvmModelInferrer.this.inputBody(pp);
-                          String _concat = CheckerDslJvmModelInferrer.this.bd3a.concat(_inputBody);
-                          CheckerDslJvmModelInferrer.this.bd3a = _concat;
-                        }
-                        CheckerDslJvmModelInferrer.this.bd3a = (CheckerDslJvmModelInferrer.this.bd3a + "}\n");
                       }
                     }
                   }
@@ -1704,29 +2152,24 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
                   CheckerDslJvmModelInferrer.this.bd3a = (CheckerDslJvmModelInferrer.this.bd3a + "}\n");
                   CheckerDslJvmModelInferrer.this.bd3a = (CheckerDslJvmModelInferrer.this.bd3a + "reader.close();\n");
                   CheckerDslJvmModelInferrer.this.bd3a = (CheckerDslJvmModelInferrer.this.bd3a + "} catch (Exception e){}\n");
-                  CheckerDslJvmModelInferrer.this.bd3a = (CheckerDslJvmModelInferrer.this.bd3a + "System.out.println(\"Finish read output \"+num+\"/\"+current_testcase+\".out\");\n");
                   CheckerDslJvmModelInferrer.this.bd3a = (((CheckerDslJvmModelInferrer.this.bd3a + "if (") + CheckerDslJvmModelInferrer.this.class_name) + ".is_valid){\n");
                   CheckerDslJvmModelInferrer.this.bd3a = (CheckerDslJvmModelInferrer.this.bd3a + "if (num == 0){\n");
                   CheckerDslJvmModelInferrer.this.bd3a = (CheckerDslJvmModelInferrer.this.bd3a + "mr_start();\n");
                   CheckerDslJvmModelInferrer.this.bd3a = (CheckerDslJvmModelInferrer.this.bd3a + "current_mr = 0;\n");
                   CheckerDslJvmModelInferrer.this.bd3a = (CheckerDslJvmModelInferrer.this.bd3a + "for (int i=1; i<=num_mr; i++){\n");
                   CheckerDslJvmModelInferrer.this.bd3a = (CheckerDslJvmModelInferrer.this.bd3a + "readInput(i);\n");
-                  CheckerDslJvmModelInferrer.this.bd3a = (CheckerDslJvmModelInferrer.this.bd3a + "readHidden(i);\n");
                   CheckerDslJvmModelInferrer.this.bd3a = (CheckerDslJvmModelInferrer.this.bd3a + "readOutput(i);\n");
                   CheckerDslJvmModelInferrer.this.bd3a = (CheckerDslJvmModelInferrer.this.bd3a + "}\n");
                   CheckerDslJvmModelInferrer.this.bd3a = (CheckerDslJvmModelInferrer.this.bd3a + "current_testcase++;\n");
-                  CheckerDslJvmModelInferrer.this.bd3a = (CheckerDslJvmModelInferrer.this.bd3a + "if (current_testcase <= max_testcase){\n");
+                  CheckerDslJvmModelInferrer.this.bd3a = (CheckerDslJvmModelInferrer.this.bd3a + "if (current_testcase <= max_tc){\n");
                   CheckerDslJvmModelInferrer.this.bd3a = (CheckerDslJvmModelInferrer.this.bd3a + "readInput(0);\n");
-                  CheckerDslJvmModelInferrer.this.bd3a = (CheckerDslJvmModelInferrer.this.bd3a + "readHidden(0);\n");
                   CheckerDslJvmModelInferrer.this.bd3a = (CheckerDslJvmModelInferrer.this.bd3a + "readOutput(0);\n");
                   CheckerDslJvmModelInferrer.this.bd3a = (CheckerDslJvmModelInferrer.this.bd3a + "}\n");
                   CheckerDslJvmModelInferrer.this.bd3a = (CheckerDslJvmModelInferrer.this.bd3a + "} else {\n");
                   CheckerDslJvmModelInferrer.this.bd3a = (CheckerDslJvmModelInferrer.this.bd3a + "initMRVar();\n");
                   CheckerDslJvmModelInferrer.this.bd3a = (CheckerDslJvmModelInferrer.this.bd3a + "num_tc++;\n");
-                  CheckerDslJvmModelInferrer.this.bd3a = (CheckerDslJvmModelInferrer.this.bd3a + "System.out.println(\"Add new test case \"+num_tc);\n");
-                  CheckerDslJvmModelInferrer.this.bd3a = (CheckerDslJvmModelInferrer.this.bd3a + "if (num_tc <= max_testcase){\n");
+                  CheckerDslJvmModelInferrer.this.bd3a = (CheckerDslJvmModelInferrer.this.bd3a + "if (num_tc <= max_tc){\n");
                   CheckerDslJvmModelInferrer.this.bd3a = (CheckerDslJvmModelInferrer.this.bd3a + "writeInput(0,num_tc);\n");
-                  CheckerDslJvmModelInferrer.this.bd3a = (CheckerDslJvmModelInferrer.this.bd3a + "writeHidden(0,num_tc);\n");
                   CheckerDslJvmModelInferrer.this.bd3a = (CheckerDslJvmModelInferrer.this.bd3a + "writeOutput(0,num_tc);\n");
                   CheckerDslJvmModelInferrer.this.bd3a = (CheckerDslJvmModelInferrer.this.bd3a + "}\n");
                   CheckerDslJvmModelInferrer.this.bd3a = (CheckerDslJvmModelInferrer.this.bd3a + "}\n}\n");
@@ -1740,11 +2183,60 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
                   CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setBody(it, _client);
                 }
               };
-              JvmOperation _method_8 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(feature, "readOutput", _typeRef_23, _function_10);
-              CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_23, _method_8);
-              EList<JvmMember> _members_24 = it.getMembers();
-              JvmTypeReference _typeRef_24 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(void.class);
-              final Procedure1<JvmOperation> _function_11 = new Procedure1<JvmOperation>() {
+              JvmOperation _method_10 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(feature, "readOutput", _typeRef_27, _function_12);
+              CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_27, _method_10);
+              EList<JvmMember> _members_28 = it.getMembers();
+              JvmTypeReference _typeRef_28 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(void.class);
+              final Procedure1<JvmOperation> _function_13 = new Procedure1<JvmOperation>() {
+                public void apply(final JvmOperation it) {
+                  String _documentation = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.getDocumentation(feature);
+                  CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setDocumentation(it, _documentation);
+                  EList<JvmFormalParameter> _parameters = it.getParameters();
+                  JvmTypeReference _typeRef = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(String.class);
+                  JvmFormalParameter _parameter = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toParameter(element, "path", _typeRef);
+                  CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmFormalParameter>operator_add(_parameters, _parameter);
+                  CheckerDslJvmModelInferrer.this.bd3b = "int sz = 0;\n";
+                  CheckerDslJvmModelInferrer.this.bd3b = (CheckerDslJvmModelInferrer.this.bd3b + "String line;\n");
+                  CheckerDslJvmModelInferrer.this.bd3b = (CheckerDslJvmModelInferrer.this.bd3b + "String[] tokens;\n");
+                  CheckerDslJvmModelInferrer.this.bd3b = (CheckerDslJvmModelInferrer.this.bd3b + "try{\n");
+                  CheckerDslJvmModelInferrer.this.bd3b = (CheckerDslJvmModelInferrer.this.bd3b + "BufferedReader reader = new BufferedReader(new FileReader(new File(path)));\n");
+                  EList<EObject> _exp = ((OutputFormat)feature).getExp();
+                  for (final EObject p : _exp) {
+                    boolean _matched = false;
+                    if (!_matched) {
+                      if (p instanceof FormatExpression) {
+                        _matched=true;
+                        String _inputBody = CheckerDslJvmModelInferrer.this.inputBody(((FormatExpression)p));
+                        String _concat = CheckerDslJvmModelInferrer.this.bd3b.concat(_inputBody);
+                        CheckerDslJvmModelInferrer.this.bd3b = _concat;
+                      }
+                    }
+                    if (!_matched) {
+                      if (p instanceof ForFormatExpression) {
+                        _matched=true;
+                      }
+                    }
+                  }
+                  CheckerDslJvmModelInferrer.this.bd3b = (CheckerDslJvmModelInferrer.this.bd3b + "if (reader.readLine() != null){\n");
+                  CheckerDslJvmModelInferrer.this.bd3b = ((CheckerDslJvmModelInferrer.this.bd3b + CheckerDslJvmModelInferrer.this.class_name) + ".die(\"number of lines not match\");\n");
+                  CheckerDslJvmModelInferrer.this.bd3b = (CheckerDslJvmModelInferrer.this.bd3b + "}\n");
+                  CheckerDslJvmModelInferrer.this.bd3b = (CheckerDslJvmModelInferrer.this.bd3b + "reader.close();\n");
+                  CheckerDslJvmModelInferrer.this.bd3b = (CheckerDslJvmModelInferrer.this.bd3b + "} catch (Exception e){}\n");
+                  StringConcatenationClient _client = new StringConcatenationClient() {
+                    @Override
+                    protected void appendTo(StringConcatenationClient.TargetStringConcatenation _builder) {
+                      _builder.append(CheckerDslJvmModelInferrer.this.bd3b, "");
+                      _builder.newLineIfNotEmpty();
+                    }
+                  };
+                  CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setBody(it, _client);
+                }
+              };
+              JvmOperation _method_11 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(feature, "readOutput", _typeRef_28, _function_13);
+              CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_28, _method_11);
+              EList<JvmMember> _members_29 = it.getMembers();
+              JvmTypeReference _typeRef_29 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(void.class);
+              final Procedure1<JvmOperation> _function_14 = new Procedure1<JvmOperation>() {
                 public void apply(final JvmOperation it) {
                   String _documentation = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.getDocumentation(feature);
                   CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setDocumentation(it, _documentation);
@@ -1775,36 +2267,11 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
                     if (!_matched) {
                       if (p instanceof ForFormatExpression) {
                         _matched=true;
-                        ChkVariable _index = ((ForFormatExpression)p).getIndex();
-                        String _chkVar = CheckerDslJvmModelInferrer.this.chkVar(_index);
-                        String _plus = ((CheckerDslJvmModelInferrer.this.bd3 + "for (int ") + _chkVar);
-                        String _plus_1 = (_plus + "=1; ");
-                        ChkVariable _index_1 = ((ForFormatExpression)p).getIndex();
-                        String _chkVar_1 = CheckerDslJvmModelInferrer.this.chkVar(_index_1);
-                        String _plus_2 = (_plus_1 + _chkVar_1);
-                        String _plus_3 = (_plus_2 + "<=");
-                        ChkVariables _maxIndex = ((ForFormatExpression)p).getMaxIndex();
-                        String _chkVars = CheckerDslJvmModelInferrer.this.chkVars(_maxIndex);
-                        String _plus_4 = (_plus_3 + _chkVars);
-                        String _plus_5 = (_plus_4 + "; ");
-                        ChkVariable _index_2 = ((ForFormatExpression)p).getIndex();
-                        String _chkVar_2 = CheckerDslJvmModelInferrer.this.chkVar(_index_2);
-                        String _plus_6 = (_plus_5 + _chkVar_2);
-                        String _plus_7 = (_plus_6 + "++){\n");
-                        CheckerDslJvmModelInferrer.this.bd3 = _plus_7;
-                        EList<FormatExpression> _ex = ((ForFormatExpression)p).getEx();
-                        for (final FormatExpression pp : _ex) {
-                          String _outputBody = CheckerDslJvmModelInferrer.this.outputBody(pp);
-                          String _concat = CheckerDslJvmModelInferrer.this.bd3.concat(_outputBody);
-                          CheckerDslJvmModelInferrer.this.bd3 = _concat;
-                        }
-                        CheckerDslJvmModelInferrer.this.bd3 = (CheckerDslJvmModelInferrer.this.bd3 + "}\n");
                       }
                     }
                   }
                   CheckerDslJvmModelInferrer.this.bd3 = (CheckerDslJvmModelInferrer.this.bd3 + "writer.close();\n");
                   CheckerDslJvmModelInferrer.this.bd3 = (CheckerDslJvmModelInferrer.this.bd3 + "} catch(Exception e){}\n");
-                  CheckerDslJvmModelInferrer.this.bd3 = (CheckerDslJvmModelInferrer.this.bd3 + "System.out.println(\"Finish write output \"+mr+\"/\"+tc+\".out\");\n");
                   StringConcatenationClient _client = new StringConcatenationClient() {
                     @Override
                     protected void appendTo(StringConcatenationClient.TargetStringConcatenation _builder) {
@@ -1815,188 +2282,35 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
                   CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setBody(it, _client);
                 }
               };
-              JvmOperation _method_9 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(feature, "writeOutput", _typeRef_24, _function_11);
-              CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_24, _method_9);
-            }
-          }
-          if (!_matched) {
-            if (feature instanceof HiddenFormat) {
-              _matched=true;
-              EList<JvmMember> _members_23 = it.getMembers();
-              JvmTypeReference _typeRef_23 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(void.class);
-              final Procedure1<JvmOperation> _function_10 = new Procedure1<JvmOperation>() {
-                public void apply(final JvmOperation it) {
-                  String _documentation = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.getDocumentation(feature);
-                  CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setDocumentation(it, _documentation);
-                  EList<JvmFormalParameter> _parameters = it.getParameters();
-                  JvmTypeReference _typeRef = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(int.class);
-                  JvmFormalParameter _parameter = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toParameter(element, "num", _typeRef);
-                  CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmFormalParameter>operator_add(_parameters, _parameter);
-                  String _hid = ((HiddenFormat)feature).getHid();
-                  boolean _notEquals = (!Objects.equal(_hid, null));
-                  if (_notEquals) {
-                    CheckerDslJvmModelInferrer.this.bd4 = "int sz = 0;\n";
-                    CheckerDslJvmModelInferrer.this.bd4 = ((CheckerDslJvmModelInferrer.this.bd4 + CheckerDslJvmModelInferrer.this.class_name) + ".is_valid = true;\n");
-                    CheckerDslJvmModelInferrer.this.bd4 = (CheckerDslJvmModelInferrer.this.bd4 + "String line;\n");
-                    CheckerDslJvmModelInferrer.this.bd4 = (CheckerDslJvmModelInferrer.this.bd4 + "String[] tokens;\n");
-                    CheckerDslJvmModelInferrer.this.bd4 = (CheckerDslJvmModelInferrer.this.bd4 + "try{\n");
-                    CheckerDslJvmModelInferrer.this.bd4 = (CheckerDslJvmModelInferrer.this.bd4 + "BufferedReader reader = new BufferedReader(new FileReader(new File(\"tc/Subtask\"+current_subtask+\"/hidden/\"+num+\"/\"+current_testcase+\".hidden\")));\n");
-                    EList<EObject> _exp = ((HiddenFormat)feature).getExp();
-                    for (final EObject p : _exp) {
-                      boolean _matched = false;
-                      if (!_matched) {
-                        if (p instanceof FormatExpression) {
-                          _matched=true;
-                          String _inputBody = CheckerDslJvmModelInferrer.this.inputBody(((FormatExpression)p));
-                          String _concat = CheckerDslJvmModelInferrer.this.bd4.concat(_inputBody);
-                          CheckerDslJvmModelInferrer.this.bd4 = _concat;
-                        }
-                      }
-                      if (!_matched) {
-                        if (p instanceof ForFormatExpression) {
-                          _matched=true;
-                          ChkVariable _index = ((ForFormatExpression)p).getIndex();
-                          String _chkVar = CheckerDslJvmModelInferrer.this.chkVar(_index);
-                          String _plus = ((CheckerDslJvmModelInferrer.this.bd4 + "for (int ") + _chkVar);
-                          String _plus_1 = (_plus + "=1; ");
-                          ChkVariable _index_1 = ((ForFormatExpression)p).getIndex();
-                          String _chkVar_1 = CheckerDslJvmModelInferrer.this.chkVar(_index_1);
-                          String _plus_2 = (_plus_1 + _chkVar_1);
-                          String _plus_3 = (_plus_2 + "<=");
-                          ChkVariables _maxIndex = ((ForFormatExpression)p).getMaxIndex();
-                          String _chkVars = CheckerDslJvmModelInferrer.this.chkVars(_maxIndex);
-                          String _plus_4 = (_plus_3 + _chkVars);
-                          String _plus_5 = (_plus_4 + "; ");
-                          ChkVariable _index_2 = ((ForFormatExpression)p).getIndex();
-                          String _chkVar_2 = CheckerDslJvmModelInferrer.this.chkVar(_index_2);
-                          String _plus_6 = (_plus_5 + _chkVar_2);
-                          String _plus_7 = (_plus_6 + "++){\n");
-                          CheckerDslJvmModelInferrer.this.bd4 = _plus_7;
-                          EList<FormatExpression> _ex = ((ForFormatExpression)p).getEx();
-                          for (final FormatExpression pp : _ex) {
-                            String _inputBody = CheckerDslJvmModelInferrer.this.inputBody(pp);
-                            String _concat = CheckerDslJvmModelInferrer.this.bd4.concat(_inputBody);
-                            CheckerDslJvmModelInferrer.this.bd4 = _concat;
-                          }
-                          CheckerDslJvmModelInferrer.this.bd4 = (CheckerDslJvmModelInferrer.this.bd4 + "}\n");
-                        }
-                      }
-                    }
-                    CheckerDslJvmModelInferrer.this.bd4 = (CheckerDslJvmModelInferrer.this.bd4 + "if (reader.readLine() != null){\n");
-                    CheckerDslJvmModelInferrer.this.bd4 = ((CheckerDslJvmModelInferrer.this.bd4 + CheckerDslJvmModelInferrer.this.class_name) + ".die(\"number of lines not match\");\n");
-                    CheckerDslJvmModelInferrer.this.bd4 = (CheckerDslJvmModelInferrer.this.bd4 + "}\n");
-                    CheckerDslJvmModelInferrer.this.bd4 = (CheckerDslJvmModelInferrer.this.bd4 + "reader.close();\n");
-                    CheckerDslJvmModelInferrer.this.bd4 = (CheckerDslJvmModelInferrer.this.bd4 + "} catch (Exception e){}\n");
-                    CheckerDslJvmModelInferrer.this.bd4 = (CheckerDslJvmModelInferrer.this.bd4 + "System.out.println(\"Finish read hidden \"+num+\"/\"+current_testcase+\".hidden\");\n");
-                  } else {
-                    CheckerDslJvmModelInferrer.this.bd4 = "";
-                  }
-                  StringConcatenationClient _client = new StringConcatenationClient() {
-                    @Override
-                    protected void appendTo(StringConcatenationClient.TargetStringConcatenation _builder) {
-                      _builder.append(CheckerDslJvmModelInferrer.this.bd4, "");
-                      _builder.newLineIfNotEmpty();
-                    }
-                  };
-                  CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setBody(it, _client);
-                }
-              };
-              JvmOperation _method_8 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(feature, "readHidden", _typeRef_23, _function_10);
-              CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_23, _method_8);
-              EList<JvmMember> _members_24 = it.getMembers();
-              JvmTypeReference _typeRef_24 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(void.class);
-              final Procedure1<JvmOperation> _function_11 = new Procedure1<JvmOperation>() {
-                public void apply(final JvmOperation it) {
-                  String _documentation = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.getDocumentation(feature);
-                  CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setDocumentation(it, _documentation);
-                  EList<JvmFormalParameter> _parameters = it.getParameters();
-                  JvmTypeReference _typeRef = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(int.class);
-                  JvmFormalParameter _parameter = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toParameter(element, "mr", _typeRef);
-                  CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmFormalParameter>operator_add(_parameters, _parameter);
-                  EList<JvmFormalParameter> _parameters_1 = it.getParameters();
-                  JvmTypeReference _typeRef_1 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(int.class);
-                  JvmFormalParameter _parameter_1 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toParameter(element, "tc", _typeRef_1);
-                  CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmFormalParameter>operator_add(_parameters_1, _parameter_1);
-                  String _hid = ((HiddenFormat)feature).getHid();
-                  boolean _notEquals = (!Objects.equal(_hid, null));
-                  if (_notEquals) {
-                    CheckerDslJvmModelInferrer.this.bd4a = "try {\n";
-                    CheckerDslJvmModelInferrer.this.bd4a = (CheckerDslJvmModelInferrer.this.bd4a + "File wfile = new File(\"tc/Subtask\"+current_subtask+\"/hidden/\"+mr+\"/\"+tc+\".hidden\");\n");
-                    CheckerDslJvmModelInferrer.this.bd4a = (CheckerDslJvmModelInferrer.this.bd4a + "if(!wfile.exists()) wfile.createNewFile();\n");
-                    CheckerDslJvmModelInferrer.this.bd4a = (CheckerDslJvmModelInferrer.this.bd4a + "fw = new FileWriter(wfile);\n");
-                    CheckerDslJvmModelInferrer.this.bd4a = (CheckerDslJvmModelInferrer.this.bd4a + "writer = new BufferedWriter(fw);\n");
-                    EList<EObject> _exp = ((HiddenFormat)feature).getExp();
-                    for (final EObject p : _exp) {
-                      boolean _matched = false;
-                      if (!_matched) {
-                        if (p instanceof FormatExpression) {
-                          _matched=true;
-                          String _outputBody = CheckerDslJvmModelInferrer.this.outputBody(((FormatExpression)p));
-                          String _concat = CheckerDslJvmModelInferrer.this.bd4a.concat(_outputBody);
-                          CheckerDslJvmModelInferrer.this.bd4a = _concat;
-                        }
-                      }
-                      if (!_matched) {
-                        if (p instanceof ForFormatExpression) {
-                          _matched=true;
-                          ChkVariable _index = ((ForFormatExpression)p).getIndex();
-                          String _chkVar = CheckerDslJvmModelInferrer.this.chkVar(_index);
-                          String _plus = ((CheckerDslJvmModelInferrer.this.bd4a + "for (int ") + _chkVar);
-                          String _plus_1 = (_plus + "=1; ");
-                          ChkVariable _index_1 = ((ForFormatExpression)p).getIndex();
-                          String _chkVar_1 = CheckerDslJvmModelInferrer.this.chkVar(_index_1);
-                          String _plus_2 = (_plus_1 + _chkVar_1);
-                          String _plus_3 = (_plus_2 + "<=");
-                          ChkVariables _maxIndex = ((ForFormatExpression)p).getMaxIndex();
-                          String _chkVars = CheckerDslJvmModelInferrer.this.chkVars(_maxIndex);
-                          String _plus_4 = (_plus_3 + _chkVars);
-                          String _plus_5 = (_plus_4 + "; ");
-                          ChkVariable _index_2 = ((ForFormatExpression)p).getIndex();
-                          String _chkVar_2 = CheckerDslJvmModelInferrer.this.chkVar(_index_2);
-                          String _plus_6 = (_plus_5 + _chkVar_2);
-                          String _plus_7 = (_plus_6 + "++){\n");
-                          CheckerDslJvmModelInferrer.this.bd4a = _plus_7;
-                          EList<FormatExpression> _ex = ((ForFormatExpression)p).getEx();
-                          for (final FormatExpression pp : _ex) {
-                            String _outputBody = CheckerDslJvmModelInferrer.this.outputBody(pp);
-                            String _concat = CheckerDslJvmModelInferrer.this.bd4a.concat(_outputBody);
-                            CheckerDslJvmModelInferrer.this.bd4a = _concat;
-                          }
-                          CheckerDslJvmModelInferrer.this.bd4a = (CheckerDslJvmModelInferrer.this.bd4a + "}\n");
-                        }
-                      }
-                    }
-                    CheckerDslJvmModelInferrer.this.bd4a = (CheckerDslJvmModelInferrer.this.bd4a + "writer.close();\n");
-                    CheckerDslJvmModelInferrer.this.bd4a = (CheckerDslJvmModelInferrer.this.bd4a + "} catch(Exception e){}\n");
-                    CheckerDslJvmModelInferrer.this.bd4a = (CheckerDslJvmModelInferrer.this.bd4a + "System.out.println(\"Finish write hidden \"+mr+\"/\"+tc+\".hidden\");\n");
-                  } else {
-                    CheckerDslJvmModelInferrer.this.bd4a = "";
-                  }
-                  StringConcatenationClient _client = new StringConcatenationClient() {
-                    @Override
-                    protected void appendTo(StringConcatenationClient.TargetStringConcatenation _builder) {
-                      _builder.append(CheckerDslJvmModelInferrer.this.bd4a, "");
-                      _builder.newLineIfNotEmpty();
-                    }
-                  };
-                  CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setBody(it, _client);
-                }
-              };
-              JvmOperation _method_9 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(feature, "writeHidden", _typeRef_24, _function_11);
-              CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_24, _method_9);
+              JvmOperation _method_12 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(feature, "writeOutput", _typeRef_29, _function_14);
+              CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_29, _method_12);
             }
           }
           if (!_matched) {
             if (feature instanceof Check) {
               _matched=true;
-              EList<JvmMember> _members_23 = it.getMembers();
-              JvmTypeReference _typeRef_23 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(boolean.class);
-              final Procedure1<JvmOperation> _function_10 = new Procedure1<JvmOperation>() {
+              EList<JvmMember> _members_27 = it.getMembers();
+              JvmTypeReference _typeRef_27 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(boolean.class);
+              final Procedure1<JvmOperation> _function_12 = new Procedure1<JvmOperation>() {
                 public void apply(final JvmOperation it) {
+                  EList<JvmFormalParameter> _parameters = it.getParameters();
+                  JvmTypeReference _typeRef = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(String.class);
+                  JvmFormalParameter _parameter = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toParameter(element, "inPath", _typeRef);
+                  CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmFormalParameter>operator_add(_parameters, _parameter);
+                  EList<JvmFormalParameter> _parameters_1 = it.getParameters();
+                  JvmTypeReference _typeRef_1 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(String.class);
+                  JvmFormalParameter _parameter_1 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toParameter(element, "outPath", _typeRef_1);
+                  CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmFormalParameter>operator_add(_parameters_1, _parameter_1);
+                  EList<JvmFormalParameter> _parameters_2 = it.getParameters();
+                  JvmTypeReference _typeRef_2 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(String.class);
+                  JvmFormalParameter _parameter_2 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toParameter(element, "ansPath", _typeRef_2);
+                  CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmFormalParameter>operator_add(_parameters_2, _parameter_2);
                   StringConcatenationClient _client = new StringConcatenationClient() {
                     @Override
                     protected void appendTo(StringConcatenationClient.TargetStringConcatenation _builder) {
-                      String checkBody = "boolean ok = true;\n";
+                      String checkBody1 = (((CheckerDslJvmModelInferrer.this.class_name + " ans = new ") + CheckerDslJvmModelInferrer.this.class_name) + "();\n");
+                      _builder.newLineIfNotEmpty();
+                      String checkBody = "";
                       _builder.newLineIfNotEmpty();
                       String condArr = "ArrayList cond_arr;\n";
                       _builder.newLineIfNotEmpty();
@@ -2021,6 +2335,20 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
                         }
                       }
                       _builder.newLineIfNotEmpty();
+                      _builder.append(checkBody1, "");
+                      _builder.newLineIfNotEmpty();
+                      _builder.append("ans.init();");
+                      _builder.newLine();
+                      _builder.append("readInput(inPath);");
+                      _builder.newLine();
+                      _builder.append("readOutput(outPath);");
+                      _builder.newLine();
+                      _builder.append("ans.readInput(inPath);");
+                      _builder.newLine();
+                      _builder.append("ans.readOutput(ansPath);");
+                      _builder.newLine();
+                      _builder.append("boolean ok = true;");
+                      _builder.newLine();
                       _builder.append(condArr, "");
                       _builder.newLineIfNotEmpty();
                       _builder.append(checkBody, "");
@@ -2032,8 +2360,8 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
                   CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setBody(it, _client);
                 }
               };
-              JvmOperation _method_8 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(element, "output_check", _typeRef_23, _function_10);
-              CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_23, _method_8);
+              JvmOperation _method_10 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(element, "output_check", _typeRef_27, _function_12);
+              CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_27, _method_10);
             }
           }
           if (!_matched) {
@@ -2044,11 +2372,34 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
               String _plus = ((CheckerDslJvmModelInferrer.this.mr_list + "mr_followup_") + Integer.valueOf(_num));
               String _plus_1 = (_plus + "();\n");
               CheckerDslJvmModelInferrer.this.mr_list = _plus_1;
-              EList<JvmMember> _members_23 = it.getMembers();
+              CheckerDslJvmModelInferrer.this.mr_list = (CheckerDslJvmModelInferrer.this.mr_list + "writeInput(current_mr,current_testcase);\n");
+              CheckerDslJvmModelInferrer.this.mr_list = (CheckerDslJvmModelInferrer.this.mr_list + "writeOutput(current_mr,current_testcase);\n");
+              CheckerDslJvmModelInferrer.this.mr_gen = (CheckerDslJvmModelInferrer.this.mr_gen + "writer.write(\"\t\t\t\tg.setIs_valid(true);\");\n");
+              CheckerDslJvmModelInferrer.this.mr_gen = (CheckerDslJvmModelInferrer.this.mr_gen + "writer.write(System.lineSeparator());\n");
+              CheckerDslJvmModelInferrer.this.mr_gen = (CheckerDslJvmModelInferrer.this.mr_gen + "writer.write(\"\t\t\t\tg.readInput(inFile);\");\n");
+              CheckerDslJvmModelInferrer.this.mr_gen = (CheckerDslJvmModelInferrer.this.mr_gen + "writer.write(System.lineSeparator());\n");
               int _num_1 = ((MR)feature).getNum();
-              String _plus_2 = ("mr_followup_" + Integer.valueOf(_num_1));
-              JvmTypeReference _typeRef_23 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(void.class);
-              final Procedure1<JvmOperation> _function_10 = new Procedure1<JvmOperation>() {
+              String _plus_2 = ((CheckerDslJvmModelInferrer.this.mr_gen + "writer.write(\"\t\t\t\tg.mr_followup_") + Integer.valueOf(_num_1));
+              String _plus_3 = (_plus_2 + "();\");\n");
+              CheckerDslJvmModelInferrer.this.mr_gen = _plus_3;
+              CheckerDslJvmModelInferrer.this.mr_gen = (CheckerDslJvmModelInferrer.this.mr_gen + "writer.write(System.lineSeparator());\n");
+              CheckerDslJvmModelInferrer.this.mr_gen = (CheckerDslJvmModelInferrer.this.mr_gen + "writer.write(\"\t\t\t\tg.writeInput(inFile2);\");\n");
+              CheckerDslJvmModelInferrer.this.mr_gen = (CheckerDslJvmModelInferrer.this.mr_gen + "writer.write(System.lineSeparator());\n");
+              CheckerDslJvmModelInferrer.this.mr_gen = (CheckerDslJvmModelInferrer.this.mr_gen + "writer.write(\"\t\t\t\tif (g.getIs_valid()) g.readInput(inFile2);\");\n");
+              CheckerDslJvmModelInferrer.this.mr_gen = (CheckerDslJvmModelInferrer.this.mr_gen + "writer.write(System.lineSeparator());\n");
+              CheckerDslJvmModelInferrer.this.mr_gen = (CheckerDslJvmModelInferrer.this.mr_gen + "writer.write(\"\t\t\t\tif (g.getIs_valid()){\");\n");
+              CheckerDslJvmModelInferrer.this.mr_gen = (CheckerDslJvmModelInferrer.this.mr_gen + "writer.write(System.lineSeparator());\n");
+              CheckerDslJvmModelInferrer.this.mr_gen = (CheckerDslJvmModelInferrer.this.mr_gen + "writer.write(\"\t\t\t\t\texecute(inFile2,outFile2);\");\n");
+              CheckerDslJvmModelInferrer.this.mr_gen = (CheckerDslJvmModelInferrer.this.mr_gen + "writer.write(System.lineSeparator());\n");
+              CheckerDslJvmModelInferrer.this.mr_gen = (CheckerDslJvmModelInferrer.this.mr_gen + "writer.write(\"\t\t\t\t\tif (!g.mr_check(inFile2,outFile2)){ mr_ok = false; }\");\n");
+              CheckerDslJvmModelInferrer.this.mr_gen = (CheckerDslJvmModelInferrer.this.mr_gen + "writer.write(System.lineSeparator());\n");
+              CheckerDslJvmModelInferrer.this.mr_gen = (CheckerDslJvmModelInferrer.this.mr_gen + "writer.write(\"\t\t\t\t}\");\n");
+              CheckerDslJvmModelInferrer.this.mr_gen = (CheckerDslJvmModelInferrer.this.mr_gen + "writer.write(System.lineSeparator());\n");
+              EList<JvmMember> _members_27 = it.getMembers();
+              int _num_2 = ((MR)feature).getNum();
+              String _plus_4 = ("mr_followup_" + Integer.valueOf(_num_2));
+              JvmTypeReference _typeRef_27 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(void.class);
+              final Procedure1<JvmOperation> _function_12 = new Procedure1<JvmOperation>() {
                 public void apply(final JvmOperation it) {
                   StringConcatenationClient _client = new StringConcatenationClient() {
                     @Override
@@ -2130,37 +2481,86 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
                       _builder.newLineIfNotEmpty();
                       _builder.append(genExp, "");
                       _builder.newLineIfNotEmpty();
-                      _builder.append("writeInput(current_mr,current_testcase);");
-                      _builder.newLine();
-                      _builder.append("writeHidden(current_mr,current_testcase);");
-                      _builder.newLine();
-                      _builder.append("writeOutput(current_mr,current_testcase);");
-                      _builder.newLine();
                     }
                   };
                   CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setBody(it, _client);
                 }
               };
-              JvmOperation _method_8 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(element, _plus_2, _typeRef_23, _function_10);
-              CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_23, _method_8);
-              EList<JvmMember> _members_24 = it.getMembers();
-              int _num_2 = ((MR)feature).getNum();
-              String _plus_3 = ("mr_check_" + Integer.valueOf(_num_2));
-              JvmTypeReference _typeRef_24 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(void.class);
-              final Procedure1<JvmOperation> _function_11 = new Procedure1<JvmOperation>() {
+              JvmOperation _method_10 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(element, _plus_4, _typeRef_27, _function_12);
+              CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_27, _method_10);
+              EList<JvmMember> _members_28 = it.getMembers();
+              int _num_3 = ((MR)feature).getNum();
+              String _plus_5 = ("mr_check_" + Integer.valueOf(_num_3));
+              JvmTypeReference _typeRef_28 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(void.class);
+              final Procedure1<JvmOperation> _function_13 = new Procedure1<JvmOperation>() {
                 public void apply(final JvmOperation it) {
                   StringConcatenationClient _client = new StringConcatenationClient() {
                     @Override
                     protected void appendTo(StringConcatenationClient.TargetStringConcatenation _builder) {
                       _builder.append("initMRVar();");
                       _builder.newLine();
+                      String checkBody = "boolean ok = true;\n";
+                      _builder.newLineIfNotEmpty();
+                      String condArr = "ArrayList cond_arr;\n";
+                      _builder.newLineIfNotEmpty();
+                      String genExp = "";
+                      _builder.newLineIfNotEmpty();
+                      EList<EObject> _mrExp = ((MR)feature).getMrExp();
+                      for (final EObject me : _mrExp) {
+                        boolean _matched = false;
+                        if (!_matched) {
+                          if (me instanceof ChkExpression) {
+                            _matched=true;
+                            String _checkExp = CheckerDslJvmModelInferrer.this.checkExp(((ChkExpression)me));
+                            String _plus = (genExp + _checkExp);
+                            genExp = _plus;
+                          }
+                        }
+                        if (!_matched) {
+                          if (me instanceof ChkLoopExpression) {
+                            _matched=true;
+                            String _checkLoopExp = CheckerDslJvmModelInferrer.this.checkLoopExp(((ChkLoopExpression)me));
+                            String _plus = (genExp + _checkLoopExp);
+                            genExp = _plus;
+                          }
+                        }
+                      }
+                      _builder.newLineIfNotEmpty();
+                      Property _property = ((MR)feature).getProperty();
+                      EList<EObject> _properties = _property.getProperties();
+                      for (final EObject pr : _properties) {
+                        boolean _matched_1 = false;
+                        if (!_matched_1) {
+                          if (pr instanceof ChkExpression) {
+                            _matched_1=true;
+                            String _checkExp = CheckerDslJvmModelInferrer.this.checkExp(((ChkExpression)pr));
+                            String _plus = (genExp + _checkExp);
+                            genExp = _plus;
+                          }
+                        }
+                        if (!_matched_1) {
+                          if (pr instanceof ChkLoopExpression) {
+                            _matched_1=true;
+                            String _checkLoopExp = CheckerDslJvmModelInferrer.this.checkLoopExp(((ChkLoopExpression)pr));
+                            String _plus = (genExp + _checkLoopExp);
+                            genExp = _plus;
+                          }
+                        }
+                      }
+                      _builder.newLineIfNotEmpty();
+                      _builder.append(checkBody, "");
+                      _builder.newLineIfNotEmpty();
+                      _builder.append(condArr, "");
+                      _builder.newLineIfNotEmpty();
+                      _builder.append(genExp, "");
+                      _builder.newLineIfNotEmpty();
                     }
                   };
                   CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setBody(it, _client);
                 }
               };
-              JvmOperation _method_9 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(element, _plus_3, _typeRef_24, _function_11);
-              CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_24, _method_9);
+              JvmOperation _method_11 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(element, _plus_5, _typeRef_28, _function_13);
+              CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_28, _method_11);
             }
           }
           if (!_matched) {
@@ -2169,24 +2569,34 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
               EList<ChkScoreExpression> _scores = ((Score)feature).getScores();
               int _size = _scores.size();
               CheckerDslJvmModelInferrer.this.num_subtask = _size;
-              EList<JvmMember> _members_23 = it.getMembers();
-              JvmTypeReference _typeRef_23 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(void.class);
-              final Procedure1<JvmOperation> _function_10 = new Procedure1<JvmOperation>() {
+              EList<JvmMember> _members_27 = it.getMembers();
+              JvmTypeReference _typeRef_27 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(void.class);
+              final Procedure1<JvmOperation> _function_12 = new Procedure1<JvmOperation>() {
                 public void apply(final JvmOperation it) {
                   StringConcatenationClient _client = new StringConcatenationClient() {
                     @Override
                     protected void appendTo(StringConcatenationClient.TargetStringConcatenation _builder) {
-                      String scoreBody = "";
+                      String scoreBody = "File sfile;\n";
                       _builder.newLineIfNotEmpty();
                       EList<ChkScoreExpression> _scores = ((Score)feature).getScores();
                       for (final ChkScoreExpression score : _scores) {
-                        String _subtask = score.getSubtask();
-                        String _plus = ((scoreBody + "System.out.println(\"Subtask : ") + _subtask);
-                        String _plus_1 = (_plus + ", Score : ");
-                        String _score = score.getScore();
-                        String _plus_2 = (_plus_1 + _score);
-                        String _plus_3 = (_plus_2 + "\");\n");
-                        scoreBody = _plus_3;
+                        {
+                          scoreBody = (scoreBody + "try {\n");
+                          String _subtask = score.getSubtask();
+                          String _plus = ((scoreBody + "sfile = new File(\"tc/") + _subtask);
+                          String _plus_1 = (_plus + ".score\");\n");
+                          scoreBody = _plus_1;
+                          scoreBody = (scoreBody + "if(!sfile.exists()) sfile.createNewFile();\n");
+                          scoreBody = (scoreBody + "fw = new FileWriter(sfile);\n");
+                          scoreBody = (scoreBody + "writer = new BufferedWriter(fw);\n");
+                          String _score = score.getScore();
+                          String _plus_2 = ((scoreBody + "writer.write(\"\"+") + _score);
+                          String _plus_3 = (_plus_2 + ");\n");
+                          scoreBody = _plus_3;
+                          scoreBody = (scoreBody + "writer.write(System.lineSeparator());\n");
+                          scoreBody = (scoreBody + "writer.close();\n");
+                          scoreBody = (scoreBody + "} catch(Exception e){}\n");
+                        }
                       }
                       _builder.newLineIfNotEmpty();
                       _builder.append(scoreBody, "");
@@ -2196,14 +2606,14 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
                   CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setBody(it, _client);
                 }
               };
-              JvmOperation _method_8 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(element, "printScore", _typeRef_23, _function_10);
-              CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_23, _method_8);
+              JvmOperation _method_10 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(element, "printScore", _typeRef_27, _function_12);
+              CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_27, _method_10);
             }
           }
         }
-        EList<JvmMember> _members_23 = it.getMembers();
-        JvmTypeReference _typeRef_23 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(void.class);
-        final Procedure1<JvmOperation> _function_10 = new Procedure1<JvmOperation>() {
+        EList<JvmMember> _members_27 = it.getMembers();
+        JvmTypeReference _typeRef_27 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(void.class);
+        final Procedure1<JvmOperation> _function_12 = new Procedure1<JvmOperation>() {
           public void apply(final JvmOperation it) {
             StringConcatenationClient _client = new StringConcatenationClient() {
               @Override
@@ -2215,11 +2625,11 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
             CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setBody(it, _client);
           }
         };
-        JvmOperation _method_8 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(element, "initMRVar", _typeRef_23, _function_10);
-        CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_23, _method_8);
-        EList<JvmMember> _members_24 = it.getMembers();
-        JvmTypeReference _typeRef_24 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(void.class);
-        final Procedure1<JvmOperation> _function_11 = new Procedure1<JvmOperation>() {
+        JvmOperation _method_10 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(element, "initMRVar", _typeRef_27, _function_12);
+        CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_27, _method_10);
+        EList<JvmMember> _members_28 = it.getMembers();
+        JvmTypeReference _typeRef_28 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(void.class);
+        final Procedure1<JvmOperation> _function_13 = new Procedure1<JvmOperation>() {
           public void apply(final JvmOperation it) {
             StringConcatenationClient _client = new StringConcatenationClient() {
               @Override
@@ -2231,11 +2641,119 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
             CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setBody(it, _client);
           }
         };
-        JvmOperation _method_9 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(element, "mr_start", _typeRef_24, _function_11);
-        CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_24, _method_9);
-        EList<JvmMember> _members_25 = it.getMembers();
-        JvmTypeReference _typeRef_25 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(void.class);
-        final Procedure1<JvmOperation> _function_12 = new Procedure1<JvmOperation>() {
+        JvmOperation _method_11 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(element, "mr_start", _typeRef_28, _function_13);
+        CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_28, _method_11);
+        EList<JvmMember> _members_29 = it.getMembers();
+        JvmTypeReference _typeRef_29 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(void.class);
+        final Procedure1<JvmOperation> _function_14 = new Procedure1<JvmOperation>() {
+          public void apply(final JvmOperation it) {
+            StringConcatenationClient _client = new StringConcatenationClient() {
+              @Override
+              protected void appendTo(StringConcatenationClient.TargetStringConcatenation _builder) {
+                _builder.append("sc = new Scanner(System.in);");
+                _builder.newLine();
+                _builder.append("max_loop_counter = 1000;");
+                _builder.newLine();
+                _builder.append("loop_counter = 0;");
+                _builder.newLine();
+              }
+            };
+            CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setBody(it, _client);
+          }
+        };
+        JvmOperation _method_12 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(element, "init", _typeRef_29, _function_14);
+        CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_29, _method_12);
+        EList<JvmMember> _members_30 = it.getMembers();
+        JvmTypeReference _typeRef_30 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(boolean.class);
+        final Procedure1<JvmOperation> _function_15 = new Procedure1<JvmOperation>() {
+          public void apply(final JvmOperation it) {
+            EList<JvmFormalParameter> _parameters = it.getParameters();
+            JvmTypeReference _typeRef = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(String.class);
+            JvmFormalParameter _parameter = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toParameter(element, "inPath", _typeRef);
+            CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmFormalParameter>operator_add(_parameters, _parameter);
+            EList<JvmFormalParameter> _parameters_1 = it.getParameters();
+            JvmTypeReference _typeRef_1 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(String.class);
+            JvmFormalParameter _parameter_1 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toParameter(element, "outPath", _typeRef_1);
+            CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmFormalParameter>operator_add(_parameters_1, _parameter_1);
+            StringConcatenationClient _client = new StringConcatenationClient() {
+              @Override
+              protected void appendTo(StringConcatenationClient.TargetStringConcatenation _builder) {
+                _builder.append("GeneratedClass ans = new GeneratedClass();");
+                _builder.newLine();
+                _builder.append("ans.init();");
+                _builder.newLine();
+                _builder.append("ans.readInput(inPath);");
+                _builder.newLine();
+                _builder.append("ans.readOutput(outPath);");
+                _builder.newLine();
+                _builder.append("if (!ans.getIs_valid()) return false;");
+                _builder.newLine();
+                _builder.append("boolean ok = true;");
+                _builder.newLine();
+                _builder.append(CheckerDslJvmModelInferrer.this.mr_chk, "");
+                _builder.newLineIfNotEmpty();
+                _builder.append("return ok;");
+                _builder.newLine();
+              }
+            };
+            CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setBody(it, _client);
+          }
+        };
+        JvmOperation _method_13 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(element, "mr_check", _typeRef_30, _function_15);
+        CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_30, _method_13);
+        EList<JvmMember> _members_31 = it.getMembers();
+        JvmTypeReference _typeRef_31 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(void.class);
+        final Procedure1<JvmOperation> _function_16 = new Procedure1<JvmOperation>() {
+          public void apply(final JvmOperation it) {
+            EList<JvmFormalParameter> _parameters = it.getParameters();
+            JvmTypeReference _typeRef = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(int.class);
+            JvmFormalParameter _parameter = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toParameter(element, "mx_subtask", _typeRef);
+            CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmFormalParameter>operator_add(_parameters, _parameter);
+            EList<JvmFormalParameter> _parameters_1 = it.getParameters();
+            JvmTypeReference _typeRef_1 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(int.class);
+            JvmFormalParameter _parameter_1 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toParameter(element, "mx_tc", _typeRef_1);
+            CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmFormalParameter>operator_add(_parameters_1, _parameter_1);
+            StringConcatenationClient _client = new StringConcatenationClient() {
+              @Override
+              protected void appendTo(StringConcatenationClient.TargetStringConcatenation _builder) {
+                String _generateOutputChecker = CheckerDslJvmModelInferrer.this.generateOutputChecker();
+                _builder.append(_generateOutputChecker, "");
+                _builder.newLineIfNotEmpty();
+              }
+            };
+            CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setBody(it, _client);
+          }
+        };
+        JvmOperation _method_14 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(element, "generateOutputChecker", _typeRef_31, _function_16);
+        CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_31, _method_14);
+        EList<JvmMember> _members_32 = it.getMembers();
+        JvmTypeReference _typeRef_32 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(void.class);
+        final Procedure1<JvmOperation> _function_17 = new Procedure1<JvmOperation>() {
+          public void apply(final JvmOperation it) {
+            EList<JvmFormalParameter> _parameters = it.getParameters();
+            JvmTypeReference _typeRef = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(int.class);
+            JvmFormalParameter _parameter = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toParameter(element, "mx_subtask", _typeRef);
+            CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmFormalParameter>operator_add(_parameters, _parameter);
+            EList<JvmFormalParameter> _parameters_1 = it.getParameters();
+            JvmTypeReference _typeRef_1 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(int.class);
+            JvmFormalParameter _parameter_1 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toParameter(element, "mx_tc", _typeRef_1);
+            CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmFormalParameter>operator_add(_parameters_1, _parameter_1);
+            StringConcatenationClient _client = new StringConcatenationClient() {
+              @Override
+              protected void appendTo(StringConcatenationClient.TargetStringConcatenation _builder) {
+                String _generateOutputCheckerMT = CheckerDslJvmModelInferrer.this.generateOutputCheckerMT();
+                _builder.append(_generateOutputCheckerMT, "");
+                _builder.newLineIfNotEmpty();
+              }
+            };
+            CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setBody(it, _client);
+          }
+        };
+        JvmOperation _method_15 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(element, "generateOutputCheckerMT", _typeRef_32, _function_17);
+        CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_32, _method_15);
+        EList<JvmMember> _members_33 = it.getMembers();
+        JvmTypeReference _typeRef_33 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(void.class);
+        final Procedure1<JvmOperation> _function_18 = new Procedure1<JvmOperation>() {
           public void apply(final JvmOperation it) {
             EList<JvmFormalParameter> _parameters = it.getParameters();
             JvmTypeReference _typeRef = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(int.class);
@@ -2243,27 +2761,17 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
             CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmFormalParameter>operator_add(_parameters, _parameter);
             EList<JvmFormalParameter> _parameters_1 = it.getParameters();
             JvmTypeReference _typeRef_1 = CheckerDslJvmModelInferrer.this._typeReferenceBuilder.typeRef(int.class);
-            JvmFormalParameter _parameter_1 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toParameter(element, "max_tc", _typeRef_1);
+            JvmFormalParameter _parameter_1 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toParameter(element, "mtc", _typeRef_1);
             CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmFormalParameter>operator_add(_parameters_1, _parameter_1);
             StringConcatenationClient _client = new StringConcatenationClient() {
               @Override
               protected void appendTo(StringConcatenationClient.TargetStringConcatenation _builder) {
-                _builder.append("sc = new Scanner(System.in);");
-                _builder.newLine();
-                _builder.append("current_subtask = 1;");
-                _builder.newLine();
-                _builder.append("current_testcase = 1;");
-                _builder.newLine();
-                _builder.append("num_tc = tc;");
-                _builder.newLine();
-                _builder.append("max_testcase = max_tc;");
-                _builder.newLine();
-                _builder.append("current_mr = 0;");
-                _builder.newLine();
                 _builder.append("num_mr = ");
                 _builder.append(CheckerDslJvmModelInferrer.this.num_mr, "");
                 _builder.append(";");
                 _builder.newLineIfNotEmpty();
+                _builder.append("max_tc = mtc;");
+                _builder.newLine();
                 _builder.append("num_subtask = ");
                 _builder.append(CheckerDslJvmModelInferrer.this.num_subtask, "");
                 _builder.append(";");
@@ -2271,17 +2779,41 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
                 _builder.append(CheckerDslJvmModelInferrer.this.class_name, "");
                 _builder.append(".cur_lines = 1;");
                 _builder.newLineIfNotEmpty();
-                _builder.append("//readInput(0);");
+                _builder.append("printScore();");
                 _builder.newLine();
-                _builder.append("//readOutput(0);");
+                _builder.append("generateOutputChecker(num_subtask,max_tc);");
+                _builder.newLine();
+                _builder.append("generateOutputCheckerMT(num_subtask,max_tc);");
+                _builder.newLine();
+                _builder.append("for (int i=1; i<=num_subtask; i++){");
+                _builder.newLine();
+                _builder.append("\t");
+                _builder.append("current_subtask = i;");
+                _builder.newLine();
+                _builder.append("\t");
+                _builder.append("current_testcase = 1;");
+                _builder.newLine();
+                _builder.append("\t");
+                _builder.append("current_mr = 0;");
+                _builder.newLine();
+                _builder.append("\t");
+                _builder.append("num_tc = tc;");
+                _builder.newLine();
+                _builder.append("\t");
+                _builder.append("readInput(0);");
+                _builder.newLine();
+                _builder.append("\t");
+                _builder.append("readOutput(0);");
+                _builder.newLine();
+                _builder.append("}");
                 _builder.newLine();
               }
             };
             CheckerDslJvmModelInferrer.this._jvmTypesBuilder.setBody(it, _client);
           }
         };
-        JvmOperation _method_10 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(element, "init", _typeRef_25, _function_12);
-        CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_25, _method_10);
+        JvmOperation _method_16 = CheckerDslJvmModelInferrer.this._jvmTypesBuilder.toMethod(element, "generate", _typeRef_33, _function_18);
+        CheckerDslJvmModelInferrer.this._jvmTypesBuilder.<JvmOperation>operator_add(_members_33, _method_16);
       }
     };
     _accept.initializeLater(_function);
@@ -2321,13 +2853,43 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
         cc = (cc + "_2");
       }
       cc = (cc + "(");
+      int i = 0;
       EList<String> _v_1 = element.getV();
       for (final String v : _v_1) {
-        cc = (cc + v);
+        {
+          if ((i > 0)) {
+            cc = (cc + ",");
+          }
+          cc = (cc + v);
+          i = (i + 1);
+        }
       }
       cc = (cc + ")");
     }
     InputOutput.<String>println(("var " + cc));
+    return cc;
+  }
+  
+  public String chkVar2(final ChkVariable element) {
+    String cc = "";
+    ChkPrefix _pref = element.getPref();
+    boolean _notEquals = (!Objects.equal(_pref, null));
+    if (_notEquals) {
+      ChkPrefix _pref_1 = element.getPref();
+      String _type = _pref_1.getType();
+      String _plus = (cc + _type);
+      String _plus_1 = (_plus + ".");
+      cc = _plus_1;
+    }
+    String _var = element.getVar();
+    String _plus_2 = (cc + _var);
+    cc = _plus_2;
+    String _newtest = element.getNewtest();
+    boolean _notEquals_1 = (!Objects.equal(_newtest, null));
+    if (_notEquals_1) {
+      cc = (cc + "_2");
+    }
+    InputOutput.<String>println(("var2 " + cc));
     return cc;
   }
   
@@ -2406,11 +2968,25 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
           for (final String vv : _vars) {
             cc = (((cc + "int ") + vv) + ";\n");
           }
+          cc = (cc + "loop_counter = 0;\n");
           cc = (cc + "do {");
           EList<String> _vars_1 = ((Helper)exp).getVars();
           for (final String vv_1 : _vars_1) {
-            cc = ((((cc + vv_1) + " = ") + this.lib_class_name) + ".select();\n");
+            ChkVariables _var3 = ((Helper)exp).getVar3();
+            String _chkVars = this.chkVars(_var3);
+            String _plus = (((((cc + vv_1) + " = ") + this.lib_class_name) + ".select(") + _chkVars);
+            String _plus_1 = (_plus + ",");
+            ChkVariables _var4 = ((Helper)exp).getVar4();
+            String _chkVars_1 = this.chkVars(_var4);
+            String _plus_2 = (_plus_1 + _chkVars_1);
+            String _plus_3 = (_plus_2 + ");\n");
+            cc = _plus_3;
           }
+          cc = (cc + "loop_counter++;\n");
+          cc = (cc + "if (loop_counter >= max_loop_counter){\n");
+          cc = (cc + "is_valid = false;\n");
+          cc = (cc + "break;\n");
+          cc = (cc + "}\n");
           cc = (cc + "} while (!(");
           int xx = (-1);
           EList<ChkGeneralExpressions> _cond = element.getCond();
@@ -2435,8 +3011,8 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
                 if (co instanceof ChkRelationalExpression) {
                   _matched_1=true;
                   String _relationalExp = this.relationalExp(((ChkRelationalExpression)co));
-                  String _plus = (cc + _relationalExp);
-                  cc = _plus;
+                  String _plus_4 = (cc + _relationalExp);
+                  cc = _plus_4;
                 }
               }
               xx = (xx + 1);
@@ -2472,8 +3048,8 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
             if (!_notEquals_4) {
               _and = false;
             } else {
-              ChkVariables _var3 = ((Helper)exp).getVar3();
-              boolean _equals = Objects.equal(_var3, null);
+              ChkVariables _var3_1 = ((Helper)exp).getVar3();
+              boolean _equals = Objects.equal(_var3_1, null);
               _and = _equals;
             }
             _or = _and;
@@ -2486,9 +3062,9 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
             if (_notEquals_5) {
               ChkVariable _var = ((Helper)exp).getVar();
               String _chkVar = this.chkVar(_var);
-              String _plus = ((cc + "for (int i=0; i<") + _chkVar);
-              String _plus_1 = (_plus + ".size(); i++){\n");
-              cc = _plus_1;
+              String _plus_4 = ((cc + "for (int i=0; i<") + _chkVar);
+              String _plus_5 = (_plus_4 + ".size(); i++){\n");
+              cc = _plus_5;
               cc = (cc + "if (");
               EList<ChkGeneralExpressions> _cond_1 = element.getCond();
               for (final ChkGeneralExpressions co_1 : _cond_1) {
@@ -2512,8 +3088,8 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
                     if (co_1 instanceof ChkRelationalExpression) {
                       _matched_1=true;
                       String _relationalExp = this.relationalExp(((ChkRelationalExpression)co_1));
-                      String _plus_2 = (cc + _relationalExp);
-                      cc = _plus_2;
+                      String _plus_6 = (cc + _relationalExp);
+                      cc = _plus_6;
                     }
                   }
                   xx_1 = (xx_1 + 1);
@@ -2525,9 +3101,9 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
             } else {
               ChkVariable _var_1 = ((Helper)exp).getVar();
               String _chkVar_1 = this.chkVar(_var_1);
-              String _plus_2 = ((cc + "for (int i=0; i<") + _chkVar_1);
-              String _plus_3 = (_plus_2 + ".size(); i++){\n");
-              cc = _plus_3;
+              String _plus_6 = ((cc + "for (int i=0; i<") + _chkVar_1);
+              String _plus_7 = (_plus_6 + ".size(); i++){\n");
+              cc = _plus_7;
               cc = (cc + "cond_arr.add(true);\n");
               cc = (cc + "}\n");
             }
@@ -2543,36 +3119,36 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
             if (_notEquals_7) {
               ChkVariable _var_2 = ((Helper)exp).getVar();
               String _chkVar_2 = this.chkVar(_var_2);
-              String _plus_4 = ((cc + "sum(") + _chkVar_2);
-              String _plus_5 = (_plus_4 + ", cond_arr)");
-              cc = _plus_5;
+              String _plus_8 = ((cc + "sum(") + _chkVar_2);
+              String _plus_9 = (_plus_8 + ", cond_arr)");
+              cc = _plus_9;
             } else {
               String _max_1 = ((Helper)exp).getMax();
               boolean _notEquals_8 = (!Objects.equal(_max_1, null));
               if (_notEquals_8) {
                 ChkVariable _var_3 = ((Helper)exp).getVar();
                 String _chkVar_3 = this.chkVar(_var_3);
-                String _plus_6 = ((cc + "max(") + _chkVar_3);
-                String _plus_7 = (_plus_6 + ", cond_arr)");
-                cc = _plus_7;
+                String _plus_10 = ((cc + "max(") + _chkVar_3);
+                String _plus_11 = (_plus_10 + ", cond_arr)");
+                cc = _plus_11;
               } else {
                 String _min_1 = ((Helper)exp).getMin();
                 boolean _notEquals_9 = (!Objects.equal(_min_1, null));
                 if (_notEquals_9) {
                   ChkVariable _var_4 = ((Helper)exp).getVar();
                   String _chkVar_4 = this.chkVar(_var_4);
-                  String _plus_8 = ((cc + "min(") + _chkVar_4);
-                  String _plus_9 = (_plus_8 + ", cond_arr)");
-                  cc = _plus_9;
+                  String _plus_12 = ((cc + "min(") + _chkVar_4);
+                  String _plus_13 = (_plus_12 + ", cond_arr)");
+                  cc = _plus_13;
                 } else {
                   String _remove_1 = ((Helper)exp).getRemove();
                   boolean _notEquals_10 = (!Objects.equal(_remove_1, null));
                   if (_notEquals_10) {
                     ChkVariable _var_5 = ((Helper)exp).getVar();
                     String _chkVar_5 = this.chkVar(_var_5);
-                    String _plus_10 = ((cc + "remove(") + _chkVar_5);
-                    String _plus_11 = (_plus_10 + ", cond_arr)");
-                    cc = _plus_11;
+                    String _plus_14 = ((cc + "remove(") + _chkVar_5);
+                    String _plus_15 = (_plus_14 + ", cond_arr)");
+                    cc = _plus_15;
                   }
                 }
               }
@@ -2588,109 +3164,135 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
             String _prime = ((Helper)exp).getPrime();
             boolean _notEquals_12 = (!Objects.equal(_prime, null));
             if (_notEquals_12) {
-              ChkVariables _var3_1 = ((Helper)exp).getVar3();
-              String _chkVars = this.chkVars(_var3_1);
-              String _plus_12 = ((cc + "prime(") + _chkVars);
-              String _plus_13 = (_plus_12 + ");");
-              cc = _plus_13;
+              ChkVariables _var3_2 = ((Helper)exp).getVar3();
+              String _chkVars_2 = this.chkVars(_var3_2);
+              String _plus_16 = ((cc + "prime(") + _chkVars_2);
+              String _plus_17 = (_plus_16 + ");");
+              cc = _plus_17;
             } else {
               String _random = ((Helper)exp).getRandom();
               boolean _notEquals_13 = (!Objects.equal(_random, null));
               if (_notEquals_13) {
-                ChkVariables _var3_2 = ((Helper)exp).getVar3();
-                String _chkVars_1 = this.chkVars(_var3_2);
-                String _plus_14 = ((cc + "random(") + _chkVars_1);
-                String _plus_15 = (_plus_14 + ",");
-                ChkVariables _var4 = ((Helper)exp).getVar4();
-                String _chkVars_2 = this.chkVars(_var4);
-                String _plus_16 = (_plus_15 + _chkVars_2);
-                String _plus_17 = (_plus_16 + ")");
-                cc = _plus_17;
+                ChkVariables _var3_3 = ((Helper)exp).getVar3();
+                String _chkVars_3 = this.chkVars(_var3_3);
+                String _plus_18 = ((cc + "random(") + _chkVars_3);
+                String _plus_19 = (_plus_18 + ",");
+                ChkVariables _var4_1 = ((Helper)exp).getVar4();
+                String _chkVars_4 = this.chkVars(_var4_1);
+                String _plus_20 = (_plus_19 + _chkVars_4);
+                String _plus_21 = (_plus_20 + ")");
+                cc = _plus_21;
               } else {
                 String _size = ((Helper)exp).getSize();
                 boolean _notEquals_14 = (!Objects.equal(_size, null));
                 if (_notEquals_14) {
                   ChkVariable _var_6 = ((Helper)exp).getVar();
                   String _chkVar_6 = this.chkVar(_var_6);
-                  String _plus_18 = ((cc + "size(") + _chkVar_6);
-                  String _plus_19 = (_plus_18 + ")");
-                  cc = _plus_19;
+                  String _plus_22 = ((cc + "size(") + _chkVar_6);
+                  String _plus_23 = (_plus_22 + ")");
+                  cc = _plus_23;
                 } else {
                   String _swap = ((Helper)exp).getSwap();
                   boolean _notEquals_15 = (!Objects.equal(_swap, null));
                   if (_notEquals_15) {
                     ChkVariable _var_7 = ((Helper)exp).getVar();
                     String _chkVar_7 = this.chkVar(_var_7);
-                    String _plus_20 = ((cc + "swap(") + _chkVar_7);
-                    String _plus_21 = (_plus_20 + ",");
+                    String _plus_24 = ((cc + "swap(") + _chkVar_7);
+                    String _plus_25 = (_plus_24 + ",");
                     String _var1 = ((Helper)exp).getVar1();
-                    String _plus_22 = (_plus_21 + _var1);
-                    String _plus_23 = (_plus_22 + ",");
+                    String _plus_26 = (_plus_25 + _var1);
+                    String _plus_27 = (_plus_26 + ",");
                     String _var2 = ((Helper)exp).getVar2();
-                    String _plus_24 = (_plus_23 + _var2);
-                    String _plus_25 = (_plus_24 + ")");
-                    cc = _plus_25;
+                    String _plus_28 = (_plus_27 + _var2);
+                    String _plus_29 = (_plus_28 + ")");
+                    cc = _plus_29;
                   } else {
                     String _add = ((Helper)exp).getAdd();
                     boolean _notEquals_16 = (!Objects.equal(_add, null));
                     if (_notEquals_16) {
                       ChkVariable _var_8 = ((Helper)exp).getVar();
                       String _chkVar_8 = this.chkVar(_var_8);
-                      String _plus_26 = ((cc + "add(") + _chkVar_8);
-                      String _plus_27 = (_plus_26 + ",");
-                      ChkVariables _var3_3 = ((Helper)exp).getVar3();
-                      String _chkVars_3 = this.chkVars(_var3_3);
-                      String _plus_28 = (_plus_27 + _chkVars_3);
-                      String _plus_29 = (_plus_28 + ")");
-                      cc = _plus_29;
+                      String _plus_30 = ((cc + "add(") + _chkVar_8);
+                      String _plus_31 = (_plus_30 + ",");
+                      ChkVariables _var3_4 = ((Helper)exp).getVar3();
+                      String _chkVars_5 = this.chkVars(_var3_4);
+                      String _plus_32 = (_plus_31 + _chkVars_5);
+                      String _plus_33 = (_plus_32 + ")");
+                      cc = _plus_33;
                     } else {
                       String _remove_2 = ((Helper)exp).getRemove();
                       boolean _notEquals_17 = (!Objects.equal(_remove_2, null));
                       if (_notEquals_17) {
                         ChkVariable _var_9 = ((Helper)exp).getVar();
                         String _chkVar_9 = this.chkVar(_var_9);
-                        String _plus_30 = ((cc + "remove(") + _chkVar_9);
-                        String _plus_31 = (_plus_30 + ",");
-                        ChkVariables _var3_4 = ((Helper)exp).getVar3();
-                        String _chkVars_4 = this.chkVars(_var3_4);
-                        String _plus_32 = (_plus_31 + _chkVars_4);
-                        String _plus_33 = (_plus_32 + ")");
-                        cc = _plus_33;
+                        String _plus_34 = ((cc + "remove(") + _chkVar_9);
+                        String _plus_35 = (_plus_34 + ",");
+                        ChkVariables _var3_5 = ((Helper)exp).getVar3();
+                        String _chkVars_6 = this.chkVars(_var3_5);
+                        String _plus_36 = (_plus_35 + _chkVars_6);
+                        String _plus_37 = (_plus_36 + ")");
+                        cc = _plus_37;
                       } else {
-                        String _reverse = ((Helper)exp).getReverse();
-                        boolean _notEquals_18 = (!Objects.equal(_reverse, null));
+                        String _plus_38 = ((Helper)exp).getPlus();
+                        boolean _notEquals_18 = (!Objects.equal(_plus_38, null));
                         if (_notEquals_18) {
                           ChkVariable _var_10 = ((Helper)exp).getVar();
                           String _chkVar_10 = this.chkVar(_var_10);
-                          String _plus_34 = ((cc + "reverse(") + _chkVar_10);
-                          String _plus_35 = (_plus_34 + ")");
-                          cc = _plus_35;
+                          String _plus_39 = ((cc + "plus(") + _chkVar_10);
+                          String _plus_40 = (_plus_39 + ",");
+                          ChkVariables _var3_6 = ((Helper)exp).getVar3();
+                          String _chkVars_7 = this.chkVars(_var3_6);
+                          String _plus_41 = (_plus_40 + _chkVars_7);
+                          String _plus_42 = (_plus_41 + ")");
+                          cc = _plus_42;
                         } else {
-                          String _plus_36 = ((Helper)exp).getPlus();
-                          boolean _notEquals_19 = (!Objects.equal(_plus_36, null));
+                          String _multiply = ((Helper)exp).getMultiply();
+                          boolean _notEquals_19 = (!Objects.equal(_multiply, null));
                           if (_notEquals_19) {
                             ChkVariable _var_11 = ((Helper)exp).getVar();
                             String _chkVar_11 = this.chkVar(_var_11);
-                            String _plus_37 = ((cc + "plus(") + _chkVar_11);
-                            String _plus_38 = (_plus_37 + ",");
-                            ChkVariables _var3_5 = ((Helper)exp).getVar3();
-                            String _chkVars_5 = this.chkVars(_var3_5);
-                            String _plus_39 = (_plus_38 + _chkVars_5);
-                            String _plus_40 = (_plus_39 + ")");
-                            cc = _plus_40;
+                            String _plus_43 = ((cc + "multiply(") + _chkVar_11);
+                            String _plus_44 = (_plus_43 + ",");
+                            ChkVariables _var3_7 = ((Helper)exp).getVar3();
+                            String _chkVars_8 = this.chkVars(_var3_7);
+                            String _plus_45 = (_plus_44 + _chkVars_8);
+                            String _plus_46 = (_plus_45 + ")");
+                            cc = _plus_46;
                           } else {
-                            String _multiply = ((Helper)exp).getMultiply();
-                            boolean _notEquals_20 = (!Objects.equal(_multiply, null));
+                            String _swapCol = ((Helper)exp).getSwapCol();
+                            boolean _notEquals_20 = (!Objects.equal(_swapCol, null));
                             if (_notEquals_20) {
                               ChkVariable _var_12 = ((Helper)exp).getVar();
                               String _chkVar_12 = this.chkVar(_var_12);
-                              String _plus_41 = ((cc + "multiply(") + _chkVar_12);
-                              String _plus_42 = (_plus_41 + ",");
-                              ChkVariables _var3_6 = ((Helper)exp).getVar3();
-                              String _chkVars_6 = this.chkVars(_var3_6);
-                              String _plus_43 = (_plus_42 + _chkVars_6);
-                              String _plus_44 = (_plus_43 + ")");
-                              cc = _plus_44;
+                              String _plus_47 = ((cc + "swapColumn(") + _chkVar_12);
+                              String _plus_48 = (_plus_47 + ",");
+                              String _var1_1 = ((Helper)exp).getVar1();
+                              String _plus_49 = (_plus_48 + _var1_1);
+                              String _plus_50 = (_plus_49 + ",");
+                              String _var2_1 = ((Helper)exp).getVar2();
+                              String _plus_51 = (_plus_50 + _var2_1);
+                              String _plus_52 = (_plus_51 + ")");
+                              cc = _plus_52;
+                            } else {
+                              String _addRow = ((Helper)exp).getAddRow();
+                              boolean _notEquals_21 = (!Objects.equal(_addRow, null));
+                              if (_notEquals_21) {
+                                ChkVariable _var_13 = ((Helper)exp).getVar();
+                                String _chkVar_13 = this.chkVar(_var_13);
+                                String _plus_53 = ((cc + "addRow(") + _chkVar_13);
+                                String _plus_54 = (_plus_53 + ")");
+                                cc = _plus_54;
+                              } else {
+                                String _addCol = ((Helper)exp).getAddCol();
+                                boolean _notEquals_22 = (!Objects.equal(_addCol, null));
+                                if (_notEquals_22) {
+                                  ChkVariable _var_14 = ((Helper)exp).getVar();
+                                  String _chkVar_14 = this.chkVar(_var_14);
+                                  String _plus_55 = ((cc + "addColumn(") + _chkVar_14);
+                                  String _plus_56 = (_plus_55 + ")");
+                                  cc = _plus_56;
+                                }
+                              }
                             }
                           }
                         }
@@ -2816,11 +3418,17 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
               for (final String vv : _vars) {
                 cc = (((cc + "int ") + vv) + ";\n");
               }
+              cc = (cc + "loop_counter = 0;\n");
               cc = (cc + "do {");
               EList<String> _vars_1 = ((Helper)expv2).getVars();
               for (final String vv_1 : _vars_1) {
                 cc = ((((cc + vv_1) + " = ") + this.lib_class_name) + ".select();\n");
               }
+              cc = (cc + "loop_counter++;\n");
+              cc = (cc + "if (loop_counter >= max_loop_counter){\n");
+              cc = (cc + "is_valid = false;\n");
+              cc = (cc + "break;\n");
+              cc = (cc + "}\n");
               cc = (cc + "} while (!(");
               int xx = (-1);
               EList<ChkGeneralExpressions> _cond = element.getCond();
@@ -3068,40 +3676,66 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
                             String _plus_38 = (_plus_37 + ")");
                             cc = _plus_38;
                           } else {
-                            String _reverse = ((Helper)expv2).getReverse();
-                            boolean _notEquals_21 = (!Objects.equal(_reverse, null));
+                            String _plus_39 = ((Helper)expv2).getPlus();
+                            boolean _notEquals_21 = (!Objects.equal(_plus_39, null));
                             if (_notEquals_21) {
                               ChkVariable _var_11 = ((Helper)expv2).getVar();
                               String _chkVar_11 = this.chkVar(_var_11);
-                              String _plus_39 = ((cc + "reverse(") + _chkVar_11);
-                              String _plus_40 = (_plus_39 + ")");
-                              cc = _plus_40;
+                              String _plus_40 = ((cc + "plus(") + _chkVar_11);
+                              String _plus_41 = (_plus_40 + ",");
+                              ChkVariables _var3_5 = ((Helper)expv2).getVar3();
+                              String _chkVars_5 = this.chkVars(_var3_5);
+                              String _plus_42 = (_plus_41 + _chkVars_5);
+                              String _plus_43 = (_plus_42 + ")");
+                              cc = _plus_43;
                             } else {
-                              String _plus_41 = ((Helper)expv2).getPlus();
-                              boolean _notEquals_22 = (!Objects.equal(_plus_41, null));
+                              String _multiply = ((Helper)expv2).getMultiply();
+                              boolean _notEquals_22 = (!Objects.equal(_multiply, null));
                               if (_notEquals_22) {
                                 ChkVariable _var_12 = ((Helper)expv2).getVar();
                                 String _chkVar_12 = this.chkVar(_var_12);
-                                String _plus_42 = ((cc + "plus(") + _chkVar_12);
-                                String _plus_43 = (_plus_42 + ",");
-                                ChkVariables _var3_5 = ((Helper)expv2).getVar3();
-                                String _chkVars_5 = this.chkVars(_var3_5);
-                                String _plus_44 = (_plus_43 + _chkVars_5);
-                                String _plus_45 = (_plus_44 + ")");
-                                cc = _plus_45;
+                                String _plus_44 = ((cc + "multiply(") + _chkVar_12);
+                                String _plus_45 = (_plus_44 + ",");
+                                ChkVariables _var3_6 = ((Helper)expv2).getVar3();
+                                String _chkVars_6 = this.chkVars(_var3_6);
+                                String _plus_46 = (_plus_45 + _chkVars_6);
+                                String _plus_47 = (_plus_46 + ")");
+                                cc = _plus_47;
                               } else {
-                                String _multiply = ((Helper)expv2).getMultiply();
-                                boolean _notEquals_23 = (!Objects.equal(_multiply, null));
+                                String _swapCol = ((Helper)expv2).getSwapCol();
+                                boolean _notEquals_23 = (!Objects.equal(_swapCol, null));
                                 if (_notEquals_23) {
                                   ChkVariable _var_13 = ((Helper)expv2).getVar();
                                   String _chkVar_13 = this.chkVar(_var_13);
-                                  String _plus_46 = ((cc + "multiply(") + _chkVar_13);
-                                  String _plus_47 = (_plus_46 + ",");
-                                  ChkVariables _var3_6 = ((Helper)expv2).getVar3();
-                                  String _chkVars_6 = this.chkVars(_var3_6);
-                                  String _plus_48 = (_plus_47 + _chkVars_6);
-                                  String _plus_49 = (_plus_48 + ")");
-                                  cc = _plus_49;
+                                  String _plus_48 = ((cc + "swapColumn(") + _chkVar_13);
+                                  String _plus_49 = (_plus_48 + ",");
+                                  String _var1_1 = ((Helper)expv2).getVar1();
+                                  String _plus_50 = (_plus_49 + _var1_1);
+                                  String _plus_51 = (_plus_50 + ",");
+                                  String _var2_1 = ((Helper)expv2).getVar2();
+                                  String _plus_52 = (_plus_51 + _var2_1);
+                                  String _plus_53 = (_plus_52 + ")");
+                                  cc = _plus_53;
+                                } else {
+                                  String _addRow = ((Helper)expv2).getAddRow();
+                                  boolean _notEquals_24 = (!Objects.equal(_addRow, null));
+                                  if (_notEquals_24) {
+                                    ChkVariable _var_14 = ((Helper)expv2).getVar();
+                                    String _chkVar_14 = this.chkVar(_var_14);
+                                    String _plus_54 = ((cc + "addRow(") + _chkVar_14);
+                                    String _plus_55 = (_plus_54 + ")");
+                                    cc = _plus_55;
+                                  } else {
+                                    String _addCol = ((Helper)expv2).getAddCol();
+                                    boolean _notEquals_25 = (!Objects.equal(_addCol, null));
+                                    if (_notEquals_25) {
+                                      ChkVariable _var_15 = ((Helper)expv2).getVar();
+                                      String _chkVar_15 = this.chkVar(_var_15);
+                                      String _plus_56 = ((cc + "addColumn(") + _chkVar_15);
+                                      String _plus_57 = (_plus_56 + ")");
+                                      cc = _plus_57;
+                                    }
+                                  }
                                 }
                               }
                             }
@@ -3129,6 +3763,8 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
       String _plus_1 = (cc + _chkVar);
       String _plus_2 = (_plus_1 + ")) ok = false;\n");
       cc = _plus_2;
+    } else {
+      cc = (cc + ";\n");
     }
     InputOutput.<String>println(("check " + cc));
     return cc;
@@ -3190,100 +3826,80 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
   public String inputBody(final FormatExpression element) {
     int i = 0;
     String cc = "";
-    String temp = "";
-    EList<String> _count = element.getCount();
-    int _size = _count.size();
-    boolean _greaterThan = (_size > 0);
-    if (_greaterThan) {
-      EList<String> _count_1 = element.getCount();
-      String _get = _count_1.get(0);
-      boolean _equals = _get.equals("all");
-      if (_equals) {
-        this.sz = (-1);
-        cc = ("sz = " + Integer.valueOf(this.sz));
-      } else {
-        EList<String> _var = element.getVar();
-        int _size_1 = _var.size();
-        EList<String> _count_2 = element.getCount();
-        int _size_2 = _count_2.size();
-        int _minus = (_size_1 - _size_2);
-        this.sz = _minus;
-        cc = ("sz = " + Integer.valueOf(this.sz));
-        EList<String> _count_3 = element.getCount();
-        for (final String e : _count_3) {
-          boolean _equals_1 = e.equals("i");
-          if (_equals_1) {
-            cc = (cc + "+1");
-          } else {
-            cc = (cc + ("+" + e));
-          }
-        }
-      }
-    } else {
-      EList<String> _var_1 = element.getVar();
-      int _size_3 = _var_1.size();
-      EList<String> _count_4 = element.getCount();
-      int _size_4 = _count_4.size();
-      int _minus_1 = (_size_3 - _size_4);
-      this.sz = _minus_1;
-      cc = ("sz = " + Integer.valueOf(this.sz));
-    }
-    cc = (cc + ";\n");
+    String tm = "";
     String _num = element.getNum();
-    boolean _equals_2 = _num.equals("1");
-    boolean _not = (!_equals_2);
+    boolean _equals = _num.equals("1");
+    boolean _not = (!_equals);
     if (_not) {
-      EList<String> _var_2 = element.getVar();
-      for (final String v : _var_2) {
-        cc = ((cc + v) + " = new ArrayList();\n");
-      }
       String _num_1 = element.getNum();
       String _plus = ((cc + "for (int i=0; i<") + _num_1);
       String _plus_1 = (_plus + "; i++){\n");
       cc = _plus_1;
-      EList<String> _var_3 = element.getVar();
-      for (final String v_1 : _var_3) {
-        cc = ((cc + v_1) + ".add((Object)0);\n");
+    }
+    this.sz = 0;
+    cc = ((cc + "sz = ") + Integer.valueOf(this.sz));
+    EList<FormatVariable> _var = element.getVar();
+    for (final FormatVariable v : _var) {
+      String _count = v.getCount();
+      boolean _notEquals = (!Objects.equal(_count, null));
+      if (_notEquals) {
+        String _count_1 = v.getCount();
+        String _plus_2 = ((cc + "+") + _count_1);
+        cc = _plus_2;
+      } else {
+        cc = (cc + "+1");
       }
     }
+    cc = (cc + ";\n");
     cc = (cc + "if ((line = reader.readLine()) != null){\n");
     cc = (cc + "line = line.trim();\n");
     cc = (cc + "line = line.replaceAll(\"\\\\s+\", \" \");\n");
     cc = (cc + "tokens = line.split(\" \");\n");
-    cc = (cc + "if (tokens.length == sz || sz < 0){\n");
-    EList<String> _var_4 = element.getVar();
-    for (final String v_2 : _var_4) {
+    cc = (cc + "if (tokens.length == sz){\n");
+    EList<FormatVariable> _var_1 = element.getVar();
+    for (final FormatVariable v_1 : _var_1) {
       {
-        EList<String> _count_5 = element.getCount();
-        int _size_5 = _count_5.size();
-        boolean _equals_3 = (_size_5 == 0);
-        if (_equals_3) {
-          String _firstUpper = StringExtensions.toFirstUpper(v_2);
-          String _plus_2 = ((temp + "read") + _firstUpper);
-          String _plus_3 = (_plus_2 + "(tokens[");
-          String _plus_4 = (_plus_3 + Integer.valueOf(i));
-          String _plus_5 = (_plus_4 + "]");
-          temp = _plus_5;
-          EList<String> _sz = element.getSz();
-          int _size_6 = _sz.size();
-          boolean _greaterThan_1 = (_size_6 > 0);
-          if (_greaterThan_1) {
-            EList<String> _sz_1 = element.getSz();
-            String _get_1 = _sz_1.get(i);
-            String _plus_6 = ((temp + ",") + _get_1);
-            temp = _plus_6;
-          }
-          temp = (temp + ");\n");
+        String _count_2 = v_1.getCount();
+        boolean _equals_1 = Objects.equal(_count_2, null);
+        if (_equals_1) {
+          ChkVariable _fv = v_1.getFv();
+          String _chkVar = this.chkVar(_fv);
+          String _firstUpper = StringExtensions.toFirstUpper(_chkVar);
+          String _plus_3 = ("read" + _firstUpper);
+          String _plus_4 = (_plus_3 + "(tokens[");
+          String _plus_5 = (_plus_4 + Integer.valueOf(i));
+          final String temp = (_plus_5 + "]);\n");
+          cc = (cc + temp);
         } else {
-          String _firstUpper_1 = StringExtensions.toFirstUpper(v_2);
-          String _plus_7 = ((temp + "read") + _firstUpper_1);
-          String _plus_8 = (_plus_7 + "(tokens);\n");
-          temp = _plus_8;
+          ChkVariable _fv_1 = v_1.getFv();
+          EList<String> _v = _fv_1.getV();
+          int _size = _v.size();
+          boolean _equals_2 = (_size == 0);
+          if (_equals_2) {
+            ChkVariable _fv_2 = v_1.getFv();
+            String _chkVar_1 = this.chkVar(_fv_2);
+            String _firstUpper_1 = StringExtensions.toFirstUpper(_chkVar_1);
+            String _plus_6 = ((tm + "read") + _firstUpper_1);
+            String _plus_7 = (_plus_6 + "(tokens);\n");
+            tm = _plus_7;
+          } else {
+            ChkVariable _fv_3 = v_1.getFv();
+            String _chkVar2 = this.chkVar2(_fv_3);
+            String _firstUpper_2 = StringExtensions.toFirstUpper(_chkVar2);
+            String _plus_8 = ((tm + "read") + _firstUpper_2);
+            String _plus_9 = (_plus_8 + "(tokens,");
+            ChkVariable _fv_4 = v_1.getFv();
+            EList<String> _v_1 = _fv_4.getV();
+            String _get = _v_1.get(0);
+            String _plus_10 = (_plus_9 + _get);
+            String _plus_11 = (_plus_10 + ");\n");
+            tm = _plus_11;
+          }
+          cc = (cc + tm);
         }
         i = (i + 1);
       }
     }
-    cc = (cc + temp);
     cc = (cc + "} else {\n");
     cc = ((cc + this.class_name) + ".die(\"number of elements in lines not match\");\n");
     cc = (cc + "}\n");
@@ -3291,12 +3907,11 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
     cc = ((cc + this.class_name) + ".die(\"number of lines not match\");\n");
     cc = (cc + "}\n");
     String _num_2 = element.getNum();
-    boolean _equals_3 = _num_2.equals("1");
-    boolean _not_1 = (!_equals_3);
+    boolean _equals_1 = _num_2.equals("1");
+    boolean _not_1 = (!_equals_1);
     if (_not_1) {
       cc = (cc + "}\n");
     }
-    InputOutput.<String>println(("readInput = " + cc));
     return cc;
   }
   
@@ -3312,32 +3927,46 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
       String _plus_1 = (_plus + "; i++){\n");
       cc = _plus_1;
     }
-    EList<String> _var = element.getVar();
-    for (final String e : _var) {
+    EList<FormatVariable> _var = element.getVar();
+    for (final FormatVariable e : _var) {
       {
         if ((i > 0)) {
           cc = (cc + "writer.write(\" \");\n");
         }
-        String _firstUpper = StringExtensions.toFirstUpper(e);
-        String _plus_2 = ((cc + "write") + _firstUpper);
-        String _plus_3 = (_plus_2 + "_2(");
-        cc = _plus_3;
-        EList<String> _sz = element.getSz();
-        int _size = _sz.size();
-        boolean _notEquals = (_size != 0);
-        if (_notEquals) {
-          EList<String> _sz_1 = element.getSz();
-          String _get = _sz_1.get(0);
-          String _plus_4 = (cc + _get);
-          cc = _plus_4;
+        ChkVariable _fv = e.getFv();
+        EList<String> _v = _fv.getV();
+        int _size = _v.size();
+        boolean _equals_1 = (_size == 0);
+        if (_equals_1) {
+          ChkVariable _fv_1 = e.getFv();
+          String _chkVar = this.chkVar(_fv_1);
+          String _firstUpper = StringExtensions.toFirstUpper(_chkVar);
+          String _plus_2 = ((cc + "write") + _firstUpper);
+          String _plus_3 = (_plus_2 + "_2();\n");
+          cc = _plus_3;
+        } else {
+          ChkVariable _fv_2 = e.getFv();
+          String _chkVar2 = this.chkVar2(_fv_2);
+          String _firstUpper_1 = StringExtensions.toFirstUpper(_chkVar2);
+          String _plus_4 = ((cc + "write") + _firstUpper_1);
+          String _plus_5 = (_plus_4 + "_2(");
+          ChkVariable _fv_3 = e.getFv();
+          EList<String> _v_1 = _fv_3.getV();
+          String _get = _v_1.get(0);
+          String _plus_6 = (_plus_5 + _get);
+          String _plus_7 = (_plus_6 + ");\n");
+          cc = _plus_7;
         }
-        cc = (cc + ");\n");
         i = (i + 1);
       }
     }
-    EList<String> _count = element.getCount();
-    int _size = _count.size();
-    boolean _equals_1 = (_size == 0);
+    EList<FormatVariable> _var_1 = element.getVar();
+    EList<FormatVariable> _var_2 = element.getVar();
+    int _size = _var_2.size();
+    int _minus = (_size - 1);
+    FormatVariable _get = _var_1.get(_minus);
+    String _count = _get.getCount();
+    boolean _equals_1 = Objects.equal(_count, null);
     if (_equals_1) {
       cc = (cc + "writer.write(System.lineSeparator());\n");
     }
@@ -3352,6 +3981,321 @@ public class CheckerDslJvmModelInferrer extends AbstractModelInferrer {
   
   public String chkType(final ChkVariableDeclaration element) {
     return element.getType();
+  }
+  
+  public String generateOutputCheckerMT() {
+    String aa = "";
+    aa = "try {\n";
+    aa = (aa + "File wfile = new File(\"OutputCheckerMT.java\");\n");
+    aa = (aa + "if(!wfile.exists()) wfile.createNewFile();\n");
+    aa = (aa + "fw = new FileWriter(wfile);\n");
+    aa = (aa + "writer = new BufferedWriter(fw);\n");
+    String bb = "";
+    bb = (bb + "writer.close();\n");
+    bb = (bb + "} catch(Exception e){}\n");
+    String cc = "";
+    cc = (cc + "writer.write(\"import java.io.*;\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"import java.util.*;\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"public class OutputCheckerMT {\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\tprivate static GeneratedClass g;\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\tprivate static String exeFile;\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\tpublic static void pipeStream(InputStream input, OutputStream output) throws IOException {\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\tbyte buffer[] = new byte[1024];\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\tint numRead = 0;\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\tdo {\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\tnumRead = input.read(buffer);\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\toutput.write(buffer, 0, numRead);\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t} while (input.available() > 0);\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\toutput.flush();\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t}\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\tpublic static void execute(String inF, String outF){\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\ttry {\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\tFileInputStream fileIn = new FileInputStream(inF);\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\tFileOutputStream fileOut = new FileOutputStream(outF);\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\tOutputStream procIn = null;\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\tInputStream procOut = null;\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\tProcess process = null;\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\tprocess = Runtime.getRuntime().exec(exeFile);\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\tprocIn = process.getOutputStream();\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\tprocOut = process.getInputStream();\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\tpipeStream(fileIn, procIn);\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\tpipeStream(procOut, fileOut);\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\tprocess.destroy();\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t} catch (Exception e){};\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t}\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\tpublic static void main(String[] args) {\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\tint subtask = \"+mx_subtask+\";\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\tint tc = \"+mx_tc+\";\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\tint score = 0;\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\tboolean ok = true;\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\tboolean mr_ok = true;\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\texeFile = args[0];\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\tif (args.length >= 2) subtask = Integer.parseInt(args[1]);\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\tif (args.length >= 3) tc = Integer.parseInt(args[2]);\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\tfor (int s=1; s<=subtask; s++){\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\tfor (int t=1; t<=tc; t++){\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\t\tString inFile = \\\"tc/Subtask\\\"+s+\\\"/in/0/\\\"+t+\\\".in\\\";\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\t\tString inFile2 = \\\"bufferIn.temp\\\";\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\t\tString outFile = \\\"bufferOut.temp\\\";\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\t\tString outFile2 = \\\"bufferOut2.temp\\\";\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\t\tg = new GeneratedClass();\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\t\texecute(inFile,outFile);\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\t\tg.readInput(inFile);\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\t\tg.readOutput(outFile);\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\t\tmr_ok = true;\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + this.mr_gen);
+    cc = (cc + "writer.write(\"\t\t\t\tif (mr_ok) System.out.println(\\\"Correct\\\");\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\t\telse {\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\t\t\tok = false;\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\t\t\tSystem.out.println(\\\"Wrong Answer\\\");\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\t\t}\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\t}\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\ttry {\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\t\tInputStream fisOut = new FileInputStream(\\\"tc/\\\"+s+\\\".score\\\");\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\t\tBufferedReader brOut = new BufferedReader(new InputStreamReader(fisOut));\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\t\tString line = brOut.readLine();\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\t\tif (ok) score += Integer.parseInt(line);\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\t\tbrOut.close();\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\t} catch (Exception e){}\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t}\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\tSystem.out.println(\\\"Score : \\\"+score);\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t}\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"}\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    return ((aa + cc) + bb);
+  }
+  
+  public String generateOutputChecker() {
+    String aa = "";
+    aa = "try {\n";
+    aa = (aa + "File wfile = new File(\"OutputChecker.java\");\n");
+    aa = (aa + "if(!wfile.exists()) wfile.createNewFile();\n");
+    aa = (aa + "fw = new FileWriter(wfile);\n");
+    aa = (aa + "writer = new BufferedWriter(fw);\n");
+    String bb = "";
+    bb = (bb + "writer.close();\n");
+    bb = (bb + "} catch(Exception e){}\n");
+    String cc = "";
+    cc = (cc + "writer.write(\"import java.io.*;\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"import java.util.*;\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"public class OutputChecker {\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\tprivate static GeneratedClass g;\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\tpublic static void pipeStream(InputStream input, OutputStream output) throws IOException\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t{\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\tbyte buffer[] = new byte[1024];\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\tint numRead = 0;\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\tdo\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t{\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\tnumRead = input.read(buffer);\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\toutput.write(buffer, 0, numRead);\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t} while (input.available() > 0);\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\toutput.flush();\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t}\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\tpublic static void main(String[] args) {\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\tint subtask = \"+mx_subtask+\";\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\tint tc = \"+mx_tc+\";\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\tint score = 0;\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\tboolean ok = true;\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\tif (args.length >= 2) subtask = Integer.parseInt(args[1]);\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\tif (args.length >= 3) tc = Integer.parseInt(args[2]);\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\tfor (int s=1; s<=subtask; s++){\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\tfor (int t=1; t<=tc; t++){\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\t\tString inFile = \\\"tc/Subtask\\\"+s+\\\"/in/0/\\\"+t+\\\".in\\\";\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\t\tString outFile = \\\"bufferOut.temp\\\";\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\t\tString ansFile = \\\"tc/Subtask\\\"+s+\\\"/out/0/\\\"+t+\\\".out\\\";\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\t\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\t\tg = new GeneratedClass();\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\t\t\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\t\ttry {\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\t\t\tFileInputStream fileIn = new FileInputStream(inFile);\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\t\t\tFileOutputStream fileOut = new FileOutputStream(outFile);\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\t\t\t\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\t\t\tOutputStream procIn = null;\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\t\t\tInputStream procOut = null;\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\t\t\t\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\t\t\tProcess process = null;\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\t\t\tprocess = Runtime.getRuntime().exec(args[0]);\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\t\t\tprocIn = process.getOutputStream();\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\t\t\tprocOut = process.getInputStream();\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\t\t\tpipeStream(fileIn, procIn);\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\t\t\tpipeStream(procOut, fileOut);\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\t\t\tprocess.destroy();\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\t\t} catch (Exception e){};\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\t\t\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\t\tif (g.output_check(inFile,outFile,ansFile)) System.out.println(\\\"Correct\\\");\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\t\telse {\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\t\t\tok = false;\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\t\t\tSystem.out.println(\\\"Wrong Answer\\\");\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\t\t}\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\t}\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\ttry {\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\t\tInputStream fisOut = new FileInputStream(\\\"tc/\\\"+s+\\\".score\\\");\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\t\tBufferedReader brOut = new BufferedReader(new InputStreamReader(fisOut));\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\t\tString line = brOut.readLine();\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\t\tif (ok) score += Integer.parseInt(line);\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\t\tbrOut.close();\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t\t} catch (Exception e){}\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\t}\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t\tSystem.out.println(\\\"Score : \\\"+score);\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\t}\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    cc = (cc + "writer.write(\"}\");\n");
+    cc = (cc + "writer.write(System.lineSeparator());\n");
+    return ((aa + cc) + bb);
   }
   
   public void infer(final EObject element, final IJvmDeclaredTypeAcceptor acceptor, final boolean isPrelinkingPhase) {

@@ -52,7 +52,6 @@
     </genClasses>
     <genClasses ecoreClass="CheckerDsl.ecore#//ChkVariableDeclaration">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//ChkVariableDeclaration/type"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//ChkVariableDeclaration/arr"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//ChkVariableDeclaration/sz"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//ChkVariableDeclaration/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//ChkVariableDeclaration/limit1"/>
@@ -92,10 +91,10 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//Helper/var2"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//Helper/select"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//Helper/vars"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//Helper/var4"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//Helper/add"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//Helper/remove"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//Helper/random"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//Helper/var4"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//Helper/size"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//Helper/reverse"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//Helper/contains"/>
@@ -177,9 +176,11 @@
     </genClasses>
     <genClasses ecoreClass="CheckerDsl.ecore#//FormatExpression">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//FormatExpression/num"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//FormatExpression/var"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//FormatExpression/sz"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//FormatExpression/count"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//FormatExpression/var"/>
+    </genClasses>
+    <genClasses ecoreClass="CheckerDsl.ecore#//FormatVariable">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CheckerDsl.ecore#//FormatVariable/fv"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CheckerDsl.ecore#//FormatVariable/count"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

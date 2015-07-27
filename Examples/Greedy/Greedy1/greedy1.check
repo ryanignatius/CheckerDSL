@@ -32,7 +32,8 @@ class Greedy{
 	}
 	
 	MR 1 {
-		(select(k,l) where 1<=k and k<l and l<=n)
+		(def y1 = y-1)
+		(select(k,l:0..y1) where k<l)
 		followup {
 			(m` = swapColumn(m,k,l))
 		}
@@ -80,7 +81,8 @@ class Greedy{
 	}
 	
 	MR 5 {
-		(select(k) where k >= 1 and k<numKey)
+		(def nk = numKey-2)
+		(def k = random(0..nk))
 		followup {
 			(x` = x+1)
 			(m` = addRow(m))
@@ -99,7 +101,8 @@ class Greedy{
 	}
 	
 	MR 6 {
-		(select(k) where k >= 2 and k<=numKey)
+		(def nk = numKey-1)
+		(def k = random(1..nk))
 		followup {
 			for (j,y){
 				(def temp = o[k])
@@ -113,7 +116,8 @@ class Greedy{
 	}
 	
 	MR 7 {
-		(select(k) where k >= 1 and k<=numKey)
+		(def nk = numKey-1)
+		(def k = random(0..nk))
 		followup {
 			for (j,y){
 				(def temp = o[k])
@@ -128,7 +132,8 @@ class Greedy{
 	}
 	
 	MR 8 {
-		(select(k) where not contain(o,k))
+		(def nk = numKey-1)
+		(select(k:0..nk) where not contain(o,k))
 		followup {
 			(y` = y+1)
 			(m` = addColumn(m))
@@ -144,7 +149,8 @@ class Greedy{
 	}
 	
 	MR 9 {
-		(select(k) where not contain(o,k))
+		(def nk = numKey-1)
+		(select(k:0..nk) where not contain(o,k))
 		followup {
 			(y` = y+1)
 			(m` = addColumn(m))

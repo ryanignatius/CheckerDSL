@@ -40,10 +40,10 @@ import org.xtext.example.checkerdsl.checkerDsl.Helper;
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.HelperImpl#getVar2 <em>Var2</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.HelperImpl#getSelect <em>Select</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.HelperImpl#getVars <em>Vars</em>}</li>
+ *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.HelperImpl#getVar4 <em>Var4</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.HelperImpl#getAdd <em>Add</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.HelperImpl#getRemove <em>Remove</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.HelperImpl#getRandom <em>Random</em>}</li>
- *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.HelperImpl#getVar4 <em>Var4</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.HelperImpl#getSize <em>Size</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.HelperImpl#getReverse <em>Reverse</em>}</li>
  *   <li>{@link org.xtext.example.checkerdsl.checkerDsl.impl.HelperImpl#getContains <em>Contains</em>}</li>
@@ -257,6 +257,16 @@ public class HelperImpl extends ChkGeneralExpressionsImpl implements Helper
   protected EList<String> vars;
 
   /**
+   * The cached value of the '{@link #getVar4() <em>Var4</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getVar4()
+   * @generated
+   * @ordered
+   */
+  protected ChkVariables var4;
+
+  /**
    * The default value of the '{@link #getAdd() <em>Add</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -315,16 +325,6 @@ public class HelperImpl extends ChkGeneralExpressionsImpl implements Helper
    * @ordered
    */
   protected String random = RANDOM_EDEFAULT;
-
-  /**
-   * The cached value of the '{@link #getVar4() <em>Var4</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getVar4()
-   * @generated
-   * @ordered
-   */
-  protected ChkVariables var4;
 
   /**
    * The default value of the '{@link #getSize() <em>Size</em>}' attribute.
@@ -966,6 +966,54 @@ public class HelperImpl extends ChkGeneralExpressionsImpl implements Helper
    * <!-- end-user-doc -->
    * @generated
    */
+  public ChkVariables getVar4()
+  {
+    return var4;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetVar4(ChkVariables newVar4, NotificationChain msgs)
+  {
+    ChkVariables oldVar4 = var4;
+    var4 = newVar4;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CheckerDslPackage.HELPER__VAR4, oldVar4, newVar4);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setVar4(ChkVariables newVar4)
+  {
+    if (newVar4 != var4)
+    {
+      NotificationChain msgs = null;
+      if (var4 != null)
+        msgs = ((InternalEObject)var4).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CheckerDslPackage.HELPER__VAR4, null, msgs);
+      if (newVar4 != null)
+        msgs = ((InternalEObject)newVar4).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CheckerDslPackage.HELPER__VAR4, null, msgs);
+      msgs = basicSetVar4(newVar4, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, CheckerDslPackage.HELPER__VAR4, newVar4, newVar4));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public String getAdd()
   {
     return add;
@@ -1028,54 +1076,6 @@ public class HelperImpl extends ChkGeneralExpressionsImpl implements Helper
     random = newRandom;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, CheckerDslPackage.HELPER__RANDOM, oldRandom, random));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public ChkVariables getVar4()
-  {
-    return var4;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetVar4(ChkVariables newVar4, NotificationChain msgs)
-  {
-    ChkVariables oldVar4 = var4;
-    var4 = newVar4;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, CheckerDslPackage.HELPER__VAR4, oldVar4, newVar4);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setVar4(ChkVariables newVar4)
-  {
-    if (newVar4 != var4)
-    {
-      NotificationChain msgs = null;
-      if (var4 != null)
-        msgs = ((InternalEObject)var4).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - CheckerDslPackage.HELPER__VAR4, null, msgs);
-      if (newVar4 != null)
-        msgs = ((InternalEObject)newVar4).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - CheckerDslPackage.HELPER__VAR4, null, msgs);
-      msgs = basicSetVar4(newVar4, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, CheckerDslPackage.HELPER__VAR4, newVar4, newVar4));
   }
 
   /**
@@ -1498,14 +1498,14 @@ public class HelperImpl extends ChkGeneralExpressionsImpl implements Helper
         return getSelect();
       case CheckerDslPackage.HELPER__VARS:
         return getVars();
+      case CheckerDslPackage.HELPER__VAR4:
+        return getVar4();
       case CheckerDslPackage.HELPER__ADD:
         return getAdd();
       case CheckerDslPackage.HELPER__REMOVE:
         return getRemove();
       case CheckerDslPackage.HELPER__RANDOM:
         return getRandom();
-      case CheckerDslPackage.HELPER__VAR4:
-        return getVar4();
       case CheckerDslPackage.HELPER__SIZE:
         return getSize();
       case CheckerDslPackage.HELPER__REVERSE:
@@ -1587,6 +1587,9 @@ public class HelperImpl extends ChkGeneralExpressionsImpl implements Helper
         getVars().clear();
         getVars().addAll((Collection<? extends String>)newValue);
         return;
+      case CheckerDslPackage.HELPER__VAR4:
+        setVar4((ChkVariables)newValue);
+        return;
       case CheckerDslPackage.HELPER__ADD:
         setAdd((String)newValue);
         return;
@@ -1595,9 +1598,6 @@ public class HelperImpl extends ChkGeneralExpressionsImpl implements Helper
         return;
       case CheckerDslPackage.HELPER__RANDOM:
         setRandom((String)newValue);
-        return;
-      case CheckerDslPackage.HELPER__VAR4:
-        setVar4((ChkVariables)newValue);
         return;
       case CheckerDslPackage.HELPER__SIZE:
         setSize((String)newValue);
@@ -1694,6 +1694,9 @@ public class HelperImpl extends ChkGeneralExpressionsImpl implements Helper
       case CheckerDslPackage.HELPER__VARS:
         getVars().clear();
         return;
+      case CheckerDslPackage.HELPER__VAR4:
+        setVar4((ChkVariables)null);
+        return;
       case CheckerDslPackage.HELPER__ADD:
         setAdd(ADD_EDEFAULT);
         return;
@@ -1702,9 +1705,6 @@ public class HelperImpl extends ChkGeneralExpressionsImpl implements Helper
         return;
       case CheckerDslPackage.HELPER__RANDOM:
         setRandom(RANDOM_EDEFAULT);
-        return;
-      case CheckerDslPackage.HELPER__VAR4:
-        setVar4((ChkVariables)null);
         return;
       case CheckerDslPackage.HELPER__SIZE:
         setSize(SIZE_EDEFAULT);
@@ -1790,14 +1790,14 @@ public class HelperImpl extends ChkGeneralExpressionsImpl implements Helper
         return SELECT_EDEFAULT == null ? select != null : !SELECT_EDEFAULT.equals(select);
       case CheckerDslPackage.HELPER__VARS:
         return vars != null && !vars.isEmpty();
+      case CheckerDslPackage.HELPER__VAR4:
+        return var4 != null;
       case CheckerDslPackage.HELPER__ADD:
         return ADD_EDEFAULT == null ? add != null : !ADD_EDEFAULT.equals(add);
       case CheckerDslPackage.HELPER__REMOVE:
         return REMOVE_EDEFAULT == null ? remove != null : !REMOVE_EDEFAULT.equals(remove);
       case CheckerDslPackage.HELPER__RANDOM:
         return RANDOM_EDEFAULT == null ? random != null : !RANDOM_EDEFAULT.equals(random);
-      case CheckerDslPackage.HELPER__VAR4:
-        return var4 != null;
       case CheckerDslPackage.HELPER__SIZE:
         return SIZE_EDEFAULT == null ? size != null : !SIZE_EDEFAULT.equals(size);
       case CheckerDslPackage.HELPER__REVERSE:

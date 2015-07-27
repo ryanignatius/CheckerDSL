@@ -28,6 +28,7 @@ import org.xtext.example.checkerdsl.checkerDsl.FollowUp;
 import org.xtext.example.checkerdsl.checkerDsl.ForFormatExpression;
 import org.xtext.example.checkerdsl.checkerDsl.Format;
 import org.xtext.example.checkerdsl.checkerDsl.FormatExpression;
+import org.xtext.example.checkerdsl.checkerDsl.FormatVariable;
 import org.xtext.example.checkerdsl.checkerDsl.Helper;
 import org.xtext.example.checkerdsl.checkerDsl.HiddenFormat;
 import org.xtext.example.checkerdsl.checkerDsl.InputFormat;
@@ -358,6 +359,13 @@ public class CheckerDslSwitch<T> extends Switch<T>
       {
         FormatExpression formatExpression = (FormatExpression)theEObject;
         T result = caseFormatExpression(formatExpression);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case CheckerDslPackage.FORMAT_VARIABLE:
+      {
+        FormatVariable formatVariable = (FormatVariable)theEObject;
+        T result = caseFormatVariable(formatVariable);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -905,6 +913,22 @@ public class CheckerDslSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseFormatExpression(FormatExpression object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Format Variable</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Format Variable</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseFormatVariable(FormatVariable object)
   {
     return null;
   }

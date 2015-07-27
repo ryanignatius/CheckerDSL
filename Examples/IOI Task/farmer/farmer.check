@@ -44,7 +44,8 @@ class Farmer {
 	}
 	
 	MR 1 {
-		(select(k,l) where 1<=k and k<l and l<=m and n[k]!=n[l])
+		(def m1 = m-1)
+		(select(k,l:0..m1) where k<l and n[k]!=n[l])
 		followup {
 			(n` = swap(n,k,l))
 			(yn` = swap(yn,k,l))
@@ -56,7 +57,8 @@ class Farmer {
 	}
 	
 	MR 2 {
-		(select(k,l) where 1<=k and k<l and l<=s and r[k]!=r[l])
+		(def s1 = s-1)
+		(select(k,l:0..s1) where k<l and r[k]!=r[l])
 		followup {
 			(r` = swap(r,k,l))
 			(yr` = swap(yr,k,l))
@@ -92,7 +94,8 @@ class Farmer {
 	}
 	
 	MR 5 {
-		(select(k) where yn[k]==0)
+		(def m1 = m-1)
+		(select(k:0..m1) where yn[k]==0)
 		followup {
 			(m` = m-1)
 			(n` = remove(n,k))
@@ -104,7 +107,8 @@ class Farmer {
 	}
 	
 	MR 6 {
-		(select(k) where yr[k]==0)
+		(def s1 = s-1)
+		(select(k:0..s1) where yr[k]==0)
 		followup {
 			(s` = s-1)
 			(r` = remove(r,k))
@@ -116,7 +120,8 @@ class Farmer {
 	}
 	
 	MR 7 {
-		(select(k) where yn[k]==1)
+		(def m1 = m-1)
+		(select(k:0..m1) where yn[k]==1)
 		followup {
 			(m` = m-1)
 			(q` = q-n[k])
@@ -129,7 +134,8 @@ class Farmer {
 	}
 	
 	MR 8 {
-		(select(k,l) where 1<=k and k<l and l<=m and yn[k]==1 and yn[l]==1)
+		(def m1 = m-1)
+		(select(k,l:0..m1) where k<l and yn[k]==1 and yn[l]==1)
 		followup {
 			(n`[k] = n[k]+n[l])
 			(m` = m-1)
@@ -142,7 +148,8 @@ class Farmer {
 	}
 	
 	MR 9 {
-		(select(k) where yn[k]==1)
+		(def m1 = m-1)
+		(select(k:0..m1) where yn[k]==1)
 		(def cc = random(0..100))
 		followup {
 			(q` = q+cc)

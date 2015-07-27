@@ -20,7 +20,7 @@
 '-='=97
 '->'=106
 '.'=44
-'..'=57
+'..'=54
 '..<'=107
 '/'=79
 '/='=99
@@ -44,7 +44,7 @@
 ']'=28
 '^'=82
 '`'=45
-'add'=54
+'add'=55
 'addColumn'=62
 'addRow'=61
 'adjList'=40
@@ -97,8 +97,8 @@
 'permute'=67
 'plus'=68
 'prime'=51
-'random'=56
-'remove'=55
+'random'=57
+'remove'=56
 'removeColumn'=66
 'removeRow'=65
 'return'=139
@@ -106,6 +106,7 @@
 'score'=23
 'select'=53
 'size'=58
+'sp'=30
 'static'=129
 'string'=37
 'subtask'=92
@@ -122,7 +123,6 @@
 'try'=140
 'typeof'=137
 'val'=128
-'value'=30
 'var'=127
 'where'=90
 'while'=125
